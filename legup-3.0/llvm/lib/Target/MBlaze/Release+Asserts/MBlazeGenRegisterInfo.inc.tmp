@@ -1,0 +1,1024 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass MBlazeMCRegisterClasses[];
+
+namespace MBlaze {
+enum {
+  NoRegister,
+  CARRY = 1,
+  R0 = 2,
+  R1 = 3,
+  R2 = 4,
+  R3 = 5,
+  R4 = 6,
+  R5 = 7,
+  R6 = 8,
+  R7 = 9,
+  R8 = 10,
+  R9 = 11,
+  R10 = 12,
+  R11 = 13,
+  R12 = 14,
+  R13 = 15,
+  R14 = 16,
+  R15 = 17,
+  R16 = 18,
+  R17 = 19,
+  R18 = 20,
+  R19 = 21,
+  R20 = 22,
+  R21 = 23,
+  R22 = 24,
+  R23 = 25,
+  R24 = 26,
+  R25 = 27,
+  R26 = 28,
+  R27 = 29,
+  R28 = 30,
+  R29 = 31,
+  R30 = 32,
+  R31 = 33,
+  RBTR = 34,
+  REAR = 35,
+  REDR = 36,
+  RESR = 37,
+  RFSR = 38,
+  RMSR = 39,
+  RPC = 40,
+  RPID = 41,
+  RPVR0 = 42,
+  RPVR1 = 43,
+  RPVR2 = 44,
+  RPVR3 = 45,
+  RPVR4 = 46,
+  RPVR5 = 47,
+  RPVR6 = 48,
+  RPVR7 = 49,
+  RPVR8 = 50,
+  RPVR9 = 51,
+  RPVR10 = 52,
+  RPVR11 = 53,
+  RTLBHI = 54,
+  RTLBLO = 55,
+  RTLBSX = 56,
+  RTLBX = 57,
+  RZPR = 58,
+  NUM_TARGET_REGS 	// 59
+};
+}
+
+// Register classes
+namespace MBlaze {
+enum {
+  CRCRegClassID = 0,
+  GPRRegClassID = 1,
+  SPRRegClassID = 2
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct MBlazeGenMCRegisterInfo : public MCRegisterInfo {
+  explicit MBlazeGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned CARRY_Overlaps[] = { MBlaze::CARRY, 0 };
+  const unsigned R0_Overlaps[] = { MBlaze::R0, 0 };
+  const unsigned R1_Overlaps[] = { MBlaze::R1, 0 };
+  const unsigned R2_Overlaps[] = { MBlaze::R2, 0 };
+  const unsigned R3_Overlaps[] = { MBlaze::R3, 0 };
+  const unsigned R4_Overlaps[] = { MBlaze::R4, 0 };
+  const unsigned R5_Overlaps[] = { MBlaze::R5, 0 };
+  const unsigned R6_Overlaps[] = { MBlaze::R6, 0 };
+  const unsigned R7_Overlaps[] = { MBlaze::R7, 0 };
+  const unsigned R8_Overlaps[] = { MBlaze::R8, 0 };
+  const unsigned R9_Overlaps[] = { MBlaze::R9, 0 };
+  const unsigned R10_Overlaps[] = { MBlaze::R10, 0 };
+  const unsigned R11_Overlaps[] = { MBlaze::R11, 0 };
+  const unsigned R12_Overlaps[] = { MBlaze::R12, 0 };
+  const unsigned R13_Overlaps[] = { MBlaze::R13, 0 };
+  const unsigned R14_Overlaps[] = { MBlaze::R14, 0 };
+  const unsigned R15_Overlaps[] = { MBlaze::R15, 0 };
+  const unsigned R16_Overlaps[] = { MBlaze::R16, 0 };
+  const unsigned R17_Overlaps[] = { MBlaze::R17, 0 };
+  const unsigned R18_Overlaps[] = { MBlaze::R18, 0 };
+  const unsigned R19_Overlaps[] = { MBlaze::R19, 0 };
+  const unsigned R20_Overlaps[] = { MBlaze::R20, 0 };
+  const unsigned R21_Overlaps[] = { MBlaze::R21, 0 };
+  const unsigned R22_Overlaps[] = { MBlaze::R22, 0 };
+  const unsigned R23_Overlaps[] = { MBlaze::R23, 0 };
+  const unsigned R24_Overlaps[] = { MBlaze::R24, 0 };
+  const unsigned R25_Overlaps[] = { MBlaze::R25, 0 };
+  const unsigned R26_Overlaps[] = { MBlaze::R26, 0 };
+  const unsigned R27_Overlaps[] = { MBlaze::R27, 0 };
+  const unsigned R28_Overlaps[] = { MBlaze::R28, 0 };
+  const unsigned R29_Overlaps[] = { MBlaze::R29, 0 };
+  const unsigned R30_Overlaps[] = { MBlaze::R30, 0 };
+  const unsigned R31_Overlaps[] = { MBlaze::R31, 0 };
+  const unsigned RBTR_Overlaps[] = { MBlaze::RBTR, 0 };
+  const unsigned REAR_Overlaps[] = { MBlaze::REAR, 0 };
+  const unsigned REDR_Overlaps[] = { MBlaze::REDR, 0 };
+  const unsigned RESR_Overlaps[] = { MBlaze::RESR, 0 };
+  const unsigned RFSR_Overlaps[] = { MBlaze::RFSR, 0 };
+  const unsigned RMSR_Overlaps[] = { MBlaze::RMSR, 0 };
+  const unsigned RPC_Overlaps[] = { MBlaze::RPC, 0 };
+  const unsigned RPID_Overlaps[] = { MBlaze::RPID, 0 };
+  const unsigned RPVR0_Overlaps[] = { MBlaze::RPVR0, 0 };
+  const unsigned RPVR1_Overlaps[] = { MBlaze::RPVR1, 0 };
+  const unsigned RPVR2_Overlaps[] = { MBlaze::RPVR2, 0 };
+  const unsigned RPVR3_Overlaps[] = { MBlaze::RPVR3, 0 };
+  const unsigned RPVR4_Overlaps[] = { MBlaze::RPVR4, 0 };
+  const unsigned RPVR5_Overlaps[] = { MBlaze::RPVR5, 0 };
+  const unsigned RPVR6_Overlaps[] = { MBlaze::RPVR6, 0 };
+  const unsigned RPVR7_Overlaps[] = { MBlaze::RPVR7, 0 };
+  const unsigned RPVR8_Overlaps[] = { MBlaze::RPVR8, 0 };
+  const unsigned RPVR9_Overlaps[] = { MBlaze::RPVR9, 0 };
+  const unsigned RPVR10_Overlaps[] = { MBlaze::RPVR10, 0 };
+  const unsigned RPVR11_Overlaps[] = { MBlaze::RPVR11, 0 };
+  const unsigned RTLBHI_Overlaps[] = { MBlaze::RTLBHI, 0 };
+  const unsigned RTLBLO_Overlaps[] = { MBlaze::RTLBLO, 0 };
+  const unsigned RTLBSX_Overlaps[] = { MBlaze::RTLBSX, 0 };
+  const unsigned RTLBX_Overlaps[] = { MBlaze::RTLBX, 0 };
+  const unsigned RZPR_Overlaps[] = { MBlaze::RZPR, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+}
+
+MCRegisterDesc MBlazeRegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "CARRY",	CARRY_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0",	R0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R1",	R1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2",	R2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R3",	R3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4",	R4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5",	R5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6",	R6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7",	R7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8",	R8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R9",	R9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10",	R10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R11",	R11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12",	R12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R13",	R13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14",	R14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R15",	R15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R16",	R16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R17",	R17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R18",	R18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R19",	R19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R20",	R20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R21",	R21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R22",	R22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R23",	R23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R24",	R24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R25",	R25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R26",	R26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R27",	R27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R28",	R28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R29",	R29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R30",	R30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R31",	R31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RBTR",	RBTR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "REAR",	REAR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "REDR",	REDR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RESR",	RESR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RFSR",	RFSR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RMSR",	RMSR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPC",	RPC_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPID",	RPID_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR0",	RPVR0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR1",	RPVR1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR2",	RPVR2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR3",	RPVR3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR4",	RPVR4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR5",	RPVR5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR6",	RPVR6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR7",	RPVR7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR8",	RPVR8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR9",	RPVR9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR10",	RPVR10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RPVR11",	RPVR11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RTLBHI",	RTLBHI_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RTLBLO",	RTLBLO_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RTLBSX",	RTLBSX_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RTLBX",	RTLBX_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RZPR",	RZPR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // CRC Register Class...
+  static const unsigned CRC[] = {
+    MBlaze::CARRY, 
+  };
+
+  // CRC Bit set.
+  static const unsigned char CRCBits[] = {
+    0x02, 
+  };
+
+  // GPR Register Class...
+  static const unsigned GPR[] = {
+    MBlaze::R0, MBlaze::R1, MBlaze::R2, MBlaze::R3, MBlaze::R4, MBlaze::R5, MBlaze::R6, MBlaze::R7, MBlaze::R8, MBlaze::R9, MBlaze::R10, MBlaze::R11, MBlaze::R12, MBlaze::R13, MBlaze::R14, MBlaze::R15, MBlaze::R16, MBlaze::R17, MBlaze::R18, MBlaze::R19, MBlaze::R20, MBlaze::R21, MBlaze::R22, MBlaze::R23, MBlaze::R24, MBlaze::R25, MBlaze::R26, MBlaze::R27, MBlaze::R28, MBlaze::R29, MBlaze::R30, MBlaze::R31, 
+  };
+
+  // GPR Bit set.
+  static const unsigned char GPRBits[] = {
+    0xfc, 0xff, 0xff, 0xff, 0x03, 
+  };
+
+  // SPR Register Class...
+  static const unsigned SPR[] = {
+    MBlaze::RPC, MBlaze::RMSR, MBlaze::REAR, MBlaze::RESR, MBlaze::RFSR, MBlaze::RBTR, MBlaze::REDR, MBlaze::RPID, MBlaze::RZPR, MBlaze::RTLBX, MBlaze::RTLBLO, MBlaze::RTLBHI, MBlaze::RPVR0, MBlaze::RPVR1, MBlaze::RPVR2, MBlaze::RPVR3, MBlaze::RPVR4, MBlaze::RPVR5, MBlaze::RPVR6, MBlaze::RPVR7, MBlaze::RPVR8, MBlaze::RPVR9, MBlaze::RPVR10, MBlaze::RPVR11, 
+  };
+
+  // SPR Bit set.
+  static const unsigned char SPRBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0xfc, 0xff, 0xff, 0x06, 
+  };
+
+}
+
+MCRegisterClass MBlazeMCRegisterClasses[] = {
+  MCRegisterClass(MBlaze::CRCRegClassID, "CRC", 4, 4, -1, 1, CRC, CRC + 1, CRCBits, sizeof(CRCBits)),
+  MCRegisterClass(MBlaze::GPRRegClassID, "GPR", 4, 4, 1, 1, GPR, GPR + 32, GPRBits, sizeof(GPRBits)),
+  MCRegisterClass(MBlaze::SPRRegClassID, "SPR", 4, 4, 1, 0, SPR, SPR + 24, SPRBits, sizeof(SPRBits)),
+};
+
+static inline void InitMBlazeMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(MBlazeRegDesc, 59, RA, MBlazeMCRegisterClasses, 3);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(0, MBlaze::R0, false );
+    RI->mapDwarfRegToLLVMReg(1, MBlaze::R1, false );
+    RI->mapDwarfRegToLLVMReg(2, MBlaze::R2, false );
+    RI->mapDwarfRegToLLVMReg(3, MBlaze::R3, false );
+    RI->mapDwarfRegToLLVMReg(4, MBlaze::R4, false );
+    RI->mapDwarfRegToLLVMReg(5, MBlaze::R5, false );
+    RI->mapDwarfRegToLLVMReg(6, MBlaze::R6, false );
+    RI->mapDwarfRegToLLVMReg(7, MBlaze::R7, false );
+    RI->mapDwarfRegToLLVMReg(8, MBlaze::R8, false );
+    RI->mapDwarfRegToLLVMReg(9, MBlaze::R9, false );
+    RI->mapDwarfRegToLLVMReg(10, MBlaze::R10, false );
+    RI->mapDwarfRegToLLVMReg(11, MBlaze::R11, false );
+    RI->mapDwarfRegToLLVMReg(12, MBlaze::R12, false );
+    RI->mapDwarfRegToLLVMReg(13, MBlaze::R13, false );
+    RI->mapDwarfRegToLLVMReg(14, MBlaze::R14, false );
+    RI->mapDwarfRegToLLVMReg(15, MBlaze::R15, false );
+    RI->mapDwarfRegToLLVMReg(16, MBlaze::R16, false );
+    RI->mapDwarfRegToLLVMReg(17, MBlaze::R17, false );
+    RI->mapDwarfRegToLLVMReg(18, MBlaze::R18, false );
+    RI->mapDwarfRegToLLVMReg(19, MBlaze::R19, false );
+    RI->mapDwarfRegToLLVMReg(20, MBlaze::R20, false );
+    RI->mapDwarfRegToLLVMReg(21, MBlaze::R21, false );
+    RI->mapDwarfRegToLLVMReg(22, MBlaze::R22, false );
+    RI->mapDwarfRegToLLVMReg(23, MBlaze::R23, false );
+    RI->mapDwarfRegToLLVMReg(24, MBlaze::R24, false );
+    RI->mapDwarfRegToLLVMReg(25, MBlaze::R25, false );
+    RI->mapDwarfRegToLLVMReg(26, MBlaze::R26, false );
+    RI->mapDwarfRegToLLVMReg(27, MBlaze::R27, false );
+    RI->mapDwarfRegToLLVMReg(28, MBlaze::R28, false );
+    RI->mapDwarfRegToLLVMReg(29, MBlaze::R29, false );
+    RI->mapDwarfRegToLLVMReg(30, MBlaze::R30, false );
+    RI->mapDwarfRegToLLVMReg(31, MBlaze::R31, false );
+    RI->mapDwarfRegToLLVMReg(37, MBlaze::RBTR, false );
+    RI->mapDwarfRegToLLVMReg(34, MBlaze::REAR, false );
+    RI->mapDwarfRegToLLVMReg(38, MBlaze::REDR, false );
+    RI->mapDwarfRegToLLVMReg(35, MBlaze::RESR, false );
+    RI->mapDwarfRegToLLVMReg(36, MBlaze::RFSR, false );
+    RI->mapDwarfRegToLLVMReg(33, MBlaze::RMSR, false );
+    RI->mapDwarfRegToLLVMReg(32, MBlaze::RPC, false );
+    RI->mapDwarfRegToLLVMReg(39, MBlaze::RPID, false );
+    RI->mapDwarfRegToLLVMReg(45, MBlaze::RPVR0, false );
+    RI->mapDwarfRegToLLVMReg(46, MBlaze::RPVR1, false );
+    RI->mapDwarfRegToLLVMReg(47, MBlaze::RPVR2, false );
+    RI->mapDwarfRegToLLVMReg(48, MBlaze::RPVR3, false );
+    RI->mapDwarfRegToLLVMReg(49, MBlaze::RPVR4, false );
+    RI->mapDwarfRegToLLVMReg(50, MBlaze::RPVR5, false );
+    RI->mapDwarfRegToLLVMReg(51, MBlaze::RPVR6, false );
+    RI->mapDwarfRegToLLVMReg(52, MBlaze::RPVR7, false );
+    RI->mapDwarfRegToLLVMReg(53, MBlaze::RPVR8, false );
+    RI->mapDwarfRegToLLVMReg(54, MBlaze::RPVR9, false );
+    RI->mapDwarfRegToLLVMReg(55, MBlaze::RPVR10, false );
+    RI->mapDwarfRegToLLVMReg(56, MBlaze::RPVR11, false );
+    RI->mapDwarfRegToLLVMReg(43, MBlaze::RTLBHI, false );
+    RI->mapDwarfRegToLLVMReg(42, MBlaze::RTLBLO, false );
+    RI->mapDwarfRegToLLVMReg(44, MBlaze::RTLBSX, false );
+    RI->mapDwarfRegToLLVMReg(41, MBlaze::RTLBX, false );
+    RI->mapDwarfRegToLLVMReg(40, MBlaze::RZPR, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(0, MBlaze::R0, true );
+    RI->mapDwarfRegToLLVMReg(1, MBlaze::R1, true );
+    RI->mapDwarfRegToLLVMReg(2, MBlaze::R2, true );
+    RI->mapDwarfRegToLLVMReg(3, MBlaze::R3, true );
+    RI->mapDwarfRegToLLVMReg(4, MBlaze::R4, true );
+    RI->mapDwarfRegToLLVMReg(5, MBlaze::R5, true );
+    RI->mapDwarfRegToLLVMReg(6, MBlaze::R6, true );
+    RI->mapDwarfRegToLLVMReg(7, MBlaze::R7, true );
+    RI->mapDwarfRegToLLVMReg(8, MBlaze::R8, true );
+    RI->mapDwarfRegToLLVMReg(9, MBlaze::R9, true );
+    RI->mapDwarfRegToLLVMReg(10, MBlaze::R10, true );
+    RI->mapDwarfRegToLLVMReg(11, MBlaze::R11, true );
+    RI->mapDwarfRegToLLVMReg(12, MBlaze::R12, true );
+    RI->mapDwarfRegToLLVMReg(13, MBlaze::R13, true );
+    RI->mapDwarfRegToLLVMReg(14, MBlaze::R14, true );
+    RI->mapDwarfRegToLLVMReg(15, MBlaze::R15, true );
+    RI->mapDwarfRegToLLVMReg(16, MBlaze::R16, true );
+    RI->mapDwarfRegToLLVMReg(17, MBlaze::R17, true );
+    RI->mapDwarfRegToLLVMReg(18, MBlaze::R18, true );
+    RI->mapDwarfRegToLLVMReg(19, MBlaze::R19, true );
+    RI->mapDwarfRegToLLVMReg(20, MBlaze::R20, true );
+    RI->mapDwarfRegToLLVMReg(21, MBlaze::R21, true );
+    RI->mapDwarfRegToLLVMReg(22, MBlaze::R22, true );
+    RI->mapDwarfRegToLLVMReg(23, MBlaze::R23, true );
+    RI->mapDwarfRegToLLVMReg(24, MBlaze::R24, true );
+    RI->mapDwarfRegToLLVMReg(25, MBlaze::R25, true );
+    RI->mapDwarfRegToLLVMReg(26, MBlaze::R26, true );
+    RI->mapDwarfRegToLLVMReg(27, MBlaze::R27, true );
+    RI->mapDwarfRegToLLVMReg(28, MBlaze::R28, true );
+    RI->mapDwarfRegToLLVMReg(29, MBlaze::R29, true );
+    RI->mapDwarfRegToLLVMReg(30, MBlaze::R30, true );
+    RI->mapDwarfRegToLLVMReg(31, MBlaze::R31, true );
+    RI->mapDwarfRegToLLVMReg(37, MBlaze::RBTR, true );
+    RI->mapDwarfRegToLLVMReg(34, MBlaze::REAR, true );
+    RI->mapDwarfRegToLLVMReg(38, MBlaze::REDR, true );
+    RI->mapDwarfRegToLLVMReg(35, MBlaze::RESR, true );
+    RI->mapDwarfRegToLLVMReg(36, MBlaze::RFSR, true );
+    RI->mapDwarfRegToLLVMReg(33, MBlaze::RMSR, true );
+    RI->mapDwarfRegToLLVMReg(32, MBlaze::RPC, true );
+    RI->mapDwarfRegToLLVMReg(39, MBlaze::RPID, true );
+    RI->mapDwarfRegToLLVMReg(45, MBlaze::RPVR0, true );
+    RI->mapDwarfRegToLLVMReg(46, MBlaze::RPVR1, true );
+    RI->mapDwarfRegToLLVMReg(47, MBlaze::RPVR2, true );
+    RI->mapDwarfRegToLLVMReg(48, MBlaze::RPVR3, true );
+    RI->mapDwarfRegToLLVMReg(49, MBlaze::RPVR4, true );
+    RI->mapDwarfRegToLLVMReg(50, MBlaze::RPVR5, true );
+    RI->mapDwarfRegToLLVMReg(51, MBlaze::RPVR6, true );
+    RI->mapDwarfRegToLLVMReg(52, MBlaze::RPVR7, true );
+    RI->mapDwarfRegToLLVMReg(53, MBlaze::RPVR8, true );
+    RI->mapDwarfRegToLLVMReg(54, MBlaze::RPVR9, true );
+    RI->mapDwarfRegToLLVMReg(55, MBlaze::RPVR10, true );
+    RI->mapDwarfRegToLLVMReg(56, MBlaze::RPVR11, true );
+    RI->mapDwarfRegToLLVMReg(43, MBlaze::RTLBHI, true );
+    RI->mapDwarfRegToLLVMReg(42, MBlaze::RTLBLO, true );
+    RI->mapDwarfRegToLLVMReg(44, MBlaze::RTLBSX, true );
+    RI->mapDwarfRegToLLVMReg(41, MBlaze::RTLBX, true );
+    RI->mapDwarfRegToLLVMReg(40, MBlaze::RZPR, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(MBlaze::CARRY, -1, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R0, 0, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R1, 1, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R2, 2, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R3, 3, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R4, 4, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R5, 5, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R6, 6, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R7, 7, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R8, 8, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R9, 9, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R10, 10, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R11, 11, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R12, 12, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R13, 13, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R14, 14, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R15, 15, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R16, 16, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R17, 17, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R18, 18, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R19, 19, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R20, 20, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R21, 21, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R22, 22, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R23, 23, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R24, 24, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R25, 25, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R26, 26, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R27, 27, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R28, 28, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R29, 29, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R30, 30, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R31, 31, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RBTR, 37, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::REAR, 34, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::REDR, 38, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RESR, 35, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RFSR, 36, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RMSR, 33, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPC, 32, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPID, 39, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR0, 45, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR1, 46, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR2, 47, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR3, 48, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR4, 49, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR5, 50, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR6, 51, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR7, 52, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR8, 53, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR9, 54, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR10, 55, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR11, 56, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBHI, 43, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBLO, 42, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBSX, 44, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBX, 41, false );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RZPR, 40, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(MBlaze::CARRY, -1, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R0, 0, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R1, 1, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R2, 2, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R3, 3, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R4, 4, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R5, 5, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R6, 6, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R7, 7, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R8, 8, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R9, 9, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R10, 10, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R11, 11, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R12, 12, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R13, 13, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R14, 14, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R15, 15, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R16, 16, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R17, 17, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R18, 18, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R19, 19, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R20, 20, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R21, 21, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R22, 22, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R23, 23, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R24, 24, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R25, 25, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R26, 26, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R27, 27, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R28, 28, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R29, 29, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R30, 30, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::R31, 31, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RBTR, 37, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::REAR, 34, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::REDR, 38, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RESR, 35, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RFSR, 36, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RMSR, 33, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPC, 32, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPID, 39, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR0, 45, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR1, 46, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR2, 47, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR3, 48, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR4, 49, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR5, 50, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR6, 51, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR7, 52, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR8, 53, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR9, 54, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR10, 55, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RPVR11, 56, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBHI, 43, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBLO, 42, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBSX, 44, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RTLBX, 41, true );
+    RI->mapLLVMRegToDwarfReg(MBlaze::RZPR, 40, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct MBlazeGenRegisterInfo : public TargetRegisterInfo {
+  explicit MBlazeGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+namespace MBlaze { // Register classes
+  struct CRCClass : public TargetRegisterClass {
+    CRCClass();
+  };
+  extern CRCClass	CRCRegClass;
+  static TargetRegisterClass * const CRCRegisterClass = &CRCRegClass;
+  struct GPRClass : public TargetRegisterClass {
+    GPRClass();
+  };
+  extern GPRClass	GPRRegClass;
+  static TargetRegisterClass * const GPRRegisterClass = &GPRRegClass;
+  struct SPRClass : public TargetRegisterClass {
+    SPRClass();
+  };
+  extern SPRClass	SPRRegClass;
+  static TargetRegisterClass * const SPRRegisterClass = &SPRRegClass;
+} // end of namespace MBlaze
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass MBlazeMCRegisterClasses[];
+namespace {     // Register classes...
+  // CRCVTs Register Class Value Types...
+  static const EVT CRCVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // GPRVTs Register Class Value Types...
+  static const EVT GPRVTs[] = {
+    MVT::i32, MVT::f32, MVT::Other
+  };
+
+  // SPRVTs Register Class Value Types...
+  static const EVT SPRVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace MBlaze {   // Register class instances
+  CRCClass	CRCRegClass;
+  GPRClass	GPRRegClass;
+  SPRClass	SPRRegClass;
+
+  static const TargetRegisterClass* const NullRegClasses[] = { NULL };
+
+  // CRC Register Class sub-classes...
+  static const TargetRegisterClass* const CRCSubclasses[] = {
+    NULL
+  };
+
+  // GPR Register Class sub-classes...
+  static const TargetRegisterClass* const GPRSubclasses[] = {
+    NULL
+  };
+
+  // SPR Register Class sub-classes...
+  static const TargetRegisterClass* const SPRSubclasses[] = {
+    NULL
+  };
+
+  // CRC Register Class super-classes...
+  static const TargetRegisterClass* const CRCSuperclasses[] = {
+    NULL
+  };
+
+  // GPR Register Class super-classes...
+  static const TargetRegisterClass* const GPRSuperclasses[] = {
+    NULL
+  };
+
+  // SPR Register Class super-classes...
+  static const TargetRegisterClass* const SPRSuperclasses[] = {
+    NULL
+  };
+
+CRCClass::CRCClass()  : TargetRegisterClass(&MBlazeMCRegisterClasses[CRCRegClassID], CRCVTs, CRCSubclasses, CRCSuperclasses, NullRegClasses, NullRegClasses) {}
+GPRClass::GPRClass()  : TargetRegisterClass(&MBlazeMCRegisterClasses[GPRRegClassID], GPRVTs, GPRSubclasses, GPRSuperclasses, NullRegClasses, NullRegClasses) {}
+SPRClass::SPRClass()  : TargetRegisterClass(&MBlazeMCRegisterClasses[SPRRegClassID], SPRVTs, SPRSubclasses, SPRSuperclasses, NullRegClasses, NullRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &MBlaze::CRCRegClass,
+    &MBlaze::GPRRegClass,
+    &MBlaze::SPRRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc MBlazeRegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+  };
+
+  static const char *const MBlazeSubRegIndexTable[] = { "" };
+
+
+unsigned MBlazeGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned MBlazeGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned MBlazeGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc MBlazeRegDesc[];
+MBlazeGenRegisterInfo::MBlazeGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(MBlazeRegInfoDesc, RegisterClasses, RegisterClasses+3,
+                 MBlazeSubRegIndexTable) {
+  InitMCRegisterInfo(MBlazeRegDesc, 59, RA, MBlazeMCRegisterClasses, 3);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(0, MBlaze::R0, false );
+    mapDwarfRegToLLVMReg(1, MBlaze::R1, false );
+    mapDwarfRegToLLVMReg(2, MBlaze::R2, false );
+    mapDwarfRegToLLVMReg(3, MBlaze::R3, false );
+    mapDwarfRegToLLVMReg(4, MBlaze::R4, false );
+    mapDwarfRegToLLVMReg(5, MBlaze::R5, false );
+    mapDwarfRegToLLVMReg(6, MBlaze::R6, false );
+    mapDwarfRegToLLVMReg(7, MBlaze::R7, false );
+    mapDwarfRegToLLVMReg(8, MBlaze::R8, false );
+    mapDwarfRegToLLVMReg(9, MBlaze::R9, false );
+    mapDwarfRegToLLVMReg(10, MBlaze::R10, false );
+    mapDwarfRegToLLVMReg(11, MBlaze::R11, false );
+    mapDwarfRegToLLVMReg(12, MBlaze::R12, false );
+    mapDwarfRegToLLVMReg(13, MBlaze::R13, false );
+    mapDwarfRegToLLVMReg(14, MBlaze::R14, false );
+    mapDwarfRegToLLVMReg(15, MBlaze::R15, false );
+    mapDwarfRegToLLVMReg(16, MBlaze::R16, false );
+    mapDwarfRegToLLVMReg(17, MBlaze::R17, false );
+    mapDwarfRegToLLVMReg(18, MBlaze::R18, false );
+    mapDwarfRegToLLVMReg(19, MBlaze::R19, false );
+    mapDwarfRegToLLVMReg(20, MBlaze::R20, false );
+    mapDwarfRegToLLVMReg(21, MBlaze::R21, false );
+    mapDwarfRegToLLVMReg(22, MBlaze::R22, false );
+    mapDwarfRegToLLVMReg(23, MBlaze::R23, false );
+    mapDwarfRegToLLVMReg(24, MBlaze::R24, false );
+    mapDwarfRegToLLVMReg(25, MBlaze::R25, false );
+    mapDwarfRegToLLVMReg(26, MBlaze::R26, false );
+    mapDwarfRegToLLVMReg(27, MBlaze::R27, false );
+    mapDwarfRegToLLVMReg(28, MBlaze::R28, false );
+    mapDwarfRegToLLVMReg(29, MBlaze::R29, false );
+    mapDwarfRegToLLVMReg(30, MBlaze::R30, false );
+    mapDwarfRegToLLVMReg(31, MBlaze::R31, false );
+    mapDwarfRegToLLVMReg(37, MBlaze::RBTR, false );
+    mapDwarfRegToLLVMReg(34, MBlaze::REAR, false );
+    mapDwarfRegToLLVMReg(38, MBlaze::REDR, false );
+    mapDwarfRegToLLVMReg(35, MBlaze::RESR, false );
+    mapDwarfRegToLLVMReg(36, MBlaze::RFSR, false );
+    mapDwarfRegToLLVMReg(33, MBlaze::RMSR, false );
+    mapDwarfRegToLLVMReg(32, MBlaze::RPC, false );
+    mapDwarfRegToLLVMReg(39, MBlaze::RPID, false );
+    mapDwarfRegToLLVMReg(45, MBlaze::RPVR0, false );
+    mapDwarfRegToLLVMReg(46, MBlaze::RPVR1, false );
+    mapDwarfRegToLLVMReg(47, MBlaze::RPVR2, false );
+    mapDwarfRegToLLVMReg(48, MBlaze::RPVR3, false );
+    mapDwarfRegToLLVMReg(49, MBlaze::RPVR4, false );
+    mapDwarfRegToLLVMReg(50, MBlaze::RPVR5, false );
+    mapDwarfRegToLLVMReg(51, MBlaze::RPVR6, false );
+    mapDwarfRegToLLVMReg(52, MBlaze::RPVR7, false );
+    mapDwarfRegToLLVMReg(53, MBlaze::RPVR8, false );
+    mapDwarfRegToLLVMReg(54, MBlaze::RPVR9, false );
+    mapDwarfRegToLLVMReg(55, MBlaze::RPVR10, false );
+    mapDwarfRegToLLVMReg(56, MBlaze::RPVR11, false );
+    mapDwarfRegToLLVMReg(43, MBlaze::RTLBHI, false );
+    mapDwarfRegToLLVMReg(42, MBlaze::RTLBLO, false );
+    mapDwarfRegToLLVMReg(44, MBlaze::RTLBSX, false );
+    mapDwarfRegToLLVMReg(41, MBlaze::RTLBX, false );
+    mapDwarfRegToLLVMReg(40, MBlaze::RZPR, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(0, MBlaze::R0, true );
+    mapDwarfRegToLLVMReg(1, MBlaze::R1, true );
+    mapDwarfRegToLLVMReg(2, MBlaze::R2, true );
+    mapDwarfRegToLLVMReg(3, MBlaze::R3, true );
+    mapDwarfRegToLLVMReg(4, MBlaze::R4, true );
+    mapDwarfRegToLLVMReg(5, MBlaze::R5, true );
+    mapDwarfRegToLLVMReg(6, MBlaze::R6, true );
+    mapDwarfRegToLLVMReg(7, MBlaze::R7, true );
+    mapDwarfRegToLLVMReg(8, MBlaze::R8, true );
+    mapDwarfRegToLLVMReg(9, MBlaze::R9, true );
+    mapDwarfRegToLLVMReg(10, MBlaze::R10, true );
+    mapDwarfRegToLLVMReg(11, MBlaze::R11, true );
+    mapDwarfRegToLLVMReg(12, MBlaze::R12, true );
+    mapDwarfRegToLLVMReg(13, MBlaze::R13, true );
+    mapDwarfRegToLLVMReg(14, MBlaze::R14, true );
+    mapDwarfRegToLLVMReg(15, MBlaze::R15, true );
+    mapDwarfRegToLLVMReg(16, MBlaze::R16, true );
+    mapDwarfRegToLLVMReg(17, MBlaze::R17, true );
+    mapDwarfRegToLLVMReg(18, MBlaze::R18, true );
+    mapDwarfRegToLLVMReg(19, MBlaze::R19, true );
+    mapDwarfRegToLLVMReg(20, MBlaze::R20, true );
+    mapDwarfRegToLLVMReg(21, MBlaze::R21, true );
+    mapDwarfRegToLLVMReg(22, MBlaze::R22, true );
+    mapDwarfRegToLLVMReg(23, MBlaze::R23, true );
+    mapDwarfRegToLLVMReg(24, MBlaze::R24, true );
+    mapDwarfRegToLLVMReg(25, MBlaze::R25, true );
+    mapDwarfRegToLLVMReg(26, MBlaze::R26, true );
+    mapDwarfRegToLLVMReg(27, MBlaze::R27, true );
+    mapDwarfRegToLLVMReg(28, MBlaze::R28, true );
+    mapDwarfRegToLLVMReg(29, MBlaze::R29, true );
+    mapDwarfRegToLLVMReg(30, MBlaze::R30, true );
+    mapDwarfRegToLLVMReg(31, MBlaze::R31, true );
+    mapDwarfRegToLLVMReg(37, MBlaze::RBTR, true );
+    mapDwarfRegToLLVMReg(34, MBlaze::REAR, true );
+    mapDwarfRegToLLVMReg(38, MBlaze::REDR, true );
+    mapDwarfRegToLLVMReg(35, MBlaze::RESR, true );
+    mapDwarfRegToLLVMReg(36, MBlaze::RFSR, true );
+    mapDwarfRegToLLVMReg(33, MBlaze::RMSR, true );
+    mapDwarfRegToLLVMReg(32, MBlaze::RPC, true );
+    mapDwarfRegToLLVMReg(39, MBlaze::RPID, true );
+    mapDwarfRegToLLVMReg(45, MBlaze::RPVR0, true );
+    mapDwarfRegToLLVMReg(46, MBlaze::RPVR1, true );
+    mapDwarfRegToLLVMReg(47, MBlaze::RPVR2, true );
+    mapDwarfRegToLLVMReg(48, MBlaze::RPVR3, true );
+    mapDwarfRegToLLVMReg(49, MBlaze::RPVR4, true );
+    mapDwarfRegToLLVMReg(50, MBlaze::RPVR5, true );
+    mapDwarfRegToLLVMReg(51, MBlaze::RPVR6, true );
+    mapDwarfRegToLLVMReg(52, MBlaze::RPVR7, true );
+    mapDwarfRegToLLVMReg(53, MBlaze::RPVR8, true );
+    mapDwarfRegToLLVMReg(54, MBlaze::RPVR9, true );
+    mapDwarfRegToLLVMReg(55, MBlaze::RPVR10, true );
+    mapDwarfRegToLLVMReg(56, MBlaze::RPVR11, true );
+    mapDwarfRegToLLVMReg(43, MBlaze::RTLBHI, true );
+    mapDwarfRegToLLVMReg(42, MBlaze::RTLBLO, true );
+    mapDwarfRegToLLVMReg(44, MBlaze::RTLBSX, true );
+    mapDwarfRegToLLVMReg(41, MBlaze::RTLBX, true );
+    mapDwarfRegToLLVMReg(40, MBlaze::RZPR, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(MBlaze::CARRY, -1, false );
+    mapLLVMRegToDwarfReg(MBlaze::R0, 0, false );
+    mapLLVMRegToDwarfReg(MBlaze::R1, 1, false );
+    mapLLVMRegToDwarfReg(MBlaze::R2, 2, false );
+    mapLLVMRegToDwarfReg(MBlaze::R3, 3, false );
+    mapLLVMRegToDwarfReg(MBlaze::R4, 4, false );
+    mapLLVMRegToDwarfReg(MBlaze::R5, 5, false );
+    mapLLVMRegToDwarfReg(MBlaze::R6, 6, false );
+    mapLLVMRegToDwarfReg(MBlaze::R7, 7, false );
+    mapLLVMRegToDwarfReg(MBlaze::R8, 8, false );
+    mapLLVMRegToDwarfReg(MBlaze::R9, 9, false );
+    mapLLVMRegToDwarfReg(MBlaze::R10, 10, false );
+    mapLLVMRegToDwarfReg(MBlaze::R11, 11, false );
+    mapLLVMRegToDwarfReg(MBlaze::R12, 12, false );
+    mapLLVMRegToDwarfReg(MBlaze::R13, 13, false );
+    mapLLVMRegToDwarfReg(MBlaze::R14, 14, false );
+    mapLLVMRegToDwarfReg(MBlaze::R15, 15, false );
+    mapLLVMRegToDwarfReg(MBlaze::R16, 16, false );
+    mapLLVMRegToDwarfReg(MBlaze::R17, 17, false );
+    mapLLVMRegToDwarfReg(MBlaze::R18, 18, false );
+    mapLLVMRegToDwarfReg(MBlaze::R19, 19, false );
+    mapLLVMRegToDwarfReg(MBlaze::R20, 20, false );
+    mapLLVMRegToDwarfReg(MBlaze::R21, 21, false );
+    mapLLVMRegToDwarfReg(MBlaze::R22, 22, false );
+    mapLLVMRegToDwarfReg(MBlaze::R23, 23, false );
+    mapLLVMRegToDwarfReg(MBlaze::R24, 24, false );
+    mapLLVMRegToDwarfReg(MBlaze::R25, 25, false );
+    mapLLVMRegToDwarfReg(MBlaze::R26, 26, false );
+    mapLLVMRegToDwarfReg(MBlaze::R27, 27, false );
+    mapLLVMRegToDwarfReg(MBlaze::R28, 28, false );
+    mapLLVMRegToDwarfReg(MBlaze::R29, 29, false );
+    mapLLVMRegToDwarfReg(MBlaze::R30, 30, false );
+    mapLLVMRegToDwarfReg(MBlaze::R31, 31, false );
+    mapLLVMRegToDwarfReg(MBlaze::RBTR, 37, false );
+    mapLLVMRegToDwarfReg(MBlaze::REAR, 34, false );
+    mapLLVMRegToDwarfReg(MBlaze::REDR, 38, false );
+    mapLLVMRegToDwarfReg(MBlaze::RESR, 35, false );
+    mapLLVMRegToDwarfReg(MBlaze::RFSR, 36, false );
+    mapLLVMRegToDwarfReg(MBlaze::RMSR, 33, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPC, 32, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPID, 39, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR0, 45, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR1, 46, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR2, 47, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR3, 48, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR4, 49, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR5, 50, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR6, 51, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR7, 52, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR8, 53, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR9, 54, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR10, 55, false );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR11, 56, false );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBHI, 43, false );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBLO, 42, false );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBSX, 44, false );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBX, 41, false );
+    mapLLVMRegToDwarfReg(MBlaze::RZPR, 40, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(MBlaze::CARRY, -1, true );
+    mapLLVMRegToDwarfReg(MBlaze::R0, 0, true );
+    mapLLVMRegToDwarfReg(MBlaze::R1, 1, true );
+    mapLLVMRegToDwarfReg(MBlaze::R2, 2, true );
+    mapLLVMRegToDwarfReg(MBlaze::R3, 3, true );
+    mapLLVMRegToDwarfReg(MBlaze::R4, 4, true );
+    mapLLVMRegToDwarfReg(MBlaze::R5, 5, true );
+    mapLLVMRegToDwarfReg(MBlaze::R6, 6, true );
+    mapLLVMRegToDwarfReg(MBlaze::R7, 7, true );
+    mapLLVMRegToDwarfReg(MBlaze::R8, 8, true );
+    mapLLVMRegToDwarfReg(MBlaze::R9, 9, true );
+    mapLLVMRegToDwarfReg(MBlaze::R10, 10, true );
+    mapLLVMRegToDwarfReg(MBlaze::R11, 11, true );
+    mapLLVMRegToDwarfReg(MBlaze::R12, 12, true );
+    mapLLVMRegToDwarfReg(MBlaze::R13, 13, true );
+    mapLLVMRegToDwarfReg(MBlaze::R14, 14, true );
+    mapLLVMRegToDwarfReg(MBlaze::R15, 15, true );
+    mapLLVMRegToDwarfReg(MBlaze::R16, 16, true );
+    mapLLVMRegToDwarfReg(MBlaze::R17, 17, true );
+    mapLLVMRegToDwarfReg(MBlaze::R18, 18, true );
+    mapLLVMRegToDwarfReg(MBlaze::R19, 19, true );
+    mapLLVMRegToDwarfReg(MBlaze::R20, 20, true );
+    mapLLVMRegToDwarfReg(MBlaze::R21, 21, true );
+    mapLLVMRegToDwarfReg(MBlaze::R22, 22, true );
+    mapLLVMRegToDwarfReg(MBlaze::R23, 23, true );
+    mapLLVMRegToDwarfReg(MBlaze::R24, 24, true );
+    mapLLVMRegToDwarfReg(MBlaze::R25, 25, true );
+    mapLLVMRegToDwarfReg(MBlaze::R26, 26, true );
+    mapLLVMRegToDwarfReg(MBlaze::R27, 27, true );
+    mapLLVMRegToDwarfReg(MBlaze::R28, 28, true );
+    mapLLVMRegToDwarfReg(MBlaze::R29, 29, true );
+    mapLLVMRegToDwarfReg(MBlaze::R30, 30, true );
+    mapLLVMRegToDwarfReg(MBlaze::R31, 31, true );
+    mapLLVMRegToDwarfReg(MBlaze::RBTR, 37, true );
+    mapLLVMRegToDwarfReg(MBlaze::REAR, 34, true );
+    mapLLVMRegToDwarfReg(MBlaze::REDR, 38, true );
+    mapLLVMRegToDwarfReg(MBlaze::RESR, 35, true );
+    mapLLVMRegToDwarfReg(MBlaze::RFSR, 36, true );
+    mapLLVMRegToDwarfReg(MBlaze::RMSR, 33, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPC, 32, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPID, 39, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR0, 45, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR1, 46, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR2, 47, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR3, 48, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR4, 49, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR5, 50, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR6, 51, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR7, 52, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR8, 53, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR9, 54, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR10, 55, true );
+    mapLLVMRegToDwarfReg(MBlaze::RPVR11, 56, true );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBHI, 43, true );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBLO, 42, true );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBSX, 44, true );
+    mapLLVMRegToDwarfReg(MBlaze::RTLBX, 41, true );
+    mapLLVMRegToDwarfReg(MBlaze::RZPR, 40, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

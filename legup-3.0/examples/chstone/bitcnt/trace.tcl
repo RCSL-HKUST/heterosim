@@ -1,0 +1,10 @@
+ntbl_bitcnt
+btbl_bitcnt
+rand
+bit_count
+bitcount
+ntbl_bitcount
+BW_btbl_bitcount
+AR_btbl_bitcount
+bit_shifter
+printf

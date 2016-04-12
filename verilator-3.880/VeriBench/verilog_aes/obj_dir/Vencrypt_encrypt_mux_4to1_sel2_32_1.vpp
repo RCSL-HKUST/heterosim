@@ -1,0 +1,62 @@
+`begin_keywords "1800-2012"
+`line 1 "encrypt_mux_4to1_sel2_32_1.v" 1
+ 
+ 
+ 
+ 
+
+`line 6 "encrypt_mux_4to1_sel2_32_1.v" 0
+ 
+
+
+`line 9 "encrypt_mux_4to1_sel2_32_1.v" 0
+`timescale 1ns/1ps
+
+`line 11 "encrypt_mux_4to1_sel2_32_1.v" 0
+module encrypt_mux_4to1_sel2_32_1 #(
+parameter
+    ID                = 0,
+    NUM_STAGE         = 1,
+    din1_WIDTH       = 32,
+    din2_WIDTH       = 32,
+    din3_WIDTH       = 32,
+    din4_WIDTH       = 32,
+    din5_WIDTH         = 32,
+    dout_WIDTH            = 32
+)(
+    input  [31 : 0]     din1,
+    input  [31 : 0]     din2,
+    input  [31 : 0]     din3,
+    input  [31 : 0]     din4,
+    input  [1 : 0]    din5,
+    output [31 : 0]   dout);
+
+`line 29 "encrypt_mux_4to1_sel2_32_1.v" 0
+ 
+wire [1 : 0]     sel;
+ 
+wire [31 : 0]         mux_1_0;
+wire [31 : 0]         mux_1_1;
+ 
+wire [31 : 0]         mux_2_0;
+
+`line 37 "encrypt_mux_4to1_sel2_32_1.v" 0
+assign sel = din5;
+
+`line 39 "encrypt_mux_4to1_sel2_32_1.v" 0
+ 
+assign mux_1_0 = (sel[0] == 0)? din1 : din2;
+assign mux_1_1 = (sel[0] == 0)? din3 : din4;
+
+`line 43 "encrypt_mux_4to1_sel2_32_1.v" 0
+ 
+assign mux_2_0 = (sel[1] == 0)? mux_1_0 : mux_1_1;
+
+`line 46 "encrypt_mux_4to1_sel2_32_1.v" 0
+ 
+assign dout = mux_2_0;
+
+`line 49 "encrypt_mux_4to1_sel2_32_1.v" 0
+endmodule
+
+`line 51 "encrypt_mux_4to1_sel2_32_1.v" 2

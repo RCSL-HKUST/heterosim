@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc sort.v -exe sim_main.cpp"
+S   4201443  1051063  1456922637 "/usr/local/bin/verilator_bin"
+T   7771449  2628432  1457509020 "obj_dir/Vsort.cpp"
+T     19963  2628399  1457509020 "obj_dir/Vsort.h"
+T      1962  2628445  1457509020 "obj_dir/Vsort.mk"
+T       569  2628398  1457509020 "obj_dir/Vsort__Syms.cpp"
+T       949  2628397  1457509020 "obj_dir/Vsort__Syms.h"
+T       242  2628479  1457509020 "obj_dir/Vsort__ver.d"
+T         0        0  1457509020 "obj_dir/Vsort__verFiles.dat"
+T      1082  2628433  1457509020 "obj_dir/Vsort_classes.mk"
+S   4159260  2644028  1457508019 "sort.v"
+S     15121  2628327  1457508023 "sort_mux_100to1_sel7_32_1.v"

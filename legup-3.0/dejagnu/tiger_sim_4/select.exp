@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd select
+set test "select"
+set tigerexpected {Result: 15}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

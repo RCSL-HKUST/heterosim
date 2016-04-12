@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd shift
+set test "shift"
+set tigerexpected {Result: 496}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

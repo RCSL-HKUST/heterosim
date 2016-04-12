@@ -1,0 +1,13 @@
+load_lib legup.exp
+
+cd ../examples/parallel/openmp/los
+set test "los OpenMP"
+
+set hybridexpected {# Result: 1800}
+run-test-hybridomp-once $test $hybridexpected
+
+cd ../../pthreads/los
+set test "los Pthreads"
+run-test-hybrid-once $test $hybridexpected
+
+cd ../../../

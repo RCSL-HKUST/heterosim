@@ -1,0 +1,81 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Subtarget Enumeration Source Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_SUBTARGETINFO_ENUM
+#undef GET_SUBTARGETINFO_ENUM
+namespace llvm {
+namespace MSP430 {
+enum {
+  FeatureX =  1ULL << 0
+};
+}
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_ENUM
+
+
+#ifdef GET_SUBTARGETINFO_MC_DESC
+#undef GET_SUBTARGETINFO_MC_DESC
+namespace llvm {
+// Sorted (by key) array of values for CPU features.
+llvm::SubtargetFeatureKV MSP430FeatureKV[] = {
+  { "ext", "Enable MSP430-X extensions", MSP430::FeatureX, 0ULL }
+};
+
+// Sorted (by key) array of values for CPU subtype.
+llvm::SubtargetFeatureKV MSP430SubTypeKV[] = {
+  { "generic", "Select the generic processor", 0ULL, 0ULL }
+};
+
+
+static inline void InitMSP430MCSubtargetInfo(MCSubtargetInfo *II, StringRef TT, StringRef CPU, StringRef FS) {
+  II->InitMCSubtargetInfo(TT, CPU, FS, MSP430FeatureKV, MSP430SubTypeKV, 0, 0, 0, 0, 1, 1);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_MC_DESC
+
+
+#ifdef GET_SUBTARGETINFO_TARGET_DESC
+#undef GET_SUBTARGETINFO_TARGET_DESC
+#include "llvm/Support/Debug.h"
+#include "llvm/Support/raw_ostream.h"
+// ParseSubtargetFeatures - Parses features string setting specified
+// subtarget options.
+void llvm::MSP430Subtarget::ParseSubtargetFeatures(StringRef CPU, StringRef FS) {
+  DEBUG(dbgs() << "\nFeatures:" << FS);
+  DEBUG(dbgs() << "\nCPU:" << CPU);
+  uint64_t Bits = ReInitMCSubtargetInfo(CPU, FS);
+  if ((Bits & MSP430::FeatureX) != 0) ExtendedInsts = true;
+}
+#endif // GET_SUBTARGETINFO_TARGET_DESC
+
+
+#ifdef GET_SUBTARGETINFO_HEADER
+#undef GET_SUBTARGETINFO_HEADER
+namespace llvm {
+struct MSP430GenSubtargetInfo : public TargetSubtargetInfo {
+  explicit MSP430GenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS);
+};
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_HEADER
+
+
+#ifdef GET_SUBTARGETINFO_CTOR
+#undef GET_SUBTARGETINFO_CTOR
+namespace llvm {
+extern llvm::SubtargetFeatureKV MSP430FeatureKV[];
+extern llvm::SubtargetFeatureKV MSP430SubTypeKV[];
+MSP430GenSubtargetInfo::MSP430GenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS)
+  : TargetSubtargetInfo() {
+  InitMCSubtargetInfo(TT, CPU, FS, MSP430FeatureKV, MSP430SubTypeKV, 0, 0, 0, 0, 1, 1);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_CTOR
+

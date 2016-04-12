@@ -1,0 +1,17 @@
+#ifndef _CRC_H_
+#define _CRC_H_
+
+#include <stdio.h>
+
+
+typedef unsigned char uchar;
+#define LOBYTE(x) ((uchar)((x) & 0xFF))
+#define HIBYTE(x) ((uchar)((x) >> 8))
+
+
+unsigned short icrc1(unsigned short crc, unsigned char onech);
+
+unsigned short icrc(unsigned short crc, unsigned int len,
+		    short jinit, int jrev, unsigned char lin[256]);
+
+#endif

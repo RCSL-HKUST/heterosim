@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc BW_btbl_bitcount.v -exe sim_main.cpp"
+S   4201395  1059238  1453396387 "/usr/local/bin/verilator_bin"
+S      7496  4065144  1456216277 "BW_btbl_bitcount.v"
+S      2372  4065145  1456216278 "BW_btbl_bitcount_bits.v"
+T     10605  4065150  1456216450 "obj_dir/VBW_btbl_bitcount.cpp"
+T      3780  4065149  1456216450 "obj_dir/VBW_btbl_bitcount.h"
+T      2034  4065152  1456216450 "obj_dir/VBW_btbl_bitcount.mk"
+T       629  4065148  1456216450 "obj_dir/VBW_btbl_bitcount__Syms.cpp"
+T      1033  4065147  1456216450 "obj_dir/VBW_btbl_bitcount__Syms.h"
+T       334  4065153  1456216450 "obj_dir/VBW_btbl_bitcount__ver.d"
+T         0        0  1456216450 "obj_dir/VBW_btbl_bitcount__verFiles.dat"
+T      1118  4065151  1456216450 "obj_dir/VBW_btbl_bitcount_classes.mk"

@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/mips
+set test "mips"
+set tigerexpected {Result: 9}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

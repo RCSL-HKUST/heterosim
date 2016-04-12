@@ -1,0 +1,480 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Instruction Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_INSTRINFO_ENUM
+#undef GET_INSTRINFO_ENUM
+namespace llvm {
+
+namespace MSP430 {
+  enum {
+    PHI	= 0,
+    INLINEASM	= 1,
+    PROLOG_LABEL	= 2,
+    EH_LABEL	= 3,
+    GC_LABEL	= 4,
+    KILL	= 5,
+    EXTRACT_SUBREG	= 6,
+    INSERT_SUBREG	= 7,
+    IMPLICIT_DEF	= 8,
+    SUBREG_TO_REG	= 9,
+    COPY_TO_REGCLASS	= 10,
+    DBG_VALUE	= 11,
+    REG_SEQUENCE	= 12,
+    COPY	= 13,
+    ADC16mi	= 14,
+    ADC16mm	= 15,
+    ADC16mr	= 16,
+    ADC16ri	= 17,
+    ADC16rm	= 18,
+    ADC16rr	= 19,
+    ADC8mi	= 20,
+    ADC8mm	= 21,
+    ADC8mr	= 22,
+    ADC8ri	= 23,
+    ADC8rm	= 24,
+    ADC8rr	= 25,
+    ADD16mi	= 26,
+    ADD16mm	= 27,
+    ADD16mr	= 28,
+    ADD16ri	= 29,
+    ADD16rm	= 30,
+    ADD16rm_POST	= 31,
+    ADD16rr	= 32,
+    ADD8mi	= 33,
+    ADD8mm	= 34,
+    ADD8mr	= 35,
+    ADD8ri	= 36,
+    ADD8rm	= 37,
+    ADD8rm_POST	= 38,
+    ADD8rr	= 39,
+    ADJCALLSTACKDOWN	= 40,
+    ADJCALLSTACKUP	= 41,
+    AND16mi	= 42,
+    AND16mm	= 43,
+    AND16mr	= 44,
+    AND16ri	= 45,
+    AND16rm	= 46,
+    AND16rm_POST	= 47,
+    AND16rr	= 48,
+    AND8mi	= 49,
+    AND8mm	= 50,
+    AND8mr	= 51,
+    AND8ri	= 52,
+    AND8rm	= 53,
+    AND8rm_POST	= 54,
+    AND8rr	= 55,
+    BIC16mm	= 56,
+    BIC16mr	= 57,
+    BIC16rm	= 58,
+    BIC16rr	= 59,
+    BIC8mm	= 60,
+    BIC8mr	= 61,
+    BIC8rm	= 62,
+    BIC8rr	= 63,
+    BIT16mi	= 64,
+    BIT16mm	= 65,
+    BIT16mr	= 66,
+    BIT16ri	= 67,
+    BIT16rm	= 68,
+    BIT16rr	= 69,
+    BIT8mi	= 70,
+    BIT8mm	= 71,
+    BIT8mr	= 72,
+    BIT8ri	= 73,
+    BIT8rm	= 74,
+    BIT8rr	= 75,
+    Bi	= 76,
+    Bm	= 77,
+    Br	= 78,
+    CALLi	= 79,
+    CALLm	= 80,
+    CALLr	= 81,
+    CMP16mi	= 82,
+    CMP16mr	= 83,
+    CMP16ri	= 84,
+    CMP16rm	= 85,
+    CMP16rr	= 86,
+    CMP8mi	= 87,
+    CMP8mr	= 88,
+    CMP8ri	= 89,
+    CMP8rm	= 90,
+    CMP8rr	= 91,
+    JCC	= 92,
+    JMP	= 93,
+    MOV16mi	= 94,
+    MOV16mm	= 95,
+    MOV16mr	= 96,
+    MOV16ri	= 97,
+    MOV16rm	= 98,
+    MOV16rm_POST	= 99,
+    MOV16rr	= 100,
+    MOV8mi	= 101,
+    MOV8mm	= 102,
+    MOV8mr	= 103,
+    MOV8ri	= 104,
+    MOV8rm	= 105,
+    MOV8rm_POST	= 106,
+    MOV8rr	= 107,
+    MOVZX16rm8	= 108,
+    MOVZX16rr8	= 109,
+    NOP	= 110,
+    OR16mi	= 111,
+    OR16mm	= 112,
+    OR16mr	= 113,
+    OR16ri	= 114,
+    OR16rm	= 115,
+    OR16rm_POST	= 116,
+    OR16rr	= 117,
+    OR8mi	= 118,
+    OR8mm	= 119,
+    OR8mr	= 120,
+    OR8ri	= 121,
+    OR8rm	= 122,
+    OR8rm_POST	= 123,
+    OR8rr	= 124,
+    POP16r	= 125,
+    PUSH16r	= 126,
+    RET	= 127,
+    RETI	= 128,
+    SAR16r1	= 129,
+    SAR16r1c	= 130,
+    SAR8r1	= 131,
+    SAR8r1c	= 132,
+    SBC16mi	= 133,
+    SBC16mm	= 134,
+    SBC16mr	= 135,
+    SBC16ri	= 136,
+    SBC16rm	= 137,
+    SBC16rr	= 138,
+    SBC8mi	= 139,
+    SBC8mm	= 140,
+    SBC8mr	= 141,
+    SBC8ri	= 142,
+    SBC8rm	= 143,
+    SBC8rr	= 144,
+    SEXT16r	= 145,
+    SHL16r1	= 146,
+    SHL8r1	= 147,
+    SUB16mi	= 148,
+    SUB16mm	= 149,
+    SUB16mr	= 150,
+    SUB16ri	= 151,
+    SUB16rm	= 152,
+    SUB16rm_POST	= 153,
+    SUB16rr	= 154,
+    SUB8mi	= 155,
+    SUB8mm	= 156,
+    SUB8mr	= 157,
+    SUB8ri	= 158,
+    SUB8rm	= 159,
+    SUB8rm_POST	= 160,
+    SUB8rr	= 161,
+    SWPB16r	= 162,
+    Select16	= 163,
+    Select8	= 164,
+    Shl16	= 165,
+    Shl8	= 166,
+    Sra16	= 167,
+    Sra8	= 168,
+    Srl16	= 169,
+    Srl8	= 170,
+    XOR16mi	= 171,
+    XOR16mm	= 172,
+    XOR16mr	= 173,
+    XOR16ri	= 174,
+    XOR16rm	= 175,
+    XOR16rm_POST	= 176,
+    XOR16rr	= 177,
+    XOR8mi	= 178,
+    XOR8mm	= 179,
+    XOR8mr	= 180,
+    XOR8ri	= 181,
+    XOR8rm	= 182,
+    XOR8rm_POST	= 183,
+    XOR8rr	= 184,
+    ZEXT16r	= 185,
+    INSTRUCTION_LIST_END = 186
+  };
+}
+} // End llvm namespace 
+#endif // GET_INSTRINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Instruction Descriptors
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_INSTRINFO_MC_DESC
+#undef GET_INSTRINFO_MC_DESC
+namespace llvm {
+
+static const unsigned ImplicitList1[] = { MSP430::SRW, 0 };
+static const unsigned ImplicitList2[] = { MSP430::SPW, 0 };
+static const unsigned ImplicitList3[] = { MSP430::SPW, MSP430::SRW, 0 };
+static const unsigned ImplicitList4[] = { MSP430::R12W, MSP430::R13W, MSP430::R14W, MSP430::R15W, MSP430::SRW, 0 };
+
+static const MCOperandInfo OperandInfo2[] = { { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo3[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo4[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo5[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo6[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo7[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo8[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo9[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo10[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo11[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo12[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo13[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo14[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo15[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo16[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo17[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo18[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((1 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo19[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((1 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo20[] = { { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo21[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo22[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo23[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo24[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo25[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo26[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo27[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo28[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo29[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((1 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo30[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((1 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo31[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo32[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo33[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo34[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo35[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo36[] = { { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo37[] = { { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { MSP430::GR8RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+
+MCInstrDesc MSP430Insts[] = {
+  { 0,	0,	0,	0,	0,	"PHI", 0|(1<<MCID::Variadic)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #0 = PHI
+  { 1,	0,	0,	0,	0,	"INLINEASM", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #1 = INLINEASM
+  { 2,	1,	0,	0,	0,	"PROLOG_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #2 = PROLOG_LABEL
+  { 3,	1,	0,	0,	0,	"EH_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #3 = EH_LABEL
+  { 4,	1,	0,	0,	0,	"GC_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #4 = GC_LABEL
+  { 5,	0,	0,	0,	0,	"KILL", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #5 = KILL
+  { 6,	3,	1,	0,	0,	"EXTRACT_SUBREG", 0, 0x0ULL, NULL, NULL, OperandInfo3 },  // Inst #6 = EXTRACT_SUBREG
+  { 7,	4,	1,	0,	0,	"INSERT_SUBREG", 0, 0x0ULL, NULL, NULL, OperandInfo4 },  // Inst #7 = INSERT_SUBREG
+  { 8,	1,	1,	0,	0,	"IMPLICIT_DEF", 0|(1<<MCID::Rematerializable)|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #8 = IMPLICIT_DEF
+  { 9,	4,	1,	0,	0,	"SUBREG_TO_REG", 0, 0x0ULL, NULL, NULL, OperandInfo6 },  // Inst #9 = SUBREG_TO_REG
+  { 10,	3,	1,	0,	0,	"COPY_TO_REGCLASS", 0|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo3 },  // Inst #10 = COPY_TO_REGCLASS
+  { 11,	0,	0,	0,	0,	"DBG_VALUE", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #11 = DBG_VALUE
+  { 12,	1,	1,	0,	0,	"REG_SEQUENCE", 0|(1<<MCID::Variadic)|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #12 = REG_SEQUENCE
+  { 13,	2,	1,	0,	0,	"COPY", 0|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo7 },  // Inst #13 = COPY
+  { 14,	3,	0,	0,	0,	"ADC16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo8 },  // Inst #14 = ADC16mi
+  { 15,	4,	0,	0,	0,	"ADC16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo9 },  // Inst #15 = ADC16mm
+  { 16,	3,	0,	0,	0,	"ADC16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo10 },  // Inst #16 = ADC16mr
+  { 17,	3,	1,	0,	0,	"ADC16ri", 0, 0xeULL, ImplicitList1, ImplicitList1, OperandInfo11 },  // Inst #17 = ADC16ri
+  { 18,	4,	1,	0,	0,	"ADC16rm", 0|(1<<MCID::MayLoad), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo12 },  // Inst #18 = ADC16rm
+  { 19,	3,	1,	0,	0,	"ADC16rr", 0|(1<<MCID::Commutable), 0xaULL, ImplicitList1, ImplicitList1, OperandInfo13 },  // Inst #19 = ADC16rr
+  { 20,	3,	0,	0,	0,	"ADC8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo8 },  // Inst #20 = ADC8mi
+  { 21,	4,	0,	0,	0,	"ADC8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo9 },  // Inst #21 = ADC8mm
+  { 22,	3,	0,	0,	0,	"ADC8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo14 },  // Inst #22 = ADC8mr
+  { 23,	3,	1,	0,	0,	"ADC8ri", 0, 0xeULL, ImplicitList1, ImplicitList1, OperandInfo15 },  // Inst #23 = ADC8ri
+  { 24,	4,	1,	0,	0,	"ADC8rm", 0|(1<<MCID::MayLoad), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo16 },  // Inst #24 = ADC8rm
+  { 25,	3,	1,	0,	0,	"ADC8rr", 0|(1<<MCID::Commutable), 0xaULL, ImplicitList1, ImplicitList1, OperandInfo17 },  // Inst #25 = ADC8rr
+  { 26,	3,	0,	0,	0,	"ADD16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #26 = ADD16mi
+  { 27,	4,	0,	0,	0,	"ADD16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #27 = ADD16mm
+  { 28,	3,	0,	0,	0,	"ADD16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #28 = ADD16mr
+  { 29,	3,	1,	0,	0,	"ADD16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo11 },  // Inst #29 = ADD16ri
+  { 30,	4,	1,	0,	0,	"ADD16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo12 },  // Inst #30 = ADD16rm
+  { 31,	4,	2,	0,	0,	"ADD16rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo18 },  // Inst #31 = ADD16rm_POST
+  { 32,	3,	1,	0,	0,	"ADD16rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo13 },  // Inst #32 = ADD16rr
+  { 33,	3,	0,	0,	0,	"ADD8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #33 = ADD8mi
+  { 34,	4,	0,	0,	0,	"ADD8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #34 = ADD8mm
+  { 35,	3,	0,	0,	0,	"ADD8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #35 = ADD8mr
+  { 36,	3,	1,	0,	0,	"ADD8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo15 },  // Inst #36 = ADD8ri
+  { 37,	4,	1,	0,	0,	"ADD8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo16 },  // Inst #37 = ADD8rm
+  { 38,	4,	2,	0,	0,	"ADD8rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo19 },  // Inst #38 = ADD8rm_POST
+  { 39,	3,	1,	0,	0,	"ADD8rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo17 },  // Inst #39 = ADD8rr
+  { 40,	1,	0,	0,	0,	"ADJCALLSTACKDOWN", 0, 0x4ULL, ImplicitList2, ImplicitList3, OperandInfo2 },  // Inst #40 = ADJCALLSTACKDOWN
+  { 41,	2,	0,	0,	0,	"ADJCALLSTACKUP", 0, 0x4ULL, ImplicitList2, ImplicitList3, OperandInfo20 },  // Inst #41 = ADJCALLSTACKUP
+  { 42,	3,	0,	0,	0,	"AND16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #42 = AND16mi
+  { 43,	4,	0,	0,	0,	"AND16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #43 = AND16mm
+  { 44,	3,	0,	0,	0,	"AND16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #44 = AND16mr
+  { 45,	3,	1,	0,	0,	"AND16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo11 },  // Inst #45 = AND16ri
+  { 46,	4,	1,	0,	0,	"AND16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo12 },  // Inst #46 = AND16rm
+  { 47,	4,	2,	0,	0,	"AND16rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo18 },  // Inst #47 = AND16rm_POST
+  { 48,	3,	1,	0,	0,	"AND16rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo13 },  // Inst #48 = AND16rr
+  { 49,	3,	0,	0,	0,	"AND8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #49 = AND8mi
+  { 50,	4,	0,	0,	0,	"AND8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #50 = AND8mm
+  { 51,	3,	0,	0,	0,	"AND8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #51 = AND8mr
+  { 52,	3,	1,	0,	0,	"AND8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo15 },  // Inst #52 = AND8ri
+  { 53,	4,	1,	0,	0,	"AND8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo16 },  // Inst #53 = AND8rm
+  { 54,	4,	2,	0,	0,	"AND8rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo19 },  // Inst #54 = AND8rm_POST
+  { 55,	3,	1,	0,	0,	"AND8rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo17 },  // Inst #55 = AND8rr
+  { 56,	4,	0,	0,	0,	"BIC16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #56 = BIC16mm
+  { 57,	3,	0,	0,	0,	"BIC16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #57 = BIC16mr
+  { 58,	4,	1,	0,	0,	"BIC16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo12 },  // Inst #58 = BIC16rm
+  { 59,	3,	1,	0,	0,	"BIC16rr", 0, 0xaULL, NULL, ImplicitList1, OperandInfo13 },  // Inst #59 = BIC16rr
+  { 60,	4,	0,	0,	0,	"BIC8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #60 = BIC8mm
+  { 61,	3,	0,	0,	0,	"BIC8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #61 = BIC8mr
+  { 62,	4,	1,	0,	0,	"BIC8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo16 },  // Inst #62 = BIC8rm
+  { 63,	3,	1,	0,	0,	"BIC8rr", 0, 0xaULL, NULL, ImplicitList1, OperandInfo17 },  // Inst #63 = BIC8rr
+  { 64,	3,	0,	0,	0,	"BIT16mi", 0|(1<<MCID::MayLoad), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #64 = BIT16mi
+  { 65,	4,	0,	0,	0,	"BIT16mm", 0|(1<<MCID::MayLoad), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #65 = BIT16mm
+  { 66,	3,	0,	0,	0,	"BIT16mr", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #66 = BIT16mr
+  { 67,	2,	0,	0,	0,	"BIT16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo21 },  // Inst #67 = BIT16ri
+  { 68,	3,	0,	0,	0,	"BIT16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo22 },  // Inst #68 = BIT16rm
+  { 69,	2,	0,	0,	0,	"BIT16rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo23 },  // Inst #69 = BIT16rr
+  { 70,	3,	0,	0,	0,	"BIT8mi", 0|(1<<MCID::MayLoad), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #70 = BIT8mi
+  { 71,	4,	0,	0,	0,	"BIT8mm", 0|(1<<MCID::MayLoad), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #71 = BIT8mm
+  { 72,	3,	0,	0,	0,	"BIT8mr", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #72 = BIT8mr
+  { 73,	2,	0,	0,	0,	"BIT8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo24 },  // Inst #73 = BIT8ri
+  { 74,	3,	0,	0,	0,	"BIT8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo25 },  // Inst #74 = BIT8rm
+  { 75,	2,	0,	0,	0,	"BIT8rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo26 },  // Inst #75 = BIT8rr
+  { 76,	1,	0,	0,	0,	"Bi", 0|(1<<MCID::Branch)|(1<<MCID::IndirectBranch)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0xeULL, NULL, NULL, OperandInfo2 },  // Inst #76 = Bi
+  { 77,	2,	0,	0,	0,	"Bm", 0|(1<<MCID::Branch)|(1<<MCID::IndirectBranch)|(1<<MCID::Barrier)|(1<<MCID::MayLoad)|(1<<MCID::Terminator), 0xeULL, NULL, NULL, OperandInfo27 },  // Inst #77 = Bm
+  { 78,	1,	0,	0,	0,	"Br", 0|(1<<MCID::Branch)|(1<<MCID::IndirectBranch)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0xaULL, NULL, NULL, OperandInfo28 },  // Inst #78 = Br
+  { 79,	1,	0,	0,	0,	"CALLi", 0|(1<<MCID::Call)|(1<<MCID::Variadic), 0xdULL, ImplicitList2, ImplicitList4, OperandInfo2 },  // Inst #79 = CALLi
+  { 80,	2,	0,	0,	0,	"CALLm", 0|(1<<MCID::Call)|(1<<MCID::MayLoad)|(1<<MCID::Variadic), 0xdULL, ImplicitList2, ImplicitList4, OperandInfo27 },  // Inst #80 = CALLm
+  { 81,	1,	0,	0,	0,	"CALLr", 0|(1<<MCID::Call)|(1<<MCID::Variadic), 0x9ULL, ImplicitList2, ImplicitList4, OperandInfo28 },  // Inst #81 = CALLr
+  { 82,	3,	0,	0,	0,	"CMP16mi", 0|(1<<MCID::MayLoad), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #82 = CMP16mi
+  { 83,	3,	0,	0,	0,	"CMP16mr", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #83 = CMP16mr
+  { 84,	2,	0,	0,	0,	"CMP16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo21 },  // Inst #84 = CMP16ri
+  { 85,	3,	0,	0,	0,	"CMP16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo22 },  // Inst #85 = CMP16rm
+  { 86,	2,	0,	0,	0,	"CMP16rr", 0, 0xaULL, NULL, ImplicitList1, OperandInfo23 },  // Inst #86 = CMP16rr
+  { 87,	3,	0,	0,	0,	"CMP8mi", 0|(1<<MCID::MayLoad), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #87 = CMP8mi
+  { 88,	3,	0,	0,	0,	"CMP8mr", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #88 = CMP8mr
+  { 89,	2,	0,	0,	0,	"CMP8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo24 },  // Inst #89 = CMP8ri
+  { 90,	3,	0,	0,	0,	"CMP8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo25 },  // Inst #90 = CMP8rm
+  { 91,	2,	0,	0,	0,	"CMP8rr", 0, 0xaULL, NULL, ImplicitList1, OperandInfo26 },  // Inst #91 = CMP8rr
+  { 92,	2,	0,	0,	0,	"JCC", 0|(1<<MCID::Branch)|(1<<MCID::Terminator), 0xbULL, ImplicitList1, NULL, OperandInfo7 },  // Inst #92 = JCC
+  { 93,	1,	0,	0,	0,	"JMP", 0|(1<<MCID::Branch)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0xbULL, NULL, NULL, OperandInfo5 },  // Inst #93 = JMP
+  { 94,	3,	0,	0,	0,	"MOV16mi", 0|(1<<MCID::MayStore), 0x12ULL, NULL, NULL, OperandInfo8 },  // Inst #94 = MOV16mi
+  { 95,	4,	0,	0,	0,	"MOV16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, NULL, OperandInfo9 },  // Inst #95 = MOV16mm
+  { 96,	3,	0,	0,	0,	"MOV16mr", 0|(1<<MCID::MayStore), 0xeULL, NULL, NULL, OperandInfo10 },  // Inst #96 = MOV16mr
+  { 97,	2,	1,	0,	0,	"MOV16ri", 0|(1<<MCID::Rematerializable)|(1<<MCID::CheapAsAMove), 0xeULL, NULL, NULL, OperandInfo21 },  // Inst #97 = MOV16ri
+  { 98,	3,	1,	0,	0,	"MOV16rm", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad)|(1<<MCID::Rematerializable), 0xeULL, NULL, NULL, OperandInfo22 },  // Inst #98 = MOV16rm
+  { 99,	3,	2,	0,	0,	"MOV16rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, NULL, OperandInfo29 },  // Inst #99 = MOV16rm_POST
+  { 100,	2,	1,	0,	0,	"MOV16rr", 0, 0xaULL, NULL, NULL, OperandInfo23 },  // Inst #100 = MOV16rr
+  { 101,	3,	0,	0,	0,	"MOV8mi", 0|(1<<MCID::MayStore), 0x12ULL, NULL, NULL, OperandInfo8 },  // Inst #101 = MOV8mi
+  { 102,	4,	0,	0,	0,	"MOV8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, NULL, OperandInfo9 },  // Inst #102 = MOV8mm
+  { 103,	3,	0,	0,	0,	"MOV8mr", 0|(1<<MCID::MayStore), 0xeULL, NULL, NULL, OperandInfo14 },  // Inst #103 = MOV8mr
+  { 104,	2,	1,	0,	0,	"MOV8ri", 0|(1<<MCID::Rematerializable)|(1<<MCID::CheapAsAMove), 0xeULL, NULL, NULL, OperandInfo24 },  // Inst #104 = MOV8ri
+  { 105,	3,	1,	0,	0,	"MOV8rm", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad)|(1<<MCID::Rematerializable), 0xeULL, NULL, NULL, OperandInfo25 },  // Inst #105 = MOV8rm
+  { 106,	3,	2,	0,	0,	"MOV8rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, NULL, OperandInfo30 },  // Inst #106 = MOV8rm_POST
+  { 107,	2,	1,	0,	0,	"MOV8rr", 0, 0xaULL, NULL, NULL, OperandInfo26 },  // Inst #107 = MOV8rr
+  { 108,	3,	1,	0,	0,	"MOVZX16rm8", 0|(1<<MCID::MayLoad), 0xeULL, NULL, NULL, OperandInfo22 },  // Inst #108 = MOVZX16rm8
+  { 109,	2,	1,	0,	0,	"MOVZX16rr8", 0, 0xaULL, NULL, NULL, OperandInfo31 },  // Inst #109 = MOVZX16rr8
+  { 110,	0,	0,	0,	0,	"NOP", 0, 0x4ULL, NULL, NULL, 0 },  // Inst #110 = NOP
+  { 111,	3,	0,	0,	0,	"OR16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #111 = OR16mi
+  { 112,	4,	0,	0,	0,	"OR16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #112 = OR16mm
+  { 113,	3,	0,	0,	0,	"OR16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #113 = OR16mr
+  { 114,	3,	1,	0,	0,	"OR16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo11 },  // Inst #114 = OR16ri
+  { 115,	4,	1,	0,	0,	"OR16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo12 },  // Inst #115 = OR16rm
+  { 116,	4,	2,	0,	0,	"OR16rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo18 },  // Inst #116 = OR16rm_POST
+  { 117,	3,	1,	0,	0,	"OR16rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo13 },  // Inst #117 = OR16rr
+  { 118,	3,	0,	0,	0,	"OR8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #118 = OR8mi
+  { 119,	4,	0,	0,	0,	"OR8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #119 = OR8mm
+  { 120,	3,	0,	0,	0,	"OR8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #120 = OR8mr
+  { 121,	3,	1,	0,	0,	"OR8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo15 },  // Inst #121 = OR8ri
+  { 122,	4,	1,	0,	0,	"OR8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo16 },  // Inst #122 = OR8rm
+  { 123,	4,	2,	0,	0,	"OR8rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo19 },  // Inst #123 = OR8rm_POST
+  { 124,	3,	1,	0,	0,	"OR8rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo17 },  // Inst #124 = OR8rr
+  { 125,	1,	1,	0,	0,	"POP16r", 0|(1<<MCID::MayLoad), 0xaULL, ImplicitList2, ImplicitList2, OperandInfo28 },  // Inst #125 = POP16r
+  { 126,	1,	0,	0,	0,	"PUSH16r", 0|(1<<MCID::MayStore), 0x9ULL, ImplicitList2, ImplicitList2, OperandInfo28 },  // Inst #126 = PUSH16r
+  { 127,	0,	0,	0,	0,	"RET", 0|(1<<MCID::Return)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0xaULL, NULL, NULL, 0 },  // Inst #127 = RET
+  { 128,	0,	0,	0,	0,	"RETI", 0|(1<<MCID::Return)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0x9ULL, NULL, NULL, 0 },  // Inst #128 = RETI
+  { 129,	2,	1,	0,	0,	"SAR16r1", 0, 0x9ULL, NULL, ImplicitList1, OperandInfo32 },  // Inst #129 = SAR16r1
+  { 130,	2,	1,	0,	0,	"SAR16r1c", 0, 0x4ULL, NULL, ImplicitList1, OperandInfo32 },  // Inst #130 = SAR16r1c
+  { 131,	2,	1,	0,	0,	"SAR8r1", 0, 0x9ULL, NULL, ImplicitList1, OperandInfo33 },  // Inst #131 = SAR8r1
+  { 132,	2,	1,	0,	0,	"SAR8r1c", 0, 0x4ULL, NULL, ImplicitList1, OperandInfo33 },  // Inst #132 = SAR8r1c
+  { 133,	3,	0,	0,	0,	"SBC16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo8 },  // Inst #133 = SBC16mi
+  { 134,	4,	0,	0,	0,	"SBC16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo9 },  // Inst #134 = SBC16mm
+  { 135,	3,	0,	0,	0,	"SBC16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo10 },  // Inst #135 = SBC16mr
+  { 136,	3,	1,	0,	0,	"SBC16ri", 0, 0xeULL, ImplicitList1, ImplicitList1, OperandInfo11 },  // Inst #136 = SBC16ri
+  { 137,	4,	1,	0,	0,	"SBC16rm", 0|(1<<MCID::MayLoad), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo12 },  // Inst #137 = SBC16rm
+  { 138,	3,	1,	0,	0,	"SBC16rr", 0, 0xaULL, ImplicitList1, ImplicitList1, OperandInfo13 },  // Inst #138 = SBC16rr
+  { 139,	3,	0,	0,	0,	"SBC8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo8 },  // Inst #139 = SBC8mi
+  { 140,	4,	0,	0,	0,	"SBC8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, ImplicitList1, ImplicitList1, OperandInfo9 },  // Inst #140 = SBC8mm
+  { 141,	3,	0,	0,	0,	"SBC8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo14 },  // Inst #141 = SBC8mr
+  { 142,	3,	1,	0,	0,	"SBC8ri", 0, 0xeULL, ImplicitList1, ImplicitList1, OperandInfo15 },  // Inst #142 = SBC8ri
+  { 143,	4,	1,	0,	0,	"SBC8rm", 0|(1<<MCID::MayLoad), 0xeULL, ImplicitList1, ImplicitList1, OperandInfo16 },  // Inst #143 = SBC8rm
+  { 144,	3,	1,	0,	0,	"SBC8rr", 0, 0xaULL, ImplicitList1, ImplicitList1, OperandInfo17 },  // Inst #144 = SBC8rr
+  { 145,	2,	1,	0,	0,	"SEXT16r", 0, 0x9ULL, NULL, ImplicitList1, OperandInfo32 },  // Inst #145 = SEXT16r
+  { 146,	2,	1,	0,	0,	"SHL16r1", 0, 0xaULL, NULL, ImplicitList1, OperandInfo32 },  // Inst #146 = SHL16r1
+  { 147,	2,	1,	0,	0,	"SHL8r1", 0, 0xaULL, NULL, ImplicitList1, OperandInfo33 },  // Inst #147 = SHL8r1
+  { 148,	3,	0,	0,	0,	"SUB16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #148 = SUB16mi
+  { 149,	4,	0,	0,	0,	"SUB16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #149 = SUB16mm
+  { 150,	3,	0,	0,	0,	"SUB16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #150 = SUB16mr
+  { 151,	3,	1,	0,	0,	"SUB16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo11 },  // Inst #151 = SUB16ri
+  { 152,	4,	1,	0,	0,	"SUB16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo12 },  // Inst #152 = SUB16rm
+  { 153,	4,	2,	0,	0,	"SUB16rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo18 },  // Inst #153 = SUB16rm_POST
+  { 154,	3,	1,	0,	0,	"SUB16rr", 0, 0xaULL, NULL, ImplicitList1, OperandInfo13 },  // Inst #154 = SUB16rr
+  { 155,	3,	0,	0,	0,	"SUB8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #155 = SUB8mi
+  { 156,	4,	0,	0,	0,	"SUB8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #156 = SUB8mm
+  { 157,	3,	0,	0,	0,	"SUB8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #157 = SUB8mr
+  { 158,	3,	1,	0,	0,	"SUB8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo15 },  // Inst #158 = SUB8ri
+  { 159,	4,	1,	0,	0,	"SUB8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo16 },  // Inst #159 = SUB8rm
+  { 160,	4,	2,	0,	0,	"SUB8rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo19 },  // Inst #160 = SUB8rm_POST
+  { 161,	3,	1,	0,	0,	"SUB8rr", 0, 0xaULL, NULL, ImplicitList1, OperandInfo17 },  // Inst #161 = SUB8rr
+  { 162,	2,	1,	0,	0,	"SWPB16r", 0, 0x9ULL, NULL, NULL, OperandInfo32 },  // Inst #162 = SWPB16r
+  { 163,	4,	1,	0,	0,	"Select16", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, NULL, OperandInfo34 },  // Inst #163 = Select16
+  { 164,	4,	1,	0,	0,	"Select8", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, NULL, OperandInfo35 },  // Inst #164 = Select8
+  { 165,	3,	1,	0,	0,	"Shl16", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, ImplicitList1, OperandInfo36 },  // Inst #165 = Shl16
+  { 166,	3,	1,	0,	0,	"Shl8", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, ImplicitList1, OperandInfo37 },  // Inst #166 = Shl8
+  { 167,	3,	1,	0,	0,	"Sra16", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, ImplicitList1, OperandInfo36 },  // Inst #167 = Sra16
+  { 168,	3,	1,	0,	0,	"Sra8", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, ImplicitList1, OperandInfo37 },  // Inst #168 = Sra8
+  { 169,	3,	1,	0,	0,	"Srl16", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, ImplicitList1, OperandInfo36 },  // Inst #169 = Srl16
+  { 170,	3,	1,	0,	0,	"Srl8", 0|(1<<MCID::UsesCustomInserter), 0x4ULL, NULL, ImplicitList1, OperandInfo37 },  // Inst #170 = Srl8
+  { 171,	3,	0,	0,	0,	"XOR16mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #171 = XOR16mi
+  { 172,	4,	0,	0,	0,	"XOR16mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #172 = XOR16mm
+  { 173,	3,	0,	0,	0,	"XOR16mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo10 },  // Inst #173 = XOR16mr
+  { 174,	3,	1,	0,	0,	"XOR16ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo11 },  // Inst #174 = XOR16ri
+  { 175,	4,	1,	0,	0,	"XOR16rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo12 },  // Inst #175 = XOR16rm
+  { 176,	4,	2,	0,	0,	"XOR16rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo18 },  // Inst #176 = XOR16rm_POST
+  { 177,	3,	1,	0,	0,	"XOR16rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo13 },  // Inst #177 = XOR16rr
+  { 178,	3,	0,	0,	0,	"XOR8mi", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #178 = XOR8mi
+  { 179,	4,	0,	0,	0,	"XOR8mm", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0x12ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #179 = XOR8mm
+  { 180,	3,	0,	0,	0,	"XOR8mr", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore), 0xeULL, NULL, ImplicitList1, OperandInfo14 },  // Inst #180 = XOR8mr
+  { 181,	3,	1,	0,	0,	"XOR8ri", 0, 0xeULL, NULL, ImplicitList1, OperandInfo15 },  // Inst #181 = XOR8ri
+  { 182,	4,	1,	0,	0,	"XOR8rm", 0|(1<<MCID::MayLoad), 0xeULL, NULL, ImplicitList1, OperandInfo16 },  // Inst #182 = XOR8rm
+  { 183,	4,	2,	0,	0,	"XOR8rm_POST", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects)|(1<<MCID::ExtraDefRegAllocReq), 0xaULL, NULL, ImplicitList1, OperandInfo19 },  // Inst #183 = XOR8rm_POST
+  { 184,	3,	1,	0,	0,	"XOR8rr", 0|(1<<MCID::Commutable), 0xaULL, NULL, ImplicitList1, OperandInfo17 },  // Inst #184 = XOR8rr
+  { 185,	2,	1,	0,	0,	"ZEXT16r", 0, 0xaULL, NULL, NULL, OperandInfo32 },  // Inst #185 = ZEXT16r
+};
+
+static inline void InitMSP430MCInstrInfo(MCInstrInfo *II) {
+  II->InitMCInstrInfo(MSP430Insts, 186);
+}
+
+} // End llvm namespace 
+#endif // GET_INSTRINFO_MC_DESC
+
+
+#ifdef GET_INSTRINFO_HEADER
+#undef GET_INSTRINFO_HEADER
+namespace llvm {
+struct MSP430GenInstrInfo : public TargetInstrInfoImpl {
+  explicit MSP430GenInstrInfo(int SO = -1, int DO = -1);
+};
+} // End llvm namespace 
+#endif // GET_INSTRINFO_HEADER
+
+
+#ifdef GET_INSTRINFO_CTOR
+#undef GET_INSTRINFO_CTOR
+namespace llvm {
+extern MCInstrDesc MSP430Insts[];
+MSP430GenInstrInfo::MSP430GenInstrInfo(int SO, int DO)
+  : TargetInstrInfoImpl(SO, DO) {
+  InitMCInstrInfo(MSP430Insts, 186);
+}
+} // End llvm namespace 
+#endif // GET_INSTRINFO_CTOR
+

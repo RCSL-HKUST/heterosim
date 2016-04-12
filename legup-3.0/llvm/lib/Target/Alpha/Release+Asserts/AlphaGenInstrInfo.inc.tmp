@@ -1,0 +1,549 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Instruction Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_INSTRINFO_ENUM
+#undef GET_INSTRINFO_ENUM
+namespace llvm {
+
+namespace Alpha {
+  enum {
+    PHI	= 0,
+    INLINEASM	= 1,
+    PROLOG_LABEL	= 2,
+    EH_LABEL	= 3,
+    GC_LABEL	= 4,
+    KILL	= 5,
+    EXTRACT_SUBREG	= 6,
+    INSERT_SUBREG	= 7,
+    IMPLICIT_DEF	= 8,
+    SUBREG_TO_REG	= 9,
+    COPY_TO_REGCLASS	= 10,
+    DBG_VALUE	= 11,
+    REG_SEQUENCE	= 12,
+    COPY	= 13,
+    ADDLi	= 14,
+    ADDLr	= 15,
+    ADDQi	= 16,
+    ADDQr	= 17,
+    ADDS	= 18,
+    ADDT	= 19,
+    ADJUSTSTACKDOWN	= 20,
+    ADJUSTSTACKUP	= 21,
+    ALTENT	= 22,
+    ANDi	= 23,
+    ANDr	= 24,
+    BEQ	= 25,
+    BGE	= 26,
+    BGT	= 27,
+    BICi	= 28,
+    BICr	= 29,
+    BISi	= 30,
+    BISr	= 31,
+    BLBC	= 32,
+    BLBS	= 33,
+    BLE	= 34,
+    BLT	= 35,
+    BNE	= 36,
+    BR	= 37,
+    BSR	= 38,
+    CAS32	= 39,
+    CAS64	= 40,
+    CMOVEQi	= 41,
+    CMOVEQr	= 42,
+    CMOVGEi	= 43,
+    CMOVGEr	= 44,
+    CMOVGTi	= 45,
+    CMOVGTr	= 46,
+    CMOVLBCi	= 47,
+    CMOVLBCr	= 48,
+    CMOVLBSi	= 49,
+    CMOVLBSr	= 50,
+    CMOVLEi	= 51,
+    CMOVLEr	= 52,
+    CMOVLTi	= 53,
+    CMOVLTr	= 54,
+    CMOVNEi	= 55,
+    CMOVNEr	= 56,
+    CMPBGE	= 57,
+    CMPBGEi	= 58,
+    CMPEQ	= 59,
+    CMPEQi	= 60,
+    CMPLE	= 61,
+    CMPLEi	= 62,
+    CMPLT	= 63,
+    CMPLTi	= 64,
+    CMPTEQ	= 65,
+    CMPTLE	= 66,
+    CMPTLT	= 67,
+    CMPTUN	= 68,
+    CMPULE	= 69,
+    CMPULEi	= 70,
+    CMPULT	= 71,
+    CMPULTi	= 72,
+    COND_BRANCH_F	= 73,
+    COND_BRANCH_I	= 74,
+    CPYSES	= 75,
+    CPYSESt	= 76,
+    CPYSET	= 77,
+    CPYSNS	= 78,
+    CPYSNSt	= 79,
+    CPYSNT	= 80,
+    CPYSNTs	= 81,
+    CPYSS	= 82,
+    CPYSSt	= 83,
+    CPYST	= 84,
+    CPYSTs	= 85,
+    CTLZ	= 86,
+    CTPOP	= 87,
+    CTTZ	= 88,
+    CVTQS	= 89,
+    CVTQT	= 90,
+    CVTST	= 91,
+    CVTTQ	= 92,
+    CVTTS	= 93,
+    DIVS	= 94,
+    DIVT	= 95,
+    EQVi	= 96,
+    EQVr	= 97,
+    EXTBL	= 98,
+    EXTLL	= 99,
+    EXTWL	= 100,
+    FBEQ	= 101,
+    FBGE	= 102,
+    FBGT	= 103,
+    FBLE	= 104,
+    FBLT	= 105,
+    FBNE	= 106,
+    FCMOVEQS	= 107,
+    FCMOVEQT	= 108,
+    FCMOVGES	= 109,
+    FCMOVGET	= 110,
+    FCMOVGTS	= 111,
+    FCMOVGTT	= 112,
+    FCMOVLES	= 113,
+    FCMOVLET	= 114,
+    FCMOVLTS	= 115,
+    FCMOVLTT	= 116,
+    FCMOVNES	= 117,
+    FCMOVNET	= 118,
+    FTOIS	= 119,
+    FTOIT	= 120,
+    ITOFS	= 121,
+    ITOFT	= 122,
+    JMP	= 123,
+    JSR	= 124,
+    JSR_COROUTINE	= 125,
+    JSRs	= 126,
+    LAS32	= 127,
+    LAS64	= 128,
+    LDA	= 129,
+    LDAH	= 130,
+    LDAHg	= 131,
+    LDAHr	= 132,
+    LDAg	= 133,
+    LDAr	= 134,
+    LDBU	= 135,
+    LDBUr	= 136,
+    LDL	= 137,
+    LDL_L	= 138,
+    LDLr	= 139,
+    LDQ	= 140,
+    LDQ_L	= 141,
+    LDQl	= 142,
+    LDQr	= 143,
+    LDS	= 144,
+    LDSr	= 145,
+    LDT	= 146,
+    LDTr	= 147,
+    LDWU	= 148,
+    LDWUr	= 149,
+    MB	= 150,
+    MEMLABEL	= 151,
+    MULLi	= 152,
+    MULLr	= 153,
+    MULQi	= 154,
+    MULQr	= 155,
+    MULS	= 156,
+    MULT	= 157,
+    ORNOTi	= 158,
+    ORNOTr	= 159,
+    PCLABEL	= 160,
+    RETDAG	= 161,
+    RETDAGp	= 162,
+    RPCC	= 163,
+    S4ADDLi	= 164,
+    S4ADDLr	= 165,
+    S4ADDQi	= 166,
+    S4ADDQr	= 167,
+    S4SUBLi	= 168,
+    S4SUBLr	= 169,
+    S4SUBQi	= 170,
+    S4SUBQr	= 171,
+    S8ADDLi	= 172,
+    S8ADDLr	= 173,
+    S8ADDQi	= 174,
+    S8ADDQr	= 175,
+    S8SUBLi	= 176,
+    S8SUBLr	= 177,
+    S8SUBQi	= 178,
+    S8SUBQr	= 179,
+    SEXTB	= 180,
+    SEXTW	= 181,
+    SLi	= 182,
+    SLr	= 183,
+    SQRTS	= 184,
+    SQRTT	= 185,
+    SRAi	= 186,
+    SRAr	= 187,
+    SRLi	= 188,
+    SRLr	= 189,
+    STB	= 190,
+    STBr	= 191,
+    STL	= 192,
+    STL_C	= 193,
+    STLr	= 194,
+    STQ	= 195,
+    STQ_C	= 196,
+    STQr	= 197,
+    STS	= 198,
+    STSr	= 199,
+    STT	= 200,
+    STTr	= 201,
+    STW	= 202,
+    STWr	= 203,
+    SUBLi	= 204,
+    SUBLr	= 205,
+    SUBQi	= 206,
+    SUBQr	= 207,
+    SUBS	= 208,
+    SUBT	= 209,
+    SWAP32	= 210,
+    SWAP64	= 211,
+    UMULHi	= 212,
+    UMULHr	= 213,
+    WMB	= 214,
+    WTF	= 215,
+    XORi	= 216,
+    XORr	= 217,
+    ZAPNOTi	= 218,
+    INSTRUCTION_LIST_END = 219
+  };
+}
+} // End llvm namespace 
+#endif // GET_INSTRINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Instruction Descriptors
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_INSTRINFO_MC_DESC
+#undef GET_INSTRINFO_MC_DESC
+namespace llvm {
+
+static const unsigned ImplicitList1[] = { Alpha::R30, 0 };
+static const unsigned ImplicitList2[] = { Alpha::R29, 0 };
+static const unsigned ImplicitList3[] = { Alpha::R0, Alpha::R1, Alpha::R2, Alpha::R3, Alpha::R4, Alpha::R5, Alpha::R6, Alpha::R7, Alpha::R8, Alpha::R16, Alpha::R17, Alpha::R18, Alpha::R19, Alpha::R20, Alpha::R21, Alpha::R22, Alpha::R23, Alpha::R24, Alpha::R25, Alpha::R26, Alpha::R27, Alpha::R28, Alpha::R29, Alpha::F0, Alpha::F1, Alpha::F10, Alpha::F11, Alpha::F12, Alpha::F13, Alpha::F14, Alpha::F15, Alpha::F16, Alpha::F17, Alpha::F18, Alpha::F19, Alpha::F20, Alpha::F21, Alpha::F22, Alpha::F23, Alpha::F24, Alpha::F25, Alpha::F26, Alpha::F27, Alpha::F28, Alpha::F29, Alpha::F30, 0 };
+static const unsigned ImplicitList4[] = { Alpha::R27, Alpha::R29, 0 };
+static const unsigned ImplicitList5[] = { Alpha::R24, Alpha::R25, Alpha::R27, 0 };
+static const unsigned ImplicitList6[] = { Alpha::R23, Alpha::R24, Alpha::R25, Alpha::R27, Alpha::R28, 0 };
+static const unsigned ImplicitList7[] = { Alpha::R28, 0 };
+static const unsigned ImplicitList8[] = { Alpha::R26, 0 };
+
+static const MCOperandInfo OperandInfo2[] = { { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo3[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo4[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo5[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo6[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo7[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo8[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo9[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo10[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo11[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo12[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo13[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo14[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo15[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo16[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo17[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo18[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo19[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo20[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo21[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo22[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo23[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo24[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo25[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo26[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo27[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo28[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo29[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo30[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo31[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo32[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo33[] = { { Alpha::F8RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo34[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo35[] = { { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::F4RCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo36[] = { { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { Alpha::GPRCRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { Alpha::GPRCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+
+MCInstrDesc AlphaInsts[] = {
+  { 0,	0,	0,	0,	0,	"PHI", 0|(1<<MCID::Variadic)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #0 = PHI
+  { 1,	0,	0,	0,	0,	"INLINEASM", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #1 = INLINEASM
+  { 2,	1,	0,	0,	0,	"PROLOG_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #2 = PROLOG_LABEL
+  { 3,	1,	0,	0,	0,	"EH_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #3 = EH_LABEL
+  { 4,	1,	0,	0,	0,	"GC_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #4 = GC_LABEL
+  { 5,	0,	0,	0,	0,	"KILL", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #5 = KILL
+  { 6,	3,	1,	0,	0,	"EXTRACT_SUBREG", 0, 0x0ULL, NULL, NULL, OperandInfo3 },  // Inst #6 = EXTRACT_SUBREG
+  { 7,	4,	1,	0,	0,	"INSERT_SUBREG", 0, 0x0ULL, NULL, NULL, OperandInfo4 },  // Inst #7 = INSERT_SUBREG
+  { 8,	1,	1,	0,	0,	"IMPLICIT_DEF", 0|(1<<MCID::Rematerializable)|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #8 = IMPLICIT_DEF
+  { 9,	4,	1,	0,	0,	"SUBREG_TO_REG", 0, 0x0ULL, NULL, NULL, OperandInfo6 },  // Inst #9 = SUBREG_TO_REG
+  { 10,	3,	1,	0,	0,	"COPY_TO_REGCLASS", 0|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo3 },  // Inst #10 = COPY_TO_REGCLASS
+  { 11,	0,	0,	0,	0,	"DBG_VALUE", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #11 = DBG_VALUE
+  { 12,	1,	1,	0,	0,	"REG_SEQUENCE", 0|(1<<MCID::Variadic)|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #12 = REG_SEQUENCE
+  { 13,	2,	1,	0,	0,	"COPY", 0|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo7 },  // Inst #13 = COPY
+  { 14,	3,	1,	13,	0,	"ADDLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #14 = ADDLi
+  { 15,	3,	1,	13,	0,	"ADDLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #15 = ADDLr
+  { 16,	3,	1,	13,	0,	"ADDQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #16 = ADDQi
+  { 17,	3,	1,	13,	0,	"ADDQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #17 = ADDQr
+  { 18,	3,	1,	2,	0,	"ADDS", 0, 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #18 = ADDS
+  { 19,	3,	1,	2,	0,	"ADDT", 0, 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #19 = ADDT
+  { 20,	2,	0,	25,	0,	"ADJUSTSTACKDOWN", 0, 0x0ULL, ImplicitList1, ImplicitList1, OperandInfo7 },  // Inst #20 = ADJUSTSTACKDOWN
+  { 21,	1,	0,	25,	0,	"ADJUSTSTACKUP", 0, 0x0ULL, ImplicitList1, ImplicitList1, OperandInfo5 },  // Inst #21 = ADJUSTSTACKUP
+  { 22,	1,	0,	25,	0,	"ALTENT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #22 = ALTENT
+  { 23,	3,	1,	16,	0,	"ANDi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #23 = ANDi
+  { 24,	3,	1,	16,	0,	"ANDr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #24 = ANDr
+  { 25,	3,	0,	14,	0,	"BEQ", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #25 = BEQ
+  { 26,	3,	0,	14,	0,	"BGE", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #26 = BGE
+  { 27,	3,	0,	14,	0,	"BGT", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #27 = BGT
+  { 28,	3,	1,	16,	0,	"BICi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #28 = BICi
+  { 29,	3,	1,	16,	0,	"BICr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #29 = BICr
+  { 30,	3,	1,	16,	0,	"BISi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #30 = BISi
+  { 31,	3,	1,	16,	0,	"BISr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #31 = BISr
+  { 32,	3,	0,	14,	0,	"BLBC", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #32 = BLBC
+  { 33,	3,	0,	14,	0,	"BLBS", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #33 = BLBS
+  { 34,	3,	0,	14,	0,	"BLE", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #34 = BLE
+  { 35,	3,	0,	14,	0,	"BLT", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #35 = BLT
+  { 36,	3,	0,	14,	0,	"BNE", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #36 = BNE
+  { 37,	1,	0,	28,	0,	"BR", 0|(1<<MCID::Branch)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #37 = BR
+  { 38,	1,	0,	22,	0,	"BSR", 0|(1<<MCID::Branch)|(1<<MCID::Call)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList2, ImplicitList3, OperandInfo5 },  // Inst #38 = BSR
+  { 39,	4,	1,	25,	0,	"CAS32", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UsesCustomInserter), 0x0ULL, NULL, NULL, OperandInfo13 },  // Inst #39 = CAS32
+  { 40,	4,	1,	25,	0,	"CAS64", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UsesCustomInserter), 0x0ULL, NULL, NULL, OperandInfo13 },  // Inst #40 = CAS64
+  { 41,	4,	1,	1,	0,	"CMOVEQi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #41 = CMOVEQi
+  { 42,	4,	1,	1,	0,	"CMOVEQr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #42 = CMOVEQr
+  { 43,	4,	1,	1,	0,	"CMOVGEi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #43 = CMOVGEi
+  { 44,	4,	1,	1,	0,	"CMOVGEr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #44 = CMOVGEr
+  { 45,	4,	1,	1,	0,	"CMOVGTi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #45 = CMOVGTi
+  { 46,	4,	1,	1,	0,	"CMOVGTr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #46 = CMOVGTr
+  { 47,	4,	1,	1,	0,	"CMOVLBCi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #47 = CMOVLBCi
+  { 48,	4,	1,	1,	0,	"CMOVLBCr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #48 = CMOVLBCr
+  { 49,	4,	1,	1,	0,	"CMOVLBSi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #49 = CMOVLBSi
+  { 50,	4,	1,	1,	0,	"CMOVLBSr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #50 = CMOVLBSr
+  { 51,	4,	1,	1,	0,	"CMOVLEi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #51 = CMOVLEi
+  { 52,	4,	1,	1,	0,	"CMOVLEr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #52 = CMOVLEr
+  { 53,	4,	1,	1,	0,	"CMOVLTi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #53 = CMOVLTi
+  { 54,	4,	1,	1,	0,	"CMOVLTr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #54 = CMOVLTr
+  { 55,	4,	1,	1,	0,	"CMOVNEi", 0, 0x0ULL, NULL, NULL, OperandInfo14 },  // Inst #55 = CMOVNEi
+  { 56,	4,	1,	1,	0,	"CMOVNEr", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #56 = CMOVNEr
+  { 57,	3,	1,	16,	0,	"CMPBGE", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #57 = CMPBGE
+  { 58,	3,	1,	16,	0,	"CMPBGEi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #58 = CMPBGEi
+  { 59,	3,	1,	13,	0,	"CMPEQ", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #59 = CMPEQ
+  { 60,	3,	1,	13,	0,	"CMPEQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #60 = CMPEQi
+  { 61,	3,	1,	13,	0,	"CMPLE", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #61 = CMPLE
+  { 62,	3,	1,	13,	0,	"CMPLEi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #62 = CMPLEi
+  { 63,	3,	1,	13,	0,	"CMPLT", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #63 = CMPLT
+  { 64,	3,	1,	13,	0,	"CMPLTi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #64 = CMPLTi
+  { 65,	3,	1,	2,	0,	"CMPTEQ", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #65 = CMPTEQ
+  { 66,	3,	1,	2,	0,	"CMPTLE", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #66 = CMPTLE
+  { 67,	3,	1,	2,	0,	"CMPTLT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #67 = CMPTLT
+  { 68,	3,	1,	2,	0,	"CMPTUN", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #68 = CMPTUN
+  { 69,	3,	1,	13,	0,	"CMPULE", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #69 = CMPULE
+  { 70,	3,	1,	13,	0,	"CMPULEi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #70 = CMPULEi
+  { 71,	3,	1,	13,	0,	"CMPULT", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #71 = CMPULT
+  { 72,	3,	1,	13,	0,	"CMPULTi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #72 = CMPULTi
+  { 73,	3,	0,	3,	0,	"COND_BRANCH_F", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #73 = COND_BRANCH_F
+  { 74,	3,	0,	14,	0,	"COND_BRANCH_I", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #74 = COND_BRANCH_I
+  { 75,	3,	1,	2,	0,	"CPYSES", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #75 = CPYSES
+  { 76,	3,	1,	2,	0,	"CPYSESt", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo17 },  // Inst #76 = CPYSESt
+  { 77,	3,	1,	2,	0,	"CPYSET", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #77 = CPYSET
+  { 78,	3,	1,	2,	0,	"CPYSNS", 0, 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #78 = CPYSNS
+  { 79,	3,	1,	2,	0,	"CPYSNSt", 0, 0x0ULL, NULL, NULL, OperandInfo17 },  // Inst #79 = CPYSNSt
+  { 80,	3,	1,	2,	0,	"CPYSNT", 0, 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #80 = CPYSNT
+  { 81,	3,	1,	2,	0,	"CPYSNTs", 0, 0x0ULL, NULL, NULL, OperandInfo18 },  // Inst #81 = CPYSNTs
+  { 82,	3,	1,	2,	0,	"CPYSS", 0, 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #82 = CPYSS
+  { 83,	3,	1,	2,	0,	"CPYSSt", 0, 0x0ULL, NULL, NULL, OperandInfo17 },  // Inst #83 = CPYSSt
+  { 84,	3,	1,	2,	0,	"CPYST", 0, 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #84 = CPYST
+  { 85,	3,	1,	2,	0,	"CPYSTs", 0, 0x0ULL, NULL, NULL, OperandInfo18 },  // Inst #85 = CPYSTs
+  { 86,	2,	1,	17,	0,	"CTLZ", 0, 0x0ULL, NULL, NULL, OperandInfo19 },  // Inst #86 = CTLZ
+  { 87,	2,	1,	17,	0,	"CTPOP", 0, 0x0ULL, NULL, NULL, OperandInfo19 },  // Inst #87 = CTPOP
+  { 88,	2,	1,	17,	0,	"CTTZ", 0, 0x0ULL, NULL, NULL, OperandInfo19 },  // Inst #88 = CTTZ
+  { 89,	2,	1,	2,	0,	"CVTQS", 0, 0x0ULL, NULL, NULL, OperandInfo20 },  // Inst #89 = CVTQS
+  { 90,	2,	1,	2,	0,	"CVTQT", 0, 0x0ULL, NULL, NULL, OperandInfo21 },  // Inst #90 = CVTQT
+  { 91,	2,	1,	2,	0,	"CVTST", 0, 0x0ULL, NULL, NULL, OperandInfo22 },  // Inst #91 = CVTST
+  { 92,	2,	1,	2,	0,	"CVTTQ", 0, 0x0ULL, NULL, NULL, OperandInfo21 },  // Inst #92 = CVTTQ
+  { 93,	2,	1,	2,	0,	"CVTTS", 0, 0x0ULL, NULL, NULL, OperandInfo20 },  // Inst #93 = CVTTS
+  { 94,	3,	1,	5,	0,	"DIVS", 0, 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #94 = DIVS
+  { 95,	3,	1,	6,	0,	"DIVT", 0, 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #95 = DIVT
+  { 96,	3,	1,	16,	0,	"EQVi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #96 = EQVi
+  { 97,	3,	1,	16,	0,	"EQVr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #97 = EQVr
+  { 98,	3,	1,	19,	0,	"EXTBL", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #98 = EXTBL
+  { 99,	3,	1,	19,	0,	"EXTLL", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #99 = EXTLL
+  { 100,	3,	1,	19,	0,	"EXTWL", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #100 = EXTWL
+  { 101,	3,	0,	3,	0,	"FBEQ", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #101 = FBEQ
+  { 102,	3,	0,	3,	0,	"FBGE", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #102 = FBGE
+  { 103,	3,	0,	3,	0,	"FBGT", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #103 = FBGT
+  { 104,	3,	0,	3,	0,	"FBLE", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #104 = FBLE
+  { 105,	3,	0,	3,	0,	"FBLT", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #105 = FBLT
+  { 106,	3,	0,	3,	0,	"FBNE", 0|(1<<MCID::Branch)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #106 = FBNE
+  { 107,	4,	1,	4,	0,	"FCMOVEQS", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #107 = FCMOVEQS
+  { 108,	4,	1,	4,	0,	"FCMOVEQT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #108 = FCMOVEQT
+  { 109,	4,	1,	4,	0,	"FCMOVGES", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #109 = FCMOVGES
+  { 110,	4,	1,	4,	0,	"FCMOVGET", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #110 = FCMOVGET
+  { 111,	4,	1,	4,	0,	"FCMOVGTS", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #111 = FCMOVGTS
+  { 112,	4,	1,	4,	0,	"FCMOVGTT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #112 = FCMOVGTT
+  { 113,	4,	1,	4,	0,	"FCMOVLES", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #113 = FCMOVLES
+  { 114,	4,	1,	4,	0,	"FCMOVLET", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #114 = FCMOVLET
+  { 115,	4,	1,	4,	0,	"FCMOVLTS", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #115 = FCMOVLTS
+  { 116,	4,	1,	4,	0,	"FCMOVLTT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #116 = FCMOVLTT
+  { 117,	4,	1,	4,	0,	"FCMOVNES", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #117 = FCMOVNES
+  { 118,	4,	1,	4,	0,	"FCMOVNET", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #118 = FCMOVNET
+  { 119,	2,	1,	12,	0,	"FTOIS", 0|(1<<MCID::Bitcast), 0x0ULL, NULL, NULL, OperandInfo25 },  // Inst #119 = FTOIS
+  { 120,	2,	1,	12,	0,	"FTOIT", 0|(1<<MCID::Bitcast), 0x0ULL, NULL, NULL, OperandInfo26 },  // Inst #120 = FTOIT
+  { 121,	2,	1,	21,	0,	"ITOFS", 0|(1<<MCID::Bitcast), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #121 = ITOFS
+  { 122,	2,	1,	21,	0,	"ITOFT", 0|(1<<MCID::Bitcast), 0x0ULL, NULL, NULL, OperandInfo28 },  // Inst #122 = ITOFT
+  { 123,	1,	0,	22,	0,	"JMP", 0|(1<<MCID::Branch)|(1<<MCID::IndirectBranch)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0x0ULL, NULL, NULL, OperandInfo29 },  // Inst #123 = JMP
+  { 124,	0,	0,	22,	0,	"JSR", 0|(1<<MCID::Call)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList4, ImplicitList3, 0 },  // Inst #124 = JSR
+  { 125,	3,	0,	22,	0,	"JSR_COROUTINE", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #125 = JSR_COROUTINE
+  { 126,	0,	0,	22,	0,	"JSRs", 0|(1<<MCID::Call)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList5, ImplicitList6, 0 },  // Inst #126 = JSRs
+  { 127,	3,	1,	25,	0,	"LAS32", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UsesCustomInserter), 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #127 = LAS32
+  { 128,	3,	1,	25,	0,	"LAS64", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UsesCustomInserter), 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #128 = LAS64
+  { 129,	3,	1,	23,	0,	"LDA", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #129 = LDA
+  { 130,	3,	1,	23,	0,	"LDAH", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #130 = LDAH
+  { 131,	4,	1,	23,	0,	"LDAHg", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo31 },  // Inst #131 = LDAHg
+  { 132,	3,	1,	23,	0,	"LDAHr", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #132 = LDAHr
+  { 133,	4,	1,	23,	0,	"LDAg", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo31 },  // Inst #133 = LDAg
+  { 134,	3,	1,	23,	0,	"LDAr", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #134 = LDAr
+  { 135,	3,	1,	15,	0,	"LDBU", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #135 = LDBU
+  { 136,	3,	1,	15,	0,	"LDBUr", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #136 = LDBUr
+  { 137,	3,	1,	15,	0,	"LDL", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #137 = LDL
+  { 138,	3,	1,	15,	0,	"LDL_L", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #138 = LDL_L
+  { 139,	3,	1,	15,	0,	"LDLr", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #139 = LDLr
+  { 140,	3,	1,	15,	0,	"LDQ", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #140 = LDQ
+  { 141,	3,	1,	15,	0,	"LDQ_L", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #141 = LDQ_L
+  { 142,	3,	1,	15,	0,	"LDQl", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #142 = LDQl
+  { 143,	3,	1,	15,	0,	"LDQr", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #143 = LDQr
+  { 144,	3,	1,	7,	0,	"LDS", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo32 },  // Inst #144 = LDS
+  { 145,	3,	1,	7,	0,	"LDSr", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo32 },  // Inst #145 = LDSr
+  { 146,	3,	1,	7,	0,	"LDT", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo33 },  // Inst #146 = LDT
+  { 147,	3,	1,	7,	0,	"LDTr", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo33 },  // Inst #147 = LDTr
+  { 148,	3,	1,	15,	0,	"LDWU", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #148 = LDWU
+  { 149,	3,	1,	15,	0,	"LDWUr", 0|(1<<MCID::FoldableAsLoad)|(1<<MCID::MayLoad), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #149 = LDWUr
+  { 150,	0,	0,	17,	0,	"MB", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #150 = MB
+  { 151,	4,	0,	25,	0,	"MEMLABEL", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo34 },  // Inst #151 = MEMLABEL
+  { 152,	3,	1,	18,	0,	"MULLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #152 = MULLi
+  { 153,	3,	1,	18,	0,	"MULLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #153 = MULLr
+  { 154,	3,	1,	18,	0,	"MULQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #154 = MULQi
+  { 155,	3,	1,	18,	0,	"MULQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #155 = MULQr
+  { 156,	3,	1,	8,	0,	"MULS", 0, 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #156 = MULS
+  { 157,	3,	1,	8,	0,	"MULT", 0, 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #157 = MULT
+  { 158,	3,	1,	16,	0,	"ORNOTi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #158 = ORNOTi
+  { 159,	3,	1,	16,	0,	"ORNOTr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #159 = ORNOTr
+  { 160,	1,	0,	25,	0,	"PCLABEL", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #160 = PCLABEL
+  { 161,	0,	0,	22,	0,	"RETDAG", 0|(1<<MCID::Return)|(1<<MCID::Barrier)|(1<<MCID::Terminator)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList8, NULL, 0 },  // Inst #161 = RETDAG
+  { 162,	0,	0,	22,	0,	"RETDAGp", 0|(1<<MCID::Return)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0x0ULL, ImplicitList8, NULL, 0 },  // Inst #162 = RETDAGp
+  { 163,	1,	1,	26,	0,	"RPCC", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo29 },  // Inst #163 = RPCC
+  { 164,	3,	1,	13,	0,	"S4ADDLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #164 = S4ADDLi
+  { 165,	3,	1,	13,	0,	"S4ADDLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #165 = S4ADDLr
+  { 166,	3,	1,	13,	0,	"S4ADDQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #166 = S4ADDQi
+  { 167,	3,	1,	13,	0,	"S4ADDQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #167 = S4ADDQr
+  { 168,	3,	1,	13,	0,	"S4SUBLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #168 = S4SUBLi
+  { 169,	3,	1,	13,	0,	"S4SUBLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #169 = S4SUBLr
+  { 170,	3,	1,	13,	0,	"S4SUBQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #170 = S4SUBQi
+  { 171,	3,	1,	13,	0,	"S4SUBQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #171 = S4SUBQr
+  { 172,	3,	1,	13,	0,	"S8ADDLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #172 = S8ADDLi
+  { 173,	3,	1,	13,	0,	"S8ADDLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #173 = S8ADDLr
+  { 174,	3,	1,	13,	0,	"S8ADDQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #174 = S8ADDQi
+  { 175,	3,	1,	13,	0,	"S8ADDQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #175 = S8ADDQr
+  { 176,	3,	1,	13,	0,	"S8SUBLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #176 = S8SUBLi
+  { 177,	3,	1,	13,	0,	"S8SUBLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #177 = S8SUBLr
+  { 178,	3,	1,	13,	0,	"S8SUBQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #178 = S8SUBQi
+  { 179,	3,	1,	13,	0,	"S8SUBQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #179 = S8SUBQr
+  { 180,	2,	1,	19,	0,	"SEXTB", 0, 0x0ULL, NULL, NULL, OperandInfo19 },  // Inst #180 = SEXTB
+  { 181,	2,	1,	19,	0,	"SEXTW", 0, 0x0ULL, NULL, NULL, OperandInfo19 },  // Inst #181 = SEXTW
+  { 182,	3,	1,	19,	0,	"SLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #182 = SLi
+  { 183,	3,	1,	19,	0,	"SLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #183 = SLr
+  { 184,	2,	1,	9,	0,	"SQRTS", 0, 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #184 = SQRTS
+  { 185,	2,	1,	10,	0,	"SQRTT", 0, 0x0ULL, NULL, NULL, OperandInfo21 },  // Inst #185 = SQRTT
+  { 186,	3,	1,	19,	0,	"SRAi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #186 = SRAi
+  { 187,	3,	1,	19,	0,	"SRAr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #187 = SRAr
+  { 188,	3,	1,	19,	0,	"SRLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #188 = SRLi
+  { 189,	3,	1,	19,	0,	"SRLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #189 = SRLr
+  { 190,	3,	0,	20,	0,	"STB", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #190 = STB
+  { 191,	3,	0,	20,	0,	"STBr", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #191 = STBr
+  { 192,	3,	0,	20,	0,	"STL", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #192 = STL
+  { 193,	4,	1,	20,	0,	"STL_C", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo36 },  // Inst #193 = STL_C
+  { 194,	3,	0,	20,	0,	"STLr", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #194 = STLr
+  { 195,	3,	0,	20,	0,	"STQ", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #195 = STQ
+  { 196,	4,	1,	20,	0,	"STQ_C", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList7, OperandInfo36 },  // Inst #196 = STQ_C
+  { 197,	3,	0,	20,	0,	"STQr", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #197 = STQr
+  { 198,	3,	0,	11,	0,	"STS", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo32 },  // Inst #198 = STS
+  { 199,	3,	0,	11,	0,	"STSr", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo32 },  // Inst #199 = STSr
+  { 200,	3,	0,	11,	0,	"STT", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo33 },  // Inst #200 = STT
+  { 201,	3,	0,	11,	0,	"STTr", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo33 },  // Inst #201 = STTr
+  { 202,	3,	0,	20,	0,	"STW", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #202 = STW
+  { 203,	3,	0,	20,	0,	"STWr", 0|(1<<MCID::MayStore), 0x0ULL, NULL, ImplicitList7, OperandInfo30 },  // Inst #203 = STWr
+  { 204,	3,	1,	13,	0,	"SUBLi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #204 = SUBLi
+  { 205,	3,	1,	13,	0,	"SUBLr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #205 = SUBLr
+  { 206,	3,	1,	13,	0,	"SUBQi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #206 = SUBQi
+  { 207,	3,	1,	13,	0,	"SUBQr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #207 = SUBQr
+  { 208,	3,	1,	2,	0,	"SUBS", 0, 0x0ULL, NULL, NULL, OperandInfo10 },  // Inst #208 = SUBS
+  { 209,	3,	1,	2,	0,	"SUBT", 0, 0x0ULL, NULL, NULL, OperandInfo11 },  // Inst #209 = SUBT
+  { 210,	3,	1,	25,	0,	"SWAP32", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UsesCustomInserter), 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #210 = SWAP32
+  { 211,	3,	1,	25,	0,	"SWAP64", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UsesCustomInserter), 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #211 = SWAP64
+  { 212,	3,	1,	18,	0,	"UMULHi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #212 = UMULHi
+  { 213,	3,	1,	18,	0,	"UMULHr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #213 = UMULHr
+  { 214,	0,	0,	17,	0,	"WMB", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #214 = WMB
+  { 215,	0,	0,	25,	0,	"WTF", 0|(1<<MCID::Variadic)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #215 = WTF
+  { 216,	3,	1,	16,	0,	"XORi", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #216 = XORi
+  { 217,	3,	1,	16,	0,	"XORr", 0, 0x0ULL, NULL, NULL, OperandInfo9 },  // Inst #217 = XORr
+  { 218,	3,	1,	19,	0,	"ZAPNOTi", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #218 = ZAPNOTi
+};
+
+static inline void InitAlphaMCInstrInfo(MCInstrInfo *II) {
+  II->InitMCInstrInfo(AlphaInsts, 219);
+}
+
+} // End llvm namespace 
+#endif // GET_INSTRINFO_MC_DESC
+
+
+#ifdef GET_INSTRINFO_HEADER
+#undef GET_INSTRINFO_HEADER
+namespace llvm {
+struct AlphaGenInstrInfo : public TargetInstrInfoImpl {
+  explicit AlphaGenInstrInfo(int SO = -1, int DO = -1);
+};
+} // End llvm namespace 
+#endif // GET_INSTRINFO_HEADER
+
+
+#ifdef GET_INSTRINFO_CTOR
+#undef GET_INSTRINFO_CTOR
+namespace llvm {
+extern MCInstrDesc AlphaInsts[];
+AlphaGenInstrInfo::AlphaGenInstrInfo(int SO, int DO)
+  : TargetInstrInfoImpl(SO, DO) {
+  InitMCInstrInfo(AlphaInsts, 219);
+}
+} // End llvm namespace 
+#endif // GET_INSTRINFO_CTOR
+

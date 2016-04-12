@@ -1,0 +1,2014 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass SystemZMCRegisterClasses[];
+
+namespace SystemZ {
+enum {
+  NoRegister,
+  F0L = 1,
+  F0S = 2,
+  F1L = 3,
+  F1S = 4,
+  F2L = 5,
+  F2S = 6,
+  F3L = 7,
+  F3S = 8,
+  F4L = 9,
+  F4S = 10,
+  F5L = 11,
+  F5S = 12,
+  F6L = 13,
+  F6S = 14,
+  F7L = 15,
+  F7S = 16,
+  F8L = 17,
+  F8S = 18,
+  F9L = 19,
+  F9S = 20,
+  F10L = 21,
+  F10S = 22,
+  F11L = 23,
+  F11S = 24,
+  F12L = 25,
+  F12S = 26,
+  F13L = 27,
+  F13S = 28,
+  F14L = 29,
+  F14S = 30,
+  F15L = 31,
+  F15S = 32,
+  PSW = 33,
+  R0D = 34,
+  R0P = 35,
+  R0Q = 36,
+  R0W = 37,
+  R1D = 38,
+  R1W = 39,
+  R2D = 40,
+  R2P = 41,
+  R2Q = 42,
+  R2W = 43,
+  R3D = 44,
+  R3W = 45,
+  R4D = 46,
+  R4P = 47,
+  R4Q = 48,
+  R4W = 49,
+  R5D = 50,
+  R5W = 51,
+  R6D = 52,
+  R6P = 53,
+  R6Q = 54,
+  R6W = 55,
+  R7D = 56,
+  R7W = 57,
+  R8D = 58,
+  R8P = 59,
+  R8Q = 60,
+  R8W = 61,
+  R9D = 62,
+  R9W = 63,
+  R10D = 64,
+  R10P = 65,
+  R10Q = 66,
+  R10W = 67,
+  R11D = 68,
+  R11W = 69,
+  R12D = 70,
+  R12P = 71,
+  R12Q = 72,
+  R12W = 73,
+  R13D = 74,
+  R13W = 75,
+  R14D = 76,
+  R14P = 77,
+  R14Q = 78,
+  R14W = 79,
+  R15D = 80,
+  R15W = 81,
+  NUM_TARGET_REGS 	// 82
+};
+}
+
+// Register classes
+namespace SystemZ {
+enum {
+  ADDR32RegClassID = 0,
+  ADDR64RegClassID = 1,
+  CCRRegClassID = 2,
+  FP32RegClassID = 3,
+  FP64RegClassID = 4,
+  GR128RegClassID = 5,
+  GR32RegClassID = 6,
+  GR64RegClassID = 7,
+  GR64PRegClassID = 8
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct SystemZGenMCRegisterInfo : public MCRegisterInfo {
+  explicit SystemZGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned F0L_Overlaps[] = { SystemZ::F0L, SystemZ::F0S, 0 };
+  const unsigned F0S_Overlaps[] = { SystemZ::F0S, SystemZ::F0L, 0 };
+  const unsigned F1L_Overlaps[] = { SystemZ::F1L, SystemZ::F1S, 0 };
+  const unsigned F1S_Overlaps[] = { SystemZ::F1S, SystemZ::F1L, 0 };
+  const unsigned F2L_Overlaps[] = { SystemZ::F2L, SystemZ::F2S, 0 };
+  const unsigned F2S_Overlaps[] = { SystemZ::F2S, SystemZ::F2L, 0 };
+  const unsigned F3L_Overlaps[] = { SystemZ::F3L, SystemZ::F3S, 0 };
+  const unsigned F3S_Overlaps[] = { SystemZ::F3S, SystemZ::F3L, 0 };
+  const unsigned F4L_Overlaps[] = { SystemZ::F4L, SystemZ::F4S, 0 };
+  const unsigned F4S_Overlaps[] = { SystemZ::F4S, SystemZ::F4L, 0 };
+  const unsigned F5L_Overlaps[] = { SystemZ::F5L, SystemZ::F5S, 0 };
+  const unsigned F5S_Overlaps[] = { SystemZ::F5S, SystemZ::F5L, 0 };
+  const unsigned F6L_Overlaps[] = { SystemZ::F6L, SystemZ::F6S, 0 };
+  const unsigned F6S_Overlaps[] = { SystemZ::F6S, SystemZ::F6L, 0 };
+  const unsigned F7L_Overlaps[] = { SystemZ::F7L, SystemZ::F7S, 0 };
+  const unsigned F7S_Overlaps[] = { SystemZ::F7S, SystemZ::F7L, 0 };
+  const unsigned F8L_Overlaps[] = { SystemZ::F8L, SystemZ::F8S, 0 };
+  const unsigned F8S_Overlaps[] = { SystemZ::F8S, SystemZ::F8L, 0 };
+  const unsigned F9L_Overlaps[] = { SystemZ::F9L, SystemZ::F9S, 0 };
+  const unsigned F9S_Overlaps[] = { SystemZ::F9S, SystemZ::F9L, 0 };
+  const unsigned F10L_Overlaps[] = { SystemZ::F10L, SystemZ::F10S, 0 };
+  const unsigned F10S_Overlaps[] = { SystemZ::F10S, SystemZ::F10L, 0 };
+  const unsigned F11L_Overlaps[] = { SystemZ::F11L, SystemZ::F11S, 0 };
+  const unsigned F11S_Overlaps[] = { SystemZ::F11S, SystemZ::F11L, 0 };
+  const unsigned F12L_Overlaps[] = { SystemZ::F12L, SystemZ::F12S, 0 };
+  const unsigned F12S_Overlaps[] = { SystemZ::F12S, SystemZ::F12L, 0 };
+  const unsigned F13L_Overlaps[] = { SystemZ::F13L, SystemZ::F13S, 0 };
+  const unsigned F13S_Overlaps[] = { SystemZ::F13S, SystemZ::F13L, 0 };
+  const unsigned F14L_Overlaps[] = { SystemZ::F14L, SystemZ::F14S, 0 };
+  const unsigned F14S_Overlaps[] = { SystemZ::F14S, SystemZ::F14L, 0 };
+  const unsigned F15L_Overlaps[] = { SystemZ::F15L, SystemZ::F15S, 0 };
+  const unsigned F15S_Overlaps[] = { SystemZ::F15S, SystemZ::F15L, 0 };
+  const unsigned PSW_Overlaps[] = { SystemZ::PSW, 0 };
+  const unsigned R0D_Overlaps[] = { SystemZ::R0D, SystemZ::R0P, SystemZ::R0Q, SystemZ::R0W, 0 };
+  const unsigned R0P_Overlaps[] = { SystemZ::R0P, SystemZ::R0D, SystemZ::R0Q, SystemZ::R0W, SystemZ::R1D, SystemZ::R1W, 0 };
+  const unsigned R0Q_Overlaps[] = { SystemZ::R0Q, SystemZ::R0D, SystemZ::R0P, SystemZ::R0W, SystemZ::R1D, SystemZ::R1W, 0 };
+  const unsigned R0W_Overlaps[] = { SystemZ::R0W, SystemZ::R0D, SystemZ::R0P, SystemZ::R0Q, 0 };
+  const unsigned R1D_Overlaps[] = { SystemZ::R1D, SystemZ::R0P, SystemZ::R0Q, SystemZ::R1W, 0 };
+  const unsigned R1W_Overlaps[] = { SystemZ::R1W, SystemZ::R0P, SystemZ::R0Q, SystemZ::R1D, 0 };
+  const unsigned R2D_Overlaps[] = { SystemZ::R2D, SystemZ::R2P, SystemZ::R2Q, SystemZ::R2W, 0 };
+  const unsigned R2P_Overlaps[] = { SystemZ::R2P, SystemZ::R2D, SystemZ::R2Q, SystemZ::R2W, SystemZ::R3D, SystemZ::R3W, 0 };
+  const unsigned R2Q_Overlaps[] = { SystemZ::R2Q, SystemZ::R2D, SystemZ::R2P, SystemZ::R2W, SystemZ::R3D, SystemZ::R3W, 0 };
+  const unsigned R2W_Overlaps[] = { SystemZ::R2W, SystemZ::R2D, SystemZ::R2P, SystemZ::R2Q, 0 };
+  const unsigned R3D_Overlaps[] = { SystemZ::R3D, SystemZ::R2P, SystemZ::R2Q, SystemZ::R3W, 0 };
+  const unsigned R3W_Overlaps[] = { SystemZ::R3W, SystemZ::R2P, SystemZ::R2Q, SystemZ::R3D, 0 };
+  const unsigned R4D_Overlaps[] = { SystemZ::R4D, SystemZ::R4P, SystemZ::R4Q, SystemZ::R4W, 0 };
+  const unsigned R4P_Overlaps[] = { SystemZ::R4P, SystemZ::R4D, SystemZ::R4Q, SystemZ::R4W, SystemZ::R5D, SystemZ::R5W, 0 };
+  const unsigned R4Q_Overlaps[] = { SystemZ::R4Q, SystemZ::R4D, SystemZ::R4P, SystemZ::R4W, SystemZ::R5D, SystemZ::R5W, 0 };
+  const unsigned R4W_Overlaps[] = { SystemZ::R4W, SystemZ::R4D, SystemZ::R4P, SystemZ::R4Q, 0 };
+  const unsigned R5D_Overlaps[] = { SystemZ::R5D, SystemZ::R4P, SystemZ::R4Q, SystemZ::R5W, 0 };
+  const unsigned R5W_Overlaps[] = { SystemZ::R5W, SystemZ::R4P, SystemZ::R4Q, SystemZ::R5D, 0 };
+  const unsigned R6D_Overlaps[] = { SystemZ::R6D, SystemZ::R6P, SystemZ::R6Q, SystemZ::R6W, 0 };
+  const unsigned R6P_Overlaps[] = { SystemZ::R6P, SystemZ::R6D, SystemZ::R6Q, SystemZ::R6W, SystemZ::R7D, SystemZ::R7W, 0 };
+  const unsigned R6Q_Overlaps[] = { SystemZ::R6Q, SystemZ::R6D, SystemZ::R6P, SystemZ::R6W, SystemZ::R7D, SystemZ::R7W, 0 };
+  const unsigned R6W_Overlaps[] = { SystemZ::R6W, SystemZ::R6D, SystemZ::R6P, SystemZ::R6Q, 0 };
+  const unsigned R7D_Overlaps[] = { SystemZ::R7D, SystemZ::R6P, SystemZ::R6Q, SystemZ::R7W, 0 };
+  const unsigned R7W_Overlaps[] = { SystemZ::R7W, SystemZ::R6P, SystemZ::R6Q, SystemZ::R7D, 0 };
+  const unsigned R8D_Overlaps[] = { SystemZ::R8D, SystemZ::R8P, SystemZ::R8Q, SystemZ::R8W, 0 };
+  const unsigned R8P_Overlaps[] = { SystemZ::R8P, SystemZ::R8D, SystemZ::R8Q, SystemZ::R8W, SystemZ::R9D, SystemZ::R9W, 0 };
+  const unsigned R8Q_Overlaps[] = { SystemZ::R8Q, SystemZ::R8D, SystemZ::R8P, SystemZ::R8W, SystemZ::R9D, SystemZ::R9W, 0 };
+  const unsigned R8W_Overlaps[] = { SystemZ::R8W, SystemZ::R8D, SystemZ::R8P, SystemZ::R8Q, 0 };
+  const unsigned R9D_Overlaps[] = { SystemZ::R9D, SystemZ::R8P, SystemZ::R8Q, SystemZ::R9W, 0 };
+  const unsigned R9W_Overlaps[] = { SystemZ::R9W, SystemZ::R8P, SystemZ::R8Q, SystemZ::R9D, 0 };
+  const unsigned R10D_Overlaps[] = { SystemZ::R10D, SystemZ::R10P, SystemZ::R10Q, SystemZ::R10W, 0 };
+  const unsigned R10P_Overlaps[] = { SystemZ::R10P, SystemZ::R10D, SystemZ::R10Q, SystemZ::R10W, SystemZ::R11D, SystemZ::R11W, 0 };
+  const unsigned R10Q_Overlaps[] = { SystemZ::R10Q, SystemZ::R10D, SystemZ::R10P, SystemZ::R10W, SystemZ::R11D, SystemZ::R11W, 0 };
+  const unsigned R10W_Overlaps[] = { SystemZ::R10W, SystemZ::R10D, SystemZ::R10P, SystemZ::R10Q, 0 };
+  const unsigned R11D_Overlaps[] = { SystemZ::R11D, SystemZ::R10P, SystemZ::R10Q, SystemZ::R11W, 0 };
+  const unsigned R11W_Overlaps[] = { SystemZ::R11W, SystemZ::R10P, SystemZ::R10Q, SystemZ::R11D, 0 };
+  const unsigned R12D_Overlaps[] = { SystemZ::R12D, SystemZ::R12P, SystemZ::R12Q, SystemZ::R12W, 0 };
+  const unsigned R12P_Overlaps[] = { SystemZ::R12P, SystemZ::R12D, SystemZ::R12Q, SystemZ::R12W, SystemZ::R13D, SystemZ::R13W, 0 };
+  const unsigned R12Q_Overlaps[] = { SystemZ::R12Q, SystemZ::R12D, SystemZ::R12P, SystemZ::R12W, SystemZ::R13D, SystemZ::R13W, 0 };
+  const unsigned R12W_Overlaps[] = { SystemZ::R12W, SystemZ::R12D, SystemZ::R12P, SystemZ::R12Q, 0 };
+  const unsigned R13D_Overlaps[] = { SystemZ::R13D, SystemZ::R12P, SystemZ::R12Q, SystemZ::R13W, 0 };
+  const unsigned R13W_Overlaps[] = { SystemZ::R13W, SystemZ::R12P, SystemZ::R12Q, SystemZ::R13D, 0 };
+  const unsigned R14D_Overlaps[] = { SystemZ::R14D, SystemZ::R14P, SystemZ::R14Q, SystemZ::R14W, 0 };
+  const unsigned R14P_Overlaps[] = { SystemZ::R14P, SystemZ::R14D, SystemZ::R14Q, SystemZ::R14W, SystemZ::R15D, SystemZ::R15W, 0 };
+  const unsigned R14Q_Overlaps[] = { SystemZ::R14Q, SystemZ::R14D, SystemZ::R14P, SystemZ::R14W, SystemZ::R15D, SystemZ::R15W, 0 };
+  const unsigned R14W_Overlaps[] = { SystemZ::R14W, SystemZ::R14D, SystemZ::R14P, SystemZ::R14Q, 0 };
+  const unsigned R15D_Overlaps[] = { SystemZ::R15D, SystemZ::R14P, SystemZ::R14Q, SystemZ::R15W, 0 };
+  const unsigned R15W_Overlaps[] = { SystemZ::R15W, SystemZ::R14P, SystemZ::R14Q, SystemZ::R15D, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned F0L_SubRegsSet[] = { SystemZ::F0S, 0 };
+  const unsigned F1L_SubRegsSet[] = { SystemZ::F1S, 0 };
+  const unsigned F2L_SubRegsSet[] = { SystemZ::F2S, 0 };
+  const unsigned F3L_SubRegsSet[] = { SystemZ::F3S, 0 };
+  const unsigned F4L_SubRegsSet[] = { SystemZ::F4S, 0 };
+  const unsigned F5L_SubRegsSet[] = { SystemZ::F5S, 0 };
+  const unsigned F6L_SubRegsSet[] = { SystemZ::F6S, 0 };
+  const unsigned F7L_SubRegsSet[] = { SystemZ::F7S, 0 };
+  const unsigned F8L_SubRegsSet[] = { SystemZ::F8S, 0 };
+  const unsigned F9L_SubRegsSet[] = { SystemZ::F9S, 0 };
+  const unsigned F10L_SubRegsSet[] = { SystemZ::F10S, 0 };
+  const unsigned F11L_SubRegsSet[] = { SystemZ::F11S, 0 };
+  const unsigned F12L_SubRegsSet[] = { SystemZ::F12S, 0 };
+  const unsigned F13L_SubRegsSet[] = { SystemZ::F13S, 0 };
+  const unsigned F14L_SubRegsSet[] = { SystemZ::F14S, 0 };
+  const unsigned F15L_SubRegsSet[] = { SystemZ::F15S, 0 };
+  const unsigned R0D_SubRegsSet[] = { SystemZ::R0W, 0 };
+  const unsigned R0P_SubRegsSet[] = { SystemZ::R0W, SystemZ::R1W, 0 };
+  const unsigned R0Q_SubRegsSet[] = { SystemZ::R0D, SystemZ::R0W, SystemZ::R1D, SystemZ::R1W, 0 };
+  const unsigned R1D_SubRegsSet[] = { SystemZ::R1W, 0 };
+  const unsigned R2D_SubRegsSet[] = { SystemZ::R2W, 0 };
+  const unsigned R2P_SubRegsSet[] = { SystemZ::R2W, SystemZ::R3W, 0 };
+  const unsigned R2Q_SubRegsSet[] = { SystemZ::R2D, SystemZ::R2W, SystemZ::R3D, SystemZ::R3W, 0 };
+  const unsigned R3D_SubRegsSet[] = { SystemZ::R3W, 0 };
+  const unsigned R4D_SubRegsSet[] = { SystemZ::R4W, 0 };
+  const unsigned R4P_SubRegsSet[] = { SystemZ::R4W, SystemZ::R5W, 0 };
+  const unsigned R4Q_SubRegsSet[] = { SystemZ::R4D, SystemZ::R4W, SystemZ::R5D, SystemZ::R5W, 0 };
+  const unsigned R5D_SubRegsSet[] = { SystemZ::R5W, 0 };
+  const unsigned R6D_SubRegsSet[] = { SystemZ::R6W, 0 };
+  const unsigned R6P_SubRegsSet[] = { SystemZ::R6W, SystemZ::R7W, 0 };
+  const unsigned R6Q_SubRegsSet[] = { SystemZ::R6D, SystemZ::R6W, SystemZ::R7D, SystemZ::R7W, 0 };
+  const unsigned R7D_SubRegsSet[] = { SystemZ::R7W, 0 };
+  const unsigned R8D_SubRegsSet[] = { SystemZ::R8W, 0 };
+  const unsigned R8P_SubRegsSet[] = { SystemZ::R8W, SystemZ::R9W, 0 };
+  const unsigned R8Q_SubRegsSet[] = { SystemZ::R8D, SystemZ::R8W, SystemZ::R9D, SystemZ::R9W, 0 };
+  const unsigned R9D_SubRegsSet[] = { SystemZ::R9W, 0 };
+  const unsigned R10D_SubRegsSet[] = { SystemZ::R10W, 0 };
+  const unsigned R10P_SubRegsSet[] = { SystemZ::R10W, SystemZ::R11W, 0 };
+  const unsigned R10Q_SubRegsSet[] = { SystemZ::R10D, SystemZ::R10W, SystemZ::R11D, SystemZ::R11W, 0 };
+  const unsigned R11D_SubRegsSet[] = { SystemZ::R11W, 0 };
+  const unsigned R12D_SubRegsSet[] = { SystemZ::R12W, 0 };
+  const unsigned R12P_SubRegsSet[] = { SystemZ::R12W, SystemZ::R13W, 0 };
+  const unsigned R12Q_SubRegsSet[] = { SystemZ::R12D, SystemZ::R12W, SystemZ::R13D, SystemZ::R13W, 0 };
+  const unsigned R13D_SubRegsSet[] = { SystemZ::R13W, 0 };
+  const unsigned R14D_SubRegsSet[] = { SystemZ::R14W, 0 };
+  const unsigned R14P_SubRegsSet[] = { SystemZ::R14W, SystemZ::R15W, 0 };
+  const unsigned R14Q_SubRegsSet[] = { SystemZ::R14D, SystemZ::R14W, SystemZ::R15D, SystemZ::R15W, 0 };
+  const unsigned R15D_SubRegsSet[] = { SystemZ::R15W, 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+  const unsigned F0S_SuperRegsSet[] = { SystemZ::F0L, 0 };
+  const unsigned F1S_SuperRegsSet[] = { SystemZ::F1L, 0 };
+  const unsigned F2S_SuperRegsSet[] = { SystemZ::F2L, 0 };
+  const unsigned F3S_SuperRegsSet[] = { SystemZ::F3L, 0 };
+  const unsigned F4S_SuperRegsSet[] = { SystemZ::F4L, 0 };
+  const unsigned F5S_SuperRegsSet[] = { SystemZ::F5L, 0 };
+  const unsigned F6S_SuperRegsSet[] = { SystemZ::F6L, 0 };
+  const unsigned F7S_SuperRegsSet[] = { SystemZ::F7L, 0 };
+  const unsigned F8S_SuperRegsSet[] = { SystemZ::F8L, 0 };
+  const unsigned F9S_SuperRegsSet[] = { SystemZ::F9L, 0 };
+  const unsigned F10S_SuperRegsSet[] = { SystemZ::F10L, 0 };
+  const unsigned F11S_SuperRegsSet[] = { SystemZ::F11L, 0 };
+  const unsigned F12S_SuperRegsSet[] = { SystemZ::F12L, 0 };
+  const unsigned F13S_SuperRegsSet[] = { SystemZ::F13L, 0 };
+  const unsigned F14S_SuperRegsSet[] = { SystemZ::F14L, 0 };
+  const unsigned F15S_SuperRegsSet[] = { SystemZ::F15L, 0 };
+  const unsigned R0D_SuperRegsSet[] = { SystemZ::R0Q, 0 };
+  const unsigned R0W_SuperRegsSet[] = { SystemZ::R0D, SystemZ::R0P, SystemZ::R0Q, 0 };
+  const unsigned R1D_SuperRegsSet[] = { SystemZ::R0Q, 0 };
+  const unsigned R1W_SuperRegsSet[] = { SystemZ::R0P, SystemZ::R1D, SystemZ::R0Q, 0 };
+  const unsigned R2D_SuperRegsSet[] = { SystemZ::R2Q, 0 };
+  const unsigned R2W_SuperRegsSet[] = { SystemZ::R2D, SystemZ::R2P, SystemZ::R2Q, 0 };
+  const unsigned R3D_SuperRegsSet[] = { SystemZ::R2Q, 0 };
+  const unsigned R3W_SuperRegsSet[] = { SystemZ::R2P, SystemZ::R3D, SystemZ::R2Q, 0 };
+  const unsigned R4D_SuperRegsSet[] = { SystemZ::R4Q, 0 };
+  const unsigned R4W_SuperRegsSet[] = { SystemZ::R4D, SystemZ::R4P, SystemZ::R4Q, 0 };
+  const unsigned R5D_SuperRegsSet[] = { SystemZ::R4Q, 0 };
+  const unsigned R5W_SuperRegsSet[] = { SystemZ::R4P, SystemZ::R5D, SystemZ::R4Q, 0 };
+  const unsigned R6D_SuperRegsSet[] = { SystemZ::R6Q, 0 };
+  const unsigned R6W_SuperRegsSet[] = { SystemZ::R6D, SystemZ::R6P, SystemZ::R6Q, 0 };
+  const unsigned R7D_SuperRegsSet[] = { SystemZ::R6Q, 0 };
+  const unsigned R7W_SuperRegsSet[] = { SystemZ::R6P, SystemZ::R7D, SystemZ::R6Q, 0 };
+  const unsigned R8D_SuperRegsSet[] = { SystemZ::R8Q, 0 };
+  const unsigned R8W_SuperRegsSet[] = { SystemZ::R8D, SystemZ::R8P, SystemZ::R8Q, 0 };
+  const unsigned R9D_SuperRegsSet[] = { SystemZ::R8Q, 0 };
+  const unsigned R9W_SuperRegsSet[] = { SystemZ::R8P, SystemZ::R9D, SystemZ::R8Q, 0 };
+  const unsigned R10D_SuperRegsSet[] = { SystemZ::R10Q, 0 };
+  const unsigned R10W_SuperRegsSet[] = { SystemZ::R10D, SystemZ::R10P, SystemZ::R10Q, 0 };
+  const unsigned R11D_SuperRegsSet[] = { SystemZ::R10Q, 0 };
+  const unsigned R11W_SuperRegsSet[] = { SystemZ::R10P, SystemZ::R11D, SystemZ::R10Q, 0 };
+  const unsigned R12D_SuperRegsSet[] = { SystemZ::R12Q, 0 };
+  const unsigned R12W_SuperRegsSet[] = { SystemZ::R12D, SystemZ::R12P, SystemZ::R12Q, 0 };
+  const unsigned R13D_SuperRegsSet[] = { SystemZ::R12Q, 0 };
+  const unsigned R13W_SuperRegsSet[] = { SystemZ::R12P, SystemZ::R13D, SystemZ::R12Q, 0 };
+  const unsigned R14D_SuperRegsSet[] = { SystemZ::R14Q, 0 };
+  const unsigned R14W_SuperRegsSet[] = { SystemZ::R14D, SystemZ::R14P, SystemZ::R14Q, 0 };
+  const unsigned R15D_SuperRegsSet[] = { SystemZ::R14Q, 0 };
+  const unsigned R15W_SuperRegsSet[] = { SystemZ::R14P, SystemZ::R15D, SystemZ::R14Q, 0 };
+}
+
+MCRegisterDesc SystemZRegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "F0L",	F0L_Overlaps,	F0L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F0S",	F0S_Overlaps,	Empty_SubRegsSet,	F0S_SuperRegsSet },
+  { "F1L",	F1L_Overlaps,	F1L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F1S",	F1S_Overlaps,	Empty_SubRegsSet,	F1S_SuperRegsSet },
+  { "F2L",	F2L_Overlaps,	F2L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F2S",	F2S_Overlaps,	Empty_SubRegsSet,	F2S_SuperRegsSet },
+  { "F3L",	F3L_Overlaps,	F3L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F3S",	F3S_Overlaps,	Empty_SubRegsSet,	F3S_SuperRegsSet },
+  { "F4L",	F4L_Overlaps,	F4L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F4S",	F4S_Overlaps,	Empty_SubRegsSet,	F4S_SuperRegsSet },
+  { "F5L",	F5L_Overlaps,	F5L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F5S",	F5S_Overlaps,	Empty_SubRegsSet,	F5S_SuperRegsSet },
+  { "F6L",	F6L_Overlaps,	F6L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F6S",	F6S_Overlaps,	Empty_SubRegsSet,	F6S_SuperRegsSet },
+  { "F7L",	F7L_Overlaps,	F7L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F7S",	F7S_Overlaps,	Empty_SubRegsSet,	F7S_SuperRegsSet },
+  { "F8L",	F8L_Overlaps,	F8L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F8S",	F8S_Overlaps,	Empty_SubRegsSet,	F8S_SuperRegsSet },
+  { "F9L",	F9L_Overlaps,	F9L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F9S",	F9S_Overlaps,	Empty_SubRegsSet,	F9S_SuperRegsSet },
+  { "F10L",	F10L_Overlaps,	F10L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F10S",	F10S_Overlaps,	Empty_SubRegsSet,	F10S_SuperRegsSet },
+  { "F11L",	F11L_Overlaps,	F11L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F11S",	F11S_Overlaps,	Empty_SubRegsSet,	F11S_SuperRegsSet },
+  { "F12L",	F12L_Overlaps,	F12L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F12S",	F12S_Overlaps,	Empty_SubRegsSet,	F12S_SuperRegsSet },
+  { "F13L",	F13L_Overlaps,	F13L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F13S",	F13S_Overlaps,	Empty_SubRegsSet,	F13S_SuperRegsSet },
+  { "F14L",	F14L_Overlaps,	F14L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F14S",	F14S_Overlaps,	Empty_SubRegsSet,	F14S_SuperRegsSet },
+  { "F15L",	F15L_Overlaps,	F15L_SubRegsSet,	Empty_SuperRegsSet },
+  { "F15S",	F15S_Overlaps,	Empty_SubRegsSet,	F15S_SuperRegsSet },
+  { "PSW",	PSW_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0D",	R0D_Overlaps,	R0D_SubRegsSet,	R0D_SuperRegsSet },
+  { "R0P",	R0P_Overlaps,	R0P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0Q",	R0Q_Overlaps,	R0Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0W",	R0W_Overlaps,	Empty_SubRegsSet,	R0W_SuperRegsSet },
+  { "R1D",	R1D_Overlaps,	R1D_SubRegsSet,	R1D_SuperRegsSet },
+  { "R1W",	R1W_Overlaps,	Empty_SubRegsSet,	R1W_SuperRegsSet },
+  { "R2D",	R2D_Overlaps,	R2D_SubRegsSet,	R2D_SuperRegsSet },
+  { "R2P",	R2P_Overlaps,	R2P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2Q",	R2Q_Overlaps,	R2Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2W",	R2W_Overlaps,	Empty_SubRegsSet,	R2W_SuperRegsSet },
+  { "R3D",	R3D_Overlaps,	R3D_SubRegsSet,	R3D_SuperRegsSet },
+  { "R3W",	R3W_Overlaps,	Empty_SubRegsSet,	R3W_SuperRegsSet },
+  { "R4D",	R4D_Overlaps,	R4D_SubRegsSet,	R4D_SuperRegsSet },
+  { "R4P",	R4P_Overlaps,	R4P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4Q",	R4Q_Overlaps,	R4Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4W",	R4W_Overlaps,	Empty_SubRegsSet,	R4W_SuperRegsSet },
+  { "R5D",	R5D_Overlaps,	R5D_SubRegsSet,	R5D_SuperRegsSet },
+  { "R5W",	R5W_Overlaps,	Empty_SubRegsSet,	R5W_SuperRegsSet },
+  { "R6D",	R6D_Overlaps,	R6D_SubRegsSet,	R6D_SuperRegsSet },
+  { "R6P",	R6P_Overlaps,	R6P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6Q",	R6Q_Overlaps,	R6Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6W",	R6W_Overlaps,	Empty_SubRegsSet,	R6W_SuperRegsSet },
+  { "R7D",	R7D_Overlaps,	R7D_SubRegsSet,	R7D_SuperRegsSet },
+  { "R7W",	R7W_Overlaps,	Empty_SubRegsSet,	R7W_SuperRegsSet },
+  { "R8D",	R8D_Overlaps,	R8D_SubRegsSet,	R8D_SuperRegsSet },
+  { "R8P",	R8P_Overlaps,	R8P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8Q",	R8Q_Overlaps,	R8Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8W",	R8W_Overlaps,	Empty_SubRegsSet,	R8W_SuperRegsSet },
+  { "R9D",	R9D_Overlaps,	R9D_SubRegsSet,	R9D_SuperRegsSet },
+  { "R9W",	R9W_Overlaps,	Empty_SubRegsSet,	R9W_SuperRegsSet },
+  { "R10D",	R10D_Overlaps,	R10D_SubRegsSet,	R10D_SuperRegsSet },
+  { "R10P",	R10P_Overlaps,	R10P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10Q",	R10Q_Overlaps,	R10Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10W",	R10W_Overlaps,	Empty_SubRegsSet,	R10W_SuperRegsSet },
+  { "R11D",	R11D_Overlaps,	R11D_SubRegsSet,	R11D_SuperRegsSet },
+  { "R11W",	R11W_Overlaps,	Empty_SubRegsSet,	R11W_SuperRegsSet },
+  { "R12D",	R12D_Overlaps,	R12D_SubRegsSet,	R12D_SuperRegsSet },
+  { "R12P",	R12P_Overlaps,	R12P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12Q",	R12Q_Overlaps,	R12Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12W",	R12W_Overlaps,	Empty_SubRegsSet,	R12W_SuperRegsSet },
+  { "R13D",	R13D_Overlaps,	R13D_SubRegsSet,	R13D_SuperRegsSet },
+  { "R13W",	R13W_Overlaps,	Empty_SubRegsSet,	R13W_SuperRegsSet },
+  { "R14D",	R14D_Overlaps,	R14D_SubRegsSet,	R14D_SuperRegsSet },
+  { "R14P",	R14P_Overlaps,	R14P_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14Q",	R14Q_Overlaps,	R14Q_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14W",	R14W_Overlaps,	Empty_SubRegsSet,	R14W_SuperRegsSet },
+  { "R15D",	R15D_Overlaps,	R15D_SubRegsSet,	R15D_SuperRegsSet },
+  { "R15W",	R15W_Overlaps,	Empty_SubRegsSet,	R15W_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // ADDR32 Register Class...
+  static const unsigned ADDR32[] = {
+    SystemZ::R1W, SystemZ::R2W, SystemZ::R3W, SystemZ::R4W, SystemZ::R5W, SystemZ::R15W, SystemZ::R14W, SystemZ::R13W, SystemZ::R12W, SystemZ::R11W, SystemZ::R10W, SystemZ::R9W, SystemZ::R8W, SystemZ::R7W, SystemZ::R6W, 
+  };
+
+  // ADDR32 Bit set.
+  static const unsigned char ADDR32Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x8a, 0xa2, 0x28, 0x8a, 0x02, 
+  };
+
+  // ADDR64 Register Class...
+  static const unsigned ADDR64[] = {
+    SystemZ::R1D, SystemZ::R2D, SystemZ::R3D, SystemZ::R4D, SystemZ::R5D, SystemZ::R15D, SystemZ::R14D, SystemZ::R13D, SystemZ::R12D, SystemZ::R11D, SystemZ::R10D, SystemZ::R9D, SystemZ::R8D, SystemZ::R7D, SystemZ::R6D, 
+  };
+
+  // ADDR64 Bit set.
+  static const unsigned char ADDR64Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x40, 0x51, 0x14, 0x45, 0x51, 0x14, 0x01, 
+  };
+
+  // CCR Register Class...
+  static const unsigned CCR[] = {
+    SystemZ::PSW, 
+  };
+
+  // CCR Bit set.
+  static const unsigned char CCRBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x02, 
+  };
+
+  // FP32 Register Class...
+  static const unsigned FP32[] = {
+    SystemZ::F0S, SystemZ::F1S, SystemZ::F2S, SystemZ::F3S, SystemZ::F4S, SystemZ::F5S, SystemZ::F6S, SystemZ::F7S, SystemZ::F8S, SystemZ::F9S, SystemZ::F10S, SystemZ::F11S, SystemZ::F12S, SystemZ::F13S, SystemZ::F14S, SystemZ::F15S, 
+  };
+
+  // FP32 Bit set.
+  static const unsigned char FP32Bits[] = {
+    0x54, 0x55, 0x55, 0x55, 0x01, 
+  };
+
+  // FP64 Register Class...
+  static const unsigned FP64[] = {
+    SystemZ::F0L, SystemZ::F1L, SystemZ::F2L, SystemZ::F3L, SystemZ::F4L, SystemZ::F5L, SystemZ::F6L, SystemZ::F7L, SystemZ::F8L, SystemZ::F9L, SystemZ::F10L, SystemZ::F11L, SystemZ::F12L, SystemZ::F13L, SystemZ::F14L, SystemZ::F15L, 
+  };
+
+  // FP64 Bit set.
+  static const unsigned char FP64Bits[] = {
+    0xaa, 0xaa, 0xaa, 0xaa, 
+  };
+
+  // GR128 Register Class...
+  static const unsigned GR128[] = {
+    SystemZ::R0Q, SystemZ::R2Q, SystemZ::R4Q, SystemZ::R12Q, SystemZ::R10Q, SystemZ::R8Q, SystemZ::R6Q, SystemZ::R14Q, 
+  };
+
+  // GR128 Bit set.
+  static const unsigned char GR128Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x10, 0x04, 0x41, 0x10, 0x04, 0x41, 
+  };
+
+  // GR32 Register Class...
+  static const unsigned GR32[] = {
+    SystemZ::R0W, SystemZ::R1W, SystemZ::R2W, SystemZ::R3W, SystemZ::R4W, SystemZ::R5W, SystemZ::R15W, SystemZ::R14W, SystemZ::R13W, SystemZ::R12W, SystemZ::R11W, SystemZ::R10W, SystemZ::R9W, SystemZ::R8W, SystemZ::R7W, SystemZ::R6W, 
+  };
+
+  // GR32 Bit set.
+  static const unsigned char GR32Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0xa0, 0x28, 0x8a, 0xa2, 0x28, 0x8a, 0x02, 
+  };
+
+  // GR64 Register Class...
+  static const unsigned GR64[] = {
+    SystemZ::R0D, SystemZ::R1D, SystemZ::R2D, SystemZ::R3D, SystemZ::R4D, SystemZ::R5D, SystemZ::R15D, SystemZ::R14D, SystemZ::R13D, SystemZ::R12D, SystemZ::R11D, SystemZ::R10D, SystemZ::R9D, SystemZ::R8D, SystemZ::R7D, SystemZ::R6D, 
+  };
+
+  // GR64 Bit set.
+  static const unsigned char GR64Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x44, 0x51, 0x14, 0x45, 0x51, 0x14, 0x01, 
+  };
+
+  // GR64P Register Class...
+  static const unsigned GR64P[] = {
+    SystemZ::R0P, SystemZ::R2P, SystemZ::R4P, SystemZ::R12P, SystemZ::R10P, SystemZ::R8P, SystemZ::R6P, SystemZ::R14P, 
+  };
+
+  // GR64P Bit set.
+  static const unsigned char GR64PBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x08, 0x82, 0x20, 0x08, 0x82, 0x20, 
+  };
+
+}
+
+MCRegisterClass SystemZMCRegisterClasses[] = {
+  MCRegisterClass(SystemZ::ADDR32RegClassID, "ADDR32", 4, 4, 1, 1, ADDR32, ADDR32 + 15, ADDR32Bits, sizeof(ADDR32Bits)),
+  MCRegisterClass(SystemZ::ADDR64RegClassID, "ADDR64", 8, 8, 1, 1, ADDR64, ADDR64 + 15, ADDR64Bits, sizeof(ADDR64Bits)),
+  MCRegisterClass(SystemZ::CCRRegClassID, "CCR", 8, 8, -1, 1, CCR, CCR + 1, CCRBits, sizeof(CCRBits)),
+  MCRegisterClass(SystemZ::FP32RegClassID, "FP32", 4, 4, 1, 1, FP32, FP32 + 16, FP32Bits, sizeof(FP32Bits)),
+  MCRegisterClass(SystemZ::FP64RegClassID, "FP64", 8, 8, 1, 1, FP64, FP64 + 16, FP64Bits, sizeof(FP64Bits)),
+  MCRegisterClass(SystemZ::GR128RegClassID, "GR128", 16, 16, 1, 1, GR128, GR128 + 8, GR128Bits, sizeof(GR128Bits)),
+  MCRegisterClass(SystemZ::GR32RegClassID, "GR32", 4, 4, 1, 1, GR32, GR32 + 16, GR32Bits, sizeof(GR32Bits)),
+  MCRegisterClass(SystemZ::GR64RegClassID, "GR64", 8, 8, 1, 1, GR64, GR64 + 16, GR64Bits, sizeof(GR64Bits)),
+  MCRegisterClass(SystemZ::GR64PRegClassID, "GR64P", 8, 8, 1, 1, GR64P, GR64P + 8, GR64PBits, sizeof(GR64PBits)),
+};
+
+static inline void InitSystemZMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(SystemZRegDesc, 82, RA, SystemZMCRegisterClasses, 9);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(16, SystemZ::F0S, false );
+    RI->mapDwarfRegToLLVMReg(17, SystemZ::F1S, false );
+    RI->mapDwarfRegToLLVMReg(18, SystemZ::F2S, false );
+    RI->mapDwarfRegToLLVMReg(19, SystemZ::F3S, false );
+    RI->mapDwarfRegToLLVMReg(20, SystemZ::F4S, false );
+    RI->mapDwarfRegToLLVMReg(21, SystemZ::F5S, false );
+    RI->mapDwarfRegToLLVMReg(22, SystemZ::F6S, false );
+    RI->mapDwarfRegToLLVMReg(23, SystemZ::F7S, false );
+    RI->mapDwarfRegToLLVMReg(24, SystemZ::F8S, false );
+    RI->mapDwarfRegToLLVMReg(25, SystemZ::F9S, false );
+    RI->mapDwarfRegToLLVMReg(26, SystemZ::F10S, false );
+    RI->mapDwarfRegToLLVMReg(27, SystemZ::F11S, false );
+    RI->mapDwarfRegToLLVMReg(28, SystemZ::F12S, false );
+    RI->mapDwarfRegToLLVMReg(29, SystemZ::F13S, false );
+    RI->mapDwarfRegToLLVMReg(30, SystemZ::F14S, false );
+    RI->mapDwarfRegToLLVMReg(31, SystemZ::F15S, false );
+    RI->mapDwarfRegToLLVMReg(0, SystemZ::R0D, false );
+    RI->mapDwarfRegToLLVMReg(1, SystemZ::R1D, false );
+    RI->mapDwarfRegToLLVMReg(2, SystemZ::R2D, false );
+    RI->mapDwarfRegToLLVMReg(3, SystemZ::R3D, false );
+    RI->mapDwarfRegToLLVMReg(4, SystemZ::R4D, false );
+    RI->mapDwarfRegToLLVMReg(5, SystemZ::R5D, false );
+    RI->mapDwarfRegToLLVMReg(6, SystemZ::R6D, false );
+    RI->mapDwarfRegToLLVMReg(7, SystemZ::R7D, false );
+    RI->mapDwarfRegToLLVMReg(8, SystemZ::R8D, false );
+    RI->mapDwarfRegToLLVMReg(9, SystemZ::R9D, false );
+    RI->mapDwarfRegToLLVMReg(10, SystemZ::R10D, false );
+    RI->mapDwarfRegToLLVMReg(11, SystemZ::R11D, false );
+    RI->mapDwarfRegToLLVMReg(12, SystemZ::R12D, false );
+    RI->mapDwarfRegToLLVMReg(13, SystemZ::R13D, false );
+    RI->mapDwarfRegToLLVMReg(14, SystemZ::R14D, false );
+    RI->mapDwarfRegToLLVMReg(15, SystemZ::R15D, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(16, SystemZ::F0S, true );
+    RI->mapDwarfRegToLLVMReg(17, SystemZ::F1S, true );
+    RI->mapDwarfRegToLLVMReg(18, SystemZ::F2S, true );
+    RI->mapDwarfRegToLLVMReg(19, SystemZ::F3S, true );
+    RI->mapDwarfRegToLLVMReg(20, SystemZ::F4S, true );
+    RI->mapDwarfRegToLLVMReg(21, SystemZ::F5S, true );
+    RI->mapDwarfRegToLLVMReg(22, SystemZ::F6S, true );
+    RI->mapDwarfRegToLLVMReg(23, SystemZ::F7S, true );
+    RI->mapDwarfRegToLLVMReg(24, SystemZ::F8S, true );
+    RI->mapDwarfRegToLLVMReg(25, SystemZ::F9S, true );
+    RI->mapDwarfRegToLLVMReg(26, SystemZ::F10S, true );
+    RI->mapDwarfRegToLLVMReg(27, SystemZ::F11S, true );
+    RI->mapDwarfRegToLLVMReg(28, SystemZ::F12S, true );
+    RI->mapDwarfRegToLLVMReg(29, SystemZ::F13S, true );
+    RI->mapDwarfRegToLLVMReg(30, SystemZ::F14S, true );
+    RI->mapDwarfRegToLLVMReg(31, SystemZ::F15S, true );
+    RI->mapDwarfRegToLLVMReg(0, SystemZ::R0D, true );
+    RI->mapDwarfRegToLLVMReg(1, SystemZ::R1D, true );
+    RI->mapDwarfRegToLLVMReg(2, SystemZ::R2D, true );
+    RI->mapDwarfRegToLLVMReg(3, SystemZ::R3D, true );
+    RI->mapDwarfRegToLLVMReg(4, SystemZ::R4D, true );
+    RI->mapDwarfRegToLLVMReg(5, SystemZ::R5D, true );
+    RI->mapDwarfRegToLLVMReg(6, SystemZ::R6D, true );
+    RI->mapDwarfRegToLLVMReg(7, SystemZ::R7D, true );
+    RI->mapDwarfRegToLLVMReg(8, SystemZ::R8D, true );
+    RI->mapDwarfRegToLLVMReg(9, SystemZ::R9D, true );
+    RI->mapDwarfRegToLLVMReg(10, SystemZ::R10D, true );
+    RI->mapDwarfRegToLLVMReg(11, SystemZ::R11D, true );
+    RI->mapDwarfRegToLLVMReg(12, SystemZ::R12D, true );
+    RI->mapDwarfRegToLLVMReg(13, SystemZ::R13D, true );
+    RI->mapDwarfRegToLLVMReg(14, SystemZ::R14D, true );
+    RI->mapDwarfRegToLLVMReg(15, SystemZ::R15D, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(SystemZ::F0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F0S, 16, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F1S, 17, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F2S, 18, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F3S, 19, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F4L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F4S, 20, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F5L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F5S, 21, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F6L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F6S, 22, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F7L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F7S, 23, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F8L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F8S, 24, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F9L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F9S, 25, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F10L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F10S, 26, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F11L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F11S, 27, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F12L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F12S, 28, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F13L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F13S, 29, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F14L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F14S, 30, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F15L, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F15S, 31, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::PSW, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0D, 0, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R1D, 1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R1W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2D, 2, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R3D, 3, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R3W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4D, 4, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R5D, 5, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R5W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6D, 6, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R7D, 7, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R7W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8D, 8, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R9D, 9, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R9W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10D, 10, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R11D, 11, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R11W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12D, 12, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R13D, 13, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R13W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14D, 14, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14P, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14Q, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14W, -1, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R15D, 15, false );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R15W, -1, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(SystemZ::F0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F0S, 16, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F1S, 17, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F2S, 18, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F3S, 19, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F4L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F4S, 20, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F5L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F5S, 21, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F6L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F6S, 22, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F7L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F7S, 23, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F8L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F8S, 24, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F9L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F9S, 25, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F10L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F10S, 26, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F11L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F11S, 27, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F12L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F12S, 28, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F13L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F13S, 29, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F14L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F14S, 30, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F15L, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::F15S, 31, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::PSW, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0D, 0, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R0W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R1D, 1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R1W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2D, 2, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R2W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R3D, 3, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R3W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4D, 4, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R4W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R5D, 5, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R5W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6D, 6, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R6W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R7D, 7, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R7W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8D, 8, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R8W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R9D, 9, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R9W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10D, 10, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R10W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R11D, 11, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R11W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12D, 12, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R12W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R13D, 13, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R13W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14D, 14, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14P, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14Q, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R14W, -1, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R15D, 15, true );
+    RI->mapLLVMRegToDwarfReg(SystemZ::R15W, -1, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct SystemZGenRegisterInfo : public TargetRegisterInfo {
+  explicit SystemZGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+
+// Subregister indices
+namespace SystemZ {
+enum {
+  NoSubRegister,
+  subreg_32bit,	// 1
+  subreg_even,	// 2
+  subreg_odd,	// 3
+  subreg_odd32,	// 4
+  NUM_TARGET_NAMED_SUBREGS = 5
+};
+}
+namespace SystemZ { // Register classes
+  struct ADDR32Class : public TargetRegisterClass {
+    ADDR32Class();
+  };
+  extern ADDR32Class	ADDR32RegClass;
+  static TargetRegisterClass * const ADDR32RegisterClass = &ADDR32RegClass;
+  struct ADDR64Class : public TargetRegisterClass {
+    ADDR64Class();
+  };
+  extern ADDR64Class	ADDR64RegClass;
+  static TargetRegisterClass * const ADDR64RegisterClass = &ADDR64RegClass;
+  struct CCRClass : public TargetRegisterClass {
+    CCRClass();
+  };
+  extern CCRClass	CCRRegClass;
+  static TargetRegisterClass * const CCRRegisterClass = &CCRRegClass;
+  struct FP32Class : public TargetRegisterClass {
+    FP32Class();
+  };
+  extern FP32Class	FP32RegClass;
+  static TargetRegisterClass * const FP32RegisterClass = &FP32RegClass;
+  struct FP64Class : public TargetRegisterClass {
+    FP64Class();
+  };
+  extern FP64Class	FP64RegClass;
+  static TargetRegisterClass * const FP64RegisterClass = &FP64RegClass;
+  struct GR128Class : public TargetRegisterClass {
+    GR128Class();
+  };
+  extern GR128Class	GR128RegClass;
+  static TargetRegisterClass * const GR128RegisterClass = &GR128RegClass;
+  struct GR32Class : public TargetRegisterClass {
+    GR32Class();
+  };
+  extern GR32Class	GR32RegClass;
+  static TargetRegisterClass * const GR32RegisterClass = &GR32RegClass;
+  struct GR64Class : public TargetRegisterClass {
+    GR64Class();
+  };
+  extern GR64Class	GR64RegClass;
+  static TargetRegisterClass * const GR64RegisterClass = &GR64RegClass;
+  struct GR64PClass : public TargetRegisterClass {
+    GR64PClass();
+  };
+  extern GR64PClass	GR64PRegClass;
+  static TargetRegisterClass * const GR64PRegisterClass = &GR64PRegClass;
+} // end of namespace SystemZ
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass SystemZMCRegisterClasses[];
+namespace {     // Register classes...
+  // ADDR32VTs Register Class Value Types...
+  static const EVT ADDR32VTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // ADDR64VTs Register Class Value Types...
+  static const EVT ADDR64VTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+  // CCRVTs Register Class Value Types...
+  static const EVT CCRVTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+  // FP32VTs Register Class Value Types...
+  static const EVT FP32VTs[] = {
+    MVT::f32, MVT::Other
+  };
+
+  // FP64VTs Register Class Value Types...
+  static const EVT FP64VTs[] = {
+    MVT::f64, MVT::Other
+  };
+
+  // GR128VTs Register Class Value Types...
+  static const EVT GR128VTs[] = {
+    MVT::v2i64, MVT::Other
+  };
+
+  // GR32VTs Register Class Value Types...
+  static const EVT GR32VTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // GR64VTs Register Class Value Types...
+  static const EVT GR64VTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+  // GR64PVTs Register Class Value Types...
+  static const EVT GR64PVTs[] = {
+    MVT::v2i32, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace SystemZ {   // Register class instances
+  ADDR32Class	ADDR32RegClass;
+  ADDR64Class	ADDR64RegClass;
+  CCRClass	CCRRegClass;
+  FP32Class	FP32RegClass;
+  FP64Class	FP64RegClass;
+  GR128Class	GR128RegClass;
+  GR32Class	GR32RegClass;
+  GR64Class	GR64RegClass;
+  GR64PClass	GR64PRegClass;
+
+  // ADDR32 Sub-register Classes...
+  static const TargetRegisterClass* const ADDR32SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // ADDR64 Sub-register Classes...
+  static const TargetRegisterClass* const ADDR64SubRegClasses[] = {
+    &SystemZ::ADDR32RegClass, 0, 0, 0
+  };
+
+  // CCR Sub-register Classes...
+  static const TargetRegisterClass* const CCRSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // FP32 Sub-register Classes...
+  static const TargetRegisterClass* const FP32SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // FP64 Sub-register Classes...
+  static const TargetRegisterClass* const FP64SubRegClasses[] = {
+    &SystemZ::FP32RegClass, 0, 0, 0
+  };
+
+  // GR128 Sub-register Classes...
+  static const TargetRegisterClass* const GR128SubRegClasses[] = {
+    &SystemZ::GR32RegClass, &SystemZ::GR64RegClass, &SystemZ::GR64RegClass, &SystemZ::GR32RegClass
+  };
+
+  // GR32 Sub-register Classes...
+  static const TargetRegisterClass* const GR32SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // GR64 Sub-register Classes...
+  static const TargetRegisterClass* const GR64SubRegClasses[] = {
+    &SystemZ::GR32RegClass, 0, 0, 0
+  };
+
+  // GR64P Sub-register Classes...
+  static const TargetRegisterClass* const GR64PSubRegClasses[] = {
+    &SystemZ::GR32RegClass, 0, 0, &SystemZ::GR32RegClass
+  };
+
+  // ADDR32 Super-register Classes...
+  static const TargetRegisterClass* const ADDR32SuperRegClasses[] = {
+    &SystemZ::ADDR64RegClass, NULL
+  };
+
+  // ADDR64 Super-register Classes...
+  static const TargetRegisterClass* const ADDR64SuperRegClasses[] = {
+    NULL
+  };
+
+  // CCR Super-register Classes...
+  static const TargetRegisterClass* const CCRSuperRegClasses[] = {
+    NULL
+  };
+
+  // FP32 Super-register Classes...
+  static const TargetRegisterClass* const FP32SuperRegClasses[] = {
+    &SystemZ::FP64RegClass, NULL
+  };
+
+  // FP64 Super-register Classes...
+  static const TargetRegisterClass* const FP64SuperRegClasses[] = {
+    NULL
+  };
+
+  // GR128 Super-register Classes...
+  static const TargetRegisterClass* const GR128SuperRegClasses[] = {
+    NULL
+  };
+
+  // GR32 Super-register Classes...
+  static const TargetRegisterClass* const GR32SuperRegClasses[] = {
+    &SystemZ::GR128RegClass, &SystemZ::GR64RegClass, &SystemZ::GR64PRegClass, NULL
+  };
+
+  // GR64 Super-register Classes...
+  static const TargetRegisterClass* const GR64SuperRegClasses[] = {
+    &SystemZ::GR128RegClass, NULL
+  };
+
+  // GR64P Super-register Classes...
+  static const TargetRegisterClass* const GR64PSuperRegClasses[] = {
+    NULL
+  };
+
+  // ADDR32 Register Class sub-classes...
+  static const TargetRegisterClass* const ADDR32Subclasses[] = {
+    NULL
+  };
+
+  // ADDR64 Register Class sub-classes...
+  static const TargetRegisterClass* const ADDR64Subclasses[] = {
+    NULL
+  };
+
+  // CCR Register Class sub-classes...
+  static const TargetRegisterClass* const CCRSubclasses[] = {
+    NULL
+  };
+
+  // FP32 Register Class sub-classes...
+  static const TargetRegisterClass* const FP32Subclasses[] = {
+    NULL
+  };
+
+  // FP64 Register Class sub-classes...
+  static const TargetRegisterClass* const FP64Subclasses[] = {
+    NULL
+  };
+
+  // GR128 Register Class sub-classes...
+  static const TargetRegisterClass* const GR128Subclasses[] = {
+    NULL
+  };
+
+  // GR32 Register Class sub-classes...
+  static const TargetRegisterClass* const GR32Subclasses[] = {
+    &SystemZ::ADDR32RegClass, NULL
+  };
+
+  // GR64 Register Class sub-classes...
+  static const TargetRegisterClass* const GR64Subclasses[] = {
+    &SystemZ::ADDR64RegClass, NULL
+  };
+
+  // GR64P Register Class sub-classes...
+  static const TargetRegisterClass* const GR64PSubclasses[] = {
+    NULL
+  };
+
+  // ADDR32 Register Class super-classes...
+  static const TargetRegisterClass* const ADDR32Superclasses[] = {
+    &SystemZ::GR32RegClass, NULL
+  };
+
+  // ADDR64 Register Class super-classes...
+  static const TargetRegisterClass* const ADDR64Superclasses[] = {
+    &SystemZ::GR64RegClass, NULL
+  };
+
+  // CCR Register Class super-classes...
+  static const TargetRegisterClass* const CCRSuperclasses[] = {
+    NULL
+  };
+
+  // FP32 Register Class super-classes...
+  static const TargetRegisterClass* const FP32Superclasses[] = {
+    NULL
+  };
+
+  // FP64 Register Class super-classes...
+  static const TargetRegisterClass* const FP64Superclasses[] = {
+    NULL
+  };
+
+  // GR128 Register Class super-classes...
+  static const TargetRegisterClass* const GR128Superclasses[] = {
+    NULL
+  };
+
+  // GR32 Register Class super-classes...
+  static const TargetRegisterClass* const GR32Superclasses[] = {
+    NULL
+  };
+
+  // GR64 Register Class super-classes...
+  static const TargetRegisterClass* const GR64Superclasses[] = {
+    NULL
+  };
+
+  // GR64P Register Class super-classes...
+  static const TargetRegisterClass* const GR64PSuperclasses[] = {
+    NULL
+  };
+
+ADDR32Class::ADDR32Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[ADDR32RegClassID], ADDR32VTs, ADDR32Subclasses, ADDR32Superclasses, ADDR32SubRegClasses, ADDR32SuperRegClasses) {}
+ADDR64Class::ADDR64Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[ADDR64RegClassID], ADDR64VTs, ADDR64Subclasses, ADDR64Superclasses, ADDR64SubRegClasses, ADDR64SuperRegClasses) {}
+CCRClass::CCRClass()  : TargetRegisterClass(&SystemZMCRegisterClasses[CCRRegClassID], CCRVTs, CCRSubclasses, CCRSuperclasses, CCRSubRegClasses, CCRSuperRegClasses) {}
+FP32Class::FP32Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[FP32RegClassID], FP32VTs, FP32Subclasses, FP32Superclasses, FP32SubRegClasses, FP32SuperRegClasses) {}
+FP64Class::FP64Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[FP64RegClassID], FP64VTs, FP64Subclasses, FP64Superclasses, FP64SubRegClasses, FP64SuperRegClasses) {}
+GR128Class::GR128Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[GR128RegClassID], GR128VTs, GR128Subclasses, GR128Superclasses, GR128SubRegClasses, GR128SuperRegClasses) {}
+GR32Class::GR32Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[GR32RegClassID], GR32VTs, GR32Subclasses, GR32Superclasses, GR32SubRegClasses, GR32SuperRegClasses) {}
+GR64Class::GR64Class()  : TargetRegisterClass(&SystemZMCRegisterClasses[GR64RegClassID], GR64VTs, GR64Subclasses, GR64Superclasses, GR64SubRegClasses, GR64SuperRegClasses) {}
+GR64PClass::GR64PClass()  : TargetRegisterClass(&SystemZMCRegisterClasses[GR64PRegClassID], GR64PVTs, GR64PSubclasses, GR64PSuperclasses, GR64PSubRegClasses, GR64PSuperRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &SystemZ::ADDR32RegClass,
+    &SystemZ::ADDR64RegClass,
+    &SystemZ::CCRRegClass,
+    &SystemZ::FP32RegClass,
+    &SystemZ::FP64RegClass,
+    &SystemZ::GR128RegClass,
+    &SystemZ::GR32RegClass,
+    &SystemZ::GR64RegClass,
+    &SystemZ::GR64PRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc SystemZRegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+  };
+
+  static const char *const SystemZSubRegIndexTable[] = { "subreg_32bit", "subreg_even", "subreg_odd", "subreg_odd32" };
+
+
+unsigned SystemZGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  case SystemZ::F0L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F0S;
+    };
+    break;
+  case SystemZ::F1L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F1S;
+    };
+    break;
+  case SystemZ::F2L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F2S;
+    };
+    break;
+  case SystemZ::F3L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F3S;
+    };
+    break;
+  case SystemZ::F4L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F4S;
+    };
+    break;
+  case SystemZ::F5L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F5S;
+    };
+    break;
+  case SystemZ::F6L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F6S;
+    };
+    break;
+  case SystemZ::F7L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F7S;
+    };
+    break;
+  case SystemZ::F8L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F8S;
+    };
+    break;
+  case SystemZ::F9L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F9S;
+    };
+    break;
+  case SystemZ::F10L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F10S;
+    };
+    break;
+  case SystemZ::F11L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F11S;
+    };
+    break;
+  case SystemZ::F12L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F12S;
+    };
+    break;
+  case SystemZ::F13L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F13S;
+    };
+    break;
+  case SystemZ::F14L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F14S;
+    };
+    break;
+  case SystemZ::F15L:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::F15S;
+    };
+    break;
+  case SystemZ::R0D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R0W;
+    };
+    break;
+  case SystemZ::R0P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R0W;
+    case SystemZ::subreg_odd32: return SystemZ::R1W;
+    };
+    break;
+  case SystemZ::R0Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R0W;
+    case SystemZ::subreg_even: return SystemZ::R0D;
+    case SystemZ::subreg_odd: return SystemZ::R1D;
+    case SystemZ::subreg_odd32: return SystemZ::R1W;
+    };
+    break;
+  case SystemZ::R1D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R1W;
+    };
+    break;
+  case SystemZ::R2D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R2W;
+    };
+    break;
+  case SystemZ::R2P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R2W;
+    case SystemZ::subreg_odd32: return SystemZ::R3W;
+    };
+    break;
+  case SystemZ::R2Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R2W;
+    case SystemZ::subreg_even: return SystemZ::R2D;
+    case SystemZ::subreg_odd: return SystemZ::R3D;
+    case SystemZ::subreg_odd32: return SystemZ::R3W;
+    };
+    break;
+  case SystemZ::R3D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R3W;
+    };
+    break;
+  case SystemZ::R4D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R4W;
+    };
+    break;
+  case SystemZ::R4P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R4W;
+    case SystemZ::subreg_odd32: return SystemZ::R5W;
+    };
+    break;
+  case SystemZ::R4Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R4W;
+    case SystemZ::subreg_even: return SystemZ::R4D;
+    case SystemZ::subreg_odd: return SystemZ::R5D;
+    case SystemZ::subreg_odd32: return SystemZ::R5W;
+    };
+    break;
+  case SystemZ::R5D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R5W;
+    };
+    break;
+  case SystemZ::R6D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R6W;
+    };
+    break;
+  case SystemZ::R6P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R6W;
+    case SystemZ::subreg_odd32: return SystemZ::R7W;
+    };
+    break;
+  case SystemZ::R6Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R6W;
+    case SystemZ::subreg_even: return SystemZ::R6D;
+    case SystemZ::subreg_odd: return SystemZ::R7D;
+    case SystemZ::subreg_odd32: return SystemZ::R7W;
+    };
+    break;
+  case SystemZ::R7D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R7W;
+    };
+    break;
+  case SystemZ::R8D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R8W;
+    };
+    break;
+  case SystemZ::R8P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R8W;
+    case SystemZ::subreg_odd32: return SystemZ::R9W;
+    };
+    break;
+  case SystemZ::R8Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R8W;
+    case SystemZ::subreg_even: return SystemZ::R8D;
+    case SystemZ::subreg_odd: return SystemZ::R9D;
+    case SystemZ::subreg_odd32: return SystemZ::R9W;
+    };
+    break;
+  case SystemZ::R9D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R9W;
+    };
+    break;
+  case SystemZ::R10D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R10W;
+    };
+    break;
+  case SystemZ::R10P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R10W;
+    case SystemZ::subreg_odd32: return SystemZ::R11W;
+    };
+    break;
+  case SystemZ::R10Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R10W;
+    case SystemZ::subreg_even: return SystemZ::R10D;
+    case SystemZ::subreg_odd: return SystemZ::R11D;
+    case SystemZ::subreg_odd32: return SystemZ::R11W;
+    };
+    break;
+  case SystemZ::R11D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R11W;
+    };
+    break;
+  case SystemZ::R12D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R12W;
+    };
+    break;
+  case SystemZ::R12P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R12W;
+    case SystemZ::subreg_odd32: return SystemZ::R13W;
+    };
+    break;
+  case SystemZ::R12Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R12W;
+    case SystemZ::subreg_even: return SystemZ::R12D;
+    case SystemZ::subreg_odd: return SystemZ::R13D;
+    case SystemZ::subreg_odd32: return SystemZ::R13W;
+    };
+    break;
+  case SystemZ::R13D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R13W;
+    };
+    break;
+  case SystemZ::R14D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R14W;
+    };
+    break;
+  case SystemZ::R14P:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R14W;
+    case SystemZ::subreg_odd32: return SystemZ::R15W;
+    };
+    break;
+  case SystemZ::R14Q:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R14W;
+    case SystemZ::subreg_even: return SystemZ::R14D;
+    case SystemZ::subreg_odd: return SystemZ::R15D;
+    case SystemZ::subreg_odd32: return SystemZ::R15W;
+    };
+    break;
+  case SystemZ::R15D:
+    switch (Index) {
+    default: return 0;
+    case SystemZ::subreg_32bit: return SystemZ::R15W;
+    };
+    break;
+  };
+  return 0;
+}
+
+unsigned SystemZGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  case SystemZ::F0L:
+    if (SubRegNo == SystemZ::F0S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F1L:
+    if (SubRegNo == SystemZ::F1S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F2L:
+    if (SubRegNo == SystemZ::F2S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F3L:
+    if (SubRegNo == SystemZ::F3S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F4L:
+    if (SubRegNo == SystemZ::F4S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F5L:
+    if (SubRegNo == SystemZ::F5S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F6L:
+    if (SubRegNo == SystemZ::F6S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F7L:
+    if (SubRegNo == SystemZ::F7S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F8L:
+    if (SubRegNo == SystemZ::F8S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F9L:
+    if (SubRegNo == SystemZ::F9S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F10L:
+    if (SubRegNo == SystemZ::F10S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F11L:
+    if (SubRegNo == SystemZ::F11S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F12L:
+    if (SubRegNo == SystemZ::F12S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F13L:
+    if (SubRegNo == SystemZ::F13S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F14L:
+    if (SubRegNo == SystemZ::F14S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::F15L:
+    if (SubRegNo == SystemZ::F15S)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R0D:
+    if (SubRegNo == SystemZ::R0W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R0P:
+    if (SubRegNo == SystemZ::R0W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R1W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R0Q:
+    if (SubRegNo == SystemZ::R0W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R0D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R1D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R1W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R1D:
+    if (SubRegNo == SystemZ::R1W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R2D:
+    if (SubRegNo == SystemZ::R2W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R2P:
+    if (SubRegNo == SystemZ::R2W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R3W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R2Q:
+    if (SubRegNo == SystemZ::R2W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R2D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R3D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R3W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R3D:
+    if (SubRegNo == SystemZ::R3W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R4D:
+    if (SubRegNo == SystemZ::R4W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R4P:
+    if (SubRegNo == SystemZ::R4W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R5W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R4Q:
+    if (SubRegNo == SystemZ::R4W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R4D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R5D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R5W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R5D:
+    if (SubRegNo == SystemZ::R5W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R6D:
+    if (SubRegNo == SystemZ::R6W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R6P:
+    if (SubRegNo == SystemZ::R6W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R7W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R6Q:
+    if (SubRegNo == SystemZ::R6W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R6D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R7D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R7W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R7D:
+    if (SubRegNo == SystemZ::R7W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R8D:
+    if (SubRegNo == SystemZ::R8W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R8P:
+    if (SubRegNo == SystemZ::R8W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R9W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R8Q:
+    if (SubRegNo == SystemZ::R8W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R8D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R9D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R9W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R9D:
+    if (SubRegNo == SystemZ::R9W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R10D:
+    if (SubRegNo == SystemZ::R10W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R10P:
+    if (SubRegNo == SystemZ::R10W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R11W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R10Q:
+    if (SubRegNo == SystemZ::R10W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R10D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R11D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R11W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R11D:
+    if (SubRegNo == SystemZ::R11W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R12D:
+    if (SubRegNo == SystemZ::R12W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R12P:
+    if (SubRegNo == SystemZ::R12W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R13W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R12Q:
+    if (SubRegNo == SystemZ::R12W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R12D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R13D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R13W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R13D:
+    if (SubRegNo == SystemZ::R13W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R14D:
+    if (SubRegNo == SystemZ::R14W)  return SystemZ::subreg_32bit;
+    return 0;
+  case SystemZ::R14P:
+    if (SubRegNo == SystemZ::R14W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R15W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R14Q:
+    if (SubRegNo == SystemZ::R14W)  return SystemZ::subreg_32bit;
+    if (SubRegNo == SystemZ::R14D)  return SystemZ::subreg_even;
+    if (SubRegNo == SystemZ::R15D)  return SystemZ::subreg_odd;
+    if (SubRegNo == SystemZ::R15W)  return SystemZ::subreg_odd32;
+    return 0;
+  case SystemZ::R15D:
+    if (SubRegNo == SystemZ::R15W)  return SystemZ::subreg_32bit;
+    return 0;
+  };
+  return 0;
+}
+
+unsigned SystemZGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  case SystemZ::subreg_odd: switch(IdxB) {
+    default: return IdxB;
+    case SystemZ::subreg_32bit: return SystemZ::subreg_odd32;
+    }
+  }
+}
+
+extern MCRegisterDesc SystemZRegDesc[];
+SystemZGenRegisterInfo::SystemZGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(SystemZRegInfoDesc, RegisterClasses, RegisterClasses+9,
+                 SystemZSubRegIndexTable) {
+  InitMCRegisterInfo(SystemZRegDesc, 82, RA, SystemZMCRegisterClasses, 9);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(16, SystemZ::F0S, false );
+    mapDwarfRegToLLVMReg(17, SystemZ::F1S, false );
+    mapDwarfRegToLLVMReg(18, SystemZ::F2S, false );
+    mapDwarfRegToLLVMReg(19, SystemZ::F3S, false );
+    mapDwarfRegToLLVMReg(20, SystemZ::F4S, false );
+    mapDwarfRegToLLVMReg(21, SystemZ::F5S, false );
+    mapDwarfRegToLLVMReg(22, SystemZ::F6S, false );
+    mapDwarfRegToLLVMReg(23, SystemZ::F7S, false );
+    mapDwarfRegToLLVMReg(24, SystemZ::F8S, false );
+    mapDwarfRegToLLVMReg(25, SystemZ::F9S, false );
+    mapDwarfRegToLLVMReg(26, SystemZ::F10S, false );
+    mapDwarfRegToLLVMReg(27, SystemZ::F11S, false );
+    mapDwarfRegToLLVMReg(28, SystemZ::F12S, false );
+    mapDwarfRegToLLVMReg(29, SystemZ::F13S, false );
+    mapDwarfRegToLLVMReg(30, SystemZ::F14S, false );
+    mapDwarfRegToLLVMReg(31, SystemZ::F15S, false );
+    mapDwarfRegToLLVMReg(0, SystemZ::R0D, false );
+    mapDwarfRegToLLVMReg(1, SystemZ::R1D, false );
+    mapDwarfRegToLLVMReg(2, SystemZ::R2D, false );
+    mapDwarfRegToLLVMReg(3, SystemZ::R3D, false );
+    mapDwarfRegToLLVMReg(4, SystemZ::R4D, false );
+    mapDwarfRegToLLVMReg(5, SystemZ::R5D, false );
+    mapDwarfRegToLLVMReg(6, SystemZ::R6D, false );
+    mapDwarfRegToLLVMReg(7, SystemZ::R7D, false );
+    mapDwarfRegToLLVMReg(8, SystemZ::R8D, false );
+    mapDwarfRegToLLVMReg(9, SystemZ::R9D, false );
+    mapDwarfRegToLLVMReg(10, SystemZ::R10D, false );
+    mapDwarfRegToLLVMReg(11, SystemZ::R11D, false );
+    mapDwarfRegToLLVMReg(12, SystemZ::R12D, false );
+    mapDwarfRegToLLVMReg(13, SystemZ::R13D, false );
+    mapDwarfRegToLLVMReg(14, SystemZ::R14D, false );
+    mapDwarfRegToLLVMReg(15, SystemZ::R15D, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(16, SystemZ::F0S, true );
+    mapDwarfRegToLLVMReg(17, SystemZ::F1S, true );
+    mapDwarfRegToLLVMReg(18, SystemZ::F2S, true );
+    mapDwarfRegToLLVMReg(19, SystemZ::F3S, true );
+    mapDwarfRegToLLVMReg(20, SystemZ::F4S, true );
+    mapDwarfRegToLLVMReg(21, SystemZ::F5S, true );
+    mapDwarfRegToLLVMReg(22, SystemZ::F6S, true );
+    mapDwarfRegToLLVMReg(23, SystemZ::F7S, true );
+    mapDwarfRegToLLVMReg(24, SystemZ::F8S, true );
+    mapDwarfRegToLLVMReg(25, SystemZ::F9S, true );
+    mapDwarfRegToLLVMReg(26, SystemZ::F10S, true );
+    mapDwarfRegToLLVMReg(27, SystemZ::F11S, true );
+    mapDwarfRegToLLVMReg(28, SystemZ::F12S, true );
+    mapDwarfRegToLLVMReg(29, SystemZ::F13S, true );
+    mapDwarfRegToLLVMReg(30, SystemZ::F14S, true );
+    mapDwarfRegToLLVMReg(31, SystemZ::F15S, true );
+    mapDwarfRegToLLVMReg(0, SystemZ::R0D, true );
+    mapDwarfRegToLLVMReg(1, SystemZ::R1D, true );
+    mapDwarfRegToLLVMReg(2, SystemZ::R2D, true );
+    mapDwarfRegToLLVMReg(3, SystemZ::R3D, true );
+    mapDwarfRegToLLVMReg(4, SystemZ::R4D, true );
+    mapDwarfRegToLLVMReg(5, SystemZ::R5D, true );
+    mapDwarfRegToLLVMReg(6, SystemZ::R6D, true );
+    mapDwarfRegToLLVMReg(7, SystemZ::R7D, true );
+    mapDwarfRegToLLVMReg(8, SystemZ::R8D, true );
+    mapDwarfRegToLLVMReg(9, SystemZ::R9D, true );
+    mapDwarfRegToLLVMReg(10, SystemZ::R10D, true );
+    mapDwarfRegToLLVMReg(11, SystemZ::R11D, true );
+    mapDwarfRegToLLVMReg(12, SystemZ::R12D, true );
+    mapDwarfRegToLLVMReg(13, SystemZ::R13D, true );
+    mapDwarfRegToLLVMReg(14, SystemZ::R14D, true );
+    mapDwarfRegToLLVMReg(15, SystemZ::R15D, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(SystemZ::F0L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F0S, 16, false );
+    mapLLVMRegToDwarfReg(SystemZ::F1L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F1S, 17, false );
+    mapLLVMRegToDwarfReg(SystemZ::F2L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F2S, 18, false );
+    mapLLVMRegToDwarfReg(SystemZ::F3L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F3S, 19, false );
+    mapLLVMRegToDwarfReg(SystemZ::F4L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F4S, 20, false );
+    mapLLVMRegToDwarfReg(SystemZ::F5L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F5S, 21, false );
+    mapLLVMRegToDwarfReg(SystemZ::F6L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F6S, 22, false );
+    mapLLVMRegToDwarfReg(SystemZ::F7L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F7S, 23, false );
+    mapLLVMRegToDwarfReg(SystemZ::F8L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F8S, 24, false );
+    mapLLVMRegToDwarfReg(SystemZ::F9L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F9S, 25, false );
+    mapLLVMRegToDwarfReg(SystemZ::F10L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F10S, 26, false );
+    mapLLVMRegToDwarfReg(SystemZ::F11L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F11S, 27, false );
+    mapLLVMRegToDwarfReg(SystemZ::F12L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F12S, 28, false );
+    mapLLVMRegToDwarfReg(SystemZ::F13L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F13S, 29, false );
+    mapLLVMRegToDwarfReg(SystemZ::F14L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F14S, 30, false );
+    mapLLVMRegToDwarfReg(SystemZ::F15L, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::F15S, 31, false );
+    mapLLVMRegToDwarfReg(SystemZ::PSW, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R0D, 0, false );
+    mapLLVMRegToDwarfReg(SystemZ::R0P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R0Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R0W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R1D, 1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R1W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R2D, 2, false );
+    mapLLVMRegToDwarfReg(SystemZ::R2P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R2Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R2W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R3D, 3, false );
+    mapLLVMRegToDwarfReg(SystemZ::R3W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R4D, 4, false );
+    mapLLVMRegToDwarfReg(SystemZ::R4P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R4Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R4W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R5D, 5, false );
+    mapLLVMRegToDwarfReg(SystemZ::R5W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R6D, 6, false );
+    mapLLVMRegToDwarfReg(SystemZ::R6P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R6Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R6W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R7D, 7, false );
+    mapLLVMRegToDwarfReg(SystemZ::R7W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R8D, 8, false );
+    mapLLVMRegToDwarfReg(SystemZ::R8P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R8Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R8W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R9D, 9, false );
+    mapLLVMRegToDwarfReg(SystemZ::R9W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R10D, 10, false );
+    mapLLVMRegToDwarfReg(SystemZ::R10P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R10Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R10W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R11D, 11, false );
+    mapLLVMRegToDwarfReg(SystemZ::R11W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R12D, 12, false );
+    mapLLVMRegToDwarfReg(SystemZ::R12P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R12Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R12W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R13D, 13, false );
+    mapLLVMRegToDwarfReg(SystemZ::R13W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R14D, 14, false );
+    mapLLVMRegToDwarfReg(SystemZ::R14P, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R14Q, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R14W, -1, false );
+    mapLLVMRegToDwarfReg(SystemZ::R15D, 15, false );
+    mapLLVMRegToDwarfReg(SystemZ::R15W, -1, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(SystemZ::F0L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F0S, 16, true );
+    mapLLVMRegToDwarfReg(SystemZ::F1L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F1S, 17, true );
+    mapLLVMRegToDwarfReg(SystemZ::F2L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F2S, 18, true );
+    mapLLVMRegToDwarfReg(SystemZ::F3L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F3S, 19, true );
+    mapLLVMRegToDwarfReg(SystemZ::F4L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F4S, 20, true );
+    mapLLVMRegToDwarfReg(SystemZ::F5L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F5S, 21, true );
+    mapLLVMRegToDwarfReg(SystemZ::F6L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F6S, 22, true );
+    mapLLVMRegToDwarfReg(SystemZ::F7L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F7S, 23, true );
+    mapLLVMRegToDwarfReg(SystemZ::F8L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F8S, 24, true );
+    mapLLVMRegToDwarfReg(SystemZ::F9L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F9S, 25, true );
+    mapLLVMRegToDwarfReg(SystemZ::F10L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F10S, 26, true );
+    mapLLVMRegToDwarfReg(SystemZ::F11L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F11S, 27, true );
+    mapLLVMRegToDwarfReg(SystemZ::F12L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F12S, 28, true );
+    mapLLVMRegToDwarfReg(SystemZ::F13L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F13S, 29, true );
+    mapLLVMRegToDwarfReg(SystemZ::F14L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F14S, 30, true );
+    mapLLVMRegToDwarfReg(SystemZ::F15L, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::F15S, 31, true );
+    mapLLVMRegToDwarfReg(SystemZ::PSW, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R0D, 0, true );
+    mapLLVMRegToDwarfReg(SystemZ::R0P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R0Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R0W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R1D, 1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R1W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R2D, 2, true );
+    mapLLVMRegToDwarfReg(SystemZ::R2P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R2Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R2W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R3D, 3, true );
+    mapLLVMRegToDwarfReg(SystemZ::R3W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R4D, 4, true );
+    mapLLVMRegToDwarfReg(SystemZ::R4P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R4Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R4W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R5D, 5, true );
+    mapLLVMRegToDwarfReg(SystemZ::R5W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R6D, 6, true );
+    mapLLVMRegToDwarfReg(SystemZ::R6P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R6Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R6W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R7D, 7, true );
+    mapLLVMRegToDwarfReg(SystemZ::R7W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R8D, 8, true );
+    mapLLVMRegToDwarfReg(SystemZ::R8P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R8Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R8W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R9D, 9, true );
+    mapLLVMRegToDwarfReg(SystemZ::R9W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R10D, 10, true );
+    mapLLVMRegToDwarfReg(SystemZ::R10P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R10Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R10W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R11D, 11, true );
+    mapLLVMRegToDwarfReg(SystemZ::R11W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R12D, 12, true );
+    mapLLVMRegToDwarfReg(SystemZ::R12P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R12Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R12W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R13D, 13, true );
+    mapLLVMRegToDwarfReg(SystemZ::R13W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R14D, 14, true );
+    mapLLVMRegToDwarfReg(SystemZ::R14P, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R14Q, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R14W, -1, true );
+    mapLLVMRegToDwarfReg(SystemZ::R15D, 15, true );
+    mapLLVMRegToDwarfReg(SystemZ::R15W, -1, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

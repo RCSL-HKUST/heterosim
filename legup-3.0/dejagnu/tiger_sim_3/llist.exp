@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd llist
+set test "llist"
+set tigerexpected {Result: 4831}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

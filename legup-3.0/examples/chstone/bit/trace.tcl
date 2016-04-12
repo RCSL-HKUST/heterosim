@@ -1,0 +1,17 @@
+bit_count
+bitcount
+ntbl_bitcount
+BW_btbl_bitcount
+AR_btbl_bitcount
+bit_shifter
+ntbl_bitcnt
+btbl_bitcnt
+llvm_memset_p0i8_i32
+rand
+bitcnt
+printf
+printf
+printf
+printf
+printf
+printf

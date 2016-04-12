@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/jpeg
+set test "jpeg"
+set tigerexpected {Result: 21745}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

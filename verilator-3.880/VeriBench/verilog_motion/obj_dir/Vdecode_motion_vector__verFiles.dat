@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc decode_motion_vector.v -exe sim_main.cpp"
+S   4201395  1059238  1453396387 "/usr/local/bin/verilator_bin"
+S     14365  4033856  1453877614 "decode_motion_vector.v"
+T     21193  4034100  1453878145 "obj_dir/Vdecode_motion_vector.cpp"
+T      4620  4034099  1453878145 "obj_dir/Vdecode_motion_vector.h"
+T      2058  4034102  1453878145 "obj_dir/Vdecode_motion_vector.mk"
+T       649  4034098  1453878145 "obj_dir/Vdecode_motion_vector__Syms.cpp"
+T      1061  4034096  1453878145 "obj_dir/Vdecode_motion_vector__Syms.h"
+T       342  4034103  1453878145 "obj_dir/Vdecode_motion_vector__ver.d"
+T         0        0  1453878145 "obj_dir/Vdecode_motion_vector__verFiles.dat"
+T      1130  4034101  1453878145 "obj_dir/Vdecode_motion_vector_classes.mk"

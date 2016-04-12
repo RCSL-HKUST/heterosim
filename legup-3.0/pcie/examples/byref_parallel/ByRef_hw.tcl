@@ -1,0 +1,61 @@
+package require -exact sopc 11.0
+
+set_module_property NAME ByRef
+set_module_property VERSION 1.0
+set_module_property INTERNAL false
+set_module_property GROUP ""
+set_module_property DISPLAY_NAME ByRef
+set_module_property TOP_LEVEL_HDL_FILE functions.v
+set_module_property TOP_LEVEL_HDL_MODULE ByRef_top
+set_module_property INSTANTIATE_IN_SYSTEM_MODULE true
+set_module_property EDITABLE true
+set_module_property ANALYZE_HDL TRUE
+
+add_file functions.v {SYNTHESIS SIMULATION}
+
+add_interface clockreset clock end
+set_interface_property clockreset ENABLED true
+add_interface_port clockreset csi_clockreset_clk clk Input 1
+add_interface_port clockreset csi_clockreset_reset reset Input 1
+
+add_interface s1 avalon end
+set_interface_property s1 addressAlignment DYNAMIC
+set_interface_property s1 associatedClock clockreset
+set_interface_property s1 burstOnBurstBoundariesOnly false
+set_interface_property s1 explicitAddressSpan 0
+set_interface_property s1 holdTime 0
+set_interface_property s1 isMemoryDevice false
+set_interface_property s1 isNonVolatileStorage false
+set_interface_property s1 linewrapBursts false
+set_interface_property s1 maximumPendingReadTransactions 0
+set_interface_property s1 printableDevice false
+set_interface_property s1 readLatency 0
+set_interface_property s1 readWaitTime 1
+set_interface_property s1 setupTime 0
+set_interface_property s1 timingUnits Cycles
+set_interface_property s1 writeWaitTime 0
+
+set_interface_property s1 ASSOCIATED_CLOCK clockreset
+set_interface_property s1 ENABLED true
+
+add_interface_port s1 avs_s1_address address Input 3
+add_interface_port s1 avs_s1_read read Input 1
+add_interface_port s1 avs_s1_write write Input 1
+add_interface_port s1 avs_s1_writedata writedata Input 32
+add_interface_port s1 avs_s1_readdata readdata Output 32
+add_interface ACCEL avalon start
+set_interface_property ACCEL associatedClock clockreset
+set_interface_property ACCEL burstOnBurstBoundariesOnly false
+set_interface_property ACCEL doStreamReads false
+set_interface_property ACCEL doStreamWrites false
+set_interface_property ACCEL linewrapBursts false
+
+set_interface_property ACCEL ASSOCIATED_CLOCK clockreset
+set_interface_property ACCEL ENABLED true
+add_interface_port ACCEL avm_ACCEL_readdata readdata Input 128
+add_interface_port ACCEL avm_ACCEL_waitrequest waitrequest Input 1
+add_interface_port ACCEL avm_ACCEL_address address Output 32
+add_interface_port ACCEL avm_ACCEL_writedata writedata Output 128
+add_interface_port ACCEL avm_ACCEL_write write Output 1
+add_interface_port ACCEL avm_ACCEL_read read Output 1
+

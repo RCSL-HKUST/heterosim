@@ -1,0 +1,2556 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Subtarget Enumeration Source Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_SUBTARGETINFO_ENUM
+#undef GET_SUBTARGETINFO_ENUM
+namespace llvm {
+namespace ARM {
+enum {
+  FeatureAvoidPartialCPSR =  1ULL << 0,
+  FeatureD16 =  1ULL << 1,
+  FeatureDB =  1ULL << 2,
+  FeatureDSPThumb2 =  1ULL << 3,
+  FeatureFP16 =  1ULL << 4,
+  FeatureHWDiv =  1ULL << 5,
+  FeatureHasSlowFPVMLx =  1ULL << 6,
+  FeatureMP =  1ULL << 7,
+  FeatureNEON =  1ULL << 8,
+  FeatureNEONForFP =  1ULL << 9,
+  FeatureNoARM =  1ULL << 10,
+  FeaturePref32BitThumb =  1ULL << 11,
+  FeatureSlowFPBrcc =  1ULL << 12,
+  FeatureT2XtPk =  1ULL << 13,
+  FeatureThumb2 =  1ULL << 14,
+  FeatureVFP2 =  1ULL << 15,
+  FeatureVFP3 =  1ULL << 16,
+  FeatureVFPOnlySP =  1ULL << 17,
+  FeatureVMLxForwarding =  1ULL << 18,
+  HasV4TOps =  1ULL << 19,
+  HasV5TEOps =  1ULL << 20,
+  HasV5TOps =  1ULL << 21,
+  HasV6Ops =  1ULL << 22,
+  HasV6T2Ops =  1ULL << 23,
+  HasV7Ops =  1ULL << 24,
+  ModeThumb =  1ULL << 25,
+  ProcA8 =  1ULL << 26,
+  ProcA9 =  1ULL << 27
+};
+}
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_ENUM
+
+
+#ifdef GET_SUBTARGETINFO_MC_DESC
+#undef GET_SUBTARGETINFO_MC_DESC
+namespace llvm {
+// Sorted (by key) array of values for CPU features.
+llvm::SubtargetFeatureKV ARMFeatureKV[] = {
+  { "32bit", "Prefer 32-bit Thumb instrs", ARM::FeaturePref32BitThumb, 0ULL },
+  { "a8", "Cortex-A8 ARM processors", ARM::ProcA8, ARM::FeatureSlowFPBrcc | ARM::FeatureNEONForFP | ARM::FeatureHasSlowFPVMLx | ARM::FeatureVMLxForwarding | ARM::FeatureT2XtPk },
+  { "a9", "Cortex-A9 ARM processors", ARM::ProcA9, ARM::FeatureVMLxForwarding | ARM::FeatureT2XtPk | ARM::FeatureFP16 | ARM::FeatureAvoidPartialCPSR },
+  { "avoid-partial-cpsr", "Avoid CPSR partial update for OOO execution", ARM::FeatureAvoidPartialCPSR, 0ULL },
+  { "d16", "Restrict VFP3 to 16 double registers", ARM::FeatureD16, 0ULL },
+  { "db", "Has data barrier (dmb / dsb) instructions", ARM::FeatureDB, 0ULL },
+  { "fp-only-sp", "Floating point unit supports single precision only", ARM::FeatureVFPOnlySP, 0ULL },
+  { "fp16", "Enable half-precision floating point", ARM::FeatureFP16, 0ULL },
+  { "hwdiv", "Enable divide instructions", ARM::FeatureHWDiv, 0ULL },
+  { "mp", "Supports Multiprocessing extension", ARM::FeatureMP, 0ULL },
+  { "neon", "Enable NEON instructions", ARM::FeatureNEON, ARM::FeatureVFP3 },
+  { "neonfp", "Use NEON for single precision FP", ARM::FeatureNEONForFP, 0ULL },
+  { "noarm", "Does not support ARM mode execution", ARM::FeatureNoARM, 0ULL },
+  { "slow-fp-brcc", "FP compare + branch is slow", ARM::FeatureSlowFPBrcc, 0ULL },
+  { "slowfpvmlx", "Disable VFP / NEON MAC instructions", ARM::FeatureHasSlowFPVMLx, 0ULL },
+  { "t2dsp", "Supports v7 DSP instructions in Thumb2.", ARM::FeatureDSPThumb2, 0ULL },
+  { "t2xtpk", "Enable Thumb2 extract and pack instructions", ARM::FeatureT2XtPk, 0ULL },
+  { "thumb-mode", "Thumb mode", ARM::ModeThumb, 0ULL },
+  { "thumb2", "Enable Thumb2 instructions", ARM::FeatureThumb2, 0ULL },
+  { "v4t", "Support ARM v4T instructions", ARM::HasV4TOps, 0ULL },
+  { "v5t", "Support ARM v5T instructions", ARM::HasV5TOps, ARM::HasV4TOps },
+  { "v5te", "Support ARM v5TE, v5TEj, and v5TExp instructions", ARM::HasV5TEOps, ARM::HasV5TOps },
+  { "v6", "Support ARM v6 instructions", ARM::HasV6Ops, ARM::HasV5TEOps },
+  { "v6t2", "Support ARM v6t2 instructions", ARM::HasV6T2Ops, ARM::HasV6Ops | ARM::FeatureThumb2 | ARM::FeatureDSPThumb2 },
+  { "v7", "Support ARM v7 instructions", ARM::HasV7Ops, ARM::HasV6T2Ops },
+  { "vfp2", "Enable VFP2 instructions", ARM::FeatureVFP2, 0ULL },
+  { "vfp3", "Enable VFP3 instructions", ARM::FeatureVFP3, ARM::FeatureVFP2 },
+  { "vmlx-forwarding", "Has multiplier accumulator forwarding", ARM::FeatureVMLxForwarding, 0ULL }
+};
+
+// Sorted (by key) array of values for CPU subtype.
+llvm::SubtargetFeatureKV ARMSubTypeKV[] = {
+  { "arm1020e", "Select the arm1020e processor", ARM::HasV5TEOps, 0ULL },
+  { "arm1020t", "Select the arm1020t processor", ARM::HasV5TOps, 0ULL },
+  { "arm1022e", "Select the arm1022e processor", ARM::HasV5TEOps, 0ULL },
+  { "arm10e", "Select the arm10e processor", ARM::HasV5TEOps, 0ULL },
+  { "arm10tdmi", "Select the arm10tdmi processor", ARM::HasV5TOps, 0ULL },
+  { "arm1136j-s", "Select the arm1136j-s processor", ARM::HasV6Ops, 0ULL },
+  { "arm1136jf-s", "Select the arm1136jf-s processor", ARM::HasV6Ops | ARM::FeatureVFP2 | ARM::FeatureHasSlowFPVMLx, 0ULL },
+  { "arm1156t2-s", "Select the arm1156t2-s processor", ARM::HasV6T2Ops, 0ULL },
+  { "arm1156t2f-s", "Select the arm1156t2f-s processor", ARM::HasV6T2Ops | ARM::FeatureVFP2 | ARM::FeatureHasSlowFPVMLx, 0ULL },
+  { "arm1176jz-s", "Select the arm1176jz-s processor", ARM::HasV6Ops, 0ULL },
+  { "arm1176jzf-s", "Select the arm1176jzf-s processor", ARM::HasV6Ops | ARM::FeatureVFP2 | ARM::FeatureHasSlowFPVMLx, 0ULL },
+  { "arm710t", "Select the arm710t processor", ARM::HasV4TOps, 0ULL },
+  { "arm720t", "Select the arm720t processor", ARM::HasV4TOps, 0ULL },
+  { "arm7tdmi", "Select the arm7tdmi processor", ARM::HasV4TOps, 0ULL },
+  { "arm7tdmi-s", "Select the arm7tdmi-s processor", ARM::HasV4TOps, 0ULL },
+  { "arm8", "Select the arm8 processor", 0ULL, 0ULL },
+  { "arm810", "Select the arm810 processor", 0ULL, 0ULL },
+  { "arm9", "Select the arm9 processor", ARM::HasV4TOps, 0ULL },
+  { "arm920", "Select the arm920 processor", ARM::HasV4TOps, 0ULL },
+  { "arm920t", "Select the arm920t processor", ARM::HasV4TOps, 0ULL },
+  { "arm922t", "Select the arm922t processor", ARM::HasV4TOps, 0ULL },
+  { "arm926ej-s", "Select the arm926ej-s processor", ARM::HasV5TEOps, 0ULL },
+  { "arm940t", "Select the arm940t processor", ARM::HasV4TOps, 0ULL },
+  { "arm946e-s", "Select the arm946e-s processor", ARM::HasV5TEOps, 0ULL },
+  { "arm966e-s", "Select the arm966e-s processor", ARM::HasV5TEOps, 0ULL },
+  { "arm968e-s", "Select the arm968e-s processor", ARM::HasV5TEOps, 0ULL },
+  { "arm9e", "Select the arm9e processor", ARM::HasV5TEOps, 0ULL },
+  { "arm9tdmi", "Select the arm9tdmi processor", ARM::HasV4TOps, 0ULL },
+  { "cortex-a8", "Select the cortex-a8 processor", ARM::ProcA8 | ARM::HasV7Ops | ARM::FeatureNEON | ARM::FeatureDB | ARM::FeatureDSPThumb2, 0ULL },
+  { "cortex-a9", "Select the cortex-a9 processor", ARM::ProcA9 | ARM::HasV7Ops | ARM::FeatureNEON | ARM::FeatureDB | ARM::FeatureDSPThumb2, 0ULL },
+  { "cortex-a9-mp", "Select the cortex-a9-mp processor", ARM::ProcA9 | ARM::HasV7Ops | ARM::FeatureNEON | ARM::FeatureDB | ARM::FeatureDSPThumb2 | ARM::FeatureMP, 0ULL },
+  { "cortex-m0", "Select the cortex-m0 processor", ARM::HasV6Ops | ARM::FeatureNoARM | ARM::FeatureDB, 0ULL },
+  { "cortex-m3", "Select the cortex-m3 processor", ARM::HasV7Ops | ARM::FeatureThumb2 | ARM::FeatureNoARM | ARM::FeatureDB | ARM::FeatureHWDiv, 0ULL },
+  { "cortex-m4", "Select the cortex-m4 processor", ARM::HasV7Ops | ARM::FeatureThumb2 | ARM::FeatureNoARM | ARM::FeatureDB | ARM::FeatureHWDiv | ARM::FeatureDSPThumb2 | ARM::FeatureT2XtPk | ARM::FeatureVFP2 | ARM::FeatureVFPOnlySP, 0ULL },
+  { "ep9312", "Select the ep9312 processor", ARM::HasV4TOps, 0ULL },
+  { "generic", "Select the generic processor", 0ULL, 0ULL },
+  { "iwmmxt", "Select the iwmmxt processor", ARM::HasV5TEOps, 0ULL },
+  { "mpcore", "Select the mpcore processor", ARM::HasV6Ops | ARM::FeatureVFP2 | ARM::FeatureHasSlowFPVMLx, 0ULL },
+  { "mpcorenovfp", "Select the mpcorenovfp processor", ARM::HasV6Ops, 0ULL },
+  { "strongarm", "Select the strongarm processor", 0ULL, 0ULL },
+  { "strongarm110", "Select the strongarm110 processor", 0ULL, 0ULL },
+  { "strongarm1100", "Select the strongarm1100 processor", 0ULL, 0ULL },
+  { "strongarm1110", "Select the strongarm1110 processor", 0ULL, 0ULL },
+  { "xscale", "Select the xscale processor", ARM::HasV5TEOps, 0ULL }
+};
+
+
+// Functional units for itineraries "ARMV6Itineraries"
+namespace ARMV6ItinerariesFU {
+  const unsigned V6_Pipe = 1 << 0;
+}
+
+// Functional units for itineraries "CortexA8Itineraries"
+namespace CortexA8ItinerariesFU {
+  const unsigned A8_Pipe0 = 1 << 0;
+  const unsigned A8_Pipe1 = 1 << 1;
+  const unsigned A8_LSPipe = 1 << 2;
+  const unsigned A8_NPipe = 1 << 3;
+  const unsigned A8_NLSPipe = 1 << 4;
+}
+
+// Functional units for itineraries "CortexA9Itineraries"
+namespace CortexA9ItinerariesFU {
+  const unsigned A9_Issue0 = 1 << 0;
+  const unsigned A9_Issue1 = 1 << 1;
+  const unsigned A9_Branch = 1 << 2;
+  const unsigned A9_ALU0 = 1 << 3;
+  const unsigned A9_ALU1 = 1 << 4;
+  const unsigned A9_AGU = 1 << 5;
+  const unsigned A9_NPipe = 1 << 6;
+  const unsigned A9_MUX0 = 1 << 7;
+  const unsigned A9_LSUnit = 1 << 8;
+  const unsigned A9_DRegsVFP = 1 << 9;
+  const unsigned A9_DRegsN = 1 << 10;
+}
+
+// Pipeline forwarding pathes for itineraries "CortexA9Itineraries"
+namespace CortexA9ItinerariesBypass {
+  unsigned NoBypass = 0;
+  unsigned A9_LdBypass = 1 << 0;
+}
+
+llvm::InstrStage ARMStages[] = {
+  { 0, 0, 0, llvm::InstrStage::Required }, // No itinerary
+  { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 1
+  { 2, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 2
+  { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 3-4
+  { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 5-7
+  { 3, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 8
+  { 3, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 9-10
+  { 15, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 11
+  { 29, ARMV6ItinerariesFU::V6_Pipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 12
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 13
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 14-15
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 16-18
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 19-21
+  { 1, CortexA8ItinerariesFU::A8_Pipe0, -1, (llvm::InstrStage::ReservationKinds)0 }, // 22
+  { 2, CortexA8ItinerariesFU::A8_Pipe0, -1, (llvm::InstrStage::ReservationKinds)0 }, // 23
+  { 3, CortexA8ItinerariesFU::A8_Pipe0, -1, (llvm::InstrStage::ReservationKinds)0 }, // 24
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 25-26
+  { 2, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 27-28
+  { 2, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 29-30
+  { 2, CortexA8ItinerariesFU::A8_Pipe0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 31-32
+  { 3, CortexA8ItinerariesFU::A8_Pipe0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 33-34
+  { 3, CortexA8ItinerariesFU::A8_Pipe0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 35-37
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 38-40
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 41-42
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 43-44
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 4, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 4, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 45-47
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 7, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 7, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 48-50
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 5, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 5, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 51-53
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 8, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 8, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 54-56
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 57-59
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 11, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 11, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 60-62
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 19, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 19, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 63-65
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 20, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 20, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 66-68
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 29, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 29, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 69-71
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 72-74
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 75-79
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 80-82
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 83-85
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 86-88
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 89-91
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 4, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 4, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 92-94
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 5, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 5, CortexA8ItinerariesFU::A8_LSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 95-97
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 98-99
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 100-101
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_NLSPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 102-105
+  { 1, CortexA8ItinerariesFU::A8_Pipe0 | CortexA8ItinerariesFU::A8_Pipe1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA8ItinerariesFU::A8_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA8ItinerariesFU::A8_NLSPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA8ItinerariesFU::A8_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 106-109
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 110-111
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 112-113
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 114-116
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 117-120
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_AGU, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 121-126
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 127-128
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 129-132
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_ALU0, -1, (llvm::InstrStage::ReservationKinds)0 }, // 133-134
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_ALU0, -1, (llvm::InstrStage::ReservationKinds)0 }, // 135-136
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_AGU, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 137-140
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_AGU, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 141-144
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_AGU, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, 0, (llvm::InstrStage::ReservationKinds)0 }, // 145-148
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_AGU, 1, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 149-152
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_AGU, 1, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_Branch, -1, (llvm::InstrStage::ReservationKinds)0 }, // 153-157
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_AGU, 1, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_Branch, -1, (llvm::InstrStage::ReservationKinds)0 }, // 158-162
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_AGU, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_ALU0 | CortexA9ItinerariesFU::A9_ALU1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 163-167
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_AGU, 1, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 168-171
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_AGU, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 172-175
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, -1, (llvm::InstrStage::ReservationKinds)0 }, // 176
+  { 1, CortexA9ItinerariesFU::A9_Issue0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_Branch, -1, (llvm::InstrStage::ReservationKinds)0 }, // 177-179
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 180-184
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 185-189
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 5, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 190-194
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 6, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 195-199
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 7, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 200-204
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 205-209
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 10, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 210-214
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 16, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 10, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 215-219
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 26, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 20, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 220-224
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 18, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 13, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 225-229
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 33, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 28, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 230-234
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 }, // 235-236
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 237-242
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 243-248
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 7, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 249-254
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 8, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 255-260
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 3, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 261-266
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 11, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 5, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 5, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 267-272
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 10, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 4, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 4, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 273-278
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 279-284
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 285-290
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 3, CortexA9ItinerariesFU::A9_NPipe, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_LSUnit, -1, (llvm::InstrStage::ReservationKinds)0 }, // 291-296
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 7, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 297-301
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 8, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 302-306
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 7, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 307-311
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 10, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 4, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 312-316
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 317-321
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 3, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 322-326
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 4, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 327-331
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 8, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 332-336
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 11, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 1, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 337-341
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 12, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 342-346
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 3, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 347-351
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 8, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 352-356
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 2, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 3, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 357-361
+  { 1, CortexA9ItinerariesFU::A9_Issue0 | CortexA9ItinerariesFU::A9_Issue1, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_MUX0, 0, (llvm::InstrStage::ReservationKinds)0 },   { 1, CortexA9ItinerariesFU::A9_DRegsN, 0, (llvm::InstrStage::ReservationKinds)0 },   { 9, CortexA9ItinerariesFU::A9_DRegsVFP, 0, (llvm::InstrStage::ReservationKinds)1 },   { 2, CortexA9ItinerariesFU::A9_NPipe, -1, (llvm::InstrStage::ReservationKinds)0 }, // 362-366
+  { 0, 0, 0, llvm::InstrStage::Required } // End itinerary
+};
+unsigned ARMOperandCycles[] = {
+  0, // No itinerary
+  2,   2, // 1-2
+  2,   2,   2, // 3-5
+  2,   2,   1, // 6-8
+  3,   3,   2,   1, // 9-12
+  2,   2, // 13-14
+  2,   2,   2, // 15-17
+  2,   2,   1, // 18-20
+  3,   3,   2,   1, // 21-24
+  2,   2, // 25-26
+  2,   1, // 27-28
+  1,   1, // 29-30
+  2,   2,   1, // 31-33
+  3,   3,   2,   1, // 34-37
+  2, // 38
+  2,   2, // 39-40
+  2,   1, // 41-42
+  3,   2,   1, // 43-45
+  2, // 46
+  2,   2, // 47-48
+  2,   1, // 49-50
+  3,   2,   1, // 51-53
+  2, // 54
+  2,   2, // 55-56
+  2,   1, // 57-58
+  3,   2,   1, // 59-61
+  2, // 62
+  3, // 63
+  5, // 64
+  3, // 65
+  3,   2, // 66-67
+  3,   1, // 68-69
+  4,   2,   1, // 70-72
+  4, // 73
+  2, // 74
+  2,   2, // 75-76
+  2,   1, // 77-78
+  3,   2,   1, // 79-81
+  4,   1,   1, // 82-84
+  4,   1,   1,   2, // 85-88
+  5,   1,   1, // 89-91
+  5,   1,   1,   2, // 92-95
+  6,   1,   1, // 96-98
+  6,   1,   1,   2, // 99-102
+  4,   1, // 103-104
+  4,   1, // 105-106
+  4,   1, // 107-108
+  4,   1,   1, // 109-111
+  4,   1,   1, // 112-114
+  4,   1,   1, // 115-117
+  5,   2,   1, // 118-120
+  5,   2,   1, // 121-123
+  4,   2,   1, // 124-126
+  4,   2,   1, // 127-129
+  4,   2,   1,   1, // 130-133
+  4,   2,   1,   1, // 134-137
+  4,   2,   1,   1, // 138-141
+  5,   2,   2,   1, // 142-145
+  5,   2,   2,   1, // 146-149
+  1,   1,   1,   1,   4, // 150-154
+  2,   1,   1,   1,   4, // 155-159
+  1,   2,   1,   1,   4, // 160-164
+  3,   1, // 165-166
+  1,   1,   4, // 167-169
+  1,   2,   4, // 170-172
+  2,   1, // 173-174
+  2,   1, // 175-176
+  2,   1, // 177-178
+  2,   1,   1, // 179-181
+  2,   1,   1, // 182-184
+  2,   1,   1, // 185-187
+  2,   2,   1, // 188-190
+  2,   2,   1, // 191-193
+  2,   2,   1, // 194-196
+  2,   2,   1, // 197-199
+  2,   2,   1,   1, // 200-203
+  2,   2,   1,   1, // 204-207
+  2,   2,   1,   1, // 208-211
+  2,   2,   2,   1, // 212-215
+  2,   2,   2,   1, // 216-219
+  2, // 220
+  3, // 221
+  5,   2, // 222-223
+  5,   2, // 224-225
+  2,   2, // 226-227
+  2,   2, // 228-229
+  5,   2, // 230-231
+  5,   2, // 232-233
+  9,   2, // 234-235
+  9,   2, // 236-237
+  9,   2, // 238-239
+  9,   2, // 240-241
+  9,   2,   2, // 242-244
+  9,   2,   2, // 245-247
+  9,   2,   2, // 248-250
+  9,   2,   2, // 251-253
+  9,   2,   2,   2, // 254-257
+  9,   2,   2,   2, // 258-261
+  20,   2,   2, // 262-264
+  34,   2,   2, // 265-267
+  20,   2,   2, // 268-270
+  34,   2,   2, // 271-273
+  10,   1, // 274-275
+  10,   1,   1, // 276-278
+  10,   1, // 279-280
+  10,   10,   1, // 281-283
+  5,   2,   2, // 284-286
+  5,   2,   2, // 287-289
+  2,   1,   1,   5, // 290-293
+  3,   2,   1,   1,   5, // 294-298
+  2,   2,   2, // 299-301
+  2,   2,   2, // 302-304
+  2,   2,   2,   2, // 305-308
+  3,   2,   2,   2,   2, // 309-313
+  2,   2, // 314-315
+  2,   2,   2, // 316-318
+  2,   2,   1, // 319-321
+  2,   1,   2, // 322-324
+  2,   2,   1,   1, // 325-328
+  2,   2, // 329-330
+  2,   2,   2, // 331-333
+  2,   2,   1, // 334-336
+  2,   2,   1,   1, // 337-340
+  2,   2, // 341-342
+  2,   1, // 343-344
+  1,   1, // 345-346
+  2,   2,   1, // 347-349
+  2,   2,   1,   1, // 350-353
+  2, // 354
+  2,   2, // 355-356
+  2,   1, // 357-358
+  2,   1,   1, // 359-361
+  2, // 362
+  2,   2, // 363-364
+  2,   1, // 365-366
+  2,   1,   1, // 367-369
+  1, // 370
+  1,   1, // 371-372
+  1,   1, // 373-374
+  1,   1,   1, // 375-377
+  2, // 378
+  3, // 379
+  5, // 380
+  2, // 381
+  2,   1, // 382-383
+  2,   1, // 384-385
+  2,   1,   1, // 386-388
+  3,   1, // 389-390
+  1, // 391
+  1,   1, // 392-393
+  1,   1, // 394-395
+  1,   1,   1, // 396-398
+  5,   1,   1, // 399-401
+  6,   1,   1,   4, // 402-405
+  6,   1,   1, // 406-408
+  6,   1,   1,   4, // 409-412
+  6,   6,   1,   1, // 413-416
+  6,   6,   1,   1, // 417-420
+  3,   1, // 421-422
+  3,   1, // 423-424
+  3,   1, // 425-426
+  3,   1,   1, // 427-429
+  3,   1,   1, // 430-432
+  3,   1,   1, // 433-435
+  4,   1,   1, // 436-438
+  4,   1,   1, // 439-441
+  3,   2,   1, // 442-444
+  3,   2,   1, // 445-447
+  3,   2,   1,   1, // 448-451
+  3,   2,   1,   1, // 452-455
+  3,   2,   1,   1, // 456-459
+  4,   3,   1,   1, // 460-463
+  4,   3,   1,   1, // 464-467
+  1,   1,   1,   1,   3, // 468-472
+  2,   1,   1,   1,   3, // 473-477
+  1,   2,   1,   1,   3, // 478-482
+  1,   1,   3, // 483-485
+  1,   1,   3, // 486-488
+  4,   1, // 489-490
+  3,   1, // 491-492
+  3,   1, // 493-494
+  3,   1, // 495-496
+  3,   1,   1, // 497-499
+  3,   1,   1, // 500-502
+  3,   1,   1, // 503-505
+  3,   1,   1, // 506-508
+  3,   1,   1, // 509-511
+  2,   3,   1, // 512-514
+  2,   3,   1, // 515-517
+  2,   3,   1,   1, // 518-521
+  2,   3,   1,   1, // 522-525
+  2,   3,   1,   1, // 526-529
+  3,   3,   1,   1, // 530-533
+  3,   3,   1,   1, // 534-537
+  2, // 538
+  2,   2, // 539-540
+  20, // 541
+  7,   1, // 542-543
+  4,   1, // 544-545
+  1,   1, // 546-547
+  4,   1, // 548-549
+  7,   1, // 550-551
+  5,   1, // 552-553
+  7,   1, // 554-555
+  8,   1, // 556-557
+  7,   1, // 558-559
+  8,   1, // 560-561
+  7,   1,   1, // 562-564
+  9,   1,   1, // 565-567
+  7,   1,   1, // 568-570
+  11,   1,   1, // 571-573
+  7,   2,   1,   1, // 574-577
+  19,   2,   1,   1, // 578-581
+  20,   1,   1, // 582-584
+  29,   1,   1, // 585-587
+  19,   1, // 588-589
+  29,   1, // 590-591
+  2,   1, // 592-593
+  2,   1,   1, // 594-596
+  20,   1, // 597-598
+  20,   20,   1, // 599-601
+  2,   1, // 602-603
+  2,   1, // 604-605
+  1,   1,   1,   2, // 606-609
+  2,   1,   1,   1,   2, // 610-614
+  1,   1, // 615-616
+  1,   1, // 617-618
+  1,   1,   1,   1, // 619-622
+  2,   1,   1,   1,   1, // 623-627
+  2,   1, // 628-629
+  2,   2,   1, // 630-632
+  2,   2,   3,   1, // 633-636
+  2,   2,   3,   3,   1, // 637-641
+  2,   2,   1, // 642-644
+  2,   2,   2,   1, // 645-648
+  2,   2,   3,   2,   1, // 649-653
+  2,   2,   3,   3,   2,   1, // 654-659
+  3,   1,   1,   1, // 660-663
+  3,   2,   1,   1,   1,   1, // 664-669
+  2,   1, // 670-671
+  2,   2,   1,   1, // 672-675
+  2,   2,   1, // 676-678
+  2,   2,   3,   3,   1, // 679-683
+  3,   3,   1,   1,   1,   1, // 684-689
+  2,   2,   2,   1,   1,   1, // 690-695
+  2,   2,   3,   3,   2,   1, // 696-701
+  3,   3,   2,   1,   1,   1,   1,   1, // 702-709
+  2,   2,   1, // 710-712
+  2,   2,   2,   1,   1, // 713-717
+  3,   3,   4,   1, // 718-721
+  4,   4,   5,   1,   1,   1,   1,   2, // 722-729
+  3,   3,   4,   2,   1, // 730-734
+  4,   4,   5,   2,   1,   1,   1,   1,   1,   2, // 735-744
+  2,   2,   3,   1, // 745-748
+  2,   2,   3,   2,   1,   1, // 749-754
+  3,   3,   4,   4,   1, // 755-759
+  4,   4,   5,   5,   1,   1,   1,   1,   2,   2, // 760-769
+  3,   3,   4,   4,   2,   1, // 770-775
+  4,   4,   5,   5,   2,   1,   1,   1,   1,   1,   2,   2, // 776-787
+  2,   2,   3,   3,   1, // 788-792
+  2,   2,   3,   3,   2,   1,   1, // 793-799
+  1,   1,   1, // 800-802
+  1,   1,   1,   1, // 803-806
+  1,   1,   1,   1,   2, // 807-811
+  1,   1,   1,   1,   2,   2, // 812-817
+  2,   1,   1,   1,   1, // 818-822
+  2,   1,   1,   1,   1,   1, // 823-828
+  2,   1,   1,   1,   1,   1,   2, // 829-835
+  2,   1,   1,   1,   1,   1,   2,   2, // 836-843
+  1,   1,   1, // 844-846
+  2,   1,   1,   1,   1, // 847-851
+  1,   1,   1,   1, // 852-855
+  1,   1,   1,   1,   2,   2, // 856-861
+  2,   1,   1,   1,   1,   1, // 862-867
+  2,   1,   1,   1,   1,   1,   2,   2, // 868-875
+  1,   1,   1,   1, // 876-879
+  2,   1,   1,   1,   1,   1, // 880-885
+  1,   1,   1,   1,   2, // 886-890
+  2,   1,   1,   1,   1,   1,   2, // 891-897
+  1,   1,   1,   1,   2, // 898-902
+  2,   1,   1,   1,   1,   1,   2, // 903-909
+  1,   1,   1,   1,   2,   2, // 910-915
+  2,   1,   1,   1,   1,   1,   2,   2, // 916-923
+  1,   1,   1,   1,   2,   2, // 924-929
+  2,   1,   1,   1,   1,   1,   2,   2, // 930-937
+  5,   2, // 938-939
+  6,   2, // 940-941
+  5,   2,   2, // 942-944
+  5,   2,   2, // 945-947
+  5,   2,   1, // 948-950
+  6,   2,   2, // 951-953
+  6,   2,   1, // 954-956
+  1,   1, // 957-958
+  3, // 959
+  2,   1, // 960-961
+  3,   1, // 962-963
+  2,   1, // 964-965
+  2,   1,   1, // 966-968
+  20,   1, // 969-970
+  20,   20,   1, // 971-973
+  3,   1,   1, // 974-976
+  2,   1, // 977-978
+  2,   2,   1,   1, // 979-982
+  3,   3,   1,   1, // 983-986
+  4,   4,   1,   1, // 987-990
+  9,   3,   2,   2, // 991-994
+  10,   3,   2,   2, // 995-998
+  9,   2,   2, // 999-1001
+  10,   2,   2, // 1002-1004
+  3,   2,   2, // 1005-1007
+  4,   2,   2, // 1008-1010
+  4,   2, // 1011-1012
+  4,   2, // 1013-1014
+  4,   1, // 1015-1016
+  4,   1, // 1017-1018
+  3,   2,   2, // 1019-1021
+  3,   2,   2, // 1022-1024
+  4,   2,   1, // 1025-1027
+  4,   2,   1, // 1028-1030
+  3,   2,   1, // 1031-1033
+  3,   2,   1, // 1034-1036
+  4,   2,   1, // 1037-1039
+  4,   2,   1, // 1040-1042
+  3,   1,   1, // 1043-1045
+  4,   1,   1, // 1046-1048
+  4,   1,   1, // 1049-1051
+  5,   1,   1, // 1052-1054
+  6,   3,   1, // 1055-1057
+  7,   3,   1, // 1058-1060
+  6,   3,   2,   1, // 1061-1064
+  6,   3,   2,   1, // 1065-1068
+  6,   2,   2, // 1069-1071
+  7,   2,   1, // 1072-1074
+  7,   2,   2, // 1075-1077
+  9,   2,   1, // 1078-1080
+  6,   3,   2,   2, // 1081-1084
+  7,   3,   2,   1, // 1085-1088
+  7,   3,   2,   2, // 1089-1092
+  9,   3,   2,   1, // 1093-1096
+  2,   1,   1, // 1097-1099
+  3,   1,   1, // 1100-1102
+  3,   2,   1, // 1103-1105
+  3,   2,   2,   1, // 1106-1109
+  4,   2,   2,   3,   1, // 1110-1114
+  4,   2,   2,   3,   3,   1, // 1115-1120
+  3,   1,   2,   1, // 1121-1124
+  3,   1,   2,   2,   1, // 1125-1129
+  4,   1,   2,   2,   3,   1, // 1130-1135
+  4,   1,   2,   2,   3,   3,   1, // 1136-1142
+  1, // 1143
+  1,   1, // 1144-1145
+  1,   1, // 1146-1147
+  2,   1,   1, // 1148-1150
+  2, // 1151
+  3, // 1152
+  5, // 1153
+  1, // 1154
+  1,   1, // 1155-1156
+  2,   1, // 1157-1158
+  3,   1,   1, // 1159-1161
+  1,   1, // 1162-1163
+  1,   1,   1, // 1164-1166
+  2,   1,   1, // 1167-1169
+  2,   1,   1, // 1170-1172
+  3,   1,   1,   1, // 1173-1176
+  1,   1, // 1177-1178
+  1,   1,   1, // 1179-1181
+  2,   1,   1, // 1182-1184
+  3,   1,   1,   1, // 1185-1188
+  1,   1, // 1189-1190
+  2,   1, // 1191-1192
+  2,   1, // 1193-1194
+  3,   1,   1, // 1195-1197
+  3,   1,   1,   1, // 1198-1201
+  1, // 1202
+  1,   1, // 1203-1204
+  1,   1, // 1205-1206
+  1,   1,   1, // 1207-1209
+  1, // 1210
+  1,   1, // 1211-1212
+  1,   1, // 1213-1214
+  1,   1,   1, // 1215-1217
+  1, // 1218
+  1,   1, // 1219-1220
+  1,   1, // 1221-1222
+  2,   1,   1, // 1223-1225
+  2, // 1226
+  3,   1,   1, // 1227-1229
+  3,   1,   1,   1, // 1230-1233
+  4,   1,   1, // 1234-1236
+  4,   1,   1,   1, // 1237-1240
+  4,   5,   1,   1, // 1241-1244
+  4,   5,   1,   1, // 1245-1248
+  3,   1, // 1249-1250
+  4,   1, // 1251-1252
+  3,   3,   1, // 1253-1255
+  3,   1,   1, // 1256-1258
+  4,   1,   1, // 1259-1261
+  3,   3,   1,   1, // 1262-1265
+  4,   1,   1, // 1266-1268
+  5,   1,   1, // 1269-1271
+  3,   2,   1, // 1272-1274
+  4,   3,   1, // 1275-1277
+  3,   2,   1,   1, // 1278-1281
+  4,   3,   1,   1, // 1282-1285
+  3,   3,   1,   1, // 1286-1289
+  4,   3,   1,   1, // 1290-1293
+  5,   4,   1,   1, // 1294-1297
+  1,   1,   1,   1,   3, // 1298-1302
+  2,   1,   1,   1,   3, // 1303-1307
+  1,   2,   1,   1,   3, // 1308-1312
+  1,   1,   3, // 1313-1315
+  1,   1,   3, // 1316-1318
+  2,   1, // 1319-1320
+  1,   1, // 1321-1322
+  1,   1, // 1323-1324
+  1,   1, // 1325-1326
+  1,   1,   1, // 1327-1329
+  1,   1,   1, // 1330-1332
+  1,   1,   1, // 1333-1335
+  1,   1,   1, // 1336-1338
+  1,   1,   1, // 1339-1341
+  2,   1,   1, // 1342-1344
+  3,   1,   1, // 1345-1347
+  2,   1,   1,   1, // 1348-1351
+  3,   1,   1,   1, // 1352-1355
+  3,   1,   1,   1, // 1356-1359
+  2,   1,   1,   1, // 1360-1363
+  3,   1,   1,   1, // 1364-1367
+  2, // 1368
+  1,   1, // 1369-1370
+  1, // 1371
+  1,   1, // 1372-1373
+  1,   1, // 1374-1375
+  1,   1, // 1376-1377
+  1,   1, // 1378-1379
+  4,   1, // 1380-1381
+  4,   1, // 1382-1383
+  4,   1, // 1384-1385
+  2,   1, // 1386-1387
+  4,   1, // 1388-1389
+  4,   1, // 1390-1391
+  4,   1, // 1392-1393
+  4,   1, // 1394-1395
+  4,   1,   1, // 1396-1398
+  4,   1,   1, // 1399-1401
+  5,   1,   1, // 1402-1404
+  6,   1,   1, // 1405-1407
+  8,   1,   1,   1, // 1408-1411
+  9,   1,   1,   1, // 1412-1415
+  15,   1,   1, // 1416-1418
+  25,   1,   1, // 1419-1421
+  17,   1, // 1422-1423
+  32,   1, // 1424-1425
+  1,   1, // 1426-1427
+  1,   1,   1, // 1428-1430
+  2,   1, // 1431-1432
+  2,   1,   1, // 1433-1435
+  1,   1, // 1436-1437
+  2,   1, // 1438-1439
+  1,   1,   1,   1, // 1440-1443
+  2,   1,   1,   1, // 1444-1447
+  1,   1, // 1448-1449
+  1,   1, // 1450-1451
+  1,   1,   1,   1, // 1452-1455
+  2,   1,   1,   1, // 1456-1459
+  1,   1, // 1460-1461
+  1,   1,   1, // 1462-1464
+  1,   1,   2,   1, // 1465-1468
+  1,   1,   2,   2,   1, // 1469-1473
+  1,   2,   1, // 1474-1476
+  1,   1,   2,   1, // 1477-1480
+  1,   1,   2,   2,   1, // 1481-1485
+  1,   1,   2,   2,   2,   1, // 1486-1491
+  3,   1,   1,   1, // 1492-1495
+  3,   2,   1,   1,   1,   1, // 1496-1501
+  2,   1, // 1502-1503
+  2,   2,   1,   1, // 1504-1507
+  2,   2,   1, // 1508-1510
+  2,   3,   2,   3,   1, // 1511-1515
+  3,   3,   1,   1,   1,   1, // 1516-1521
+  2,   2,   2,   1,   1,   1, // 1522-1527
+  2,   3,   2,   3,   2,   1, // 1528-1533
+  3,   3,   2,   1,   1,   1,   1,   1, // 1534-1541
+  2,   2,   1, // 1542-1544
+  2,   2,   2,   1,   1, // 1545-1549
+  3,   3,   4,   1, // 1550-1553
+  5,   5,   6,   1,   1,   1,   1,   2, // 1554-1561
+  3,   3,   4,   2,   1, // 1562-1566
+  5,   5,   6,   2,   1,   1,   1,   1,   1,   2, // 1567-1576
+  3,   3,   4,   1, // 1577-1580
+  3,   3,   4,   2,   1,   1, // 1581-1586
+  3,   3,   4,   4,   1, // 1587-1591
+  4,   4,   5,   5,   1,   1,   1,   1,   2,   2, // 1592-1601
+  3,   3,   4,   4,   2,   1, // 1602-1607
+  4,   4,   5,   5,   2,   1,   1,   1,   1,   1,   2,   2, // 1608-1619
+  2,   2,   3,   3,   1, // 1620-1624
+  2,   2,   3,   3,   2,   1,   1, // 1625-1631
+  1,   1,   1, // 1632-1634
+  1,   1,   1,   1, // 1635-1638
+  1,   1,   1,   1,   2, // 1639-1643
+  1,   1,   1,   1,   2,   2, // 1644-1649
+  2,   1,   1,   1,   1, // 1650-1654
+  2,   1,   1,   1,   1,   1, // 1655-1660
+  2,   1,   1,   1,   1,   1,   2, // 1661-1667
+  2,   1,   1,   1,   1,   1,   2,   2, // 1668-1675
+  1,   1,   1, // 1676-1678
+  2,   1,   1,   1,   1, // 1679-1683
+  1,   1,   1,   1, // 1684-1687
+  1,   1,   1,   1,   2,   2, // 1688-1693
+  2,   1,   1,   1,   1,   1, // 1694-1699
+  2,   1,   1,   1,   1,   1,   2,   2, // 1700-1707
+  1,   1,   1,   1, // 1708-1711
+  2,   1,   1,   1,   1,   1, // 1712-1717
+  1,   1,   1,   1,   2, // 1718-1722
+  2,   1,   1,   1,   1,   1,   2, // 1723-1729
+  1,   1,   1,   1,   2, // 1730-1734
+  2,   1,   1,   1,   1,   1,   2, // 1735-1741
+  1,   1,   1,   1,   2,   2, // 1742-1747
+  2,   1,   1,   1,   1,   1,   2,   2, // 1748-1755
+  1,   1,   1,   1,   2,   2, // 1756-1761
+  2,   1,   1,   1,   1,   1,   2,   2, // 1762-1769
+  4,   2, // 1770-1771
+  4,   2, // 1772-1773
+  4,   1, // 1774-1775
+  4,   1, // 1776-1777
+  3,   2,   2, // 1778-1780
+  3,   2,   2, // 1781-1783
+  3,   2,   1, // 1784-1786
+  3,   2,   1, // 1787-1789
+  3,   1,   1, // 1790-1792
+  3,   1,   1, // 1793-1795
+  4,   1,   1, // 1796-1798
+  4,   1,   1, // 1799-1801
+  4,   2,   2, // 1802-1804
+  4,   2,   2, // 1805-1807
+  4,   2,   1, // 1808-1810
+  4,   2,   1, // 1811-1813
+  3,   2,   2, // 1814-1816
+  4,   2,   2, // 1817-1819
+  6,   3,   2,   1, // 1820-1823
+  6,   3,   2,   1, // 1824-1827
+  6,   3,   1, // 1828-1830
+  6,   3,   1, // 1831-1833
+  6,   2,   2, // 1834-1836
+  7,   2,   2, // 1837-1839
+  7,   2,   1, // 1840-1842
+  9,   2,   1, // 1843-1845
+  6,   3,   2,   2, // 1846-1849
+  7,   3,   2,   1, // 1850-1853
+  7,   3,   2,   2, // 1854-1857
+  9,   3,   2,   1, // 1858-1861
+  1,   1, // 1862-1863
+  3, // 1864
+  2,   1, // 1865-1866
+  2,   1, // 1867-1868
+  1,   1, // 1869-1870
+  1,   1,   1, // 1871-1873
+  2,   1, // 1874-1875
+  2,   2,   1, // 1876-1878
+  3,   1,   1, // 1879-1881
+  3,   1, // 1882-1883
+  5,   2, // 1884-1885
+  6,   2, // 1886-1887
+  5,   2,   2, // 1888-1890
+  5,   1,   1, // 1891-1893
+  5,   2,   1, // 1894-1896
+  6,   2,   2, // 1897-1899
+  6,   2,   1, // 1900-1902
+  6,   3,   2,   1, // 1903-1906
+  8,   4,   2,   1, // 1907-1910
+  9,   2,   2, // 1911-1913
+  10,   2,   2, // 1914-1916
+  2,   2,   1,   1, // 1917-1920
+  3,   3,   1,   1, // 1921-1924
+  4,   4,   1,   1, // 1925-1928
+  2,   1,   1, // 1929-1931
+  3,   1,   2, // 1932-1934
+  3,   2,   1, // 1935-1937
+  3,   2,   2,   1, // 1938-1941
+  4,   2,   2,   3,   1, // 1942-1946
+  4,   2,   2,   3,   3,   1, // 1947-1952
+  3,   1,   2,   1, // 1953-1956
+  3,   1,   2,   2,   1, // 1957-1961
+  4,   1,   2,   2,   3,   1, // 1962-1967
+  4,   1,   2,   2,   3,   3,   1, // 1968-1974
+  0 // End itinerary
+};
+unsigned ARMForwardingPathes[] = {
+  0, // No itinerary
+ 0,  0, // 1-2
+ 0,  0,  0, // 3-5
+ 0,  0,  0, // 6-8
+ 0,  0,  0,  0, // 9-12
+ 0,  0, // 13-14
+ 0,  0,  0, // 15-17
+ 0,  0,  0, // 18-20
+ 0,  0,  0,  0, // 21-24
+ 0,  0, // 25-26
+ 0,  0, // 27-28
+ 0,  0, // 29-30
+ 0,  0,  0, // 31-33
+ 0,  0,  0,  0, // 34-37
+ 0, // 38
+ 0,  0, // 39-40
+ 0,  0, // 41-42
+ 0,  0,  0, // 43-45
+ 0, // 46
+ 0,  0, // 47-48
+ 0,  0, // 49-50
+ 0,  0,  0, // 51-53
+ 0, // 54
+ 0,  0, // 55-56
+ 0,  0, // 57-58
+ 0,  0,  0, // 59-61
+ 0, // 62
+ 0, // 63
+ 0, // 64
+ 0, // 65
+ 0,  0, // 66-67
+ 0,  0, // 68-69
+ 0,  0,  0, // 70-72
+ 0, // 73
+ 0, // 74
+ 0,  0, // 75-76
+ 0,  0, // 77-78
+ 0,  0,  0, // 79-81
+ 0,  0,  0, // 82-84
+ 0,  0,  0,  0, // 85-88
+ 0,  0,  0, // 89-91
+ 0,  0,  0,  0, // 92-95
+ 0,  0,  0, // 96-98
+ 0,  0,  0,  0, // 99-102
+ 0,  0, // 103-104
+ 0,  0, // 105-106
+ 0,  0, // 107-108
+ 0,  0,  0, // 109-111
+ 0,  0,  0, // 112-114
+ 0,  0,  0, // 115-117
+ 0,  0,  0, // 118-120
+ 0,  0,  0, // 121-123
+ 0,  0,  0, // 124-126
+ 0,  0,  0, // 127-129
+ 0,  0,  0,  0, // 130-133
+ 0,  0,  0,  0, // 134-137
+ 0,  0,  0,  0, // 138-141
+ 0,  0,  0,  0, // 142-145
+ 0,  0,  0,  0, // 146-149
+ 0,  0,  0,  0,  0, // 150-154
+ 0,  0,  0,  0,  0, // 155-159
+ 0,  0,  0,  0,  0, // 160-164
+ 0,  0, // 165-166
+ 0,  0,  0, // 167-169
+ 0,  0,  0, // 170-172
+ 0,  0, // 173-174
+ 0,  0, // 175-176
+ 0,  0, // 177-178
+ 0,  0,  0, // 179-181
+ 0,  0,  0, // 182-184
+ 0,  0,  0, // 185-187
+ 0,  0,  0, // 188-190
+ 0,  0,  0, // 191-193
+ 0,  0,  0, // 194-196
+ 0,  0,  0, // 197-199
+ 0,  0,  0,  0, // 200-203
+ 0,  0,  0,  0, // 204-207
+ 0,  0,  0,  0, // 208-211
+ 0,  0,  0,  0, // 212-215
+ 0,  0,  0,  0, // 216-219
+ 0, // 220
+ 0, // 221
+ 0,  0, // 222-223
+ 0,  0, // 224-225
+ 0,  0, // 226-227
+ 0,  0, // 228-229
+ 0,  0, // 230-231
+ 0,  0, // 232-233
+ 0,  0, // 234-235
+ 0,  0, // 236-237
+ 0,  0, // 238-239
+ 0,  0, // 240-241
+ 0,  0,  0, // 242-244
+ 0,  0,  0, // 245-247
+ 0,  0,  0, // 248-250
+ 0,  0,  0, // 251-253
+ 0,  0,  0,  0, // 254-257
+ 0,  0,  0,  0, // 258-261
+ 0,  0,  0, // 262-264
+ 0,  0,  0, // 265-267
+ 0,  0,  0, // 268-270
+ 0,  0,  0, // 271-273
+ 0,  0, // 274-275
+ 0,  0,  0, // 276-278
+ 0,  0, // 279-280
+ 0,  0,  0, // 281-283
+ 0,  0,  0, // 284-286
+ 0,  0,  0, // 287-289
+ 0,  0,  0,  0, // 290-293
+ 0,  0,  0,  0,  0, // 294-298
+ 0,  0,  0, // 299-301
+ 0,  0,  0, // 302-304
+ 0,  0,  0,  0, // 305-308
+ 0,  0,  0,  0,  0, // 309-313
+ 0,  0, // 314-315
+ 0,  0,  0, // 316-318
+ 0,  0,  0, // 319-321
+ 0,  0,  0, // 322-324
+ 0,  0,  0,  0, // 325-328
+ 0,  0, // 329-330
+ 0,  0,  0, // 331-333
+ 0,  0,  0, // 334-336
+ 0,  0,  0,  0, // 337-340
+ 0,  0, // 341-342
+ 0,  0, // 343-344
+ 0,  0, // 345-346
+ 0,  0,  0, // 347-349
+ 0,  0,  0,  0, // 350-353
+ 0, // 354
+ 0,  0, // 355-356
+ 0,  0, // 357-358
+ 0,  0,  0, // 359-361
+ 0, // 362
+ 0,  0, // 363-364
+ 0,  0, // 365-366
+ 0,  0,  0, // 367-369
+ 0, // 370
+ 0,  0, // 371-372
+ 0,  0, // 373-374
+ 0,  0,  0, // 375-377
+ 0, // 378
+ 0, // 379
+ 0, // 380
+ 0, // 381
+ 0,  0, // 382-383
+ 0,  0, // 384-385
+ 0,  0,  0, // 386-388
+ 0,  0, // 389-390
+ 0, // 391
+ 0,  0, // 392-393
+ 0,  0, // 394-395
+ 0,  0,  0, // 396-398
+ 0,  0,  0, // 399-401
+ 0,  0,  0,  0, // 402-405
+ 0,  0,  0, // 406-408
+ 0,  0,  0,  0, // 409-412
+ 0,  0,  0,  0, // 413-416
+ 0,  0,  0,  0, // 417-420
+ 0,  0, // 421-422
+ 0,  0, // 423-424
+ 0,  0, // 425-426
+ 0,  0,  0, // 427-429
+ 0,  0,  0, // 430-432
+ 0,  0,  0, // 433-435
+ 0,  0,  0, // 436-438
+ 0,  0,  0, // 439-441
+ 0,  0,  0, // 442-444
+ 0,  0,  0, // 445-447
+ 0,  0,  0,  0, // 448-451
+ 0,  0,  0,  0, // 452-455
+ 0,  0,  0,  0, // 456-459
+ 0,  0,  0,  0, // 460-463
+ 0,  0,  0,  0, // 464-467
+ 0,  0,  0,  0,  0, // 468-472
+ 0,  0,  0,  0,  0, // 473-477
+ 0,  0,  0,  0,  0, // 478-482
+ 0,  0,  0, // 483-485
+ 0,  0,  0, // 486-488
+ 0,  0, // 489-490
+ 0,  0, // 491-492
+ 0,  0, // 493-494
+ 0,  0, // 495-496
+ 0,  0,  0, // 497-499
+ 0,  0,  0, // 500-502
+ 0,  0,  0, // 503-505
+ 0,  0,  0, // 506-508
+ 0,  0,  0, // 509-511
+ 0,  0,  0, // 512-514
+ 0,  0,  0, // 515-517
+ 0,  0,  0,  0, // 518-521
+ 0,  0,  0,  0, // 522-525
+ 0,  0,  0,  0, // 526-529
+ 0,  0,  0,  0, // 530-533
+ 0,  0,  0,  0, // 534-537
+ 0, // 538
+ 0,  0, // 539-540
+ 0, // 541
+ 0,  0, // 542-543
+ 0,  0, // 544-545
+ 0,  0, // 546-547
+ 0,  0, // 548-549
+ 0,  0, // 550-551
+ 0,  0, // 552-553
+ 0,  0, // 554-555
+ 0,  0, // 556-557
+ 0,  0, // 558-559
+ 0,  0, // 560-561
+ 0,  0,  0, // 562-564
+ 0,  0,  0, // 565-567
+ 0,  0,  0, // 568-570
+ 0,  0,  0, // 571-573
+ 0,  0,  0,  0, // 574-577
+ 0,  0,  0,  0, // 578-581
+ 0,  0,  0, // 582-584
+ 0,  0,  0, // 585-587
+ 0,  0, // 588-589
+ 0,  0, // 590-591
+ 0,  0, // 592-593
+ 0,  0,  0, // 594-596
+ 0,  0, // 597-598
+ 0,  0,  0, // 599-601
+ 0,  0, // 602-603
+ 0,  0, // 604-605
+ 0,  0,  0,  0, // 606-609
+ 0,  0,  0,  0,  0, // 610-614
+ 0,  0, // 615-616
+ 0,  0, // 617-618
+ 0,  0,  0,  0, // 619-622
+ 0,  0,  0,  0,  0, // 623-627
+ 0,  0, // 628-629
+ 0,  0,  0, // 630-632
+ 0,  0,  0,  0, // 633-636
+ 0,  0,  0,  0,  0, // 637-641
+ 0,  0,  0, // 642-644
+ 0,  0,  0,  0, // 645-648
+ 0,  0,  0,  0,  0, // 649-653
+ 0,  0,  0,  0,  0,  0, // 654-659
+ 0,  0,  0,  0, // 660-663
+ 0,  0,  0,  0,  0,  0, // 664-669
+ 0,  0, // 670-671
+ 0,  0,  0,  0, // 672-675
+ 0,  0,  0, // 676-678
+ 0,  0,  0,  0,  0, // 679-683
+ 0,  0,  0,  0,  0,  0, // 684-689
+ 0,  0,  0,  0,  0,  0, // 690-695
+ 0,  0,  0,  0,  0,  0, // 696-701
+ 0,  0,  0,  0,  0,  0,  0,  0, // 702-709
+ 0,  0,  0, // 710-712
+ 0,  0,  0,  0,  0, // 713-717
+ 0,  0,  0,  0, // 718-721
+ 0,  0,  0,  0,  0,  0,  0,  0, // 722-729
+ 0,  0,  0,  0,  0, // 730-734
+ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0, // 735-744
+ 0,  0,  0,  0, // 745-748
+ 0,  0,  0,  0,  0,  0, // 749-754
+ 0,  0,  0,  0,  0, // 755-759
+ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0, // 760-769
+ 0,  0,  0,  0,  0,  0, // 770-775
+ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, // 776-787
+ 0,  0,  0,  0,  0, // 788-792
+ 0,  0,  0,  0,  0,  0,  0, // 793-799
+ 0,  0,  0, // 800-802
+ 0,  0,  0,  0, // 803-806
+ 0,  0,  0,  0,  0, // 807-811
+ 0,  0,  0,  0,  0,  0, // 812-817
+ 0,  0,  0,  0,  0, // 818-822
+ 0,  0,  0,  0,  0,  0, // 823-828
+ 0,  0,  0,  0,  0,  0,  0, // 829-835
+ 0,  0,  0,  0,  0,  0,  0,  0, // 836-843
+ 0,  0,  0, // 844-846
+ 0,  0,  0,  0,  0, // 847-851
+ 0,  0,  0,  0, // 852-855
+ 0,  0,  0,  0,  0,  0, // 856-861
+ 0,  0,  0,  0,  0,  0, // 862-867
+ 0,  0,  0,  0,  0,  0,  0,  0, // 868-875
+ 0,  0,  0,  0, // 876-879
+ 0,  0,  0,  0,  0,  0, // 880-885
+ 0,  0,  0,  0,  0, // 886-890
+ 0,  0,  0,  0,  0,  0,  0, // 891-897
+ 0,  0,  0,  0,  0, // 898-902
+ 0,  0,  0,  0,  0,  0,  0, // 903-909
+ 0,  0,  0,  0,  0,  0, // 910-915
+ 0,  0,  0,  0,  0,  0,  0,  0, // 916-923
+ 0,  0,  0,  0,  0,  0, // 924-929
+ 0,  0,  0,  0,  0,  0,  0,  0, // 930-937
+ 0,  0, // 938-939
+ 0,  0, // 940-941
+ 0,  0,  0, // 942-944
+ 0,  0,  0, // 945-947
+ 0,  0,  0, // 948-950
+ 0,  0,  0, // 951-953
+ 0,  0,  0, // 954-956
+ 0,  0, // 957-958
+ 0, // 959
+ 0,  0, // 960-961
+ 0,  0, // 962-963
+ 0,  0, // 964-965
+ 0,  0,  0, // 966-968
+ 0,  0, // 969-970
+ 0,  0,  0, // 971-973
+ 0,  0,  0, // 974-976
+ 0,  0, // 977-978
+ 0,  0,  0,  0, // 979-982
+ 0,  0,  0,  0, // 983-986
+ 0,  0,  0,  0, // 987-990
+ 0,  0,  0,  0, // 991-994
+ 0,  0,  0,  0, // 995-998
+ 0,  0,  0, // 999-1001
+ 0,  0,  0, // 1002-1004
+ 0,  0,  0, // 1005-1007
+ 0,  0,  0, // 1008-1010
+ 0,  0, // 1011-1012
+ 0,  0, // 1013-1014
+ 0,  0, // 1015-1016
+ 0,  0, // 1017-1018
+ 0,  0,  0, // 1019-1021
+ 0,  0,  0, // 1022-1024
+ 0,  0,  0, // 1025-1027
+ 0,  0,  0, // 1028-1030
+ 0,  0,  0, // 1031-1033
+ 0,  0,  0, // 1034-1036
+ 0,  0,  0, // 1037-1039
+ 0,  0,  0, // 1040-1042
+ 0,  0,  0, // 1043-1045
+ 0,  0,  0, // 1046-1048
+ 0,  0,  0, // 1049-1051
+ 0,  0,  0, // 1052-1054
+ 0,  0,  0, // 1055-1057
+ 0,  0,  0, // 1058-1060
+ 0,  0,  0,  0, // 1061-1064
+ 0,  0,  0,  0, // 1065-1068
+ 0,  0,  0, // 1069-1071
+ 0,  0,  0, // 1072-1074
+ 0,  0,  0, // 1075-1077
+ 0,  0,  0, // 1078-1080
+ 0,  0,  0,  0, // 1081-1084
+ 0,  0,  0,  0, // 1085-1088
+ 0,  0,  0,  0, // 1089-1092
+ 0,  0,  0,  0, // 1093-1096
+ 0,  0,  0, // 1097-1099
+ 0,  0,  0, // 1100-1102
+ 0,  0,  0, // 1103-1105
+ 0,  0,  0,  0, // 1106-1109
+ 0,  0,  0,  0,  0, // 1110-1114
+ 0,  0,  0,  0,  0,  0, // 1115-1120
+ 0,  0,  0,  0, // 1121-1124
+ 0,  0,  0,  0,  0, // 1125-1129
+ 0,  0,  0,  0,  0,  0, // 1130-1135
+ 0,  0,  0,  0,  0,  0,  0, // 1136-1142
+ 0, // 1143
+ 0,  0, // 1144-1145
+ 0,  0, // 1146-1147
+ 0,  0,  0, // 1148-1150
+ 0, // 1151
+ 0, // 1152
+ 0, // 1153
+ 0, // 1154
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1155-1156
+ 0,  0, // 1157-1158
+ 0,  0,  0, // 1159-1161
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1162-1163
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1164-1166
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, CortexA9ItinerariesBypass::NoBypass, // 1167-1169
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1170-1172
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, // 1173-1176
+ 0,  0, // 1177-1178
+ 0,  0,  0, // 1179-1181
+ 0,  0,  0, // 1182-1184
+ 0,  0,  0,  0, // 1185-1188
+ 0,  0, // 1189-1190
+ 0,  0, // 1191-1192
+ 0,  0, // 1193-1194
+ 0,  0,  0, // 1195-1197
+ 0,  0,  0,  0, // 1198-1201
+CortexA9ItinerariesBypass::A9_LdBypass, // 1202
+CortexA9ItinerariesBypass::A9_LdBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1203-1204
+CortexA9ItinerariesBypass::A9_LdBypass, CortexA9ItinerariesBypass::NoBypass, // 1205-1206
+CortexA9ItinerariesBypass::A9_LdBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, // 1207-1209
+ 0, // 1210
+ 0,  0, // 1211-1212
+ 0,  0, // 1213-1214
+ 0,  0,  0, // 1215-1217
+ 0, // 1218
+ 0,  0, // 1219-1220
+ 0,  0, // 1221-1222
+ 0,  0,  0, // 1223-1225
+ 0, // 1226
+ 0,  0,  0, // 1227-1229
+ 0,  0,  0,  0, // 1230-1233
+ 0,  0,  0, // 1234-1236
+ 0,  0,  0,  0, // 1237-1240
+ 0,  0,  0,  0, // 1241-1244
+ 0,  0,  0,  0, // 1245-1248
+CortexA9ItinerariesBypass::A9_LdBypass,  0, // 1249-1250
+CortexA9ItinerariesBypass::A9_LdBypass,  0, // 1251-1252
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1253-1255
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1256-1258
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1259-1261
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0,  0, // 1262-1265
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1266-1268
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1269-1271
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1272-1274
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0, // 1275-1277
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0,  0, // 1278-1281
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0,  0, // 1282-1285
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0,  0, // 1286-1289
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0,  0, // 1290-1293
+CortexA9ItinerariesBypass::A9_LdBypass,  0,  0,  0, // 1294-1297
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1298-1302
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1303-1307
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1308-1312
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1313-1315
+CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::NoBypass, CortexA9ItinerariesBypass::A9_LdBypass, // 1316-1318
+ 0,  0, // 1319-1320
+ 0,  0, // 1321-1322
+ 0,  0, // 1323-1324
+ 0,  0, // 1325-1326
+ 0,  0,  0, // 1327-1329
+ 0,  0,  0, // 1330-1332
+ 0,  0,  0, // 1333-1335
+ 0,  0,  0, // 1336-1338
+ 0,  0,  0, // 1339-1341
+ 0,  0,  0, // 1342-1344
+ 0,  0,  0, // 1345-1347
+ 0,  0,  0,  0, // 1348-1351
+ 0,  0,  0,  0, // 1352-1355
+ 0,  0,  0,  0, // 1356-1359
+ 0,  0,  0,  0, // 1360-1363
+ 0,  0,  0,  0, // 1364-1367
+ 0, // 1368
+ 0,  0, // 1369-1370
+ 0, // 1371
+ 0,  0, // 1372-1373
+ 0,  0, // 1374-1375
+ 0,  0, // 1376-1377
+ 0,  0, // 1378-1379
+ 0,  0, // 1380-1381
+ 0,  0, // 1382-1383
+ 0,  0, // 1384-1385
+ 0,  0, // 1386-1387
+ 0,  0, // 1388-1389
+ 0,  0, // 1390-1391
+ 0,  0, // 1392-1393
+ 0,  0, // 1394-1395
+ 0,  0,  0, // 1396-1398
+ 0,  0,  0, // 1399-1401
+ 0,  0,  0, // 1402-1404
+ 0,  0,  0, // 1405-1407
+ 0,  0,  0,  0, // 1408-1411
+ 0,  0,  0,  0, // 1412-1415
+ 0,  0,  0, // 1416-1418
+ 0,  0,  0, // 1419-1421
+ 0,  0, // 1422-1423
+ 0,  0, // 1424-1425
+ 0,  0, // 1426-1427
+ 0,  0,  0, // 1428-1430
+ 0,  0, // 1431-1432
+ 0,  0,  0, // 1433-1435
+ 0,  0, // 1436-1437
+ 0,  0, // 1438-1439
+ 0,  0,  0,  0, // 1440-1443
+ 0,  0,  0,  0, // 1444-1447
+ 0,  0, // 1448-1449
+ 0,  0, // 1450-1451
+ 0,  0,  0,  0, // 1452-1455
+ 0,  0,  0,  0, // 1456-1459
+ 0,  0, // 1460-1461
+ 0,  0,  0, // 1462-1464
+ 0,  0,  0,  0, // 1465-1468
+ 0,  0,  0,  0,  0, // 1469-1473
+ 0,  0,  0, // 1474-1476
+ 0,  0,  0,  0, // 1477-1480
+ 0,  0,  0,  0,  0, // 1481-1485
+ 0,  0,  0,  0,  0,  0, // 1486-1491
+ 0,  0,  0,  0, // 1492-1495
+ 0,  0,  0,  0,  0,  0, // 1496-1501
+ 0,  0, // 1502-1503
+ 0,  0,  0,  0, // 1504-1507
+ 0,  0,  0, // 1508-1510
+ 0,  0,  0,  0,  0, // 1511-1515
+ 0,  0,  0,  0,  0,  0, // 1516-1521
+ 0,  0,  0,  0,  0,  0, // 1522-1527
+ 0,  0,  0,  0,  0,  0, // 1528-1533
+ 0,  0,  0,  0,  0,  0,  0,  0, // 1534-1541
+ 0,  0,  0, // 1542-1544
+ 0,  0,  0,  0,  0, // 1545-1549
+ 0,  0,  0,  0, // 1550-1553
+ 0,  0,  0,  0,  0,  0,  0,  0, // 1554-1561
+ 0,  0,  0,  0,  0, // 1562-1566
+ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0, // 1567-1576
+ 0,  0,  0,  0, // 1577-1580
+ 0,  0,  0,  0,  0,  0, // 1581-1586
+ 0,  0,  0,  0,  0, // 1587-1591
+ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0, // 1592-1601
+ 0,  0,  0,  0,  0,  0, // 1602-1607
+ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, // 1608-1619
+ 0,  0,  0,  0,  0, // 1620-1624
+ 0,  0,  0,  0,  0,  0,  0, // 1625-1631
+ 0,  0,  0, // 1632-1634
+ 0,  0,  0,  0, // 1635-1638
+ 0,  0,  0,  0,  0, // 1639-1643
+ 0,  0,  0,  0,  0,  0, // 1644-1649
+ 0,  0,  0,  0,  0, // 1650-1654
+ 0,  0,  0,  0,  0,  0, // 1655-1660
+ 0,  0,  0,  0,  0,  0,  0, // 1661-1667
+ 0,  0,  0,  0,  0,  0,  0,  0, // 1668-1675
+ 0,  0,  0, // 1676-1678
+ 0,  0,  0,  0,  0, // 1679-1683
+ 0,  0,  0,  0, // 1684-1687
+ 0,  0,  0,  0,  0,  0, // 1688-1693
+ 0,  0,  0,  0,  0,  0, // 1694-1699
+ 0,  0,  0,  0,  0,  0,  0,  0, // 1700-1707
+ 0,  0,  0,  0, // 1708-1711
+ 0,  0,  0,  0,  0,  0, // 1712-1717
+ 0,  0,  0,  0,  0, // 1718-1722
+ 0,  0,  0,  0,  0,  0,  0, // 1723-1729
+ 0,  0,  0,  0,  0, // 1730-1734
+ 0,  0,  0,  0,  0,  0,  0, // 1735-1741
+ 0,  0,  0,  0,  0,  0, // 1742-1747
+ 0,  0,  0,  0,  0,  0,  0,  0, // 1748-1755
+ 0,  0,  0,  0,  0,  0, // 1756-1761
+ 0,  0,  0,  0,  0,  0,  0,  0, // 1762-1769
+ 0,  0, // 1770-1771
+ 0,  0, // 1772-1773
+ 0,  0, // 1774-1775
+ 0,  0, // 1776-1777
+ 0,  0,  0, // 1778-1780
+ 0,  0,  0, // 1781-1783
+ 0,  0,  0, // 1784-1786
+ 0,  0,  0, // 1787-1789
+ 0,  0,  0, // 1790-1792
+ 0,  0,  0, // 1793-1795
+ 0,  0,  0, // 1796-1798
+ 0,  0,  0, // 1799-1801
+ 0,  0,  0, // 1802-1804
+ 0,  0,  0, // 1805-1807
+ 0,  0,  0, // 1808-1810
+ 0,  0,  0, // 1811-1813
+ 0,  0,  0, // 1814-1816
+ 0,  0,  0, // 1817-1819
+ 0,  0,  0,  0, // 1820-1823
+ 0,  0,  0,  0, // 1824-1827
+ 0,  0,  0, // 1828-1830
+ 0,  0,  0, // 1831-1833
+ 0,  0,  0, // 1834-1836
+ 0,  0,  0, // 1837-1839
+ 0,  0,  0, // 1840-1842
+ 0,  0,  0, // 1843-1845
+ 0,  0,  0,  0, // 1846-1849
+ 0,  0,  0,  0, // 1850-1853
+ 0,  0,  0,  0, // 1854-1857
+ 0,  0,  0,  0, // 1858-1861
+ 0,  0, // 1862-1863
+ 0, // 1864
+ 0,  0, // 1865-1866
+ 0,  0, // 1867-1868
+ 0,  0, // 1869-1870
+ 0,  0,  0, // 1871-1873
+ 0,  0, // 1874-1875
+ 0,  0,  0, // 1876-1878
+ 0,  0,  0, // 1879-1881
+ 0,  0, // 1882-1883
+ 0,  0, // 1884-1885
+ 0,  0, // 1886-1887
+ 0,  0,  0, // 1888-1890
+ 0,  0,  0, // 1891-1893
+ 0,  0,  0, // 1894-1896
+ 0,  0,  0, // 1897-1899
+ 0,  0,  0, // 1900-1902
+ 0,  0,  0,  0, // 1903-1906
+ 0,  0,  0,  0, // 1907-1910
+ 0,  0,  0, // 1911-1913
+ 0,  0,  0, // 1914-1916
+ 0,  0,  0,  0, // 1917-1920
+ 0,  0,  0,  0, // 1921-1924
+ 0,  0,  0,  0, // 1925-1928
+ 0,  0,  0, // 1929-1931
+ 0,  0,  0, // 1932-1934
+ 0,  0,  0, // 1935-1937
+ 0,  0,  0,  0, // 1938-1941
+ 0,  0,  0,  0,  0, // 1942-1946
+ 0,  0,  0,  0,  0,  0, // 1947-1952
+ 0,  0,  0,  0, // 1953-1956
+ 0,  0,  0,  0,  0, // 1957-1961
+ 0,  0,  0,  0,  0,  0, // 1962-1967
+ 0,  0,  0,  0,  0,  0,  0, // 1968-1974
+  0 // End itinerary
+};
+
+llvm::InstrItinerary ARMV6Itineraries[] = {
+  { 1, 1, 2, 0, 0 }, // 0 IIC_Br
+  { 1, 0, 0, 0, 0 }, // 1 IIC_Preload
+  { 1, 0, 0, 0, 0 }, // 2 IIC_VABAD
+  { 1, 0, 0, 0, 0 }, // 3 IIC_VABAQ
+  { 1, 0, 0, 0, 0 }, // 4 IIC_VBIND
+  { 1, 0, 0, 0, 0 }, // 5 IIC_VBINQ
+  { 1, 0, 0, 0, 0 }, // 6 IIC_VBINi4D
+  { 1, 0, 0, 0, 0 }, // 7 IIC_VBINi4Q
+  { 1, 0, 0, 0, 0 }, // 8 IIC_VBINiD
+  { 1, 0, 0, 0, 0 }, // 9 IIC_VBINiQ
+  { 1, 0, 0, 0, 0 }, // 10 IIC_VCNTiD
+  { 1, 0, 0, 0, 0 }, // 11 IIC_VCNTiQ
+  { 1, 0, 0, 0, 0 }, // 12 IIC_VEXTD
+  { 1, 0, 0, 0, 0 }, // 13 IIC_VEXTQ
+  { 1, 0, 0, 0, 0 }, // 14 IIC_VFMULD
+  { 1, 0, 0, 0, 0 }, // 15 IIC_VFMULQ
+  { 1, 0, 0, 0, 0 }, // 16 IIC_VLD1
+  { 1, 0, 0, 0, 0 }, // 17 IIC_VLD1dup
+  { 1, 0, 0, 0, 0 }, // 18 IIC_VLD1dupu
+  { 1, 0, 0, 0, 0 }, // 19 IIC_VLD1ln
+  { 1, 0, 0, 0, 0 }, // 20 IIC_VLD1lnu
+  { 1, 0, 0, 0, 0 }, // 21 IIC_VLD1u
+  { 1, 0, 0, 0, 0 }, // 22 IIC_VLD1x2
+  { 1, 0, 0, 0, 0 }, // 23 IIC_VLD1x2u
+  { 1, 0, 0, 0, 0 }, // 24 IIC_VLD1x3
+  { 1, 0, 0, 0, 0 }, // 25 IIC_VLD1x3u
+  { 1, 0, 0, 0, 0 }, // 26 IIC_VLD1x4
+  { 1, 0, 0, 0, 0 }, // 27 IIC_VLD1x4u
+  { 1, 0, 0, 0, 0 }, // 28 IIC_VLD2
+  { 1, 0, 0, 0, 0 }, // 29 IIC_VLD2dup
+  { 1, 0, 0, 0, 0 }, // 30 IIC_VLD2dupu
+  { 1, 0, 0, 0, 0 }, // 31 IIC_VLD2ln
+  { 1, 0, 0, 0, 0 }, // 32 IIC_VLD2lnu
+  { 1, 0, 0, 0, 0 }, // 33 IIC_VLD2u
+  { 1, 0, 0, 0, 0 }, // 34 IIC_VLD2x2
+  { 1, 0, 0, 0, 0 }, // 35 IIC_VLD2x2u
+  { 1, 0, 0, 0, 0 }, // 36 IIC_VLD3
+  { 1, 0, 0, 0, 0 }, // 37 IIC_VLD3dup
+  { 1, 0, 0, 0, 0 }, // 38 IIC_VLD3dupu
+  { 1, 0, 0, 0, 0 }, // 39 IIC_VLD3ln
+  { 1, 0, 0, 0, 0 }, // 40 IIC_VLD3lnu
+  { 1, 0, 0, 0, 0 }, // 41 IIC_VLD3u
+  { 1, 0, 0, 0, 0 }, // 42 IIC_VLD4
+  { 1, 0, 0, 0, 0 }, // 43 IIC_VLD4dup
+  { 1, 0, 0, 0, 0 }, // 44 IIC_VLD4dupu
+  { 1, 0, 0, 0, 0 }, // 45 IIC_VLD4ln
+  { 1, 0, 0, 0, 0 }, // 46 IIC_VLD4lnu
+  { 1, 0, 0, 0, 0 }, // 47 IIC_VLD4u
+  { 1, 0, 0, 0, 0 }, // 48 IIC_VMACD
+  { 1, 0, 0, 0, 0 }, // 49 IIC_VMACQ
+  { 1, 0, 0, 0, 0 }, // 50 IIC_VMACi16D
+  { 1, 0, 0, 0, 0 }, // 51 IIC_VMACi16Q
+  { 1, 0, 0, 0, 0 }, // 52 IIC_VMACi32D
+  { 1, 0, 0, 0, 0 }, // 53 IIC_VMACi32Q
+  { 1, 0, 0, 0, 0 }, // 54 IIC_VMOV
+  { 1, 0, 0, 0, 0 }, // 55 IIC_VMOVD
+  { 1, 0, 0, 0, 0 }, // 56 IIC_VMOVDI
+  { 1, 0, 0, 0, 0 }, // 57 IIC_VMOVID
+  { 1, 0, 0, 0, 0 }, // 58 IIC_VMOVIS
+  { 1, 0, 0, 0, 0 }, // 59 IIC_VMOVISL
+  { 1, 0, 0, 0, 0 }, // 60 IIC_VMOVImm
+  { 1, 0, 0, 0, 0 }, // 61 IIC_VMOVN
+  { 1, 0, 0, 0, 0 }, // 62 IIC_VMOVQ
+  { 1, 0, 0, 0, 0 }, // 63 IIC_VMOVSI
+  { 1, 0, 0, 0, 0 }, // 64 IIC_VMULi16D
+  { 1, 0, 0, 0, 0 }, // 65 IIC_VMULi16Q
+  { 1, 0, 0, 0, 0 }, // 66 IIC_VMULi32D
+  { 1, 0, 0, 0, 0 }, // 67 IIC_VMULi32Q
+  { 1, 0, 0, 0, 0 }, // 68 IIC_VPALiD
+  { 1, 0, 0, 0, 0 }, // 69 IIC_VPALiQ
+  { 1, 0, 0, 0, 0 }, // 70 IIC_VPBIND
+  { 1, 0, 0, 0, 0 }, // 71 IIC_VPERMD
+  { 1, 0, 0, 0, 0 }, // 72 IIC_VPERMQ
+  { 1, 0, 0, 0, 0 }, // 73 IIC_VPERMQ3
+  { 1, 0, 0, 0, 0 }, // 74 IIC_VQUNAiD
+  { 1, 0, 0, 0, 0 }, // 75 IIC_VQUNAiQ
+  { 1, 0, 0, 0, 0 }, // 76 IIC_VRECSD
+  { 1, 0, 0, 0, 0 }, // 77 IIC_VRECSQ
+  { 1, 0, 0, 0, 0 }, // 78 IIC_VSHLi4D
+  { 1, 0, 0, 0, 0 }, // 79 IIC_VSHLi4Q
+  { 1, 0, 0, 0, 0 }, // 80 IIC_VSHLiD
+  { 1, 0, 0, 0, 0 }, // 81 IIC_VSHLiQ
+  { 1, 0, 0, 0, 0 }, // 82 IIC_VST1
+  { 1, 0, 0, 0, 0 }, // 83 IIC_VST1ln
+  { 1, 0, 0, 0, 0 }, // 84 IIC_VST1lnu
+  { 1, 0, 0, 0, 0 }, // 85 IIC_VST1u
+  { 1, 0, 0, 0, 0 }, // 86 IIC_VST1x2
+  { 1, 0, 0, 0, 0 }, // 87 IIC_VST1x2u
+  { 1, 0, 0, 0, 0 }, // 88 IIC_VST1x3
+  { 1, 0, 0, 0, 0 }, // 89 IIC_VST1x3u
+  { 1, 0, 0, 0, 0 }, // 90 IIC_VST1x4
+  { 1, 0, 0, 0, 0 }, // 91 IIC_VST1x4u
+  { 1, 0, 0, 0, 0 }, // 92 IIC_VST2
+  { 1, 0, 0, 0, 0 }, // 93 IIC_VST2ln
+  { 1, 0, 0, 0, 0 }, // 94 IIC_VST2lnu
+  { 1, 0, 0, 0, 0 }, // 95 IIC_VST2u
+  { 1, 0, 0, 0, 0 }, // 96 IIC_VST2x2
+  { 1, 0, 0, 0, 0 }, // 97 IIC_VST2x2u
+  { 1, 0, 0, 0, 0 }, // 98 IIC_VST3
+  { 1, 0, 0, 0, 0 }, // 99 IIC_VST3ln
+  { 1, 0, 0, 0, 0 }, // 100 IIC_VST3lnu
+  { 1, 0, 0, 0, 0 }, // 101 IIC_VST3u
+  { 1, 0, 0, 0, 0 }, // 102 IIC_VST4
+  { 1, 0, 0, 0, 0 }, // 103 IIC_VST4ln
+  { 1, 0, 0, 0, 0 }, // 104 IIC_VST4lnu
+  { 1, 0, 0, 0, 0 }, // 105 IIC_VST4u
+  { 1, 0, 0, 0, 0 }, // 106 IIC_VSUBi4D
+  { 1, 0, 0, 0, 0 }, // 107 IIC_VSUBi4Q
+  { 1, 0, 0, 0, 0 }, // 108 IIC_VSUBiD
+  { 1, 0, 0, 0, 0 }, // 109 IIC_VSUBiQ
+  { 1, 0, 0, 0, 0 }, // 110 IIC_VTB1
+  { 1, 0, 0, 0, 0 }, // 111 IIC_VTB2
+  { 1, 0, 0, 0, 0 }, // 112 IIC_VTB3
+  { 1, 0, 0, 0, 0 }, // 113 IIC_VTB4
+  { 1, 0, 0, 0, 0 }, // 114 IIC_VTBX1
+  { 1, 0, 0, 0, 0 }, // 115 IIC_VTBX2
+  { 1, 0, 0, 0, 0 }, // 116 IIC_VTBX3
+  { 1, 0, 0, 0, 0 }, // 117 IIC_VTBX4
+  { 1, 0, 0, 0, 0 }, // 118 IIC_VUNAD
+  { 1, 0, 0, 0, 0 }, // 119 IIC_VUNAQ
+  { 1, 0, 0, 0, 0 }, // 120 IIC_VUNAiD
+  { 1, 0, 0, 0, 0 }, // 121 IIC_VUNAiQ
+  { 1, 1, 2, 242, 245 }, // 122 IIC_fpALU32
+  { 1, 1, 2, 245, 248 }, // 123 IIC_fpALU64
+  { 1, 1, 2, 226, 228 }, // 124 IIC_fpCMP32
+  { 1, 1, 2, 228, 230 }, // 125 IIC_fpCMP64
+  { 1, 1, 2, 236, 238 }, // 126 IIC_fpCVTDI
+  { 1, 1, 2, 232, 234 }, // 127 IIC_fpCVTDS
+  { 1, 0, 0, 0, 0 }, // 128 IIC_fpCVTHS
+  { 1, 1, 2, 240, 242 }, // 129 IIC_fpCVTID
+  { 1, 1, 2, 238, 240 }, // 130 IIC_fpCVTIS
+  { 1, 1, 2, 230, 232 }, // 131 IIC_fpCVTSD
+  { 1, 0, 0, 0, 0 }, // 132 IIC_fpCVTSH
+  { 1, 1, 2, 234, 236 }, // 133 IIC_fpCVTSI
+  { 1, 11, 12, 262, 265 }, // 134 IIC_fpDIV32
+  { 1, 12, 13, 265, 268 }, // 135 IIC_fpDIV64
+  { 1, 1, 2, 284, 287 }, // 136 IIC_fpLoad32
+  { 1, 1, 2, 287, 290 }, // 137 IIC_fpLoad64
+  { 0, 8, 9, 290, 294 }, // 138 IIC_fpLoad_m
+  { 0, 8, 9, 294, 299 }, // 139 IIC_fpLoad_mu
+  { 1, 1, 2, 254, 258 }, // 140 IIC_fpMAC32
+  { 1, 2, 3, 258, 262 }, // 141 IIC_fpMAC64
+  { 1, 1, 2, 281, 284 }, // 142 IIC_fpMOVDI
+  { 1, 1, 2, 276, 279 }, // 143 IIC_fpMOVID
+  { 1, 1, 2, 274, 276 }, // 144 IIC_fpMOVIS
+  { 1, 1, 2, 279, 281 }, // 145 IIC_fpMOVSI
+  { 1, 1, 2, 248, 251 }, // 146 IIC_fpMUL32
+  { 1, 2, 3, 251, 254 }, // 147 IIC_fpMUL64
+  { 1, 11, 12, 268, 271 }, // 148 IIC_fpSQRT32
+  { 1, 12, 13, 271, 274 }, // 149 IIC_fpSQRT64
+  { 1, 1, 2, 221, 222 }, // 150 IIC_fpSTAT
+  { 1, 1, 2, 299, 302 }, // 151 IIC_fpStore32
+  { 1, 1, 2, 302, 305 }, // 152 IIC_fpStore64
+  { 0, 8, 9, 305, 309 }, // 153 IIC_fpStore_m
+  { 0, 8, 9, 309, 314 }, // 154 IIC_fpStore_mu
+  { 1, 1, 2, 222, 224 }, // 155 IIC_fpUNA32
+  { 1, 1, 2, 224, 226 }, // 156 IIC_fpUNA64
+  { 1, 1, 2, 1, 3 }, // 157 IIC_iALUi
+  { 1, 1, 2, 3, 6 }, // 158 IIC_iALUr
+  { 1, 1, 2, 6, 9 }, // 159 IIC_iALUsi
+  { 1, 0, 0, 0, 0 }, // 160 IIC_iALUsir
+  { 1, 2, 3, 9, 13 }, // 161 IIC_iALUsr
+  { 1, 1, 2, 0, 0 }, // 162 IIC_iALUx
+  { 1, 1, 2, 13, 15 }, // 163 IIC_iBITi
+  { 1, 1, 2, 15, 18 }, // 164 IIC_iBITr
+  { 1, 1, 2, 18, 21 }, // 165 IIC_iBITsi
+  { 1, 2, 3, 21, 25 }, // 166 IIC_iBITsr
+  { 1, 1, 2, 65, 66 }, // 167 IIC_iCMOVi
+  { 1, 3, 5, 73, 74 }, // 168 IIC_iCMOVix2
+  { 1, 1, 2, 66, 68 }, // 169 IIC_iCMOVr
+  { 1, 1, 2, 68, 70 }, // 170 IIC_iCMOVsi
+  { 1, 1, 2, 70, 73 }, // 171 IIC_iCMOVsr
+  { 1, 1, 2, 38, 39 }, // 172 IIC_iCMPi
+  { 1, 1, 2, 39, 41 }, // 173 IIC_iCMPr
+  { 1, 1, 2, 41, 43 }, // 174 IIC_iCMPsi
+  { 1, 2, 3, 43, 46 }, // 175 IIC_iCMPsr
+  { 1, 1, 2, 31, 34 }, // 176 IIC_iEXTAr
+  { 1, 2, 3, 34, 38 }, // 177 IIC_iEXTAsr
+  { 1, 1, 2, 29, 31 }, // 178 IIC_iEXTr
+  { 1, 1, 2, 105, 107 }, // 179 IIC_iLoad_bh_i
+  { 1, 1, 2, 127, 130 }, // 180 IIC_iLoad_bh_iu
+  { 1, 1, 2, 112, 115 }, // 181 IIC_iLoad_bh_r
+  { 1, 1, 2, 134, 138 }, // 182 IIC_iLoad_bh_ru
+  { 1, 2, 3, 121, 124 }, // 183 IIC_iLoad_bh_si
+  { 1, 2, 3, 146, 150 }, // 184 IIC_iLoad_bh_siu
+  { 1, 1, 2, 107, 109 }, // 185 IIC_iLoad_d_i
+  { 1, 1, 2, 115, 118 }, // 186 IIC_iLoad_d_r
+  { 1, 1, 2, 138, 142 }, // 187 IIC_iLoad_d_ru
+  { 1, 1, 2, 103, 105 }, // 188 IIC_iLoad_i
+  { 1, 1, 2, 124, 127 }, // 189 IIC_iLoad_iu
+  { 0, 8, 9, 150, 155 }, // 190 IIC_iLoad_m
+  { 0, 9, 11, 160, 165 }, // 191 IIC_iLoad_mBr
+  { 0, 8, 9, 155, 160 }, // 192 IIC_iLoad_mu
+  { 1, 1, 2, 109, 112 }, // 193 IIC_iLoad_r
+  { 1, 1, 2, 130, 134 }, // 194 IIC_iLoad_ru
+  { 1, 2, 3, 118, 121 }, // 195 IIC_iLoad_si
+  { 1, 2, 3, 142, 146 }, // 196 IIC_iLoad_siu
+  { 1, 3, 5, 165, 167 }, // 197 IIC_iLoadiALU
+  { 1, 1, 2, 85, 89 }, // 198 IIC_iMAC16
+  { 1, 2, 3, 92, 96 }, // 199 IIC_iMAC32
+  { 1, 8, 9, 99, 103 }, // 200 IIC_iMAC64
+  { 1, 1, 2, 54, 55 }, // 201 IIC_iMOVi
+  { 1, 3, 5, 62, 63 }, // 202 IIC_iMOVix2
+  { 1, 5, 8, 63, 64 }, // 203 IIC_iMOVix2addpc
+  { 1, 5, 8, 64, 65 }, // 204 IIC_iMOVix2ld
+  { 1, 1, 2, 55, 57 }, // 205 IIC_iMOVr
+  { 1, 1, 2, 57, 59 }, // 206 IIC_iMOVsi
+  { 1, 2, 3, 59, 62 }, // 207 IIC_iMOVsr
+  { 1, 1, 2, 82, 85 }, // 208 IIC_iMUL16
+  { 1, 2, 3, 89, 92 }, // 209 IIC_iMUL32
+  { 1, 8, 9, 96, 99 }, // 210 IIC_iMUL64
+  { 1, 1, 2, 74, 75 }, // 211 IIC_iMVNi
+  { 1, 1, 2, 75, 77 }, // 212 IIC_iMVNr
+  { 1, 1, 2, 77, 79 }, // 213 IIC_iMVNsi
+  { 1, 2, 3, 79, 82 }, // 214 IIC_iMVNsr
+  { 0, 8, 9, 167, 170 }, // 215 IIC_iPop
+  { 0, 9, 11, 170, 173 }, // 216 IIC_iPop_Br
+  { 1, 1, 2, 175, 177 }, // 217 IIC_iStore_bh_i
+  { 1, 1, 2, 197, 200 }, // 218 IIC_iStore_bh_iu
+  { 1, 1, 2, 182, 185 }, // 219 IIC_iStore_bh_r
+  { 1, 1, 2, 204, 208 }, // 220 IIC_iStore_bh_ru
+  { 1, 2, 3, 191, 194 }, // 221 IIC_iStore_bh_si
+  { 1, 2, 3, 216, 220 }, // 222 IIC_iStore_bh_siu
+  { 1, 1, 2, 177, 179 }, // 223 IIC_iStore_d_i
+  { 1, 1, 2, 185, 188 }, // 224 IIC_iStore_d_r
+  { 1, 1, 2, 208, 212 }, // 225 IIC_iStore_d_ru
+  { 1, 1, 2, 173, 175 }, // 226 IIC_iStore_i
+  { 1, 1, 2, 194, 197 }, // 227 IIC_iStore_iu
+  { 0, 8, 9, 0, 0 }, // 228 IIC_iStore_m
+  { 0, 8, 9, 220, 221 }, // 229 IIC_iStore_mu
+  { 1, 1, 2, 179, 182 }, // 230 IIC_iStore_r
+  { 1, 1, 2, 200, 204 }, // 231 IIC_iStore_ru
+  { 1, 2, 3, 188, 191 }, // 232 IIC_iStore_si
+  { 1, 2, 3, 212, 216 }, // 233 IIC_iStore_siu
+  { 1, 1, 2, 46, 47 }, // 234 IIC_iTSTi
+  { 1, 1, 2, 47, 49 }, // 235 IIC_iTSTr
+  { 1, 1, 2, 49, 51 }, // 236 IIC_iTSTsi
+  { 1, 2, 3, 51, 54 }, // 237 IIC_iTSTsr
+  { 1, 1, 2, 25, 27 }, // 238 IIC_iUNAr
+  { 1, 1, 2, 27, 29 }, // 239 IIC_iUNAsi
+  { 1, 0, 0, 0, 0 }, // 240 NoItinerary
+  { 1, ~0U, ~0U, ~0U, ~0U } // end marker
+};
+
+llvm::InstrItinerary CortexA8Itineraries[] = {
+  { 1, 13, 14, 0, 0 }, // 0 IIC_Br
+  { 1, 13, 14, 539, 541 }, // 1 IIC_Preload
+  { 1, 43, 45, 1061, 1065 }, // 2 IIC_VABAD
+  { 1, 98, 100, 1065, 1069 }, // 3 IIC_VABAQ
+  { 1, 43, 45, 942, 945 }, // 4 IIC_VBIND
+  { 1, 98, 100, 951, 954 }, // 5 IIC_VBINQ
+  { 1, 43, 45, 1025, 1028 }, // 6 IIC_VBINi4D
+  { 1, 43, 45, 1028, 1031 }, // 7 IIC_VBINi4Q
+  { 1, 43, 45, 1019, 1022 }, // 8 IIC_VBINiD
+  { 1, 43, 45, 1022, 1025 }, // 9 IIC_VBINiQ
+  { 1, 43, 45, 1005, 1008 }, // 10 IIC_VCNTiD
+  { 1, 98, 100, 1008, 1011 }, // 11 IIC_VCNTiQ
+  { 1, 41, 43, 1097, 1100 }, // 12 IIC_VEXTD
+  { 1, 100, 102, 1100, 1103 }, // 13 IIC_VEXTQ
+  { 1, 43, 45, 948, 951 }, // 14 IIC_VFMULD
+  { 1, 43, 45, 954, 957 }, // 15 IIC_VFMULQ
+  { 1, 80, 83, 628, 630 }, // 16 IIC_VLD1
+  { 1, 89, 92, 670, 672 }, // 17 IIC_VLD1dup
+  { 1, 89, 92, 672, 676 }, // 18 IIC_VLD1dupu
+  { 1, 86, 89, 660, 664 }, // 19 IIC_VLD1ln
+  { 1, 86, 89, 664, 670 }, // 20 IIC_VLD1lnu
+  { 1, 80, 83, 642, 645 }, // 21 IIC_VLD1u
+  { 1, 80, 83, 630, 633 }, // 22 IIC_VLD1x2
+  { 1, 80, 83, 645, 649 }, // 23 IIC_VLD1x2u
+  { 1, 83, 86, 633, 637 }, // 24 IIC_VLD1x3
+  { 1, 83, 86, 649, 654 }, // 25 IIC_VLD1x3u
+  { 1, 83, 86, 637, 642 }, // 26 IIC_VLD1x4
+  { 1, 83, 86, 654, 660 }, // 27 IIC_VLD1x4u
+  { 1, 80, 83, 676, 679 }, // 28 IIC_VLD2
+  { 1, 89, 92, 710, 713 }, // 29 IIC_VLD2dup
+  { 1, 89, 92, 713, 718 }, // 30 IIC_VLD2dupu
+  { 1, 83, 86, 684, 690 }, // 31 IIC_VLD2ln
+  { 1, 83, 86, 702, 710 }, // 32 IIC_VLD2lnu
+  { 1, 80, 83, 690, 696 }, // 33 IIC_VLD2u
+  { 1, 83, 86, 679, 684 }, // 34 IIC_VLD2x2
+  { 1, 83, 86, 696, 702 }, // 35 IIC_VLD2x2u
+  { 1, 92, 95, 718, 722 }, // 36 IIC_VLD3
+  { 1, 86, 89, 745, 749 }, // 37 IIC_VLD3dup
+  { 1, 86, 89, 749, 755 }, // 38 IIC_VLD3dupu
+  { 1, 95, 98, 722, 730 }, // 39 IIC_VLD3ln
+  { 1, 95, 98, 735, 745 }, // 40 IIC_VLD3lnu
+  { 1, 92, 95, 730, 735 }, // 41 IIC_VLD3u
+  { 1, 92, 95, 755, 760 }, // 42 IIC_VLD4
+  { 1, 86, 89, 788, 793 }, // 43 IIC_VLD4dup
+  { 1, 86, 89, 793, 800 }, // 44 IIC_VLD4dupu
+  { 1, 95, 98, 760, 770 }, // 45 IIC_VLD4ln
+  { 1, 95, 98, 776, 788 }, // 46 IIC_VLD4lnu
+  { 1, 92, 95, 770, 776 }, // 47 IIC_VLD4u
+  { 1, 43, 45, 991, 995 }, // 48 IIC_VMACD
+  { 1, 98, 100, 995, 999 }, // 49 IIC_VMACQ
+  { 1, 43, 45, 1081, 1085 }, // 50 IIC_VMACi16D
+  { 1, 98, 100, 1089, 1093 }, // 51 IIC_VMACi16Q
+  { 1, 98, 100, 1085, 1089 }, // 52 IIC_VMACi32D
+  { 1, 106, 110, 1093, 1097 }, // 53 IIC_VMACi32Q
+  { 1, 43, 45, 957, 959 }, // 54 IIC_VMOV
+  { 1, 41, 43, 960, 962 }, // 55 IIC_VMOVD
+  { 1, 41, 43, 971, 974 }, // 56 IIC_VMOVDI
+  { 1, 41, 43, 966, 969 }, // 57 IIC_VMOVID
+  { 1, 41, 43, 964, 966 }, // 58 IIC_VMOVIS
+  { 1, 100, 102, 974, 977 }, // 59 IIC_VMOVISL
+  { 1, 43, 45, 959, 960 }, // 60 IIC_VMOVImm
+  { 1, 43, 45, 977, 979 }, // 61 IIC_VMOVN
+  { 1, 100, 102, 962, 964 }, // 62 IIC_VMOVQ
+  { 1, 41, 43, 969, 971 }, // 63 IIC_VMOVSI
+  { 1, 43, 45, 1069, 1072 }, // 64 IIC_VMULi16D
+  { 1, 98, 100, 1075, 1078 }, // 65 IIC_VMULi16Q
+  { 1, 98, 100, 1072, 1075 }, // 66 IIC_VMULi32D
+  { 1, 106, 110, 1078, 1081 }, // 67 IIC_VMULi32Q
+  { 1, 43, 45, 1055, 1058 }, // 68 IIC_VPALiD
+  { 1, 98, 100, 1058, 1061 }, // 69 IIC_VPALiQ
+  { 1, 43, 45, 945, 948 }, // 70 IIC_VPBIND
+  { 1, 41, 43, 979, 983 }, // 71 IIC_VPERMD
+  { 1, 100, 102, 983, 987 }, // 72 IIC_VPERMQ
+  { 1, 102, 106, 987, 991 }, // 73 IIC_VPERMQ3
+  { 1, 43, 45, 1015, 1017 }, // 74 IIC_VQUNAiD
+  { 1, 43, 45, 1017, 1019 }, // 75 IIC_VQUNAiQ
+  { 1, 43, 45, 999, 1002 }, // 76 IIC_VRECSD
+  { 1, 98, 100, 1002, 1005 }, // 77 IIC_VRECSQ
+  { 1, 43, 45, 1049, 1052 }, // 78 IIC_VSHLi4D
+  { 1, 98, 100, 1052, 1055 }, // 79 IIC_VSHLi4Q
+  { 1, 43, 45, 1043, 1046 }, // 80 IIC_VSHLiD
+  { 1, 98, 100, 1046, 1049 }, // 81 IIC_VSHLiQ
+  { 1, 80, 83, 800, 803 }, // 82 IIC_VST1
+  { 1, 89, 92, 844, 847 }, // 83 IIC_VST1ln
+  { 1, 89, 92, 847, 852 }, // 84 IIC_VST1lnu
+  { 1, 80, 83, 818, 823 }, // 85 IIC_VST1u
+  { 1, 80, 83, 803, 807 }, // 86 IIC_VST1x2
+  { 1, 80, 83, 823, 829 }, // 87 IIC_VST1x2u
+  { 1, 83, 86, 807, 812 }, // 88 IIC_VST1x3
+  { 1, 83, 86, 829, 836 }, // 89 IIC_VST1x3u
+  { 1, 83, 86, 812, 818 }, // 90 IIC_VST1x4
+  { 1, 83, 86, 836, 844 }, // 91 IIC_VST1x4u
+  { 1, 80, 83, 852, 856 }, // 92 IIC_VST2
+  { 1, 80, 83, 876, 880 }, // 93 IIC_VST2ln
+  { 1, 80, 83, 880, 886 }, // 94 IIC_VST2lnu
+  { 1, 80, 83, 862, 868 }, // 95 IIC_VST2u
+  { 1, 92, 95, 856, 862 }, // 96 IIC_VST2x2
+  { 1, 92, 95, 868, 876 }, // 97 IIC_VST2x2u
+  { 1, 83, 86, 886, 891 }, // 98 IIC_VST3
+  { 1, 83, 86, 898, 903 }, // 99 IIC_VST3ln
+  { 1, 83, 86, 903, 910 }, // 100 IIC_VST3lnu
+  { 1, 83, 86, 891, 898 }, // 101 IIC_VST3u
+  { 1, 92, 95, 910, 916 }, // 102 IIC_VST4
+  { 1, 92, 95, 924, 930 }, // 103 IIC_VST4ln
+  { 1, 92, 95, 930, 938 }, // 104 IIC_VST4lnu
+  { 1, 92, 95, 916, 924 }, // 105 IIC_VST4u
+  { 1, 43, 45, 1037, 1040 }, // 106 IIC_VSUBi4D
+  { 1, 43, 45, 1040, 1043 }, // 107 IIC_VSUBi4Q
+  { 1, 43, 45, 1031, 1034 }, // 108 IIC_VSUBiD
+  { 1, 43, 45, 1034, 1037 }, // 109 IIC_VSUBiQ
+  { 1, 100, 102, 1103, 1106 }, // 110 IIC_VTB1
+  { 1, 100, 102, 1106, 1110 }, // 111 IIC_VTB2
+  { 1, 102, 106, 1110, 1115 }, // 112 IIC_VTB3
+  { 1, 102, 106, 1115, 1121 }, // 113 IIC_VTB4
+  { 1, 100, 102, 1121, 1125 }, // 114 IIC_VTBX1
+  { 1, 100, 102, 1125, 1130 }, // 115 IIC_VTBX2
+  { 1, 102, 106, 1130, 1136 }, // 116 IIC_VTBX3
+  { 1, 102, 106, 1136, 1143 }, // 117 IIC_VTBX4
+  { 1, 43, 45, 938, 940 }, // 118 IIC_VUNAD
+  { 1, 98, 100, 940, 942 }, // 119 IIC_VUNAQ
+  { 1, 43, 45, 1011, 1013 }, // 120 IIC_VUNAiD
+  { 1, 43, 45, 1013, 1015 }, // 121 IIC_VUNAiQ
+  { 1, 43, 45, 562, 565 }, // 122 IIC_fpALU32
+  { 1, 57, 60, 565, 568 }, // 123 IIC_fpALU64
+  { 1, 43, 45, 546, 548 }, // 124 IIC_fpCMP32
+  { 1, 45, 48, 548, 550 }, // 125 IIC_fpCMP64
+  { 1, 54, 57, 556, 558 }, // 126 IIC_fpCVTDI
+  { 1, 51, 54, 552, 554 }, // 127 IIC_fpCVTDS
+  { 1, 0, 0, 0, 0 }, // 128 IIC_fpCVTHS
+  { 1, 54, 57, 560, 562 }, // 129 IIC_fpCVTID
+  { 1, 43, 45, 558, 560 }, // 130 IIC_fpCVTIS
+  { 1, 48, 51, 550, 552 }, // 131 IIC_fpCVTSD
+  { 1, 0, 0, 0, 0 }, // 132 IIC_fpCVTSH
+  { 1, 43, 45, 554, 556 }, // 133 IIC_fpCVTSI
+  { 1, 66, 69, 582, 585 }, // 134 IIC_fpDIV32
+  { 1, 69, 72, 585, 588 }, // 135 IIC_fpDIV64
+  { 1, 72, 75, 602, 604 }, // 136 IIC_fpLoad32
+  { 1, 72, 75, 604, 606 }, // 137 IIC_fpLoad64
+  { 0, 75, 80, 606, 610 }, // 138 IIC_fpLoad_m
+  { 0, 75, 80, 610, 615 }, // 139 IIC_fpLoad_mu
+  { 1, 43, 45, 574, 578 }, // 140 IIC_fpMAC32
+  { 1, 63, 66, 578, 582 }, // 141 IIC_fpMAC64
+  { 1, 43, 45, 599, 602 }, // 142 IIC_fpMOVDI
+  { 1, 43, 45, 594, 597 }, // 143 IIC_fpMOVID
+  { 1, 43, 45, 592, 594 }, // 144 IIC_fpMOVIS
+  { 1, 43, 45, 597, 599 }, // 145 IIC_fpMOVSI
+  { 1, 43, 45, 568, 571 }, // 146 IIC_fpMUL32
+  { 1, 60, 63, 571, 574 }, // 147 IIC_fpMUL64
+  { 1, 63, 66, 588, 590 }, // 148 IIC_fpSQRT32
+  { 1, 69, 72, 590, 592 }, // 149 IIC_fpSQRT64
+  { 1, 41, 43, 541, 542 }, // 150 IIC_fpSTAT
+  { 1, 72, 75, 615, 617 }, // 151 IIC_fpStore32
+  { 1, 72, 75, 617, 619 }, // 152 IIC_fpStore64
+  { 0, 75, 80, 619, 623 }, // 153 IIC_fpStore_m
+  { 0, 75, 80, 623, 628 }, // 154 IIC_fpStore_mu
+  { 1, 43, 45, 542, 544 }, // 155 IIC_fpUNA32
+  { 1, 45, 48, 544, 546 }, // 156 IIC_fpUNA64
+  { 1, 13, 14, 314, 316 }, // 157 IIC_iALUi
+  { 1, 13, 14, 316, 319 }, // 158 IIC_iALUr
+  { 1, 13, 14, 319, 322 }, // 159 IIC_iALUsi
+  { 1, 13, 14, 322, 325 }, // 160 IIC_iALUsir
+  { 1, 13, 14, 325, 329 }, // 161 IIC_iALUsr
+  { 1, 13, 14, 0, 0 }, // 162 IIC_iALUx
+  { 1, 13, 14, 329, 331 }, // 163 IIC_iBITi
+  { 1, 13, 14, 331, 334 }, // 164 IIC_iBITr
+  { 1, 13, 14, 334, 337 }, // 165 IIC_iBITsi
+  { 1, 13, 14, 337, 341 }, // 166 IIC_iBITsr
+  { 1, 13, 14, 381, 382 }, // 167 IIC_iCMOVi
+  { 1, 14, 16, 389, 391 }, // 168 IIC_iCMOVix2
+  { 1, 13, 14, 382, 384 }, // 169 IIC_iCMOVr
+  { 1, 13, 14, 384, 386 }, // 170 IIC_iCMOVsi
+  { 1, 13, 14, 386, 389 }, // 171 IIC_iCMOVsr
+  { 1, 13, 14, 354, 355 }, // 172 IIC_iCMPi
+  { 1, 13, 14, 355, 357 }, // 173 IIC_iCMPr
+  { 1, 13, 14, 357, 359 }, // 174 IIC_iCMPsi
+  { 1, 13, 14, 359, 362 }, // 175 IIC_iCMPsr
+  { 1, 13, 14, 347, 350 }, // 176 IIC_iEXTAr
+  { 1, 13, 14, 350, 354 }, // 177 IIC_iEXTAsr
+  { 1, 13, 14, 345, 347 }, // 178 IIC_iEXTr
+  { 1, 25, 27, 423, 425 }, // 179 IIC_iLoad_bh_i
+  { 1, 25, 27, 445, 448 }, // 180 IIC_iLoad_bh_iu
+  { 1, 25, 27, 430, 433 }, // 181 IIC_iLoad_bh_r
+  { 1, 25, 27, 452, 456 }, // 182 IIC_iLoad_bh_ru
+  { 1, 27, 29, 439, 442 }, // 183 IIC_iLoad_bh_si
+  { 1, 29, 31, 464, 468 }, // 184 IIC_iLoad_bh_siu
+  { 1, 25, 27, 425, 427 }, // 185 IIC_iLoad_d_i
+  { 1, 25, 27, 433, 436 }, // 186 IIC_iLoad_d_r
+  { 1, 25, 27, 456, 460 }, // 187 IIC_iLoad_d_ru
+  { 1, 25, 27, 421, 423 }, // 188 IIC_iLoad_i
+  { 1, 25, 27, 442, 445 }, // 189 IIC_iLoad_iu
+  { 0, 31, 33, 468, 473 }, // 190 IIC_iLoad_m
+  { 0, 35, 38, 478, 483 }, // 191 IIC_iLoad_mBr
+  { 0, 33, 35, 473, 478 }, // 192 IIC_iLoad_mu
+  { 1, 25, 27, 427, 430 }, // 193 IIC_iLoad_r
+  { 1, 25, 27, 448, 452 }, // 194 IIC_iLoad_ru
+  { 1, 27, 29, 436, 439 }, // 195 IIC_iLoad_si
+  { 1, 29, 31, 460, 464 }, // 196 IIC_iLoad_siu
+  { 1, 38, 41, 489, 491 }, // 197 IIC_iLoadiALU
+  { 1, 23, 24, 402, 406 }, // 198 IIC_iMAC16
+  { 1, 23, 24, 409, 413 }, // 199 IIC_iMAC32
+  { 1, 24, 25, 417, 421 }, // 200 IIC_iMAC64
+  { 1, 13, 14, 370, 371 }, // 201 IIC_iMOVi
+  { 1, 14, 16, 378, 379 }, // 202 IIC_iMOVix2
+  { 1, 16, 19, 379, 380 }, // 203 IIC_iMOVix2addpc
+  { 1, 19, 22, 380, 381 }, // 204 IIC_iMOVix2ld
+  { 1, 13, 14, 371, 373 }, // 205 IIC_iMOVr
+  { 1, 13, 14, 373, 375 }, // 206 IIC_iMOVsi
+  { 1, 13, 14, 375, 378 }, // 207 IIC_iMOVsr
+  { 1, 22, 23, 399, 402 }, // 208 IIC_iMUL16
+  { 1, 23, 24, 406, 409 }, // 209 IIC_iMUL32
+  { 1, 24, 25, 413, 417 }, // 210 IIC_iMUL64
+  { 1, 13, 14, 391, 392 }, // 211 IIC_iMVNi
+  { 1, 13, 14, 392, 394 }, // 212 IIC_iMVNr
+  { 1, 13, 14, 394, 396 }, // 213 IIC_iMVNsi
+  { 1, 13, 14, 396, 399 }, // 214 IIC_iMVNsr
+  { 0, 33, 35, 483, 486 }, // 215 IIC_iPop
+  { 0, 35, 38, 486, 489 }, // 216 IIC_iPop_Br
+  { 1, 25, 27, 493, 495 }, // 217 IIC_iStore_bh_i
+  { 1, 25, 27, 515, 518 }, // 218 IIC_iStore_bh_iu
+  { 1, 25, 27, 500, 503 }, // 219 IIC_iStore_bh_r
+  { 1, 25, 27, 522, 526 }, // 220 IIC_iStore_bh_ru
+  { 1, 29, 31, 509, 512 }, // 221 IIC_iStore_bh_si
+  { 1, 29, 31, 534, 538 }, // 222 IIC_iStore_bh_siu
+  { 1, 25, 27, 495, 497 }, // 223 IIC_iStore_d_i
+  { 1, 25, 27, 503, 506 }, // 224 IIC_iStore_d_r
+  { 1, 25, 27, 526, 530 }, // 225 IIC_iStore_d_ru
+  { 1, 25, 27, 491, 493 }, // 226 IIC_iStore_i
+  { 1, 25, 27, 512, 515 }, // 227 IIC_iStore_iu
+  { 0, 31, 33, 0, 0 }, // 228 IIC_iStore_m
+  { 0, 31, 33, 538, 539 }, // 229 IIC_iStore_mu
+  { 1, 25, 27, 497, 500 }, // 230 IIC_iStore_r
+  { 1, 25, 27, 518, 522 }, // 231 IIC_iStore_ru
+  { 1, 29, 31, 506, 509 }, // 232 IIC_iStore_si
+  { 1, 29, 31, 530, 534 }, // 233 IIC_iStore_siu
+  { 1, 13, 14, 362, 363 }, // 234 IIC_iTSTi
+  { 1, 13, 14, 363, 365 }, // 235 IIC_iTSTr
+  { 1, 13, 14, 365, 367 }, // 236 IIC_iTSTsi
+  { 1, 13, 14, 367, 370 }, // 237 IIC_iTSTsr
+  { 1, 13, 14, 341, 343 }, // 238 IIC_iUNAr
+  { 1, 13, 14, 343, 345 }, // 239 IIC_iUNAsi
+  { 1, 0, 0, 0, 0 }, // 240 NoItinerary
+  { 1, ~0U, ~0U, ~0U, ~0U } // end marker
+};
+
+llvm::InstrItinerary CortexA9Itineraries[] = {
+  { 1, 177, 180, 0, 0 }, // 0 IIC_Br
+  { 1, 176, 177, 1369, 1371 }, // 1 IIC_Preload
+  { 1, 297, 302, 1820, 1824 }, // 2 IIC_VABAD
+  { 1, 307, 312, 1824, 1828 }, // 3 IIC_VABAQ
+  { 1, 297, 302, 1888, 1891 }, // 4 IIC_VBIND
+  { 1, 302, 307, 1897, 1900 }, // 5 IIC_VBINQ
+  { 1, 297, 302, 1802, 1805 }, // 6 IIC_VBINi4D
+  { 1, 297, 302, 1805, 1808 }, // 7 IIC_VBINi4Q
+  { 1, 297, 302, 1778, 1781 }, // 8 IIC_VBINiD
+  { 1, 297, 302, 1781, 1784 }, // 9 IIC_VBINiQ
+  { 1, 297, 302, 1814, 1817 }, // 10 IIC_VCNTiD
+  { 1, 302, 307, 1817, 1820 }, // 11 IIC_VCNTiQ
+  { 1, 297, 302, 1929, 1932 }, // 12 IIC_VEXTD
+  { 1, 302, 307, 1932, 1935 }, // 13 IIC_VEXTQ
+  { 1, 297, 302, 1894, 1897 }, // 14 IIC_VFMULD
+  { 1, 332, 337, 1900, 1903 }, // 15 IIC_VFMULQ
+  { 1, 249, 255, 1460, 1462 }, // 16 IIC_VLD1
+  { 1, 249, 255, 1502, 1504 }, // 17 IIC_VLD1dup
+  { 1, 249, 255, 1504, 1508 }, // 18 IIC_VLD1dupu
+  { 1, 255, 261, 1492, 1496 }, // 19 IIC_VLD1ln
+  { 1, 255, 261, 1496, 1502 }, // 20 IIC_VLD1lnu
+  { 1, 249, 255, 1474, 1477 }, // 21 IIC_VLD1u
+  { 1, 249, 255, 1462, 1465 }, // 22 IIC_VLD1x2
+  { 1, 249, 255, 1477, 1481 }, // 23 IIC_VLD1x2u
+  { 1, 255, 261, 1465, 1469 }, // 24 IIC_VLD1x3
+  { 1, 255, 261, 1481, 1486 }, // 25 IIC_VLD1x3u
+  { 1, 255, 261, 1469, 1474 }, // 26 IIC_VLD1x4
+  { 1, 255, 261, 1486, 1492 }, // 27 IIC_VLD1x4u
+  { 1, 249, 255, 1508, 1511 }, // 28 IIC_VLD2
+  { 1, 249, 255, 1542, 1545 }, // 29 IIC_VLD2dup
+  { 1, 249, 255, 1545, 1550 }, // 30 IIC_VLD2dupu
+  { 1, 255, 261, 1516, 1522 }, // 31 IIC_VLD2ln
+  { 1, 255, 261, 1534, 1542 }, // 32 IIC_VLD2lnu
+  { 1, 249, 255, 1522, 1528 }, // 33 IIC_VLD2u
+  { 1, 255, 261, 1511, 1516 }, // 34 IIC_VLD2x2
+  { 1, 255, 261, 1528, 1534 }, // 35 IIC_VLD2x2u
+  { 1, 261, 267, 1550, 1554 }, // 36 IIC_VLD3
+  { 1, 261, 267, 1577, 1581 }, // 37 IIC_VLD3dup
+  { 1, 261, 267, 1581, 1587 }, // 38 IIC_VLD3dupu
+  { 1, 267, 273, 1554, 1562 }, // 39 IIC_VLD3ln
+  { 1, 267, 273, 1567, 1577 }, // 40 IIC_VLD3lnu
+  { 1, 261, 267, 1562, 1567 }, // 41 IIC_VLD3u
+  { 1, 261, 267, 1587, 1592 }, // 42 IIC_VLD4
+  { 1, 255, 261, 1620, 1625 }, // 43 IIC_VLD4dup
+  { 1, 255, 261, 1625, 1632 }, // 44 IIC_VLD4dupu
+  { 1, 273, 279, 1592, 1602 }, // 45 IIC_VLD4ln
+  { 1, 273, 279, 1608, 1620 }, // 46 IIC_VLD4lnu
+  { 1, 261, 267, 1602, 1608 }, // 47 IIC_VLD4u
+  { 1, 302, 307, 1903, 1907 }, // 48 IIC_VMACD
+  { 1, 312, 317, 1907, 1911 }, // 49 IIC_VMACQ
+  { 1, 297, 302, 1846, 1850 }, // 50 IIC_VMACi16D
+  { 1, 302, 307, 1854, 1858 }, // 51 IIC_VMACi16Q
+  { 1, 302, 307, 1850, 1854 }, // 52 IIC_VMACi32D
+  { 1, 312, 317, 1858, 1862 }, // 53 IIC_VMACi32Q
+  { 1, 317, 322, 1862, 1864 }, // 54 IIC_VMOV
+  { 1, 297, 302, 1865, 1867 }, // 55 IIC_VMOVD
+  { 1, 322, 327, 1876, 1879 }, // 56 IIC_VMOVDI
+  { 1, 322, 327, 1871, 1874 }, // 57 IIC_VMOVID
+  { 1, 322, 327, 1869, 1871 }, // 58 IIC_VMOVIS
+  { 1, 327, 332, 1879, 1882 }, // 59 IIC_VMOVISL
+  { 1, 297, 302, 1864, 1865 }, // 60 IIC_VMOVImm
+  { 1, 297, 302, 1882, 1884 }, // 61 IIC_VMOVN
+  { 1, 297, 302, 1867, 1869 }, // 62 IIC_VMOVQ
+  { 1, 322, 327, 1874, 1876 }, // 63 IIC_VMOVSI
+  { 1, 297, 302, 1834, 1837 }, // 64 IIC_VMULi16D
+  { 1, 302, 307, 1837, 1840 }, // 65 IIC_VMULi16Q
+  { 1, 302, 307, 1840, 1843 }, // 66 IIC_VMULi32D
+  { 1, 312, 317, 1843, 1846 }, // 67 IIC_VMULi32Q
+  { 1, 297, 302, 1828, 1831 }, // 68 IIC_VPALiD
+  { 1, 307, 312, 1831, 1834 }, // 69 IIC_VPALiQ
+  { 1, 297, 302, 1891, 1894 }, // 70 IIC_VPBIND
+  { 1, 297, 302, 1917, 1921 }, // 71 IIC_VPERMD
+  { 1, 302, 307, 1921, 1925 }, // 72 IIC_VPERMQ
+  { 1, 347, 352, 1925, 1929 }, // 73 IIC_VPERMQ3
+  { 1, 297, 302, 1774, 1776 }, // 74 IIC_VQUNAiD
+  { 1, 297, 302, 1776, 1778 }, // 75 IIC_VQUNAiQ
+  { 1, 337, 342, 1911, 1914 }, // 76 IIC_VRECSD
+  { 1, 342, 347, 1914, 1917 }, // 77 IIC_VRECSQ
+  { 1, 297, 302, 1796, 1799 }, // 78 IIC_VSHLi4D
+  { 1, 297, 302, 1799, 1802 }, // 79 IIC_VSHLi4Q
+  { 1, 297, 302, 1790, 1793 }, // 80 IIC_VSHLiD
+  { 1, 297, 302, 1793, 1796 }, // 81 IIC_VSHLiQ
+  { 1, 279, 285, 1632, 1635 }, // 82 IIC_VST1
+  { 1, 279, 285, 1676, 1679 }, // 83 IIC_VST1ln
+  { 1, 279, 285, 1679, 1684 }, // 84 IIC_VST1lnu
+  { 1, 279, 285, 1650, 1655 }, // 85 IIC_VST1u
+  { 1, 279, 285, 1635, 1639 }, // 86 IIC_VST1x2
+  { 1, 279, 285, 1655, 1661 }, // 87 IIC_VST1x2u
+  { 1, 285, 291, 1639, 1644 }, // 88 IIC_VST1x3
+  { 1, 285, 291, 1661, 1668 }, // 89 IIC_VST1x3u
+  { 1, 285, 291, 1644, 1650 }, // 90 IIC_VST1x4
+  { 1, 285, 291, 1668, 1676 }, // 91 IIC_VST1x4u
+  { 1, 279, 285, 1684, 1688 }, // 92 IIC_VST2
+  { 1, 279, 285, 1708, 1712 }, // 93 IIC_VST2ln
+  { 1, 279, 285, 1712, 1718 }, // 94 IIC_VST2lnu
+  { 1, 279, 285, 1694, 1700 }, // 95 IIC_VST2u
+  { 1, 291, 297, 1688, 1694 }, // 96 IIC_VST2x2
+  { 1, 291, 297, 1700, 1708 }, // 97 IIC_VST2x2u
+  { 1, 285, 291, 1718, 1723 }, // 98 IIC_VST3
+  { 1, 291, 297, 1730, 1735 }, // 99 IIC_VST3ln
+  { 1, 291, 297, 1735, 1742 }, // 100 IIC_VST3lnu
+  { 1, 285, 291, 1723, 1730 }, // 101 IIC_VST3u
+  { 1, 285, 291, 1742, 1748 }, // 102 IIC_VST4
+  { 1, 285, 291, 1756, 1762 }, // 103 IIC_VST4ln
+  { 1, 285, 291, 1762, 1770 }, // 104 IIC_VST4lnu
+  { 1, 285, 291, 1748, 1756 }, // 105 IIC_VST4u
+  { 1, 297, 302, 1808, 1811 }, // 106 IIC_VSUBi4D
+  { 1, 297, 302, 1811, 1814 }, // 107 IIC_VSUBi4Q
+  { 1, 297, 302, 1784, 1787 }, // 108 IIC_VSUBiD
+  { 1, 297, 302, 1787, 1790 }, // 109 IIC_VSUBiQ
+  { 1, 302, 307, 1935, 1938 }, // 110 IIC_VTB1
+  { 1, 352, 357, 1938, 1942 }, // 111 IIC_VTB2
+  { 1, 357, 362, 1942, 1947 }, // 112 IIC_VTB3
+  { 1, 347, 352, 1947, 1953 }, // 113 IIC_VTB4
+  { 1, 302, 307, 1953, 1957 }, // 114 IIC_VTBX1
+  { 1, 302, 307, 1957, 1962 }, // 115 IIC_VTBX2
+  { 1, 347, 352, 1962, 1968 }, // 116 IIC_VTBX3
+  { 1, 362, 367, 1968, 1975 }, // 117 IIC_VTBX4
+  { 1, 297, 302, 1884, 1886 }, // 118 IIC_VUNAD
+  { 1, 302, 307, 1886, 1888 }, // 119 IIC_VUNAQ
+  { 1, 297, 302, 1770, 1772 }, // 120 IIC_VUNAiD
+  { 1, 297, 302, 1772, 1774 }, // 121 IIC_VUNAiQ
+  { 1, 190, 195, 1396, 1399 }, // 122 IIC_fpALU32
+  { 1, 190, 195, 1399, 1402 }, // 123 IIC_fpALU64
+  { 1, 190, 195, 1376, 1378 }, // 124 IIC_fpCMP32
+  { 1, 190, 195, 1378, 1380 }, // 125 IIC_fpCMP64
+  { 1, 190, 195, 1390, 1392 }, // 126 IIC_fpCVTDI
+  { 1, 190, 195, 1382, 1384 }, // 127 IIC_fpCVTDS
+  { 1, 185, 190, 1386, 1388 }, // 128 IIC_fpCVTHS
+  { 1, 190, 195, 1394, 1396 }, // 129 IIC_fpCVTID
+  { 1, 190, 195, 1392, 1394 }, // 130 IIC_fpCVTIS
+  { 1, 190, 195, 1380, 1382 }, // 131 IIC_fpCVTSD
+  { 1, 190, 195, 1384, 1386 }, // 132 IIC_fpCVTSH
+  { 1, 190, 195, 1388, 1390 }, // 133 IIC_fpCVTSI
+  { 1, 215, 220, 1416, 1419 }, // 134 IIC_fpDIV32
+  { 1, 220, 225, 1419, 1422 }, // 135 IIC_fpDIV64
+  { 1, 237, 243, 1436, 1438 }, // 136 IIC_fpLoad32
+  { 1, 237, 243, 1438, 1440 }, // 137 IIC_fpLoad64
+  { 0, 243, 249, 1440, 1444 }, // 138 IIC_fpLoad_m
+  { 0, 243, 249, 1444, 1448 }, // 139 IIC_fpLoad_mu
+  { 1, 205, 210, 1408, 1412 }, // 140 IIC_fpMAC32
+  { 1, 210, 215, 1412, 1416 }, // 141 IIC_fpMAC64
+  { 1, 235, 237, 1433, 1436 }, // 142 IIC_fpMOVDI
+  { 1, 185, 190, 1428, 1431 }, // 143 IIC_fpMOVID
+  { 1, 185, 190, 1426, 1428 }, // 144 IIC_fpMOVIS
+  { 1, 235, 237, 1431, 1433 }, // 145 IIC_fpMOVSI
+  { 1, 195, 200, 1402, 1405 }, // 146 IIC_fpMUL32
+  { 1, 200, 205, 1405, 1408 }, // 147 IIC_fpMUL64
+  { 1, 225, 230, 1422, 1424 }, // 148 IIC_fpSQRT32
+  { 1, 230, 235, 1424, 1426 }, // 149 IIC_fpSQRT64
+  { 1, 180, 185, 1371, 1372 }, // 150 IIC_fpSTAT
+  { 1, 237, 243, 1448, 1450 }, // 151 IIC_fpStore32
+  { 1, 237, 243, 1450, 1452 }, // 152 IIC_fpStore64
+  { 0, 243, 249, 1452, 1456 }, // 153 IIC_fpStore_m
+  { 0, 243, 249, 1456, 1460 }, // 154 IIC_fpStore_mu
+  { 1, 185, 190, 1372, 1374 }, // 155 IIC_fpUNA32
+  { 1, 185, 190, 1374, 1376 }, // 156 IIC_fpUNA64
+  { 1, 110, 112, 1162, 1164 }, // 157 IIC_iALUi
+  { 1, 110, 112, 1164, 1167 }, // 158 IIC_iALUr
+  { 1, 112, 114, 1167, 1170 }, // 159 IIC_iALUsi
+  { 1, 112, 114, 1170, 1173 }, // 160 IIC_iALUsir
+  { 1, 127, 129, 1173, 1177 }, // 161 IIC_iALUsr
+  { 1, 110, 112, 0, 0 }, // 162 IIC_iALUx
+  { 1, 110, 112, 1177, 1179 }, // 163 IIC_iBITi
+  { 1, 110, 112, 1179, 1182 }, // 164 IIC_iBITr
+  { 1, 112, 114, 1182, 1185 }, // 165 IIC_iBITsi
+  { 1, 127, 129, 1185, 1189 }, // 166 IIC_iBITsr
+  { 1, 110, 112, 1218, 1219 }, // 167 IIC_iCMOVi
+  { 1, 129, 133, 1226, 1227 }, // 168 IIC_iCMOVix2
+  { 1, 110, 112, 1219, 1221 }, // 169 IIC_iCMOVr
+  { 1, 110, 112, 1221, 1223 }, // 170 IIC_iCMOVsi
+  { 1, 112, 114, 1223, 1226 }, // 171 IIC_iCMOVsr
+  { 1, 110, 112, 1202, 1203 }, // 172 IIC_iCMPi
+  { 1, 110, 112, 1203, 1205 }, // 173 IIC_iCMPr
+  { 1, 112, 114, 1205, 1207 }, // 174 IIC_iCMPsi
+  { 1, 127, 129, 1207, 1210 }, // 175 IIC_iCMPsr
+  { 1, 112, 114, 1195, 1198 }, // 176 IIC_iEXTAr
+  { 1, 127, 129, 1198, 1202 }, // 177 IIC_iEXTAsr
+  { 1, 110, 112, 1193, 1195 }, // 178 IIC_iEXTr
+  { 1, 141, 145, 1251, 1253 }, // 179 IIC_iLoad_bh_i
+  { 1, 141, 145, 1275, 1278 }, // 180 IIC_iLoad_bh_iu
+  { 1, 141, 145, 1259, 1262 }, // 181 IIC_iLoad_bh_r
+  { 1, 141, 145, 1282, 1286 }, // 182 IIC_iLoad_bh_ru
+  { 1, 141, 145, 1269, 1272 }, // 183 IIC_iLoad_bh_si
+  { 1, 141, 145, 1294, 1298 }, // 184 IIC_iLoad_bh_siu
+  { 1, 141, 145, 1253, 1256 }, // 185 IIC_iLoad_d_i
+  { 1, 141, 145, 1262, 1266 }, // 186 IIC_iLoad_d_r
+  { 1, 141, 145, 1286, 1290 }, // 187 IIC_iLoad_d_ru
+  { 1, 137, 141, 1249, 1251 }, // 188 IIC_iLoad_i
+  { 1, 137, 141, 1272, 1275 }, // 189 IIC_iLoad_iu
+  { 0, 149, 153, 1298, 1303 }, // 190 IIC_iLoad_m
+  { 0, 153, 158, 1308, 1313 }, // 191 IIC_iLoad_mBr
+  { 0, 149, 153, 1303, 1308 }, // 192 IIC_iLoad_mu
+  { 1, 137, 141, 1256, 1259 }, // 193 IIC_iLoad_r
+  { 1, 137, 141, 1278, 1282 }, // 194 IIC_iLoad_ru
+  { 1, 145, 149, 1266, 1269 }, // 195 IIC_iLoad_si
+  { 1, 137, 141, 1290, 1294 }, // 196 IIC_iLoad_siu
+  { 1, 163, 168, 1319, 1321 }, // 197 IIC_iLoadiALU
+  { 1, 133, 135, 1230, 1234 }, // 198 IIC_iMAC16
+  { 1, 133, 135, 1237, 1241 }, // 199 IIC_iMAC32
+  { 1, 135, 137, 1245, 1249 }, // 200 IIC_iMAC64
+  { 1, 110, 112, 1143, 1144 }, // 201 IIC_iMOVi
+  { 1, 114, 117, 1151, 1152 }, // 202 IIC_iMOVix2
+  { 1, 117, 121, 1152, 1153 }, // 203 IIC_iMOVix2addpc
+  { 1, 121, 127, 1153, 1154 }, // 204 IIC_iMOVix2ld
+  { 1, 110, 112, 1144, 1146 }, // 205 IIC_iMOVr
+  { 1, 110, 112, 1146, 1148 }, // 206 IIC_iMOVsi
+  { 1, 112, 114, 1148, 1151 }, // 207 IIC_iMOVsr
+  { 1, 133, 135, 1227, 1230 }, // 208 IIC_iMUL16
+  { 1, 133, 135, 1234, 1237 }, // 209 IIC_iMUL32
+  { 1, 135, 137, 1241, 1245 }, // 210 IIC_iMUL64
+  { 1, 110, 112, 1154, 1155 }, // 211 IIC_iMVNi
+  { 1, 110, 112, 1155, 1157 }, // 212 IIC_iMVNr
+  { 1, 112, 114, 1157, 1159 }, // 213 IIC_iMVNsi
+  { 1, 127, 129, 1159, 1162 }, // 214 IIC_iMVNsr
+  { 0, 149, 153, 1313, 1316 }, // 215 IIC_iPop
+  { 0, 158, 163, 1316, 1319 }, // 216 IIC_iPop_Br
+  { 1, 168, 172, 1323, 1325 }, // 217 IIC_iStore_bh_i
+  { 1, 168, 172, 1345, 1348 }, // 218 IIC_iStore_bh_iu
+  { 1, 168, 172, 1330, 1333 }, // 219 IIC_iStore_bh_r
+  { 1, 168, 172, 1352, 1356 }, // 220 IIC_iStore_bh_ru
+  { 1, 168, 172, 1339, 1342 }, // 221 IIC_iStore_bh_si
+  { 1, 168, 172, 1364, 1368 }, // 222 IIC_iStore_bh_siu
+  { 1, 168, 172, 1325, 1327 }, // 223 IIC_iStore_d_i
+  { 1, 168, 172, 1333, 1336 }, // 224 IIC_iStore_d_r
+  { 1, 168, 172, 1356, 1360 }, // 225 IIC_iStore_d_ru
+  { 1, 137, 141, 1321, 1323 }, // 226 IIC_iStore_i
+  { 1, 137, 141, 1342, 1345 }, // 227 IIC_iStore_iu
+  { 0, 172, 176, 0, 0 }, // 228 IIC_iStore_m
+  { 0, 172, 176, 1368, 1369 }, // 229 IIC_iStore_mu
+  { 1, 137, 141, 1327, 1330 }, // 230 IIC_iStore_r
+  { 1, 137, 141, 1348, 1352 }, // 231 IIC_iStore_ru
+  { 1, 137, 141, 1336, 1339 }, // 232 IIC_iStore_si
+  { 1, 137, 141, 1360, 1364 }, // 233 IIC_iStore_siu
+  { 1, 110, 112, 1210, 1211 }, // 234 IIC_iTSTi
+  { 1, 110, 112, 1211, 1213 }, // 235 IIC_iTSTr
+  { 1, 112, 114, 1213, 1215 }, // 236 IIC_iTSTsi
+  { 1, 127, 129, 1215, 1218 }, // 237 IIC_iTSTsr
+  { 1, 110, 112, 1189, 1191 }, // 238 IIC_iUNAr
+  { 1, 112, 114, 1191, 1193 }, // 239 IIC_iUNAsi
+  { 1, 0, 0, 0, 0 }, // 240 NoItinerary
+  { 1, ~0U, ~0U, ~0U, ~0U } // end marker
+};
+
+llvm::InstrItinerary GenericItineraries[] = {
+  { 1, 0, 0, 0, 0 }, // 0 IIC_Br
+  { 1, 0, 0, 0, 0 }, // 1 IIC_Preload
+  { 1, 0, 0, 0, 0 }, // 2 IIC_VABAD
+  { 1, 0, 0, 0, 0 }, // 3 IIC_VABAQ
+  { 1, 0, 0, 0, 0 }, // 4 IIC_VBIND
+  { 1, 0, 0, 0, 0 }, // 5 IIC_VBINQ
+  { 1, 0, 0, 0, 0 }, // 6 IIC_VBINi4D
+  { 1, 0, 0, 0, 0 }, // 7 IIC_VBINi4Q
+  { 1, 0, 0, 0, 0 }, // 8 IIC_VBINiD
+  { 1, 0, 0, 0, 0 }, // 9 IIC_VBINiQ
+  { 1, 0, 0, 0, 0 }, // 10 IIC_VCNTiD
+  { 1, 0, 0, 0, 0 }, // 11 IIC_VCNTiQ
+  { 1, 0, 0, 0, 0 }, // 12 IIC_VEXTD
+  { 1, 0, 0, 0, 0 }, // 13 IIC_VEXTQ
+  { 1, 0, 0, 0, 0 }, // 14 IIC_VFMULD
+  { 1, 0, 0, 0, 0 }, // 15 IIC_VFMULQ
+  { 1, 0, 0, 0, 0 }, // 16 IIC_VLD1
+  { 1, 0, 0, 0, 0 }, // 17 IIC_VLD1dup
+  { 1, 0, 0, 0, 0 }, // 18 IIC_VLD1dupu
+  { 1, 0, 0, 0, 0 }, // 19 IIC_VLD1ln
+  { 1, 0, 0, 0, 0 }, // 20 IIC_VLD1lnu
+  { 1, 0, 0, 0, 0 }, // 21 IIC_VLD1u
+  { 1, 0, 0, 0, 0 }, // 22 IIC_VLD1x2
+  { 1, 0, 0, 0, 0 }, // 23 IIC_VLD1x2u
+  { 1, 0, 0, 0, 0 }, // 24 IIC_VLD1x3
+  { 1, 0, 0, 0, 0 }, // 25 IIC_VLD1x3u
+  { 1, 0, 0, 0, 0 }, // 26 IIC_VLD1x4
+  { 1, 0, 0, 0, 0 }, // 27 IIC_VLD1x4u
+  { 1, 0, 0, 0, 0 }, // 28 IIC_VLD2
+  { 1, 0, 0, 0, 0 }, // 29 IIC_VLD2dup
+  { 1, 0, 0, 0, 0 }, // 30 IIC_VLD2dupu
+  { 1, 0, 0, 0, 0 }, // 31 IIC_VLD2ln
+  { 1, 0, 0, 0, 0 }, // 32 IIC_VLD2lnu
+  { 1, 0, 0, 0, 0 }, // 33 IIC_VLD2u
+  { 1, 0, 0, 0, 0 }, // 34 IIC_VLD2x2
+  { 1, 0, 0, 0, 0 }, // 35 IIC_VLD2x2u
+  { 1, 0, 0, 0, 0 }, // 36 IIC_VLD3
+  { 1, 0, 0, 0, 0 }, // 37 IIC_VLD3dup
+  { 1, 0, 0, 0, 0 }, // 38 IIC_VLD3dupu
+  { 1, 0, 0, 0, 0 }, // 39 IIC_VLD3ln
+  { 1, 0, 0, 0, 0 }, // 40 IIC_VLD3lnu
+  { 1, 0, 0, 0, 0 }, // 41 IIC_VLD3u
+  { 1, 0, 0, 0, 0 }, // 42 IIC_VLD4
+  { 1, 0, 0, 0, 0 }, // 43 IIC_VLD4dup
+  { 1, 0, 0, 0, 0 }, // 44 IIC_VLD4dupu
+  { 1, 0, 0, 0, 0 }, // 45 IIC_VLD4ln
+  { 1, 0, 0, 0, 0 }, // 46 IIC_VLD4lnu
+  { 1, 0, 0, 0, 0 }, // 47 IIC_VLD4u
+  { 1, 0, 0, 0, 0 }, // 48 IIC_VMACD
+  { 1, 0, 0, 0, 0 }, // 49 IIC_VMACQ
+  { 1, 0, 0, 0, 0 }, // 50 IIC_VMACi16D
+  { 1, 0, 0, 0, 0 }, // 51 IIC_VMACi16Q
+  { 1, 0, 0, 0, 0 }, // 52 IIC_VMACi32D
+  { 1, 0, 0, 0, 0 }, // 53 IIC_VMACi32Q
+  { 1, 0, 0, 0, 0 }, // 54 IIC_VMOV
+  { 1, 0, 0, 0, 0 }, // 55 IIC_VMOVD
+  { 1, 0, 0, 0, 0 }, // 56 IIC_VMOVDI
+  { 1, 0, 0, 0, 0 }, // 57 IIC_VMOVID
+  { 1, 0, 0, 0, 0 }, // 58 IIC_VMOVIS
+  { 1, 0, 0, 0, 0 }, // 59 IIC_VMOVISL
+  { 1, 0, 0, 0, 0 }, // 60 IIC_VMOVImm
+  { 1, 0, 0, 0, 0 }, // 61 IIC_VMOVN
+  { 1, 0, 0, 0, 0 }, // 62 IIC_VMOVQ
+  { 1, 0, 0, 0, 0 }, // 63 IIC_VMOVSI
+  { 1, 0, 0, 0, 0 }, // 64 IIC_VMULi16D
+  { 1, 0, 0, 0, 0 }, // 65 IIC_VMULi16Q
+  { 1, 0, 0, 0, 0 }, // 66 IIC_VMULi32D
+  { 1, 0, 0, 0, 0 }, // 67 IIC_VMULi32Q
+  { 1, 0, 0, 0, 0 }, // 68 IIC_VPALiD
+  { 1, 0, 0, 0, 0 }, // 69 IIC_VPALiQ
+  { 1, 0, 0, 0, 0 }, // 70 IIC_VPBIND
+  { 1, 0, 0, 0, 0 }, // 71 IIC_VPERMD
+  { 1, 0, 0, 0, 0 }, // 72 IIC_VPERMQ
+  { 1, 0, 0, 0, 0 }, // 73 IIC_VPERMQ3
+  { 1, 0, 0, 0, 0 }, // 74 IIC_VQUNAiD
+  { 1, 0, 0, 0, 0 }, // 75 IIC_VQUNAiQ
+  { 1, 0, 0, 0, 0 }, // 76 IIC_VRECSD
+  { 1, 0, 0, 0, 0 }, // 77 IIC_VRECSQ
+  { 1, 0, 0, 0, 0 }, // 78 IIC_VSHLi4D
+  { 1, 0, 0, 0, 0 }, // 79 IIC_VSHLi4Q
+  { 1, 0, 0, 0, 0 }, // 80 IIC_VSHLiD
+  { 1, 0, 0, 0, 0 }, // 81 IIC_VSHLiQ
+  { 1, 0, 0, 0, 0 }, // 82 IIC_VST1
+  { 1, 0, 0, 0, 0 }, // 83 IIC_VST1ln
+  { 1, 0, 0, 0, 0 }, // 84 IIC_VST1lnu
+  { 1, 0, 0, 0, 0 }, // 85 IIC_VST1u
+  { 1, 0, 0, 0, 0 }, // 86 IIC_VST1x2
+  { 1, 0, 0, 0, 0 }, // 87 IIC_VST1x2u
+  { 1, 0, 0, 0, 0 }, // 88 IIC_VST1x3
+  { 1, 0, 0, 0, 0 }, // 89 IIC_VST1x3u
+  { 1, 0, 0, 0, 0 }, // 90 IIC_VST1x4
+  { 1, 0, 0, 0, 0 }, // 91 IIC_VST1x4u
+  { 1, 0, 0, 0, 0 }, // 92 IIC_VST2
+  { 1, 0, 0, 0, 0 }, // 93 IIC_VST2ln
+  { 1, 0, 0, 0, 0 }, // 94 IIC_VST2lnu
+  { 1, 0, 0, 0, 0 }, // 95 IIC_VST2u
+  { 1, 0, 0, 0, 0 }, // 96 IIC_VST2x2
+  { 1, 0, 0, 0, 0 }, // 97 IIC_VST2x2u
+  { 1, 0, 0, 0, 0 }, // 98 IIC_VST3
+  { 1, 0, 0, 0, 0 }, // 99 IIC_VST3ln
+  { 1, 0, 0, 0, 0 }, // 100 IIC_VST3lnu
+  { 1, 0, 0, 0, 0 }, // 101 IIC_VST3u
+  { 1, 0, 0, 0, 0 }, // 102 IIC_VST4
+  { 1, 0, 0, 0, 0 }, // 103 IIC_VST4ln
+  { 1, 0, 0, 0, 0 }, // 104 IIC_VST4lnu
+  { 1, 0, 0, 0, 0 }, // 105 IIC_VST4u
+  { 1, 0, 0, 0, 0 }, // 106 IIC_VSUBi4D
+  { 1, 0, 0, 0, 0 }, // 107 IIC_VSUBi4Q
+  { 1, 0, 0, 0, 0 }, // 108 IIC_VSUBiD
+  { 1, 0, 0, 0, 0 }, // 109 IIC_VSUBiQ
+  { 1, 0, 0, 0, 0 }, // 110 IIC_VTB1
+  { 1, 0, 0, 0, 0 }, // 111 IIC_VTB2
+  { 1, 0, 0, 0, 0 }, // 112 IIC_VTB3
+  { 1, 0, 0, 0, 0 }, // 113 IIC_VTB4
+  { 1, 0, 0, 0, 0 }, // 114 IIC_VTBX1
+  { 1, 0, 0, 0, 0 }, // 115 IIC_VTBX2
+  { 1, 0, 0, 0, 0 }, // 116 IIC_VTBX3
+  { 1, 0, 0, 0, 0 }, // 117 IIC_VTBX4
+  { 1, 0, 0, 0, 0 }, // 118 IIC_VUNAD
+  { 1, 0, 0, 0, 0 }, // 119 IIC_VUNAQ
+  { 1, 0, 0, 0, 0 }, // 120 IIC_VUNAiD
+  { 1, 0, 0, 0, 0 }, // 121 IIC_VUNAiQ
+  { 1, 0, 0, 0, 0 }, // 122 IIC_fpALU32
+  { 1, 0, 0, 0, 0 }, // 123 IIC_fpALU64
+  { 1, 0, 0, 0, 0 }, // 124 IIC_fpCMP32
+  { 1, 0, 0, 0, 0 }, // 125 IIC_fpCMP64
+  { 1, 0, 0, 0, 0 }, // 126 IIC_fpCVTDI
+  { 1, 0, 0, 0, 0 }, // 127 IIC_fpCVTDS
+  { 1, 0, 0, 0, 0 }, // 128 IIC_fpCVTHS
+  { 1, 0, 0, 0, 0 }, // 129 IIC_fpCVTID
+  { 1, 0, 0, 0, 0 }, // 130 IIC_fpCVTIS
+  { 1, 0, 0, 0, 0 }, // 131 IIC_fpCVTSD
+  { 1, 0, 0, 0, 0 }, // 132 IIC_fpCVTSH
+  { 1, 0, 0, 0, 0 }, // 133 IIC_fpCVTSI
+  { 1, 0, 0, 0, 0 }, // 134 IIC_fpDIV32
+  { 1, 0, 0, 0, 0 }, // 135 IIC_fpDIV64
+  { 1, 0, 0, 0, 0 }, // 136 IIC_fpLoad32
+  { 1, 0, 0, 0, 0 }, // 137 IIC_fpLoad64
+  { 1, 0, 0, 0, 0 }, // 138 IIC_fpLoad_m
+  { 1, 0, 0, 0, 0 }, // 139 IIC_fpLoad_mu
+  { 1, 0, 0, 0, 0 }, // 140 IIC_fpMAC32
+  { 1, 0, 0, 0, 0 }, // 141 IIC_fpMAC64
+  { 1, 0, 0, 0, 0 }, // 142 IIC_fpMOVDI
+  { 1, 0, 0, 0, 0 }, // 143 IIC_fpMOVID
+  { 1, 0, 0, 0, 0 }, // 144 IIC_fpMOVIS
+  { 1, 0, 0, 0, 0 }, // 145 IIC_fpMOVSI
+  { 1, 0, 0, 0, 0 }, // 146 IIC_fpMUL32
+  { 1, 0, 0, 0, 0 }, // 147 IIC_fpMUL64
+  { 1, 0, 0, 0, 0 }, // 148 IIC_fpSQRT32
+  { 1, 0, 0, 0, 0 }, // 149 IIC_fpSQRT64
+  { 1, 0, 0, 0, 0 }, // 150 IIC_fpSTAT
+  { 1, 0, 0, 0, 0 }, // 151 IIC_fpStore32
+  { 1, 0, 0, 0, 0 }, // 152 IIC_fpStore64
+  { 1, 0, 0, 0, 0 }, // 153 IIC_fpStore_m
+  { 1, 0, 0, 0, 0 }, // 154 IIC_fpStore_mu
+  { 1, 0, 0, 0, 0 }, // 155 IIC_fpUNA32
+  { 1, 0, 0, 0, 0 }, // 156 IIC_fpUNA64
+  { 1, 0, 0, 0, 0 }, // 157 IIC_iALUi
+  { 1, 0, 0, 0, 0 }, // 158 IIC_iALUr
+  { 1, 0, 0, 0, 0 }, // 159 IIC_iALUsi
+  { 1, 0, 0, 0, 0 }, // 160 IIC_iALUsir
+  { 1, 0, 0, 0, 0 }, // 161 IIC_iALUsr
+  { 1, 0, 0, 0, 0 }, // 162 IIC_iALUx
+  { 1, 0, 0, 0, 0 }, // 163 IIC_iBITi
+  { 1, 0, 0, 0, 0 }, // 164 IIC_iBITr
+  { 1, 0, 0, 0, 0 }, // 165 IIC_iBITsi
+  { 1, 0, 0, 0, 0 }, // 166 IIC_iBITsr
+  { 1, 0, 0, 0, 0 }, // 167 IIC_iCMOVi
+  { 1, 0, 0, 0, 0 }, // 168 IIC_iCMOVix2
+  { 1, 0, 0, 0, 0 }, // 169 IIC_iCMOVr
+  { 1, 0, 0, 0, 0 }, // 170 IIC_iCMOVsi
+  { 1, 0, 0, 0, 0 }, // 171 IIC_iCMOVsr
+  { 1, 0, 0, 0, 0 }, // 172 IIC_iCMPi
+  { 1, 0, 0, 0, 0 }, // 173 IIC_iCMPr
+  { 1, 0, 0, 0, 0 }, // 174 IIC_iCMPsi
+  { 1, 0, 0, 0, 0 }, // 175 IIC_iCMPsr
+  { 1, 0, 0, 0, 0 }, // 176 IIC_iEXTAr
+  { 1, 0, 0, 0, 0 }, // 177 IIC_iEXTAsr
+  { 1, 0, 0, 0, 0 }, // 178 IIC_iEXTr
+  { 1, 0, 0, 0, 0 }, // 179 IIC_iLoad_bh_i
+  { 1, 0, 0, 0, 0 }, // 180 IIC_iLoad_bh_iu
+  { 1, 0, 0, 0, 0 }, // 181 IIC_iLoad_bh_r
+  { 1, 0, 0, 0, 0 }, // 182 IIC_iLoad_bh_ru
+  { 1, 0, 0, 0, 0 }, // 183 IIC_iLoad_bh_si
+  { 1, 0, 0, 0, 0 }, // 184 IIC_iLoad_bh_siu
+  { 1, 0, 0, 0, 0 }, // 185 IIC_iLoad_d_i
+  { 1, 0, 0, 0, 0 }, // 186 IIC_iLoad_d_r
+  { 1, 0, 0, 0, 0 }, // 187 IIC_iLoad_d_ru
+  { 1, 0, 0, 0, 0 }, // 188 IIC_iLoad_i
+  { 1, 0, 0, 0, 0 }, // 189 IIC_iLoad_iu
+  { 1, 0, 0, 0, 0 }, // 190 IIC_iLoad_m
+  { 1, 0, 0, 0, 0 }, // 191 IIC_iLoad_mBr
+  { 1, 0, 0, 0, 0 }, // 192 IIC_iLoad_mu
+  { 1, 0, 0, 0, 0 }, // 193 IIC_iLoad_r
+  { 1, 0, 0, 0, 0 }, // 194 IIC_iLoad_ru
+  { 1, 0, 0, 0, 0 }, // 195 IIC_iLoad_si
+  { 1, 0, 0, 0, 0 }, // 196 IIC_iLoad_siu
+  { 1, 0, 0, 0, 0 }, // 197 IIC_iLoadiALU
+  { 1, 0, 0, 0, 0 }, // 198 IIC_iMAC16
+  { 1, 0, 0, 0, 0 }, // 199 IIC_iMAC32
+  { 1, 0, 0, 0, 0 }, // 200 IIC_iMAC64
+  { 1, 0, 0, 0, 0 }, // 201 IIC_iMOVi
+  { 1, 0, 0, 0, 0 }, // 202 IIC_iMOVix2
+  { 1, 0, 0, 0, 0 }, // 203 IIC_iMOVix2addpc
+  { 1, 0, 0, 0, 0 }, // 204 IIC_iMOVix2ld
+  { 1, 0, 0, 0, 0 }, // 205 IIC_iMOVr
+  { 1, 0, 0, 0, 0 }, // 206 IIC_iMOVsi
+  { 1, 0, 0, 0, 0 }, // 207 IIC_iMOVsr
+  { 1, 0, 0, 0, 0 }, // 208 IIC_iMUL16
+  { 1, 0, 0, 0, 0 }, // 209 IIC_iMUL32
+  { 1, 0, 0, 0, 0 }, // 210 IIC_iMUL64
+  { 1, 0, 0, 0, 0 }, // 211 IIC_iMVNi
+  { 1, 0, 0, 0, 0 }, // 212 IIC_iMVNr
+  { 1, 0, 0, 0, 0 }, // 213 IIC_iMVNsi
+  { 1, 0, 0, 0, 0 }, // 214 IIC_iMVNsr
+  { 1, 0, 0, 0, 0 }, // 215 IIC_iPop
+  { 1, 0, 0, 0, 0 }, // 216 IIC_iPop_Br
+  { 1, 0, 0, 0, 0 }, // 217 IIC_iStore_bh_i
+  { 1, 0, 0, 0, 0 }, // 218 IIC_iStore_bh_iu
+  { 1, 0, 0, 0, 0 }, // 219 IIC_iStore_bh_r
+  { 1, 0, 0, 0, 0 }, // 220 IIC_iStore_bh_ru
+  { 1, 0, 0, 0, 0 }, // 221 IIC_iStore_bh_si
+  { 1, 0, 0, 0, 0 }, // 222 IIC_iStore_bh_siu
+  { 1, 0, 0, 0, 0 }, // 223 IIC_iStore_d_i
+  { 1, 0, 0, 0, 0 }, // 224 IIC_iStore_d_r
+  { 1, 0, 0, 0, 0 }, // 225 IIC_iStore_d_ru
+  { 1, 0, 0, 0, 0 }, // 226 IIC_iStore_i
+  { 1, 0, 0, 0, 0 }, // 227 IIC_iStore_iu
+  { 1, 0, 0, 0, 0 }, // 228 IIC_iStore_m
+  { 1, 0, 0, 0, 0 }, // 229 IIC_iStore_mu
+  { 1, 0, 0, 0, 0 }, // 230 IIC_iStore_r
+  { 1, 0, 0, 0, 0 }, // 231 IIC_iStore_ru
+  { 1, 0, 0, 0, 0 }, // 232 IIC_iStore_si
+  { 1, 0, 0, 0, 0 }, // 233 IIC_iStore_siu
+  { 1, 0, 0, 0, 0 }, // 234 IIC_iTSTi
+  { 1, 0, 0, 0, 0 }, // 235 IIC_iTSTr
+  { 1, 0, 0, 0, 0 }, // 236 IIC_iTSTsi
+  { 1, 0, 0, 0, 0 }, // 237 IIC_iTSTsr
+  { 1, 0, 0, 0, 0 }, // 238 IIC_iUNAr
+  { 1, 0, 0, 0, 0 }, // 239 IIC_iUNAsi
+  { 1, 0, 0, 0, 0 }, // 240 NoItinerary
+  { 1, ~0U, ~0U, ~0U, ~0U } // end marker
+};
+
+// Sorted (by key) array of itineraries for CPU subtype.
+llvm::SubtargetInfoKV ARMProcItinKV[] = {
+  { "arm1020e", (void *)&GenericItineraries },
+  { "arm1020t", (void *)&GenericItineraries },
+  { "arm1022e", (void *)&GenericItineraries },
+  { "arm10e", (void *)&GenericItineraries },
+  { "arm10tdmi", (void *)&GenericItineraries },
+  { "arm1136j-s", (void *)&ARMV6Itineraries },
+  { "arm1136jf-s", (void *)&ARMV6Itineraries },
+  { "arm1156t2-s", (void *)&ARMV6Itineraries },
+  { "arm1156t2f-s", (void *)&ARMV6Itineraries },
+  { "arm1176jz-s", (void *)&ARMV6Itineraries },
+  { "arm1176jzf-s", (void *)&ARMV6Itineraries },
+  { "arm710t", (void *)&GenericItineraries },
+  { "arm720t", (void *)&GenericItineraries },
+  { "arm7tdmi", (void *)&GenericItineraries },
+  { "arm7tdmi-s", (void *)&GenericItineraries },
+  { "arm8", (void *)&GenericItineraries },
+  { "arm810", (void *)&GenericItineraries },
+  { "arm9", (void *)&GenericItineraries },
+  { "arm920", (void *)&GenericItineraries },
+  { "arm920t", (void *)&GenericItineraries },
+  { "arm922t", (void *)&GenericItineraries },
+  { "arm926ej-s", (void *)&GenericItineraries },
+  { "arm940t", (void *)&GenericItineraries },
+  { "arm946e-s", (void *)&GenericItineraries },
+  { "arm966e-s", (void *)&GenericItineraries },
+  { "arm968e-s", (void *)&GenericItineraries },
+  { "arm9e", (void *)&GenericItineraries },
+  { "arm9tdmi", (void *)&GenericItineraries },
+  { "cortex-a8", (void *)&CortexA8Itineraries },
+  { "cortex-a9", (void *)&CortexA9Itineraries },
+  { "cortex-a9-mp", (void *)&CortexA9Itineraries },
+  { "cortex-m0", (void *)&ARMV6Itineraries },
+  { "cortex-m3", (void *)&GenericItineraries },
+  { "cortex-m4", (void *)&GenericItineraries },
+  { "ep9312", (void *)&GenericItineraries },
+  { "generic", (void *)&GenericItineraries },
+  { "iwmmxt", (void *)&GenericItineraries },
+  { "mpcore", (void *)&ARMV6Itineraries },
+  { "mpcorenovfp", (void *)&ARMV6Itineraries },
+  { "strongarm", (void *)&GenericItineraries },
+  { "strongarm110", (void *)&GenericItineraries },
+  { "strongarm1100", (void *)&GenericItineraries },
+  { "strongarm1110", (void *)&GenericItineraries },
+  { "xscale", (void *)&GenericItineraries }
+};
+
+static inline void InitARMMCSubtargetInfo(MCSubtargetInfo *II, StringRef TT, StringRef CPU, StringRef FS) {
+  II->InitMCSubtargetInfo(TT, CPU, FS, ARMFeatureKV, ARMSubTypeKV, ARMProcItinKV, ARMStages, ARMOperandCycles, ARMForwardingPathes, 28, 44);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_MC_DESC
+
+
+#ifdef GET_SUBTARGETINFO_TARGET_DESC
+#undef GET_SUBTARGETINFO_TARGET_DESC
+#include "llvm/Support/Debug.h"
+#include "llvm/Support/raw_ostream.h"
+// ParseSubtargetFeatures - Parses features string setting specified
+// subtarget options.
+void llvm::ARMSubtarget::ParseSubtargetFeatures(StringRef CPU, StringRef FS) {
+  DEBUG(dbgs() << "\nFeatures:" << FS);
+  DEBUG(dbgs() << "\nCPU:" << CPU);
+  uint64_t Bits = ReInitMCSubtargetInfo(CPU, FS);
+  if ((Bits & ARM::FeatureAvoidPartialCPSR) != 0) AvoidCPSRPartialUpdate = true;
+  if ((Bits & ARM::FeatureD16) != 0) HasD16 = true;
+  if ((Bits & ARM::FeatureDB) != 0) HasDataBarrier = true;
+  if ((Bits & ARM::FeatureDSPThumb2) != 0) Thumb2DSP = true;
+  if ((Bits & ARM::FeatureFP16) != 0) HasFP16 = true;
+  if ((Bits & ARM::FeatureHWDiv) != 0) HasHardwareDivide = true;
+  if ((Bits & ARM::FeatureHasSlowFPVMLx) != 0) SlowFPVMLx = true;
+  if ((Bits & ARM::FeatureMP) != 0) HasMPExtension = true;
+  if ((Bits & ARM::FeatureNEON) != 0) HasNEON = true;
+  if ((Bits & ARM::FeatureNEONForFP) != 0) UseNEONForSinglePrecisionFP = true;
+  if ((Bits & ARM::FeatureNoARM) != 0) NoARM = true;
+  if ((Bits & ARM::FeaturePref32BitThumb) != 0) Pref32BitThumb = true;
+  if ((Bits & ARM::FeatureSlowFPBrcc) != 0) SlowFPBrcc = true;
+  if ((Bits & ARM::FeatureT2XtPk) != 0) HasT2ExtractPack = true;
+  if ((Bits & ARM::FeatureThumb2) != 0) HasThumb2 = true;
+  if ((Bits & ARM::FeatureVFP2) != 0) HasVFPv2 = true;
+  if ((Bits & ARM::FeatureVFP3) != 0) HasVFPv3 = true;
+  if ((Bits & ARM::FeatureVFPOnlySP) != 0) FPOnlySP = true;
+  if ((Bits & ARM::FeatureVMLxForwarding) != 0) HasVMLxForwarding = true;
+  if ((Bits & ARM::HasV4TOps) != 0) HasV4TOps = true;
+  if ((Bits & ARM::HasV5TEOps) != 0) HasV5TEOps = true;
+  if ((Bits & ARM::HasV5TOps) != 0) HasV5TOps = true;
+  if ((Bits & ARM::HasV6Ops) != 0) HasV6Ops = true;
+  if ((Bits & ARM::HasV6T2Ops) != 0) HasV6T2Ops = true;
+  if ((Bits & ARM::HasV7Ops) != 0) HasV7Ops = true;
+  if ((Bits & ARM::ModeThumb) != 0) InThumbMode = true;
+  if ((Bits & ARM::ProcA8) != 0 && ARMProcFamily < CortexA8) ARMProcFamily = CortexA8;
+  if ((Bits & ARM::ProcA9) != 0 && ARMProcFamily < CortexA9) ARMProcFamily = CortexA9;
+}
+#endif // GET_SUBTARGETINFO_TARGET_DESC
+
+
+#ifdef GET_SUBTARGETINFO_HEADER
+#undef GET_SUBTARGETINFO_HEADER
+namespace llvm {
+struct ARMGenSubtargetInfo : public TargetSubtargetInfo {
+  explicit ARMGenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS);
+};
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_HEADER
+
+
+#ifdef GET_SUBTARGETINFO_CTOR
+#undef GET_SUBTARGETINFO_CTOR
+namespace llvm {
+extern llvm::SubtargetFeatureKV ARMFeatureKV[];
+extern llvm::SubtargetFeatureKV ARMSubTypeKV[];
+extern llvm::SubtargetInfoKV ARMProcItinKV[];
+extern llvm::InstrStage ARMStages[];
+extern unsigned ARMOperandCycles[];
+extern unsigned ARMForwardingPathes[];
+ARMGenSubtargetInfo::ARMGenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS)
+  : TargetSubtargetInfo() {
+  InitMCSubtargetInfo(TT, CPU, FS, ARMFeatureKV, ARMSubTypeKV, ARMProcItinKV, ARMStages, ARMOperandCycles, ARMForwardingPathes, 28, 44);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_CTOR
+

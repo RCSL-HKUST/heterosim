@@ -1,0 +1,572 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass MSP430MCRegisterClasses[];
+
+namespace MSP430 {
+enum {
+  NoRegister,
+  CGB = 1,
+  CGW = 2,
+  FPB = 3,
+  FPW = 4,
+  PCB = 5,
+  PCW = 6,
+  R5B = 7,
+  R5W = 8,
+  R6B = 9,
+  R6W = 10,
+  R7B = 11,
+  R7W = 12,
+  R8B = 13,
+  R8W = 14,
+  R9B = 15,
+  R9W = 16,
+  R10B = 17,
+  R10W = 18,
+  R11B = 19,
+  R11W = 20,
+  R12B = 21,
+  R12W = 22,
+  R13B = 23,
+  R13W = 24,
+  R14B = 25,
+  R14W = 26,
+  R15B = 27,
+  R15W = 28,
+  SPB = 29,
+  SPW = 30,
+  SRB = 31,
+  SRW = 32,
+  NUM_TARGET_REGS 	// 33
+};
+}
+
+// Register classes
+namespace MSP430 {
+enum {
+  GR16RegClassID = 0,
+  GR8RegClassID = 1
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct MSP430GenMCRegisterInfo : public MCRegisterInfo {
+  explicit MSP430GenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned CGB_Overlaps[] = { MSP430::CGB, MSP430::CGW, 0 };
+  const unsigned CGW_Overlaps[] = { MSP430::CGW, MSP430::CGB, 0 };
+  const unsigned FPB_Overlaps[] = { MSP430::FPB, MSP430::FPW, 0 };
+  const unsigned FPW_Overlaps[] = { MSP430::FPW, MSP430::FPB, 0 };
+  const unsigned PCB_Overlaps[] = { MSP430::PCB, MSP430::PCW, 0 };
+  const unsigned PCW_Overlaps[] = { MSP430::PCW, MSP430::PCB, 0 };
+  const unsigned R5B_Overlaps[] = { MSP430::R5B, MSP430::R5W, 0 };
+  const unsigned R5W_Overlaps[] = { MSP430::R5W, MSP430::R5B, 0 };
+  const unsigned R6B_Overlaps[] = { MSP430::R6B, MSP430::R6W, 0 };
+  const unsigned R6W_Overlaps[] = { MSP430::R6W, MSP430::R6B, 0 };
+  const unsigned R7B_Overlaps[] = { MSP430::R7B, MSP430::R7W, 0 };
+  const unsigned R7W_Overlaps[] = { MSP430::R7W, MSP430::R7B, 0 };
+  const unsigned R8B_Overlaps[] = { MSP430::R8B, MSP430::R8W, 0 };
+  const unsigned R8W_Overlaps[] = { MSP430::R8W, MSP430::R8B, 0 };
+  const unsigned R9B_Overlaps[] = { MSP430::R9B, MSP430::R9W, 0 };
+  const unsigned R9W_Overlaps[] = { MSP430::R9W, MSP430::R9B, 0 };
+  const unsigned R10B_Overlaps[] = { MSP430::R10B, MSP430::R10W, 0 };
+  const unsigned R10W_Overlaps[] = { MSP430::R10W, MSP430::R10B, 0 };
+  const unsigned R11B_Overlaps[] = { MSP430::R11B, MSP430::R11W, 0 };
+  const unsigned R11W_Overlaps[] = { MSP430::R11W, MSP430::R11B, 0 };
+  const unsigned R12B_Overlaps[] = { MSP430::R12B, MSP430::R12W, 0 };
+  const unsigned R12W_Overlaps[] = { MSP430::R12W, MSP430::R12B, 0 };
+  const unsigned R13B_Overlaps[] = { MSP430::R13B, MSP430::R13W, 0 };
+  const unsigned R13W_Overlaps[] = { MSP430::R13W, MSP430::R13B, 0 };
+  const unsigned R14B_Overlaps[] = { MSP430::R14B, MSP430::R14W, 0 };
+  const unsigned R14W_Overlaps[] = { MSP430::R14W, MSP430::R14B, 0 };
+  const unsigned R15B_Overlaps[] = { MSP430::R15B, MSP430::R15W, 0 };
+  const unsigned R15W_Overlaps[] = { MSP430::R15W, MSP430::R15B, 0 };
+  const unsigned SPB_Overlaps[] = { MSP430::SPB, MSP430::SPW, 0 };
+  const unsigned SPW_Overlaps[] = { MSP430::SPW, MSP430::SPB, 0 };
+  const unsigned SRB_Overlaps[] = { MSP430::SRB, MSP430::SRW, 0 };
+  const unsigned SRW_Overlaps[] = { MSP430::SRW, MSP430::SRB, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned CGW_SubRegsSet[] = { MSP430::CGB, 0 };
+  const unsigned FPW_SubRegsSet[] = { MSP430::FPB, 0 };
+  const unsigned PCW_SubRegsSet[] = { MSP430::PCB, 0 };
+  const unsigned R5W_SubRegsSet[] = { MSP430::R5B, 0 };
+  const unsigned R6W_SubRegsSet[] = { MSP430::R6B, 0 };
+  const unsigned R7W_SubRegsSet[] = { MSP430::R7B, 0 };
+  const unsigned R8W_SubRegsSet[] = { MSP430::R8B, 0 };
+  const unsigned R9W_SubRegsSet[] = { MSP430::R9B, 0 };
+  const unsigned R10W_SubRegsSet[] = { MSP430::R10B, 0 };
+  const unsigned R11W_SubRegsSet[] = { MSP430::R11B, 0 };
+  const unsigned R12W_SubRegsSet[] = { MSP430::R12B, 0 };
+  const unsigned R13W_SubRegsSet[] = { MSP430::R13B, 0 };
+  const unsigned R14W_SubRegsSet[] = { MSP430::R14B, 0 };
+  const unsigned R15W_SubRegsSet[] = { MSP430::R15B, 0 };
+  const unsigned SPW_SubRegsSet[] = { MSP430::SPB, 0 };
+  const unsigned SRW_SubRegsSet[] = { MSP430::SRB, 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+  const unsigned CGB_SuperRegsSet[] = { MSP430::CGW, 0 };
+  const unsigned FPB_SuperRegsSet[] = { MSP430::FPW, 0 };
+  const unsigned PCB_SuperRegsSet[] = { MSP430::PCW, 0 };
+  const unsigned R5B_SuperRegsSet[] = { MSP430::R5W, 0 };
+  const unsigned R6B_SuperRegsSet[] = { MSP430::R6W, 0 };
+  const unsigned R7B_SuperRegsSet[] = { MSP430::R7W, 0 };
+  const unsigned R8B_SuperRegsSet[] = { MSP430::R8W, 0 };
+  const unsigned R9B_SuperRegsSet[] = { MSP430::R9W, 0 };
+  const unsigned R10B_SuperRegsSet[] = { MSP430::R10W, 0 };
+  const unsigned R11B_SuperRegsSet[] = { MSP430::R11W, 0 };
+  const unsigned R12B_SuperRegsSet[] = { MSP430::R12W, 0 };
+  const unsigned R13B_SuperRegsSet[] = { MSP430::R13W, 0 };
+  const unsigned R14B_SuperRegsSet[] = { MSP430::R14W, 0 };
+  const unsigned R15B_SuperRegsSet[] = { MSP430::R15W, 0 };
+  const unsigned SPB_SuperRegsSet[] = { MSP430::SPW, 0 };
+  const unsigned SRB_SuperRegsSet[] = { MSP430::SRW, 0 };
+}
+
+MCRegisterDesc MSP430RegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "CGB",	CGB_Overlaps,	Empty_SubRegsSet,	CGB_SuperRegsSet },
+  { "CGW",	CGW_Overlaps,	CGW_SubRegsSet,	Empty_SuperRegsSet },
+  { "FPB",	FPB_Overlaps,	Empty_SubRegsSet,	FPB_SuperRegsSet },
+  { "FPW",	FPW_Overlaps,	FPW_SubRegsSet,	Empty_SuperRegsSet },
+  { "PCB",	PCB_Overlaps,	Empty_SubRegsSet,	PCB_SuperRegsSet },
+  { "PCW",	PCW_Overlaps,	PCW_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5B",	R5B_Overlaps,	Empty_SubRegsSet,	R5B_SuperRegsSet },
+  { "R5W",	R5W_Overlaps,	R5W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6B",	R6B_Overlaps,	Empty_SubRegsSet,	R6B_SuperRegsSet },
+  { "R6W",	R6W_Overlaps,	R6W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7B",	R7B_Overlaps,	Empty_SubRegsSet,	R7B_SuperRegsSet },
+  { "R7W",	R7W_Overlaps,	R7W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8B",	R8B_Overlaps,	Empty_SubRegsSet,	R8B_SuperRegsSet },
+  { "R8W",	R8W_Overlaps,	R8W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R9B",	R9B_Overlaps,	Empty_SubRegsSet,	R9B_SuperRegsSet },
+  { "R9W",	R9W_Overlaps,	R9W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10B",	R10B_Overlaps,	Empty_SubRegsSet,	R10B_SuperRegsSet },
+  { "R10W",	R10W_Overlaps,	R10W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R11B",	R11B_Overlaps,	Empty_SubRegsSet,	R11B_SuperRegsSet },
+  { "R11W",	R11W_Overlaps,	R11W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12B",	R12B_Overlaps,	Empty_SubRegsSet,	R12B_SuperRegsSet },
+  { "R12W",	R12W_Overlaps,	R12W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R13B",	R13B_Overlaps,	Empty_SubRegsSet,	R13B_SuperRegsSet },
+  { "R13W",	R13W_Overlaps,	R13W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14B",	R14B_Overlaps,	Empty_SubRegsSet,	R14B_SuperRegsSet },
+  { "R14W",	R14W_Overlaps,	R14W_SubRegsSet,	Empty_SuperRegsSet },
+  { "R15B",	R15B_Overlaps,	Empty_SubRegsSet,	R15B_SuperRegsSet },
+  { "R15W",	R15W_Overlaps,	R15W_SubRegsSet,	Empty_SuperRegsSet },
+  { "SPB",	SPB_Overlaps,	Empty_SubRegsSet,	SPB_SuperRegsSet },
+  { "SPW",	SPW_Overlaps,	SPW_SubRegsSet,	Empty_SuperRegsSet },
+  { "SRB",	SRB_Overlaps,	Empty_SubRegsSet,	SRB_SuperRegsSet },
+  { "SRW",	SRW_Overlaps,	SRW_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // GR16 Register Class...
+  static const unsigned GR16[] = {
+    MSP430::R12W, MSP430::R13W, MSP430::R14W, MSP430::R15W, MSP430::R11W, MSP430::R10W, MSP430::R9W, MSP430::R8W, MSP430::R7W, MSP430::R6W, MSP430::R5W, MSP430::FPW, MSP430::PCW, MSP430::SPW, MSP430::SRW, MSP430::CGW, 
+  };
+
+  // GR16 Bit set.
+  static const unsigned char GR16Bits[] = {
+    0x54, 0x55, 0x55, 0x55, 0x01, 
+  };
+
+  // GR8 Register Class...
+  static const unsigned GR8[] = {
+    MSP430::R12B, MSP430::R13B, MSP430::R14B, MSP430::R15B, MSP430::R11B, MSP430::R10B, MSP430::R9B, MSP430::R8B, MSP430::R7B, MSP430::R6B, MSP430::R5B, MSP430::FPB, MSP430::PCB, MSP430::SPB, MSP430::SRB, MSP430::CGB, 
+  };
+
+  // GR8 Bit set.
+  static const unsigned char GR8Bits[] = {
+    0xaa, 0xaa, 0xaa, 0xaa, 
+  };
+
+}
+
+MCRegisterClass MSP430MCRegisterClasses[] = {
+  MCRegisterClass(MSP430::GR16RegClassID, "GR16", 2, 2, 1, 1, GR16, GR16 + 16, GR16Bits, sizeof(GR16Bits)),
+  MCRegisterClass(MSP430::GR8RegClassID, "GR8", 1, 1, 1, 1, GR8, GR8 + 16, GR8Bits, sizeof(GR8Bits)),
+};
+
+static inline void InitMSP430MCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(MSP430RegDesc, 33, RA, MSP430MCRegisterClasses, 2);
+
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct MSP430GenRegisterInfo : public TargetRegisterInfo {
+  explicit MSP430GenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+
+// Subregister indices
+namespace MSP430 {
+enum {
+  NoSubRegister,
+  subreg_8bit,	// 1
+  NUM_TARGET_NAMED_SUBREGS = 2
+};
+}
+namespace MSP430 { // Register classes
+  struct GR16Class : public TargetRegisterClass {
+    GR16Class();
+  };
+  extern GR16Class	GR16RegClass;
+  static TargetRegisterClass * const GR16RegisterClass = &GR16RegClass;
+  struct GR8Class : public TargetRegisterClass {
+    GR8Class();
+  };
+  extern GR8Class	GR8RegClass;
+  static TargetRegisterClass * const GR8RegisterClass = &GR8RegClass;
+} // end of namespace MSP430
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass MSP430MCRegisterClasses[];
+namespace {     // Register classes...
+  // GR16VTs Register Class Value Types...
+  static const EVT GR16VTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // GR8VTs Register Class Value Types...
+  static const EVT GR8VTs[] = {
+    MVT::i8, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace MSP430 {   // Register class instances
+  GR16Class	GR16RegClass;
+  GR8Class	GR8RegClass;
+
+  // GR16 Sub-register Classes...
+  static const TargetRegisterClass* const GR16SubRegClasses[] = {
+    &MSP430::GR8RegClass
+  };
+
+  // GR8 Sub-register Classes...
+  static const TargetRegisterClass* const GR8SubRegClasses[] = {
+    0
+  };
+
+  // GR16 Super-register Classes...
+  static const TargetRegisterClass* const GR16SuperRegClasses[] = {
+    NULL
+  };
+
+  // GR8 Super-register Classes...
+  static const TargetRegisterClass* const GR8SuperRegClasses[] = {
+    &MSP430::GR16RegClass, NULL
+  };
+
+  // GR16 Register Class sub-classes...
+  static const TargetRegisterClass* const GR16Subclasses[] = {
+    NULL
+  };
+
+  // GR8 Register Class sub-classes...
+  static const TargetRegisterClass* const GR8Subclasses[] = {
+    NULL
+  };
+
+  // GR16 Register Class super-classes...
+  static const TargetRegisterClass* const GR16Superclasses[] = {
+    NULL
+  };
+
+  // GR8 Register Class super-classes...
+  static const TargetRegisterClass* const GR8Superclasses[] = {
+    NULL
+  };
+
+GR16Class::GR16Class()  : TargetRegisterClass(&MSP430MCRegisterClasses[GR16RegClassID], GR16VTs, GR16Subclasses, GR16Superclasses, GR16SubRegClasses, GR16SuperRegClasses) {}
+GR8Class::GR8Class()  : TargetRegisterClass(&MSP430MCRegisterClasses[GR8RegClassID], GR8VTs, GR8Subclasses, GR8Superclasses, GR8SubRegClasses, GR8SuperRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &MSP430::GR16RegClass,
+    &MSP430::GR8RegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc MSP430RegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+  };
+
+  static const char *const MSP430SubRegIndexTable[] = { "subreg_8bit" };
+
+
+unsigned MSP430GenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  case MSP430::CGW:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::CGB;
+    };
+    break;
+  case MSP430::FPW:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::FPB;
+    };
+    break;
+  case MSP430::PCW:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::PCB;
+    };
+    break;
+  case MSP430::R5W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R5B;
+    };
+    break;
+  case MSP430::R6W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R6B;
+    };
+    break;
+  case MSP430::R7W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R7B;
+    };
+    break;
+  case MSP430::R8W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R8B;
+    };
+    break;
+  case MSP430::R9W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R9B;
+    };
+    break;
+  case MSP430::R10W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R10B;
+    };
+    break;
+  case MSP430::R11W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R11B;
+    };
+    break;
+  case MSP430::R12W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R12B;
+    };
+    break;
+  case MSP430::R13W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R13B;
+    };
+    break;
+  case MSP430::R14W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R14B;
+    };
+    break;
+  case MSP430::R15W:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::R15B;
+    };
+    break;
+  case MSP430::SPW:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::SPB;
+    };
+    break;
+  case MSP430::SRW:
+    switch (Index) {
+    default: return 0;
+    case MSP430::subreg_8bit: return MSP430::SRB;
+    };
+    break;
+  };
+  return 0;
+}
+
+unsigned MSP430GenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  case MSP430::CGW:
+    if (SubRegNo == MSP430::CGB)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::FPW:
+    if (SubRegNo == MSP430::FPB)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::PCW:
+    if (SubRegNo == MSP430::PCB)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R5W:
+    if (SubRegNo == MSP430::R5B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R6W:
+    if (SubRegNo == MSP430::R6B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R7W:
+    if (SubRegNo == MSP430::R7B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R8W:
+    if (SubRegNo == MSP430::R8B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R9W:
+    if (SubRegNo == MSP430::R9B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R10W:
+    if (SubRegNo == MSP430::R10B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R11W:
+    if (SubRegNo == MSP430::R11B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R12W:
+    if (SubRegNo == MSP430::R12B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R13W:
+    if (SubRegNo == MSP430::R13B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R14W:
+    if (SubRegNo == MSP430::R14B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::R15W:
+    if (SubRegNo == MSP430::R15B)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::SPW:
+    if (SubRegNo == MSP430::SPB)  return MSP430::subreg_8bit;
+    return 0;
+  case MSP430::SRW:
+    if (SubRegNo == MSP430::SRB)  return MSP430::subreg_8bit;
+    return 0;
+  };
+  return 0;
+}
+
+unsigned MSP430GenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc MSP430RegDesc[];
+MSP430GenRegisterInfo::MSP430GenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(MSP430RegInfoDesc, RegisterClasses, RegisterClasses+2,
+                 MSP430SubRegIndexTable) {
+  InitMCRegisterInfo(MSP430RegDesc, 33, RA, MSP430MCRegisterClasses, 2);
+
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

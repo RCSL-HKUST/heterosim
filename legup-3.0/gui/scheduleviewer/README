@@ -1,0 +1,11 @@
+1. Install Qt:
+on Ubuntu (tested):
+sudo apt-get install libqt4-dev
+
+2. Build the project
+cd gui/scheduleviewer
+qmake (this will generate the makefile)
+make (this will build the project)
+
+3. Run the program
+./scheduleviewer <scheduling report>

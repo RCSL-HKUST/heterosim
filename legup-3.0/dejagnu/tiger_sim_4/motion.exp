@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/motion
+set test "motion"
+set tigerexpected {Result: 12}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc BF_cfb64_encrypt.v -exe sim_main.cpp"
+S   4201443  1051063  1456922637 "/usr/local/bin/verilator_bin"
+S     51557  4080336  1456999860 "BF_cfb64_encrypt.v"
+S     82499  4080396  1456999859 "BF_cfb64_encrypt_BF_encrypt.v"
+T    184727  4081980  1457000027 "obj_dir/VBF_cfb64_encrypt.cpp"
+T     14556  4081979  1457000027 "obj_dir/VBF_cfb64_encrypt.h"
+T      2034  4081982  1457000027 "obj_dir/VBF_cfb64_encrypt.mk"
+T       629  4068007  1457000027 "obj_dir/VBF_cfb64_encrypt__Syms.cpp"
+T      1033  4068006  1457000027 "obj_dir/VBF_cfb64_encrypt__Syms.h"
+T       340  4081983  1457000027 "obj_dir/VBF_cfb64_encrypt__ver.d"
+T         0        0  1457000027 "obj_dir/VBF_cfb64_encrypt__verFiles.dat"
+T      1118  4081981  1457000027 "obj_dir/VBF_cfb64_encrypt_classes.mk"

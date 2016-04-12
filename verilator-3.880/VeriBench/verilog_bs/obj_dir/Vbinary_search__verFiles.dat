@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc binary_search.v -exe sim_main.cpp"
+S   4201443  1051063  1456922637 "/usr/local/bin/verilator_bin"
+S      8227  4023962  1457503483 "binary_search.v"
+T     14271  4024009  1460349952 "obj_dir/Vbinary_search.cpp"
+T      4044  4024008  1460349952 "obj_dir/Vbinary_search.h"
+T      2016  4024013  1460349952 "obj_dir/Vbinary_search.mk"
+T       614  4024007  1460349952 "obj_dir/Vbinary_search__Syms.cpp"
+T      1012  4024006  1460349952 "obj_dir/Vbinary_search__Syms.h"
+T       286  4024014  1460349952 "obj_dir/Vbinary_search__ver.d"
+T         0        0  1460349952 "obj_dir/Vbinary_search__verFiles.dat"
+T      1109  4024010  1460349952 "obj_dir/Vbinary_search_classes.mk"

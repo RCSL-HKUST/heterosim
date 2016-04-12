@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc bit_shifter.v -exe sim_main.cpp"
+S   4201395  1059238  1453396387 "/usr/local/bin/verilator_bin"
+S      6402  4065097  1456216849 "bit_shifter.v"
+T     10345  4065101  1456217061 "obj_dir/Vbit_shifter.cpp"
+T      3667  4065100  1456217061 "obj_dir/Vbit_shifter.h"
+T      2004  4065103  1456217061 "obj_dir/Vbit_shifter.mk"
+T       604  4065099  1456217061 "obj_dir/Vbit_shifter__Syms.cpp"
+T       998  4065098  1456217061 "obj_dir/Vbit_shifter__Syms.h"
+T       270  4065104  1456217061 "obj_dir/Vbit_shifter__ver.d"
+T         0        0  1456217061 "obj_dir/Vbit_shifter__verFiles.dat"
+T      1103  4065102  1456217061 "obj_dir/Vbit_shifter_classes.mk"

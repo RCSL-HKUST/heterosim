@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/blowfish
+set test "blowfish"
+set tigerexpected {Result: 5200}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc bubblesort.v -exe sim_main.cpp"
+S   4201395  1059239  1450930912 "/usr/local/bin/verilator_bin"
+S     11715  2626619  1433996316 "bubblesort.v"
+T     20780  2626631  1451471068 "obj_dir/Vbubblesort.cpp"
+T      4224  2626627  1451471068 "obj_dir/Vbubblesort.h"
+T      1998  2626637  1451471068 "obj_dir/Vbubblesort.mk"
+T       599  2626626  1451471068 "obj_dir/Vbubblesort__Syms.cpp"
+T       991  2626625  1451471068 "obj_dir/Vbubblesort__Syms.h"
+T       262  2626639  1451471068 "obj_dir/Vbubblesort__ver.d"
+T         0        0  1451471068 "obj_dir/Vbubblesort__verFiles.dat"
+T      1100  2626632  1451471068 "obj_dir/Vbubblesort_classes.mk"

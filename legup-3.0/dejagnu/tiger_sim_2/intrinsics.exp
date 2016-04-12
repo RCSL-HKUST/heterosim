@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd intrinsics
+set test "intrinsics"
+set tigerexpected {Result: 50529027}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

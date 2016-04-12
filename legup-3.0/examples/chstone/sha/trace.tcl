@@ -1,0 +1,15 @@
+llvm_uadd_with_overflow_i32
+local_memcpy
+sha_transform
+local_memcpy
+local_memset
+sha_transform
+local_memset
+local_memset
+sha_transform
+sha_init
+sha_update
+sha_update
+sha_final
+sha_stream
+printf

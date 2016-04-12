@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc insertsort.v -exe sim_main.cpp"
+S   4201395  1059239  1450930912 "/usr/local/bin/verilator_bin"
+S      8384  2626804  1444037849 "insertsort.v"
+T     15719  2626848  1451471068 "obj_dir/Vinsertsort.cpp"
+T      3919  2626845  1451471068 "obj_dir/Vinsertsort.h"
+T      1998  2627605  1451471068 "obj_dir/Vinsertsort.mk"
+T       599  2626841  1451471068 "obj_dir/Vinsertsort__Syms.cpp"
+T       991  2626835  1451471068 "obj_dir/Vinsertsort__Syms.h"
+T       262  2627610  1451471068 "obj_dir/Vinsertsort__ver.d"
+T         0        0  1451471068 "obj_dir/Vinsertsort__verFiles.dat"
+T      1100  2626853  1451471068 "obj_dir/Vinsertsort_classes.mk"

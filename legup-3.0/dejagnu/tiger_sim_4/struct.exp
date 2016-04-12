@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd struct
+set test "struct"
+set tigerexpected {Result: 372}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

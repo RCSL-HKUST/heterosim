@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd div_const
+set test "div_const"
+set tigerexpected {Result: 36431}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

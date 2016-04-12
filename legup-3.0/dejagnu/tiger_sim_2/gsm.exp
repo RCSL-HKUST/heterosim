@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/gsm
+set test "gsm"
+set tigerexpected {Result: 168}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

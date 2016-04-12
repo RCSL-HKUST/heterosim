@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc sha_transform.v -exe sim_main.cpp"
+S   4201443  1051063  1456922637 "/usr/local/bin/verilator_bin"
+T    282092  4016304  1456937341 "obj_dir/Vsha_transform.cpp"
+T     42267  4016303  1456937341 "obj_dir/Vsha_transform.h"
+T      2016  4016306  1456937341 "obj_dir/Vsha_transform.mk"
+T       614  4016302  1456937341 "obj_dir/Vsha_transform__Syms.cpp"
+T      1012  4016301  1456937341 "obj_dir/Vsha_transform__Syms.h"
+T       286  4016307  1456937341 "obj_dir/Vsha_transform__ver.d"
+T         0        0  1456937341 "obj_dir/Vsha_transform__verFiles.dat"
+T      1109  4016305  1456937341 "obj_dir/Vsha_transform_classes.mk"
+S    201339  4016847  1456936847 "sha_transform.v"

@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/jpeg
+set test "jpeg"
+set gxexpected {reg: v0 = 0x00000000000054f1}
+
+run-test-gx $test $gxexpected
+
+cd ../..

@@ -1,0 +1,245 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Subtarget Enumeration Source Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_SUBTARGETINFO_ENUM
+#undef GET_SUBTARGETINFO_ENUM
+namespace llvm {
+namespace Blackfin {
+enum {
+  FeatureICPLB =  1ULL << 0,
+  FeatureSDRAM =  1ULL << 1,
+  WA_CSYNC =  1ULL << 2,
+  WA_HWLOOP =  1ULL << 3,
+  WA_IND_CALL =  1ULL << 4,
+  WA_KILLED_MMR =  1ULL << 5,
+  WA_LCREGS =  1ULL << 6,
+  WA_MI_SHIFT =  1ULL << 7,
+  WA_MMR_STALL =  1ULL << 8,
+  WA_RETS =  1ULL << 9,
+  WA_SPECLD =  1ULL << 10
+};
+}
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_ENUM
+
+
+#ifdef GET_SUBTARGETINFO_MC_DESC
+#undef GET_SUBTARGETINFO_MC_DESC
+namespace llvm {
+// Sorted (by key) array of values for CPU features.
+llvm::SubtargetFeatureKV BlackfinFeatureKV[] = {
+  { "csync-anomaly", "Work around 05000244 - If I-Cache Is On, CSYNC/SSYNC/IDLE Around Change of Control", Blackfin::WA_CSYNC, 0ULL },
+  { "hwloop-anomaly", "Work around 05000257 - Interrupt/Exception During Short Hardware Loop", Blackfin::WA_HWLOOP, 0ULL },
+  { "icplb", "Assume instruction cache lookaside buffers are enabled at runtime", Blackfin::FeatureICPLB, 0ULL },
+  { "ind-call-anomaly", "Work around 05000426 - Speculative Fetches of Indirect-Pointer Instructions", Blackfin::WA_IND_CALL, 0ULL },
+  { "killed-mmr-anomaly", "Work around 05000315 - Killed System MMR Write Completes Erroneously on Next System MMR Access", Blackfin::WA_KILLED_MMR, 0ULL },
+  { "lcregs-anomaly", "Work around 05000312 - SSYNC, CSYNC, or Loads to LT, LB and LC Registers Are Interrupted", Blackfin::WA_LCREGS, 0ULL },
+  { "mi-shift-anomaly", "Work around 05000074 - Multi-Issue Instruction with dsp32shiftimm and P-reg Store", Blackfin::WA_MI_SHIFT, 0ULL },
+  { "mmr-stall-anomaly", "Work around 05000283 - System MMR Write Is Stalled Indefinitely when Killed", Blackfin::WA_MMR_STALL, 0ULL },
+  { "rets-anomaly", "Work around 05000371 - Possible RETS Register Corruption when Subroutine Is under 5 Cycles", Blackfin::WA_RETS, 0ULL },
+  { "sdram", "Build for SDRAM", Blackfin::FeatureSDRAM, 0ULL },
+  { "specld-anomaly", "Work around 05000245 - Access in the Shadow of a Conditional Branch", Blackfin::WA_SPECLD, 0ULL }
+};
+
+// Sorted (by key) array of values for CPU subtype.
+llvm::SubtargetFeatureKV BlackfinSubTypeKV[] = {
+  { "bf512", "Select the bf512 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf512-0.0", "Select the bf512-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf512-0.1", "Select the bf512-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf512-any", "Select the bf512-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf512-none", "Select the bf512-none processor", 0ULL, 0ULL },
+  { "bf514", "Select the bf514 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf514-0.0", "Select the bf514-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf514-0.1", "Select the bf514-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf514-any", "Select the bf514-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf514-none", "Select the bf514-none processor", 0ULL, 0ULL },
+  { "bf516", "Select the bf516 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf516-0.0", "Select the bf516-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf516-0.1", "Select the bf516-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf516-any", "Select the bf516-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf516-none", "Select the bf516-none processor", 0ULL, 0ULL },
+  { "bf518", "Select the bf518 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf518-0.0", "Select the bf518-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf518-0.1", "Select the bf518-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf518-any", "Select the bf518-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf518-none", "Select the bf518-none processor", 0ULL, 0ULL },
+  { "bf522", "Select the bf522 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf522-0.0", "Select the bf522-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf522-0.1", "Select the bf522-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf522-any", "Select the bf522-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf522-none", "Select the bf522-none processor", 0ULL, 0ULL },
+  { "bf523", "Select the bf523 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf523-0.0", "Select the bf523-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf523-0.1", "Select the bf523-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf523-0.2", "Select the bf523-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf523-any", "Select the bf523-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf523-none", "Select the bf523-none processor", 0ULL, 0ULL },
+  { "bf524", "Select the bf524 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf524-0.0", "Select the bf524-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf524-0.1", "Select the bf524-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf524-any", "Select the bf524-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf524-none", "Select the bf524-none processor", 0ULL, 0ULL },
+  { "bf525", "Select the bf525 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf525-0.0", "Select the bf525-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf525-0.1", "Select the bf525-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf525-0.2", "Select the bf525-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf525-any", "Select the bf525-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf525-none", "Select the bf525-none processor", 0ULL, 0ULL },
+  { "bf526", "Select the bf526 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf526-0.0", "Select the bf526-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf526-0.1", "Select the bf526-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf526-any", "Select the bf526-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf526-none", "Select the bf526-none processor", 0ULL, 0ULL },
+  { "bf527", "Select the bf527 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf527-0.0", "Select the bf527-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf527-0.1", "Select the bf527-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf527-0.2", "Select the bf527-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf527-any", "Select the bf527-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf527-none", "Select the bf527-none processor", 0ULL, 0ULL },
+  { "bf531", "Select the bf531 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS, 0ULL },
+  { "bf531-0.3", "Select the bf531-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf531-0.4", "Select the bf531-0.4 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf531-0.5", "Select the bf531-0.5 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf531-0.6", "Select the bf531-0.6 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS, 0ULL },
+  { "bf531-any", "Select the bf531-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf531-none", "Select the bf531-none processor", 0ULL, 0ULL },
+  { "bf532", "Select the bf532 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS, 0ULL },
+  { "bf532-0.3", "Select the bf532-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf532-0.4", "Select the bf532-0.4 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf532-0.5", "Select the bf532-0.5 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf532-0.6", "Select the bf532-0.6 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS, 0ULL },
+  { "bf532-any", "Select the bf532-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf532-none", "Select the bf532-none processor", 0ULL, 0ULL },
+  { "bf533", "Select the bf533 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS, 0ULL },
+  { "bf533-0.3", "Select the bf533-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf533-0.4", "Select the bf533-0.4 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf533-0.5", "Select the bf533-0.5 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf533-0.6", "Select the bf533-0.6 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS, 0ULL },
+  { "bf533-any", "Select the bf533-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS, 0ULL },
+  { "bf533-none", "Select the bf533-none processor", 0ULL, 0ULL },
+  { "bf534", "Select the bf534 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf534-0.2", "Select the bf534-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf534-0.3", "Select the bf534-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf534-any", "Select the bf534-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf534-none", "Select the bf534-none processor", 0ULL, 0ULL },
+  { "bf536", "Select the bf536 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf536-0.2", "Select the bf536-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf536-0.3", "Select the bf536-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf536-any", "Select the bf536-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf536-none", "Select the bf536-none processor", 0ULL, 0ULL },
+  { "bf537", "Select the bf537 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf537-0.2", "Select the bf537-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf537-0.3", "Select the bf537-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf537-any", "Select the bf537-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf537-none", "Select the bf537-none processor", 0ULL, 0ULL },
+  { "bf538", "Select the bf538 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf538-0.3", "Select the bf538-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf538-0.4", "Select the bf538-0.4 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf538-0.5", "Select the bf538-0.5 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf538-any", "Select the bf538-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf538-none", "Select the bf538-none processor", 0ULL, 0ULL },
+  { "bf539", "Select the bf539 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf539-0.3", "Select the bf539-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf539-0.4", "Select the bf539-0.4 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf539-0.5", "Select the bf539-0.5 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf539-any", "Select the bf539-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf539-none", "Select the bf539-none processor", 0ULL, 0ULL },
+  { "bf542", "Select the bf542 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf542-0.0", "Select the bf542-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf542-0.1", "Select the bf542-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf542-0.2", "Select the bf542-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf542-0.3", "Select the bf542-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf542-any", "Select the bf542-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf542-none", "Select the bf542-none processor", 0ULL, 0ULL },
+  { "bf544", "Select the bf544 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf544-0.0", "Select the bf544-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf544-0.1", "Select the bf544-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf544-0.2", "Select the bf544-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf544-0.3", "Select the bf544-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf544-any", "Select the bf544-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf544-none", "Select the bf544-none processor", 0ULL, 0ULL },
+  { "bf548", "Select the bf548 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf548-0.0", "Select the bf548-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf548-0.1", "Select the bf548-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf548-0.2", "Select the bf548-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf548-0.3", "Select the bf548-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf548-any", "Select the bf548-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf548-none", "Select the bf548-none processor", 0ULL, 0ULL },
+  { "bf549", "Select the bf549 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf549-0.0", "Select the bf549-0.0 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf549-0.1", "Select the bf549-0.1 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf549-0.2", "Select the bf549-0.2 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf549-0.3", "Select the bf549-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf549-any", "Select the bf549-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_LCREGS | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf549-none", "Select the bf549-none processor", 0ULL, 0ULL },
+  { "bf561", "Select the bf561 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf561-0.3", "Select the bf561-0.3 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf561-0.5", "Select the bf561-0.5 processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_SPECLD | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf561-any", "Select the bf561-any processor", Blackfin::WA_MI_SHIFT | Blackfin::WA_CSYNC | Blackfin::WA_SPECLD | Blackfin::WA_HWLOOP | Blackfin::WA_MMR_STALL | Blackfin::WA_LCREGS | Blackfin::WA_KILLED_MMR | Blackfin::WA_RETS | Blackfin::WA_IND_CALL, 0ULL },
+  { "bf561-none", "Select the bf561-none processor", 0ULL, 0ULL },
+  { "generic", "Select the generic processor", 0ULL, 0ULL }
+};
+
+
+static inline void InitBlackfinMCSubtargetInfo(MCSubtargetInfo *II, StringRef TT, StringRef CPU, StringRef FS) {
+  II->InitMCSubtargetInfo(TT, CPU, FS, BlackfinFeatureKV, BlackfinSubTypeKV, 0, 0, 0, 0, 11, 135);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_MC_DESC
+
+
+#ifdef GET_SUBTARGETINFO_TARGET_DESC
+#undef GET_SUBTARGETINFO_TARGET_DESC
+#include "llvm/Support/Debug.h"
+#include "llvm/Support/raw_ostream.h"
+// ParseSubtargetFeatures - Parses features string setting specified
+// subtarget options.
+void llvm::BlackfinSubtarget::ParseSubtargetFeatures(StringRef CPU, StringRef FS) {
+  DEBUG(dbgs() << "\nFeatures:" << FS);
+  DEBUG(dbgs() << "\nCPU:" << CPU);
+  uint64_t Bits = ReInitMCSubtargetInfo(CPU, FS);
+  if ((Bits & Blackfin::FeatureICPLB) != 0) icplb = true;
+  if ((Bits & Blackfin::FeatureSDRAM) != 0) sdram = true;
+  if ((Bits & Blackfin::WA_CSYNC) != 0) wa_csync = true;
+  if ((Bits & Blackfin::WA_HWLOOP) != 0) wa_hwloop = true;
+  if ((Bits & Blackfin::WA_IND_CALL) != 0) wa_ind_call = true;
+  if ((Bits & Blackfin::WA_KILLED_MMR) != 0) wa_killed_mmr = true;
+  if ((Bits & Blackfin::WA_LCREGS) != 0) wa_lcregs = true;
+  if ((Bits & Blackfin::WA_MI_SHIFT) != 0) wa_mi_shift = true;
+  if ((Bits & Blackfin::WA_MMR_STALL) != 0) wa_mmr_stall = true;
+  if ((Bits & Blackfin::WA_RETS) != 0) wa_rets = true;
+  if ((Bits & Blackfin::WA_SPECLD) != 0) wa_specld = true;
+}
+#endif // GET_SUBTARGETINFO_TARGET_DESC
+
+
+#ifdef GET_SUBTARGETINFO_HEADER
+#undef GET_SUBTARGETINFO_HEADER
+namespace llvm {
+struct BlackfinGenSubtargetInfo : public TargetSubtargetInfo {
+  explicit BlackfinGenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS);
+};
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_HEADER
+
+
+#ifdef GET_SUBTARGETINFO_CTOR
+#undef GET_SUBTARGETINFO_CTOR
+namespace llvm {
+extern llvm::SubtargetFeatureKV BlackfinFeatureKV[];
+extern llvm::SubtargetFeatureKV BlackfinSubTypeKV[];
+BlackfinGenSubtargetInfo::BlackfinGenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS)
+  : TargetSubtargetInfo() {
+  InitMCSubtargetInfo(TT, CPU, FS, BlackfinFeatureKV, BlackfinSubTypeKV, 0, 0, 0, 0, 11, 135);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_CTOR
+

@@ -1,0 +1,489 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass XCoreMCRegisterClasses[];
+
+namespace XCore {
+enum {
+  NoRegister,
+  CP = 1,
+  DP = 2,
+  LR = 3,
+  R0 = 4,
+  R1 = 5,
+  R2 = 6,
+  R3 = 7,
+  R4 = 8,
+  R5 = 9,
+  R6 = 10,
+  R7 = 11,
+  R8 = 12,
+  R9 = 13,
+  R10 = 14,
+  R11 = 15,
+  SP = 16,
+  NUM_TARGET_REGS 	// 17
+};
+}
+
+// Register classes
+namespace XCore {
+enum {
+  GRRegsRegClassID = 0,
+  RRegsRegClassID = 1
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct XCoreGenMCRegisterInfo : public MCRegisterInfo {
+  explicit XCoreGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned CP_Overlaps[] = { XCore::CP, 0 };
+  const unsigned DP_Overlaps[] = { XCore::DP, 0 };
+  const unsigned LR_Overlaps[] = { XCore::LR, 0 };
+  const unsigned R0_Overlaps[] = { XCore::R0, 0 };
+  const unsigned R1_Overlaps[] = { XCore::R1, 0 };
+  const unsigned R2_Overlaps[] = { XCore::R2, 0 };
+  const unsigned R3_Overlaps[] = { XCore::R3, 0 };
+  const unsigned R4_Overlaps[] = { XCore::R4, 0 };
+  const unsigned R5_Overlaps[] = { XCore::R5, 0 };
+  const unsigned R6_Overlaps[] = { XCore::R6, 0 };
+  const unsigned R7_Overlaps[] = { XCore::R7, 0 };
+  const unsigned R8_Overlaps[] = { XCore::R8, 0 };
+  const unsigned R9_Overlaps[] = { XCore::R9, 0 };
+  const unsigned R10_Overlaps[] = { XCore::R10, 0 };
+  const unsigned R11_Overlaps[] = { XCore::R11, 0 };
+  const unsigned SP_Overlaps[] = { XCore::SP, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+}
+
+MCRegisterDesc XCoreRegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "CP",	CP_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "DP",	DP_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "LR",	LR_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0",	R0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R1",	R1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2",	R2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R3",	R3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4",	R4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5",	R5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6",	R6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7",	R7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8",	R8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R9",	R9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10",	R10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R11",	R11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "SP",	SP_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // GRRegs Register Class...
+  static const unsigned GRRegs[] = {
+    XCore::R0, XCore::R1, XCore::R2, XCore::R3, XCore::R11, XCore::R4, XCore::R5, XCore::R6, XCore::R7, XCore::R8, XCore::R9, XCore::R10, 
+  };
+
+  // GRRegs Bit set.
+  static const unsigned char GRRegsBits[] = {
+    0xf0, 0xff, 
+  };
+
+  // RRegs Register Class...
+  static const unsigned RRegs[] = {
+    XCore::CP, XCore::DP, XCore::SP, XCore::LR, 
+  };
+
+  // RRegs Bit set.
+  static const unsigned char RRegsBits[] = {
+    0x0e, 0x00, 0x01, 
+  };
+
+}
+
+MCRegisterClass XCoreMCRegisterClasses[] = {
+  MCRegisterClass(XCore::GRRegsRegClassID, "GRRegs", 4, 4, 1, 1, GRRegs, GRRegs + 12, GRRegsBits, sizeof(GRRegsBits)),
+  MCRegisterClass(XCore::RRegsRegClassID, "RRegs", 4, 4, 1, 0, RRegs, RRegs + 4, RRegsBits, sizeof(RRegsBits)),
+};
+
+static inline void InitXCoreMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(XCoreRegDesc, 17, RA, XCoreMCRegisterClasses, 2);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(12, XCore::CP, false );
+    RI->mapDwarfRegToLLVMReg(13, XCore::DP, false );
+    RI->mapDwarfRegToLLVMReg(15, XCore::LR, false );
+    RI->mapDwarfRegToLLVMReg(0, XCore::R0, false );
+    RI->mapDwarfRegToLLVMReg(1, XCore::R1, false );
+    RI->mapDwarfRegToLLVMReg(2, XCore::R2, false );
+    RI->mapDwarfRegToLLVMReg(3, XCore::R3, false );
+    RI->mapDwarfRegToLLVMReg(4, XCore::R4, false );
+    RI->mapDwarfRegToLLVMReg(5, XCore::R5, false );
+    RI->mapDwarfRegToLLVMReg(6, XCore::R6, false );
+    RI->mapDwarfRegToLLVMReg(7, XCore::R7, false );
+    RI->mapDwarfRegToLLVMReg(8, XCore::R8, false );
+    RI->mapDwarfRegToLLVMReg(9, XCore::R9, false );
+    RI->mapDwarfRegToLLVMReg(10, XCore::R10, false );
+    RI->mapDwarfRegToLLVMReg(11, XCore::R11, false );
+    RI->mapDwarfRegToLLVMReg(14, XCore::SP, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(12, XCore::CP, true );
+    RI->mapDwarfRegToLLVMReg(13, XCore::DP, true );
+    RI->mapDwarfRegToLLVMReg(15, XCore::LR, true );
+    RI->mapDwarfRegToLLVMReg(0, XCore::R0, true );
+    RI->mapDwarfRegToLLVMReg(1, XCore::R1, true );
+    RI->mapDwarfRegToLLVMReg(2, XCore::R2, true );
+    RI->mapDwarfRegToLLVMReg(3, XCore::R3, true );
+    RI->mapDwarfRegToLLVMReg(4, XCore::R4, true );
+    RI->mapDwarfRegToLLVMReg(5, XCore::R5, true );
+    RI->mapDwarfRegToLLVMReg(6, XCore::R6, true );
+    RI->mapDwarfRegToLLVMReg(7, XCore::R7, true );
+    RI->mapDwarfRegToLLVMReg(8, XCore::R8, true );
+    RI->mapDwarfRegToLLVMReg(9, XCore::R9, true );
+    RI->mapDwarfRegToLLVMReg(10, XCore::R10, true );
+    RI->mapDwarfRegToLLVMReg(11, XCore::R11, true );
+    RI->mapDwarfRegToLLVMReg(14, XCore::SP, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(XCore::CP, 12, false );
+    RI->mapLLVMRegToDwarfReg(XCore::DP, 13, false );
+    RI->mapLLVMRegToDwarfReg(XCore::LR, 15, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R0, 0, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R1, 1, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R2, 2, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R3, 3, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R4, 4, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R5, 5, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R6, 6, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R7, 7, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R8, 8, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R9, 9, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R10, 10, false );
+    RI->mapLLVMRegToDwarfReg(XCore::R11, 11, false );
+    RI->mapLLVMRegToDwarfReg(XCore::SP, 14, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(XCore::CP, 12, true );
+    RI->mapLLVMRegToDwarfReg(XCore::DP, 13, true );
+    RI->mapLLVMRegToDwarfReg(XCore::LR, 15, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R0, 0, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R1, 1, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R2, 2, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R3, 3, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R4, 4, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R5, 5, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R6, 6, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R7, 7, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R8, 8, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R9, 9, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R10, 10, true );
+    RI->mapLLVMRegToDwarfReg(XCore::R11, 11, true );
+    RI->mapLLVMRegToDwarfReg(XCore::SP, 14, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct XCoreGenRegisterInfo : public TargetRegisterInfo {
+  explicit XCoreGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+namespace XCore { // Register classes
+  struct GRRegsClass : public TargetRegisterClass {
+    GRRegsClass();
+  };
+  extern GRRegsClass	GRRegsRegClass;
+  static TargetRegisterClass * const GRRegsRegisterClass = &GRRegsRegClass;
+  struct RRegsClass : public TargetRegisterClass {
+    RRegsClass();
+  };
+  extern RRegsClass	RRegsRegClass;
+  static TargetRegisterClass * const RRegsRegisterClass = &RRegsRegClass;
+} // end of namespace XCore
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass XCoreMCRegisterClasses[];
+namespace {     // Register classes...
+  // GRRegsVTs Register Class Value Types...
+  static const EVT GRRegsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // RRegsVTs Register Class Value Types...
+  static const EVT RRegsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace XCore {   // Register class instances
+  GRRegsClass	GRRegsRegClass;
+  RRegsClass	RRegsRegClass;
+
+  static const TargetRegisterClass* const NullRegClasses[] = { NULL };
+
+  // GRRegs Register Class sub-classes...
+  static const TargetRegisterClass* const GRRegsSubclasses[] = {
+    NULL
+  };
+
+  // RRegs Register Class sub-classes...
+  static const TargetRegisterClass* const RRegsSubclasses[] = {
+    NULL
+  };
+
+  // GRRegs Register Class super-classes...
+  static const TargetRegisterClass* const GRRegsSuperclasses[] = {
+    NULL
+  };
+
+  // RRegs Register Class super-classes...
+  static const TargetRegisterClass* const RRegsSuperclasses[] = {
+    NULL
+  };
+
+GRRegsClass::GRRegsClass()  : TargetRegisterClass(&XCoreMCRegisterClasses[GRRegsRegClassID], GRRegsVTs, GRRegsSubclasses, GRRegsSuperclasses, NullRegClasses, NullRegClasses) {}
+RRegsClass::RRegsClass()  : TargetRegisterClass(&XCoreMCRegisterClasses[RRegsRegClassID], RRegsVTs, RRegsSubclasses, RRegsSuperclasses, NullRegClasses, NullRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &XCore::GRRegsRegClass,
+    &XCore::RRegsRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc XCoreRegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 0 },
+  };
+
+  static const char *const XCoreSubRegIndexTable[] = { "" };
+
+
+unsigned XCoreGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned XCoreGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned XCoreGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc XCoreRegDesc[];
+XCoreGenRegisterInfo::XCoreGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(XCoreRegInfoDesc, RegisterClasses, RegisterClasses+2,
+                 XCoreSubRegIndexTable) {
+  InitMCRegisterInfo(XCoreRegDesc, 17, RA, XCoreMCRegisterClasses, 2);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(12, XCore::CP, false );
+    mapDwarfRegToLLVMReg(13, XCore::DP, false );
+    mapDwarfRegToLLVMReg(15, XCore::LR, false );
+    mapDwarfRegToLLVMReg(0, XCore::R0, false );
+    mapDwarfRegToLLVMReg(1, XCore::R1, false );
+    mapDwarfRegToLLVMReg(2, XCore::R2, false );
+    mapDwarfRegToLLVMReg(3, XCore::R3, false );
+    mapDwarfRegToLLVMReg(4, XCore::R4, false );
+    mapDwarfRegToLLVMReg(5, XCore::R5, false );
+    mapDwarfRegToLLVMReg(6, XCore::R6, false );
+    mapDwarfRegToLLVMReg(7, XCore::R7, false );
+    mapDwarfRegToLLVMReg(8, XCore::R8, false );
+    mapDwarfRegToLLVMReg(9, XCore::R9, false );
+    mapDwarfRegToLLVMReg(10, XCore::R10, false );
+    mapDwarfRegToLLVMReg(11, XCore::R11, false );
+    mapDwarfRegToLLVMReg(14, XCore::SP, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(12, XCore::CP, true );
+    mapDwarfRegToLLVMReg(13, XCore::DP, true );
+    mapDwarfRegToLLVMReg(15, XCore::LR, true );
+    mapDwarfRegToLLVMReg(0, XCore::R0, true );
+    mapDwarfRegToLLVMReg(1, XCore::R1, true );
+    mapDwarfRegToLLVMReg(2, XCore::R2, true );
+    mapDwarfRegToLLVMReg(3, XCore::R3, true );
+    mapDwarfRegToLLVMReg(4, XCore::R4, true );
+    mapDwarfRegToLLVMReg(5, XCore::R5, true );
+    mapDwarfRegToLLVMReg(6, XCore::R6, true );
+    mapDwarfRegToLLVMReg(7, XCore::R7, true );
+    mapDwarfRegToLLVMReg(8, XCore::R8, true );
+    mapDwarfRegToLLVMReg(9, XCore::R9, true );
+    mapDwarfRegToLLVMReg(10, XCore::R10, true );
+    mapDwarfRegToLLVMReg(11, XCore::R11, true );
+    mapDwarfRegToLLVMReg(14, XCore::SP, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(XCore::CP, 12, false );
+    mapLLVMRegToDwarfReg(XCore::DP, 13, false );
+    mapLLVMRegToDwarfReg(XCore::LR, 15, false );
+    mapLLVMRegToDwarfReg(XCore::R0, 0, false );
+    mapLLVMRegToDwarfReg(XCore::R1, 1, false );
+    mapLLVMRegToDwarfReg(XCore::R2, 2, false );
+    mapLLVMRegToDwarfReg(XCore::R3, 3, false );
+    mapLLVMRegToDwarfReg(XCore::R4, 4, false );
+    mapLLVMRegToDwarfReg(XCore::R5, 5, false );
+    mapLLVMRegToDwarfReg(XCore::R6, 6, false );
+    mapLLVMRegToDwarfReg(XCore::R7, 7, false );
+    mapLLVMRegToDwarfReg(XCore::R8, 8, false );
+    mapLLVMRegToDwarfReg(XCore::R9, 9, false );
+    mapLLVMRegToDwarfReg(XCore::R10, 10, false );
+    mapLLVMRegToDwarfReg(XCore::R11, 11, false );
+    mapLLVMRegToDwarfReg(XCore::SP, 14, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(XCore::CP, 12, true );
+    mapLLVMRegToDwarfReg(XCore::DP, 13, true );
+    mapLLVMRegToDwarfReg(XCore::LR, 15, true );
+    mapLLVMRegToDwarfReg(XCore::R0, 0, true );
+    mapLLVMRegToDwarfReg(XCore::R1, 1, true );
+    mapLLVMRegToDwarfReg(XCore::R2, 2, true );
+    mapLLVMRegToDwarfReg(XCore::R3, 3, true );
+    mapLLVMRegToDwarfReg(XCore::R4, 4, true );
+    mapLLVMRegToDwarfReg(XCore::R5, 5, true );
+    mapLLVMRegToDwarfReg(XCore::R6, 6, true );
+    mapLLVMRegToDwarfReg(XCore::R7, 7, true );
+    mapLLVMRegToDwarfReg(XCore::R8, 8, true );
+    mapLLVMRegToDwarfReg(XCore::R9, 9, true );
+    mapLLVMRegToDwarfReg(XCore::R10, 10, true );
+    mapLLVMRegToDwarfReg(XCore::R11, 11, true );
+    mapLLVMRegToDwarfReg(XCore::SP, 14, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

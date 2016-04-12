@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/sha
+set test "sha"
+set tigerexpected {Result: 5}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

@@ -1,0 +1,13 @@
+load_lib legup.exp
+
+cd ../examples/parallel/openmp/matrixmult
+set test "matrixmult OpenMP"
+
+set hybridexpected {# Result: 36}
+run-test-hybridomp-once $test $hybridexpected
+
+cd ../../pthreads/matrixmult
+set test "matrixmult Pthreads"
+run-test-hybrid-once $test $hybridexpected
+
+cd ../../../

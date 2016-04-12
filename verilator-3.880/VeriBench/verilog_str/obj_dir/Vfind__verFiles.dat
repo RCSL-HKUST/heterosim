@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc find.v -exe sim_main.cpp"
+S   4201443  1051063  1456922637 "/usr/local/bin/verilator_bin"
+S    164343  4081350  1456984045 "find.v"
+S     37573  4081351  1456984049 "find_mux_255to1_sel8_64_1.v"
+T    205424  4081355  1456984206 "obj_dir/Vfind.cpp"
+T     14669  4081354  1456984206 "obj_dir/Vfind.h"
+T      1962  4081357  1456984206 "obj_dir/Vfind.mk"
+T       569  4081353  1456984206 "obj_dir/Vfind__Syms.cpp"
+T       949  4081352  1456984206 "obj_dir/Vfind__Syms.h"
+T       242  4081358  1456984206 "obj_dir/Vfind__ver.d"
+T         0        0  1456984206 "obj_dir/Vfind__verFiles.dat"
+T      1082  4081356  1456984206 "obj_dir/Vfind_classes.mk"

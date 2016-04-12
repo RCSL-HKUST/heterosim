@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd chstone/dfsin
+set test "dfsin"
+set tigerexpected {Result: 36}
+
+run-test-tiger $test $tigerexpected
+
+cd ../..

@@ -1,0 +1,1923 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// DAG Instruction Selector for the Blackfin target
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+// *** NOTE: This file is #included into the middle of the target
+// *** instruction selector class.  These functions are really methods.
+
+// The main instruction selector code.
+SDNode *SelectCode(SDNode *N) {
+  // Some target values are emitted as 2 bytes, TARGET_VAL handles
+  // this.
+  #define TARGET_VAL(X) X & 255, unsigned(X) >> 8
+  static const unsigned char MatcherTable[] = {
+/*0*/     OPC_SwitchOpcode /*32 cases */, 122|128,1/*250*/,  TARGET_VAL(ISD::OR),// ->255
+/*5*/       OPC_Scope, 76|128,1/*204*/, /*->212*/ // 2 children in Scope
+/*8*/         OPC_MoveChild, 0,
+/*10*/        OPC_SwitchOpcode /*2 cases */, 97,  TARGET_VAL(ISD::SHL),// ->111
+/*14*/          OPC_RecordChild0, // #0 = $src1
+/*15*/          OPC_MoveChild, 1,
+/*17*/          OPC_CheckType, MVT::i32,
+/*19*/          OPC_Scope, 29, /*->50*/ // 3 children in Scope
+/*21*/            OPC_CheckInteger, 24, 
+/*23*/            OPC_MoveParent,
+/*24*/            OPC_MoveParent,
+/*25*/            OPC_MoveChild, 1,
+/*27*/            OPC_CheckOpcode, TARGET_VAL(ISD::SRL),
+/*30*/            OPC_RecordChild0, // #1 = $src2
+/*31*/            OPC_MoveChild, 1,
+/*33*/            OPC_CheckInteger, 8, 
+/*35*/            OPC_CheckType, MVT::i32,
+/*37*/            OPC_MoveParent,
+/*38*/            OPC_MoveParent,
+/*39*/            OPC_CheckType, MVT::i32,
+/*41*/            OPC_MorphNodeTo, TARGET_VAL(BF::ALIGN8), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                  // Src: (or:i32 (shl:i32 D:i32:$src1, 24:i32), (srl:i32 D:i32:$src2, 8:i32)) - Complexity = 19
+                  // Dst: (ALIGN8:i32 D:i32:$src1, D:i32:$src2)
+/*50*/          /*Scope*/ 29, /*->80*/
+/*51*/            OPC_CheckInteger, 16, 
+/*53*/            OPC_MoveParent,
+/*54*/            OPC_MoveParent,
+/*55*/            OPC_MoveChild, 1,
+/*57*/            OPC_CheckOpcode, TARGET_VAL(ISD::SRL),
+/*60*/            OPC_RecordChild0, // #1 = $src2
+/*61*/            OPC_MoveChild, 1,
+/*63*/            OPC_CheckInteger, 16, 
+/*65*/            OPC_CheckType, MVT::i32,
+/*67*/            OPC_MoveParent,
+/*68*/            OPC_MoveParent,
+/*69*/            OPC_CheckType, MVT::i32,
+/*71*/            OPC_MorphNodeTo, TARGET_VAL(BF::ALIGN16), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                  // Src: (or:i32 (shl:i32 D:i32:$src1, 16:i32), (srl:i32 D:i32:$src2, 16:i32)) - Complexity = 19
+                  // Dst: (ALIGN16:i32 D:i32:$src1, D:i32:$src2)
+/*80*/          /*Scope*/ 29, /*->110*/
+/*81*/            OPC_CheckInteger, 8, 
+/*83*/            OPC_MoveParent,
+/*84*/            OPC_MoveParent,
+/*85*/            OPC_MoveChild, 1,
+/*87*/            OPC_CheckOpcode, TARGET_VAL(ISD::SRL),
+/*90*/            OPC_RecordChild0, // #1 = $src2
+/*91*/            OPC_MoveChild, 1,
+/*93*/            OPC_CheckInteger, 24, 
+/*95*/            OPC_CheckType, MVT::i32,
+/*97*/            OPC_MoveParent,
+/*98*/            OPC_MoveParent,
+/*99*/            OPC_CheckType, MVT::i32,
+/*101*/           OPC_MorphNodeTo, TARGET_VAL(BF::ALIGN24), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                  // Src: (or:i32 (shl:i32 D:i32:$src1, 8:i32), (srl:i32 D:i32:$src2, 24:i32)) - Complexity = 19
+                  // Dst: (ALIGN24:i32 D:i32:$src1, D:i32:$src2)
+/*110*/         0, /*End of Scope*/
+              /*SwitchOpcode*/ 97,  TARGET_VAL(ISD::SRL),// ->211
+/*114*/         OPC_RecordChild0, // #0 = $src2
+/*115*/         OPC_MoveChild, 1,
+/*117*/         OPC_CheckType, MVT::i32,
+/*119*/         OPC_Scope, 29, /*->150*/ // 3 children in Scope
+/*121*/           OPC_CheckInteger, 8, 
+/*123*/           OPC_MoveParent,
+/*124*/           OPC_MoveParent,
+/*125*/           OPC_MoveChild, 1,
+/*127*/           OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*130*/           OPC_RecordChild0, // #1 = $src1
+/*131*/           OPC_MoveChild, 1,
+/*133*/           OPC_CheckInteger, 24, 
+/*135*/           OPC_CheckType, MVT::i32,
+/*137*/           OPC_MoveParent,
+/*138*/           OPC_MoveParent,
+/*139*/           OPC_CheckType, MVT::i32,
+/*141*/           OPC_MorphNodeTo, TARGET_VAL(BF::ALIGN8), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                  // Src: (or:i32 (srl:i32 D:i32:$src2, 8:i32), (shl:i32 D:i32:$src1, 24:i32)) - Complexity = 19
+                  // Dst: (ALIGN8:i32 D:i32:$src1, D:i32:$src2)
+/*150*/         /*Scope*/ 29, /*->180*/
+/*151*/           OPC_CheckInteger, 16, 
+/*153*/           OPC_MoveParent,
+/*154*/           OPC_MoveParent,
+/*155*/           OPC_MoveChild, 1,
+/*157*/           OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*160*/           OPC_RecordChild0, // #1 = $src1
+/*161*/           OPC_MoveChild, 1,
+/*163*/           OPC_CheckInteger, 16, 
+/*165*/           OPC_CheckType, MVT::i32,
+/*167*/           OPC_MoveParent,
+/*168*/           OPC_MoveParent,
+/*169*/           OPC_CheckType, MVT::i32,
+/*171*/           OPC_MorphNodeTo, TARGET_VAL(BF::ALIGN16), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                  // Src: (or:i32 (srl:i32 D:i32:$src2, 16:i32), (shl:i32 D:i32:$src1, 16:i32)) - Complexity = 19
+                  // Dst: (ALIGN16:i32 D:i32:$src1, D:i32:$src2)
+/*180*/         /*Scope*/ 29, /*->210*/
+/*181*/           OPC_CheckInteger, 24, 
+/*183*/           OPC_MoveParent,
+/*184*/           OPC_MoveParent,
+/*185*/           OPC_MoveChild, 1,
+/*187*/           OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*190*/           OPC_RecordChild0, // #1 = $src1
+/*191*/           OPC_MoveChild, 1,
+/*193*/           OPC_CheckInteger, 8, 
+/*195*/           OPC_CheckType, MVT::i32,
+/*197*/           OPC_MoveParent,
+/*198*/           OPC_MoveParent,
+/*199*/           OPC_CheckType, MVT::i32,
+/*201*/           OPC_MorphNodeTo, TARGET_VAL(BF::ALIGN24), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                  // Src: (or:i32 (srl:i32 D:i32:$src2, 24:i32), (shl:i32 D:i32:$src1, 8:i32)) - Complexity = 19
+                  // Dst: (ALIGN24:i32 D:i32:$src1, D:i32:$src2)
+/*210*/         0, /*End of Scope*/
+              0, // EndSwitchOpcode
+/*212*/     /*Scope*/ 41, /*->254*/
+/*213*/       OPC_RecordChild0, // #0 = $src1
+/*214*/       OPC_RecordChild1, // #1 = $src2
+/*215*/       OPC_Scope, 24, /*->241*/ // 2 children in Scope
+/*217*/         OPC_MoveChild, 1,
+/*219*/         OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*222*/         OPC_CheckPredicate, 0, // Predicate_uimm5mask
+/*224*/         OPC_MoveParent,
+/*225*/         OPC_CheckType, MVT::i32,
+/*227*/         OPC_EmitConvertToTarget, 1,
+/*229*/         OPC_EmitNodeXForm, 0, 2, // trailingZeros_xform
+/*232*/         OPC_MorphNodeTo, TARGET_VAL(BF::BITSET), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                // Src: (or:i32 D:i32:$src1, (imm:i32)<<P:Predicate_uimm5mask>><<X:trailingZeros_xform>>:$src2) - Complexity = 7
+                // Dst: (BITSET:i32 D:i32:$src1, (trailingZeros_xform:i32 (imm:i32):$src2))
+/*241*/       /*Scope*/ 11, /*->253*/
+/*242*/         OPC_CheckType, MVT::i32,
+/*244*/         OPC_MorphNodeTo, TARGET_VAL(BF::OR), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (or:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+                // Dst: (OR:i32 D:i32:$src1, D:i32:$src2)
+/*253*/       0, /*End of Scope*/
+/*254*/     0, /*End of Scope*/
+          /*SwitchOpcode*/ 69|128,4/*581*/,  TARGET_VAL(ISD::STORE),// ->840
+/*259*/     OPC_RecordMemRef,
+/*260*/     OPC_RecordNode,   // #0 = 'ist' chained node
+/*261*/     OPC_Scope, 30|128,1/*158*/, /*->422*/ // 3 children in Scope
+/*264*/       OPC_RecordChild1, // #1 = $val
+/*265*/       OPC_Scope, 95, /*->362*/ // 2 children in Scope
+/*267*/         OPC_CheckChild1Type, MVT::i32,
+/*269*/         OPC_RecordChild2, // #2 = $ptr
+/*270*/         OPC_Scope, 56, /*->328*/ // 2 children in Scope
+/*272*/           OPC_MoveChild, 3,
+/*274*/           OPC_CheckOpcode, TARGET_VAL(ISD::SUB),
+/*277*/           OPC_MoveChild, 0,
+/*279*/           OPC_CheckInteger, 0, 
+/*281*/           OPC_MoveParent,
+/*282*/           OPC_MoveChild, 1,
+/*284*/           OPC_Scope, 20, /*->306*/ // 2 children in Scope
+/*286*/             OPC_CheckInteger, 4, 
+/*288*/             OPC_MoveParent,
+/*289*/             OPC_MoveParent,
+/*290*/             OPC_CheckPredicate, 1, // Predicate_istore
+/*292*/             OPC_CheckPredicate, 2, // Predicate_post_store
+/*294*/             OPC_CheckType, MVT::i32,
+/*296*/             OPC_EmitMergeInputChains1_0,
+/*297*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE32p_dec), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                    // Src: (ist:i32 DP:i32:$val, P:i32:$ptr, (sub:iPTR 0:iPTR, 4:iPTR))<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 17
+                    // Dst: (STORE32p_dec:i32 DP:i32:$val, P:i32:$ptr)
+/*306*/           /*Scope*/ 20, /*->327*/
+/*307*/             OPC_CheckInteger, 1, 
+/*309*/             OPC_MoveParent,
+/*310*/             OPC_MoveParent,
+/*311*/             OPC_CheckPredicate, 1, // Predicate_istore
+/*313*/             OPC_CheckPredicate, 2, // Predicate_post_store
+/*315*/             OPC_CheckType, MVT::i32,
+/*317*/             OPC_EmitMergeInputChains1_0,
+/*318*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE8p_dec), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                    // Src: (ist:i32 D:i32:$val, P:i32:$ptr, (sub:iPTR 0:iPTR, 1:iPTR))<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 17
+                    // Dst: (STORE8p_dec:i32 D:i32:$val, P:i32:$ptr)
+/*327*/           0, /*End of Scope*/
+/*328*/         /*Scope*/ 32, /*->361*/
+/*329*/           OPC_CheckChild2Type, MVT::i32,
+/*331*/           OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*333*/           OPC_CheckPredicate, 4, // Predicate_store
+/*335*/           OPC_CheckComplexPat, /*CP*/0, /*#*/2, // SelectADDRspii:$mem #3 #4
+/*338*/           OPC_EmitMergeInputChains1_0,
+/*339*/           OPC_Scope, 9, /*->350*/ // 2 children in Scope
+/*341*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE32fi), 0|OPFL_Chain|OPFL_MemRefs,
+                        0/*#VTs*/, 3/*#Ops*/, 1, 3, 4, 
+                    // Src: (st DP:i32:$val, ADDRspii:i32:$mem)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 13
+                    // Dst: (STORE32fi DP:i32:$val, ADDRspii:i32:$mem)
+/*350*/           /*Scope*/ 9, /*->360*/
+/*351*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE8fi), 0|OPFL_Chain|OPFL_MemRefs,
+                        0/*#VTs*/, 3/*#Ops*/, 1, 3, 4, 
+                    // Src: (st AnyCC:i32:$val, ADDRspii:i32:$mem)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 13
+                    // Dst: (STORE8fi AnyCC:i32:$val, ADDRspii:i32:$mem)
+/*360*/           0, /*End of Scope*/
+/*361*/         0, /*End of Scope*/
+/*362*/       /*Scope*/ 58, /*->421*/
+/*363*/         OPC_CheckChild1Type, MVT::i16,
+/*365*/         OPC_RecordChild2, // #2 = $ptr
+/*366*/         OPC_Scope, 32, /*->400*/ // 2 children in Scope
+/*368*/           OPC_MoveChild, 3,
+/*370*/           OPC_CheckOpcode, TARGET_VAL(ISD::SUB),
+/*373*/           OPC_MoveChild, 0,
+/*375*/           OPC_CheckInteger, 0, 
+/*377*/           OPC_MoveParent,
+/*378*/           OPC_MoveChild, 1,
+/*380*/           OPC_CheckInteger, 2, 
+/*382*/           OPC_MoveParent,
+/*383*/           OPC_MoveParent,
+/*384*/           OPC_CheckPredicate, 1, // Predicate_istore
+/*386*/           OPC_CheckPredicate, 2, // Predicate_post_store
+/*388*/           OPC_CheckType, MVT::i32,
+/*390*/           OPC_EmitMergeInputChains1_0,
+/*391*/           OPC_MorphNodeTo, TARGET_VAL(BF::STORE16i_dec), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                  // Src: (ist:i32 D16:i16:$val, I:i32:$ptr, (sub:iPTR 0:iPTR, 2:iPTR))<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 17
+                  // Dst: (STORE16i_dec:i32 D16:i16:$val, I:i32:$ptr)
+/*400*/         /*Scope*/ 19, /*->420*/
+/*401*/           OPC_CheckChild2Type, MVT::i32,
+/*403*/           OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*405*/           OPC_CheckPredicate, 4, // Predicate_store
+/*407*/           OPC_CheckComplexPat, /*CP*/0, /*#*/2, // SelectADDRspii:$mem #3 #4
+/*410*/           OPC_EmitMergeInputChains1_0,
+/*411*/           OPC_MorphNodeTo, TARGET_VAL(BF::STORE16fi), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 3, 4, 
+                  // Src: (st D16:i16:$val, ADDRspii:i32:$mem)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 13
+                  // Dst: (STORE16fi D16:i16:$val, ADDRspii:i32:$mem)
+/*420*/         0, /*End of Scope*/
+/*421*/       0, /*End of Scope*/
+/*422*/     /*Scope*/ 58, /*->481*/
+/*423*/       OPC_MoveChild, 1,
+/*425*/       OPC_CheckOpcode, TARGET_VAL(ISD::SRL),
+/*428*/       OPC_RecordChild0, // #1 = $val
+/*429*/       OPC_MoveChild, 1,
+/*431*/       OPC_CheckInteger, 16, 
+/*433*/       OPC_CheckType, MVT::i16,
+/*435*/       OPC_MoveParent,
+/*436*/       OPC_CheckType, MVT::i32,
+/*438*/       OPC_MoveParent,
+/*439*/       OPC_RecordChild2, // #2 = $ptr
+/*440*/       OPC_CheckChild2Type, MVT::i32,
+/*442*/       OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*444*/       OPC_CheckPredicate, 5, // Predicate_truncstore
+/*446*/       OPC_CheckPredicate, 6, // Predicate_truncstorei16
+/*448*/       OPC_EmitMergeInputChains1_0,
+/*449*/       OPC_EmitInteger, MVT::i32, BF::DRegClassID,
+/*452*/       OPC_EmitNode, TARGET_VAL(TargetOpcode::COPY_TO_REGCLASS), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*461*/       OPC_EmitInteger, MVT::i32, BF::hi16,
+/*464*/       OPC_EmitNode, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0,
+                  1/*#VTs*/, MVT::i16, 2/*#Ops*/, 4, 5,  // Results = #6 
+/*473*/       OPC_MorphNodeTo, TARGET_VAL(BF::STORE16pi), 0|OPFL_Chain|OPFL_MemRefs,
+                  0/*#VTs*/, 2/*#Ops*/, 6, 2, 
+              // Src: (st (srl:i32 D:i32:$val, 16:i16), PI:i32:$ptr)<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei16>> - Complexity = 12
+              // Dst: (STORE16pi (EXTRACT_SUBREG:i16 (COPY_TO_REGCLASS:i32 D:i32:$val, D:i32), hi16:i32), PI:i32:$ptr)
+/*481*/     /*Scope*/ 100|128,2/*356*/, /*->839*/
+/*483*/       OPC_RecordChild1, // #1 = $val
+/*484*/       OPC_Scope, 108|128,1/*236*/, /*->723*/ // 2 children in Scope
+/*487*/         OPC_CheckChild1Type, MVT::i32,
+/*489*/         OPC_Scope, 85, /*->576*/ // 2 children in Scope
+/*491*/           OPC_MoveChild, 2,
+/*493*/           OPC_CheckOpcode, TARGET_VAL(ISD::ADD),
+/*496*/           OPC_RecordChild0, // #2 = $ptr
+/*497*/           OPC_RecordChild1, // #3 = $off
+/*498*/           OPC_MoveChild, 1,
+/*500*/           OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*503*/           OPC_Scope, 22, /*->527*/ // 3 children in Scope
+/*505*/             OPC_CheckPredicate, 7, // Predicate_uimm6m4
+/*507*/             OPC_MoveParent,
+/*508*/             OPC_CheckType, MVT::i32,
+/*510*/             OPC_MoveParent,
+/*511*/             OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*513*/             OPC_CheckPredicate, 4, // Predicate_store
+/*515*/             OPC_EmitMergeInputChains1_0,
+/*516*/             OPC_EmitConvertToTarget, 3,
+/*518*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE32p_uimm6m4), 0|OPFL_Chain|OPFL_MemRefs,
+                        0/*#VTs*/, 3/*#Ops*/, 1, 2, 4, 
+                    // Src: (st DP:i32:$val, (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_uimm6m4>>:$off))<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 11
+                    // Dst: (STORE32p_uimm6m4 DP:i32:$val, P:i32:$ptr, (imm:i32):$off)
+/*527*/           /*Scope*/ 22, /*->550*/
+/*528*/             OPC_CheckPredicate, 8, // Predicate_imm18m4
+/*530*/             OPC_MoveParent,
+/*531*/             OPC_CheckType, MVT::i32,
+/*533*/             OPC_MoveParent,
+/*534*/             OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*536*/             OPC_CheckPredicate, 4, // Predicate_store
+/*538*/             OPC_EmitMergeInputChains1_0,
+/*539*/             OPC_EmitConvertToTarget, 3,
+/*541*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE32p_imm18m4), 0|OPFL_Chain|OPFL_MemRefs,
+                        0/*#VTs*/, 3/*#Ops*/, 1, 2, 4, 
+                    // Src: (st DP:i32:$val, (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm18m4>>:$off))<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 11
+                    // Dst: (STORE32p_imm18m4 DP:i32:$val, P:i32:$ptr, (imm:i32):$off)
+/*550*/           /*Scope*/ 24, /*->575*/
+/*551*/             OPC_CheckPredicate, 9, // Predicate_imm16
+/*553*/             OPC_MoveParent,
+/*554*/             OPC_CheckType, MVT::i32,
+/*556*/             OPC_MoveParent,
+/*557*/             OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*559*/             OPC_CheckPredicate, 5, // Predicate_truncstore
+/*561*/             OPC_CheckPredicate, 10, // Predicate_truncstorei8
+/*563*/             OPC_EmitMergeInputChains1_0,
+/*564*/             OPC_EmitConvertToTarget, 3,
+/*566*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE8p_imm16), 0|OPFL_Chain|OPFL_MemRefs,
+                        0/*#VTs*/, 3/*#Ops*/, 1, 2, 4, 
+                    // Src: (st D:i32:$val, (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei8>> - Complexity = 11
+                    // Dst: (STORE8p_imm16 D:i32:$val, P:i32:$ptr, (imm:i32):$off)
+/*575*/           0, /*End of Scope*/
+/*576*/         /*Scope*/ 16|128,1/*144*/, /*->722*/
+/*578*/           OPC_RecordChild2, // #2 = $ptr
+/*579*/           OPC_Scope, 44, /*->625*/ // 4 children in Scope
+/*581*/             OPC_MoveChild, 3,
+/*583*/             OPC_Scope, 19, /*->604*/ // 2 children in Scope
+/*585*/               OPC_CheckInteger, 4, 
+/*587*/               OPC_MoveParent,
+/*588*/               OPC_CheckPredicate, 1, // Predicate_istore
+/*590*/               OPC_CheckPredicate, 2, // Predicate_post_store
+/*592*/               OPC_CheckType, MVT::i32,
+/*594*/               OPC_EmitMergeInputChains1_0,
+/*595*/               OPC_MorphNodeTo, TARGET_VAL(BF::STORE32p_inc), 0|OPFL_Chain|OPFL_MemRefs,
+                          1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                      // Src: (ist:i32 DP:i32:$val, P:i32:$ptr, 4:iPTR)<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 9
+                      // Dst: (STORE32p_inc:i32 DP:i32:$val, P:i32:$ptr)
+/*604*/             /*Scope*/ 19, /*->624*/
+/*605*/               OPC_CheckInteger, 1, 
+/*607*/               OPC_MoveParent,
+/*608*/               OPC_CheckPredicate, 1, // Predicate_istore
+/*610*/               OPC_CheckPredicate, 2, // Predicate_post_store
+/*612*/               OPC_CheckType, MVT::i32,
+/*614*/               OPC_EmitMergeInputChains1_0,
+/*615*/               OPC_MorphNodeTo, TARGET_VAL(BF::STORE8p_inc), 0|OPFL_Chain|OPFL_MemRefs,
+                          1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                      // Src: (ist:i32 D:i32:$val, P:i32:$ptr, 1:iPTR)<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 9
+                      // Dst: (STORE8p_inc:i32 D:i32:$val, P:i32:$ptr)
+/*624*/             0, /*End of Scope*/
+/*625*/           /*Scope*/ 32, /*->658*/
+/*626*/             OPC_CheckChild2Type, MVT::i32,
+/*628*/             OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*630*/             OPC_Scope, 11, /*->643*/ // 2 children in Scope
+/*632*/               OPC_CheckPredicate, 4, // Predicate_store
+/*634*/               OPC_EmitMergeInputChains1_0,
+/*635*/               OPC_MorphNodeTo, TARGET_VAL(BF::STORE32p), 0|OPFL_Chain|OPFL_MemRefs,
+                          0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                      // Src: (st DP:i32:$val, P:i32:$ptr)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 4
+                      // Dst: (STORE32p DP:i32:$val, P:i32:$ptr)
+/*643*/             /*Scope*/ 13, /*->657*/
+/*644*/               OPC_CheckPredicate, 5, // Predicate_truncstore
+/*646*/               OPC_CheckPredicate, 10, // Predicate_truncstorei8
+/*648*/               OPC_EmitMergeInputChains1_0,
+/*649*/               OPC_MorphNodeTo, TARGET_VAL(BF::STORE8p), 0|OPFL_Chain|OPFL_MemRefs,
+                          0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                      // Src: (st D:i32:$val, P:i32:$ptr)<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei8>> - Complexity = 4
+                      // Dst: (STORE8p D:i32:$val, P:i32:$ptr)
+/*657*/             0, /*End of Scope*/
+/*658*/           /*Scope*/ 20, /*->679*/
+/*659*/             OPC_RecordChild3, // #3 = $off
+/*660*/             OPC_CheckChild3Type, MVT::i32,
+/*662*/             OPC_CheckPredicate, 1, // Predicate_istore
+/*664*/             OPC_CheckPredicate, 2, // Predicate_post_store
+/*666*/             OPC_CheckType, MVT::i32,
+/*668*/             OPC_EmitMergeInputChains1_0,
+/*669*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE32p_post), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 3/*#Ops*/, 1, 2, 3, 
+                    // Src: (ist:i32 D:i32:$val, P:i32:$ptr, P:i32:$off)<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 4
+                    // Dst: (STORE32p_post:i32 D:i32:$val, P:i32:$ptr, P:i32:$off)
+/*679*/           /*Scope*/ 41, /*->721*/
+/*680*/             OPC_CheckChild2Type, MVT::i32,
+/*682*/             OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*684*/             OPC_CheckPredicate, 5, // Predicate_truncstore
+/*686*/             OPC_CheckPredicate, 6, // Predicate_truncstorei16
+/*688*/             OPC_EmitMergeInputChains1_0,
+/*689*/             OPC_EmitInteger, MVT::i32, BF::DRegClassID,
+/*692*/             OPC_EmitNode, TARGET_VAL(TargetOpcode::COPY_TO_REGCLASS), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*701*/             OPC_EmitInteger, MVT::i32, BF::lo16,
+/*704*/             OPC_EmitNode, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0,
+                        1/*#VTs*/, MVT::i16, 2/*#Ops*/, 4, 5,  // Results = #6 
+/*713*/             OPC_MorphNodeTo, TARGET_VAL(BF::STORE16pi), 0|OPFL_Chain|OPFL_MemRefs,
+                        0/*#VTs*/, 2/*#Ops*/, 6, 2, 
+                    // Src: (st D:i32:$val, PI:i32:$ptr)<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei16>> - Complexity = 4
+                    // Dst: (STORE16pi (EXTRACT_SUBREG:i16 (COPY_TO_REGCLASS:i32 D:i32:$val, D:i32), lo16:i32), PI:i32:$ptr)
+/*721*/           0, /*End of Scope*/
+/*722*/         0, /*End of Scope*/
+/*723*/       /*Scope*/ 114, /*->838*/
+/*724*/         OPC_CheckChild1Type, MVT::i16,
+/*726*/         OPC_RecordChild2, // #2 = $ptr
+/*727*/         OPC_Scope, 21, /*->750*/ // 4 children in Scope
+/*729*/           OPC_MoveChild, 3,
+/*731*/           OPC_CheckInteger, 2, 
+/*733*/           OPC_MoveParent,
+/*734*/           OPC_CheckPredicate, 1, // Predicate_istore
+/*736*/           OPC_CheckPredicate, 2, // Predicate_post_store
+/*738*/           OPC_CheckType, MVT::i32,
+/*740*/           OPC_EmitMergeInputChains1_0,
+/*741*/           OPC_MorphNodeTo, TARGET_VAL(BF::STORE16i_inc), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                  // Src: (ist:i32 D16:i16:$val, I:i32:$ptr, 2:iPTR)<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 9
+                  // Dst: (STORE16i_inc:i32 D16:i16:$val, I:i32:$ptr)
+/*750*/         /*Scope*/ 15, /*->766*/
+/*751*/           OPC_CheckChild2Type, MVT::i32,
+/*753*/           OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*755*/           OPC_CheckPredicate, 4, // Predicate_store
+/*757*/           OPC_EmitMergeInputChains1_0,
+/*758*/           OPC_MorphNodeTo, TARGET_VAL(BF::STORE16pi), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                  // Src: (st D16:i16:$val, PI:i32:$ptr)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 4
+                  // Dst: (STORE16pi D16:i16:$val, PI:i32:$ptr)
+/*766*/         /*Scope*/ 20, /*->787*/
+/*767*/           OPC_RecordChild3, // #3 = $off
+/*768*/           OPC_CheckChild3Type, MVT::i32,
+/*770*/           OPC_CheckPredicate, 1, // Predicate_istore
+/*772*/           OPC_CheckPredicate, 2, // Predicate_post_store
+/*774*/           OPC_CheckType, MVT::i32,
+/*776*/           OPC_EmitMergeInputChains1_0,
+/*777*/           OPC_MorphNodeTo, TARGET_VAL(BF::STORE16p_post), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 1, 2, 3, 
+                  // Src: (ist:i32 D16:i16:$val, P:i32:$ptr, P:i32:$off)<<P:Predicate_istore>><<P:Predicate_post_store>> - Complexity = 4
+                  // Dst: (STORE16p_post:i32 D16:i16:$val, P:i32:$ptr, P:i32:$off)
+/*787*/         /*Scope*/ 49, /*->837*/
+/*788*/           OPC_CheckChild2Type, MVT::i32,
+/*790*/           OPC_CheckPredicate, 3, // Predicate_unindexedstore
+/*792*/           OPC_CheckPredicate, 5, // Predicate_truncstore
+/*794*/           OPC_CheckPredicate, 10, // Predicate_truncstorei8
+/*796*/           OPC_EmitMergeInputChains1_0,
+/*797*/           OPC_EmitNode, TARGET_VAL(TargetOpcode::IMPLICIT_DEF), 0,
+                      1/*#VTs*/, MVT::i32, 0/*#Ops*/,  // Results = #3 
+/*804*/           OPC_EmitInteger, MVT::i32, BF::D16LRegClassID,
+/*807*/           OPC_EmitNode, TARGET_VAL(TargetOpcode::COPY_TO_REGCLASS), 0,
+                      1/*#VTs*/, MVT::i16, 2/*#Ops*/, 1, 4,  // Results = #5 
+/*816*/           OPC_EmitInteger, MVT::i32, BF::lo16,
+/*819*/           OPC_EmitNode, TARGET_VAL(TargetOpcode::INSERT_SUBREG), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 3, 5, 6,  // Results = #7 
+/*829*/           OPC_MorphNodeTo, TARGET_VAL(BF::STORE8p), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 2/*#Ops*/, 7, 2, 
+                  // Src: (st D16L:i16:$val, P:i32:$ptr)<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei8>> - Complexity = 4
+                  // Dst: (STORE8p (INSERT_SUBREG:i32 (IMPLICIT_DEF:i32), (COPY_TO_REGCLASS:i16 D16L:i16:$val, D16L:i16), lo16:i32), P:i32:$ptr)
+/*837*/         0, /*End of Scope*/
+/*838*/       0, /*End of Scope*/
+/*839*/     0, /*End of Scope*/
+          /*SwitchOpcode*/ 59|128,3/*443*/,  TARGET_VAL(ISD::SETCC),// ->1287
+/*844*/     OPC_Scope, 67, /*->913*/ // 2 children in Scope
+/*846*/       OPC_MoveChild, 0,
+/*848*/       OPC_CheckOpcode, TARGET_VAL(ISD::AND),
+/*851*/       OPC_RecordChild0, // #0 = $src1
+/*852*/       OPC_RecordChild1, // #1 = $src2
+/*853*/       OPC_MoveChild, 1,
+/*855*/       OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*858*/       OPC_CheckPredicate, 0, // Predicate_uimm5mask
+/*860*/       OPC_MoveParent,
+/*861*/       OPC_CheckType, MVT::i32,
+/*863*/       OPC_MoveParent,
+/*864*/       OPC_MoveChild, 1,
+/*866*/       OPC_CheckInteger, 0, 
+/*868*/       OPC_MoveParent,
+/*869*/       OPC_MoveChild, 2,
+/*871*/       OPC_Scope, 19, /*->892*/ // 2 children in Scope
+/*873*/         OPC_CheckCondCode, ISD::SETNE,
+/*875*/         OPC_MoveParent,
+/*876*/         OPC_CheckType, MVT::i32,
+/*878*/         OPC_EmitConvertToTarget, 1,
+/*880*/         OPC_EmitNodeXForm, 0, 2, // trailingZeros_xform
+/*883*/         OPC_MorphNodeTo, TARGET_VAL(BF::BITTST), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                // Src: (setcc:i32 (and:i32 D:i32:$src1, (imm:i32)<<P:Predicate_uimm5mask>><<X:trailingZeros_xform>>:$src2), 0:i32, SETNE:Other) - Complexity = 15
+                // Dst: (BITTST:i32 D:i32:$src1, (trailingZeros_xform:i32 (imm:i32):$src2))
+/*892*/       /*Scope*/ 19, /*->912*/
+/*893*/         OPC_CheckCondCode, ISD::SETEQ,
+/*895*/         OPC_MoveParent,
+/*896*/         OPC_CheckType, MVT::i32,
+/*898*/         OPC_EmitConvertToTarget, 1,
+/*900*/         OPC_EmitNodeXForm, 0, 2, // trailingZeros_xform
+/*903*/         OPC_MorphNodeTo, TARGET_VAL(BF::NBITTST), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                // Src: (setcc:i32 (and:i32 D:i32:$src1, (imm:i32)<<P:Predicate_uimm5mask>><<X:trailingZeros_xform>>:$src2), 0:i32, SETEQ:Other) - Complexity = 15
+                // Dst: (NBITTST:i32 D:i32:$src1, (trailingZeros_xform:i32 (imm:i32):$src2))
+/*912*/       0, /*End of Scope*/
+/*913*/     /*Scope*/ 115|128,2/*371*/, /*->1286*/
+/*915*/       OPC_RecordChild0, // #0 = $src
+/*916*/       OPC_CheckChild0Type, MVT::i32,
+/*918*/       OPC_Scope, 20, /*->940*/ // 2 children in Scope
+/*920*/         OPC_MoveChild, 1,
+/*922*/         OPC_CheckInteger, 0, 
+/*924*/         OPC_MoveParent,
+/*925*/         OPC_MoveChild, 2,
+/*927*/         OPC_CheckCondCode, ISD::SETNE,
+/*929*/         OPC_MoveParent,
+/*930*/         OPC_CheckType, MVT::i32,
+/*932*/         OPC_MorphNodeTo, TARGET_VAL(BF::MOVECC_nz), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+                // Src: (setcc:i32 D:i32:$src, 0:i32, SETNE:Other) - Complexity = 8
+                // Dst: (MOVECC_nz:i32 D:i32:$src)
+/*940*/       /*Scope*/ 87|128,2/*343*/, /*->1285*/
+/*942*/         OPC_RecordChild1, // #1 = $b
+/*943*/         OPC_Scope, 54|128,1/*182*/, /*->1128*/ // 2 children in Scope
+/*946*/           OPC_MoveChild, 1,
+/*948*/           OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*951*/           OPC_CheckPredicate, 11, // Predicate_imm3
+/*953*/           OPC_MoveParent,
+/*954*/           OPC_MoveChild, 2,
+/*956*/           OPC_Scope, 16, /*->974*/ // 10 children in Scope
+/*958*/             OPC_CheckCondCode, ISD::SETEQ,
+/*960*/             OPC_MoveParent,
+/*961*/             OPC_CheckType, MVT::i32,
+/*963*/             OPC_EmitConvertToTarget, 1,
+/*965*/             OPC_MorphNodeTo, TARGET_VAL(BF::SETEQri), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETEQ:Other) - Complexity = 7
+                    // Dst: (SETEQri:i32 DP:i32:$a, (imm:i32):$b)
+/*974*/           /*Scope*/ 16, /*->991*/
+/*975*/             OPC_CheckCondCode, ISD::SETNE,
+/*977*/             OPC_MoveParent,
+/*978*/             OPC_CheckType, MVT::i32,
+/*980*/             OPC_EmitConvertToTarget, 1,
+/*982*/             OPC_MorphNodeTo, TARGET_VAL(BF::SETEQri_not), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETNE:Other) - Complexity = 7
+                    // Dst: (SETEQri_not:i32 DP:i32:$a, (imm:i32):$b)
+/*991*/           /*Scope*/ 16, /*->1008*/
+/*992*/             OPC_CheckCondCode, ISD::SETLT,
+/*994*/             OPC_MoveParent,
+/*995*/             OPC_CheckType, MVT::i32,
+/*997*/             OPC_EmitConvertToTarget, 1,
+/*999*/             OPC_MorphNodeTo, TARGET_VAL(BF::SETLTri), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETLT:Other) - Complexity = 7
+                    // Dst: (SETLTri:i32 DP:i32:$a, (imm:i32):$b)
+/*1008*/          /*Scope*/ 16, /*->1025*/
+/*1009*/            OPC_CheckCondCode, ISD::SETGE,
+/*1011*/            OPC_MoveParent,
+/*1012*/            OPC_CheckType, MVT::i32,
+/*1014*/            OPC_EmitConvertToTarget, 1,
+/*1016*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLTri_not), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETGE:Other) - Complexity = 7
+                    // Dst: (SETLTri_not:i32 DP:i32:$a, (imm:i32):$b)
+/*1025*/          /*Scope*/ 16, /*->1042*/
+/*1026*/            OPC_CheckCondCode, ISD::SETLE,
+/*1028*/            OPC_MoveParent,
+/*1029*/            OPC_CheckType, MVT::i32,
+/*1031*/            OPC_EmitConvertToTarget, 1,
+/*1033*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLEri), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETLE:Other) - Complexity = 7
+                    // Dst: (SETLEri:i32 DP:i32:$a, (imm:i32):$b)
+/*1042*/          /*Scope*/ 16, /*->1059*/
+/*1043*/            OPC_CheckCondCode, ISD::SETGT,
+/*1045*/            OPC_MoveParent,
+/*1046*/            OPC_CheckType, MVT::i32,
+/*1048*/            OPC_EmitConvertToTarget, 1,
+/*1050*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLEri_not), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETGT:Other) - Complexity = 7
+                    // Dst: (SETLEri_not:i32 DP:i32:$a, (imm:i32):$b)
+/*1059*/          /*Scope*/ 16, /*->1076*/
+/*1060*/            OPC_CheckCondCode, ISD::SETULT,
+/*1062*/            OPC_MoveParent,
+/*1063*/            OPC_CheckType, MVT::i32,
+/*1065*/            OPC_EmitConvertToTarget, 1,
+/*1067*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULTri), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETULT:Other) - Complexity = 7
+                    // Dst: (SETULTri:i32 DP:i32:$a, (imm:i32):$b)
+/*1076*/          /*Scope*/ 16, /*->1093*/
+/*1077*/            OPC_CheckCondCode, ISD::SETUGE,
+/*1079*/            OPC_MoveParent,
+/*1080*/            OPC_CheckType, MVT::i32,
+/*1082*/            OPC_EmitConvertToTarget, 1,
+/*1084*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULTri_not), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETUGE:Other) - Complexity = 7
+                    // Dst: (SETULTri_not:i32 DP:i32:$a, (imm:i32):$b)
+/*1093*/          /*Scope*/ 16, /*->1110*/
+/*1094*/            OPC_CheckCondCode, ISD::SETULE,
+/*1096*/            OPC_MoveParent,
+/*1097*/            OPC_CheckType, MVT::i32,
+/*1099*/            OPC_EmitConvertToTarget, 1,
+/*1101*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULEri), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETULE:Other) - Complexity = 7
+                    // Dst: (SETULEri:i32 DP:i32:$a, (imm:i32):$b)
+/*1110*/          /*Scope*/ 16, /*->1127*/
+/*1111*/            OPC_CheckCondCode, ISD::SETUGT,
+/*1113*/            OPC_MoveParent,
+/*1114*/            OPC_CheckType, MVT::i32,
+/*1116*/            OPC_EmitConvertToTarget, 1,
+/*1118*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULEri_not), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                    // Src: (setcc:i32 DP:i32:$a, (imm:i32)<<P:Predicate_imm3>>:$b, SETUGT:Other) - Complexity = 7
+                    // Dst: (SETULEri_not:i32 DP:i32:$a, (imm:i32):$b)
+/*1127*/          0, /*End of Scope*/
+/*1128*/        /*Scope*/ 26|128,1/*154*/, /*->1284*/
+/*1130*/          OPC_MoveChild, 2,
+/*1132*/          OPC_Scope, 14, /*->1148*/ // 10 children in Scope
+/*1134*/            OPC_CheckCondCode, ISD::SETEQ,
+/*1136*/            OPC_MoveParent,
+/*1137*/            OPC_CheckType, MVT::i32,
+/*1139*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETEQdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETEQ:Other) - Complexity = 3
+                    // Dst: (SETEQdd:i32 D:i32:$a, D:i32:$b)
+/*1148*/          /*Scope*/ 14, /*->1163*/
+/*1149*/            OPC_CheckCondCode, ISD::SETLT,
+/*1151*/            OPC_MoveParent,
+/*1152*/            OPC_CheckType, MVT::i32,
+/*1154*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLTdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETLT:Other) - Complexity = 3
+                    // Dst: (SETLTdd:i32 D:i32:$a, D:i32:$b)
+/*1163*/          /*Scope*/ 14, /*->1178*/
+/*1164*/            OPC_CheckCondCode, ISD::SETLE,
+/*1166*/            OPC_MoveParent,
+/*1167*/            OPC_CheckType, MVT::i32,
+/*1169*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLEdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETLE:Other) - Complexity = 3
+                    // Dst: (SETLEdd:i32 D:i32:$a, D:i32:$b)
+/*1178*/          /*Scope*/ 14, /*->1193*/
+/*1179*/            OPC_CheckCondCode, ISD::SETULT,
+/*1181*/            OPC_MoveParent,
+/*1182*/            OPC_CheckType, MVT::i32,
+/*1184*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULTdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETULT:Other) - Complexity = 3
+                    // Dst: (SETULTdd:i32 D:i32:$a, D:i32:$b)
+/*1193*/          /*Scope*/ 14, /*->1208*/
+/*1194*/            OPC_CheckCondCode, ISD::SETULE,
+/*1196*/            OPC_MoveParent,
+/*1197*/            OPC_CheckType, MVT::i32,
+/*1199*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULEdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETULE:Other) - Complexity = 3
+                    // Dst: (SETULEdd:i32 D:i32:$a, D:i32:$b)
+/*1208*/          /*Scope*/ 14, /*->1223*/
+/*1209*/            OPC_CheckCondCode, ISD::SETNE,
+/*1211*/            OPC_MoveParent,
+/*1212*/            OPC_CheckType, MVT::i32,
+/*1214*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETNEdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETNE:Other) - Complexity = 3
+                    // Dst: (SETNEdd:i32 D:i32:$a, D:i32:$b)
+/*1223*/          /*Scope*/ 14, /*->1238*/
+/*1224*/            OPC_CheckCondCode, ISD::SETGT,
+/*1226*/            OPC_MoveParent,
+/*1227*/            OPC_CheckType, MVT::i32,
+/*1229*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLTdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETGT:Other) - Complexity = 3
+                    // Dst: (SETLTdd:i32 D:i32:$b, D:i32:$a)
+/*1238*/          /*Scope*/ 14, /*->1253*/
+/*1239*/            OPC_CheckCondCode, ISD::SETGE,
+/*1241*/            OPC_MoveParent,
+/*1242*/            OPC_CheckType, MVT::i32,
+/*1244*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETLEdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETGE:Other) - Complexity = 3
+                    // Dst: (SETLEdd:i32 D:i32:$b, D:i32:$a)
+/*1253*/          /*Scope*/ 14, /*->1268*/
+/*1254*/            OPC_CheckCondCode, ISD::SETUGT,
+/*1256*/            OPC_MoveParent,
+/*1257*/            OPC_CheckType, MVT::i32,
+/*1259*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULTdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETUGT:Other) - Complexity = 3
+                    // Dst: (SETULTdd:i32 D:i32:$b, D:i32:$a)
+/*1268*/          /*Scope*/ 14, /*->1283*/
+/*1269*/            OPC_CheckCondCode, ISD::SETUGE,
+/*1271*/            OPC_MoveParent,
+/*1272*/            OPC_CheckType, MVT::i32,
+/*1274*/            OPC_MorphNodeTo, TARGET_VAL(BF::SETULEdd), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                    // Src: (setcc:i32 D:i32:$a, D:i32:$b, SETUGE:Other) - Complexity = 3
+                    // Dst: (SETULEdd:i32 D:i32:$b, D:i32:$a)
+/*1283*/          0, /*End of Scope*/
+/*1284*/        0, /*End of Scope*/
+/*1285*/      0, /*End of Scope*/
+/*1286*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 120|128,4/*632*/,  TARGET_VAL(ISD::LOAD),// ->1923
+/*1291*/    OPC_RecordMemRef,
+/*1292*/    OPC_RecordNode,   // #0 = 'ld' chained node
+/*1293*/    OPC_Scope, 52, /*->1347*/ // 3 children in Scope
+/*1295*/      OPC_RecordChild1, // #1 = $mem
+/*1296*/      OPC_CheckChild1Type, MVT::i32,
+/*1298*/      OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1300*/      OPC_CheckPredicate, 13, // Predicate_load
+/*1302*/      OPC_SwitchType /*2 cases */, 26,  MVT::i32,// ->1331
+/*1305*/        OPC_CheckComplexPat, /*CP*/0, /*#*/1, // SelectADDRspii:$mem #2 #3
+/*1308*/        OPC_EmitMergeInputChains1_0,
+/*1309*/        OPC_Scope, 9, /*->1320*/ // 2 children in Scope
+/*1311*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32fi), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                  // Src: (ld:i32 ADDRspii:i32:$mem)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 13
+                  // Dst: (LOAD32fi:i32 ADDRspii:i32:$mem)
+/*1320*/        /*Scope*/ 9, /*->1330*/
+/*1321*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD8fi), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                  // Src: (ld:i32 ADDRspii:i32:$mem)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 13
+                  // Dst: (LOAD8fi:i32 ADDRspii:i32:$mem)
+/*1330*/        0, /*End of Scope*/
+              /*SwitchType*/ 13,  MVT::i16,// ->1346
+/*1333*/        OPC_CheckComplexPat, /*CP*/0, /*#*/1, // SelectADDRspii:$mem #2 #3
+/*1336*/        OPC_EmitMergeInputChains1_0,
+/*1337*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOAD16fi), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i16, 2/*#Ops*/, 2, 3, 
+                // Src: (ld:i16 ADDRspii:i32:$mem)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 13
+                // Dst: (LOAD16fi:i16 ADDRspii:i32:$mem)
+              0, // EndSwitchType
+/*1347*/    /*Scope*/ 114|128,2/*370*/, /*->1719*/
+/*1349*/      OPC_MoveChild, 1,
+/*1351*/      OPC_CheckOpcode, TARGET_VAL(ISD::ADD),
+/*1354*/      OPC_RecordChild0, // #1 = $ptr
+/*1355*/      OPC_RecordChild1, // #2 = $off
+/*1356*/      OPC_MoveChild, 1,
+/*1358*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1361*/      OPC_Scope, 24, /*->1387*/ // 7 children in Scope
+/*1363*/        OPC_CheckPredicate, 7, // Predicate_uimm6m4
+/*1365*/        OPC_MoveParent,
+/*1366*/        OPC_CheckType, MVT::i32,
+/*1368*/        OPC_MoveParent,
+/*1369*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1371*/        OPC_CheckPredicate, 13, // Predicate_load
+/*1373*/        OPC_CheckType, MVT::i32,
+/*1375*/        OPC_EmitMergeInputChains1_0,
+/*1376*/        OPC_EmitConvertToTarget, 2,
+/*1378*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_uimm6m4), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_uimm6m4>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 11
+                // Dst: (LOAD32p_uimm6m4:i32 P:i32:$ptr, (imm:i32):$off)
+/*1387*/      /*Scope*/ 24, /*->1412*/
+/*1388*/        OPC_CheckPredicate, 8, // Predicate_imm18m4
+/*1390*/        OPC_MoveParent,
+/*1391*/        OPC_CheckType, MVT::i32,
+/*1393*/        OPC_MoveParent,
+/*1394*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1396*/        OPC_CheckPredicate, 13, // Predicate_load
+/*1398*/        OPC_CheckType, MVT::i32,
+/*1400*/        OPC_EmitMergeInputChains1_0,
+/*1401*/        OPC_EmitConvertToTarget, 2,
+/*1403*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm18m4), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm18m4>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 11
+                // Dst: (LOAD32p_imm18m4:i32 P:i32:$ptr, (imm:i32):$off)
+/*1412*/      /*Scope*/ 46, /*->1459*/
+/*1413*/        OPC_CheckPredicate, 14, // Predicate_uimm5m2
+/*1415*/        OPC_MoveParent,
+/*1416*/        OPC_CheckType, MVT::i32,
+/*1418*/        OPC_MoveParent,
+/*1419*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1421*/        OPC_CheckType, MVT::i32,
+/*1423*/        OPC_Scope, 16, /*->1441*/ // 2 children in Scope
+/*1425*/          OPC_CheckPredicate, 15, // Predicate_zextload
+/*1427*/          OPC_CheckPredicate, 16, // Predicate_zextloadi16
+/*1429*/          OPC_EmitMergeInputChains1_0,
+/*1430*/          OPC_EmitConvertToTarget, 2,
+/*1432*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_uimm5m2_16z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                  // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_uimm5m2>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi16>> - Complexity = 11
+                  // Dst: (LOAD32p_uimm5m2_16z:i32 P:i32:$ptr, (imm:i32):$off)
+/*1441*/        /*Scope*/ 16, /*->1458*/
+/*1442*/          OPC_CheckPredicate, 17, // Predicate_extload
+/*1444*/          OPC_CheckPredicate, 18, // Predicate_extloadi16
+/*1446*/          OPC_EmitMergeInputChains1_0,
+/*1447*/          OPC_EmitConvertToTarget, 2,
+/*1449*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_uimm5m2_16z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                  // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_uimm5m2>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi16>> - Complexity = 11
+                  // Dst: (LOAD32p_uimm5m2_16z:i32 P:i32:$ptr, (imm:i32):$off)
+/*1458*/        0, /*End of Scope*/
+/*1459*/      /*Scope*/ 46, /*->1506*/
+/*1460*/        OPC_CheckPredicate, 19, // Predicate_imm17m2
+/*1462*/        OPC_MoveParent,
+/*1463*/        OPC_CheckType, MVT::i32,
+/*1465*/        OPC_MoveParent,
+/*1466*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1468*/        OPC_CheckType, MVT::i32,
+/*1470*/        OPC_Scope, 16, /*->1488*/ // 2 children in Scope
+/*1472*/          OPC_CheckPredicate, 15, // Predicate_zextload
+/*1474*/          OPC_CheckPredicate, 16, // Predicate_zextloadi16
+/*1476*/          OPC_EmitMergeInputChains1_0,
+/*1477*/          OPC_EmitConvertToTarget, 2,
+/*1479*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm17m2_16z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                  // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm17m2>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi16>> - Complexity = 11
+                  // Dst: (LOAD32p_imm17m2_16z:i32 P:i32:$ptr, (imm:i32):$off)
+/*1488*/        /*Scope*/ 16, /*->1505*/
+/*1489*/          OPC_CheckPredicate, 17, // Predicate_extload
+/*1491*/          OPC_CheckPredicate, 18, // Predicate_extloadi16
+/*1493*/          OPC_EmitMergeInputChains1_0,
+/*1494*/          OPC_EmitConvertToTarget, 2,
+/*1496*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm17m2_16z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                  // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm17m2>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi16>> - Complexity = 11
+                  // Dst: (LOAD32p_imm17m2_16z:i32 P:i32:$ptr, (imm:i32):$off)
+/*1505*/        0, /*End of Scope*/
+/*1506*/      /*Scope*/ 26, /*->1533*/
+/*1507*/        OPC_CheckPredicate, 14, // Predicate_uimm5m2
+/*1509*/        OPC_MoveParent,
+/*1510*/        OPC_CheckType, MVT::i32,
+/*1512*/        OPC_MoveParent,
+/*1513*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1515*/        OPC_CheckPredicate, 20, // Predicate_sextload
+/*1517*/        OPC_CheckPredicate, 21, // Predicate_sextloadi16
+/*1519*/        OPC_CheckType, MVT::i32,
+/*1521*/        OPC_EmitMergeInputChains1_0,
+/*1522*/        OPC_EmitConvertToTarget, 2,
+/*1524*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_uimm5m2_16s), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_uimm5m2>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi16>> - Complexity = 11
+                // Dst: (LOAD32p_uimm5m2_16s:i32 P:i32:$ptr, (imm:i32):$off)
+/*1533*/      /*Scope*/ 26, /*->1560*/
+/*1534*/        OPC_CheckPredicate, 19, // Predicate_imm17m2
+/*1536*/        OPC_MoveParent,
+/*1537*/        OPC_CheckType, MVT::i32,
+/*1539*/        OPC_MoveParent,
+/*1540*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1542*/        OPC_CheckPredicate, 20, // Predicate_sextload
+/*1544*/        OPC_CheckPredicate, 21, // Predicate_sextloadi16
+/*1546*/        OPC_CheckType, MVT::i32,
+/*1548*/        OPC_EmitMergeInputChains1_0,
+/*1549*/        OPC_EmitConvertToTarget, 2,
+/*1551*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm17m2_16s), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm17m2>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi16>> - Complexity = 11
+                // Dst: (LOAD32p_imm17m2_16s:i32 P:i32:$ptr, (imm:i32):$off)
+/*1560*/      /*Scope*/ 28|128,1/*156*/, /*->1718*/
+/*1562*/        OPC_CheckPredicate, 9, // Predicate_imm16
+/*1564*/        OPC_MoveParent,
+/*1565*/        OPC_CheckType, MVT::i32,
+/*1567*/        OPC_MoveParent,
+/*1568*/        OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1570*/        OPC_SwitchType /*2 cases */, 53,  MVT::i32,// ->1626
+/*1573*/          OPC_Scope, 16, /*->1591*/ // 3 children in Scope
+/*1575*/            OPC_CheckPredicate, 15, // Predicate_zextload
+/*1577*/            OPC_CheckPredicate, 22, // Predicate_zextloadi8
+/*1579*/            OPC_EmitMergeInputChains1_0,
+/*1580*/            OPC_EmitConvertToTarget, 2,
+/*1582*/            OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm16_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                    // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi8>> - Complexity = 11
+                    // Dst: (LOAD32p_imm16_8z:i32 P:i32:$ptr, (imm:i32):$off)
+/*1591*/          /*Scope*/ 16, /*->1608*/
+/*1592*/            OPC_CheckPredicate, 17, // Predicate_extload
+/*1594*/            OPC_CheckPredicate, 23, // Predicate_extloadi8
+/*1596*/            OPC_EmitMergeInputChains1_0,
+/*1597*/            OPC_EmitConvertToTarget, 2,
+/*1599*/            OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm16_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                    // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi8>> - Complexity = 11
+                    // Dst: (LOAD32p_imm16_8z:i32 P:i32:$ptr, (imm:i32):$off)
+/*1608*/          /*Scope*/ 16, /*->1625*/
+/*1609*/            OPC_CheckPredicate, 20, // Predicate_sextload
+/*1611*/            OPC_CheckPredicate, 24, // Predicate_sextloadi8
+/*1613*/            OPC_EmitMergeInputChains1_0,
+/*1614*/            OPC_EmitConvertToTarget, 2,
+/*1616*/            OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_imm16_8s), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                    // Src: (ld:i32 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi8>> - Complexity = 11
+                    // Dst: (LOAD32p_imm16_8s:i32 P:i32:$ptr, (imm:i32):$off)
+/*1625*/          0, /*End of Scope*/
+                /*SwitchType*/ 89,  MVT::i16,// ->1717
+/*1628*/          OPC_Scope, 28, /*->1658*/ // 3 children in Scope
+/*1630*/            OPC_CheckPredicate, 17, // Predicate_extload
+/*1632*/            OPC_CheckPredicate, 23, // Predicate_extloadi8
+/*1634*/            OPC_EmitMergeInputChains1_0,
+/*1635*/            OPC_EmitConvertToTarget, 2,
+/*1637*/            OPC_EmitNode, TARGET_VAL(BF::LOAD32p_imm16_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*1646*/            OPC_EmitInteger, MVT::i32, BF::lo16,
+/*1649*/            OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0|OPFL_Chain,
+                        1/*#VTs*/, MVT::i16, 2/*#Ops*/, 4, 5, 
+                    // Src: (ld:i16 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi8>> - Complexity = 11
+                    // Dst: (EXTRACT_SUBREG:i16 (LOAD32p_imm16_8z:i32 P:i32:$ptr, (imm:i32):$off), lo16:i32)
+/*1658*/          /*Scope*/ 28, /*->1687*/
+/*1659*/            OPC_CheckPredicate, 15, // Predicate_zextload
+/*1661*/            OPC_CheckPredicate, 22, // Predicate_zextloadi8
+/*1663*/            OPC_EmitMergeInputChains1_0,
+/*1664*/            OPC_EmitConvertToTarget, 2,
+/*1666*/            OPC_EmitNode, TARGET_VAL(BF::LOAD32p_imm16_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*1675*/            OPC_EmitInteger, MVT::i32, BF::lo16,
+/*1678*/            OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0|OPFL_Chain,
+                        1/*#VTs*/, MVT::i16, 2/*#Ops*/, 4, 5, 
+                    // Src: (ld:i16 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi8>> - Complexity = 11
+                    // Dst: (EXTRACT_SUBREG:i16 (LOAD32p_imm16_8z:i32 P:i32:$ptr, (imm:i32):$off), lo16:i32)
+/*1687*/          /*Scope*/ 28, /*->1716*/
+/*1688*/            OPC_CheckPredicate, 20, // Predicate_sextload
+/*1690*/            OPC_CheckPredicate, 24, // Predicate_sextloadi8
+/*1692*/            OPC_EmitMergeInputChains1_0,
+/*1693*/            OPC_EmitConvertToTarget, 2,
+/*1695*/            OPC_EmitNode, TARGET_VAL(BF::LOAD32p_imm16_8s), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*1704*/            OPC_EmitInteger, MVT::i32, BF::lo16,
+/*1707*/            OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0|OPFL_Chain,
+                        1/*#VTs*/, MVT::i16, 2/*#Ops*/, 4, 5, 
+                    // Src: (ld:i16 (add:i32 P:i32:$ptr, (imm:i32)<<P:Predicate_imm16>>:$off))<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi8>> - Complexity = 11
+                    // Dst: (EXTRACT_SUBREG:i16 (LOAD32p_imm16_8s:i32 P:i32:$ptr, (imm:i32):$off), lo16:i32)
+/*1716*/          0, /*End of Scope*/
+                0, // EndSwitchType
+/*1718*/      0, /*End of Scope*/
+/*1719*/    /*Scope*/ 73|128,1/*201*/, /*->1922*/
+/*1721*/      OPC_RecordChild1, // #1 = $ptr
+/*1722*/      OPC_CheckChild1Type, MVT::i32,
+/*1724*/      OPC_CheckPredicate, 12, // Predicate_unindexedload
+/*1726*/      OPC_SwitchType /*2 cases */, 98,  MVT::i32,// ->1827
+/*1729*/        OPC_Scope, 11, /*->1742*/ // 7 children in Scope
+/*1731*/          OPC_CheckPredicate, 13, // Predicate_load
+/*1733*/          OPC_EmitMergeInputChains1_0,
+/*1734*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 4
+                  // Dst: (LOAD32p:i32 P:i32:$ptr)
+/*1742*/        /*Scope*/ 13, /*->1756*/
+/*1743*/          OPC_CheckPredicate, 15, // Predicate_zextload
+/*1745*/          OPC_CheckPredicate, 16, // Predicate_zextloadi16
+/*1747*/          OPC_EmitMergeInputChains1_0,
+/*1748*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_16z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi16>> - Complexity = 4
+                  // Dst: (LOAD32p_16z:i32 P:i32:$ptr)
+/*1756*/        /*Scope*/ 13, /*->1770*/
+/*1757*/          OPC_CheckPredicate, 17, // Predicate_extload
+/*1759*/          OPC_CheckPredicate, 18, // Predicate_extloadi16
+/*1761*/          OPC_EmitMergeInputChains1_0,
+/*1762*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_16z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi16>> - Complexity = 4
+                  // Dst: (LOAD32p_16z:i32 P:i32:$ptr)
+/*1770*/        /*Scope*/ 13, /*->1784*/
+/*1771*/          OPC_CheckPredicate, 20, // Predicate_sextload
+/*1773*/          OPC_CheckPredicate, 21, // Predicate_sextloadi16
+/*1775*/          OPC_EmitMergeInputChains1_0,
+/*1776*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_16s), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi16>> - Complexity = 4
+                  // Dst: (LOAD32p_16s:i32 P:i32:$ptr)
+/*1784*/        /*Scope*/ 13, /*->1798*/
+/*1785*/          OPC_CheckPredicate, 15, // Predicate_zextload
+/*1787*/          OPC_CheckPredicate, 22, // Predicate_zextloadi8
+/*1789*/          OPC_EmitMergeInputChains1_0,
+/*1790*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi8>> - Complexity = 4
+                  // Dst: (LOAD32p_8z:i32 P:i32:$ptr)
+/*1798*/        /*Scope*/ 13, /*->1812*/
+/*1799*/          OPC_CheckPredicate, 17, // Predicate_extload
+/*1801*/          OPC_CheckPredicate, 23, // Predicate_extloadi8
+/*1803*/          OPC_EmitMergeInputChains1_0,
+/*1804*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi8>> - Complexity = 4
+                  // Dst: (LOAD32p_8z:i32 P:i32:$ptr)
+/*1812*/        /*Scope*/ 13, /*->1826*/
+/*1813*/          OPC_CheckPredicate, 20, // Predicate_sextload
+/*1815*/          OPC_CheckPredicate, 24, // Predicate_sextloadi8
+/*1817*/          OPC_EmitMergeInputChains1_0,
+/*1818*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32p_8s), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                  // Src: (ld:i32 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi8>> - Complexity = 4
+                  // Dst: (LOAD32p_8s:i32 P:i32:$ptr)
+/*1826*/        0, /*End of Scope*/
+              /*SwitchType*/ 92,  MVT::i16,// ->1921
+/*1829*/        OPC_Scope, 11, /*->1842*/ // 4 children in Scope
+/*1831*/          OPC_CheckPredicate, 13, // Predicate_load
+/*1833*/          OPC_EmitMergeInputChains1_0,
+/*1834*/          OPC_MorphNodeTo, TARGET_VAL(BF::LOAD16pi), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i16, 1/*#Ops*/, 1, 
+                  // Src: (ld:i16 PI:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 4
+                  // Dst: (LOAD16pi:i16 PI:i32:$ptr)
+/*1842*/        /*Scope*/ 25, /*->1868*/
+/*1843*/          OPC_CheckPredicate, 17, // Predicate_extload
+/*1845*/          OPC_CheckPredicate, 23, // Predicate_extloadi8
+/*1847*/          OPC_EmitMergeInputChains1_0,
+/*1848*/          OPC_EmitNode, TARGET_VAL(BF::LOAD32p_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1,  // Results = #2 
+/*1856*/          OPC_EmitInteger, MVT::i32, BF::lo16,
+/*1859*/          OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0|OPFL_Chain,
+                      1/*#VTs*/, MVT::i16, 2/*#Ops*/, 2, 3, 
+                  // Src: (ld:i16 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi8>> - Complexity = 4
+                  // Dst: (EXTRACT_SUBREG:i16 (LOAD32p_8z:i32 P:i32:$ptr), lo16:i32)
+/*1868*/        /*Scope*/ 25, /*->1894*/
+/*1869*/          OPC_CheckPredicate, 15, // Predicate_zextload
+/*1871*/          OPC_CheckPredicate, 22, // Predicate_zextloadi8
+/*1873*/          OPC_EmitMergeInputChains1_0,
+/*1874*/          OPC_EmitNode, TARGET_VAL(BF::LOAD32p_8z), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1,  // Results = #2 
+/*1882*/          OPC_EmitInteger, MVT::i32, BF::lo16,
+/*1885*/          OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0|OPFL_Chain,
+                      1/*#VTs*/, MVT::i16, 2/*#Ops*/, 2, 3, 
+                  // Src: (ld:i16 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi8>> - Complexity = 4
+                  // Dst: (EXTRACT_SUBREG:i16 (LOAD32p_8z:i32 P:i32:$ptr), lo16:i32)
+/*1894*/        /*Scope*/ 25, /*->1920*/
+/*1895*/          OPC_CheckPredicate, 20, // Predicate_sextload
+/*1897*/          OPC_CheckPredicate, 24, // Predicate_sextloadi8
+/*1899*/          OPC_EmitMergeInputChains1_0,
+/*1900*/          OPC_EmitNode, TARGET_VAL(BF::LOAD32p_8s), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1,  // Results = #2 
+/*1908*/          OPC_EmitInteger, MVT::i32, BF::lo16,
+/*1911*/          OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0|OPFL_Chain,
+                      1/*#VTs*/, MVT::i16, 2/*#Ops*/, 2, 3, 
+                  // Src: (ld:i16 P:i32:$ptr)<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi8>> - Complexity = 4
+                  // Dst: (EXTRACT_SUBREG:i16 (LOAD32p_8s:i32 P:i32:$ptr), lo16:i32)
+/*1920*/        0, /*End of Scope*/
+              0, // EndSwitchType
+/*1922*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 95,  TARGET_VAL(ISD::SRA),// ->2021
+/*1926*/    OPC_RecordChild0, // #0 = $src
+/*1927*/    OPC_Scope, 26, /*->1955*/ // 2 children in Scope
+/*1929*/      OPC_MoveChild, 1,
+/*1931*/      OPC_CheckOpcode, TARGET_VAL(ISD::SUB),
+/*1934*/      OPC_MoveChild, 0,
+/*1936*/      OPC_CheckInteger, 0, 
+/*1938*/      OPC_MoveParent,
+/*1939*/      OPC_RecordChild1, // #1 = $amount
+/*1940*/      OPC_CheckType, MVT::i16,
+/*1942*/      OPC_MoveParent,
+/*1943*/      OPC_CheckType, MVT::i32,
+/*1945*/      OPC_MorphNodeTo, TARGET_VAL(BF::SLAr16), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+              // Src: (sra:i32 D:i32:$src, (sub:i16 0:i16, D16L:i16:$amount)) - Complexity = 11
+              // Dst: (SLAr16:i32:i1 D:i32:$src, D16L:i16:$amount)
+/*1955*/    /*Scope*/ 64, /*->2020*/
+/*1956*/      OPC_RecordChild1, // #1 = $amount
+/*1957*/      OPC_Scope, 45, /*->2004*/ // 2 children in Scope
+/*1959*/        OPC_MoveChild, 1,
+/*1961*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1964*/        OPC_CheckType, MVT::i16,
+/*1966*/        OPC_Scope, 17, /*->1985*/ // 2 children in Scope
+/*1968*/          OPC_CheckPredicate, 25, // Predicate_uimm5
+/*1970*/          OPC_MoveParent,
+/*1971*/          OPC_CheckType, MVT::i32,
+/*1973*/          OPC_EmitConvertToTarget, 1,
+/*1975*/          OPC_MorphNodeTo, TARGET_VAL(BF::SRAi), 0,
+                      2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 2, 
+                  // Src: (sra:i32 D:i32:$src, (imm:i16)<<P:Predicate_uimm5>>:$amount) - Complexity = 7
+                  // Dst: (SRAi:i32:i1 D:i32:$src, (imm:i16):$amount)
+/*1985*/        /*Scope*/ 17, /*->2003*/
+/*1986*/          OPC_CheckPredicate, 26, // Predicate_uimm4
+/*1988*/          OPC_MoveParent,
+/*1989*/          OPC_CheckType, MVT::i16,
+/*1991*/          OPC_EmitConvertToTarget, 1,
+/*1993*/          OPC_MorphNodeTo, TARGET_VAL(BF::SRA16i), 0,
+                      2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 2, 
+                  // Src: (sra:i16 D16:i16:$src, (imm:i16)<<P:Predicate_uimm4>>:$amount) - Complexity = 7
+                  // Dst: (SRA16i:i16:i1 D16:i16:$src, (imm:i16):$amount)
+/*2003*/        0, /*End of Scope*/
+/*2004*/      /*Scope*/ 14, /*->2019*/
+/*2005*/        OPC_CheckChild1Type, MVT::i32,
+/*2007*/        OPC_CheckType, MVT::i32,
+/*2009*/        OPC_MorphNodeTo, TARGET_VAL(BF::SRAr), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (sra:i32 D:i32:$src, D:i32:$amount) - Complexity = 3
+                // Dst: (SRAr:i32:i1 D:i32:$src, D:i32:$amount)
+/*2019*/      0, /*End of Scope*/
+/*2020*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 95,  TARGET_VAL(ISD::SRL),// ->2119
+/*2024*/    OPC_RecordChild0, // #0 = $src
+/*2025*/    OPC_Scope, 26, /*->2053*/ // 2 children in Scope
+/*2027*/      OPC_MoveChild, 1,
+/*2029*/      OPC_CheckOpcode, TARGET_VAL(ISD::SUB),
+/*2032*/      OPC_MoveChild, 0,
+/*2034*/      OPC_CheckInteger, 0, 
+/*2036*/      OPC_MoveParent,
+/*2037*/      OPC_RecordChild1, // #1 = $amount
+/*2038*/      OPC_CheckType, MVT::i16,
+/*2040*/      OPC_MoveParent,
+/*2041*/      OPC_CheckType, MVT::i16,
+/*2043*/      OPC_MorphNodeTo, TARGET_VAL(BF::SLA16r), 0,
+                  2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 1, 
+              // Src: (srl:i16 D16:i16:$src, (sub:i16 0:i16, D16L:i16:$amount)) - Complexity = 11
+              // Dst: (SLA16r:i16:i1 D16:i16:$src, D16L:i16:$amount)
+/*2053*/    /*Scope*/ 64, /*->2118*/
+/*2054*/      OPC_RecordChild1, // #1 = $amount
+/*2055*/      OPC_Scope, 45, /*->2102*/ // 2 children in Scope
+/*2057*/        OPC_MoveChild, 1,
+/*2059*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2062*/        OPC_CheckType, MVT::i16,
+/*2064*/        OPC_Scope, 17, /*->2083*/ // 2 children in Scope
+/*2066*/          OPC_CheckPredicate, 25, // Predicate_uimm5
+/*2068*/          OPC_MoveParent,
+/*2069*/          OPC_CheckType, MVT::i32,
+/*2071*/          OPC_EmitConvertToTarget, 1,
+/*2073*/          OPC_MorphNodeTo, TARGET_VAL(BF::SRLi), 0,
+                      2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 2, 
+                  // Src: (srl:i32 D:i32:$src, (imm:i16)<<P:Predicate_uimm5>>:$amount) - Complexity = 7
+                  // Dst: (SRLi:i32:i1 D:i32:$src, (imm:i16):$amount)
+/*2083*/        /*Scope*/ 17, /*->2101*/
+/*2084*/          OPC_CheckPredicate, 26, // Predicate_uimm4
+/*2086*/          OPC_MoveParent,
+/*2087*/          OPC_CheckType, MVT::i16,
+/*2089*/          OPC_EmitConvertToTarget, 1,
+/*2091*/          OPC_MorphNodeTo, TARGET_VAL(BF::SRL16i), 0,
+                      2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 2, 
+                  // Src: (srl:i16 D16:i16:$src, (imm:i16)<<P:Predicate_uimm4>>:$amount) - Complexity = 7
+                  // Dst: (SRL16i:i16:i1 D16:i16:$src, (imm:i16):$amount)
+/*2101*/        0, /*End of Scope*/
+/*2102*/      /*Scope*/ 14, /*->2117*/
+/*2103*/        OPC_CheckChild1Type, MVT::i32,
+/*2105*/        OPC_CheckType, MVT::i32,
+/*2107*/        OPC_MorphNodeTo, TARGET_VAL(BF::SRLr), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (srl:i32 D:i32:$src, D:i32:$amount) - Complexity = 3
+                // Dst: (SRLr:i32:i1 D:i32:$src, D:i32:$amount)
+/*2117*/      0, /*End of Scope*/
+/*2118*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 26,  TARGET_VAL(ISD::CALLSEQ_END),// ->2148
+/*2122*/    OPC_RecordNode,   // #0 = 'BfinCallseqEnd' chained node
+/*2123*/    OPC_CaptureGlueInput,
+/*2124*/    OPC_RecordChild1, // #1 = $amt1
+/*2125*/    OPC_MoveChild, 1,
+/*2127*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetConstant),
+/*2130*/    OPC_MoveParent,
+/*2131*/    OPC_RecordChild2, // #2 = $amt2
+/*2132*/    OPC_MoveChild, 2,
+/*2134*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetConstant),
+/*2137*/    OPC_MoveParent,
+/*2138*/    OPC_EmitMergeInputChains1_0,
+/*2139*/    OPC_MorphNodeTo, TARGET_VAL(BF::ADJCALLSTACKUP), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+            // Src: (BfinCallseqEnd (timm:i32):$amt1, (timm:i32):$amt2) - Complexity = 9
+            // Dst: (ADJCALLSTACKUP:i32 (timm:i32):$amt1, (timm:i32):$amt2)
+          /*SwitchOpcode*/ 91,  TARGET_VAL(ISD::MUL),// ->2242
+/*2151*/    OPC_Scope, 60, /*->2213*/ // 2 children in Scope
+/*2153*/      OPC_MoveChild, 0,
+/*2155*/      OPC_SwitchOpcode /*2 cases */, 25,  TARGET_VAL(ISD::SIGN_EXTEND),// ->2184
+/*2159*/        OPC_RecordChild0, // #0 = $src1
+/*2160*/        OPC_CheckChild0Type, MVT::i16,
+/*2162*/        OPC_MoveParent,
+/*2163*/        OPC_MoveChild, 1,
+/*2165*/        OPC_CheckOpcode, TARGET_VAL(ISD::SIGN_EXTEND),
+/*2168*/        OPC_RecordChild0, // #1 = $src2
+/*2169*/        OPC_CheckChild0Type, MVT::i16,
+/*2171*/        OPC_MoveParent,
+/*2172*/        OPC_CheckType, MVT::i32,
+/*2174*/        OPC_MorphNodeTo, TARGET_VAL(BF::MULhh32s), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (mul:i32 (sext:i32 D16:i16:$src1), (sext:i32 D16:i16:$src2)) - Complexity = 9
+                // Dst: (MULhh32s:i32:i1 D16:i16:$src1, D16:i16:$src2)
+              /*SwitchOpcode*/ 25,  TARGET_VAL(ISD::ZERO_EXTEND),// ->2212
+/*2187*/        OPC_RecordChild0, // #0 = $src1
+/*2188*/        OPC_CheckChild0Type, MVT::i16,
+/*2190*/        OPC_MoveParent,
+/*2191*/        OPC_MoveChild, 1,
+/*2193*/        OPC_CheckOpcode, TARGET_VAL(ISD::ZERO_EXTEND),
+/*2196*/        OPC_RecordChild0, // #1 = $src2
+/*2197*/        OPC_CheckChild0Type, MVT::i16,
+/*2199*/        OPC_MoveParent,
+/*2200*/        OPC_CheckType, MVT::i32,
+/*2202*/        OPC_MorphNodeTo, TARGET_VAL(BF::MULhh32u), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (mul:i32 (zext:i32 D16:i16:$src1), (zext:i32 D16:i16:$src2)) - Complexity = 9
+                // Dst: (MULhh32u:i32:i1 D16:i16:$src1, D16:i16:$src2)
+              0, // EndSwitchOpcode
+/*2213*/    /*Scope*/ 27, /*->2241*/
+/*2214*/      OPC_RecordChild0, // #0 = $src1
+/*2215*/      OPC_RecordChild1, // #1 = $src2
+/*2216*/      OPC_SwitchType /*2 cases */, 10,  MVT::i16,// ->2229
+/*2219*/        OPC_MorphNodeTo, TARGET_VAL(BF::MUL16), 0,
+                    2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (mul:i16 D16:i16:$src1, D16:i16:$src2) - Complexity = 3
+                // Dst: (MUL16:i16:i1 D16:i16:$src1, D16:i16:$src2)
+              /*SwitchType*/ 9,  MVT::i32,// ->2240
+/*2231*/        OPC_MorphNodeTo, TARGET_VAL(BF::MUL32), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (mul:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+                // Dst: (MUL32:i32 D:i32:$src1, D:i32:$src2)
+              0, // EndSwitchType
+/*2241*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 89,  TARGET_VAL(ISD::AND),// ->2334
+/*2245*/    OPC_Scope, 15, /*->2262*/ // 3 children in Scope
+/*2247*/      OPC_CheckAndImm, 127|128,1/*255*/, 
+/*2250*/      OPC_RecordChild0, // #0 = $src
+/*2251*/      OPC_CheckType, MVT::i32,
+/*2253*/      OPC_MorphNodeTo, TARGET_VAL(BF::MOVEzext8), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 0, 
+              // Src: (and:i32 D:i32:$src, 255:i32) - Complexity = 8
+              // Dst: (MOVEzext8:i32:i1 D:i32:$src)
+/*2262*/    /*Scope*/ 28, /*->2291*/
+/*2263*/      OPC_CheckAndImm, 127|128,127|128,3/*65535*/, 
+/*2267*/      OPC_RecordChild0, // #0 = $src
+/*2268*/      OPC_CheckType, MVT::i32,
+/*2270*/      OPC_EmitInteger, MVT::i32, BF::lo16,
+/*2273*/      OPC_EmitNode, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0,
+                  1/*#VTs*/, MVT::i16, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*2282*/      OPC_MorphNodeTo, TARGET_VAL(BF::MOVEzext), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 2, 
+              // Src: (and:i32 D:i32:$src, 65535:i32) - Complexity = 8
+              // Dst: (MOVEzext:i32:i1 (EXTRACT_SUBREG:i16 D:i32:$src, lo16:i32))
+/*2291*/    /*Scope*/ 41, /*->2333*/
+/*2292*/      OPC_RecordChild0, // #0 = $src1
+/*2293*/      OPC_RecordChild1, // #1 = $src2
+/*2294*/      OPC_Scope, 24, /*->2320*/ // 2 children in Scope
+/*2296*/        OPC_MoveChild, 1,
+/*2298*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2301*/        OPC_CheckPredicate, 27, // Predicate_uimm5imask
+/*2303*/        OPC_MoveParent,
+/*2304*/        OPC_CheckType, MVT::i32,
+/*2306*/        OPC_EmitConvertToTarget, 1,
+/*2308*/        OPC_EmitNodeXForm, 1, 2, // trailingOnes_xform
+/*2311*/        OPC_MorphNodeTo, TARGET_VAL(BF::BITCLR), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                // Src: (and:i32 D:i32:$src1, (imm:i32)<<P:Predicate_uimm5imask>><<X:trailingOnes_xform>>:$src2) - Complexity = 7
+                // Dst: (BITCLR:i32 D:i32:$src1, (trailingOnes_xform:i32 (imm:i32):$src2))
+/*2320*/      /*Scope*/ 11, /*->2332*/
+/*2321*/        OPC_CheckType, MVT::i32,
+/*2323*/        OPC_MorphNodeTo, TARGET_VAL(BF::AND), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (and:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+                // Dst: (AND:i32 D:i32:$src1, D:i32:$src2)
+/*2332*/      0, /*End of Scope*/
+/*2333*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 69,  TARGET_VAL(ISD::XOR),// ->2406
+/*2337*/    OPC_RecordChild0, // #0 = $src
+/*2338*/    OPC_Scope, 24, /*->2364*/ // 2 children in Scope
+/*2340*/      OPC_MoveChild, 1,
+/*2342*/      OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*2353*/      OPC_MoveParent,
+/*2354*/      OPC_CheckType, MVT::i32,
+/*2356*/      OPC_MorphNodeTo, TARGET_VAL(BF::NOT), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (xor:i32 D:i32:$src, -1:i32) - Complexity = 8
+              // Dst: (NOT:i32 D:i32:$src)
+/*2364*/    /*Scope*/ 40, /*->2405*/
+/*2365*/      OPC_RecordChild1, // #1 = $src2
+/*2366*/      OPC_Scope, 24, /*->2392*/ // 2 children in Scope
+/*2368*/        OPC_MoveChild, 1,
+/*2370*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2373*/        OPC_CheckPredicate, 0, // Predicate_uimm5mask
+/*2375*/        OPC_MoveParent,
+/*2376*/        OPC_CheckType, MVT::i32,
+/*2378*/        OPC_EmitConvertToTarget, 1,
+/*2380*/        OPC_EmitNodeXForm, 0, 2, // trailingZeros_xform
+/*2383*/        OPC_MorphNodeTo, TARGET_VAL(BF::BITTGL), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                // Src: (xor:i32 D:i32:$src1, (imm:i32)<<P:Predicate_uimm5mask>><<X:trailingZeros_xform>>:$src2) - Complexity = 7
+                // Dst: (BITTGL:i32 D:i32:$src1, (trailingZeros_xform:i32 (imm:i32):$src2))
+/*2392*/      /*Scope*/ 11, /*->2404*/
+/*2393*/        OPC_CheckType, MVT::i32,
+/*2395*/        OPC_MorphNodeTo, TARGET_VAL(BF::XOR), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (xor:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+                // Dst: (XOR:i32 D:i32:$src1, D:i32:$src2)
+/*2404*/      0, /*End of Scope*/
+/*2405*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 49,  TARGET_VAL(ISD::SUB),// ->2458
+/*2409*/    OPC_Scope, 17, /*->2428*/ // 2 children in Scope
+/*2411*/      OPC_MoveChild, 0,
+/*2413*/      OPC_CheckInteger, 0, 
+/*2415*/      OPC_MoveParent,
+/*2416*/      OPC_RecordChild1, // #0 = $src
+/*2417*/      OPC_CheckType, MVT::i32,
+/*2419*/      OPC_MorphNodeTo, TARGET_VAL(BF::NEG), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 0, 
+              // Src: (sub:i32 0:i32, D:i32:$src) - Complexity = 8
+              // Dst: (NEG:i32:i1 D:i32:$src)
+/*2428*/    /*Scope*/ 28, /*->2457*/
+/*2429*/      OPC_RecordChild0, // #0 = $src1
+/*2430*/      OPC_RecordChild1, // #1 = $src2
+/*2431*/      OPC_SwitchType /*2 cases */, 10,  MVT::i32,// ->2444
+/*2434*/        OPC_MorphNodeTo, TARGET_VAL(BF::SUB), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (sub:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+                // Dst: (SUB:i32:i1 D:i32:$src1, D:i32:$src2)
+              /*SwitchType*/ 10,  MVT::i16,// ->2456
+/*2446*/        OPC_MorphNodeTo, TARGET_VAL(BF::SUB16), 0,
+                    2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (sub:i16 D16:i16:$src1, D16:i16:$src2) - Complexity = 3
+                // Dst: (SUB16:i16:i1 D16:i16:$src1, D16:i16:$src2)
+              0, // EndSwitchType
+/*2457*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 41,  TARGET_VAL(ISD::INTRINSIC_VOID),// ->2502
+/*2461*/    OPC_RecordNode,   // #0 = 'intrinsic_void' chained node
+/*2462*/    OPC_MoveChild, 1,
+/*2464*/    OPC_Scope, 11, /*->2477*/ // 3 children in Scope
+/*2466*/      OPC_CheckInteger, 82|128,7/*978*/, 
+/*2469*/      OPC_MoveParent,
+/*2470*/      OPC_EmitMergeInputChains1_0,
+/*2471*/      OPC_MorphNodeTo, TARGET_VAL(BF::IDLE), 0|OPFL_Chain,
+                  0/*#VTs*/, 0/*#Ops*/, 
+              // Src: (intrinsic_void 978:iPTR) - Complexity = 8
+              // Dst: (IDLE)
+/*2477*/    /*Scope*/ 11, /*->2489*/
+/*2478*/      OPC_CheckInteger, 81|128,7/*977*/, 
+/*2481*/      OPC_MoveParent,
+/*2482*/      OPC_EmitMergeInputChains1_0,
+/*2483*/      OPC_MorphNodeTo, TARGET_VAL(BF::CSYNC), 0|OPFL_Chain,
+                  0/*#VTs*/, 0/*#Ops*/, 
+              // Src: (intrinsic_void 977:iPTR) - Complexity = 8
+              // Dst: (CSYNC)
+/*2489*/    /*Scope*/ 11, /*->2501*/
+/*2490*/      OPC_CheckInteger, 83|128,7/*979*/, 
+/*2493*/      OPC_MoveParent,
+/*2494*/      OPC_EmitMergeInputChains1_0,
+/*2495*/      OPC_MorphNodeTo, TARGET_VAL(BF::SSYNC), 0|OPFL_Chain,
+                  0/*#VTs*/, 0/*#Ops*/, 
+              // Src: (intrinsic_void 979:iPTR) - Complexity = 8
+              // Dst: (SSYNC)
+/*2501*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 94,  TARGET_VAL(ISD::SHL),// ->2599
+/*2505*/    OPC_RecordChild0, // #0 = $src
+/*2506*/    OPC_RecordChild1, // #1 = $amount
+/*2507*/    OPC_Scope, 45, /*->2554*/ // 3 children in Scope
+/*2509*/      OPC_MoveChild, 1,
+/*2511*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2514*/      OPC_CheckType, MVT::i16,
+/*2516*/      OPC_Scope, 17, /*->2535*/ // 2 children in Scope
+/*2518*/        OPC_CheckPredicate, 25, // Predicate_uimm5
+/*2520*/        OPC_MoveParent,
+/*2521*/        OPC_CheckType, MVT::i32,
+/*2523*/        OPC_EmitConvertToTarget, 1,
+/*2525*/        OPC_MorphNodeTo, TARGET_VAL(BF::SLLi), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 2, 
+                // Src: (shl:i32 D:i32:$src, (imm:i16)<<P:Predicate_uimm5>>:$amount) - Complexity = 7
+                // Dst: (SLLi:i32:i1 D:i32:$src, (imm:i16):$amount)
+/*2535*/      /*Scope*/ 17, /*->2553*/
+/*2536*/        OPC_CheckPredicate, 26, // Predicate_uimm4
+/*2538*/        OPC_MoveParent,
+/*2539*/        OPC_CheckType, MVT::i16,
+/*2541*/        OPC_EmitConvertToTarget, 1,
+/*2543*/        OPC_MorphNodeTo, TARGET_VAL(BF::SLL16i), 0,
+                    2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 2, 
+                // Src: (shl:i16 D16:i16:$src, (imm:i16)<<P:Predicate_uimm4>>:$amount) - Complexity = 7
+                // Dst: (SLL16i:i16:i1 D16:i16:$src, (imm:i16):$amount)
+/*2553*/      0, /*End of Scope*/
+/*2554*/    /*Scope*/ 14, /*->2569*/
+/*2555*/      OPC_CheckChild1Type, MVT::i32,
+/*2557*/      OPC_CheckType, MVT::i32,
+/*2559*/      OPC_MorphNodeTo, TARGET_VAL(BF::SLLr), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+              // Src: (shl:i32 D:i32:$src, D:i32:$amount) - Complexity = 3
+              // Dst: (SLLr:i32:i1 D:i32:$src, D:i32:$amount)
+/*2569*/    /*Scope*/ 28, /*->2598*/
+/*2570*/      OPC_CheckChild1Type, MVT::i16,
+/*2572*/      OPC_SwitchType /*2 cases */, 10,  MVT::i32,// ->2585
+/*2575*/        OPC_MorphNodeTo, TARGET_VAL(BF::SLLr16), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (shl:i32 D:i32:$src, D16L:i16:$amount) - Complexity = 3
+                // Dst: (SLLr16:i32:i1 D:i32:$src, D16L:i16:$amount)
+              /*SwitchType*/ 10,  MVT::i16,// ->2597
+/*2587*/        OPC_MorphNodeTo, TARGET_VAL(BF::SLL16r), 0,
+                    2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 1, 
+                // Src: (shl:i16 D16:i16:$src, D16L:i16:$amount) - Complexity = 3
+                // Dst: (SLL16r:i16:i1 D16:i16:$src, D16L:i16:$amount)
+              0, // EndSwitchType
+/*2598*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 53,  TARGET_VAL(ISD::ADD),// ->2655
+/*2602*/    OPC_RecordChild0, // #0 = $src1
+/*2603*/    OPC_RecordChild1, // #1 = $src2
+/*2604*/    OPC_Scope, 22, /*->2628*/ // 3 children in Scope
+/*2606*/      OPC_MoveChild, 1,
+/*2608*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2611*/      OPC_CheckPredicate, 28, // Predicate_imm7
+/*2613*/      OPC_MoveParent,
+/*2614*/      OPC_CheckType, MVT::i32,
+/*2616*/      OPC_EmitConvertToTarget, 1,
+/*2618*/      OPC_MorphNodeTo, TARGET_VAL(BF::ADDimm7), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 2, 
+              // Src: (add:i32 D:i32:$src1, (imm:i32)<<P:Predicate_imm7>>:$src2) - Complexity = 7
+              // Dst: (ADDimm7:i32:i1 D:i32:$src1, (imm:i32):$src2)
+/*2628*/    /*Scope*/ 12, /*->2641*/
+/*2629*/      OPC_CheckType, MVT::i32,
+/*2631*/      OPC_MorphNodeTo, TARGET_VAL(BF::ADD), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+              // Src: (add:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+              // Dst: (ADD:i32:i1 D:i32:$src1, D:i32:$src2)
+/*2641*/    /*Scope*/ 12, /*->2654*/
+/*2642*/      OPC_CheckType, MVT::i16,
+/*2644*/      OPC_MorphNodeTo, TARGET_VAL(BF::ADD16), 0,
+                  2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 1, 
+              // Src: (add:i16 D16:i16:$src1, D16:i16:$src2) - Complexity = 3
+              // Dst: (ADD16:i16:i1 D16:i16:$src1, D16:i16:$src2)
+/*2654*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 17,  TARGET_VAL(ISD::CALLSEQ_START),// ->2675
+/*2658*/    OPC_RecordNode,   // #0 = 'BfinCallseqStart' chained node
+/*2659*/    OPC_RecordChild1, // #1 = $amt
+/*2660*/    OPC_MoveChild, 1,
+/*2662*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetConstant),
+/*2665*/    OPC_MoveParent,
+/*2666*/    OPC_EmitMergeInputChains1_0,
+/*2667*/    OPC_MorphNodeTo, TARGET_VAL(BF::ADJCALLSTACKDOWN), 0|OPFL_Chain|OPFL_GlueOutput,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+            // Src: (BfinCallseqStart (timm:i32):$amt) - Complexity = 6
+            // Dst: (ADJCALLSTACKDOWN:i32 (timm:i32):$amt)
+          /*SwitchOpcode*/ 33,  TARGET_VAL(BFISD::Wrapper),// ->2711
+/*2678*/    OPC_RecordChild0, // #0 = $addr
+/*2679*/    OPC_MoveChild, 0,
+/*2681*/    OPC_SwitchOpcode /*2 cases */, 11,  TARGET_VAL(ISD::TargetGlobalAddress),// ->2696
+/*2685*/      OPC_MoveParent,
+/*2686*/      OPC_CheckType, MVT::i32,
+/*2688*/      OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32sym), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (BfinWrapper:i32 (tglobaladdr:i32):$addr) - Complexity = 6
+              // Dst: (LOAD32sym:i32 (tglobaladdr:i32):$addr)
+            /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::TargetJumpTable),// ->2710
+/*2699*/      OPC_MoveParent,
+/*2700*/      OPC_CheckType, MVT::i32,
+/*2702*/      OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32sym), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (BfinWrapper:i32 (tjumptable:i32):$addr) - Complexity = 6
+              // Dst: (LOAD32sym:i32 (tjumptable:i32):$addr)
+            0, // EndSwitchOpcode
+          /*SwitchOpcode*/ 52,  TARGET_VAL(ISD::TRUNCATE),// ->2766
+/*2714*/    OPC_Scope, 19, /*->2735*/ // 2 children in Scope
+/*2716*/      OPC_MoveChild, 0,
+/*2718*/      OPC_CheckOpcode, TARGET_VAL(ISD::CTPOP),
+/*2721*/      OPC_RecordChild0, // #0 = $src
+/*2722*/      OPC_CheckType, MVT::i32,
+/*2724*/      OPC_MoveParent,
+/*2725*/      OPC_CheckType, MVT::i16,
+/*2727*/      OPC_MorphNodeTo, TARGET_VAL(BF::ONES), 0,
+                  1/*#VTs*/, MVT::i16, 1/*#Ops*/, 0, 
+              // Src: (trunc:i16 (ctpop:i32 D:i32:$src)) - Complexity = 6
+              // Dst: (ONES:i16 D:i32:$src)
+/*2735*/    /*Scope*/ 29, /*->2765*/
+/*2736*/      OPC_RecordChild0, // #0 = $src
+/*2737*/      OPC_CheckChild0Type, MVT::i32,
+/*2739*/      OPC_CheckType, MVT::i16,
+/*2741*/      OPC_EmitInteger, MVT::i32, BF::DRegClassID,
+/*2744*/      OPC_EmitNode, TARGET_VAL(TargetOpcode::COPY_TO_REGCLASS), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*2753*/      OPC_EmitInteger, MVT::i32, BF::lo16,
+/*2756*/      OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0,
+                  1/*#VTs*/, MVT::i16, 2/*#Ops*/, 2, 3, 
+              // Src: (trunc:i16 D:i32:$src) - Complexity = 3
+              // Dst: (EXTRACT_SUBREG:i16 (COPY_TO_REGCLASS:i32 D:i32:$src, D:i32), lo16:i32)
+/*2765*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 52,  TARGET_VAL(BFISD::CALL),// ->2821
+/*2769*/    OPC_RecordNode,   // #0 = 'BfinCall' chained node
+/*2770*/    OPC_CaptureGlueInput,
+/*2771*/    OPC_RecordChild1, // #1 = $dst
+/*2772*/    OPC_Scope, 34, /*->2808*/ // 2 children in Scope
+/*2774*/      OPC_MoveChild, 1,
+/*2776*/      OPC_SwitchOpcode /*2 cases */, 12,  TARGET_VAL(ISD::TargetGlobalAddress),// ->2792
+/*2780*/        OPC_CheckType, MVT::i32,
+/*2782*/        OPC_MoveParent,
+/*2783*/        OPC_EmitMergeInputChains1_0,
+/*2784*/        OPC_MorphNodeTo, TARGET_VAL(BF::CALLa), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (BfinCall (tglobaladdr:i32):$dst) - Complexity = 6
+                // Dst: (CALLa:i32 (tglobaladdr:i32):$dst)
+              /*SwitchOpcode*/ 12,  TARGET_VAL(ISD::TargetExternalSymbol),// ->2807
+/*2795*/        OPC_CheckType, MVT::i32,
+/*2797*/        OPC_MoveParent,
+/*2798*/        OPC_EmitMergeInputChains1_0,
+/*2799*/        OPC_MorphNodeTo, TARGET_VAL(BF::CALLa), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (BfinCall (texternalsym:i32):$dst) - Complexity = 6
+                // Dst: (CALLa:i32 (texternalsym:i32):$dst)
+              0, // EndSwitchOpcode
+/*2808*/    /*Scope*/ 11, /*->2820*/
+/*2809*/      OPC_CheckChild1Type, MVT::i32,
+/*2811*/      OPC_EmitMergeInputChains1_0,
+/*2812*/      OPC_MorphNodeTo, TARGET_VAL(BF::CALLp), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (BfinCall P:i32:$func) - Complexity = 3
+              // Dst: (CALLp:i32 P:i32:$func)
+/*2820*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 71,  TARGET_VAL(ISD::Constant),// ->2895
+/*2824*/    OPC_RecordNode,   // #0 = $src
+/*2825*/    OPC_SwitchType /*2 cases */, 52,  MVT::i32,// ->2880
+/*2828*/      OPC_Scope, 12, /*->2842*/ // 4 children in Scope
+/*2830*/        OPC_CheckPredicate, 28, // Predicate_imm7
+/*2832*/        OPC_EmitConvertToTarget, 0,
+/*2834*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOADimm7), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (imm:i32)<<P:Predicate_imm7>>:$src - Complexity = 4
+                // Dst: (LOADimm7:i32 (imm:i32):$src)
+/*2842*/      /*Scope*/ 12, /*->2855*/
+/*2843*/        OPC_CheckPredicate, 29, // Predicate_uimm16
+/*2845*/        OPC_EmitConvertToTarget, 0,
+/*2847*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOADuimm16), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (imm:i32)<<P:Predicate_uimm16>>:$src - Complexity = 4
+                // Dst: (LOADuimm16:i32 (imm:i32):$src)
+/*2855*/      /*Scope*/ 12, /*->2868*/
+/*2856*/        OPC_CheckPredicate, 9, // Predicate_imm16
+/*2858*/        OPC_EmitConvertToTarget, 0,
+/*2860*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOADimm16), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (imm:i32)<<P:Predicate_imm16>>:$src - Complexity = 4
+                // Dst: (LOADimm16:i32 (imm:i32):$src)
+/*2868*/      /*Scope*/ 10, /*->2879*/
+/*2869*/        OPC_EmitConvertToTarget, 0,
+/*2871*/        OPC_MorphNodeTo, TARGET_VAL(BF::LOAD32imm), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (imm:i32):$src - Complexity = 3
+                // Dst: (LOAD32imm:i32 (imm:i32):$src)
+/*2879*/      0, /*End of Scope*/
+            /*SwitchType*/ 12,  MVT::i16,// ->2894
+/*2882*/      OPC_CheckPredicate, 30, // Predicate_ximm16
+/*2884*/      OPC_EmitConvertToTarget, 0,
+/*2886*/      OPC_MorphNodeTo, TARGET_VAL(BF::LOAD16i_d16), 0,
+                  1/*#VTs*/, MVT::i16, 1/*#Ops*/, 1, 
+              // Src: (imm:i16)<<P:Predicate_ximm16>>:$src - Complexity = 4
+              // Dst: (LOAD16i_d16:i16 (imm:i16):$src)
+            0, // EndSwitchType
+          /*SwitchOpcode*/ 12,  TARGET_VAL(ISD::BRIND),// ->2910
+/*2898*/    OPC_RecordNode,   // #0 = 'brind' chained node
+/*2899*/    OPC_RecordChild1, // #1 = $target
+/*2900*/    OPC_CheckChild1Type, MVT::i32,
+/*2902*/    OPC_EmitMergeInputChains1_0,
+/*2903*/    OPC_MorphNodeTo, TARGET_VAL(BF::JUMPp), 0|OPFL_Chain,
+                0/*#VTs*/, 1/*#Ops*/, 1, 
+            // Src: (brind P:i32:$target) - Complexity = 3
+            // Dst: (JUMPp P:i32:$target)
+          /*SwitchOpcode*/ 16,  TARGET_VAL(ISD::BR),// ->2929
+/*2913*/    OPC_RecordNode,   // #0 = 'br' chained node
+/*2914*/    OPC_RecordChild1, // #1 = $target
+/*2915*/    OPC_MoveChild, 1,
+/*2917*/    OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2920*/    OPC_MoveParent,
+/*2921*/    OPC_EmitMergeInputChains1_0,
+/*2922*/    OPC_MorphNodeTo, TARGET_VAL(BF::JUMPa), 0|OPFL_Chain,
+                0/*#VTs*/, 1/*#Ops*/, 1, 
+            // Src: (br (bb:Other):$target) - Complexity = 3
+            // Dst: (JUMPa (bb:Other):$target)
+          /*SwitchOpcode*/ 20,  TARGET_VAL(ISD::BRCOND),// ->2952
+/*2932*/    OPC_RecordNode,   // #0 = 'brcond' chained node
+/*2933*/    OPC_RecordChild1, // #1 = $cc
+/*2934*/    OPC_CheckChild1Type, MVT::i32,
+/*2936*/    OPC_RecordChild2, // #2 = $target
+/*2937*/    OPC_MoveChild, 2,
+/*2939*/    OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2942*/    OPC_MoveParent,
+/*2943*/    OPC_EmitMergeInputChains1_0,
+/*2944*/    OPC_MorphNodeTo, TARGET_VAL(BF::JUMPcc), 0|OPFL_Chain,
+                0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+            // Src: (brcond AnyCC:i32:$cc, (bb:Other):$target) - Complexity = 3
+            // Dst: (JUMPcc AnyCC:i32:$cc, (bb:Other):$target)
+          /*SwitchOpcode*/ 9,  TARGET_VAL(BFISD::RET_FLAG),// ->2964
+/*2955*/    OPC_RecordNode,   // #0 = 'BfinRet' chained node
+/*2956*/    OPC_CaptureGlueInput,
+/*2957*/    OPC_EmitMergeInputChains1_0,
+/*2958*/    OPC_MorphNodeTo, TARGET_VAL(BF::RTS), 0|OPFL_Chain|OPFL_GlueInput,
+                0/*#VTs*/, 0/*#Ops*/, 
+            // Src: (BfinRet) - Complexity = 3
+            // Dst: (RTS)
+          /*SwitchOpcode*/ 17,  TARGET_VAL(ISD::SELECT),// ->2984
+/*2967*/    OPC_RecordChild0, // #0 = $cc
+/*2968*/    OPC_CheckChild0Type, MVT::i32,
+/*2970*/    OPC_RecordChild1, // #1 = $src2
+/*2971*/    OPC_RecordChild2, // #2 = $src1
+/*2972*/    OPC_CheckType, MVT::i32,
+/*2974*/    OPC_MorphNodeTo, TARGET_VAL(BF::MOVEcc), 0,
+                1/*#VTs*/, MVT::i32, 3/*#Ops*/, 2, 1, 0, 
+            // Src: (select:i32 AnyCC:i32:$cc, DP:i32:$src2, DP:i32:$src1) - Complexity = 3
+            // Dst: (MOVEcc:i32 DP:i32:$src1, DP:i32:$src2, AnyCC:i32:$cc)
+          /*SwitchOpcode*/ 14,  TARGET_VAL(ISD::ZERO_EXTEND),// ->3001
+/*2987*/    OPC_RecordChild0, // #0 = $src
+/*2988*/    OPC_CheckChild0Type, MVT::i16,
+/*2990*/    OPC_CheckType, MVT::i32,
+/*2992*/    OPC_MorphNodeTo, TARGET_VAL(BF::MOVEzext), 0,
+                2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 0, 
+            // Src: (zext:i32 D16L:i16:$src) - Complexity = 3
+            // Dst: (MOVEzext:i32:i1 D16L:i16:$src)
+          /*SwitchOpcode*/ 14,  TARGET_VAL(ISD::SIGN_EXTEND),// ->3018
+/*3004*/    OPC_RecordChild0, // #0 = $src
+/*3005*/    OPC_CheckChild0Type, MVT::i16,
+/*3007*/    OPC_CheckType, MVT::i32,
+/*3009*/    OPC_MorphNodeTo, TARGET_VAL(BF::MOVEsext), 0,
+                2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 0, 
+            // Src: (sext:i32 D16L:i16:$src) - Complexity = 3
+            // Dst: (MOVEsext:i32:i1 D16L:i16:$src)
+          /*SwitchOpcode*/ 92,  TARGET_VAL(ISD::SIGN_EXTEND_INREG),// ->3113
+/*3021*/    OPC_RecordChild0, // #0 = $src
+/*3022*/    OPC_MoveChild, 1,
+/*3024*/    OPC_Scope, 59, /*->3085*/ // 2 children in Scope
+/*3026*/      OPC_CheckValueType, MVT::i8,
+/*3028*/      OPC_MoveParent,
+/*3029*/      OPC_SwitchType /*2 cases */, 9,  MVT::i32,// ->3041
+/*3032*/        OPC_MorphNodeTo, TARGET_VAL(BF::MOVEsext8), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 0, 
+                // Src: (sext_inreg:i32 D:i32:$src, i8:Other) - Complexity = 3
+                // Dst: (MOVEsext8:i32:i1 D:i32:$src)
+              /*SwitchType*/ 41,  MVT::i16,// ->3084
+/*3043*/        OPC_EmitNode, TARGET_VAL(TargetOpcode::IMPLICIT_DEF), 0,
+                    1/*#VTs*/, MVT::i32, 0/*#Ops*/,  // Results = #1 
+/*3050*/        OPC_EmitInteger, MVT::i32, BF::lo16,
+/*3053*/        OPC_EmitNode, TARGET_VAL(TargetOpcode::INSERT_SUBREG), 0,
+                    1/*#VTs*/, MVT::i32, 3/*#Ops*/, 1, 0, 2,  // Results = #3 
+/*3063*/        OPC_EmitNode, TARGET_VAL(BF::MOVEsext8), 0,
+                    2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 3,  // Results = #4 #5 
+/*3072*/        OPC_EmitInteger, MVT::i32, BF::lo16,
+/*3075*/        OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0,
+                    1/*#VTs*/, MVT::i16, 2/*#Ops*/, 4, 6, 
+                // Src: (sext_inreg:i16 D16L:i16:$src, i8:Other) - Complexity = 3
+                // Dst: (EXTRACT_SUBREG:i16 (MOVEsext8:i32:i1 (INSERT_SUBREG:i32 (IMPLICIT_DEF:i32), D16L:i16:$src, lo16:i32)), lo16:i32)
+              0, // EndSwitchType
+/*3085*/    /*Scope*/ 26, /*->3112*/
+/*3086*/      OPC_CheckValueType, MVT::i16,
+/*3088*/      OPC_MoveParent,
+/*3089*/      OPC_CheckType, MVT::i32,
+/*3091*/      OPC_EmitInteger, MVT::i32, BF::lo16,
+/*3094*/      OPC_EmitNode, TARGET_VAL(TargetOpcode::EXTRACT_SUBREG), 0,
+                  1/*#VTs*/, MVT::i16, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*3103*/      OPC_MorphNodeTo, TARGET_VAL(BF::MOVEsext), 0,
+                  2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 2, 
+              // Src: (sext_inreg:i32 D:i32:$src, i16:Other) - Complexity = 3
+              // Dst: (MOVEsext:i32:i1 (EXTRACT_SUBREG:i16 D:i32:$src, lo16:i32))
+/*3112*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 14,  TARGET_VAL(ISD::ADDC),// ->3130
+/*3116*/    OPC_RecordChild0, // #0 = $src1
+/*3117*/    OPC_RecordChild1, // #1 = $src2
+/*3118*/    OPC_CheckType, MVT::i32,
+/*3120*/    OPC_MorphNodeTo, TARGET_VAL(BF::ADD), 0|OPFL_GlueOutput,
+                2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+            // Src: (addc:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+            // Dst: (ADD:i32:i1 D:i32:$src1, D:i32:$src2)
+          /*SwitchOpcode*/ 14,  TARGET_VAL(ISD::SUBC),// ->3147
+/*3133*/    OPC_RecordChild0, // #0 = $src1
+/*3134*/    OPC_RecordChild1, // #1 = $src2
+/*3135*/    OPC_CheckType, MVT::i32,
+/*3137*/    OPC_MorphNodeTo, TARGET_VAL(BF::SUB), 0|OPFL_GlueOutput,
+                2/*#VTs*/, MVT::i32, MVT::i1, 2/*#Ops*/, 0, 1, 
+            // Src: (subc:i32 D:i32:$src1, D:i32:$src2) - Complexity = 3
+            // Dst: (SUB:i32:i1 D:i32:$src1, D:i32:$src2)
+          /*SwitchOpcode*/ 14,  TARGET_VAL(ISD::MULHS),// ->3164
+/*3150*/    OPC_RecordChild0, // #0 = $src1
+/*3151*/    OPC_RecordChild1, // #1 = $src2
+/*3152*/    OPC_CheckType, MVT::i16,
+/*3154*/    OPC_MorphNodeTo, TARGET_VAL(BF::MULHS16), 0,
+                2/*#VTs*/, MVT::i16, MVT::i1, 2/*#Ops*/, 0, 1, 
+            // Src: (mulhs:i16 D16:i16:$src1, D16:i16:$src2) - Complexity = 3
+            // Dst: (MULHS16:i16:i1 D16:i16:$src1, D16:i16:$src2)
+          /*SwitchOpcode*/ 20,  TARGET_VAL(ISD::CTPOP),// ->3187
+/*3167*/    OPC_RecordChild0, // #0 = $src
+/*3168*/    OPC_CheckType, MVT::i32,
+/*3170*/    OPC_EmitNode, TARGET_VAL(BF::ONES), 0,
+                1/*#VTs*/, MVT::i16, 1/*#Ops*/, 0,  // Results = #1 
+/*3178*/    OPC_MorphNodeTo, TARGET_VAL(BF::MOVEzext), 0,
+                2/*#VTs*/, MVT::i32, MVT::i1, 1/*#Ops*/, 1, 
+            // Src: (ctpop:i32 D:i32:$src) - Complexity = 3
+            // Dst: (MOVEzext:i32:i1 (ONES:i16 D:i32:$src))
+          /*SwitchOpcode*/ 37,  TARGET_VAL(ISD::ANY_EXTEND),// ->3227
+/*3190*/    OPC_RecordChild0, // #0 = $src
+/*3191*/    OPC_CheckChild0Type, MVT::i16,
+/*3193*/    OPC_CheckType, MVT::i32,
+/*3195*/    OPC_EmitNode, TARGET_VAL(TargetOpcode::IMPLICIT_DEF), 0,
+                1/*#VTs*/, MVT::i32, 0/*#Ops*/,  // Results = #1 
+/*3202*/    OPC_EmitInteger, MVT::i32, BF::D16LRegClassID,
+/*3205*/    OPC_EmitNode, TARGET_VAL(TargetOpcode::COPY_TO_REGCLASS), 0,
+                1/*#VTs*/, MVT::i16, 2/*#Ops*/, 0, 2,  // Results = #3 
+/*3214*/    OPC_EmitInteger, MVT::i32, BF::lo16,
+/*3217*/    OPC_MorphNodeTo, TARGET_VAL(TargetOpcode::INSERT_SUBREG), 0,
+                1/*#VTs*/, MVT::i32, 3/*#Ops*/, 1, 3, 4, 
+            // Src: (anyext:i32 D16L:i16:$src) - Complexity = 3
+            // Dst: (INSERT_SUBREG:i32 (IMPLICIT_DEF:i32), (COPY_TO_REGCLASS:i16 D16L:i16:$src, D16L:i16), lo16:i32)
+          0, // EndSwitchOpcode
+    0
+  }; // Total Array size is 3229 bytes
+
+  // Opcode Histogram:
+  // #OPC_Scope                          = 52
+  // #OPC_RecordNode                     = 11
+  // #OPC_RecordChild                    = 80
+  // #OPC_RecordMemRef                   = 2
+  // #OPC_CaptureGlueInput               = 3
+  // #OPC_MoveChild                      = 64
+  // #OPC_MoveParent                     = 120
+  // #OPC_CheckSame                      = 0
+  // #OPC_CheckPatternPredicate          = 0
+  // #OPC_CheckPredicate                 = 124
+  // #OPC_CheckOpcode                    = 33
+  // #OPC_SwitchOpcode                   = 5
+  // #OPC_CheckType                      = 111
+  // #OPC_SwitchType                     = 8
+  // #OPC_CheckChildType                 = 32
+  // #OPC_CheckInteger                   = 30
+  // #OPC_CheckCondCode                  = 23
+  // #OPC_CheckValueType                 = 2
+  // #OPC_CheckComplexPat                = 4
+  // #OPC_CheckAndImm                    = 2
+  // #OPC_CheckOrImm                     = 0
+  // #OPC_CheckFoldableChainNode         = 0
+  // #OPC_EmitInteger                    = 0
+  // #OPC_EmitStringInteger              = 20
+  // #OPC_EmitRegister                   = 0
+  // #OPC_EmitConvertToTarget            = 44
+  // #OPC_EmitMergeInputChains           = 58
+  // #OPC_EmitCopyToReg                  = 0
+  // #OPC_EmitNode                       = 22
+  // #OPC_EmitNodeXForm                  = 5
+  // #OPC_MarkGlueResults                = 0
+  // #OPC_CompleteMatch                  = 0
+  // #OPC_MorphNodeTo                    = 141
+
+  #undef TARGET_VAL
+  return SelectCodeCommon(N, MatcherTable,sizeof(MatcherTable));
+}
+
+bool CheckNodePredicate(SDNode *Node, unsigned PredNo) const {
+  switch (PredNo) {
+  default: assert(0 && "Invalid predicate in table?");
+  case 0: { // Predicate_uimm5mask
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    return isPowerOf2_32(N->getZExtValue());
+
+  }
+  case 1: { // Predicate_istore
+    SDNode *N = Node;
+
+  return !cast<StoreSDNode>(N)->isTruncatingStore();
+
+  }
+  case 2: { // Predicate_post_store
+    SDNode *N = Node;
+
+  ISD::MemIndexedMode AM = cast<StoreSDNode>(N)->getAddressingMode();
+  return AM == ISD::POST_INC || AM == ISD::POST_DEC;
+
+  }
+  case 3: { // Predicate_unindexedstore
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->getAddressingMode() == ISD::UNINDEXED;
+
+  }
+  case 4: { // Predicate_store
+    SDNode *N = Node;
+
+  return !cast<StoreSDNode>(N)->isTruncatingStore();
+
+  }
+  case 5: { // Predicate_truncstore
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->isTruncatingStore();
+
+  }
+  case 6: { // Predicate_truncstorei16
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 7: { // Predicate_uimm6m4
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    uint64_t value = N->getZExtValue();
+    return value % 4 == 0 && isUInt<6>(value);
+
+  }
+  case 8: { // Predicate_imm18m4
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    int64_t value = N->getSExtValue();
+    return value % 4 == 0 && isInt<18>(value);
+
+  }
+  case 9: { // Predicate_imm16
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+return isInt<16>(N->getSExtValue());
+  }
+  case 10: { // Predicate_truncstorei8
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 11: { // Predicate_imm3
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+return isInt<3>(N->getSExtValue());
+  }
+  case 12: { // Predicate_unindexedload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getAddressingMode() == ISD::UNINDEXED;
+
+  }
+  case 13: { // Predicate_load
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::NON_EXTLOAD;
+
+  }
+  case 14: { // Predicate_uimm5m2
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    uint64_t value = N->getZExtValue();
+    return value % 2 == 0 && isUInt<5>(value);
+
+  }
+  case 15: { // Predicate_zextload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::ZEXTLOAD;
+
+  }
+  case 16: { // Predicate_zextloadi16
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 17: { // Predicate_extload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::EXTLOAD;
+
+  }
+  case 18: { // Predicate_extloadi16
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 19: { // Predicate_imm17m2
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    int64_t value = N->getSExtValue();
+    return value % 2 == 0 && isInt<17>(value);
+
+  }
+  case 20: { // Predicate_sextload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::SEXTLOAD;
+
+  }
+  case 21: { // Predicate_sextloadi16
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 22: { // Predicate_zextloadi8
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 23: { // Predicate_extloadi8
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 24: { // Predicate_sextloadi8
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 25: { // Predicate_uimm5
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+return isUInt<5>(N->getZExtValue());
+  }
+  case 26: { // Predicate_uimm4
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+return isUInt<4>(N->getZExtValue());
+  }
+  case 27: { // Predicate_uimm5imask
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    return isPowerOf2_32(~N->getZExtValue());
+
+  }
+  case 28: { // Predicate_imm7
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+return isInt<7>(N->getSExtValue());
+  }
+  case 29: { // Predicate_uimm16
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+return isUInt<16>(N->getZExtValue());
+  }
+  case 30: { // Predicate_ximm16
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+    int64_t value = N->getSExtValue();
+    return value < (1<<16) && value >= -(1<<15);
+
+  }
+  }
+}
+
+bool CheckComplexPattern(SDNode *Root, SDNode *Parent, SDValue N,
+                         unsigned PatternNo,
+         SmallVectorImpl<std::pair<SDValue, SDNode*> > &Result) {
+  unsigned NextRes = Result.size();
+  switch (PatternNo) {
+  default: assert(0 && "Invalid pattern # in table?");
+  case 0:
+    Result.resize(NextRes+2);
+    return SelectADDRspii(N, Result[NextRes+0].first, Result[NextRes+1].first);
+  }
+}
+
+SDValue RunSDNodeXForm(SDValue V, unsigned XFormNo) {
+  switch (XFormNo) {
+  default: assert(0 && "Invalid xform # in table?");
+  case 0: {  // trailingZeros_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  return CurDAG->getTargetConstant(N->getAPIntValue().countTrailingZeros(),
+                                   MVT::i32);
+
+  }
+  case 1: {  // trailingOnes_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  return CurDAG->getTargetConstant(N->getAPIntValue().countTrailingOnes(),
+                                   MVT::i32);
+
+  }
+  }
+}
+

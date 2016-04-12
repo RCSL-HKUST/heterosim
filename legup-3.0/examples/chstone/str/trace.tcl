@@ -1,0 +1,10 @@
+stcmp
+init_search
+strsearch
+strlen
+strlen
+strcpy
+strcpy
+find
+printf
+putchar

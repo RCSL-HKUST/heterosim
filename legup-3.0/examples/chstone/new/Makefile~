@@ -1,0 +1,3 @@
+NAME=tb_bsort100
+LEVEL = ../..
+include $(LEVEL)/Makefile.common

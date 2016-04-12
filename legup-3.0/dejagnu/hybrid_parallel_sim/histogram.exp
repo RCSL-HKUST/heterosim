@@ -1,0 +1,13 @@
+load_lib legup.exp
+
+cd ../examples/parallel/openmp/histogram
+set test "histogram OpenMP"
+
+set hybridexpected {# Result: 5}
+run-test-hybridomp-once $test $hybridexpected
+
+cd ../../pthreads/histogram
+set test "histogram Pthreads"
+run-test-hybrid-once $test $hybridexpected
+
+cd ../../../

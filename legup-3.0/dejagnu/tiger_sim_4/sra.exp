@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd sra
+set test "sra"
+set tigerexpected {Result: 100}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

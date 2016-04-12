@@ -1,0 +1,2489 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// DAG Instruction Selector for the XCore target
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+// *** NOTE: This file is #included into the middle of the target
+// *** instruction selector class.  These functions are really methods.
+
+// The main instruction selector code.
+SDNode *SelectCode(SDNode *N) {
+  // Some target values are emitted as 2 bytes, TARGET_VAL handles
+  // this.
+  #define TARGET_VAL(X) X & 255, unsigned(X) >> 8
+  static const unsigned char MatcherTable[] = {
+/*0*/     OPC_SwitchOpcode /*40 cases */, 122|128,1/*250*/,  TARGET_VAL(ISD::ADD),// ->255
+/*5*/       OPC_Scope, 29, /*->36*/ // 5 children in Scope
+/*7*/         OPC_MoveChild, 0,
+/*9*/         OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*12*/        OPC_MoveChild, 0,
+/*14*/        OPC_CheckInteger, 1, 
+/*16*/        OPC_MoveParent,
+/*17*/        OPC_RecordChild1, // #0 = $size
+/*18*/        OPC_MoveParent,
+/*19*/        OPC_MoveChild, 1,
+/*21*/        OPC_CheckInteger, 127|128,127|128,127|128,127|128,15/*4294967295*/, 
+/*27*/        OPC_MoveParent,
+/*28*/        OPC_MorphNodeTo, TARGET_VAL(XCore::MKMSK_2r), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (add:i32 (shl:i32 1:i32, GRRegs:i32:$size), 4294967295:i32) - Complexity = 16
+              // Dst: (MKMSK_2r:i32 GRRegs:i32:$size)
+/*36*/      /*Scope*/ 39, /*->76*/
+/*37*/        OPC_RecordChild0, // #0 = $addr
+/*38*/        OPC_MoveChild, 1,
+/*40*/        OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*43*/        OPC_RecordChild0, // #1 = $offset
+/*44*/        OPC_MoveChild, 1,
+/*46*/        OPC_Scope, 13, /*->61*/ // 2 children in Scope
+/*48*/          OPC_CheckInteger, 2, 
+/*50*/          OPC_MoveParent,
+/*51*/          OPC_MoveParent,
+/*52*/          OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWF_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 2:i32)) - Complexity = 11
+                // Dst: (LDAWF_l3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*61*/        /*Scope*/ 13, /*->75*/
+/*62*/          OPC_CheckInteger, 1, 
+/*64*/          OPC_MoveParent,
+/*65*/          OPC_MoveParent,
+/*66*/          OPC_MorphNodeTo, TARGET_VAL(XCore::LDA16F_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 1:i32)) - Complexity = 11
+                // Dst: (LDA16F_l3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*75*/        0, /*End of Scope*/
+/*76*/      /*Scope*/ 40, /*->117*/
+/*77*/        OPC_MoveChild, 0,
+/*79*/        OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*82*/        OPC_RecordChild0, // #0 = $offset
+/*83*/        OPC_MoveChild, 1,
+/*85*/        OPC_Scope, 14, /*->101*/ // 2 children in Scope
+/*87*/          OPC_CheckInteger, 2, 
+/*89*/          OPC_MoveParent,
+/*90*/          OPC_MoveParent,
+/*91*/          OPC_RecordChild1, // #1 = $addr
+/*92*/          OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWF_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                // Src: (add:i32 (shl:i32 GRRegs:i32:$offset, 2:i32), GRRegs:i32:$addr) - Complexity = 11
+                // Dst: (LDAWF_l3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*101*/       /*Scope*/ 14, /*->116*/
+/*102*/         OPC_CheckInteger, 1, 
+/*104*/         OPC_MoveParent,
+/*105*/         OPC_MoveParent,
+/*106*/         OPC_RecordChild1, // #1 = $addr
+/*107*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDA16F_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                // Src: (add:i32 (shl:i32 GRRegs:i32:$offset, 1:i32), GRRegs:i32:$addr) - Complexity = 11
+                // Dst: (LDA16F_l3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*116*/       0, /*End of Scope*/
+/*117*/     /*Scope*/ 44, /*->162*/
+/*118*/       OPC_RecordNode, // #0 = $addr
+/*119*/       OPC_CheckType, MVT::i32,
+/*121*/       OPC_Scope, 12, /*->135*/ // 3 children in Scope
+/*123*/         OPC_CheckComplexPat, /*CP*/0, /*#*/0, // SelectADDRspii:$addr #1 #2
+/*126*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWFI), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                // Src: ADDRspii:i32:$addr - Complexity = 9
+                // Dst: (LDAWFI:i32 ADDRspii:i32:$addr)
+/*135*/       /*Scope*/ 12, /*->148*/
+/*136*/         OPC_CheckComplexPat, /*CP*/1, /*#*/0, // SelectADDRdpii:$a #1 #2
+/*139*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWDP_lru6), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                // Src: ADDRdpii:i32:$a - Complexity = 9
+                // Dst: (LDAWDP_lru6:i32 ADDRdpii:i32:$a)
+/*148*/       /*Scope*/ 12, /*->161*/
+/*149*/         OPC_CheckComplexPat, /*CP*/2, /*#*/0, // SelectADDRcpii:$a #1 #2
+/*152*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWCP_lu6), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                // Src: ADDRcpii:i32:$a - Complexity = 9
+                // Dst: (LDAWCP_lu6:i32 ADDRcpii:i32:$a)
+/*161*/       0, /*End of Scope*/
+/*162*/     /*Scope*/ 91, /*->254*/
+/*163*/       OPC_RecordChild0, // #0 = $b
+/*164*/       OPC_RecordChild1, // #1 = $c
+/*165*/       OPC_Scope, 76, /*->243*/ // 2 children in Scope
+/*167*/         OPC_MoveChild, 1,
+/*169*/         OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*172*/         OPC_Scope, 14, /*->188*/ // 4 children in Scope
+/*174*/           OPC_CheckPredicate, 0, // Predicate_immUs
+/*176*/           OPC_MoveParent,
+/*177*/           OPC_EmitConvertToTarget, 1,
+/*179*/           OPC_MorphNodeTo, TARGET_VAL(XCore::ADD_2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                  // Src: (add:i32 GRRegs:i32:$b, (imm:i32)<<P:Predicate_immUs>>:$c) - Complexity = 7
+                  // Dst: (ADD_2rus:i32 GRRegs:i32:$b, (imm:i32):$c)
+/*188*/         /*Scope*/ 17, /*->206*/
+/*189*/           OPC_CheckPredicate, 1, // Predicate_immUs4
+/*191*/           OPC_MoveParent,
+/*192*/           OPC_EmitConvertToTarget, 1,
+/*194*/           OPC_EmitNodeXForm, 0, 2, // div4_xform
+/*197*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWF_l2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                  // Src: (add:i32 GRRegs:i32:$addr, (imm:i32)<<P:Predicate_immUs4>>:$offset) - Complexity = 7
+                  // Dst: (LDAWF_l2rus:i32 GRRegs:i32:$addr, (div4_xform:i32 (imm:i32)<<P:Predicate_immUs4>>:$offset))
+/*206*/         /*Scope*/ 17, /*->224*/
+/*207*/           OPC_CheckPredicate, 2, // Predicate_immUsNeg
+/*209*/           OPC_MoveParent,
+/*210*/           OPC_EmitConvertToTarget, 1,
+/*212*/           OPC_EmitNodeXForm, 1, 2, // neg_xform
+/*215*/           OPC_MorphNodeTo, TARGET_VAL(XCore::SUB_2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                  // Src: (add:i32 GRRegs:i32:$src1, (imm:i32)<<P:Predicate_immUsNeg>>:$src2) - Complexity = 7
+                  // Dst: (SUB_2rus:i32 GRRegs:i32:$src1, (neg_xform:i32 (imm:i32)<<P:Predicate_immUsNeg>>:$src2))
+/*224*/         /*Scope*/ 17, /*->242*/
+/*225*/           OPC_CheckPredicate, 3, // Predicate_immUs4Neg
+/*227*/           OPC_MoveParent,
+/*228*/           OPC_EmitConvertToTarget, 1,
+/*230*/           OPC_EmitNodeXForm, 2, 2, // div4neg_xform
+/*233*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWB_l2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                  // Src: (add:i32 GRRegs:i32:$src1, (imm:i32)<<P:Predicate_immUs4Neg>>:$src2) - Complexity = 7
+                  // Dst: (LDAWB_l2rus:i32 GRRegs:i32:$src1, (div4neg_xform:i32 (imm:i32)<<P:Predicate_immUs4Neg>>:$src2))
+/*242*/         0, /*End of Scope*/
+/*243*/       /*Scope*/ 9, /*->253*/
+/*244*/         OPC_MorphNodeTo, TARGET_VAL(XCore::ADD_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (add:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+                // Dst: (ADD_3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*253*/       0, /*End of Scope*/
+/*254*/     0, /*End of Scope*/
+          /*SwitchOpcode*/ 45|128,3/*429*/,  TARGET_VAL(ISD::LOAD),// ->688
+/*259*/     OPC_RecordMemRef,
+/*260*/     OPC_RecordNode,   // #0 = 'ld' chained node
+/*261*/     OPC_Scope, 40|128,1/*168*/, /*->432*/ // 4 children in Scope
+/*264*/       OPC_MoveChild, 1,
+/*266*/       OPC_CheckOpcode, TARGET_VAL(ISD::ADD),
+/*269*/       OPC_Scope, 79, /*->350*/ // 2 children in Scope
+/*271*/         OPC_RecordChild0, // #1 = $addr
+/*272*/         OPC_MoveChild, 1,
+/*274*/         OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*277*/         OPC_RecordChild0, // #2 = $offset
+/*278*/         OPC_MoveChild, 1,
+/*280*/         OPC_Scope, 43, /*->325*/ // 2 children in Scope
+/*282*/           OPC_CheckInteger, 1, 
+/*284*/           OPC_MoveParent,
+/*285*/           OPC_MoveParent,
+/*286*/           OPC_CheckType, MVT::i32,
+/*288*/           OPC_MoveParent,
+/*289*/           OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*291*/           OPC_CheckType, MVT::i32,
+/*293*/           OPC_Scope, 14, /*->309*/ // 2 children in Scope
+/*295*/             OPC_CheckPredicate, 5, // Predicate_sextload
+/*297*/             OPC_CheckPredicate, 6, // Predicate_sextloadi16
+/*299*/             OPC_EmitMergeInputChains1_0,
+/*300*/             OPC_MorphNodeTo, TARGET_VAL(XCore::LD16S_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                    // Src: (ld:i32 (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 1:i32)))<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi16>> - Complexity = 15
+                    // Dst: (LD16S_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*309*/           /*Scope*/ 14, /*->324*/
+/*310*/             OPC_CheckPredicate, 7, // Predicate_extload
+/*312*/             OPC_CheckPredicate, 8, // Predicate_extloadi16
+/*314*/             OPC_EmitMergeInputChains1_0,
+/*315*/             OPC_MorphNodeTo, TARGET_VAL(XCore::LD16S_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                    // Src: (ld:i32 (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 1:i32)))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi16>> - Complexity = 15
+                    // Dst: (LD16S_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*324*/           0, /*End of Scope*/
+/*325*/         /*Scope*/ 23, /*->349*/
+/*326*/           OPC_CheckInteger, 2, 
+/*328*/           OPC_MoveParent,
+/*329*/           OPC_MoveParent,
+/*330*/           OPC_CheckType, MVT::i32,
+/*332*/           OPC_MoveParent,
+/*333*/           OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*335*/           OPC_CheckPredicate, 9, // Predicate_load
+/*337*/           OPC_CheckType, MVT::i32,
+/*339*/           OPC_EmitMergeInputChains1_0,
+/*340*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LDW_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                  // Src: (ld:i32 (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 2:i32)))<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 15
+                  // Dst: (LDW_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*349*/         0, /*End of Scope*/
+/*350*/       /*Scope*/ 80, /*->431*/
+/*351*/         OPC_MoveChild, 0,
+/*353*/         OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*356*/         OPC_RecordChild0, // #1 = $offset
+/*357*/         OPC_MoveChild, 1,
+/*359*/         OPC_Scope, 44, /*->405*/ // 2 children in Scope
+/*361*/           OPC_CheckInteger, 1, 
+/*363*/           OPC_MoveParent,
+/*364*/           OPC_MoveParent,
+/*365*/           OPC_RecordChild1, // #2 = $addr
+/*366*/           OPC_CheckType, MVT::i32,
+/*368*/           OPC_MoveParent,
+/*369*/           OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*371*/           OPC_CheckType, MVT::i32,
+/*373*/           OPC_Scope, 14, /*->389*/ // 2 children in Scope
+/*375*/             OPC_CheckPredicate, 7, // Predicate_extload
+/*377*/             OPC_CheckPredicate, 8, // Predicate_extloadi16
+/*379*/             OPC_EmitMergeInputChains1_0,
+/*380*/             OPC_MorphNodeTo, TARGET_VAL(XCore::LD16S_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 1, 
+                    // Src: (ld:i32 (add:i32 (shl:i32 GRRegs:i32:$offset, 1:i32), GRRegs:i32:$addr))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi16>> - Complexity = 15
+                    // Dst: (LD16S_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*389*/           /*Scope*/ 14, /*->404*/
+/*390*/             OPC_CheckPredicate, 5, // Predicate_sextload
+/*392*/             OPC_CheckPredicate, 6, // Predicate_sextloadi16
+/*394*/             OPC_EmitMergeInputChains1_0,
+/*395*/             OPC_MorphNodeTo, TARGET_VAL(XCore::LD16S_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 1, 
+                    // Src: (ld:i32 (add:i32 (shl:i32 GRRegs:i32:$offset, 1:i32), GRRegs:i32:$addr))<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi16>> - Complexity = 15
+                    // Dst: (LD16S_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*404*/           0, /*End of Scope*/
+/*405*/         /*Scope*/ 24, /*->430*/
+/*406*/           OPC_CheckInteger, 2, 
+/*408*/           OPC_MoveParent,
+/*409*/           OPC_MoveParent,
+/*410*/           OPC_RecordChild1, // #2 = $addr
+/*411*/           OPC_CheckType, MVT::i32,
+/*413*/           OPC_MoveParent,
+/*414*/           OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*416*/           OPC_CheckPredicate, 9, // Predicate_load
+/*418*/           OPC_CheckType, MVT::i32,
+/*420*/           OPC_EmitMergeInputChains1_0,
+/*421*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LDW_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 1, 
+                  // Src: (ld:i32 (add:i32 (shl:i32 GRRegs:i32:$offset, 2:i32), GRRegs:i32:$addr))<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 15
+                  // Dst: (LDW_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*430*/         0, /*End of Scope*/
+/*431*/       0, /*End of Scope*/
+/*432*/     /*Scope*/ 39, /*->472*/
+/*433*/       OPC_RecordChild1, // #1 = $addr
+/*434*/       OPC_CheckChild1Type, MVT::i32,
+/*436*/       OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*438*/       OPC_CheckPredicate, 9, // Predicate_load
+/*440*/       OPC_CheckType, MVT::i32,
+/*442*/       OPC_Scope, 13, /*->457*/ // 2 children in Scope
+/*444*/         OPC_CheckComplexPat, /*CP*/0, /*#*/1, // SelectADDRspii:$addr #2 #3
+/*447*/         OPC_EmitMergeInputChains1_0,
+/*448*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDWFI), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (ld:i32 ADDRspii:i32:$addr)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 13
+                // Dst: (LDWFI:i32 ADDRspii:i32:$addr)
+/*457*/       /*Scope*/ 13, /*->471*/
+/*458*/         OPC_CheckComplexPat, /*CP*/1, /*#*/1, // SelectADDRdpii:$a #2 #3
+/*461*/         OPC_EmitMergeInputChains1_0,
+/*462*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDWDP_lru6), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (ld:i32 ADDRdpii:i32:$a)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 13
+                // Dst: (LDWDP_lru6:i32 ADDRdpii:i32:$a)
+/*471*/       0, /*End of Scope*/
+/*472*/     /*Scope*/ 82, /*->555*/
+/*473*/       OPC_MoveChild, 1,
+/*475*/       OPC_CheckOpcode, TARGET_VAL(ISD::ADD),
+/*478*/       OPC_RecordChild0, // #1 = $addr
+/*479*/       OPC_RecordChild1, // #2 = $offset
+/*480*/       OPC_Scope, 32, /*->514*/ // 2 children in Scope
+/*482*/         OPC_MoveChild, 1,
+/*484*/         OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*487*/         OPC_CheckPredicate, 1, // Predicate_immUs4
+/*489*/         OPC_MoveParent,
+/*490*/         OPC_CheckType, MVT::i32,
+/*492*/         OPC_MoveParent,
+/*493*/         OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*495*/         OPC_CheckPredicate, 9, // Predicate_load
+/*497*/         OPC_CheckType, MVT::i32,
+/*499*/         OPC_EmitMergeInputChains1_0,
+/*500*/         OPC_EmitConvertToTarget, 2,
+/*502*/         OPC_EmitNodeXForm, 0, 3, // div4_xform
+/*505*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDW_2rus), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 4, 
+                // Src: (ld:i32 (add:i32 GRRegs:i32:$addr, (imm:i32)<<P:Predicate_immUs4>>:$offset))<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 11
+                // Dst: (LDW_2rus:i32 GRRegs:i32:$addr, (div4_xform:i32 (imm:i32)<<P:Predicate_immUs4>>:$offset))
+/*514*/       /*Scope*/ 39, /*->554*/
+/*515*/         OPC_CheckType, MVT::i32,
+/*517*/         OPC_MoveParent,
+/*518*/         OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*520*/         OPC_CheckType, MVT::i32,
+/*522*/         OPC_Scope, 14, /*->538*/ // 2 children in Scope
+/*524*/           OPC_CheckPredicate, 10, // Predicate_zextload
+/*526*/           OPC_CheckPredicate, 11, // Predicate_zextloadi8
+/*528*/           OPC_EmitMergeInputChains1_0,
+/*529*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LD8U_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                  // Src: (ld:i32 (add:i32 GRRegs:i32:$addr, GRRegs:i32:$offset))<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi8>> - Complexity = 7
+                  // Dst: (LD8U_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*538*/         /*Scope*/ 14, /*->553*/
+/*539*/           OPC_CheckPredicate, 7, // Predicate_extload
+/*541*/           OPC_CheckPredicate, 12, // Predicate_extloadi8
+/*543*/           OPC_EmitMergeInputChains1_0,
+/*544*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LD8U_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                  // Src: (ld:i32 (add:i32 GRRegs:i32:$addr, GRRegs:i32:$offset))<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi8>> - Complexity = 7
+                  // Dst: (LD8U_3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*553*/         0, /*End of Scope*/
+/*554*/       0, /*End of Scope*/
+/*555*/     /*Scope*/ 2|128,1/*130*/, /*->687*/
+/*557*/       OPC_RecordChild1, // #1 = $addr
+/*558*/       OPC_CheckChild1Type, MVT::i32,
+/*560*/       OPC_CheckPredicate, 4, // Predicate_unindexedload
+/*562*/       OPC_CheckType, MVT::i32,
+/*564*/       OPC_Scope, 15, /*->581*/ // 4 children in Scope
+/*566*/         OPC_CheckPredicate, 9, // Predicate_load
+/*568*/         OPC_EmitMergeInputChains1_0,
+/*569*/         OPC_EmitInteger, MVT::i32, 0, 
+/*572*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LDW_2rus), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+                // Src: (ld:i32 GRRegs:i32:$addr)<<P:Predicate_unindexedload>><<P:Predicate_load>> - Complexity = 4
+                // Dst: (LDW_2rus:i32 GRRegs:i32:$addr, 0:i32)
+/*581*/       /*Scope*/ 25, /*->607*/
+/*582*/         OPC_CheckPredicate, 10, // Predicate_zextload
+/*584*/         OPC_CheckPredicate, 11, // Predicate_zextloadi8
+/*586*/         OPC_EmitMergeInputChains1_0,
+/*587*/         OPC_EmitInteger, MVT::i32, 0, 
+/*590*/         OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2,  // Results = #3 
+/*598*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LD8U_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                // Src: (ld:i32 GRRegs:i32:$addr)<<P:Predicate_unindexedload>><<P:Predicate_zextload>><<P:Predicate_zextloadi8>> - Complexity = 4
+                // Dst: (LD8U_3r:i32 GRRegs:i32:$addr, (LDC_ru6:i32 0:i32))
+/*607*/       /*Scope*/ 25, /*->633*/
+/*608*/         OPC_CheckPredicate, 5, // Predicate_sextload
+/*610*/         OPC_CheckPredicate, 6, // Predicate_sextloadi16
+/*612*/         OPC_EmitMergeInputChains1_0,
+/*613*/         OPC_EmitInteger, MVT::i32, 0, 
+/*616*/         OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2,  // Results = #3 
+/*624*/         OPC_MorphNodeTo, TARGET_VAL(XCore::LD16S_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                // Src: (ld:i32 GRRegs:i32:$addr)<<P:Predicate_unindexedload>><<P:Predicate_sextload>><<P:Predicate_sextloadi16>> - Complexity = 4
+                // Dst: (LD16S_3r:i32 GRRegs:i32:$addr, (LDC_ru6:i32 0:i32))
+/*633*/       /*Scope*/ 52, /*->686*/
+/*634*/         OPC_CheckPredicate, 7, // Predicate_extload
+/*636*/         OPC_Scope, 23, /*->661*/ // 2 children in Scope
+/*638*/           OPC_CheckPredicate, 12, // Predicate_extloadi8
+/*640*/           OPC_EmitMergeInputChains1_0,
+/*641*/           OPC_EmitInteger, MVT::i32, 0, 
+/*644*/           OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2,  // Results = #3 
+/*652*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LD8U_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                  // Src: (ld:i32 GRRegs:i32:$addr)<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi8>> - Complexity = 4
+                  // Dst: (LD8U_3r:i32 GRRegs:i32:$addr, (LDC_ru6:i32 0:i32))
+/*661*/         /*Scope*/ 23, /*->685*/
+/*662*/           OPC_CheckPredicate, 8, // Predicate_extloadi16
+/*664*/           OPC_EmitMergeInputChains1_0,
+/*665*/           OPC_EmitInteger, MVT::i32, 0, 
+/*668*/           OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2,  // Results = #3 
+/*676*/           OPC_MorphNodeTo, TARGET_VAL(XCore::LD16S_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3, 
+                  // Src: (ld:i32 GRRegs:i32:$addr)<<P:Predicate_unindexedload>><<P:Predicate_extload>><<P:Predicate_extloadi16>> - Complexity = 4
+                  // Dst: (LD16S_3r:i32 GRRegs:i32:$addr, (LDC_ru6:i32 0:i32))
+/*685*/         0, /*End of Scope*/
+/*686*/       0, /*End of Scope*/
+/*687*/     0, /*End of Scope*/
+          /*SwitchOpcode*/ 52|128,2/*308*/,  TARGET_VAL(ISD::STORE),// ->1000
+/*692*/     OPC_RecordMemRef,
+/*693*/     OPC_RecordNode,   // #0 = 'st' chained node
+/*694*/     OPC_RecordChild1, // #1 = $val
+/*695*/     OPC_CheckChild1Type, MVT::i32,
+/*697*/     OPC_Scope, 124, /*->823*/ // 4 children in Scope
+/*699*/       OPC_MoveChild, 2,
+/*701*/       OPC_CheckOpcode, TARGET_VAL(ISD::ADD),
+/*704*/       OPC_Scope, 57, /*->763*/ // 2 children in Scope
+/*706*/         OPC_RecordChild0, // #2 = $addr
+/*707*/         OPC_MoveChild, 1,
+/*709*/         OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*712*/         OPC_RecordChild0, // #3 = $offset
+/*713*/         OPC_MoveChild, 1,
+/*715*/         OPC_Scope, 23, /*->740*/ // 2 children in Scope
+/*717*/           OPC_CheckInteger, 1, 
+/*719*/           OPC_MoveParent,
+/*720*/           OPC_MoveParent,
+/*721*/           OPC_CheckType, MVT::i32,
+/*723*/           OPC_MoveParent,
+/*724*/           OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*726*/           OPC_CheckPredicate, 14, // Predicate_truncstore
+/*728*/           OPC_CheckPredicate, 15, // Predicate_truncstorei16
+/*730*/           OPC_EmitMergeInputChains1_0,
+/*731*/           OPC_MorphNodeTo, TARGET_VAL(XCore::ST16_l3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 2, 3, 
+                  // Src: (st GRRegs:i32:$val, (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 1:i32)))<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei16>> - Complexity = 15
+                  // Dst: (ST16_l3r GRRegs:i32:$val, GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*740*/         /*Scope*/ 21, /*->762*/
+/*741*/           OPC_CheckInteger, 2, 
+/*743*/           OPC_MoveParent,
+/*744*/           OPC_MoveParent,
+/*745*/           OPC_CheckType, MVT::i32,
+/*747*/           OPC_MoveParent,
+/*748*/           OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*750*/           OPC_CheckPredicate, 16, // Predicate_store
+/*752*/           OPC_EmitMergeInputChains1_0,
+/*753*/           OPC_MorphNodeTo, TARGET_VAL(XCore::STW_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 2, 3, 
+                  // Src: (st GRRegs:i32:$val, (add:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 2:i32)))<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 15
+                  // Dst: (STW_3r GRRegs:i32:$val, GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*762*/         0, /*End of Scope*/
+/*763*/       /*Scope*/ 58, /*->822*/
+/*764*/         OPC_MoveChild, 0,
+/*766*/         OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*769*/         OPC_RecordChild0, // #2 = $offset
+/*770*/         OPC_MoveChild, 1,
+/*772*/         OPC_Scope, 24, /*->798*/ // 2 children in Scope
+/*774*/           OPC_CheckInteger, 1, 
+/*776*/           OPC_MoveParent,
+/*777*/           OPC_MoveParent,
+/*778*/           OPC_RecordChild1, // #3 = $addr
+/*779*/           OPC_CheckType, MVT::i32,
+/*781*/           OPC_MoveParent,
+/*782*/           OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*784*/           OPC_CheckPredicate, 14, // Predicate_truncstore
+/*786*/           OPC_CheckPredicate, 15, // Predicate_truncstorei16
+/*788*/           OPC_EmitMergeInputChains1_0,
+/*789*/           OPC_MorphNodeTo, TARGET_VAL(XCore::ST16_l3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 3, 2, 
+                  // Src: (st GRRegs:i32:$val, (add:i32 (shl:i32 GRRegs:i32:$offset, 1:i32), GRRegs:i32:$addr))<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei16>> - Complexity = 15
+                  // Dst: (ST16_l3r GRRegs:i32:$val, GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*798*/         /*Scope*/ 22, /*->821*/
+/*799*/           OPC_CheckInteger, 2, 
+/*801*/           OPC_MoveParent,
+/*802*/           OPC_MoveParent,
+/*803*/           OPC_RecordChild1, // #3 = $addr
+/*804*/           OPC_CheckType, MVT::i32,
+/*806*/           OPC_MoveParent,
+/*807*/           OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*809*/           OPC_CheckPredicate, 16, // Predicate_store
+/*811*/           OPC_EmitMergeInputChains1_0,
+/*812*/           OPC_MorphNodeTo, TARGET_VAL(XCore::STW_3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 3, 2, 
+                  // Src: (st GRRegs:i32:$val, (add:i32 (shl:i32 GRRegs:i32:$offset, 2:i32), GRRegs:i32:$addr))<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 15
+                  // Dst: (STW_3r GRRegs:i32:$val, GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*821*/         0, /*End of Scope*/
+/*822*/       0, /*End of Scope*/
+/*823*/     /*Scope*/ 37, /*->861*/
+/*824*/       OPC_RecordChild2, // #2 = $addr
+/*825*/       OPC_CheckChild2Type, MVT::i32,
+/*827*/       OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*829*/       OPC_CheckPredicate, 16, // Predicate_store
+/*831*/       OPC_Scope, 13, /*->846*/ // 2 children in Scope
+/*833*/         OPC_CheckComplexPat, /*CP*/0, /*#*/2, // SelectADDRspii:$addr #3 #4
+/*836*/         OPC_EmitMergeInputChains1_0,
+/*837*/         OPC_MorphNodeTo, TARGET_VAL(XCore::STWFI), 0|OPFL_Chain|OPFL_MemRefs,
+                    0/*#VTs*/, 3/*#Ops*/, 1, 3, 4, 
+                // Src: (st GRRegs:i32:$src, ADDRspii:i32:$addr)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 13
+                // Dst: (STWFI GRRegs:i32:$src, ADDRspii:i32:$addr)
+/*846*/       /*Scope*/ 13, /*->860*/
+/*847*/         OPC_CheckComplexPat, /*CP*/1, /*#*/2, // SelectADDRdpii:$addr #3 #4
+/*850*/         OPC_EmitMergeInputChains1_0,
+/*851*/         OPC_MorphNodeTo, TARGET_VAL(XCore::STWDP_lru6), 0|OPFL_Chain|OPFL_MemRefs,
+                    0/*#VTs*/, 3/*#Ops*/, 1, 3, 4, 
+                // Src: (st GRRegs:i32:$val, ADDRdpii:i32:$addr)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 13
+                // Dst: (STWDP_lru6 GRRegs:i32:$val, ADDRdpii:i32:$addr)
+/*860*/       0, /*End of Scope*/
+/*861*/     /*Scope*/ 60, /*->922*/
+/*862*/       OPC_MoveChild, 2,
+/*864*/       OPC_CheckOpcode, TARGET_VAL(ISD::ADD),
+/*867*/       OPC_RecordChild0, // #2 = $addr
+/*868*/       OPC_RecordChild1, // #3 = $offset
+/*869*/       OPC_Scope, 30, /*->901*/ // 2 children in Scope
+/*871*/         OPC_MoveChild, 1,
+/*873*/         OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*876*/         OPC_CheckPredicate, 1, // Predicate_immUs4
+/*878*/         OPC_MoveParent,
+/*879*/         OPC_CheckType, MVT::i32,
+/*881*/         OPC_MoveParent,
+/*882*/         OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*884*/         OPC_CheckPredicate, 16, // Predicate_store
+/*886*/         OPC_EmitMergeInputChains1_0,
+/*887*/         OPC_EmitConvertToTarget, 3,
+/*889*/         OPC_EmitNodeXForm, 0, 4, // div4_xform
+/*892*/         OPC_MorphNodeTo, TARGET_VAL(XCore::STW_2rus), 0|OPFL_Chain|OPFL_MemRefs,
+                    0/*#VTs*/, 3/*#Ops*/, 1, 2, 5, 
+                // Src: (st GRRegs:i32:$val, (add:i32 GRRegs:i32:$addr, (imm:i32)<<P:Predicate_immUs4>>:$offset))<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 11
+                // Dst: (STW_2rus GRRegs:i32:$val, GRRegs:i32:$addr, (div4_xform:i32 (imm:i32)<<P:Predicate_immUs4>>:$offset))
+/*901*/       /*Scope*/ 19, /*->921*/
+/*902*/         OPC_CheckType, MVT::i32,
+/*904*/         OPC_MoveParent,
+/*905*/         OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*907*/         OPC_CheckPredicate, 14, // Predicate_truncstore
+/*909*/         OPC_CheckPredicate, 17, // Predicate_truncstorei8
+/*911*/         OPC_EmitMergeInputChains1_0,
+/*912*/         OPC_MorphNodeTo, TARGET_VAL(XCore::ST8_l3r), 0|OPFL_Chain|OPFL_MemRefs,
+                    0/*#VTs*/, 3/*#Ops*/, 1, 2, 3, 
+                // Src: (st GRRegs:i32:$val, (add:i32 GRRegs:i32:$addr, GRRegs:i32:$offset))<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei8>> - Complexity = 7
+                // Dst: (ST8_l3r GRRegs:i32:$val, GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*921*/       0, /*End of Scope*/
+/*922*/     /*Scope*/ 76, /*->999*/
+/*923*/       OPC_RecordChild2, // #2 = $addr
+/*924*/       OPC_CheckChild2Type, MVT::i32,
+/*926*/       OPC_CheckPredicate, 13, // Predicate_unindexedstore
+/*928*/       OPC_Scope, 15, /*->945*/ // 2 children in Scope
+/*930*/         OPC_CheckPredicate, 16, // Predicate_store
+/*932*/         OPC_EmitMergeInputChains1_0,
+/*933*/         OPC_EmitInteger, MVT::i32, 0, 
+/*936*/         OPC_MorphNodeTo, TARGET_VAL(XCore::STW_2rus), 0|OPFL_Chain|OPFL_MemRefs,
+                    0/*#VTs*/, 3/*#Ops*/, 1, 2, 3, 
+                // Src: (st GRRegs:i32:$val, GRRegs:i32:$addr)<<P:Predicate_unindexedstore>><<P:Predicate_store>> - Complexity = 4
+                // Dst: (STW_2rus GRRegs:i32:$val, GRRegs:i32:$addr, 0:i32)
+/*945*/       /*Scope*/ 52, /*->998*/
+/*946*/         OPC_CheckPredicate, 14, // Predicate_truncstore
+/*948*/         OPC_Scope, 23, /*->973*/ // 2 children in Scope
+/*950*/           OPC_CheckPredicate, 17, // Predicate_truncstorei8
+/*952*/           OPC_EmitMergeInputChains1_0,
+/*953*/           OPC_EmitInteger, MVT::i32, 0, 
+/*956*/           OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 3,  // Results = #4 
+/*964*/           OPC_MorphNodeTo, TARGET_VAL(XCore::ST8_l3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 2, 4, 
+                  // Src: (st GRRegs:i32:$val, GRRegs:i32:$addr)<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei8>> - Complexity = 4
+                  // Dst: (ST8_l3r GRRegs:i32:$val, GRRegs:i32:$addr, (LDC_ru6:i32 0:i32))
+/*973*/         /*Scope*/ 23, /*->997*/
+/*974*/           OPC_CheckPredicate, 15, // Predicate_truncstorei16
+/*976*/           OPC_EmitMergeInputChains1_0,
+/*977*/           OPC_EmitInteger, MVT::i32, 0, 
+/*980*/           OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 3,  // Results = #4 
+/*988*/           OPC_MorphNodeTo, TARGET_VAL(XCore::ST16_l3r), 0|OPFL_Chain|OPFL_MemRefs,
+                      0/*#VTs*/, 3/*#Ops*/, 1, 2, 4, 
+                  // Src: (st GRRegs:i32:$val, GRRegs:i32:$addr)<<P:Predicate_unindexedstore>><<P:Predicate_truncstore>><<P:Predicate_truncstorei16>> - Complexity = 4
+                  // Dst: (ST16_l3r GRRegs:i32:$val, GRRegs:i32:$addr, (LDC_ru6:i32 0:i32))
+/*997*/         0, /*End of Scope*/
+/*998*/       0, /*End of Scope*/
+/*999*/     0, /*End of Scope*/
+          /*SwitchOpcode*/ 94,  TARGET_VAL(ISD::SRA),// ->1097
+/*1003*/    OPC_Scope, 35, /*->1040*/ // 2 children in Scope
+/*1005*/      OPC_MoveChild, 0,
+/*1007*/      OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*1010*/      OPC_RecordChild0, // #0 = $src
+/*1011*/      OPC_RecordChild1, // #1 = $imm
+/*1012*/      OPC_MoveChild, 1,
+/*1014*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1017*/      OPC_CheckPredicate, 18, // Predicate_immBpwSubBitp
+/*1019*/      OPC_MoveParent,
+/*1020*/      OPC_MoveParent,
+/*1021*/      OPC_MoveChild, 1,
+/*1023*/      OPC_CheckSame, 1,
+/*1025*/      OPC_MoveParent,
+/*1026*/      OPC_EmitConvertToTarget, 1,
+/*1028*/      OPC_EmitNodeXForm, 3, 2, // bpwsub_xform
+/*1031*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SEXT_rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+              // Src: (sra:i32 (shl:i32 GRRegs:i32:$src, (imm:i32)<<P:Predicate_immBpwSubBitp>>:$imm), (imm:i32)<<P:Predicate_immBpwSubBitp>>:$imm) - Complexity = 14
+              // Dst: (SEXT_rus:i32 GRRegs:i32:$src, (bpwsub_xform:i32 (imm:i32)<<P:Predicate_immBpwSubBitp>>:$imm))
+/*1040*/    /*Scope*/ 55, /*->1096*/
+/*1041*/      OPC_RecordChild0, // #0 = $src
+/*1042*/      OPC_Scope, 17, /*->1061*/ // 2 children in Scope
+/*1044*/        OPC_MoveChild, 1,
+/*1046*/        OPC_CheckInteger, 31, 
+/*1048*/        OPC_MoveParent,
+/*1049*/        OPC_EmitInteger, MVT::i32, 32, 
+/*1052*/        OPC_MorphNodeTo, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (sra:i32 GRRegs:i32:$src, 31:i32) - Complexity = 8
+                // Dst: (ASHR_l2rus:i32 GRRegs:i32:$src, 32:i32)
+/*1061*/      /*Scope*/ 33, /*->1095*/
+/*1062*/        OPC_RecordChild1, // #1 = $c
+/*1063*/        OPC_Scope, 19, /*->1084*/ // 2 children in Scope
+/*1065*/          OPC_MoveChild, 1,
+/*1067*/          OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1070*/          OPC_CheckPredicate, 19, // Predicate_immBitp
+/*1072*/          OPC_MoveParent,
+/*1073*/          OPC_EmitConvertToTarget, 1,
+/*1075*/          OPC_MorphNodeTo, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                  // Src: (sra:i32 GRRegs:i32:$b, (imm:i32)<<P:Predicate_immBitp>>:$c) - Complexity = 7
+                  // Dst: (ASHR_l2rus:i32 GRRegs:i32:$b, (imm:i32):$c)
+/*1084*/        /*Scope*/ 9, /*->1094*/
+/*1085*/          OPC_MorphNodeTo, TARGET_VAL(XCore::ASHR_l3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                  // Src: (sra:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+                  // Dst: (ASHR_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*1094*/        0, /*End of Scope*/
+/*1095*/      0, /*End of Scope*/
+/*1096*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 106|128,4/*618*/,  TARGET_VAL(ISD::INTRINSIC_VOID),// ->1719
+/*1101*/    OPC_RecordNode,   // #0 = 'intrinsic_void' chained node
+/*1102*/    OPC_MoveChild, 1,
+/*1104*/    OPC_Scope, 58, /*->1164*/ // 27 children in Scope
+/*1106*/      OPC_CheckInteger, 64|128,7/*960*/, 
+/*1109*/      OPC_MoveParent,
+/*1110*/      OPC_RecordChild2, // #1 = $r
+/*1111*/      OPC_CheckChild2Type, MVT::i32,
+/*1113*/      OPC_RecordChild3, // #2 = $val
+/*1114*/      OPC_Scope, 37, /*->1153*/ // 2 children in Scope
+/*1116*/        OPC_MoveChild, 3,
+/*1118*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1121*/        OPC_Scope, 14, /*->1137*/ // 2 children in Scope
+/*1123*/          OPC_CheckPredicate, 20, // Predicate_immU6
+/*1125*/          OPC_MoveParent,
+/*1126*/          OPC_EmitMergeInputChains1_0,
+/*1127*/          OPC_EmitConvertToTarget, 2,
+/*1129*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SETC_ru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 1, 3, 
+                  // Src: (intrinsic_void 960:iPTR, GRRegs:i32:$r, (imm:i32)<<P:Predicate_immU6>>:$val) - Complexity = 12
+                  // Dst: (SETC_ru6 GRRegs:i32:$r, (imm:i32):$val)
+/*1137*/        /*Scope*/ 14, /*->1152*/
+/*1138*/          OPC_CheckPredicate, 21, // Predicate_immU16
+/*1140*/          OPC_MoveParent,
+/*1141*/          OPC_EmitMergeInputChains1_0,
+/*1142*/          OPC_EmitConvertToTarget, 2,
+/*1144*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SETC_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 1, 3, 
+                  // Src: (intrinsic_void 960:iPTR, GRRegs:i32:$r, (imm:i32)<<P:Predicate_immU16>>:$val) - Complexity = 12
+                  // Dst: (SETC_lru6 GRRegs:i32:$r, (imm:i32):$val)
+/*1152*/        0, /*End of Scope*/
+/*1153*/      /*Scope*/ 9, /*->1163*/
+/*1154*/        OPC_EmitMergeInputChains1_0,
+/*1155*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SETC_l2r), 0|OPFL_Chain,
+                    0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                // Src: (intrinsic_void 960:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+                // Dst: (SETC_l2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1163*/      0, /*End of Scope*/
+/*1164*/    /*Scope*/ 40, /*->1205*/
+/*1165*/      OPC_CheckInteger, 71|128,7/*967*/, 
+/*1168*/      OPC_MoveParent,
+/*1169*/      OPC_RecordChild2, // #1 = $b
+/*1170*/      OPC_MoveChild, 2,
+/*1172*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1175*/      OPC_Scope, 13, /*->1190*/ // 2 children in Scope
+/*1177*/        OPC_CheckPredicate, 20, // Predicate_immU6
+/*1179*/        OPC_MoveParent,
+/*1180*/        OPC_EmitMergeInputChains1_0,
+/*1181*/        OPC_EmitConvertToTarget, 1,
+/*1183*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SETSR_u6), 0|OPFL_Chain,
+                    0/*#VTs*/, 1/*#Ops*/, 2, 
+                // Src: (intrinsic_void 967:iPTR, (imm:i32)<<P:Predicate_immU6>>:$b) - Complexity = 12
+                // Dst: (SETSR_u6 (imm:i32):$b)
+/*1190*/      /*Scope*/ 13, /*->1204*/
+/*1191*/        OPC_CheckPredicate, 21, // Predicate_immU16
+/*1193*/        OPC_MoveParent,
+/*1194*/        OPC_EmitMergeInputChains1_0,
+/*1195*/        OPC_EmitConvertToTarget, 1,
+/*1197*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SETSR_lu6), 0|OPFL_Chain,
+                    0/*#VTs*/, 1/*#Ops*/, 2, 
+                // Src: (intrinsic_void 967:iPTR, (imm:i32)<<P:Predicate_immU16>>:$b) - Complexity = 12
+                // Dst: (SETSR_lu6 (imm:i32):$b)
+/*1204*/      0, /*End of Scope*/
+/*1205*/    /*Scope*/ 40, /*->1246*/
+/*1206*/      OPC_CheckInteger, 37|128,7/*933*/, 
+/*1209*/      OPC_MoveParent,
+/*1210*/      OPC_RecordChild2, // #1 = $b
+/*1211*/      OPC_MoveChild, 2,
+/*1213*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1216*/      OPC_Scope, 13, /*->1231*/ // 2 children in Scope
+/*1218*/        OPC_CheckPredicate, 20, // Predicate_immU6
+/*1220*/        OPC_MoveParent,
+/*1221*/        OPC_EmitMergeInputChains1_0,
+/*1222*/        OPC_EmitConvertToTarget, 1,
+/*1224*/        OPC_MorphNodeTo, TARGET_VAL(XCore::CLRSR_u6), 0|OPFL_Chain,
+                    0/*#VTs*/, 1/*#Ops*/, 2, 
+                // Src: (intrinsic_void 933:iPTR, (imm:i32)<<P:Predicate_immU6>>:$b) - Complexity = 12
+                // Dst: (CLRSR_u6 (imm:i32):$b)
+/*1231*/      /*Scope*/ 13, /*->1245*/
+/*1232*/        OPC_CheckPredicate, 21, // Predicate_immU16
+/*1234*/        OPC_MoveParent,
+/*1235*/        OPC_EmitMergeInputChains1_0,
+/*1236*/        OPC_EmitConvertToTarget, 1,
+/*1238*/        OPC_MorphNodeTo, TARGET_VAL(XCore::CLRSR_lu6), 0|OPFL_Chain,
+                    0/*#VTs*/, 1/*#Ops*/, 2, 
+                // Src: (intrinsic_void 933:iPTR, (imm:i32)<<P:Predicate_immU16>>:$b) - Complexity = 12
+                // Dst: (CLRSR_lu6 (imm:i32):$b)
+/*1245*/      0, /*End of Scope*/
+/*1246*/    /*Scope*/ 40, /*->1287*/
+/*1247*/      OPC_CheckInteger, 60|128,7/*956*/, 
+/*1250*/      OPC_MoveParent,
+/*1251*/      OPC_RecordChild2, // #1 = $r
+/*1252*/      OPC_CheckChild2Type, MVT::i32,
+/*1254*/      OPC_RecordChild3, // #2 = $val
+/*1255*/      OPC_Scope, 19, /*->1276*/ // 2 children in Scope
+/*1257*/        OPC_MoveChild, 3,
+/*1259*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1262*/        OPC_CheckPredicate, 0, // Predicate_immUs
+/*1264*/        OPC_MoveParent,
+/*1265*/        OPC_EmitMergeInputChains1_0,
+/*1266*/        OPC_EmitConvertToTarget, 2,
+/*1268*/        OPC_MorphNodeTo, TARGET_VAL(XCore::OUTCT_rus), 0|OPFL_Chain,
+                    0/*#VTs*/, 2/*#Ops*/, 1, 3, 
+                // Src: (intrinsic_void 956:iPTR, GRRegs:i32:$r, (imm:i32)<<P:Predicate_immUs>>:$val) - Complexity = 12
+                // Dst: (OUTCT_rus GRRegs:i32:$r, (imm:i32):$val)
+/*1276*/      /*Scope*/ 9, /*->1286*/
+/*1277*/        OPC_EmitMergeInputChains1_0,
+/*1278*/        OPC_MorphNodeTo, TARGET_VAL(XCore::OUTCT_2r), 0|OPFL_Chain,
+                    0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                // Src: (intrinsic_void 956:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+                // Dst: (OUTCT_2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1286*/      0, /*End of Scope*/
+/*1287*/    /*Scope*/ 40, /*->1328*/
+/*1288*/      OPC_CheckInteger, 35|128,7/*931*/, 
+/*1291*/      OPC_MoveParent,
+/*1292*/      OPC_RecordChild2, // #1 = $r
+/*1293*/      OPC_CheckChild2Type, MVT::i32,
+/*1295*/      OPC_RecordChild3, // #2 = $val
+/*1296*/      OPC_Scope, 19, /*->1317*/ // 2 children in Scope
+/*1298*/        OPC_MoveChild, 3,
+/*1300*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1303*/        OPC_CheckPredicate, 0, // Predicate_immUs
+/*1305*/        OPC_MoveParent,
+/*1306*/        OPC_EmitMergeInputChains1_0,
+/*1307*/        OPC_EmitConvertToTarget, 2,
+/*1309*/        OPC_MorphNodeTo, TARGET_VAL(XCore::CHKCT_rus), 0|OPFL_Chain,
+                    0/*#VTs*/, 2/*#Ops*/, 1, 3, 
+                // Src: (intrinsic_void 931:iPTR, GRRegs:i32:$r, (imm:i32)<<P:Predicate_immUs>>:$val) - Complexity = 12
+                // Dst: (CHKCT_rus GRRegs:i32:$r, (imm:i32):$val)
+/*1317*/      /*Scope*/ 9, /*->1327*/
+/*1318*/        OPC_EmitMergeInputChains1_0,
+/*1319*/        OPC_MorphNodeTo, TARGET_VAL(XCore::CHKCT_2r), 0|OPFL_Chain,
+                    0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                // Src: (intrinsic_void 931:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+                // Dst: (CHKCT_2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1327*/      0, /*End of Scope*/
+/*1328*/    /*Scope*/ 17, /*->1346*/
+/*1329*/      OPC_CheckInteger, 69|128,7/*965*/, 
+/*1332*/      OPC_MoveParent,
+/*1333*/      OPC_RecordChild2, // #1 = $r
+/*1334*/      OPC_CheckChild2Type, MVT::i32,
+/*1336*/      OPC_RecordChild3, // #2 = $val
+/*1337*/      OPC_EmitMergeInputChains1_0,
+/*1338*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETPT_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 965:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+              // Dst: (SETPT_2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1346*/    /*Scope*/ 17, /*->1364*/
+/*1347*/      OPC_CheckInteger, 62|128,7/*958*/, 
+/*1350*/      OPC_MoveParent,
+/*1351*/      OPC_RecordChild2, // #1 = $r
+/*1352*/      OPC_CheckChild2Type, MVT::i32,
+/*1354*/      OPC_RecordChild3, // #2 = $val
+/*1355*/      OPC_EmitMergeInputChains1_0,
+/*1356*/      OPC_MorphNodeTo, TARGET_VAL(XCore::OUTT_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 958:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+              // Dst: (OUTT_2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1364*/    /*Scope*/ 17, /*->1382*/
+/*1365*/      OPC_CheckInteger, 59|128,7/*955*/, 
+/*1368*/      OPC_MoveParent,
+/*1369*/      OPC_RecordChild2, // #1 = $r
+/*1370*/      OPC_CheckChild2Type, MVT::i32,
+/*1372*/      OPC_RecordChild3, // #2 = $val
+/*1373*/      OPC_EmitMergeInputChains1_0,
+/*1374*/      OPC_MorphNodeTo, TARGET_VAL(XCore::OUT_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 955:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+              // Dst: (OUT_2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1382*/    /*Scope*/ 17, /*->1400*/
+/*1383*/      OPC_CheckInteger, 66|128,7/*962*/, 
+/*1386*/      OPC_MoveParent,
+/*1387*/      OPC_RecordChild2, // #1 = $r
+/*1388*/      OPC_CheckChild2Type, MVT::i32,
+/*1390*/      OPC_RecordChild3, // #2 = $val
+/*1391*/      OPC_EmitMergeInputChains1_0,
+/*1392*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETD_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 962:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+              // Dst: (SETD_2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1400*/    /*Scope*/ 19, /*->1420*/
+/*1401*/      OPC_CheckInteger, 54|128,7/*950*/, 
+/*1404*/      OPC_MoveParent,
+/*1405*/      OPC_RecordChild2, // #1 = $t
+/*1406*/      OPC_CheckChild2Type, MVT::i32,
+/*1408*/      OPC_RecordChild3, // #2 = $src
+/*1409*/      OPC_CheckChild3Type, MVT::i32,
+/*1411*/      OPC_EmitMergeInputChains1_0,
+/*1412*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INITSP_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 950:iPTR, GRRegs:i32:$t, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (INITSP_2r GRRegs:i32:$t, GRRegs:i32:$src)
+/*1420*/    /*Scope*/ 19, /*->1440*/
+/*1421*/      OPC_CheckInteger, 53|128,7/*949*/, 
+/*1424*/      OPC_MoveParent,
+/*1425*/      OPC_RecordChild2, // #1 = $t
+/*1426*/      OPC_CheckChild2Type, MVT::i32,
+/*1428*/      OPC_RecordChild3, // #2 = $src
+/*1429*/      OPC_CheckChild3Type, MVT::i32,
+/*1431*/      OPC_EmitMergeInputChains1_0,
+/*1432*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INITPC_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 949:iPTR, GRRegs:i32:$t, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (INITPC_2r GRRegs:i32:$t, GRRegs:i32:$src)
+/*1440*/    /*Scope*/ 19, /*->1460*/
+/*1441*/      OPC_CheckInteger, 50|128,7/*946*/, 
+/*1444*/      OPC_MoveParent,
+/*1445*/      OPC_RecordChild2, // #1 = $t
+/*1446*/      OPC_CheckChild2Type, MVT::i32,
+/*1448*/      OPC_RecordChild3, // #2 = $src
+/*1449*/      OPC_CheckChild3Type, MVT::i32,
+/*1451*/      OPC_EmitMergeInputChains1_0,
+/*1452*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INITCP_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 946:iPTR, GRRegs:i32:$t, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (INITCP_2r GRRegs:i32:$t, GRRegs:i32:$src)
+/*1460*/    /*Scope*/ 19, /*->1480*/
+/*1461*/      OPC_CheckInteger, 51|128,7/*947*/, 
+/*1464*/      OPC_MoveParent,
+/*1465*/      OPC_RecordChild2, // #1 = $t
+/*1466*/      OPC_CheckChild2Type, MVT::i32,
+/*1468*/      OPC_RecordChild3, // #2 = $src
+/*1469*/      OPC_CheckChild3Type, MVT::i32,
+/*1471*/      OPC_EmitMergeInputChains1_0,
+/*1472*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INITDP_2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 947:iPTR, GRRegs:i32:$t, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (INITDP_2r GRRegs:i32:$t, GRRegs:i32:$src)
+/*1480*/    /*Scope*/ 17, /*->1498*/
+/*1481*/      OPC_CheckInteger, 72|128,7/*968*/, 
+/*1484*/      OPC_MoveParent,
+/*1485*/      OPC_RecordChild2, // #1 = $r
+/*1486*/      OPC_CheckChild2Type, MVT::i32,
+/*1488*/      OPC_RecordChild3, // #2 = $val
+/*1489*/      OPC_EmitMergeInputChains1_0,
+/*1490*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETTW_l2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 968:iPTR, GRRegs:i32:$r, GRRegs:i32:$val) - Complexity = 8
+              // Dst: (SETTW_l2r GRRegs:i32:$r, GRRegs:i32:$val)
+/*1498*/    /*Scope*/ 15, /*->1514*/
+/*1499*/      OPC_CheckInteger, 67|128,7/*963*/, 
+/*1502*/      OPC_MoveParent,
+/*1503*/      OPC_RecordChild2, // #1 = $src1
+/*1504*/      OPC_RecordChild3, // #2 = $src2
+/*1505*/      OPC_EmitMergeInputChains1_0,
+/*1506*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETPS_l2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 963:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2) - Complexity = 8
+              // Dst: (SETPS_l2r GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*1514*/    /*Scope*/ 19, /*->1534*/
+/*1515*/      OPC_CheckInteger, 52|128,7/*948*/, 
+/*1518*/      OPC_MoveParent,
+/*1519*/      OPC_RecordChild2, // #1 = $t
+/*1520*/      OPC_CheckChild2Type, MVT::i32,
+/*1522*/      OPC_RecordChild3, // #2 = $src
+/*1523*/      OPC_CheckChild3Type, MVT::i32,
+/*1525*/      OPC_EmitMergeInputChains1_0,
+/*1526*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INITLR_l2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 948:iPTR, GRRegs:i32:$t, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (INITLR_l2r GRRegs:i32:$t, GRRegs:i32:$src)
+/*1534*/    /*Scope*/ 19, /*->1554*/
+/*1535*/      OPC_CheckInteger, 65|128,7/*961*/, 
+/*1538*/      OPC_MoveParent,
+/*1539*/      OPC_RecordChild2, // #1 = $src1
+/*1540*/      OPC_CheckChild2Type, MVT::i32,
+/*1542*/      OPC_RecordChild3, // #2 = $src2
+/*1543*/      OPC_CheckChild3Type, MVT::i32,
+/*1545*/      OPC_EmitMergeInputChains1_0,
+/*1546*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETCLK_l2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 961:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2) - Complexity = 8
+              // Dst: (SETCLK_l2r GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*1554*/    /*Scope*/ 19, /*->1574*/
+/*1555*/      OPC_CheckInteger, 70|128,7/*966*/, 
+/*1558*/      OPC_MoveParent,
+/*1559*/      OPC_RecordChild2, // #1 = $src1
+/*1560*/      OPC_CheckChild2Type, MVT::i32,
+/*1562*/      OPC_RecordChild3, // #2 = $src2
+/*1563*/      OPC_CheckChild3Type, MVT::i32,
+/*1565*/      OPC_EmitMergeInputChains1_0,
+/*1566*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETRDY_l2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 966:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2) - Complexity = 8
+              // Dst: (SETRDY_l2r GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*1574*/    /*Scope*/ 17, /*->1592*/
+/*1575*/      OPC_CheckInteger, 68|128,7/*964*/, 
+/*1578*/      OPC_MoveParent,
+/*1579*/      OPC_RecordChild2, // #1 = $src1
+/*1580*/      OPC_CheckChild2Type, MVT::i32,
+/*1582*/      OPC_RecordChild3, // #2 = $src2
+/*1583*/      OPC_EmitMergeInputChains1_0,
+/*1584*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETPSC_l2r), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_void 964:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2) - Complexity = 8
+              // Dst: (SETPSC_l2r GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*1592*/    /*Scope*/ 15, /*->1608*/
+/*1593*/      OPC_CheckInteger, 58|128,7/*954*/, 
+/*1596*/      OPC_MoveParent,
+/*1597*/      OPC_RecordChild2, // #1 = $i
+/*1598*/      OPC_CheckChild2Type, MVT::i32,
+/*1600*/      OPC_EmitMergeInputChains1_0,
+/*1601*/      OPC_MorphNodeTo, TARGET_VAL(XCore::MSYNC_1r), 0|OPFL_Chain,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_void 954:iPTR, GRRegs:i32:$i) - Complexity = 8
+              // Dst: (MSYNC_1r GRRegs:i32:$i)
+/*1608*/    /*Scope*/ 15, /*->1624*/
+/*1609*/      OPC_CheckInteger, 57|128,7/*953*/, 
+/*1612*/      OPC_MoveParent,
+/*1613*/      OPC_RecordChild2, // #1 = $i
+/*1614*/      OPC_CheckChild2Type, MVT::i32,
+/*1616*/      OPC_EmitMergeInputChains1_0,
+/*1617*/      OPC_MorphNodeTo, TARGET_VAL(XCore::MJOIN_1r), 0|OPFL_Chain,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_void 953:iPTR, GRRegs:i32:$i) - Complexity = 8
+              // Dst: (MJOIN_1r GRRegs:i32:$i)
+/*1624*/    /*Scope*/ 15, /*->1640*/
+/*1625*/      OPC_CheckInteger, 76|128,7/*972*/, 
+/*1628*/      OPC_MoveParent,
+/*1629*/      OPC_RecordChild2, // #1 = $r
+/*1630*/      OPC_CheckChild2Type, MVT::i32,
+/*1632*/      OPC_EmitMergeInputChains1_0,
+/*1633*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SYNCR_1r), 0|OPFL_Chain,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_void 972:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (SYNCR_1r GRRegs:i32:$r)
+/*1640*/    /*Scope*/ 15, /*->1656*/
+/*1641*/      OPC_CheckInteger, 42|128,7/*938*/, 
+/*1644*/      OPC_MoveParent,
+/*1645*/      OPC_RecordChild2, // #1 = $r
+/*1646*/      OPC_CheckChild2Type, MVT::i32,
+/*1648*/      OPC_EmitMergeInputChains1_0,
+/*1649*/      OPC_MorphNodeTo, TARGET_VAL(XCore::FREER_1r), 0|OPFL_Chain,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_void 938:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (FREER_1r GRRegs:i32:$r)
+/*1656*/    /*Scope*/ 21, /*->1678*/
+/*1657*/      OPC_CheckInteger, 73|128,7/*969*/, 
+/*1660*/      OPC_MoveParent,
+/*1661*/      OPC_RecordChild2, // #1 = $r
+/*1662*/      OPC_CheckChild2Type, MVT::i32,
+/*1664*/      OPC_RecordChild3, // #2 = physreg input R11
+/*1665*/      OPC_CheckChild3Type, MVT::i32,
+/*1667*/      OPC_EmitMergeInputChains1_0,
+/*1668*/      OPC_EmitCopyToReg, 2, XCore::R11,
+/*1671*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SETV_1r), 0|OPFL_Chain|OPFL_GlueInput,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_void 969:iPTR, GRRegs:i32:$r, R11:i32) - Complexity = 8
+              // Dst: (SETV_1r GRRegs:i32:$r)
+/*1678*/    /*Scope*/ 15, /*->1694*/
+/*1679*/      OPC_CheckInteger, 40|128,7/*936*/, 
+/*1682*/      OPC_MoveParent,
+/*1683*/      OPC_RecordChild2, // #1 = $r
+/*1684*/      OPC_CheckChild2Type, MVT::i32,
+/*1686*/      OPC_EmitMergeInputChains1_0,
+/*1687*/      OPC_MorphNodeTo, TARGET_VAL(XCore::EEU_1r), 0|OPFL_Chain,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_void 936:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (EEU_1r GRRegs:i32:$r)
+/*1694*/    /*Scope*/ 11, /*->1706*/
+/*1695*/      OPC_CheckInteger, 36|128,7/*932*/, 
+/*1698*/      OPC_MoveParent,
+/*1699*/      OPC_EmitMergeInputChains1_0,
+/*1700*/      OPC_MorphNodeTo, TARGET_VAL(XCore::CLRE_0R), 0|OPFL_Chain,
+                  0/*#VTs*/, 0/*#Ops*/, 
+              // Src: (intrinsic_void 932:iPTR) - Complexity = 8
+              // Dst: (CLRE_0R)
+/*1706*/    /*Scope*/ 11, /*->1718*/
+/*1707*/      OPC_CheckInteger, 75|128,7/*971*/, 
+/*1710*/      OPC_MoveParent,
+/*1711*/      OPC_EmitMergeInputChains1_0,
+/*1712*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SSYNC_0r), 0|OPFL_Chain,
+                  0/*#VTs*/, 0/*#Ops*/, 
+              // Src: (intrinsic_void 971:iPTR) - Complexity = 8
+              // Dst: (SSYNC_0r)
+/*1718*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 126,  TARGET_VAL(ISD::INTRINSIC_WO_CHAIN),// ->1848
+/*1722*/    OPC_MoveChild, 0,
+/*1724*/    OPC_Scope, 38, /*->1764*/ // 5 children in Scope
+/*1726*/      OPC_CheckInteger, 74|128,7/*970*/, 
+/*1729*/      OPC_MoveParent,
+/*1730*/      OPC_RecordChild1, // #0 = $src1
+/*1731*/      OPC_RecordChild2, // #1 = $src2
+/*1732*/      OPC_Scope, 19, /*->1753*/ // 2 children in Scope
+/*1734*/        OPC_MoveChild, 2,
+/*1736*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1739*/        OPC_CheckPredicate, 19, // Predicate_immBitp
+/*1741*/        OPC_MoveParent,
+/*1742*/        OPC_EmitConvertToTarget, 1,
+/*1744*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SEXT_rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                // Src: (intrinsic_wo_chain:i32 970:iPTR, GRRegs:i32:$src1, (imm:i32)<<P:Predicate_immBitp>>:$src2) - Complexity = 12
+                // Dst: (SEXT_rus:i32 GRRegs:i32:$src1, (imm:i32):$src2)
+/*1753*/      /*Scope*/ 9, /*->1763*/
+/*1754*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SEXT_2r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (intrinsic_wo_chain:i32 970:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2) - Complexity = 8
+                // Dst: (SEXT_2r:i32 GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*1763*/      0, /*End of Scope*/
+/*1764*/    /*Scope*/ 38, /*->1803*/
+/*1765*/      OPC_CheckInteger, 80|128,7/*976*/, 
+/*1768*/      OPC_MoveParent,
+/*1769*/      OPC_RecordChild1, // #0 = $src1
+/*1770*/      OPC_RecordChild2, // #1 = $src2
+/*1771*/      OPC_Scope, 19, /*->1792*/ // 2 children in Scope
+/*1773*/        OPC_MoveChild, 2,
+/*1775*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1778*/        OPC_CheckPredicate, 19, // Predicate_immBitp
+/*1780*/        OPC_MoveParent,
+/*1781*/        OPC_EmitConvertToTarget, 1,
+/*1783*/        OPC_MorphNodeTo, TARGET_VAL(XCore::ZEXT_rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                // Src: (intrinsic_wo_chain:i32 976:iPTR, GRRegs:i32:$src1, (imm:i32)<<P:Predicate_immBitp>>:$src2) - Complexity = 12
+                // Dst: (ZEXT_rus:i32 GRRegs:i32:$src1, (imm:i32):$src2)
+/*1792*/      /*Scope*/ 9, /*->1802*/
+/*1793*/        OPC_MorphNodeTo, TARGET_VAL(XCore::ZEXT_2r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (intrinsic_wo_chain:i32 976:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2) - Complexity = 8
+                // Dst: (ZEXT_2r:i32 GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*1802*/      0, /*End of Scope*/
+/*1803*/    /*Scope*/ 17, /*->1821*/
+/*1804*/      OPC_CheckInteger, 38|128,7/*934*/, 
+/*1807*/      OPC_MoveParent,
+/*1808*/      OPC_RecordChild1, // #0 = $src1
+/*1809*/      OPC_RecordChild2, // #1 = $src2
+/*1810*/      OPC_RecordChild3, // #2 = $src3
+/*1811*/      OPC_MorphNodeTo, TARGET_VAL(XCore::CRC_l3r), 0,
+                  1/*#VTs*/, MVT::i32, 3/*#Ops*/, 0, 1, 2, 
+              // Src: (intrinsic_wo_chain:i32 934:iPTR, GRRegs:i32:$src1, GRRegs:i32:$src2, GRRegs:i32:$src3) - Complexity = 8
+              // Dst: (CRC_l3r:i32 GRRegs:i32:$src1, GRRegs:i32:$src2, GRRegs:i32:$src3)
+/*1821*/    /*Scope*/ 13, /*->1835*/
+/*1822*/      OPC_CheckInteger, 33|128,7/*929*/, 
+/*1825*/      OPC_MoveParent,
+/*1826*/      OPC_RecordChild1, // #0 = $src
+/*1827*/      OPC_MorphNodeTo, TARGET_VAL(XCore::BITREV_l2r), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (intrinsic_wo_chain:i32 929:iPTR, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (BITREV_l2r:i32 GRRegs:i32:$src)
+/*1835*/    /*Scope*/ 11, /*->1847*/
+/*1836*/      OPC_CheckInteger, 43|128,7/*939*/, 
+/*1839*/      OPC_MoveParent,
+/*1840*/      OPC_MorphNodeTo, TARGET_VAL(XCore::GETID_0R), 0,
+                  1/*#VTs*/, MVT::i32, 0/*#Ops*/, 
+              // Src: (intrinsic_wo_chain:i32 939:iPTR) - Complexity = 8
+              // Dst: (GETID_0R:i32)
+/*1847*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 112|128,1/*240*/,  TARGET_VAL(ISD::INTRINSIC_W_CHAIN),// ->2092
+/*1852*/    OPC_RecordNode,   // #0 = 'intrinsic_w_chain' chained node
+/*1853*/    OPC_MoveChild, 1,
+/*1855*/    OPC_Scope, 26, /*->1883*/ // 13 children in Scope
+/*1857*/      OPC_CheckInteger, 45|128,7/*941*/, 
+/*1860*/      OPC_MoveParent,
+/*1861*/      OPC_RecordChild2, // #1 = $type
+/*1862*/      OPC_MoveChild, 2,
+/*1864*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*1867*/      OPC_CheckPredicate, 0, // Predicate_immUs
+/*1869*/      OPC_MoveParent,
+/*1870*/      OPC_CheckType, MVT::i32,
+/*1872*/      OPC_EmitMergeInputChains1_0,
+/*1873*/      OPC_EmitConvertToTarget, 1,
+/*1875*/      OPC_MorphNodeTo, TARGET_VAL(XCore::GETR_rus), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2, 
+              // Src: (intrinsic_w_chain:i32 941:iPTR, (imm:i32)<<P:Predicate_immUs>>:$type) - Complexity = 12
+              // Dst: (GETR_rus:i32 (imm:i32):$type)
+/*1883*/    /*Scope*/ 16, /*->1900*/
+/*1884*/      OPC_CheckInteger, 47|128,7/*943*/, 
+/*1887*/      OPC_MoveParent,
+/*1888*/      OPC_RecordChild2, // #1 = $r
+/*1889*/      OPC_CheckChild2Type, MVT::i32,
+/*1891*/      OPC_EmitMergeInputChains1_0,
+/*1892*/      OPC_MorphNodeTo, TARGET_VAL(XCore::GETTS_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 943:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (GETTS_2r:i32 GRRegs:i32:$r)
+/*1900*/    /*Scope*/ 18, /*->1919*/
+/*1901*/      OPC_CheckInteger, 61|128,7/*957*/, 
+/*1904*/      OPC_MoveParent,
+/*1905*/      OPC_RecordChild2, // #1 = $r
+/*1906*/      OPC_CheckChild2Type, MVT::i32,
+/*1908*/      OPC_RecordChild3, // #2 = $src
+/*1909*/      OPC_EmitMergeInputChains1_0,
+/*1910*/      OPC_MorphNodeTo, TARGET_VAL(XCore::OUTSHR_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_w_chain:i32 957:iPTR, GRRegs:i32:$r, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (OUTSHR_2r:i32 GRRegs:i32:$r, GRRegs:i32:$src)
+/*1919*/    /*Scope*/ 16, /*->1936*/
+/*1920*/      OPC_CheckInteger, 49|128,7/*945*/, 
+/*1923*/      OPC_MoveParent,
+/*1924*/      OPC_RecordChild2, // #1 = $r
+/*1925*/      OPC_CheckChild2Type, MVT::i32,
+/*1927*/      OPC_EmitMergeInputChains1_0,
+/*1928*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INCT_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 945:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (INCT_2r:i32 GRRegs:i32:$r)
+/*1936*/    /*Scope*/ 16, /*->1953*/
+/*1937*/      OPC_CheckInteger, 56|128,7/*952*/, 
+/*1940*/      OPC_MoveParent,
+/*1941*/      OPC_RecordChild2, // #1 = $r
+/*1942*/      OPC_CheckChild2Type, MVT::i32,
+/*1944*/      OPC_EmitMergeInputChains1_0,
+/*1945*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INT_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 952:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (INT_2r:i32 GRRegs:i32:$r)
+/*1953*/    /*Scope*/ 16, /*->1970*/
+/*1954*/      OPC_CheckInteger, 48|128,7/*944*/, 
+/*1957*/      OPC_MoveParent,
+/*1958*/      OPC_RecordChild2, // #1 = $r
+/*1959*/      OPC_CheckChild2Type, MVT::i32,
+/*1961*/      OPC_EmitMergeInputChains1_0,
+/*1962*/      OPC_MorphNodeTo, TARGET_VAL(XCore::IN_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 944:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (IN_2r:i32 GRRegs:i32:$r)
+/*1970*/    /*Scope*/ 18, /*->1989*/
+/*1971*/      OPC_CheckInteger, 55|128,7/*951*/, 
+/*1974*/      OPC_MoveParent,
+/*1975*/      OPC_RecordChild2, // #1 = $r
+/*1976*/      OPC_CheckChild2Type, MVT::i32,
+/*1978*/      OPC_RecordChild3, // #2 = $src
+/*1979*/      OPC_EmitMergeInputChains1_0,
+/*1980*/      OPC_MorphNodeTo, TARGET_VAL(XCore::INSHR_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+              // Src: (intrinsic_w_chain:i32 951:iPTR, GRRegs:i32:$r, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (INSHR_2r:i32 GRRegs:i32:$r, GRRegs:i32:$src)
+/*1989*/    /*Scope*/ 16, /*->2006*/
+/*1990*/      OPC_CheckInteger, 77|128,7/*973*/, 
+/*1993*/      OPC_MoveParent,
+/*1994*/      OPC_RecordChild2, // #1 = $src
+/*1995*/      OPC_CheckChild2Type, MVT::i32,
+/*1997*/      OPC_EmitMergeInputChains1_0,
+/*1998*/      OPC_MorphNodeTo, TARGET_VAL(XCore::TESTCT_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 973:iPTR, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (TESTCT_2r:i32 GRRegs:i32:$src)
+/*2006*/    /*Scope*/ 16, /*->2023*/
+/*2007*/      OPC_CheckInteger, 78|128,7/*974*/, 
+/*2010*/      OPC_MoveParent,
+/*2011*/      OPC_RecordChild2, // #1 = $src
+/*2012*/      OPC_CheckChild2Type, MVT::i32,
+/*2014*/      OPC_EmitMergeInputChains1_0,
+/*2015*/      OPC_MorphNodeTo, TARGET_VAL(XCore::TESTWCT_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 974:iPTR, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (TESTWCT_2r:i32 GRRegs:i32:$src)
+/*2023*/    /*Scope*/ 18, /*->2042*/
+/*2024*/      OPC_CheckInteger, 46|128,7/*942*/, 
+/*2027*/      OPC_MoveParent,
+/*2028*/      OPC_RecordChild2, // #1 = $r
+/*2029*/      OPC_CheckChild2Type, MVT::i32,
+/*2031*/      OPC_CheckType, MVT::i32,
+/*2033*/      OPC_EmitMergeInputChains1_0,
+/*2034*/      OPC_MorphNodeTo, TARGET_VAL(XCore::GETST_2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 942:iPTR, GRRegs:i32:$r) - Complexity = 8
+              // Dst: (GETST_2r:i32 GRRegs:i32:$r)
+/*2042*/    /*Scope*/ 14, /*->2057*/
+/*2043*/      OPC_CheckInteger, 44|128,7/*940*/, 
+/*2046*/      OPC_MoveParent,
+/*2047*/      OPC_RecordChild2, // #1 = $src
+/*2048*/      OPC_EmitMergeInputChains1_0,
+/*2049*/      OPC_MorphNodeTo, TARGET_VAL(XCore::GETPS_l2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 940:iPTR, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (GETPS_l2r:i32 GRRegs:i32:$src)
+/*2057*/    /*Scope*/ 16, /*->2074*/
+/*2058*/      OPC_CheckInteger, 63|128,7/*959*/, 
+/*2061*/      OPC_MoveParent,
+/*2062*/      OPC_RecordChild2, // #1 = $src
+/*2063*/      OPC_CheckChild2Type, MVT::i32,
+/*2065*/      OPC_EmitMergeInputChains1_0,
+/*2066*/      OPC_MorphNodeTo, TARGET_VAL(XCore::PEEK_l2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 959:iPTR, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (PEEK_l2r:i32 GRRegs:i32:$src)
+/*2074*/    /*Scope*/ 16, /*->2091*/
+/*2075*/      OPC_CheckInteger, 41|128,7/*937*/, 
+/*2078*/      OPC_MoveParent,
+/*2079*/      OPC_RecordChild2, // #1 = $src
+/*2080*/      OPC_CheckChild2Type, MVT::i32,
+/*2082*/      OPC_EmitMergeInputChains1_0,
+/*2083*/      OPC_MorphNodeTo, TARGET_VAL(XCore::ENDIN_l2r), 0|OPFL_Chain,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (intrinsic_w_chain:i32 937:iPTR, GRRegs:i32:$src) - Complexity = 8
+              // Dst: (ENDIN_l2r:i32 GRRegs:i32:$src)
+/*2091*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 113,  TARGET_VAL(ISD::SUB),// ->2208
+/*2095*/    OPC_Scope, 39, /*->2136*/ // 3 children in Scope
+/*2097*/      OPC_RecordChild0, // #0 = $addr
+/*2098*/      OPC_MoveChild, 1,
+/*2100*/      OPC_CheckOpcode, TARGET_VAL(ISD::SHL),
+/*2103*/      OPC_RecordChild0, // #1 = $offset
+/*2104*/      OPC_MoveChild, 1,
+/*2106*/      OPC_Scope, 13, /*->2121*/ // 2 children in Scope
+/*2108*/        OPC_CheckInteger, 2, 
+/*2110*/        OPC_MoveParent,
+/*2111*/        OPC_MoveParent,
+/*2112*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWB_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (sub:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 2:i32)) - Complexity = 11
+                // Dst: (LDAWB_l3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*2121*/      /*Scope*/ 13, /*->2135*/
+/*2122*/        OPC_CheckInteger, 1, 
+/*2124*/        OPC_MoveParent,
+/*2125*/        OPC_MoveParent,
+/*2126*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LDA16B_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (sub:i32 GRRegs:i32:$addr, (shl:i32 GRRegs:i32:$offset, 1:i32)) - Complexity = 11
+                // Dst: (LDA16B_l3r:i32 GRRegs:i32:$addr, GRRegs:i32:$offset)
+/*2135*/      0, /*End of Scope*/
+/*2136*/    /*Scope*/ 14, /*->2151*/
+/*2137*/      OPC_MoveChild, 0,
+/*2139*/      OPC_CheckInteger, 0, 
+/*2141*/      OPC_MoveParent,
+/*2142*/      OPC_RecordChild1, // #0 = $b
+/*2143*/      OPC_MorphNodeTo, TARGET_VAL(XCore::NEG), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (sub:i32 0:i32, GRRegs:i32:$b) - Complexity = 8
+              // Dst: (NEG:i32 GRRegs:i32:$b)
+/*2151*/    /*Scope*/ 55, /*->2207*/
+/*2152*/      OPC_RecordChild0, // #0 = $b
+/*2153*/      OPC_RecordChild1, // #1 = $c
+/*2154*/      OPC_Scope, 40, /*->2196*/ // 2 children in Scope
+/*2156*/        OPC_MoveChild, 1,
+/*2158*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2161*/        OPC_Scope, 14, /*->2177*/ // 2 children in Scope
+/*2163*/          OPC_CheckPredicate, 0, // Predicate_immUs
+/*2165*/          OPC_MoveParent,
+/*2166*/          OPC_EmitConvertToTarget, 1,
+/*2168*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SUB_2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                  // Src: (sub:i32 GRRegs:i32:$b, (imm:i32)<<P:Predicate_immUs>>:$c) - Complexity = 7
+                  // Dst: (SUB_2rus:i32 GRRegs:i32:$b, (imm:i32):$c)
+/*2177*/        /*Scope*/ 17, /*->2195*/
+/*2178*/          OPC_CheckPredicate, 1, // Predicate_immUs4
+/*2180*/          OPC_MoveParent,
+/*2181*/          OPC_EmitConvertToTarget, 1,
+/*2183*/          OPC_EmitNodeXForm, 0, 2, // div4_xform
+/*2186*/          OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWB_l2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                  // Src: (sub:i32 GRRegs:i32:$addr, (imm:i32)<<P:Predicate_immUs4>>:$offset) - Complexity = 7
+                  // Dst: (LDAWB_l2rus:i32 GRRegs:i32:$addr, (div4_xform:i32 (imm:i32)<<P:Predicate_immUs4>>:$offset))
+/*2195*/        0, /*End of Scope*/
+/*2196*/      /*Scope*/ 9, /*->2206*/
+/*2197*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SUB_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (sub:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+                // Dst: (SUB_3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*2206*/      0, /*End of Scope*/
+/*2207*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 104,  TARGET_VAL(ISD::AND),// ->2315
+/*2211*/    OPC_Scope, 31, /*->2244*/ // 3 children in Scope
+/*2213*/      OPC_RecordChild0, // #0 = $src1
+/*2214*/      OPC_MoveChild, 1,
+/*2216*/      OPC_CheckOpcode, TARGET_VAL(ISD::XOR),
+/*2219*/      OPC_RecordChild0, // #1 = $src2
+/*2220*/      OPC_MoveChild, 1,
+/*2222*/      OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*2233*/      OPC_MoveParent,
+/*2234*/      OPC_MoveParent,
+/*2235*/      OPC_MorphNodeTo, TARGET_VAL(XCore::ANDNOT_2r), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (and:i32 GRRegs:i32:$src1, (xor:i32 GRRegs:i32:$src2, -1:i32)) - Complexity = 11
+              // Dst: (ANDNOT_2r:i32 GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*2244*/    /*Scope*/ 31, /*->2276*/
+/*2245*/      OPC_MoveChild, 0,
+/*2247*/      OPC_CheckOpcode, TARGET_VAL(ISD::XOR),
+/*2250*/      OPC_RecordChild0, // #0 = $src2
+/*2251*/      OPC_MoveChild, 1,
+/*2253*/      OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*2264*/      OPC_MoveParent,
+/*2265*/      OPC_MoveParent,
+/*2266*/      OPC_RecordChild1, // #1 = $src1
+/*2267*/      OPC_MorphNodeTo, TARGET_VAL(XCore::ANDNOT_2r), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+              // Src: (and:i32 (xor:i32 GRRegs:i32:$src2, -1:i32), GRRegs:i32:$src1) - Complexity = 11
+              // Dst: (ANDNOT_2r:i32 GRRegs:i32:$src1, GRRegs:i32:$src2)
+/*2276*/    /*Scope*/ 37, /*->2314*/
+/*2277*/      OPC_RecordChild0, // #0 = $val
+/*2278*/      OPC_RecordChild1, // #1 = $mask
+/*2279*/      OPC_Scope, 22, /*->2303*/ // 2 children in Scope
+/*2281*/        OPC_MoveChild, 1,
+/*2283*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2286*/        OPC_CheckPredicate, 22, // Predicate_immMskBitp
+/*2288*/        OPC_MoveParent,
+/*2289*/        OPC_EmitConvertToTarget, 1,
+/*2291*/        OPC_EmitNodeXForm, 4, 2, // msksize_xform
+/*2294*/        OPC_MorphNodeTo, TARGET_VAL(XCore::ZEXT_rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3, 
+                // Src: (and:i32 GRRegs:i32:$val, (imm:i32)<<P:Predicate_immMskBitp>>:$mask) - Complexity = 7
+                // Dst: (ZEXT_rus:i32 GRRegs:i32:$val, (msksize_xform:i32 (imm:i32)<<P:Predicate_immMskBitp>>:$mask))
+/*2303*/      /*Scope*/ 9, /*->2313*/
+/*2304*/        OPC_MorphNodeTo, TARGET_VAL(XCore::AND_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (and:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+                // Dst: (AND_3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*2313*/      0, /*End of Scope*/
+/*2314*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 40,  TARGET_VAL(ISD::BRIND),// ->2358
+/*2318*/    OPC_RecordNode,   // #0 = 'brind' chained node
+/*2319*/    OPC_Scope, 24, /*->2345*/ // 2 children in Scope
+/*2321*/      OPC_MoveChild, 1,
+/*2323*/      OPC_CheckOpcode, TARGET_VAL(ISD::INTRINSIC_W_CHAIN),
+/*2326*/      OPC_RecordNode, // #1 = 'intrinsic_w_chain' chained node
+/*2327*/      OPC_CheckFoldableChainNode,
+/*2328*/      OPC_MoveChild, 1,
+/*2330*/      OPC_CheckInteger, 79|128,7/*975*/, 
+/*2333*/      OPC_MoveParent,
+/*2334*/      OPC_MoveParent,
+/*2335*/      OPC_EmitMergeInputChains, 2, 0, 1, 
+/*2339*/      OPC_MorphNodeTo, TARGET_VAL(XCore::WAITEU_0R), 0|OPFL_Chain,
+                  0/*#VTs*/, 0/*#Ops*/, 
+              // Src: (brind (intrinsic_w_chain:iPTR 975:iPTR)) - Complexity = 11
+              // Dst: (WAITEU_0R)
+/*2345*/    /*Scope*/ 11, /*->2357*/
+/*2346*/      OPC_RecordChild1, // #1 = $addr
+/*2347*/      OPC_CheckChild1Type, MVT::i32,
+/*2349*/      OPC_EmitMergeInputChains1_0,
+/*2350*/      OPC_MorphNodeTo, TARGET_VAL(XCore::BAU_1r), 0|OPFL_Chain,
+                  0/*#VTs*/, 1/*#Ops*/, 1, 
+              // Src: (brind GRRegs:i32:$addr) - Complexity = 3
+              // Dst: (BAU_1r GRRegs:i32:$addr)
+/*2357*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 113|128,2/*369*/,  TARGET_VAL(ISD::BRCOND),// ->2731
+/*2362*/    OPC_RecordNode,   // #0 = 'brcond' chained node
+/*2363*/    OPC_Scope, 90|128,2/*346*/, /*->2712*/ // 2 children in Scope
+/*2366*/      OPC_MoveChild, 1,
+/*2368*/      OPC_CheckOpcode, TARGET_VAL(ISD::SETCC),
+/*2371*/      OPC_RecordChild0, // #1 = $lhs
+/*2372*/      OPC_Scope, 6|128,1/*134*/, /*->2509*/ // 3 children in Scope
+/*2375*/        OPC_MoveChild, 1,
+/*2377*/        OPC_Scope, 82, /*->2461*/ // 2 children in Scope
+/*2379*/          OPC_CheckInteger, 0, 
+/*2381*/          OPC_MoveParent,
+/*2382*/          OPC_MoveChild, 2,
+/*2384*/          OPC_Scope, 20, /*->2406*/ // 3 children in Scope
+/*2386*/            OPC_CheckCondCode, ISD::SETNE,
+/*2388*/            OPC_MoveParent,
+/*2389*/            OPC_MoveParent,
+/*2390*/            OPC_RecordChild2, // #2 = $dst
+/*2391*/            OPC_MoveChild, 2,
+/*2393*/            OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2396*/            OPC_MoveParent,
+/*2397*/            OPC_EmitMergeInputChains1_0,
+/*2398*/            OPC_MorphNodeTo, TARGET_VAL(XCore::BRFT_lru6), 0|OPFL_Chain,
+                        0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                    // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, 0:i32, SETNE:Other), (bb:Other):$dst) - Complexity = 11
+                    // Dst: (BRFT_lru6 GRRegs:i32:$lhs, (bb:Other):$dst)
+/*2406*/          /*Scope*/ 20, /*->2427*/
+/*2407*/            OPC_CheckCondCode, ISD::SETEQ,
+/*2409*/            OPC_MoveParent,
+/*2410*/            OPC_MoveParent,
+/*2411*/            OPC_RecordChild2, // #2 = $dst
+/*2412*/            OPC_MoveChild, 2,
+/*2414*/            OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2417*/            OPC_MoveParent,
+/*2418*/            OPC_EmitMergeInputChains1_0,
+/*2419*/            OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                        0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+                    // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, 0:i32, SETEQ:Other), (bb:Other):$dst) - Complexity = 11
+                    // Dst: (BRFF_lru6 GRRegs:i32:$lhs, (bb:Other):$dst)
+/*2427*/          /*Scope*/ 32, /*->2460*/
+/*2428*/            OPC_CheckCondCode, ISD::SETLT,
+/*2430*/            OPC_MoveParent,
+/*2431*/            OPC_MoveParent,
+/*2432*/            OPC_RecordChild2, // #2 = $dst
+/*2433*/            OPC_MoveChild, 2,
+/*2435*/            OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2438*/            OPC_MoveParent,
+/*2439*/            OPC_EmitMergeInputChains1_0,
+/*2440*/            OPC_EmitInteger, MVT::i32, 32, 
+/*2443*/            OPC_EmitNode, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*2452*/            OPC_MorphNodeTo, TARGET_VAL(XCore::BRFT_lru6), 0|OPFL_Chain,
+                        0/*#VTs*/, 2/*#Ops*/, 4, 2, 
+                    // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, 0:i32, SETLT:Other), (bb:Other):$dst) - Complexity = 11
+                    // Dst: (BRFT_lru6 (ASHR_l2rus:i32 GRRegs:i32:$lhs, 32:i32), (bb:Other):$dst)
+/*2460*/          0, /*End of Scope*/
+/*2461*/        /*Scope*/ 46, /*->2508*/
+/*2462*/          OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*2473*/          OPC_MoveParent,
+/*2474*/          OPC_MoveChild, 2,
+/*2476*/          OPC_CheckCondCode, ISD::SETGT,
+/*2478*/          OPC_MoveParent,
+/*2479*/          OPC_MoveParent,
+/*2480*/          OPC_RecordChild2, // #2 = $dst
+/*2481*/          OPC_MoveChild, 2,
+/*2483*/          OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2486*/          OPC_MoveParent,
+/*2487*/          OPC_EmitMergeInputChains1_0,
+/*2488*/          OPC_EmitInteger, MVT::i32, 32, 
+/*2491*/          OPC_EmitNode, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 3,  // Results = #4 
+/*2500*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 4, 2, 
+                  // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, -1:i32, SETGT:Other), (bb:Other):$dst) - Complexity = 11
+                  // Dst: (BRFF_lru6 (ASHR_l2rus:i32 GRRegs:i32:$lhs, 32:i32), (bb:Other):$dst)
+/*2508*/        0, /*End of Scope*/
+/*2509*/      /*Scope*/ 42, /*->2552*/
+/*2510*/        OPC_RecordChild1, // #2 = $rhs
+/*2511*/        OPC_MoveChild, 1,
+/*2513*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2516*/        OPC_CheckPredicate, 0, // Predicate_immUs
+/*2518*/        OPC_MoveParent,
+/*2519*/        OPC_MoveChild, 2,
+/*2521*/        OPC_CheckCondCode, ISD::SETNE,
+/*2523*/        OPC_MoveParent,
+/*2524*/        OPC_MoveParent,
+/*2525*/        OPC_RecordChild2, // #3 = $dst
+/*2526*/        OPC_MoveChild, 2,
+/*2528*/        OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2531*/        OPC_MoveParent,
+/*2532*/        OPC_EmitMergeInputChains1_0,
+/*2533*/        OPC_EmitConvertToTarget, 2,
+/*2535*/        OPC_EmitNode, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 4,  // Results = #5 
+/*2544*/        OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                    0/*#VTs*/, 2/*#Ops*/, 5, 3, 
+                // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs, SETNE:Other), (bb:Other):$dst) - Complexity = 10
+                // Dst: (BRFF_lru6 (EQ_2rus:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs), (bb:Other):$dst)
+/*2552*/      /*Scope*/ 29|128,1/*157*/, /*->2711*/
+/*2554*/        OPC_CheckChild0Type, MVT::i32,
+/*2556*/        OPC_RecordChild1, // #2 = $rhs
+/*2557*/        OPC_MoveChild, 2,
+/*2559*/        OPC_Scope, 29, /*->2590*/ // 5 children in Scope
+/*2561*/          OPC_CheckCondCode, ISD::SETLE,
+/*2563*/          OPC_MoveParent,
+/*2564*/          OPC_MoveParent,
+/*2565*/          OPC_RecordChild2, // #3 = $dst
+/*2566*/          OPC_MoveChild, 2,
+/*2568*/          OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2571*/          OPC_MoveParent,
+/*2572*/          OPC_EmitMergeInputChains1_0,
+/*2573*/          OPC_EmitNode, TARGET_VAL(XCore::LSS_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 1,  // Results = #4 
+/*2582*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 4, 3, 
+                  // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETLE:Other), (bb:Other):$dst) - Complexity = 6
+                  // Dst: (BRFF_lru6 (LSS_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs), (bb:Other):$dst)
+/*2590*/        /*Scope*/ 29, /*->2620*/
+/*2591*/          OPC_CheckCondCode, ISD::SETULE,
+/*2593*/          OPC_MoveParent,
+/*2594*/          OPC_MoveParent,
+/*2595*/          OPC_RecordChild2, // #3 = $dst
+/*2596*/          OPC_MoveChild, 2,
+/*2598*/          OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2601*/          OPC_MoveParent,
+/*2602*/          OPC_EmitMergeInputChains1_0,
+/*2603*/          OPC_EmitNode, TARGET_VAL(XCore::LSU_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 1,  // Results = #4 
+/*2612*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 4, 3, 
+                  // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETULE:Other), (bb:Other):$dst) - Complexity = 6
+                  // Dst: (BRFF_lru6 (LSU_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs), (bb:Other):$dst)
+/*2620*/        /*Scope*/ 29, /*->2650*/
+/*2621*/          OPC_CheckCondCode, ISD::SETGE,
+/*2623*/          OPC_MoveParent,
+/*2624*/          OPC_MoveParent,
+/*2625*/          OPC_RecordChild2, // #3 = $dst
+/*2626*/          OPC_MoveChild, 2,
+/*2628*/          OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2631*/          OPC_MoveParent,
+/*2632*/          OPC_EmitMergeInputChains1_0,
+/*2633*/          OPC_EmitNode, TARGET_VAL(XCore::LSS_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2,  // Results = #4 
+/*2642*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 4, 3, 
+                  // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETGE:Other), (bb:Other):$dst) - Complexity = 6
+                  // Dst: (BRFF_lru6 (LSS_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), (bb:Other):$dst)
+/*2650*/        /*Scope*/ 29, /*->2680*/
+/*2651*/          OPC_CheckCondCode, ISD::SETUGE,
+/*2653*/          OPC_MoveParent,
+/*2654*/          OPC_MoveParent,
+/*2655*/          OPC_RecordChild2, // #3 = $dst
+/*2656*/          OPC_MoveChild, 2,
+/*2658*/          OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2661*/          OPC_MoveParent,
+/*2662*/          OPC_EmitMergeInputChains1_0,
+/*2663*/          OPC_EmitNode, TARGET_VAL(XCore::LSU_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2,  // Results = #4 
+/*2672*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 4, 3, 
+                  // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETUGE:Other), (bb:Other):$dst) - Complexity = 6
+                  // Dst: (BRFF_lru6 (LSU_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), (bb:Other):$dst)
+/*2680*/        /*Scope*/ 29, /*->2710*/
+/*2681*/          OPC_CheckCondCode, ISD::SETNE,
+/*2683*/          OPC_MoveParent,
+/*2684*/          OPC_MoveParent,
+/*2685*/          OPC_RecordChild2, // #3 = $dst
+/*2686*/          OPC_MoveChild, 2,
+/*2688*/          OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2691*/          OPC_MoveParent,
+/*2692*/          OPC_EmitMergeInputChains1_0,
+/*2693*/          OPC_EmitNode, TARGET_VAL(XCore::EQ_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2,  // Results = #4 
+/*2702*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BRFF_lru6), 0|OPFL_Chain,
+                      0/*#VTs*/, 2/*#Ops*/, 4, 3, 
+                  // Src: (brcond (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETNE:Other), (bb:Other):$dst) - Complexity = 6
+                  // Dst: (BRFF_lru6 (EQ_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), (bb:Other):$dst)
+/*2710*/        0, /*End of Scope*/
+/*2711*/      0, /*End of Scope*/
+/*2712*/    /*Scope*/ 17, /*->2730*/
+/*2713*/      OPC_RecordChild1, // #1 = $cond
+/*2714*/      OPC_RecordChild2, // #2 = $addr
+/*2715*/      OPC_MoveChild, 2,
+/*2717*/      OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*2720*/      OPC_MoveParent,
+/*2721*/      OPC_EmitMergeInputChains1_0,
+/*2722*/      OPC_MorphNodeTo, TARGET_VAL(XCore::BRFT_lru6), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+              // Src: (brcond GRRegs:i32:$cond, (bb:Other):$addr) - Complexity = 3
+              // Dst: (BRFT_lru6 GRRegs:i32:$cond, (bb:Other):$addr)
+/*2730*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 89|128,2/*345*/,  TARGET_VAL(ISD::SELECT),// ->3080
+/*2735*/    OPC_Scope, 69|128,2/*325*/, /*->3063*/ // 2 children in Scope
+/*2738*/      OPC_MoveChild, 0,
+/*2740*/      OPC_CheckOpcode, TARGET_VAL(ISD::SETCC),
+/*2743*/      OPC_RecordChild0, // #0 = $lhs
+/*2744*/      OPC_Scope, 126, /*->2872*/ // 3 children in Scope
+/*2746*/        OPC_MoveChild, 1,
+/*2748*/        OPC_Scope, 76, /*->2826*/ // 2 children in Scope
+/*2750*/          OPC_CheckInteger, 0, 
+/*2752*/          OPC_MoveParent,
+/*2753*/          OPC_MoveChild, 2,
+/*2755*/          OPC_Scope, 18, /*->2775*/ // 3 children in Scope
+/*2757*/            OPC_CheckCondCode, ISD::SETNE,
+/*2759*/            OPC_MoveParent,
+/*2760*/            OPC_MoveParent,
+/*2761*/            OPC_RecordChild1, // #1 = $T
+/*2762*/            OPC_RecordChild2, // #2 = $F
+/*2763*/            OPC_CheckType, MVT::i32,
+/*2765*/            OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                        1/*#VTs*/, MVT::i32, 3/*#Ops*/, 0, 1, 2, 
+                    // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, 0:i32, SETNE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 11
+                    // Dst: (SELECT_CC:i32 GRRegs:i32:$lhs, GRRegs:i32:$T, GRRegs:i32:$F)
+/*2775*/          /*Scope*/ 18, /*->2794*/
+/*2776*/            OPC_CheckCondCode, ISD::SETEQ,
+/*2778*/            OPC_MoveParent,
+/*2779*/            OPC_MoveParent,
+/*2780*/            OPC_RecordChild1, // #1 = $T
+/*2781*/            OPC_RecordChild2, // #2 = $F
+/*2782*/            OPC_CheckType, MVT::i32,
+/*2784*/            OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                        1/*#VTs*/, MVT::i32, 3/*#Ops*/, 0, 2, 1, 
+                    // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, 0:i32, SETEQ:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 11
+                    // Dst: (SELECT_CC:i32 GRRegs:i32:$lhs, GRRegs:i32:$F, GRRegs:i32:$T)
+/*2794*/          /*Scope*/ 30, /*->2825*/
+/*2795*/            OPC_CheckCondCode, ISD::SETLT,
+/*2797*/            OPC_MoveParent,
+/*2798*/            OPC_MoveParent,
+/*2799*/            OPC_RecordChild1, // #1 = $T
+/*2800*/            OPC_RecordChild2, // #2 = $F
+/*2801*/            OPC_CheckType, MVT::i32,
+/*2803*/            OPC_EmitInteger, MVT::i32, 32, 
+/*2806*/            OPC_EmitNode, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                        1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3,  // Results = #4 
+/*2815*/            OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                        1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 1, 2, 
+                    // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, 0:i32, SETLT:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 11
+                    // Dst: (SELECT_CC:i32 (ASHR_l2rus:i32 GRRegs:i32:$lhs, 32:i32), GRRegs:i32:$T, GRRegs:i32:$F)
+/*2825*/          0, /*End of Scope*/
+/*2826*/        /*Scope*/ 44, /*->2871*/
+/*2827*/          OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*2838*/          OPC_MoveParent,
+/*2839*/          OPC_MoveChild, 2,
+/*2841*/          OPC_CheckCondCode, ISD::SETGT,
+/*2843*/          OPC_MoveParent,
+/*2844*/          OPC_MoveParent,
+/*2845*/          OPC_RecordChild1, // #1 = $T
+/*2846*/          OPC_RecordChild2, // #2 = $F
+/*2847*/          OPC_CheckType, MVT::i32,
+/*2849*/          OPC_EmitInteger, MVT::i32, 32, 
+/*2852*/          OPC_EmitNode, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 3,  // Results = #4 
+/*2861*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 2, 1, 
+                  // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, -1:i32, SETGT:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 11
+                  // Dst: (SELECT_CC:i32 (ASHR_l2rus:i32 GRRegs:i32:$lhs, 32:i32), GRRegs:i32:$F, GRRegs:i32:$T)
+/*2871*/        0, /*End of Scope*/
+/*2872*/      /*Scope*/ 40, /*->2913*/
+/*2873*/        OPC_RecordChild1, // #1 = $rhs
+/*2874*/        OPC_MoveChild, 1,
+/*2876*/        OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*2879*/        OPC_CheckPredicate, 0, // Predicate_immUs
+/*2881*/        OPC_MoveParent,
+/*2882*/        OPC_MoveChild, 2,
+/*2884*/        OPC_CheckCondCode, ISD::SETNE,
+/*2886*/        OPC_MoveParent,
+/*2887*/        OPC_MoveParent,
+/*2888*/        OPC_RecordChild1, // #2 = $T
+/*2889*/        OPC_RecordChild2, // #3 = $F
+/*2890*/        OPC_CheckType, MVT::i32,
+/*2892*/        OPC_EmitConvertToTarget, 1,
+/*2894*/        OPC_EmitNode, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 4,  // Results = #5 
+/*2903*/        OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                    1/*#VTs*/, MVT::i32, 3/*#Ops*/, 5, 3, 2, 
+                // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs, SETNE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 10
+                // Dst: (SELECT_CC:i32 (EQ_2rus:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs), GRRegs:i32:$F, GRRegs:i32:$T)
+/*2913*/      /*Scope*/ 19|128,1/*147*/, /*->3062*/
+/*2915*/        OPC_CheckChild0Type, MVT::i32,
+/*2917*/        OPC_RecordChild1, // #1 = $rhs
+/*2918*/        OPC_MoveChild, 2,
+/*2920*/        OPC_Scope, 27, /*->2949*/ // 5 children in Scope
+/*2922*/          OPC_CheckCondCode, ISD::SETLE,
+/*2924*/          OPC_MoveParent,
+/*2925*/          OPC_MoveParent,
+/*2926*/          OPC_RecordChild1, // #2 = $T
+/*2927*/          OPC_RecordChild2, // #3 = $F
+/*2928*/          OPC_CheckType, MVT::i32,
+/*2930*/          OPC_EmitNode, TARGET_VAL(XCore::LSS_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0,  // Results = #4 
+/*2939*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 3, 2, 
+                  // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETLE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 6
+                  // Dst: (SELECT_CC:i32 (LSS_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs), GRRegs:i32:$F, GRRegs:i32:$T)
+/*2949*/        /*Scope*/ 27, /*->2977*/
+/*2950*/          OPC_CheckCondCode, ISD::SETULE,
+/*2952*/          OPC_MoveParent,
+/*2953*/          OPC_MoveParent,
+/*2954*/          OPC_RecordChild1, // #2 = $T
+/*2955*/          OPC_RecordChild2, // #3 = $F
+/*2956*/          OPC_CheckType, MVT::i32,
+/*2958*/          OPC_EmitNode, TARGET_VAL(XCore::LSU_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0,  // Results = #4 
+/*2967*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 3, 2, 
+                  // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETULE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 6
+                  // Dst: (SELECT_CC:i32 (LSU_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs), GRRegs:i32:$F, GRRegs:i32:$T)
+/*2977*/        /*Scope*/ 27, /*->3005*/
+/*2978*/          OPC_CheckCondCode, ISD::SETGE,
+/*2980*/          OPC_MoveParent,
+/*2981*/          OPC_MoveParent,
+/*2982*/          OPC_RecordChild1, // #2 = $T
+/*2983*/          OPC_RecordChild2, // #3 = $F
+/*2984*/          OPC_CheckType, MVT::i32,
+/*2986*/          OPC_EmitNode, TARGET_VAL(XCore::LSS_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #4 
+/*2995*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 3, 2, 
+                  // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETGE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 6
+                  // Dst: (SELECT_CC:i32 (LSS_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), GRRegs:i32:$F, GRRegs:i32:$T)
+/*3005*/        /*Scope*/ 27, /*->3033*/
+/*3006*/          OPC_CheckCondCode, ISD::SETUGE,
+/*3008*/          OPC_MoveParent,
+/*3009*/          OPC_MoveParent,
+/*3010*/          OPC_RecordChild1, // #2 = $T
+/*3011*/          OPC_RecordChild2, // #3 = $F
+/*3012*/          OPC_CheckType, MVT::i32,
+/*3014*/          OPC_EmitNode, TARGET_VAL(XCore::LSU_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #4 
+/*3023*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 3, 2, 
+                  // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETUGE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 6
+                  // Dst: (SELECT_CC:i32 (LSU_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), GRRegs:i32:$F, GRRegs:i32:$T)
+/*3033*/        /*Scope*/ 27, /*->3061*/
+/*3034*/          OPC_CheckCondCode, ISD::SETNE,
+/*3036*/          OPC_MoveParent,
+/*3037*/          OPC_MoveParent,
+/*3038*/          OPC_RecordChild1, // #2 = $T
+/*3039*/          OPC_RecordChild2, // #3 = $F
+/*3040*/          OPC_CheckType, MVT::i32,
+/*3042*/          OPC_EmitNode, TARGET_VAL(XCore::EQ_3r), 0,
+                      1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #4 
+/*3051*/          OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                      1/*#VTs*/, MVT::i32, 3/*#Ops*/, 4, 3, 2, 
+                  // Src: (select:i32 (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETNE:Other), GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 6
+                  // Dst: (SELECT_CC:i32 (EQ_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), GRRegs:i32:$F, GRRegs:i32:$T)
+/*3061*/        0, /*End of Scope*/
+/*3062*/      0, /*End of Scope*/
+/*3063*/    /*Scope*/ 15, /*->3079*/
+/*3064*/      OPC_RecordChild0, // #0 = $cond
+/*3065*/      OPC_RecordChild1, // #1 = $T
+/*3066*/      OPC_RecordChild2, // #2 = $F
+/*3067*/      OPC_CheckType, MVT::i32,
+/*3069*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SELECT_CC), 0,
+                  1/*#VTs*/, MVT::i32, 3/*#Ops*/, 0, 1, 2, 
+              // Src: (select:i32 GRRegs:i32:$cond, GRRegs:i32:$T, GRRegs:i32:$F) - Complexity = 3
+              // Dst: (SELECT_CC:i32 GRRegs:i32:$cond, GRRegs:i32:$T, GRRegs:i32:$F)
+/*3079*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 26,  TARGET_VAL(ISD::CALLSEQ_END),// ->3109
+/*3083*/    OPC_RecordNode,   // #0 = 'callseq_end' chained node
+/*3084*/    OPC_CaptureGlueInput,
+/*3085*/    OPC_RecordChild1, // #1 = $amt1
+/*3086*/    OPC_MoveChild, 1,
+/*3088*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetConstant),
+/*3091*/    OPC_MoveParent,
+/*3092*/    OPC_RecordChild2, // #2 = $amt2
+/*3093*/    OPC_MoveChild, 2,
+/*3095*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetConstant),
+/*3098*/    OPC_MoveParent,
+/*3099*/    OPC_EmitMergeInputChains1_0,
+/*3100*/    OPC_MorphNodeTo, TARGET_VAL(XCore::ADJCALLSTACKUP), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+            // Src: (callseq_end (timm:i32):$amt1, (timm:i32):$amt2) - Complexity = 9
+            // Dst: (ADJCALLSTACKUP:i32 (timm:i32):$amt1, (timm:i32):$amt2)
+          /*SwitchOpcode*/ 15,  TARGET_VAL(ISD::FrameIndex),// ->3127
+/*3112*/    OPC_RecordNode,   // #0 = $addr
+/*3113*/    OPC_CheckType, MVT::i32,
+/*3115*/    OPC_CheckComplexPat, /*CP*/0, /*#*/0, // SelectADDRspii:$addr #1 #2
+/*3118*/    OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWFI), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+            // Src: ADDRspii:i32:$addr - Complexity = 9
+            // Dst: (LDAWFI:i32 ADDRspii:i32:$addr)
+          /*SwitchOpcode*/ 15,  TARGET_VAL(XCoreISD::DPRelativeWrapper),// ->3145
+/*3130*/    OPC_RecordNode,   // #0 = $a
+/*3131*/    OPC_CheckType, MVT::i32,
+/*3133*/    OPC_CheckComplexPat, /*CP*/1, /*#*/0, // SelectADDRdpii:$a #1 #2
+/*3136*/    OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWDP_lru6), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+            // Src: ADDRdpii:i32:$a - Complexity = 9
+            // Dst: (LDAWDP_lru6:i32 ADDRdpii:i32:$a)
+          /*SwitchOpcode*/ 15,  TARGET_VAL(XCoreISD::CPRelativeWrapper),// ->3163
+/*3148*/    OPC_RecordNode,   // #0 = $a
+/*3149*/    OPC_CheckType, MVT::i32,
+/*3151*/    OPC_CheckComplexPat, /*CP*/2, /*#*/0, // SelectADDRcpii:$a #1 #2
+/*3154*/    OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWCP_lu6), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 2, 
+            // Src: ADDRcpii:i32:$a - Complexity = 9
+            // Dst: (LDAWCP_lu6:i32 ADDRcpii:i32:$a)
+          /*SwitchOpcode*/ 37,  TARGET_VAL(ISD::XOR),// ->3203
+/*3166*/    OPC_RecordChild0, // #0 = $b
+/*3167*/    OPC_Scope, 22, /*->3191*/ // 2 children in Scope
+/*3169*/      OPC_MoveChild, 1,
+/*3171*/      OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*3182*/      OPC_MoveParent,
+/*3183*/      OPC_MorphNodeTo, TARGET_VAL(XCore::NOT), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (xor:i32 GRRegs:i32:$b, -1:i32) - Complexity = 8
+              // Dst: (NOT:i32 GRRegs:i32:$b)
+/*3191*/    /*Scope*/ 10, /*->3202*/
+/*3192*/      OPC_RecordChild1, // #1 = $c
+/*3193*/      OPC_MorphNodeTo, TARGET_VAL(XCore::XOR_l3r), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (xor:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+              // Dst: (XOR_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*3202*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 67,  TARGET_VAL(ISD::MUL),// ->3273
+/*3206*/    OPC_RecordChild0, // #0 = $src
+/*3207*/    OPC_Scope, 52, /*->3261*/ // 2 children in Scope
+/*3209*/      OPC_MoveChild, 1,
+/*3211*/      OPC_Scope, 12, /*->3225*/ // 3 children in Scope
+/*3213*/        OPC_CheckInteger, 3, 
+/*3215*/        OPC_MoveParent,
+/*3216*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LDA16F_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 0, 
+                // Src: (mul:i32 GRRegs:i32:$src, 3:i32) - Complexity = 8
+                // Dst: (LDA16F_l3r:i32 GRRegs:i32:$src, GRRegs:i32:$src)
+/*3225*/      /*Scope*/ 12, /*->3238*/
+/*3226*/        OPC_CheckInteger, 5, 
+/*3228*/        OPC_MoveParent,
+/*3229*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWF_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 0, 
+                // Src: (mul:i32 GRRegs:i32:$src, 5:i32) - Complexity = 8
+                // Dst: (LDAWF_l3r:i32 GRRegs:i32:$src, GRRegs:i32:$src)
+/*3238*/      /*Scope*/ 21, /*->3260*/
+/*3239*/        OPC_CheckInteger, 125|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551613*/, 
+/*3250*/        OPC_MoveParent,
+/*3251*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LDAWB_l3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 0, 
+                // Src: (mul:i32 GRRegs:i32:$src, -3:i32) - Complexity = 8
+                // Dst: (LDAWB_l3r:i32 GRRegs:i32:$src, GRRegs:i32:$src)
+/*3260*/      0, /*End of Scope*/
+/*3261*/    /*Scope*/ 10, /*->3272*/
+/*3262*/      OPC_RecordChild1, // #1 = $c
+/*3263*/      OPC_MorphNodeTo, TARGET_VAL(XCore::MUL_l3r), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (mul:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+              // Dst: (MUL_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*3272*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 46|128,2/*302*/,  TARGET_VAL(ISD::SETCC),// ->3579
+/*3277*/    OPC_RecordChild0, // #0 = $lhs
+/*3278*/    OPC_Scope, 43, /*->3323*/ // 3 children in Scope
+/*3280*/      OPC_MoveChild, 1,
+/*3282*/      OPC_CheckInteger, 127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,127|128,1/*18446744073709551615*/, 
+/*3293*/      OPC_MoveParent,
+/*3294*/      OPC_MoveChild, 2,
+/*3296*/      OPC_CheckCondCode, ISD::SETGT,
+/*3298*/      OPC_MoveParent,
+/*3299*/      OPC_EmitInteger, MVT::i32, 32, 
+/*3302*/      OPC_EmitNode, TARGET_VAL(XCore::ASHR_l2rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*3311*/      OPC_EmitInteger, MVT::i32, 0, 
+/*3314*/      OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+              // Src: (setcc:i32 GRRegs:i32:$lhs, -1:i32, SETGT:Other) - Complexity = 8
+              // Dst: (EQ_2rus:i32 (ASHR_l2rus:i32 GRRegs:i32:$lhs, 32:i32), 0:i32)
+/*3323*/    /*Scope*/ 55, /*->3379*/
+/*3324*/      OPC_RecordChild1, // #1 = $rhs
+/*3325*/      OPC_MoveChild, 1,
+/*3327*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*3330*/      OPC_CheckPredicate, 0, // Predicate_immUs
+/*3332*/      OPC_MoveParent,
+/*3333*/      OPC_MoveChild, 2,
+/*3335*/      OPC_Scope, 14, /*->3351*/ // 2 children in Scope
+/*3337*/        OPC_CheckCondCode, ISD::SETEQ,
+/*3339*/        OPC_MoveParent,
+/*3340*/        OPC_EmitConvertToTarget, 1,
+/*3342*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs, SETEQ:Other) - Complexity = 7
+                // Dst: (EQ_2rus:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs)
+/*3351*/      /*Scope*/ 26, /*->3378*/
+/*3352*/        OPC_CheckCondCode, ISD::SETNE,
+/*3354*/        OPC_MoveParent,
+/*3355*/        OPC_EmitConvertToTarget, 1,
+/*3357*/        OPC_EmitNode, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2,  // Results = #3 
+/*3366*/        OPC_EmitInteger, MVT::i32, 0, 
+/*3369*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 3, 4, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs, SETNE:Other) - Complexity = 7
+                // Dst: (EQ_2rus:i32 (EQ_2rus:i32 GRRegs:i32:$lhs, (imm:i32)<<P:Predicate_immUs>>:$rhs), 0:i32)
+/*3378*/      0, /*End of Scope*/
+/*3379*/    /*Scope*/ 69|128,1/*197*/, /*->3578*/
+/*3381*/      OPC_CheckChild0Type, MVT::i32,
+/*3383*/      OPC_RecordChild1, // #1 = $rhs
+/*3384*/      OPC_MoveChild, 2,
+/*3386*/      OPC_Scope, 12, /*->3400*/ // 10 children in Scope
+/*3388*/        OPC_CheckCondCode, ISD::SETGT,
+/*3390*/        OPC_MoveParent,
+/*3391*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LSS_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETGT:Other) - Complexity = 3
+                // Dst: (LSS_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs)
+/*3400*/      /*Scope*/ 12, /*->3413*/
+/*3401*/        OPC_CheckCondCode, ISD::SETUGT,
+/*3403*/        OPC_MoveParent,
+/*3404*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LSU_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETUGT:Other) - Complexity = 3
+                // Dst: (LSU_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs)
+/*3413*/      /*Scope*/ 12, /*->3426*/
+/*3414*/        OPC_CheckCondCode, ISD::SETLT,
+/*3416*/        OPC_MoveParent,
+/*3417*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LSS_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETLT:Other) - Complexity = 3
+                // Dst: (LSS_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs)
+/*3426*/      /*Scope*/ 12, /*->3439*/
+/*3427*/        OPC_CheckCondCode, ISD::SETULT,
+/*3429*/        OPC_MoveParent,
+/*3430*/        OPC_MorphNodeTo, TARGET_VAL(XCore::LSU_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETULT:Other) - Complexity = 3
+                // Dst: (LSU_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs)
+/*3439*/      /*Scope*/ 12, /*->3452*/
+/*3440*/        OPC_CheckCondCode, ISD::SETEQ,
+/*3442*/        OPC_MoveParent,
+/*3443*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETEQ:Other) - Complexity = 3
+                // Dst: (EQ_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs)
+/*3452*/      /*Scope*/ 24, /*->3477*/
+/*3453*/        OPC_CheckCondCode, ISD::SETLE,
+/*3455*/        OPC_MoveParent,
+/*3456*/        OPC_EmitNode, TARGET_VAL(XCore::LSS_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0,  // Results = #2 
+/*3465*/        OPC_EmitInteger, MVT::i32, 0, 
+/*3468*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETLE:Other) - Complexity = 3
+                // Dst: (EQ_2rus:i32 (LSS_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs), 0:i32)
+/*3477*/      /*Scope*/ 24, /*->3502*/
+/*3478*/        OPC_CheckCondCode, ISD::SETULE,
+/*3480*/        OPC_MoveParent,
+/*3481*/        OPC_EmitNode, TARGET_VAL(XCore::LSU_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 1, 0,  // Results = #2 
+/*3490*/        OPC_EmitInteger, MVT::i32, 0, 
+/*3493*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETULE:Other) - Complexity = 3
+                // Dst: (EQ_2rus:i32 (LSU_3r:i32 GRRegs:i32:$rhs, GRRegs:i32:$lhs), 0:i32)
+/*3502*/      /*Scope*/ 24, /*->3527*/
+/*3503*/        OPC_CheckCondCode, ISD::SETGE,
+/*3505*/        OPC_MoveParent,
+/*3506*/        OPC_EmitNode, TARGET_VAL(XCore::LSS_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*3515*/        OPC_EmitInteger, MVT::i32, 0, 
+/*3518*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETGE:Other) - Complexity = 3
+                // Dst: (EQ_2rus:i32 (LSS_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), 0:i32)
+/*3527*/      /*Scope*/ 24, /*->3552*/
+/*3528*/        OPC_CheckCondCode, ISD::SETUGE,
+/*3530*/        OPC_MoveParent,
+/*3531*/        OPC_EmitNode, TARGET_VAL(XCore::LSU_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*3540*/        OPC_EmitInteger, MVT::i32, 0, 
+/*3543*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETUGE:Other) - Complexity = 3
+                // Dst: (EQ_2rus:i32 (LSU_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), 0:i32)
+/*3552*/      /*Scope*/ 24, /*->3577*/
+/*3553*/        OPC_CheckCondCode, ISD::SETNE,
+/*3555*/        OPC_MoveParent,
+/*3556*/        OPC_EmitNode, TARGET_VAL(XCore::EQ_3r), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1,  // Results = #2 
+/*3565*/        OPC_EmitInteger, MVT::i32, 0, 
+/*3568*/        OPC_MorphNodeTo, TARGET_VAL(XCore::EQ_2rus), 0,
+                    1/*#VTs*/, MVT::i32, 2/*#Ops*/, 2, 3, 
+                // Src: (setcc:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs, SETNE:Other) - Complexity = 3
+                // Dst: (EQ_2rus:i32 (EQ_3r:i32 GRRegs:i32:$lhs, GRRegs:i32:$rhs), 0:i32)
+/*3577*/      0, /*End of Scope*/
+/*3578*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 34,  TARGET_VAL(ISD::SHL),// ->3616
+/*3582*/    OPC_RecordChild0, // #0 = $b
+/*3583*/    OPC_RecordChild1, // #1 = $c
+/*3584*/    OPC_Scope, 19, /*->3605*/ // 2 children in Scope
+/*3586*/      OPC_MoveChild, 1,
+/*3588*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*3591*/      OPC_CheckPredicate, 19, // Predicate_immBitp
+/*3593*/      OPC_MoveParent,
+/*3594*/      OPC_EmitConvertToTarget, 1,
+/*3596*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SHL_2rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+              // Src: (shl:i32 GRRegs:i32:$b, (imm:i32)<<P:Predicate_immBitp>>:$c) - Complexity = 7
+              // Dst: (SHL_2rus:i32 GRRegs:i32:$b, (imm:i32):$c)
+/*3605*/    /*Scope*/ 9, /*->3615*/
+/*3606*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SHL_3r), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (shl:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+              // Dst: (SHL_3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*3615*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 34,  TARGET_VAL(ISD::SRL),// ->3653
+/*3619*/    OPC_RecordChild0, // #0 = $b
+/*3620*/    OPC_RecordChild1, // #1 = $c
+/*3621*/    OPC_Scope, 19, /*->3642*/ // 2 children in Scope
+/*3623*/      OPC_MoveChild, 1,
+/*3625*/      OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*3628*/      OPC_CheckPredicate, 19, // Predicate_immBitp
+/*3630*/      OPC_MoveParent,
+/*3631*/      OPC_EmitConvertToTarget, 1,
+/*3633*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SHR_2rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 2, 
+              // Src: (srl:i32 GRRegs:i32:$b, (imm:i32)<<P:Predicate_immBitp>>:$c) - Complexity = 7
+              // Dst: (SHR_2rus:i32 GRRegs:i32:$b, (imm:i32):$c)
+/*3642*/    /*Scope*/ 9, /*->3652*/
+/*3643*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SHR_3r), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (srl:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+              // Dst: (SHR_3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+/*3652*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 42,  TARGET_VAL(XCoreISD::STWSP),// ->3698
+/*3656*/    OPC_RecordNode,   // #0 = 'XCoreStwsp' chained node
+/*3657*/    OPC_RecordChild1, // #1 = $val
+/*3658*/    OPC_CheckChild1Type, MVT::i32,
+/*3660*/    OPC_RecordChild2, // #2 = $index
+/*3661*/    OPC_MoveChild, 2,
+/*3663*/    OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*3666*/    OPC_Scope, 14, /*->3682*/ // 2 children in Scope
+/*3668*/      OPC_CheckPredicate, 20, // Predicate_immU6
+/*3670*/      OPC_MoveParent,
+/*3671*/      OPC_EmitMergeInputChains1_0,
+/*3672*/      OPC_EmitConvertToTarget, 2,
+/*3674*/      OPC_MorphNodeTo, TARGET_VAL(XCore::STWSP_ru6), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 3, 
+              // Src: (XCoreStwsp GRRegs:i32:$val, (imm:i32)<<P:Predicate_immU6>>:$index) - Complexity = 7
+              // Dst: (STWSP_ru6 GRRegs:i32:$val, (imm:i32):$index)
+/*3682*/    /*Scope*/ 14, /*->3697*/
+/*3683*/      OPC_CheckPredicate, 21, // Predicate_immU16
+/*3685*/      OPC_MoveParent,
+/*3686*/      OPC_EmitMergeInputChains1_0,
+/*3687*/      OPC_EmitConvertToTarget, 2,
+/*3689*/      OPC_MorphNodeTo, TARGET_VAL(XCore::STWSP_lru6), 0|OPFL_Chain,
+                  0/*#VTs*/, 2/*#Ops*/, 1, 3, 
+              // Src: (XCoreStwsp GRRegs:i32:$val, (imm:i32)<<P:Predicate_immU16>>:$index) - Complexity = 7
+              // Dst: (STWSP_lru6 GRRegs:i32:$val, (imm:i32):$index)
+/*3697*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 42,  TARGET_VAL(XCoreISD::RETSP),// ->3743
+/*3701*/    OPC_RecordNode,   // #0 = 'XCoreRetsp' chained node
+/*3702*/    OPC_CaptureGlueInput,
+/*3703*/    OPC_RecordChild1, // #1 = $b
+/*3704*/    OPC_MoveChild, 1,
+/*3706*/    OPC_CheckOpcode, TARGET_VAL(ISD::Constant),
+/*3709*/    OPC_CheckType, MVT::i32,
+/*3711*/    OPC_Scope, 14, /*->3727*/ // 2 children in Scope
+/*3713*/      OPC_CheckPredicate, 20, // Predicate_immU6
+/*3715*/      OPC_MoveParent,
+/*3716*/      OPC_EmitMergeInputChains1_0,
+/*3717*/      OPC_EmitConvertToTarget, 1,
+/*3719*/      OPC_MorphNodeTo, TARGET_VAL(XCore::RETSP_u6), 0|OPFL_Chain|OPFL_GlueInput,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2, 
+              // Src: (XCoreRetsp (imm:i32)<<P:Predicate_immU6>>:$b) - Complexity = 7
+              // Dst: (RETSP_u6:i32 (imm:i32):$b)
+/*3727*/    /*Scope*/ 14, /*->3742*/
+/*3728*/      OPC_CheckPredicate, 21, // Predicate_immU16
+/*3730*/      OPC_MoveParent,
+/*3731*/      OPC_EmitMergeInputChains1_0,
+/*3732*/      OPC_EmitConvertToTarget, 1,
+/*3734*/      OPC_MorphNodeTo, TARGET_VAL(XCore::RETSP_lu6), 0|OPFL_Chain|OPFL_GlueInput,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2, 
+              // Src: (XCoreRetsp (imm:i32)<<P:Predicate_immU16>>:$b) - Complexity = 7
+              // Dst: (RETSP_lu6:i32 (imm:i32):$b)
+/*3742*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 85,  TARGET_VAL(XCoreISD::BL),// ->3831
+/*3746*/    OPC_RecordNode,   // #0 = 'XCoreBranchLink' chained node
+/*3747*/    OPC_CaptureGlueInput,
+/*3748*/    OPC_RecordChild1, // #1 = $target
+/*3749*/    OPC_Scope, 67, /*->3818*/ // 2 children in Scope
+/*3751*/      OPC_MoveChild, 1,
+/*3753*/      OPC_SwitchOpcode /*3 cases */, 34,  TARGET_VAL(ISD::Constant),// ->3791
+/*3757*/        OPC_CheckType, MVT::i32,
+/*3759*/        OPC_Scope, 14, /*->3775*/ // 2 children in Scope
+/*3761*/          OPC_CheckPredicate, 23, // Predicate_immU10
+/*3763*/          OPC_MoveParent,
+/*3764*/          OPC_EmitMergeInputChains1_0,
+/*3765*/          OPC_EmitConvertToTarget, 1,
+/*3767*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BL_u10), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2, 
+                  // Src: (XCoreBranchLink (imm:i32)<<P:Predicate_immU10>>:$target) - Complexity = 7
+                  // Dst: (BL_u10:i32 (imm:i32):$target)
+/*3775*/        /*Scope*/ 14, /*->3790*/
+/*3776*/          OPC_CheckPredicate, 24, // Predicate_immU20
+/*3778*/          OPC_MoveParent,
+/*3779*/          OPC_EmitMergeInputChains1_0,
+/*3780*/          OPC_EmitConvertToTarget, 1,
+/*3782*/          OPC_MorphNodeTo, TARGET_VAL(XCore::BL_lu10), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                      1/*#VTs*/, MVT::i32, 1/*#Ops*/, 2, 
+                  // Src: (XCoreBranchLink (imm:i32)<<P:Predicate_immU20>>:$target) - Complexity = 7
+                  // Dst: (BL_lu10:i32 (imm:i32):$target)
+/*3790*/        0, /*End of Scope*/
+              /*SwitchOpcode*/ 10,  TARGET_VAL(ISD::TargetGlobalAddress),// ->3804
+/*3794*/        OPC_MoveParent,
+/*3795*/        OPC_EmitMergeInputChains1_0,
+/*3796*/        OPC_MorphNodeTo, TARGET_VAL(XCore::BL_lu10), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (XCoreBranchLink (tglobaladdr:iPTR):$addr) - Complexity = 6
+                // Dst: (BL_lu10:i32 (tglobaladdr:i32):$addr)
+              /*SwitchOpcode*/ 10,  TARGET_VAL(ISD::TargetExternalSymbol),// ->3817
+/*3807*/        OPC_MoveParent,
+/*3808*/        OPC_EmitMergeInputChains1_0,
+/*3809*/        OPC_MorphNodeTo, TARGET_VAL(XCore::BL_lu10), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                    1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+                // Src: (XCoreBranchLink (texternalsym:iPTR):$addr) - Complexity = 6
+                // Dst: (BL_lu10:i32 (texternalsym:i32):$addr)
+              0, // EndSwitchOpcode
+/*3818*/    /*Scope*/ 11, /*->3830*/
+/*3819*/      OPC_CheckChild1Type, MVT::i32,
+/*3821*/      OPC_EmitMergeInputChains1_0,
+/*3822*/      OPC_MorphNodeTo, TARGET_VAL(XCore::BLA_1r), 0|OPFL_Chain|OPFL_GlueInput|OPFL_GlueOutput|OPFL_Variadic1,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (XCoreBranchLink GRRegs:i32:$addr) - Complexity = 3
+              // Dst: (BLA_1r:i32 GRRegs:i32:$addr)
+/*3830*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 17,  TARGET_VAL(ISD::CALLSEQ_START),// ->3851
+/*3834*/    OPC_RecordNode,   // #0 = 'callseq_start' chained node
+/*3835*/    OPC_RecordChild1, // #1 = $amt
+/*3836*/    OPC_MoveChild, 1,
+/*3838*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetConstant),
+/*3841*/    OPC_MoveParent,
+/*3842*/    OPC_EmitMergeInputChains1_0,
+/*3843*/    OPC_MorphNodeTo, TARGET_VAL(XCore::ADJCALLSTACKDOWN), 0|OPFL_Chain|OPFL_GlueOutput,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+            // Src: (callseq_start (timm:i32):$amt) - Complexity = 6
+            // Dst: (ADJCALLSTACKDOWN:i32 (timm:i32):$amt)
+          /*SwitchOpcode*/ 33,  TARGET_VAL(XCoreISD::PCRelativeWrapper),// ->3887
+/*3854*/    OPC_RecordChild0, // #0 = $addr
+/*3855*/    OPC_MoveChild, 0,
+/*3857*/    OPC_SwitchOpcode /*2 cases */, 11,  TARGET_VAL(ISD::TargetGlobalAddress),// ->3872
+/*3861*/      OPC_MoveParent,
+/*3862*/      OPC_CheckType, MVT::i32,
+/*3864*/      OPC_MorphNodeTo, TARGET_VAL(XCore::LDAP_lu10), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (pcrelwrapper:i32 (tglobaladdr:i32):$addr) - Complexity = 6
+              // Dst: (LDAP_lu10:i32 (tglobaladdr:i32):$addr)
+            /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::TargetBlockAddress),// ->3886
+/*3875*/      OPC_MoveParent,
+/*3876*/      OPC_CheckType, MVT::i32,
+/*3878*/      OPC_MorphNodeTo, TARGET_VAL(XCore::LDAP_lu10_ba), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+              // Src: (pcrelwrapper:i32 (tblockaddress:i32):$addr) - Complexity = 6
+              // Dst: (LDAP_lu10_ba:i32 (tblockaddress:i32):$addr)
+            0, // EndSwitchOpcode
+          /*SwitchOpcode*/ 18,  TARGET_VAL(XCoreISD::BR_JT),// ->3908
+/*3890*/    OPC_RecordNode,   // #0 = 'XCoreBR_JT' chained node
+/*3891*/    OPC_RecordChild1, // #1 = $t
+/*3892*/    OPC_MoveChild, 1,
+/*3894*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetJumpTable),
+/*3897*/    OPC_MoveParent,
+/*3898*/    OPC_RecordChild2, // #2 = $i
+/*3899*/    OPC_EmitMergeInputChains1_0,
+/*3900*/    OPC_MorphNodeTo, TARGET_VAL(XCore::BR_JT), 0|OPFL_Chain,
+                0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+            // Src: (XCoreBR_JT (tjumptable:i32):$t, GRRegs:i32:$i) - Complexity = 6
+            // Dst: (BR_JT (tjumptable:i32):$t, GRRegs:i32:$i)
+          /*SwitchOpcode*/ 18,  TARGET_VAL(XCoreISD::BR_JT32),// ->3929
+/*3911*/    OPC_RecordNode,   // #0 = 'XCoreBR_JT32' chained node
+/*3912*/    OPC_RecordChild1, // #1 = $t
+/*3913*/    OPC_MoveChild, 1,
+/*3915*/    OPC_CheckOpcode, TARGET_VAL(ISD::TargetJumpTable),
+/*3918*/    OPC_MoveParent,
+/*3919*/    OPC_RecordChild2, // #2 = $i
+/*3920*/    OPC_EmitMergeInputChains1_0,
+/*3921*/    OPC_MorphNodeTo, TARGET_VAL(XCore::BR_JT32), 0|OPFL_Chain,
+                0/*#VTs*/, 2/*#Ops*/, 1, 2, 
+            // Src: (XCoreBR_JT32 (tjumptable:i32):$t, GRRegs:i32:$i) - Complexity = 6
+            // Dst: (BR_JT32 (tjumptable:i32):$t, GRRegs:i32:$i)
+          /*SwitchOpcode*/ 29,  TARGET_VAL(ISD::Constant),// ->3961
+/*3932*/    OPC_RecordNode,   // #0 = $b
+/*3933*/    OPC_Scope, 12, /*->3947*/ // 2 children in Scope
+/*3935*/      OPC_CheckPredicate, 20, // Predicate_immU6
+/*3937*/      OPC_EmitConvertToTarget, 0,
+/*3939*/      OPC_MorphNodeTo, TARGET_VAL(XCore::LDC_ru6), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (imm:i32)<<P:Predicate_immU6>>:$b - Complexity = 4
+              // Dst: (LDC_ru6:i32 (imm:i32):$b)
+/*3947*/    /*Scope*/ 12, /*->3960*/
+/*3948*/      OPC_CheckPredicate, 21, // Predicate_immU16
+/*3950*/      OPC_EmitConvertToTarget, 0,
+/*3952*/      OPC_MorphNodeTo, TARGET_VAL(XCore::LDC_lru6), 0,
+                  1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+              // Src: (imm:i32)<<P:Predicate_immU16>>:$b - Complexity = 4
+              // Dst: (LDC_lru6:i32 (imm:i32):$b)
+/*3960*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::OR),// ->3975
+/*3964*/    OPC_RecordChild0, // #0 = $b
+/*3965*/    OPC_RecordChild1, // #1 = $c
+/*3966*/    OPC_MorphNodeTo, TARGET_VAL(XCore::OR_3r), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+            // Src: (or:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+            // Dst: (OR_3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+          /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::SDIV),// ->3989
+/*3978*/    OPC_RecordChild0, // #0 = $b
+/*3979*/    OPC_RecordChild1, // #1 = $c
+/*3980*/    OPC_MorphNodeTo, TARGET_VAL(XCore::DIVS_l3r), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+            // Src: (sdiv:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+            // Dst: (DIVS_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+          /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::UDIV),// ->4003
+/*3992*/    OPC_RecordChild0, // #0 = $b
+/*3993*/    OPC_RecordChild1, // #1 = $c
+/*3994*/    OPC_MorphNodeTo, TARGET_VAL(XCore::DIVU_l3r), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+            // Src: (udiv:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+            // Dst: (DIVU_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+          /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::SREM),// ->4017
+/*4006*/    OPC_RecordChild0, // #0 = $b
+/*4007*/    OPC_RecordChild1, // #1 = $c
+/*4008*/    OPC_MorphNodeTo, TARGET_VAL(XCore::REMS_l3r), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+            // Src: (srem:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+            // Dst: (REMS_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+          /*SwitchOpcode*/ 11,  TARGET_VAL(ISD::UREM),// ->4031
+/*4020*/    OPC_RecordChild0, // #0 = $b
+/*4021*/    OPC_RecordChild1, // #1 = $c
+/*4022*/    OPC_MorphNodeTo, TARGET_VAL(XCore::REMU_l3r), 0,
+                1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+            // Src: (urem:i32 GRRegs:i32:$b, GRRegs:i32:$c) - Complexity = 3
+            // Dst: (REMU_l3r:i32 GRRegs:i32:$b, GRRegs:i32:$c)
+          /*SwitchOpcode*/ 9,  TARGET_VAL(ISD::BSWAP),// ->4043
+/*4034*/    OPC_RecordChild0, // #0 = $src
+/*4035*/    OPC_MorphNodeTo, TARGET_VAL(XCore::BYTEREV_l2r), 0,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+            // Src: (bswap:i32 GRRegs:i32:$src) - Complexity = 3
+            // Dst: (BYTEREV_l2r:i32 GRRegs:i32:$src)
+          /*SwitchOpcode*/ 9,  TARGET_VAL(ISD::CTLZ),// ->4055
+/*4046*/    OPC_RecordChild0, // #0 = $src
+/*4047*/    OPC_MorphNodeTo, TARGET_VAL(XCore::CLZ_l2r), 0,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0, 
+            // Src: (ctlz:i32 GRRegs:i32:$src) - Complexity = 3
+            // Dst: (CLZ_l2r:i32 GRRegs:i32:$src)
+          /*SwitchOpcode*/ 53,  TARGET_VAL(ISD::SIGN_EXTEND_INREG),// ->4111
+/*4058*/    OPC_RecordChild0, // #0 = $b
+/*4059*/    OPC_MoveChild, 1,
+/*4061*/    OPC_Scope, 15, /*->4078*/ // 3 children in Scope
+/*4063*/      OPC_CheckValueType, MVT::i1,
+/*4065*/      OPC_MoveParent,
+/*4066*/      OPC_EmitInteger, MVT::i32, 1, 
+/*4069*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SEXT_rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (sext_inreg:i32 GRRegs:i32:$b, i1:Other) - Complexity = 3
+              // Dst: (SEXT_rus:i32 GRRegs:i32:$b, 1:i32)
+/*4078*/    /*Scope*/ 15, /*->4094*/
+/*4079*/      OPC_CheckValueType, MVT::i8,
+/*4081*/      OPC_MoveParent,
+/*4082*/      OPC_EmitInteger, MVT::i32, 8, 
+/*4085*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SEXT_rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (sext_inreg:i32 GRRegs:i32:$b, i8:Other) - Complexity = 3
+              // Dst: (SEXT_rus:i32 GRRegs:i32:$b, 8:i32)
+/*4094*/    /*Scope*/ 15, /*->4110*/
+/*4095*/      OPC_CheckValueType, MVT::i16,
+/*4097*/      OPC_MoveParent,
+/*4098*/      OPC_EmitInteger, MVT::i32, 16, 
+/*4101*/      OPC_MorphNodeTo, TARGET_VAL(XCore::SEXT_rus), 0,
+                  1/*#VTs*/, MVT::i32, 2/*#Ops*/, 0, 1, 
+              // Src: (sext_inreg:i32 GRRegs:i32:$b, i16:Other) - Complexity = 3
+              // Dst: (SEXT_rus:i32 GRRegs:i32:$b, 16:i32)
+/*4110*/    0, /*End of Scope*/
+          /*SwitchOpcode*/ 16,  TARGET_VAL(ISD::BR),// ->4130
+/*4114*/    OPC_RecordNode,   // #0 = 'br' chained node
+/*4115*/    OPC_RecordChild1, // #1 = $addr
+/*4116*/    OPC_MoveChild, 1,
+/*4118*/    OPC_CheckOpcode, TARGET_VAL(ISD::BasicBlock),
+/*4121*/    OPC_MoveParent,
+/*4122*/    OPC_EmitMergeInputChains1_0,
+/*4123*/    OPC_MorphNodeTo, TARGET_VAL(XCore::BRFU_lu6), 0|OPFL_Chain,
+                0/*#VTs*/, 1/*#Ops*/, 1, 
+            // Src: (br (bb:Other):$addr) - Complexity = 3
+            // Dst: (BRFU_lu6 (bb:Other):$addr)
+          /*SwitchOpcode*/ 17,  TARGET_VAL(ISD::CTTZ),// ->4150
+/*4133*/    OPC_RecordChild0, // #0 = $src
+/*4134*/    OPC_EmitNode, TARGET_VAL(XCore::BITREV_l2r), 0,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 0,  // Results = #1 
+/*4142*/    OPC_MorphNodeTo, TARGET_VAL(XCore::CLZ_l2r), 0,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1, 
+            // Src: (cttz:i32 GRRegs:i32:$src) - Complexity = 3
+            // Dst: (CLZ_l2r:i32 (BITREV_l2r:i32 GRRegs:i32:$src))
+          /*SwitchOpcode*/ 20,  TARGET_VAL(ISD::TRAP),// ->4173
+/*4153*/    OPC_RecordNode,   // #0 = 'trap' chained node
+/*4154*/    OPC_EmitMergeInputChains1_0,
+/*4155*/    OPC_EmitInteger, MVT::i32, 0, 
+/*4158*/    OPC_EmitNode, TARGET_VAL(XCore::LDC_ru6), 0,
+                1/*#VTs*/, MVT::i32, 1/*#Ops*/, 1,  // Results = #2 
+/*4166*/    OPC_MorphNodeTo, TARGET_VAL(XCore::ECALLF_1r), 0|OPFL_Chain,
+                0/*#VTs*/, 1/*#Ops*/, 2, 
+            // Src: (trap) - Complexity = 3
+            // Dst: (ECALLF_1r (LDC_ru6:i32 0:i32))
+          0, // EndSwitchOpcode
+    0
+  }; // Total Array size is 4175 bytes
+
+  // Opcode Histogram:
+  // #OPC_Scope                          = 70
+  // #OPC_RecordNode                     = 21
+  // #OPC_RecordChild                    = 188
+  // #OPC_RecordMemRef                   = 2
+  // #OPC_CaptureGlueInput               = 3
+  // #OPC_MoveChild                      = 94
+  // #OPC_MoveParent                     = 217
+  // #OPC_CheckSame                      = 1
+  // #OPC_CheckPatternPredicate          = 0
+  // #OPC_CheckPredicate                 = 89
+  // #OPC_CheckOpcode                    = 57
+  // #OPC_SwitchOpcode                   = 3
+  // #OPC_CheckType                      = 41
+  // #OPC_SwitchType                     = 0
+  // #OPC_CheckChildType                 = 52
+  // #OPC_CheckInteger                   = 75
+  // #OPC_CheckCondCode                  = 33
+  // #OPC_CheckValueType                 = 3
+  // #OPC_CheckComplexPat                = 10
+  // #OPC_CheckAndImm                    = 0
+  // #OPC_CheckOrImm                     = 0
+  // #OPC_CheckFoldableChainNode         = 1
+  // #OPC_EmitInteger                    = 25
+  // #OPC_EmitStringInteger              = 0
+  // #OPC_EmitRegister                   = 0
+  // #OPC_EmitConvertToTarget            = 36
+  // #OPC_EmitMergeInputChains           = 101
+  // #OPC_EmitCopyToReg                  = 1
+  // #OPC_EmitNode                       = 31
+  // #OPC_EmitNodeXForm                  = 8
+  // #OPC_MarkGlueResults                = 0
+  // #OPC_CompleteMatch                  = 0
+  // #OPC_MorphNodeTo                    = 187
+
+  #undef TARGET_VAL
+  return SelectCodeCommon(N, MatcherTable,sizeof(MatcherTable));
+}
+
+bool CheckNodePredicate(SDNode *Node, unsigned PredNo) const {
+  switch (PredNo) {
+  default: assert(0 && "Invalid predicate in table?");
+  case 0: { // Predicate_immUs
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  return (uint32_t)N->getZExtValue() <= 11;
+
+  }
+  case 1: { // Predicate_immUs4
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  uint32_t value = (uint32_t)N->getZExtValue();
+  return value%4 == 0 && value/4 <= 11;
+
+  }
+  case 2: { // Predicate_immUsNeg
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  return -((uint32_t)N->getZExtValue()) <= 11;
+
+  }
+  case 3: { // Predicate_immUs4Neg
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  uint32_t value = (uint32_t)N->getZExtValue();
+  return (-value)%4 == 0 && (-value)/4 <= 11;
+
+  }
+  case 4: { // Predicate_unindexedload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getAddressingMode() == ISD::UNINDEXED;
+
+  }
+  case 5: { // Predicate_sextload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::SEXTLOAD;
+
+  }
+  case 6: { // Predicate_sextloadi16
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 7: { // Predicate_extload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::EXTLOAD;
+
+  }
+  case 8: { // Predicate_extloadi16
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 9: { // Predicate_load
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::NON_EXTLOAD;
+
+  }
+  case 10: { // Predicate_zextload
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getExtensionType() == ISD::ZEXTLOAD;
+
+  }
+  case 11: { // Predicate_zextloadi8
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 12: { // Predicate_extloadi8
+    SDNode *N = Node;
+
+  return cast<LoadSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 13: { // Predicate_unindexedstore
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->getAddressingMode() == ISD::UNINDEXED;
+
+  }
+  case 14: { // Predicate_truncstore
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->isTruncatingStore();
+
+  }
+  case 15: { // Predicate_truncstorei16
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->getMemoryVT() == MVT::i16;
+
+  }
+  case 16: { // Predicate_store
+    SDNode *N = Node;
+
+  return !cast<StoreSDNode>(N)->isTruncatingStore();
+
+  }
+  case 17: { // Predicate_truncstorei8
+    SDNode *N = Node;
+
+  return cast<StoreSDNode>(N)->getMemoryVT() == MVT::i8;
+
+  }
+  case 18: { // Predicate_immBpwSubBitp
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  uint32_t value = (uint32_t)N->getZExtValue();
+  return (value >= 24 && value <= 31)
+          || value == 16
+          || value == 8
+          || value == 0;
+
+  }
+  case 19: { // Predicate_immBitp
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  uint32_t value = (uint32_t)N->getZExtValue();
+  return (value >= 1 && value <= 8)
+          || value == 16
+          || value == 24
+          || value == 32;
+
+  }
+  case 20: { // Predicate_immU6
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  return (uint32_t)N->getZExtValue() < (1 << 6);
+
+  }
+  case 21: { // Predicate_immU16
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  return (uint32_t)N->getZExtValue() < (1 << 16);
+
+  }
+  case 22: { // Predicate_immMskBitp
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+ return immMskBitp(N); 
+  }
+  case 23: { // Predicate_immU10
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  return (uint32_t)N->getZExtValue() < (1 << 10);
+
+  }
+  case 24: { // Predicate_immU20
+    ConstantSDNode*N = cast<ConstantSDNode>(Node);
+
+  return (uint32_t)N->getZExtValue() < (1 << 20);
+
+  }
+  }
+}
+
+bool CheckComplexPattern(SDNode *Root, SDNode *Parent, SDValue N,
+                         unsigned PatternNo,
+         SmallVectorImpl<std::pair<SDValue, SDNode*> > &Result) {
+  unsigned NextRes = Result.size();
+  switch (PatternNo) {
+  default: assert(0 && "Invalid pattern # in table?");
+  case 0:
+    Result.resize(NextRes+2);
+    return SelectADDRspii(N, Result[NextRes+0].first, Result[NextRes+1].first);
+  case 1:
+    Result.resize(NextRes+2);
+    return SelectADDRdpii(N, Result[NextRes+0].first, Result[NextRes+1].first);
+  case 2:
+    Result.resize(NextRes+2);
+    return SelectADDRcpii(N, Result[NextRes+0].first, Result[NextRes+1].first);
+  }
+}
+
+SDValue RunSDNodeXForm(SDValue V, unsigned XFormNo) {
+  switch (XFormNo) {
+  default: assert(0 && "Invalid xform # in table?");
+  case 0: {  // div4_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  // Transformation function: imm/4
+  assert(N->getZExtValue() % 4 == 0);
+  return getI32Imm(N->getZExtValue()/4);
+
+  }
+  case 1: {  // neg_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  // Transformation function: -imm
+  uint32_t value = N->getZExtValue();
+  return getI32Imm(-value);
+
+  }
+  case 2: {  // div4neg_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  // Transformation function: -imm/4
+  uint32_t value = N->getZExtValue();
+  assert(-value % 4 == 0);
+  return getI32Imm(-value/4);
+
+  }
+  case 3: {  // bpwsub_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  // Transformation function: 32-imm
+  uint32_t value = N->getZExtValue();
+  return getI32Imm(32-value);
+
+  }
+  case 4: {  // msksize_xform
+    ConstantSDNode *N = cast<ConstantSDNode>(V.getNode());
+
+  // Transformation function: get the size of a mask
+  assert(isMask_32(N->getZExtValue()));
+  // look for the first non-zero bit
+  return getI32Imm(32 - CountLeadingZeros_32(N->getZExtValue()));
+
+  }
+  }
+}
+

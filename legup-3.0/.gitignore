@@ -1,0 +1,34 @@
+# llvm
+Debug
+Release
+Output
+*.inc
+*.def
+log
+
+# legup
+examples/*/*.mif
+examples/*/*/*.mif
+*.ver
+examples/*/*.v
+examples/*/*/*.v
+*.bc
+*.ll
+
+# quartus
+*.fit.*
+*.rpt
+*.summary
+main.*
+db
+incremental_db
+
+# modelsim
+transcript
+work
+vsim.wlf
+
+# other
+a.out
+tags
+testrun.*

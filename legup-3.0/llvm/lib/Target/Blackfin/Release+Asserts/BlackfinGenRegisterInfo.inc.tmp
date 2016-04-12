@@ -1,0 +1,3530 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass BFMCRegisterClasses[];
+
+namespace BF {
+enum {
+  NoRegister,
+  A0 = 1,
+  A0H = 2,
+  A0L = 3,
+  A0W = 4,
+  A0X = 5,
+  A1 = 6,
+  A1H = 7,
+  A1L = 8,
+  A1W = 9,
+  A1X = 10,
+  AC0 = 11,
+  AC1 = 12,
+  AN = 13,
+  AQ = 14,
+  ASTAT = 15,
+  AV0 = 16,
+  AV0S = 17,
+  AV1 = 18,
+  AV1S = 19,
+  AZ = 20,
+  B0 = 21,
+  B0H = 22,
+  B0L = 23,
+  B1 = 24,
+  B1H = 25,
+  B1L = 26,
+  B2 = 27,
+  B2H = 28,
+  B2L = 29,
+  B3 = 30,
+  B3H = 31,
+  B3L = 32,
+  CC = 33,
+  CYCLES = 34,
+  CYCLES2 = 35,
+  EMUDAT = 36,
+  FP = 37,
+  FPH = 38,
+  FPL = 39,
+  I0 = 40,
+  I0H = 41,
+  I0L = 42,
+  I1 = 43,
+  I1H = 44,
+  I1L = 45,
+  I2 = 46,
+  I2H = 47,
+  I2L = 48,
+  I3 = 49,
+  I3H = 50,
+  I3L = 51,
+  L0 = 52,
+  L0H = 53,
+  L0L = 54,
+  L1 = 55,
+  L1H = 56,
+  L1L = 57,
+  L2 = 58,
+  L2H = 59,
+  L2L = 60,
+  L3 = 61,
+  L3H = 62,
+  L3L = 63,
+  LB0 = 64,
+  LB1 = 65,
+  LC0 = 66,
+  LC1 = 67,
+  LT0 = 68,
+  LT1 = 69,
+  M0 = 70,
+  M0H = 71,
+  M0L = 72,
+  M1 = 73,
+  M1H = 74,
+  M1L = 75,
+  M2 = 76,
+  M2H = 77,
+  M2L = 78,
+  M3 = 79,
+  M3H = 80,
+  M3L = 81,
+  NCC = 82,
+  P0 = 83,
+  P0H = 84,
+  P0L = 85,
+  P1 = 86,
+  P1H = 87,
+  P1L = 88,
+  P2 = 89,
+  P2H = 90,
+  P2L = 91,
+  P3 = 92,
+  P3H = 93,
+  P3L = 94,
+  P4 = 95,
+  P4H = 96,
+  P4L = 97,
+  P5 = 98,
+  P5H = 99,
+  P5L = 100,
+  R0 = 101,
+  R0H = 102,
+  R0L = 103,
+  R1 = 104,
+  R1H = 105,
+  R1L = 106,
+  R2 = 107,
+  R2H = 108,
+  R2L = 109,
+  R3 = 110,
+  R3H = 111,
+  R3L = 112,
+  R4 = 113,
+  R4H = 114,
+  R4L = 115,
+  R5 = 116,
+  R5H = 117,
+  R5L = 118,
+  R6 = 119,
+  R6H = 120,
+  R6L = 121,
+  R7 = 122,
+  R7H = 123,
+  R7L = 124,
+  RETE = 125,
+  RETI = 126,
+  RETN = 127,
+  RETS = 128,
+  RETX = 129,
+  SEQSTAT = 130,
+  SP = 131,
+  SPH = 132,
+  SPL = 133,
+  SYSCFG = 134,
+  USP = 135,
+  V = 136,
+  VS = 137,
+  NUM_TARGET_REGS 	// 138
+};
+}
+
+// Register classes
+namespace BF {
+enum {
+  ALLRegClassID = 0,
+  AccuRegClassID = 1,
+  AnyCCRegClassID = 2,
+  BRegClassID = 3,
+  DRegClassID = 4,
+  D16RegClassID = 5,
+  D16HRegClassID = 6,
+  D16LRegClassID = 7,
+  DConsRegClassID = 8,
+  DPRegClassID = 9,
+  DP16RegClassID = 10,
+  DP16HRegClassID = 11,
+  DP16LRegClassID = 12,
+  GRRegClassID = 13,
+  GR16RegClassID = 14,
+  IRegClassID = 15,
+  JustCCRegClassID = 16,
+  LRegClassID = 17,
+  MRegClassID = 18,
+  NotCCRegClassID = 19,
+  PRegClassID = 20,
+  P16RegClassID = 21,
+  P16HRegClassID = 22,
+  P16LRegClassID = 23,
+  PIRegClassID = 24,
+  StatBitRegClassID = 25,
+  WConsRegClassID = 26,
+  cConsRegClassID = 27,
+  kConsRegClassID = 28,
+  tConsRegClassID = 29,
+  uConsRegClassID = 30,
+  yConsRegClassID = 31,
+  zConsRegClassID = 32
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct BlackfinGenMCRegisterInfo : public MCRegisterInfo {
+  explicit BlackfinGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned A0_Overlaps[] = { BF::A0, BF::A0H, BF::A0L, BF::A0W, BF::A0X, 0 };
+  const unsigned A0H_Overlaps[] = { BF::A0H, BF::A0, BF::A0W, 0 };
+  const unsigned A0L_Overlaps[] = { BF::A0L, BF::A0, BF::A0W, 0 };
+  const unsigned A0W_Overlaps[] = { BF::A0W, BF::A0, BF::A0H, BF::A0L, 0 };
+  const unsigned A0X_Overlaps[] = { BF::A0X, BF::A0, 0 };
+  const unsigned A1_Overlaps[] = { BF::A1, BF::A1H, BF::A1L, BF::A1W, BF::A1X, 0 };
+  const unsigned A1H_Overlaps[] = { BF::A1H, BF::A1, BF::A1W, 0 };
+  const unsigned A1L_Overlaps[] = { BF::A1L, BF::A1, BF::A1W, 0 };
+  const unsigned A1W_Overlaps[] = { BF::A1W, BF::A1, BF::A1H, BF::A1L, 0 };
+  const unsigned A1X_Overlaps[] = { BF::A1X, BF::A1, 0 };
+  const unsigned AC0_Overlaps[] = { BF::AC0, BF::ASTAT, 0 };
+  const unsigned AC1_Overlaps[] = { BF::AC1, BF::ASTAT, 0 };
+  const unsigned AN_Overlaps[] = { BF::AN, BF::ASTAT, 0 };
+  const unsigned AQ_Overlaps[] = { BF::AQ, BF::ASTAT, 0 };
+  const unsigned ASTAT_Overlaps[] = { BF::ASTAT, BF::AC0, BF::AC1, BF::AN, BF::AQ, BF::AV0, BF::AV0S, BF::AV1, BF::AV1S, BF::AZ, BF::CC, BF::NCC, BF::V, BF::VS, 0 };
+  const unsigned AV0_Overlaps[] = { BF::AV0, BF::ASTAT, 0 };
+  const unsigned AV0S_Overlaps[] = { BF::AV0S, BF::ASTAT, 0 };
+  const unsigned AV1_Overlaps[] = { BF::AV1, BF::ASTAT, 0 };
+  const unsigned AV1S_Overlaps[] = { BF::AV1S, BF::ASTAT, 0 };
+  const unsigned AZ_Overlaps[] = { BF::AZ, BF::ASTAT, 0 };
+  const unsigned B0_Overlaps[] = { BF::B0, BF::B0H, BF::B0L, 0 };
+  const unsigned B0H_Overlaps[] = { BF::B0H, BF::B0, 0 };
+  const unsigned B0L_Overlaps[] = { BF::B0L, BF::B0, 0 };
+  const unsigned B1_Overlaps[] = { BF::B1, BF::B1H, BF::B1L, 0 };
+  const unsigned B1H_Overlaps[] = { BF::B1H, BF::B1, 0 };
+  const unsigned B1L_Overlaps[] = { BF::B1L, BF::B1, 0 };
+  const unsigned B2_Overlaps[] = { BF::B2, BF::B2H, BF::B2L, 0 };
+  const unsigned B2H_Overlaps[] = { BF::B2H, BF::B2, 0 };
+  const unsigned B2L_Overlaps[] = { BF::B2L, BF::B2, 0 };
+  const unsigned B3_Overlaps[] = { BF::B3, BF::B3H, BF::B3L, 0 };
+  const unsigned B3H_Overlaps[] = { BF::B3H, BF::B3, 0 };
+  const unsigned B3L_Overlaps[] = { BF::B3L, BF::B3, 0 };
+  const unsigned CC_Overlaps[] = { BF::CC, BF::ASTAT, BF::NCC, 0 };
+  const unsigned CYCLES_Overlaps[] = { BF::CYCLES, 0 };
+  const unsigned CYCLES2_Overlaps[] = { BF::CYCLES2, 0 };
+  const unsigned EMUDAT_Overlaps[] = { BF::EMUDAT, 0 };
+  const unsigned FP_Overlaps[] = { BF::FP, BF::FPH, BF::FPL, 0 };
+  const unsigned FPH_Overlaps[] = { BF::FPH, BF::FP, 0 };
+  const unsigned FPL_Overlaps[] = { BF::FPL, BF::FP, 0 };
+  const unsigned I0_Overlaps[] = { BF::I0, BF::I0H, BF::I0L, 0 };
+  const unsigned I0H_Overlaps[] = { BF::I0H, BF::I0, 0 };
+  const unsigned I0L_Overlaps[] = { BF::I0L, BF::I0, 0 };
+  const unsigned I1_Overlaps[] = { BF::I1, BF::I1H, BF::I1L, 0 };
+  const unsigned I1H_Overlaps[] = { BF::I1H, BF::I1, 0 };
+  const unsigned I1L_Overlaps[] = { BF::I1L, BF::I1, 0 };
+  const unsigned I2_Overlaps[] = { BF::I2, BF::I2H, BF::I2L, 0 };
+  const unsigned I2H_Overlaps[] = { BF::I2H, BF::I2, 0 };
+  const unsigned I2L_Overlaps[] = { BF::I2L, BF::I2, 0 };
+  const unsigned I3_Overlaps[] = { BF::I3, BF::I3H, BF::I3L, 0 };
+  const unsigned I3H_Overlaps[] = { BF::I3H, BF::I3, 0 };
+  const unsigned I3L_Overlaps[] = { BF::I3L, BF::I3, 0 };
+  const unsigned L0_Overlaps[] = { BF::L0, BF::L0H, BF::L0L, 0 };
+  const unsigned L0H_Overlaps[] = { BF::L0H, BF::L0, 0 };
+  const unsigned L0L_Overlaps[] = { BF::L0L, BF::L0, 0 };
+  const unsigned L1_Overlaps[] = { BF::L1, BF::L1H, BF::L1L, 0 };
+  const unsigned L1H_Overlaps[] = { BF::L1H, BF::L1, 0 };
+  const unsigned L1L_Overlaps[] = { BF::L1L, BF::L1, 0 };
+  const unsigned L2_Overlaps[] = { BF::L2, BF::L2H, BF::L2L, 0 };
+  const unsigned L2H_Overlaps[] = { BF::L2H, BF::L2, 0 };
+  const unsigned L2L_Overlaps[] = { BF::L2L, BF::L2, 0 };
+  const unsigned L3_Overlaps[] = { BF::L3, BF::L3H, BF::L3L, 0 };
+  const unsigned L3H_Overlaps[] = { BF::L3H, BF::L3, 0 };
+  const unsigned L3L_Overlaps[] = { BF::L3L, BF::L3, 0 };
+  const unsigned LB0_Overlaps[] = { BF::LB0, 0 };
+  const unsigned LB1_Overlaps[] = { BF::LB1, 0 };
+  const unsigned LC0_Overlaps[] = { BF::LC0, 0 };
+  const unsigned LC1_Overlaps[] = { BF::LC1, 0 };
+  const unsigned LT0_Overlaps[] = { BF::LT0, 0 };
+  const unsigned LT1_Overlaps[] = { BF::LT1, 0 };
+  const unsigned M0_Overlaps[] = { BF::M0, BF::M0H, BF::M0L, 0 };
+  const unsigned M0H_Overlaps[] = { BF::M0H, BF::M0, 0 };
+  const unsigned M0L_Overlaps[] = { BF::M0L, BF::M0, 0 };
+  const unsigned M1_Overlaps[] = { BF::M1, BF::M1H, BF::M1L, 0 };
+  const unsigned M1H_Overlaps[] = { BF::M1H, BF::M1, 0 };
+  const unsigned M1L_Overlaps[] = { BF::M1L, BF::M1, 0 };
+  const unsigned M2_Overlaps[] = { BF::M2, BF::M2H, BF::M2L, 0 };
+  const unsigned M2H_Overlaps[] = { BF::M2H, BF::M2, 0 };
+  const unsigned M2L_Overlaps[] = { BF::M2L, BF::M2, 0 };
+  const unsigned M3_Overlaps[] = { BF::M3, BF::M3H, BF::M3L, 0 };
+  const unsigned M3H_Overlaps[] = { BF::M3H, BF::M3, 0 };
+  const unsigned M3L_Overlaps[] = { BF::M3L, BF::M3, 0 };
+  const unsigned NCC_Overlaps[] = { BF::NCC, BF::ASTAT, BF::CC, 0 };
+  const unsigned P0_Overlaps[] = { BF::P0, BF::P0H, BF::P0L, 0 };
+  const unsigned P0H_Overlaps[] = { BF::P0H, BF::P0, 0 };
+  const unsigned P0L_Overlaps[] = { BF::P0L, BF::P0, 0 };
+  const unsigned P1_Overlaps[] = { BF::P1, BF::P1H, BF::P1L, 0 };
+  const unsigned P1H_Overlaps[] = { BF::P1H, BF::P1, 0 };
+  const unsigned P1L_Overlaps[] = { BF::P1L, BF::P1, 0 };
+  const unsigned P2_Overlaps[] = { BF::P2, BF::P2H, BF::P2L, 0 };
+  const unsigned P2H_Overlaps[] = { BF::P2H, BF::P2, 0 };
+  const unsigned P2L_Overlaps[] = { BF::P2L, BF::P2, 0 };
+  const unsigned P3_Overlaps[] = { BF::P3, BF::P3H, BF::P3L, 0 };
+  const unsigned P3H_Overlaps[] = { BF::P3H, BF::P3, 0 };
+  const unsigned P3L_Overlaps[] = { BF::P3L, BF::P3, 0 };
+  const unsigned P4_Overlaps[] = { BF::P4, BF::P4H, BF::P4L, 0 };
+  const unsigned P4H_Overlaps[] = { BF::P4H, BF::P4, 0 };
+  const unsigned P4L_Overlaps[] = { BF::P4L, BF::P4, 0 };
+  const unsigned P5_Overlaps[] = { BF::P5, BF::P5H, BF::P5L, 0 };
+  const unsigned P5H_Overlaps[] = { BF::P5H, BF::P5, 0 };
+  const unsigned P5L_Overlaps[] = { BF::P5L, BF::P5, 0 };
+  const unsigned R0_Overlaps[] = { BF::R0, BF::R0H, BF::R0L, 0 };
+  const unsigned R0H_Overlaps[] = { BF::R0H, BF::R0, 0 };
+  const unsigned R0L_Overlaps[] = { BF::R0L, BF::R0, 0 };
+  const unsigned R1_Overlaps[] = { BF::R1, BF::R1H, BF::R1L, 0 };
+  const unsigned R1H_Overlaps[] = { BF::R1H, BF::R1, 0 };
+  const unsigned R1L_Overlaps[] = { BF::R1L, BF::R1, 0 };
+  const unsigned R2_Overlaps[] = { BF::R2, BF::R2H, BF::R2L, 0 };
+  const unsigned R2H_Overlaps[] = { BF::R2H, BF::R2, 0 };
+  const unsigned R2L_Overlaps[] = { BF::R2L, BF::R2, 0 };
+  const unsigned R3_Overlaps[] = { BF::R3, BF::R3H, BF::R3L, 0 };
+  const unsigned R3H_Overlaps[] = { BF::R3H, BF::R3, 0 };
+  const unsigned R3L_Overlaps[] = { BF::R3L, BF::R3, 0 };
+  const unsigned R4_Overlaps[] = { BF::R4, BF::R4H, BF::R4L, 0 };
+  const unsigned R4H_Overlaps[] = { BF::R4H, BF::R4, 0 };
+  const unsigned R4L_Overlaps[] = { BF::R4L, BF::R4, 0 };
+  const unsigned R5_Overlaps[] = { BF::R5, BF::R5H, BF::R5L, 0 };
+  const unsigned R5H_Overlaps[] = { BF::R5H, BF::R5, 0 };
+  const unsigned R5L_Overlaps[] = { BF::R5L, BF::R5, 0 };
+  const unsigned R6_Overlaps[] = { BF::R6, BF::R6H, BF::R6L, 0 };
+  const unsigned R6H_Overlaps[] = { BF::R6H, BF::R6, 0 };
+  const unsigned R6L_Overlaps[] = { BF::R6L, BF::R6, 0 };
+  const unsigned R7_Overlaps[] = { BF::R7, BF::R7H, BF::R7L, 0 };
+  const unsigned R7H_Overlaps[] = { BF::R7H, BF::R7, 0 };
+  const unsigned R7L_Overlaps[] = { BF::R7L, BF::R7, 0 };
+  const unsigned RETE_Overlaps[] = { BF::RETE, 0 };
+  const unsigned RETI_Overlaps[] = { BF::RETI, 0 };
+  const unsigned RETN_Overlaps[] = { BF::RETN, 0 };
+  const unsigned RETS_Overlaps[] = { BF::RETS, 0 };
+  const unsigned RETX_Overlaps[] = { BF::RETX, 0 };
+  const unsigned SEQSTAT_Overlaps[] = { BF::SEQSTAT, 0 };
+  const unsigned SP_Overlaps[] = { BF::SP, BF::SPH, BF::SPL, 0 };
+  const unsigned SPH_Overlaps[] = { BF::SPH, BF::SP, 0 };
+  const unsigned SPL_Overlaps[] = { BF::SPL, BF::SP, 0 };
+  const unsigned SYSCFG_Overlaps[] = { BF::SYSCFG, 0 };
+  const unsigned USP_Overlaps[] = { BF::USP, 0 };
+  const unsigned V_Overlaps[] = { BF::V, BF::ASTAT, 0 };
+  const unsigned VS_Overlaps[] = { BF::VS, BF::ASTAT, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned A0_SubRegsSet[] = { BF::A0X, BF::A0W, BF::A0H, BF::A0L, 0 };
+  const unsigned A0W_SubRegsSet[] = { BF::A0H, BF::A0L, 0 };
+  const unsigned A1_SubRegsSet[] = { BF::A1X, BF::A1W, BF::A1H, BF::A1L, 0 };
+  const unsigned A1W_SubRegsSet[] = { BF::A1H, BF::A1L, 0 };
+  const unsigned B0_SubRegsSet[] = { BF::B0H, BF::B0L, 0 };
+  const unsigned B1_SubRegsSet[] = { BF::B1H, BF::B1L, 0 };
+  const unsigned B2_SubRegsSet[] = { BF::B2H, BF::B2L, 0 };
+  const unsigned B3_SubRegsSet[] = { BF::B3H, BF::B3L, 0 };
+  const unsigned FP_SubRegsSet[] = { BF::FPH, BF::FPL, 0 };
+  const unsigned I0_SubRegsSet[] = { BF::I0H, BF::I0L, 0 };
+  const unsigned I1_SubRegsSet[] = { BF::I1H, BF::I1L, 0 };
+  const unsigned I2_SubRegsSet[] = { BF::I2H, BF::I2L, 0 };
+  const unsigned I3_SubRegsSet[] = { BF::I3H, BF::I3L, 0 };
+  const unsigned L0_SubRegsSet[] = { BF::L0H, BF::L0L, 0 };
+  const unsigned L1_SubRegsSet[] = { BF::L1H, BF::L1L, 0 };
+  const unsigned L2_SubRegsSet[] = { BF::L2H, BF::L2L, 0 };
+  const unsigned L3_SubRegsSet[] = { BF::L3H, BF::L3L, 0 };
+  const unsigned M0_SubRegsSet[] = { BF::M0H, BF::M0L, 0 };
+  const unsigned M1_SubRegsSet[] = { BF::M1H, BF::M1L, 0 };
+  const unsigned M2_SubRegsSet[] = { BF::M2H, BF::M2L, 0 };
+  const unsigned M3_SubRegsSet[] = { BF::M3H, BF::M3L, 0 };
+  const unsigned P0_SubRegsSet[] = { BF::P0H, BF::P0L, 0 };
+  const unsigned P1_SubRegsSet[] = { BF::P1H, BF::P1L, 0 };
+  const unsigned P2_SubRegsSet[] = { BF::P2H, BF::P2L, 0 };
+  const unsigned P3_SubRegsSet[] = { BF::P3H, BF::P3L, 0 };
+  const unsigned P4_SubRegsSet[] = { BF::P4H, BF::P4L, 0 };
+  const unsigned P5_SubRegsSet[] = { BF::P5H, BF::P5L, 0 };
+  const unsigned R0_SubRegsSet[] = { BF::R0H, BF::R0L, 0 };
+  const unsigned R1_SubRegsSet[] = { BF::R1H, BF::R1L, 0 };
+  const unsigned R2_SubRegsSet[] = { BF::R2H, BF::R2L, 0 };
+  const unsigned R3_SubRegsSet[] = { BF::R3H, BF::R3L, 0 };
+  const unsigned R4_SubRegsSet[] = { BF::R4H, BF::R4L, 0 };
+  const unsigned R5_SubRegsSet[] = { BF::R5H, BF::R5L, 0 };
+  const unsigned R6_SubRegsSet[] = { BF::R6H, BF::R6L, 0 };
+  const unsigned R7_SubRegsSet[] = { BF::R7H, BF::R7L, 0 };
+  const unsigned SP_SubRegsSet[] = { BF::SPH, BF::SPL, 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+  const unsigned A0H_SuperRegsSet[] = { BF::A0W, BF::A0, 0 };
+  const unsigned A0L_SuperRegsSet[] = { BF::A0W, BF::A0, 0 };
+  const unsigned A0W_SuperRegsSet[] = { BF::A0, 0 };
+  const unsigned A0X_SuperRegsSet[] = { BF::A0, 0 };
+  const unsigned A1H_SuperRegsSet[] = { BF::A1W, BF::A1, 0 };
+  const unsigned A1L_SuperRegsSet[] = { BF::A1W, BF::A1, 0 };
+  const unsigned A1W_SuperRegsSet[] = { BF::A1, 0 };
+  const unsigned A1X_SuperRegsSet[] = { BF::A1, 0 };
+  const unsigned B0H_SuperRegsSet[] = { BF::B0, 0 };
+  const unsigned B0L_SuperRegsSet[] = { BF::B0, 0 };
+  const unsigned B1H_SuperRegsSet[] = { BF::B1, 0 };
+  const unsigned B1L_SuperRegsSet[] = { BF::B1, 0 };
+  const unsigned B2H_SuperRegsSet[] = { BF::B2, 0 };
+  const unsigned B2L_SuperRegsSet[] = { BF::B2, 0 };
+  const unsigned B3H_SuperRegsSet[] = { BF::B3, 0 };
+  const unsigned B3L_SuperRegsSet[] = { BF::B3, 0 };
+  const unsigned FPH_SuperRegsSet[] = { BF::FP, 0 };
+  const unsigned FPL_SuperRegsSet[] = { BF::FP, 0 };
+  const unsigned I0H_SuperRegsSet[] = { BF::I0, 0 };
+  const unsigned I0L_SuperRegsSet[] = { BF::I0, 0 };
+  const unsigned I1H_SuperRegsSet[] = { BF::I1, 0 };
+  const unsigned I1L_SuperRegsSet[] = { BF::I1, 0 };
+  const unsigned I2H_SuperRegsSet[] = { BF::I2, 0 };
+  const unsigned I2L_SuperRegsSet[] = { BF::I2, 0 };
+  const unsigned I3H_SuperRegsSet[] = { BF::I3, 0 };
+  const unsigned I3L_SuperRegsSet[] = { BF::I3, 0 };
+  const unsigned L0H_SuperRegsSet[] = { BF::L0, 0 };
+  const unsigned L0L_SuperRegsSet[] = { BF::L0, 0 };
+  const unsigned L1H_SuperRegsSet[] = { BF::L1, 0 };
+  const unsigned L1L_SuperRegsSet[] = { BF::L1, 0 };
+  const unsigned L2H_SuperRegsSet[] = { BF::L2, 0 };
+  const unsigned L2L_SuperRegsSet[] = { BF::L2, 0 };
+  const unsigned L3H_SuperRegsSet[] = { BF::L3, 0 };
+  const unsigned L3L_SuperRegsSet[] = { BF::L3, 0 };
+  const unsigned M0H_SuperRegsSet[] = { BF::M0, 0 };
+  const unsigned M0L_SuperRegsSet[] = { BF::M0, 0 };
+  const unsigned M1H_SuperRegsSet[] = { BF::M1, 0 };
+  const unsigned M1L_SuperRegsSet[] = { BF::M1, 0 };
+  const unsigned M2H_SuperRegsSet[] = { BF::M2, 0 };
+  const unsigned M2L_SuperRegsSet[] = { BF::M2, 0 };
+  const unsigned M3H_SuperRegsSet[] = { BF::M3, 0 };
+  const unsigned M3L_SuperRegsSet[] = { BF::M3, 0 };
+  const unsigned P0H_SuperRegsSet[] = { BF::P0, 0 };
+  const unsigned P0L_SuperRegsSet[] = { BF::P0, 0 };
+  const unsigned P1H_SuperRegsSet[] = { BF::P1, 0 };
+  const unsigned P1L_SuperRegsSet[] = { BF::P1, 0 };
+  const unsigned P2H_SuperRegsSet[] = { BF::P2, 0 };
+  const unsigned P2L_SuperRegsSet[] = { BF::P2, 0 };
+  const unsigned P3H_SuperRegsSet[] = { BF::P3, 0 };
+  const unsigned P3L_SuperRegsSet[] = { BF::P3, 0 };
+  const unsigned P4H_SuperRegsSet[] = { BF::P4, 0 };
+  const unsigned P4L_SuperRegsSet[] = { BF::P4, 0 };
+  const unsigned P5H_SuperRegsSet[] = { BF::P5, 0 };
+  const unsigned P5L_SuperRegsSet[] = { BF::P5, 0 };
+  const unsigned R0H_SuperRegsSet[] = { BF::R0, 0 };
+  const unsigned R0L_SuperRegsSet[] = { BF::R0, 0 };
+  const unsigned R1H_SuperRegsSet[] = { BF::R1, 0 };
+  const unsigned R1L_SuperRegsSet[] = { BF::R1, 0 };
+  const unsigned R2H_SuperRegsSet[] = { BF::R2, 0 };
+  const unsigned R2L_SuperRegsSet[] = { BF::R2, 0 };
+  const unsigned R3H_SuperRegsSet[] = { BF::R3, 0 };
+  const unsigned R3L_SuperRegsSet[] = { BF::R3, 0 };
+  const unsigned R4H_SuperRegsSet[] = { BF::R4, 0 };
+  const unsigned R4L_SuperRegsSet[] = { BF::R4, 0 };
+  const unsigned R5H_SuperRegsSet[] = { BF::R5, 0 };
+  const unsigned R5L_SuperRegsSet[] = { BF::R5, 0 };
+  const unsigned R6H_SuperRegsSet[] = { BF::R6, 0 };
+  const unsigned R6L_SuperRegsSet[] = { BF::R6, 0 };
+  const unsigned R7H_SuperRegsSet[] = { BF::R7, 0 };
+  const unsigned R7L_SuperRegsSet[] = { BF::R7, 0 };
+  const unsigned SPH_SuperRegsSet[] = { BF::SP, 0 };
+  const unsigned SPL_SuperRegsSet[] = { BF::SP, 0 };
+}
+
+MCRegisterDesc BlackfinRegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "A0",	A0_Overlaps,	A0_SubRegsSet,	Empty_SuperRegsSet },
+  { "A0H",	A0H_Overlaps,	Empty_SubRegsSet,	A0H_SuperRegsSet },
+  { "A0L",	A0L_Overlaps,	Empty_SubRegsSet,	A0L_SuperRegsSet },
+  { "A0W",	A0W_Overlaps,	A0W_SubRegsSet,	A0W_SuperRegsSet },
+  { "A0X",	A0X_Overlaps,	Empty_SubRegsSet,	A0X_SuperRegsSet },
+  { "A1",	A1_Overlaps,	A1_SubRegsSet,	Empty_SuperRegsSet },
+  { "A1H",	A1H_Overlaps,	Empty_SubRegsSet,	A1H_SuperRegsSet },
+  { "A1L",	A1L_Overlaps,	Empty_SubRegsSet,	A1L_SuperRegsSet },
+  { "A1W",	A1W_Overlaps,	A1W_SubRegsSet,	A1W_SuperRegsSet },
+  { "A1X",	A1X_Overlaps,	Empty_SubRegsSet,	A1X_SuperRegsSet },
+  { "AC0",	AC0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AC1",	AC1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AN",	AN_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AQ",	AQ_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "ASTAT",	ASTAT_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AV0",	AV0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AV0S",	AV0S_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AV1",	AV1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AV1S",	AV1S_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "AZ",	AZ_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "B0",	B0_Overlaps,	B0_SubRegsSet,	Empty_SuperRegsSet },
+  { "B0H",	B0H_Overlaps,	Empty_SubRegsSet,	B0H_SuperRegsSet },
+  { "B0L",	B0L_Overlaps,	Empty_SubRegsSet,	B0L_SuperRegsSet },
+  { "B1",	B1_Overlaps,	B1_SubRegsSet,	Empty_SuperRegsSet },
+  { "B1H",	B1H_Overlaps,	Empty_SubRegsSet,	B1H_SuperRegsSet },
+  { "B1L",	B1L_Overlaps,	Empty_SubRegsSet,	B1L_SuperRegsSet },
+  { "B2",	B2_Overlaps,	B2_SubRegsSet,	Empty_SuperRegsSet },
+  { "B2H",	B2H_Overlaps,	Empty_SubRegsSet,	B2H_SuperRegsSet },
+  { "B2L",	B2L_Overlaps,	Empty_SubRegsSet,	B2L_SuperRegsSet },
+  { "B3",	B3_Overlaps,	B3_SubRegsSet,	Empty_SuperRegsSet },
+  { "B3H",	B3H_Overlaps,	Empty_SubRegsSet,	B3H_SuperRegsSet },
+  { "B3L",	B3L_Overlaps,	Empty_SubRegsSet,	B3L_SuperRegsSet },
+  { "CC",	CC_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "CYCLES",	CYCLES_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "CYCLES2",	CYCLES2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "EMUDAT",	EMUDAT_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "FP",	FP_Overlaps,	FP_SubRegsSet,	Empty_SuperRegsSet },
+  { "FPH",	FPH_Overlaps,	Empty_SubRegsSet,	FPH_SuperRegsSet },
+  { "FPL",	FPL_Overlaps,	Empty_SubRegsSet,	FPL_SuperRegsSet },
+  { "I0",	I0_Overlaps,	I0_SubRegsSet,	Empty_SuperRegsSet },
+  { "I0H",	I0H_Overlaps,	Empty_SubRegsSet,	I0H_SuperRegsSet },
+  { "I0L",	I0L_Overlaps,	Empty_SubRegsSet,	I0L_SuperRegsSet },
+  { "I1",	I1_Overlaps,	I1_SubRegsSet,	Empty_SuperRegsSet },
+  { "I1H",	I1H_Overlaps,	Empty_SubRegsSet,	I1H_SuperRegsSet },
+  { "I1L",	I1L_Overlaps,	Empty_SubRegsSet,	I1L_SuperRegsSet },
+  { "I2",	I2_Overlaps,	I2_SubRegsSet,	Empty_SuperRegsSet },
+  { "I2H",	I2H_Overlaps,	Empty_SubRegsSet,	I2H_SuperRegsSet },
+  { "I2L",	I2L_Overlaps,	Empty_SubRegsSet,	I2L_SuperRegsSet },
+  { "I3",	I3_Overlaps,	I3_SubRegsSet,	Empty_SuperRegsSet },
+  { "I3H",	I3H_Overlaps,	Empty_SubRegsSet,	I3H_SuperRegsSet },
+  { "I3L",	I3L_Overlaps,	Empty_SubRegsSet,	I3L_SuperRegsSet },
+  { "L0",	L0_Overlaps,	L0_SubRegsSet,	Empty_SuperRegsSet },
+  { "L0H",	L0H_Overlaps,	Empty_SubRegsSet,	L0H_SuperRegsSet },
+  { "L0L",	L0L_Overlaps,	Empty_SubRegsSet,	L0L_SuperRegsSet },
+  { "L1",	L1_Overlaps,	L1_SubRegsSet,	Empty_SuperRegsSet },
+  { "L1H",	L1H_Overlaps,	Empty_SubRegsSet,	L1H_SuperRegsSet },
+  { "L1L",	L1L_Overlaps,	Empty_SubRegsSet,	L1L_SuperRegsSet },
+  { "L2",	L2_Overlaps,	L2_SubRegsSet,	Empty_SuperRegsSet },
+  { "L2H",	L2H_Overlaps,	Empty_SubRegsSet,	L2H_SuperRegsSet },
+  { "L2L",	L2L_Overlaps,	Empty_SubRegsSet,	L2L_SuperRegsSet },
+  { "L3",	L3_Overlaps,	L3_SubRegsSet,	Empty_SuperRegsSet },
+  { "L3H",	L3H_Overlaps,	Empty_SubRegsSet,	L3H_SuperRegsSet },
+  { "L3L",	L3L_Overlaps,	Empty_SubRegsSet,	L3L_SuperRegsSet },
+  { "LB0",	LB0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "LB1",	LB1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "LC0",	LC0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "LC1",	LC1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "LT0",	LT0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "LT1",	LT1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "M0",	M0_Overlaps,	M0_SubRegsSet,	Empty_SuperRegsSet },
+  { "M0H",	M0H_Overlaps,	Empty_SubRegsSet,	M0H_SuperRegsSet },
+  { "M0L",	M0L_Overlaps,	Empty_SubRegsSet,	M0L_SuperRegsSet },
+  { "M1",	M1_Overlaps,	M1_SubRegsSet,	Empty_SuperRegsSet },
+  { "M1H",	M1H_Overlaps,	Empty_SubRegsSet,	M1H_SuperRegsSet },
+  { "M1L",	M1L_Overlaps,	Empty_SubRegsSet,	M1L_SuperRegsSet },
+  { "M2",	M2_Overlaps,	M2_SubRegsSet,	Empty_SuperRegsSet },
+  { "M2H",	M2H_Overlaps,	Empty_SubRegsSet,	M2H_SuperRegsSet },
+  { "M2L",	M2L_Overlaps,	Empty_SubRegsSet,	M2L_SuperRegsSet },
+  { "M3",	M3_Overlaps,	M3_SubRegsSet,	Empty_SuperRegsSet },
+  { "M3H",	M3H_Overlaps,	Empty_SubRegsSet,	M3H_SuperRegsSet },
+  { "M3L",	M3L_Overlaps,	Empty_SubRegsSet,	M3L_SuperRegsSet },
+  { "NCC",	NCC_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P0",	P0_Overlaps,	P0_SubRegsSet,	Empty_SuperRegsSet },
+  { "P0H",	P0H_Overlaps,	Empty_SubRegsSet,	P0H_SuperRegsSet },
+  { "P0L",	P0L_Overlaps,	Empty_SubRegsSet,	P0L_SuperRegsSet },
+  { "P1",	P1_Overlaps,	P1_SubRegsSet,	Empty_SuperRegsSet },
+  { "P1H",	P1H_Overlaps,	Empty_SubRegsSet,	P1H_SuperRegsSet },
+  { "P1L",	P1L_Overlaps,	Empty_SubRegsSet,	P1L_SuperRegsSet },
+  { "P2",	P2_Overlaps,	P2_SubRegsSet,	Empty_SuperRegsSet },
+  { "P2H",	P2H_Overlaps,	Empty_SubRegsSet,	P2H_SuperRegsSet },
+  { "P2L",	P2L_Overlaps,	Empty_SubRegsSet,	P2L_SuperRegsSet },
+  { "P3",	P3_Overlaps,	P3_SubRegsSet,	Empty_SuperRegsSet },
+  { "P3H",	P3H_Overlaps,	Empty_SubRegsSet,	P3H_SuperRegsSet },
+  { "P3L",	P3L_Overlaps,	Empty_SubRegsSet,	P3L_SuperRegsSet },
+  { "P4",	P4_Overlaps,	P4_SubRegsSet,	Empty_SuperRegsSet },
+  { "P4H",	P4H_Overlaps,	Empty_SubRegsSet,	P4H_SuperRegsSet },
+  { "P4L",	P4L_Overlaps,	Empty_SubRegsSet,	P4L_SuperRegsSet },
+  { "P5",	P5_Overlaps,	P5_SubRegsSet,	Empty_SuperRegsSet },
+  { "P5H",	P5H_Overlaps,	Empty_SubRegsSet,	P5H_SuperRegsSet },
+  { "P5L",	P5L_Overlaps,	Empty_SubRegsSet,	P5L_SuperRegsSet },
+  { "R0",	R0_Overlaps,	R0_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0H",	R0H_Overlaps,	Empty_SubRegsSet,	R0H_SuperRegsSet },
+  { "R0L",	R0L_Overlaps,	Empty_SubRegsSet,	R0L_SuperRegsSet },
+  { "R1",	R1_Overlaps,	R1_SubRegsSet,	Empty_SuperRegsSet },
+  { "R1H",	R1H_Overlaps,	Empty_SubRegsSet,	R1H_SuperRegsSet },
+  { "R1L",	R1L_Overlaps,	Empty_SubRegsSet,	R1L_SuperRegsSet },
+  { "R2",	R2_Overlaps,	R2_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2H",	R2H_Overlaps,	Empty_SubRegsSet,	R2H_SuperRegsSet },
+  { "R2L",	R2L_Overlaps,	Empty_SubRegsSet,	R2L_SuperRegsSet },
+  { "R3",	R3_Overlaps,	R3_SubRegsSet,	Empty_SuperRegsSet },
+  { "R3H",	R3H_Overlaps,	Empty_SubRegsSet,	R3H_SuperRegsSet },
+  { "R3L",	R3L_Overlaps,	Empty_SubRegsSet,	R3L_SuperRegsSet },
+  { "R4",	R4_Overlaps,	R4_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4H",	R4H_Overlaps,	Empty_SubRegsSet,	R4H_SuperRegsSet },
+  { "R4L",	R4L_Overlaps,	Empty_SubRegsSet,	R4L_SuperRegsSet },
+  { "R5",	R5_Overlaps,	R5_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5H",	R5H_Overlaps,	Empty_SubRegsSet,	R5H_SuperRegsSet },
+  { "R5L",	R5L_Overlaps,	Empty_SubRegsSet,	R5L_SuperRegsSet },
+  { "R6",	R6_Overlaps,	R6_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6H",	R6H_Overlaps,	Empty_SubRegsSet,	R6H_SuperRegsSet },
+  { "R6L",	R6L_Overlaps,	Empty_SubRegsSet,	R6L_SuperRegsSet },
+  { "R7",	R7_Overlaps,	R7_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7H",	R7H_Overlaps,	Empty_SubRegsSet,	R7H_SuperRegsSet },
+  { "R7L",	R7L_Overlaps,	Empty_SubRegsSet,	R7L_SuperRegsSet },
+  { "RETE",	RETE_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RETI",	RETI_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RETN",	RETN_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RETS",	RETS_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RETX",	RETX_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "SEQSTAT",	SEQSTAT_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "SP",	SP_Overlaps,	SP_SubRegsSet,	Empty_SuperRegsSet },
+  { "SPH",	SPH_Overlaps,	Empty_SubRegsSet,	SPH_SuperRegsSet },
+  { "SPL",	SPL_Overlaps,	Empty_SubRegsSet,	SPL_SuperRegsSet },
+  { "SYSCFG",	SYSCFG_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "USP",	USP_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "V",	V_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "VS",	VS_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // ALL Register Class...
+  static const unsigned ALL[] = {
+    BF::R0, BF::R1, BF::R2, BF::R3, BF::R4, BF::R5, BF::R6, BF::R7, BF::P0, BF::P1, BF::P2, BF::P3, BF::P4, BF::P5, BF::FP, BF::SP, BF::I0, BF::I1, BF::I2, BF::I3, BF::M0, BF::M1, BF::M2, BF::M3, BF::B0, BF::B1, BF::B2, BF::B3, BF::L0, BF::L1, BF::L2, BF::L3, BF::A0X, BF::A0W, BF::A1X, BF::A1W, BF::ASTAT, BF::RETS, BF::LC0, BF::LT0, BF::LB0, BF::LC1, BF::LT1, BF::LB1, BF::CYCLES, BF::CYCLES2, BF::USP, BF::SEQSTAT, BF::SYSCFG, BF::RETI, BF::RETX, BF::RETN, BF::RETE, BF::EMUDAT, 
+  };
+
+  // ALL Bit set.
+  static const unsigned char ALLBits[] = {
+    0x30, 0x86, 0x20, 0x49, 0x3c, 0x49, 0x92, 0x24, 0x7f, 0x92, 0x48, 0x92, 0x24, 0x49, 0x92, 0xe4, 0xcf, 
+  };
+
+  // Accu Register Class...
+  static const unsigned Accu[] = {
+    BF::A0, BF::A1, 
+  };
+
+  // Accu Bit set.
+  static const unsigned char AccuBits[] = {
+    0x42, 
+  };
+
+  // AnyCC Register Class...
+  static const unsigned AnyCC[] = {
+    BF::CC, BF::NCC, 
+  };
+
+  // AnyCC Bit set.
+  static const unsigned char AnyCCBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 
+  };
+
+  // B Register Class...
+  static const unsigned B[] = {
+    BF::B0, BF::B1, BF::B2, BF::B3, 
+  };
+
+  // B Bit set.
+  static const unsigned char BBits[] = {
+    0x00, 0x00, 0x20, 0x49, 
+  };
+
+  // D Register Class...
+  static const unsigned D[] = {
+    BF::R0, BF::R1, BF::R2, BF::R3, BF::R4, BF::R5, BF::R6, BF::R7, 
+  };
+
+  // D Bit set.
+  static const unsigned char DBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x49, 0x92, 0x04, 
+  };
+
+  // D16 Register Class...
+  static const unsigned D16[] = {
+    BF::R0L, BF::R1L, BF::R2L, BF::R3L, BF::R4L, BF::R5L, BF::R6L, BF::R7L, BF::R0H, BF::R1H, BF::R2H, BF::R3H, BF::R4H, BF::R5H, BF::R6H, BF::R7H, 
+  };
+
+  // D16 Bit set.
+  static const unsigned char D16Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc0, 0xb6, 0x6d, 0x1b, 
+  };
+
+  // D16H Register Class...
+  static const unsigned D16H[] = {
+    BF::R0H, BF::R1H, BF::R2H, BF::R3H, BF::R4H, BF::R5H, BF::R6H, BF::R7H, 
+  };
+
+  // D16H Bit set.
+  static const unsigned char D16HBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x92, 0x24, 0x09, 
+  };
+
+  // D16L Register Class...
+  static const unsigned D16L[] = {
+    BF::R0L, BF::R1L, BF::R2L, BF::R3L, BF::R4L, BF::R5L, BF::R6L, BF::R7L, 
+  };
+
+  // D16L Bit set.
+  static const unsigned char D16LBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x24, 0x49, 0x12, 
+  };
+
+  // DCons Register Class...
+  static const unsigned DCons[] = {
+    BF::R0, BF::R2, BF::R4, BF::R6, 
+  };
+
+  // DCons Bit set.
+  static const unsigned char DConsBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x08, 0x82, 
+  };
+
+  // DP Register Class...
+  static const unsigned DP[] = {
+    BF::R0, BF::R1, BF::R2, BF::R3, BF::R4, BF::R5, BF::R6, BF::R7, BF::P0, BF::P1, BF::P2, BF::P3, BF::P4, BF::P5, BF::FP, BF::SP, 
+  };
+
+  // DP Bit set.
+  static const unsigned char DPBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x92, 0x24, 0x49, 0x92, 0x04, 0x08, 
+  };
+
+  // DP16 Register Class...
+  static const unsigned DP16[] = {
+    BF::R0L, BF::R1L, BF::R2L, BF::R3L, BF::R4L, BF::R5L, BF::R6L, BF::R7L, BF::R0H, BF::R1H, BF::R2H, BF::R3H, BF::R4H, BF::R5H, BF::R6H, BF::R7H, BF::P0L, BF::P1L, BF::P2L, BF::P3L, BF::P4L, BF::P5L, BF::SPL, BF::FPL, BF::P0H, BF::P1H, BF::P2H, BF::P3H, BF::P4H, BF::P5H, BF::SPH, BF::FPH, 
+  };
+
+  // DP16 Bit set.
+  static const unsigned char DP16Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0xb0, 0x6d, 0xdb, 0xb6, 0x6d, 0x1b, 0x30, 
+  };
+
+  // DP16H Register Class...
+  static const unsigned DP16H[] = {
+    BF::R0H, BF::R1H, BF::R2H, BF::R3H, BF::R4H, BF::R5H, BF::R6H, BF::R7H, BF::P0H, BF::P1H, BF::P2H, BF::P3H, BF::P4H, BF::P5H, BF::SPH, BF::FPH, 
+  };
+
+  // DP16H Bit set.
+  static const unsigned char DP16HBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x90, 0x24, 0x49, 0x92, 0x24, 0x09, 0x10, 
+  };
+
+  // DP16L Register Class...
+  static const unsigned DP16L[] = {
+    BF::R0L, BF::R1L, BF::R2L, BF::R3L, BF::R4L, BF::R5L, BF::R6L, BF::R7L, BF::P0L, BF::P1L, BF::P2L, BF::P3L, BF::P4L, BF::P5L, BF::SPL, BF::FPL, 
+  };
+
+  // DP16L Bit set.
+  static const unsigned char DP16LBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x49, 0x92, 0x24, 0x49, 0x12, 0x20, 
+  };
+
+  // GR Register Class...
+  static const unsigned GR[] = {
+    BF::R0, BF::R1, BF::R2, BF::R3, BF::R4, BF::R5, BF::R6, BF::R7, BF::P0, BF::P1, BF::P2, BF::P3, BF::P4, BF::P5, BF::FP, BF::SP, BF::I0, BF::I1, BF::I2, BF::I3, BF::M0, BF::M1, BF::M2, BF::M3, BF::B0, BF::B1, BF::B2, BF::B3, BF::L0, BF::L1, BF::L2, BF::L3, 
+  };
+
+  // GR Bit set.
+  static const unsigned char GRBits[] = {
+    0x00, 0x00, 0x20, 0x49, 0x20, 0x49, 0x92, 0x24, 0x40, 0x92, 0x48, 0x92, 0x24, 0x49, 0x92, 0x04, 0x08, 
+  };
+
+  // GR16 Register Class...
+  static const unsigned GR16[] = {
+    BF::R0L, BF::R1L, BF::R2L, BF::R3L, BF::R4L, BF::R5L, BF::R6L, BF::R7L, BF::R0H, BF::R1H, BF::R2H, BF::R3H, BF::R4H, BF::R5H, BF::R6H, BF::R7H, BF::P0L, BF::P1L, BF::P2L, BF::P3L, BF::P4L, BF::P5L, BF::SPL, BF::FPL, BF::P0H, BF::P1H, BF::P2H, BF::P3H, BF::P4H, BF::P5H, BF::SPH, BF::FPH, BF::I0H, BF::I0L, BF::I1H, BF::I1L, BF::I2H, BF::I2L, BF::I3H, BF::I3L, BF::M0H, BF::M0L, BF::M1H, BF::M1L, BF::M2H, BF::M2L, BF::M3H, BF::M3L, BF::B0H, BF::B0L, BF::B1H, BF::B1L, BF::B2H, BF::B2L, BF::B3H, BF::B3L, BF::L0H, BF::L0L, BF::L1H, BF::L1L, BF::L2H, BF::L2L, BF::L3H, BF::L3L, 
+  };
+
+  // GR16 Bit set.
+  static const unsigned char GR16Bits[] = {
+    0x00, 0x00, 0xc0, 0xb6, 0xc1, 0xb6, 0x6d, 0xdb, 0x80, 0x6d, 0xb3, 0x6d, 0xdb, 0xb6, 0x6d, 0x1b, 0x30, 
+  };
+
+  // I Register Class...
+  static const unsigned I[] = {
+    BF::I0, BF::I1, BF::I2, BF::I3, 
+  };
+
+  // I Bit set.
+  static const unsigned char IBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x49, 0x02, 
+  };
+
+  // JustCC Register Class...
+  static const unsigned JustCC[] = {
+    BF::CC, 
+  };
+
+  // JustCC Bit set.
+  static const unsigned char JustCCBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x02, 
+  };
+
+  // L Register Class...
+  static const unsigned L[] = {
+    BF::L0, BF::L1, BF::L2, BF::L3, 
+  };
+
+  // L Bit set.
+  static const unsigned char LBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x90, 0x24, 
+  };
+
+  // M Register Class...
+  static const unsigned M[] = {
+    BF::M0, BF::M1, BF::M2, BF::M3, 
+  };
+
+  // M Bit set.
+  static const unsigned char MBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x92, 
+  };
+
+  // NotCC Register Class...
+  static const unsigned NotCC[] = {
+    BF::NCC, 
+  };
+
+  // NotCC Bit set.
+  static const unsigned char NotCCBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 
+  };
+
+  // P Register Class...
+  static const unsigned P[] = {
+    BF::P0, BF::P1, BF::P2, BF::P3, BF::P4, BF::P5, BF::FP, BF::SP, 
+  };
+
+  // P Bit set.
+  static const unsigned char PBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x92, 0x04, 0x00, 0x00, 0x00, 0x08, 
+  };
+
+  // P16 Register Class...
+  static const unsigned P16[] = {
+    BF::P0L, BF::P1L, BF::P2L, BF::P3L, BF::P4L, BF::P5L, BF::SPL, BF::FPL, BF::P0H, BF::P1H, BF::P2H, BF::P3H, BF::P4H, BF::P5H, BF::SPH, BF::FPH, 
+  };
+
+  // P16 Bit set.
+  static const unsigned char P16Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0xb0, 0x6d, 0x1b, 0x00, 0x00, 0x00, 0x30, 
+  };
+
+  // P16H Register Class...
+  static const unsigned P16H[] = {
+    BF::P0H, BF::P1H, BF::P2H, BF::P3H, BF::P4H, BF::P5H, BF::SPH, BF::FPH, 
+  };
+
+  // P16H Bit set.
+  static const unsigned char P16HBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x90, 0x24, 0x09, 0x00, 0x00, 0x00, 0x10, 
+  };
+
+  // P16L Register Class...
+  static const unsigned P16L[] = {
+    BF::P0L, BF::P1L, BF::P2L, BF::P3L, BF::P4L, BF::P5L, BF::SPL, BF::FPL, 
+  };
+
+  // P16L Bit set.
+  static const unsigned char P16LBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x49, 0x12, 0x00, 0x00, 0x00, 0x20, 
+  };
+
+  // PI Register Class...
+  static const unsigned PI[] = {
+    BF::P0, BF::P1, BF::P2, BF::P3, BF::P4, BF::P5, BF::FP, BF::SP, BF::I0, BF::I1, BF::I2, BF::I3, 
+  };
+
+  // PI Bit set.
+  static const unsigned char PIBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x20, 0x49, 0x02, 0x00, 0x00, 0x00, 0x48, 0x92, 0x04, 0x00, 0x00, 0x00, 0x08, 
+  };
+
+  // StatBit Register Class...
+  static const unsigned StatBit[] = {
+    BF::AZ, BF::AN, BF::CC, BF::AQ, BF::AC0, BF::AC1, BF::AV0, BF::AV0S, BF::AV1, BF::AV1S, BF::V, BF::VS, 
+  };
+
+  // StatBit Bit set.
+  static const unsigned char StatBitBits[] = {
+    0x00, 0x78, 0x1f, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 
+  };
+
+  // WCons Register Class...
+  static const unsigned WCons[] = {
+    BF::R1, BF::R3, BF::R5, BF::R7, 
+  };
+
+  // WCons Bit set.
+  static const unsigned char WConsBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x10, 0x04, 
+  };
+
+  // cCons Register Class...
+  static const unsigned cCons[] = {
+    BF::I0, BF::I1, BF::I2, BF::I3, BF::B0, BF::B1, BF::B2, BF::B3, BF::L0, BF::L1, BF::L2, BF::L3, 
+  };
+
+  // cCons Bit set.
+  static const unsigned char cConsBits[] = {
+    0x00, 0x00, 0x20, 0x49, 0x00, 0x49, 0x92, 0x24, 
+  };
+
+  // kCons Register Class...
+  static const unsigned kCons[] = {
+    BF::LC0, BF::LC1, 
+  };
+
+  // kCons Bit set.
+  static const unsigned char kConsBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0c, 
+  };
+
+  // tCons Register Class...
+  static const unsigned tCons[] = {
+    BF::LT0, BF::LT1, 
+  };
+
+  // tCons Bit set.
+  static const unsigned char tConsBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30, 
+  };
+
+  // uCons Register Class...
+  static const unsigned uCons[] = {
+    BF::LB0, BF::LB1, 
+  };
+
+  // uCons Bit set.
+  static const unsigned char uConsBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 
+  };
+
+  // yCons Register Class...
+  static const unsigned yCons[] = {
+    BF::RETS, BF::RETN, BF::RETI, BF::RETX, BF::RETE, BF::ASTAT, BF::SEQSTAT, BF::USP, 
+  };
+
+  // yCons Bit set.
+  static const unsigned char yConsBits[] = {
+    0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe0, 0x87, 
+  };
+
+  // zCons Register Class...
+  static const unsigned zCons[] = {
+    BF::P0, BF::P1, BF::P2, 
+  };
+
+  // zCons Bit set.
+  static const unsigned char zConsBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x02, 
+  };
+
+}
+
+MCRegisterClass BlackfinMCRegisterClasses[] = {
+  MCRegisterClass(BF::ALLRegClassID, "ALL", 4, 4, 1, 1, ALL, ALL + 54, ALLBits, sizeof(ALLBits)),
+  MCRegisterClass(BF::AccuRegClassID, "Accu", 8, 8, 1, 1, Accu, Accu + 2, AccuBits, sizeof(AccuBits)),
+  MCRegisterClass(BF::AnyCCRegClassID, "AnyCC", 1, 1, -1, 1, AnyCC, AnyCC + 2, AnyCCBits, sizeof(AnyCCBits)),
+  MCRegisterClass(BF::BRegClassID, "B", 4, 4, 1, 1, B, B + 4, BBits, sizeof(BBits)),
+  MCRegisterClass(BF::DRegClassID, "D", 4, 4, 1, 1, D, D + 8, DBits, sizeof(DBits)),
+  MCRegisterClass(BF::D16RegClassID, "D16", 2, 2, 1, 1, D16, D16 + 16, D16Bits, sizeof(D16Bits)),
+  MCRegisterClass(BF::D16HRegClassID, "D16H", 2, 2, 1, 1, D16H, D16H + 8, D16HBits, sizeof(D16HBits)),
+  MCRegisterClass(BF::D16LRegClassID, "D16L", 2, 2, 1, 1, D16L, D16L + 8, D16LBits, sizeof(D16LBits)),
+  MCRegisterClass(BF::DConsRegClassID, "DCons", 4, 4, 1, 1, DCons, DCons + 4, DConsBits, sizeof(DConsBits)),
+  MCRegisterClass(BF::DPRegClassID, "DP", 4, 4, 1, 1, DP, DP + 16, DPBits, sizeof(DPBits)),
+  MCRegisterClass(BF::DP16RegClassID, "DP16", 2, 2, 1, 1, DP16, DP16 + 32, DP16Bits, sizeof(DP16Bits)),
+  MCRegisterClass(BF::DP16HRegClassID, "DP16H", 2, 2, 1, 1, DP16H, DP16H + 16, DP16HBits, sizeof(DP16HBits)),
+  MCRegisterClass(BF::DP16LRegClassID, "DP16L", 2, 2, 1, 1, DP16L, DP16L + 16, DP16LBits, sizeof(DP16LBits)),
+  MCRegisterClass(BF::GRRegClassID, "GR", 4, 4, 1, 1, GR, GR + 32, GRBits, sizeof(GRBits)),
+  MCRegisterClass(BF::GR16RegClassID, "GR16", 2, 2, 1, 1, GR16, GR16 + 64, GR16Bits, sizeof(GR16Bits)),
+  MCRegisterClass(BF::IRegClassID, "I", 4, 4, 1, 1, I, I + 4, IBits, sizeof(IBits)),
+  MCRegisterClass(BF::JustCCRegClassID, "JustCC", 1, 1, -1, 1, JustCC, JustCC + 1, JustCCBits, sizeof(JustCCBits)),
+  MCRegisterClass(BF::LRegClassID, "L", 4, 4, 1, 1, L, L + 4, LBits, sizeof(LBits)),
+  MCRegisterClass(BF::MRegClassID, "M", 4, 4, 1, 1, M, M + 4, MBits, sizeof(MBits)),
+  MCRegisterClass(BF::NotCCRegClassID, "NotCC", 1, 1, -1, 1, NotCC, NotCC + 1, NotCCBits, sizeof(NotCCBits)),
+  MCRegisterClass(BF::PRegClassID, "P", 4, 4, 1, 1, P, P + 8, PBits, sizeof(PBits)),
+  MCRegisterClass(BF::P16RegClassID, "P16", 2, 2, 1, 1, P16, P16 + 16, P16Bits, sizeof(P16Bits)),
+  MCRegisterClass(BF::P16HRegClassID, "P16H", 2, 2, 1, 1, P16H, P16H + 8, P16HBits, sizeof(P16HBits)),
+  MCRegisterClass(BF::P16LRegClassID, "P16L", 2, 2, 1, 1, P16L, P16L + 8, P16LBits, sizeof(P16LBits)),
+  MCRegisterClass(BF::PIRegClassID, "PI", 4, 4, 1, 1, PI, PI + 12, PIBits, sizeof(PIBits)),
+  MCRegisterClass(BF::StatBitRegClassID, "StatBit", 1, 1, -1, 1, StatBit, StatBit + 12, StatBitBits, sizeof(StatBitBits)),
+  MCRegisterClass(BF::WConsRegClassID, "WCons", 4, 4, 1, 1, WCons, WCons + 4, WConsBits, sizeof(WConsBits)),
+  MCRegisterClass(BF::cConsRegClassID, "cCons", 4, 4, 1, 1, cCons, cCons + 12, cConsBits, sizeof(cConsBits)),
+  MCRegisterClass(BF::kConsRegClassID, "kCons", 4, 4, 1, 1, kCons, kCons + 2, kConsBits, sizeof(kConsBits)),
+  MCRegisterClass(BF::tConsRegClassID, "tCons", 4, 4, 1, 1, tCons, tCons + 2, tConsBits, sizeof(tConsBits)),
+  MCRegisterClass(BF::uConsRegClassID, "uCons", 4, 4, 1, 1, uCons, uCons + 2, uConsBits, sizeof(uConsBits)),
+  MCRegisterClass(BF::yConsRegClassID, "yCons", 4, 4, 1, 1, yCons, yCons + 8, yConsBits, sizeof(yConsBits)),
+  MCRegisterClass(BF::zConsRegClassID, "zCons", 4, 4, 1, 1, zCons, zCons + 3, zConsBits, sizeof(zConsBits)),
+};
+
+static inline void InitBlackfinMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(BlackfinRegDesc, 138, RA, BlackfinMCRegisterClasses, 33);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(32, BF::A0W, false );
+    RI->mapDwarfRegToLLVMReg(33, BF::A1W, false );
+    RI->mapDwarfRegToLLVMReg(40, BF::ASTAT, false );
+    RI->mapDwarfRegToLLVMReg(24, BF::B0, false );
+    RI->mapDwarfRegToLLVMReg(25, BF::B1, false );
+    RI->mapDwarfRegToLLVMReg(26, BF::B2, false );
+    RI->mapDwarfRegToLLVMReg(27, BF::B3, false );
+    RI->mapDwarfRegToLLVMReg(34, BF::CC, false );
+    RI->mapDwarfRegToLLVMReg(43, BF::EMUDAT, false );
+    RI->mapDwarfRegToLLVMReg(15, BF::FP, false );
+    RI->mapDwarfRegToLLVMReg(16, BF::I0, false );
+    RI->mapDwarfRegToLLVMReg(17, BF::I1, false );
+    RI->mapDwarfRegToLLVMReg(18, BF::I2, false );
+    RI->mapDwarfRegToLLVMReg(19, BF::I3, false );
+    RI->mapDwarfRegToLLVMReg(28, BF::L0, false );
+    RI->mapDwarfRegToLLVMReg(29, BF::L1, false );
+    RI->mapDwarfRegToLLVMReg(30, BF::L2, false );
+    RI->mapDwarfRegToLLVMReg(31, BF::L3, false );
+    RI->mapDwarfRegToLLVMReg(48, BF::LB0, false );
+    RI->mapDwarfRegToLLVMReg(49, BF::LB1, false );
+    RI->mapDwarfRegToLLVMReg(46, BF::LC0, false );
+    RI->mapDwarfRegToLLVMReg(47, BF::LC1, false );
+    RI->mapDwarfRegToLLVMReg(44, BF::LT0, false );
+    RI->mapDwarfRegToLLVMReg(45, BF::LT1, false );
+    RI->mapDwarfRegToLLVMReg(20, BF::M0, false );
+    RI->mapDwarfRegToLLVMReg(21, BF::M1, false );
+    RI->mapDwarfRegToLLVMReg(22, BF::M2, false );
+    RI->mapDwarfRegToLLVMReg(23, BF::M3, false );
+    RI->mapDwarfRegToLLVMReg(8, BF::P0, false );
+    RI->mapDwarfRegToLLVMReg(9, BF::P1, false );
+    RI->mapDwarfRegToLLVMReg(10, BF::P2, false );
+    RI->mapDwarfRegToLLVMReg(11, BF::P3, false );
+    RI->mapDwarfRegToLLVMReg(12, BF::P4, false );
+    RI->mapDwarfRegToLLVMReg(13, BF::P5, false );
+    RI->mapDwarfRegToLLVMReg(0, BF::R0, false );
+    RI->mapDwarfRegToLLVMReg(1, BF::R1, false );
+    RI->mapDwarfRegToLLVMReg(2, BF::R2, false );
+    RI->mapDwarfRegToLLVMReg(3, BF::R3, false );
+    RI->mapDwarfRegToLLVMReg(4, BF::R4, false );
+    RI->mapDwarfRegToLLVMReg(5, BF::R5, false );
+    RI->mapDwarfRegToLLVMReg(6, BF::R6, false );
+    RI->mapDwarfRegToLLVMReg(7, BF::R7, false );
+    RI->mapDwarfRegToLLVMReg(39, BF::RETE, false );
+    RI->mapDwarfRegToLLVMReg(36, BF::RETI, false );
+    RI->mapDwarfRegToLLVMReg(38, BF::RETN, false );
+    RI->mapDwarfRegToLLVMReg(35, BF::RETS, false );
+    RI->mapDwarfRegToLLVMReg(37, BF::RETX, false );
+    RI->mapDwarfRegToLLVMReg(41, BF::SEQSTAT, false );
+    RI->mapDwarfRegToLLVMReg(14, BF::SP, false );
+    RI->mapDwarfRegToLLVMReg(42, BF::USP, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(32, BF::A0W, true );
+    RI->mapDwarfRegToLLVMReg(33, BF::A1W, true );
+    RI->mapDwarfRegToLLVMReg(40, BF::ASTAT, true );
+    RI->mapDwarfRegToLLVMReg(24, BF::B0, true );
+    RI->mapDwarfRegToLLVMReg(25, BF::B1, true );
+    RI->mapDwarfRegToLLVMReg(26, BF::B2, true );
+    RI->mapDwarfRegToLLVMReg(27, BF::B3, true );
+    RI->mapDwarfRegToLLVMReg(34, BF::CC, true );
+    RI->mapDwarfRegToLLVMReg(43, BF::EMUDAT, true );
+    RI->mapDwarfRegToLLVMReg(15, BF::FP, true );
+    RI->mapDwarfRegToLLVMReg(16, BF::I0, true );
+    RI->mapDwarfRegToLLVMReg(17, BF::I1, true );
+    RI->mapDwarfRegToLLVMReg(18, BF::I2, true );
+    RI->mapDwarfRegToLLVMReg(19, BF::I3, true );
+    RI->mapDwarfRegToLLVMReg(28, BF::L0, true );
+    RI->mapDwarfRegToLLVMReg(29, BF::L1, true );
+    RI->mapDwarfRegToLLVMReg(30, BF::L2, true );
+    RI->mapDwarfRegToLLVMReg(31, BF::L3, true );
+    RI->mapDwarfRegToLLVMReg(48, BF::LB0, true );
+    RI->mapDwarfRegToLLVMReg(49, BF::LB1, true );
+    RI->mapDwarfRegToLLVMReg(46, BF::LC0, true );
+    RI->mapDwarfRegToLLVMReg(47, BF::LC1, true );
+    RI->mapDwarfRegToLLVMReg(44, BF::LT0, true );
+    RI->mapDwarfRegToLLVMReg(45, BF::LT1, true );
+    RI->mapDwarfRegToLLVMReg(20, BF::M0, true );
+    RI->mapDwarfRegToLLVMReg(21, BF::M1, true );
+    RI->mapDwarfRegToLLVMReg(22, BF::M2, true );
+    RI->mapDwarfRegToLLVMReg(23, BF::M3, true );
+    RI->mapDwarfRegToLLVMReg(8, BF::P0, true );
+    RI->mapDwarfRegToLLVMReg(9, BF::P1, true );
+    RI->mapDwarfRegToLLVMReg(10, BF::P2, true );
+    RI->mapDwarfRegToLLVMReg(11, BF::P3, true );
+    RI->mapDwarfRegToLLVMReg(12, BF::P4, true );
+    RI->mapDwarfRegToLLVMReg(13, BF::P5, true );
+    RI->mapDwarfRegToLLVMReg(0, BF::R0, true );
+    RI->mapDwarfRegToLLVMReg(1, BF::R1, true );
+    RI->mapDwarfRegToLLVMReg(2, BF::R2, true );
+    RI->mapDwarfRegToLLVMReg(3, BF::R3, true );
+    RI->mapDwarfRegToLLVMReg(4, BF::R4, true );
+    RI->mapDwarfRegToLLVMReg(5, BF::R5, true );
+    RI->mapDwarfRegToLLVMReg(6, BF::R6, true );
+    RI->mapDwarfRegToLLVMReg(7, BF::R7, true );
+    RI->mapDwarfRegToLLVMReg(39, BF::RETE, true );
+    RI->mapDwarfRegToLLVMReg(36, BF::RETI, true );
+    RI->mapDwarfRegToLLVMReg(38, BF::RETN, true );
+    RI->mapDwarfRegToLLVMReg(35, BF::RETS, true );
+    RI->mapDwarfRegToLLVMReg(37, BF::RETX, true );
+    RI->mapDwarfRegToLLVMReg(41, BF::SEQSTAT, true );
+    RI->mapDwarfRegToLLVMReg(14, BF::SP, true );
+    RI->mapDwarfRegToLLVMReg(42, BF::USP, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(BF::A0, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A0W, 32, false );
+    RI->mapLLVMRegToDwarfReg(BF::A0X, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A1, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::A1W, 33, false );
+    RI->mapLLVMRegToDwarfReg(BF::A1X, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AC0, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AC1, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AN, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AQ, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::ASTAT, 40, false );
+    RI->mapLLVMRegToDwarfReg(BF::AV0, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AV0S, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AV1, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AV1S, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::AZ, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B0, 24, false );
+    RI->mapLLVMRegToDwarfReg(BF::B0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B1, 25, false );
+    RI->mapLLVMRegToDwarfReg(BF::B1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B2, 26, false );
+    RI->mapLLVMRegToDwarfReg(BF::B2H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B3, 27, false );
+    RI->mapLLVMRegToDwarfReg(BF::B3H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::B3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::CC, 34, false );
+    RI->mapLLVMRegToDwarfReg(BF::CYCLES, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::CYCLES2, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::EMUDAT, 43, false );
+    RI->mapLLVMRegToDwarfReg(BF::FP, 15, false );
+    RI->mapLLVMRegToDwarfReg(BF::FPH, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::FPL, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I0, 16, false );
+    RI->mapLLVMRegToDwarfReg(BF::I0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I1, 17, false );
+    RI->mapLLVMRegToDwarfReg(BF::I1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I2, 18, false );
+    RI->mapLLVMRegToDwarfReg(BF::I2H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I3, 19, false );
+    RI->mapLLVMRegToDwarfReg(BF::I3H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::I3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L0, 28, false );
+    RI->mapLLVMRegToDwarfReg(BF::L0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L1, 29, false );
+    RI->mapLLVMRegToDwarfReg(BF::L1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L2, 30, false );
+    RI->mapLLVMRegToDwarfReg(BF::L2H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L3, 31, false );
+    RI->mapLLVMRegToDwarfReg(BF::L3H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::L3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::LB0, 48, false );
+    RI->mapLLVMRegToDwarfReg(BF::LB1, 49, false );
+    RI->mapLLVMRegToDwarfReg(BF::LC0, 46, false );
+    RI->mapLLVMRegToDwarfReg(BF::LC1, 47, false );
+    RI->mapLLVMRegToDwarfReg(BF::LT0, 44, false );
+    RI->mapLLVMRegToDwarfReg(BF::LT1, 45, false );
+    RI->mapLLVMRegToDwarfReg(BF::M0, 20, false );
+    RI->mapLLVMRegToDwarfReg(BF::M0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M1, 21, false );
+    RI->mapLLVMRegToDwarfReg(BF::M1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M2, 22, false );
+    RI->mapLLVMRegToDwarfReg(BF::M2H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M3, 23, false );
+    RI->mapLLVMRegToDwarfReg(BF::M3H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::M3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::NCC, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P0, 8, false );
+    RI->mapLLVMRegToDwarfReg(BF::P0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P1, 9, false );
+    RI->mapLLVMRegToDwarfReg(BF::P1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P2, 10, false );
+    RI->mapLLVMRegToDwarfReg(BF::P2H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P3, 11, false );
+    RI->mapLLVMRegToDwarfReg(BF::P3H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P4, 12, false );
+    RI->mapLLVMRegToDwarfReg(BF::P4H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P4L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P5, 13, false );
+    RI->mapLLVMRegToDwarfReg(BF::P5H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::P5L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R0, 0, false );
+    RI->mapLLVMRegToDwarfReg(BF::R0H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R0L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R1, 1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R1H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R1L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R2, 2, false );
+    RI->mapLLVMRegToDwarfReg(BF::R2H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R2L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R3, 3, false );
+    RI->mapLLVMRegToDwarfReg(BF::R3H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R3L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R4, 4, false );
+    RI->mapLLVMRegToDwarfReg(BF::R4H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R4L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R5, 5, false );
+    RI->mapLLVMRegToDwarfReg(BF::R5H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R5L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R6, 6, false );
+    RI->mapLLVMRegToDwarfReg(BF::R6H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R6L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R7, 7, false );
+    RI->mapLLVMRegToDwarfReg(BF::R7H, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::R7L, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::RETE, 39, false );
+    RI->mapLLVMRegToDwarfReg(BF::RETI, 36, false );
+    RI->mapLLVMRegToDwarfReg(BF::RETN, 38, false );
+    RI->mapLLVMRegToDwarfReg(BF::RETS, 35, false );
+    RI->mapLLVMRegToDwarfReg(BF::RETX, 37, false );
+    RI->mapLLVMRegToDwarfReg(BF::SEQSTAT, 41, false );
+    RI->mapLLVMRegToDwarfReg(BF::SP, 14, false );
+    RI->mapLLVMRegToDwarfReg(BF::SPH, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::SPL, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::SYSCFG, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::USP, 42, false );
+    RI->mapLLVMRegToDwarfReg(BF::V, -1, false );
+    RI->mapLLVMRegToDwarfReg(BF::VS, -1, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(BF::A0, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A0W, 32, true );
+    RI->mapLLVMRegToDwarfReg(BF::A0X, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A1, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::A1W, 33, true );
+    RI->mapLLVMRegToDwarfReg(BF::A1X, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AC0, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AC1, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AN, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AQ, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::ASTAT, 40, true );
+    RI->mapLLVMRegToDwarfReg(BF::AV0, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AV0S, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AV1, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AV1S, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::AZ, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B0, 24, true );
+    RI->mapLLVMRegToDwarfReg(BF::B0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B1, 25, true );
+    RI->mapLLVMRegToDwarfReg(BF::B1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B2, 26, true );
+    RI->mapLLVMRegToDwarfReg(BF::B2H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B3, 27, true );
+    RI->mapLLVMRegToDwarfReg(BF::B3H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::B3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::CC, 34, true );
+    RI->mapLLVMRegToDwarfReg(BF::CYCLES, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::CYCLES2, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::EMUDAT, 43, true );
+    RI->mapLLVMRegToDwarfReg(BF::FP, 15, true );
+    RI->mapLLVMRegToDwarfReg(BF::FPH, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::FPL, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I0, 16, true );
+    RI->mapLLVMRegToDwarfReg(BF::I0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I1, 17, true );
+    RI->mapLLVMRegToDwarfReg(BF::I1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I2, 18, true );
+    RI->mapLLVMRegToDwarfReg(BF::I2H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I3, 19, true );
+    RI->mapLLVMRegToDwarfReg(BF::I3H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::I3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L0, 28, true );
+    RI->mapLLVMRegToDwarfReg(BF::L0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L1, 29, true );
+    RI->mapLLVMRegToDwarfReg(BF::L1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L2, 30, true );
+    RI->mapLLVMRegToDwarfReg(BF::L2H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L3, 31, true );
+    RI->mapLLVMRegToDwarfReg(BF::L3H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::L3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::LB0, 48, true );
+    RI->mapLLVMRegToDwarfReg(BF::LB1, 49, true );
+    RI->mapLLVMRegToDwarfReg(BF::LC0, 46, true );
+    RI->mapLLVMRegToDwarfReg(BF::LC1, 47, true );
+    RI->mapLLVMRegToDwarfReg(BF::LT0, 44, true );
+    RI->mapLLVMRegToDwarfReg(BF::LT1, 45, true );
+    RI->mapLLVMRegToDwarfReg(BF::M0, 20, true );
+    RI->mapLLVMRegToDwarfReg(BF::M0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M1, 21, true );
+    RI->mapLLVMRegToDwarfReg(BF::M1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M2, 22, true );
+    RI->mapLLVMRegToDwarfReg(BF::M2H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M3, 23, true );
+    RI->mapLLVMRegToDwarfReg(BF::M3H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::M3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::NCC, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P0, 8, true );
+    RI->mapLLVMRegToDwarfReg(BF::P0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P1, 9, true );
+    RI->mapLLVMRegToDwarfReg(BF::P1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P2, 10, true );
+    RI->mapLLVMRegToDwarfReg(BF::P2H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P3, 11, true );
+    RI->mapLLVMRegToDwarfReg(BF::P3H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P4, 12, true );
+    RI->mapLLVMRegToDwarfReg(BF::P4H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P4L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P5, 13, true );
+    RI->mapLLVMRegToDwarfReg(BF::P5H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::P5L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R0, 0, true );
+    RI->mapLLVMRegToDwarfReg(BF::R0H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R0L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R1, 1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R1H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R1L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R2, 2, true );
+    RI->mapLLVMRegToDwarfReg(BF::R2H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R2L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R3, 3, true );
+    RI->mapLLVMRegToDwarfReg(BF::R3H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R3L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R4, 4, true );
+    RI->mapLLVMRegToDwarfReg(BF::R4H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R4L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R5, 5, true );
+    RI->mapLLVMRegToDwarfReg(BF::R5H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R5L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R6, 6, true );
+    RI->mapLLVMRegToDwarfReg(BF::R6H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R6L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R7, 7, true );
+    RI->mapLLVMRegToDwarfReg(BF::R7H, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::R7L, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::RETE, 39, true );
+    RI->mapLLVMRegToDwarfReg(BF::RETI, 36, true );
+    RI->mapLLVMRegToDwarfReg(BF::RETN, 38, true );
+    RI->mapLLVMRegToDwarfReg(BF::RETS, 35, true );
+    RI->mapLLVMRegToDwarfReg(BF::RETX, 37, true );
+    RI->mapLLVMRegToDwarfReg(BF::SEQSTAT, 41, true );
+    RI->mapLLVMRegToDwarfReg(BF::SP, 14, true );
+    RI->mapLLVMRegToDwarfReg(BF::SPH, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::SPL, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::SYSCFG, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::USP, 42, true );
+    RI->mapLLVMRegToDwarfReg(BF::V, -1, true );
+    RI->mapLLVMRegToDwarfReg(BF::VS, -1, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct BlackfinGenRegisterInfo : public TargetRegisterInfo {
+  explicit BlackfinGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+
+// Subregister indices
+namespace BF {
+enum {
+  NoSubRegister,
+  hi16,	// 1
+  hi32,	// 2
+  lo16,	// 3
+  lo32,	// 4
+  NUM_TARGET_NAMED_SUBREGS = 5
+};
+}
+namespace BF { // Register classes
+  struct ALLClass : public TargetRegisterClass {
+    ALLClass();
+  };
+  extern ALLClass	ALLRegClass;
+  static TargetRegisterClass * const ALLRegisterClass = &ALLRegClass;
+  struct AccuClass : public TargetRegisterClass {
+    AccuClass();
+  };
+  extern AccuClass	AccuRegClass;
+  static TargetRegisterClass * const AccuRegisterClass = &AccuRegClass;
+  struct AnyCCClass : public TargetRegisterClass {
+    AnyCCClass();
+  };
+  extern AnyCCClass	AnyCCRegClass;
+  static TargetRegisterClass * const AnyCCRegisterClass = &AnyCCRegClass;
+  struct BClass : public TargetRegisterClass {
+    BClass();
+  };
+  extern BClass	BRegClass;
+  static TargetRegisterClass * const BRegisterClass = &BRegClass;
+  struct DClass : public TargetRegisterClass {
+    DClass();
+  };
+  extern DClass	DRegClass;
+  static TargetRegisterClass * const DRegisterClass = &DRegClass;
+  struct D16Class : public TargetRegisterClass {
+    D16Class();
+  };
+  extern D16Class	D16RegClass;
+  static TargetRegisterClass * const D16RegisterClass = &D16RegClass;
+  struct D16HClass : public TargetRegisterClass {
+    D16HClass();
+  };
+  extern D16HClass	D16HRegClass;
+  static TargetRegisterClass * const D16HRegisterClass = &D16HRegClass;
+  struct D16LClass : public TargetRegisterClass {
+    D16LClass();
+  };
+  extern D16LClass	D16LRegClass;
+  static TargetRegisterClass * const D16LRegisterClass = &D16LRegClass;
+  struct DConsClass : public TargetRegisterClass {
+    DConsClass();
+  };
+  extern DConsClass	DConsRegClass;
+  static TargetRegisterClass * const DConsRegisterClass = &DConsRegClass;
+  struct DPClass : public TargetRegisterClass {
+    DPClass();
+  };
+  extern DPClass	DPRegClass;
+  static TargetRegisterClass * const DPRegisterClass = &DPRegClass;
+  struct DP16Class : public TargetRegisterClass {
+    DP16Class();
+  };
+  extern DP16Class	DP16RegClass;
+  static TargetRegisterClass * const DP16RegisterClass = &DP16RegClass;
+  struct DP16HClass : public TargetRegisterClass {
+    DP16HClass();
+  };
+  extern DP16HClass	DP16HRegClass;
+  static TargetRegisterClass * const DP16HRegisterClass = &DP16HRegClass;
+  struct DP16LClass : public TargetRegisterClass {
+    DP16LClass();
+  };
+  extern DP16LClass	DP16LRegClass;
+  static TargetRegisterClass * const DP16LRegisterClass = &DP16LRegClass;
+  struct GRClass : public TargetRegisterClass {
+    GRClass();
+  };
+  extern GRClass	GRRegClass;
+  static TargetRegisterClass * const GRRegisterClass = &GRRegClass;
+  struct GR16Class : public TargetRegisterClass {
+    GR16Class();
+  };
+  extern GR16Class	GR16RegClass;
+  static TargetRegisterClass * const GR16RegisterClass = &GR16RegClass;
+  struct IClass : public TargetRegisterClass {
+    IClass();
+  };
+  extern IClass	IRegClass;
+  static TargetRegisterClass * const IRegisterClass = &IRegClass;
+  struct JustCCClass : public TargetRegisterClass {
+    JustCCClass();
+  };
+  extern JustCCClass	JustCCRegClass;
+  static TargetRegisterClass * const JustCCRegisterClass = &JustCCRegClass;
+  struct LClass : public TargetRegisterClass {
+    LClass();
+  };
+  extern LClass	LRegClass;
+  static TargetRegisterClass * const LRegisterClass = &LRegClass;
+  struct MClass : public TargetRegisterClass {
+    MClass();
+  };
+  extern MClass	MRegClass;
+  static TargetRegisterClass * const MRegisterClass = &MRegClass;
+  struct NotCCClass : public TargetRegisterClass {
+    NotCCClass();
+  };
+  extern NotCCClass	NotCCRegClass;
+  static TargetRegisterClass * const NotCCRegisterClass = &NotCCRegClass;
+  struct PClass : public TargetRegisterClass {
+    PClass();
+  };
+  extern PClass	PRegClass;
+  static TargetRegisterClass * const PRegisterClass = &PRegClass;
+  struct P16Class : public TargetRegisterClass {
+    P16Class();
+  };
+  extern P16Class	P16RegClass;
+  static TargetRegisterClass * const P16RegisterClass = &P16RegClass;
+  struct P16HClass : public TargetRegisterClass {
+    P16HClass();
+  };
+  extern P16HClass	P16HRegClass;
+  static TargetRegisterClass * const P16HRegisterClass = &P16HRegClass;
+  struct P16LClass : public TargetRegisterClass {
+    P16LClass();
+  };
+  extern P16LClass	P16LRegClass;
+  static TargetRegisterClass * const P16LRegisterClass = &P16LRegClass;
+  struct PIClass : public TargetRegisterClass {
+    PIClass();
+  };
+  extern PIClass	PIRegClass;
+  static TargetRegisterClass * const PIRegisterClass = &PIRegClass;
+  struct StatBitClass : public TargetRegisterClass {
+    StatBitClass();
+  };
+  extern StatBitClass	StatBitRegClass;
+  static TargetRegisterClass * const StatBitRegisterClass = &StatBitRegClass;
+  struct WConsClass : public TargetRegisterClass {
+    WConsClass();
+  };
+  extern WConsClass	WConsRegClass;
+  static TargetRegisterClass * const WConsRegisterClass = &WConsRegClass;
+  struct cConsClass : public TargetRegisterClass {
+    cConsClass();
+  };
+  extern cConsClass	cConsRegClass;
+  static TargetRegisterClass * const cConsRegisterClass = &cConsRegClass;
+  struct kConsClass : public TargetRegisterClass {
+    kConsClass();
+  };
+  extern kConsClass	kConsRegClass;
+  static TargetRegisterClass * const kConsRegisterClass = &kConsRegClass;
+  struct tConsClass : public TargetRegisterClass {
+    tConsClass();
+  };
+  extern tConsClass	tConsRegClass;
+  static TargetRegisterClass * const tConsRegisterClass = &tConsRegClass;
+  struct uConsClass : public TargetRegisterClass {
+    uConsClass();
+  };
+  extern uConsClass	uConsRegClass;
+  static TargetRegisterClass * const uConsRegisterClass = &uConsRegClass;
+  struct yConsClass : public TargetRegisterClass {
+    yConsClass();
+  };
+  extern yConsClass	yConsRegClass;
+  static TargetRegisterClass * const yConsRegisterClass = &yConsRegClass;
+  struct zConsClass : public TargetRegisterClass {
+    zConsClass();
+  };
+  extern zConsClass	zConsRegClass;
+  static TargetRegisterClass * const zConsRegisterClass = &zConsRegClass;
+} // end of namespace Blackfin
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass BlackfinMCRegisterClasses[];
+namespace {     // Register classes...
+  // ALLVTs Register Class Value Types...
+  static const EVT ALLVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // AccuVTs Register Class Value Types...
+  static const EVT AccuVTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+  // AnyCCVTs Register Class Value Types...
+  static const EVT AnyCCVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // BVTs Register Class Value Types...
+  static const EVT BVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // DVTs Register Class Value Types...
+  static const EVT DVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // D16VTs Register Class Value Types...
+  static const EVT D16VTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // D16HVTs Register Class Value Types...
+  static const EVT D16HVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // D16LVTs Register Class Value Types...
+  static const EVT D16LVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // DConsVTs Register Class Value Types...
+  static const EVT DConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // DPVTs Register Class Value Types...
+  static const EVT DPVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // DP16VTs Register Class Value Types...
+  static const EVT DP16VTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // DP16HVTs Register Class Value Types...
+  static const EVT DP16HVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // DP16LVTs Register Class Value Types...
+  static const EVT DP16LVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // GRVTs Register Class Value Types...
+  static const EVT GRVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // GR16VTs Register Class Value Types...
+  static const EVT GR16VTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // IVTs Register Class Value Types...
+  static const EVT IVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // JustCCVTs Register Class Value Types...
+  static const EVT JustCCVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // LVTs Register Class Value Types...
+  static const EVT LVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // MVTs Register Class Value Types...
+  static const EVT MVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // NotCCVTs Register Class Value Types...
+  static const EVT NotCCVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // PVTs Register Class Value Types...
+  static const EVT PVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // P16VTs Register Class Value Types...
+  static const EVT P16VTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // P16HVTs Register Class Value Types...
+  static const EVT P16HVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // P16LVTs Register Class Value Types...
+  static const EVT P16LVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // PIVTs Register Class Value Types...
+  static const EVT PIVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // StatBitVTs Register Class Value Types...
+  static const EVT StatBitVTs[] = {
+    MVT::i1, MVT::Other
+  };
+
+  // WConsVTs Register Class Value Types...
+  static const EVT WConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // cConsVTs Register Class Value Types...
+  static const EVT cConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // kConsVTs Register Class Value Types...
+  static const EVT kConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // tConsVTs Register Class Value Types...
+  static const EVT tConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // uConsVTs Register Class Value Types...
+  static const EVT uConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // yConsVTs Register Class Value Types...
+  static const EVT yConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // zConsVTs Register Class Value Types...
+  static const EVT zConsVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace BF {   // Register class instances
+  ALLClass	ALLRegClass;
+  AccuClass	AccuRegClass;
+  AnyCCClass	AnyCCRegClass;
+  BClass	BRegClass;
+  DClass	DRegClass;
+  D16Class	D16RegClass;
+  D16HClass	D16HRegClass;
+  D16LClass	D16LRegClass;
+  DConsClass	DConsRegClass;
+  DPClass	DPRegClass;
+  DP16Class	DP16RegClass;
+  DP16HClass	DP16HRegClass;
+  DP16LClass	DP16LRegClass;
+  GRClass	GRRegClass;
+  GR16Class	GR16RegClass;
+  IClass	IRegClass;
+  JustCCClass	JustCCRegClass;
+  LClass	LRegClass;
+  MClass	MRegClass;
+  NotCCClass	NotCCRegClass;
+  PClass	PRegClass;
+  P16Class	P16RegClass;
+  P16HClass	P16HRegClass;
+  P16LClass	P16LRegClass;
+  PIClass	PIRegClass;
+  StatBitClass	StatBitRegClass;
+  WConsClass	WConsRegClass;
+  cConsClass	cConsRegClass;
+  kConsClass	kConsRegClass;
+  tConsClass	tConsRegClass;
+  uConsClass	uConsRegClass;
+  yConsClass	yConsRegClass;
+  zConsClass	zConsRegClass;
+
+  // ALL Sub-register Classes...
+  static const TargetRegisterClass* const ALLSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // Accu Sub-register Classes...
+  static const TargetRegisterClass* const AccuSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // AnyCC Sub-register Classes...
+  static const TargetRegisterClass* const AnyCCSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // B Sub-register Classes...
+  static const TargetRegisterClass* const BSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // D Sub-register Classes...
+  static const TargetRegisterClass* const DSubRegClasses[] = {
+    &BF::D16HRegClass, 0, &BF::D16LRegClass, 0
+  };
+
+  // D16 Sub-register Classes...
+  static const TargetRegisterClass* const D16SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // D16H Sub-register Classes...
+  static const TargetRegisterClass* const D16HSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // D16L Sub-register Classes...
+  static const TargetRegisterClass* const D16LSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // DCons Sub-register Classes...
+  static const TargetRegisterClass* const DConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // DP Sub-register Classes...
+  static const TargetRegisterClass* const DPSubRegClasses[] = {
+    &BF::DP16HRegClass, 0, &BF::DP16LRegClass, 0
+  };
+
+  // DP16 Sub-register Classes...
+  static const TargetRegisterClass* const DP16SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // DP16H Sub-register Classes...
+  static const TargetRegisterClass* const DP16HSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // DP16L Sub-register Classes...
+  static const TargetRegisterClass* const DP16LSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // GR Sub-register Classes...
+  static const TargetRegisterClass* const GRSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // GR16 Sub-register Classes...
+  static const TargetRegisterClass* const GR16SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // I Sub-register Classes...
+  static const TargetRegisterClass* const ISubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // JustCC Sub-register Classes...
+  static const TargetRegisterClass* const JustCCSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // L Sub-register Classes...
+  static const TargetRegisterClass* const LSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // M Sub-register Classes...
+  static const TargetRegisterClass* const MSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // NotCC Sub-register Classes...
+  static const TargetRegisterClass* const NotCCSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // P Sub-register Classes...
+  static const TargetRegisterClass* const PSubRegClasses[] = {
+    &BF::P16HRegClass, 0, &BF::P16LRegClass, 0
+  };
+
+  // P16 Sub-register Classes...
+  static const TargetRegisterClass* const P16SubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // P16H Sub-register Classes...
+  static const TargetRegisterClass* const P16HSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // P16L Sub-register Classes...
+  static const TargetRegisterClass* const P16LSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // PI Sub-register Classes...
+  static const TargetRegisterClass* const PISubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // StatBit Sub-register Classes...
+  static const TargetRegisterClass* const StatBitSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // WCons Sub-register Classes...
+  static const TargetRegisterClass* const WConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // cCons Sub-register Classes...
+  static const TargetRegisterClass* const cConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // kCons Sub-register Classes...
+  static const TargetRegisterClass* const kConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // tCons Sub-register Classes...
+  static const TargetRegisterClass* const tConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // uCons Sub-register Classes...
+  static const TargetRegisterClass* const uConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // yCons Sub-register Classes...
+  static const TargetRegisterClass* const yConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // zCons Sub-register Classes...
+  static const TargetRegisterClass* const zConsSubRegClasses[] = {
+    0, 0, 0, 0
+  };
+
+  // ALL Super-register Classes...
+  static const TargetRegisterClass* const ALLSuperRegClasses[] = {
+    NULL
+  };
+
+  // Accu Super-register Classes...
+  static const TargetRegisterClass* const AccuSuperRegClasses[] = {
+    NULL
+  };
+
+  // AnyCC Super-register Classes...
+  static const TargetRegisterClass* const AnyCCSuperRegClasses[] = {
+    NULL
+  };
+
+  // B Super-register Classes...
+  static const TargetRegisterClass* const BSuperRegClasses[] = {
+    NULL
+  };
+
+  // D Super-register Classes...
+  static const TargetRegisterClass* const DSuperRegClasses[] = {
+    NULL
+  };
+
+  // D16 Super-register Classes...
+  static const TargetRegisterClass* const D16SuperRegClasses[] = {
+    NULL
+  };
+
+  // D16H Super-register Classes...
+  static const TargetRegisterClass* const D16HSuperRegClasses[] = {
+    &BF::DRegClass, NULL
+  };
+
+  // D16L Super-register Classes...
+  static const TargetRegisterClass* const D16LSuperRegClasses[] = {
+    &BF::DRegClass, NULL
+  };
+
+  // DCons Super-register Classes...
+  static const TargetRegisterClass* const DConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // DP Super-register Classes...
+  static const TargetRegisterClass* const DPSuperRegClasses[] = {
+    NULL
+  };
+
+  // DP16 Super-register Classes...
+  static const TargetRegisterClass* const DP16SuperRegClasses[] = {
+    NULL
+  };
+
+  // DP16H Super-register Classes...
+  static const TargetRegisterClass* const DP16HSuperRegClasses[] = {
+    &BF::DPRegClass, NULL
+  };
+
+  // DP16L Super-register Classes...
+  static const TargetRegisterClass* const DP16LSuperRegClasses[] = {
+    &BF::DPRegClass, NULL
+  };
+
+  // GR Super-register Classes...
+  static const TargetRegisterClass* const GRSuperRegClasses[] = {
+    NULL
+  };
+
+  // GR16 Super-register Classes...
+  static const TargetRegisterClass* const GR16SuperRegClasses[] = {
+    NULL
+  };
+
+  // I Super-register Classes...
+  static const TargetRegisterClass* const ISuperRegClasses[] = {
+    NULL
+  };
+
+  // JustCC Super-register Classes...
+  static const TargetRegisterClass* const JustCCSuperRegClasses[] = {
+    NULL
+  };
+
+  // L Super-register Classes...
+  static const TargetRegisterClass* const LSuperRegClasses[] = {
+    NULL
+  };
+
+  // M Super-register Classes...
+  static const TargetRegisterClass* const MSuperRegClasses[] = {
+    NULL
+  };
+
+  // NotCC Super-register Classes...
+  static const TargetRegisterClass* const NotCCSuperRegClasses[] = {
+    NULL
+  };
+
+  // P Super-register Classes...
+  static const TargetRegisterClass* const PSuperRegClasses[] = {
+    NULL
+  };
+
+  // P16 Super-register Classes...
+  static const TargetRegisterClass* const P16SuperRegClasses[] = {
+    NULL
+  };
+
+  // P16H Super-register Classes...
+  static const TargetRegisterClass* const P16HSuperRegClasses[] = {
+    &BF::PRegClass, NULL
+  };
+
+  // P16L Super-register Classes...
+  static const TargetRegisterClass* const P16LSuperRegClasses[] = {
+    &BF::PRegClass, NULL
+  };
+
+  // PI Super-register Classes...
+  static const TargetRegisterClass* const PISuperRegClasses[] = {
+    NULL
+  };
+
+  // StatBit Super-register Classes...
+  static const TargetRegisterClass* const StatBitSuperRegClasses[] = {
+    NULL
+  };
+
+  // WCons Super-register Classes...
+  static const TargetRegisterClass* const WConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // cCons Super-register Classes...
+  static const TargetRegisterClass* const cConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // kCons Super-register Classes...
+  static const TargetRegisterClass* const kConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // tCons Super-register Classes...
+  static const TargetRegisterClass* const tConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // uCons Super-register Classes...
+  static const TargetRegisterClass* const uConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // yCons Super-register Classes...
+  static const TargetRegisterClass* const yConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // zCons Super-register Classes...
+  static const TargetRegisterClass* const zConsSuperRegClasses[] = {
+    NULL
+  };
+
+  // ALL Register Class sub-classes...
+  static const TargetRegisterClass* const ALLSubclasses[] = {
+    &BF::BRegClass, &BF::DRegClass, &BF::DConsRegClass, &BF::DPRegClass, &BF::GRRegClass, &BF::IRegClass, &BF::LRegClass, &BF::MRegClass, &BF::PRegClass, &BF::PIRegClass, &BF::WConsRegClass, &BF::cConsRegClass, &BF::kConsRegClass, &BF::tConsRegClass, &BF::uConsRegClass, &BF::yConsRegClass, &BF::zConsRegClass, NULL
+  };
+
+  // Accu Register Class sub-classes...
+  static const TargetRegisterClass* const AccuSubclasses[] = {
+    NULL
+  };
+
+  // AnyCC Register Class sub-classes...
+  static const TargetRegisterClass* const AnyCCSubclasses[] = {
+    &BF::JustCCRegClass, &BF::NotCCRegClass, NULL
+  };
+
+  // B Register Class sub-classes...
+  static const TargetRegisterClass* const BSubclasses[] = {
+    NULL
+  };
+
+  // D Register Class sub-classes...
+  static const TargetRegisterClass* const DSubclasses[] = {
+    &BF::DConsRegClass, &BF::WConsRegClass, NULL
+  };
+
+  // D16 Register Class sub-classes...
+  static const TargetRegisterClass* const D16Subclasses[] = {
+    &BF::D16HRegClass, &BF::D16LRegClass, NULL
+  };
+
+  // D16H Register Class sub-classes...
+  static const TargetRegisterClass* const D16HSubclasses[] = {
+    NULL
+  };
+
+  // D16L Register Class sub-classes...
+  static const TargetRegisterClass* const D16LSubclasses[] = {
+    NULL
+  };
+
+  // DCons Register Class sub-classes...
+  static const TargetRegisterClass* const DConsSubclasses[] = {
+    NULL
+  };
+
+  // DP Register Class sub-classes...
+  static const TargetRegisterClass* const DPSubclasses[] = {
+    &BF::DRegClass, &BF::DConsRegClass, &BF::PRegClass, &BF::WConsRegClass, &BF::zConsRegClass, NULL
+  };
+
+  // DP16 Register Class sub-classes...
+  static const TargetRegisterClass* const DP16Subclasses[] = {
+    &BF::D16RegClass, &BF::D16HRegClass, &BF::D16LRegClass, &BF::DP16HRegClass, &BF::DP16LRegClass, &BF::P16RegClass, &BF::P16HRegClass, &BF::P16LRegClass, NULL
+  };
+
+  // DP16H Register Class sub-classes...
+  static const TargetRegisterClass* const DP16HSubclasses[] = {
+    &BF::D16HRegClass, &BF::P16HRegClass, NULL
+  };
+
+  // DP16L Register Class sub-classes...
+  static const TargetRegisterClass* const DP16LSubclasses[] = {
+    &BF::D16LRegClass, &BF::P16LRegClass, NULL
+  };
+
+  // GR Register Class sub-classes...
+  static const TargetRegisterClass* const GRSubclasses[] = {
+    &BF::BRegClass, &BF::DRegClass, &BF::DConsRegClass, &BF::DPRegClass, &BF::IRegClass, &BF::LRegClass, &BF::MRegClass, &BF::PRegClass, &BF::PIRegClass, &BF::WConsRegClass, &BF::cConsRegClass, &BF::zConsRegClass, NULL
+  };
+
+  // GR16 Register Class sub-classes...
+  static const TargetRegisterClass* const GR16Subclasses[] = {
+    &BF::D16RegClass, &BF::D16HRegClass, &BF::D16LRegClass, &BF::DP16RegClass, &BF::DP16HRegClass, &BF::DP16LRegClass, &BF::P16RegClass, &BF::P16HRegClass, &BF::P16LRegClass, NULL
+  };
+
+  // I Register Class sub-classes...
+  static const TargetRegisterClass* const ISubclasses[] = {
+    NULL
+  };
+
+  // JustCC Register Class sub-classes...
+  static const TargetRegisterClass* const JustCCSubclasses[] = {
+    NULL
+  };
+
+  // L Register Class sub-classes...
+  static const TargetRegisterClass* const LSubclasses[] = {
+    NULL
+  };
+
+  // M Register Class sub-classes...
+  static const TargetRegisterClass* const MSubclasses[] = {
+    NULL
+  };
+
+  // NotCC Register Class sub-classes...
+  static const TargetRegisterClass* const NotCCSubclasses[] = {
+    NULL
+  };
+
+  // P Register Class sub-classes...
+  static const TargetRegisterClass* const PSubclasses[] = {
+    &BF::zConsRegClass, NULL
+  };
+
+  // P16 Register Class sub-classes...
+  static const TargetRegisterClass* const P16Subclasses[] = {
+    &BF::P16HRegClass, &BF::P16LRegClass, NULL
+  };
+
+  // P16H Register Class sub-classes...
+  static const TargetRegisterClass* const P16HSubclasses[] = {
+    NULL
+  };
+
+  // P16L Register Class sub-classes...
+  static const TargetRegisterClass* const P16LSubclasses[] = {
+    NULL
+  };
+
+  // PI Register Class sub-classes...
+  static const TargetRegisterClass* const PISubclasses[] = {
+    &BF::IRegClass, &BF::PRegClass, &BF::zConsRegClass, NULL
+  };
+
+  // StatBit Register Class sub-classes...
+  static const TargetRegisterClass* const StatBitSubclasses[] = {
+    &BF::JustCCRegClass, NULL
+  };
+
+  // WCons Register Class sub-classes...
+  static const TargetRegisterClass* const WConsSubclasses[] = {
+    NULL
+  };
+
+  // cCons Register Class sub-classes...
+  static const TargetRegisterClass* const cConsSubclasses[] = {
+    &BF::BRegClass, &BF::IRegClass, &BF::LRegClass, NULL
+  };
+
+  // kCons Register Class sub-classes...
+  static const TargetRegisterClass* const kConsSubclasses[] = {
+    NULL
+  };
+
+  // tCons Register Class sub-classes...
+  static const TargetRegisterClass* const tConsSubclasses[] = {
+    NULL
+  };
+
+  // uCons Register Class sub-classes...
+  static const TargetRegisterClass* const uConsSubclasses[] = {
+    NULL
+  };
+
+  // yCons Register Class sub-classes...
+  static const TargetRegisterClass* const yConsSubclasses[] = {
+    NULL
+  };
+
+  // zCons Register Class sub-classes...
+  static const TargetRegisterClass* const zConsSubclasses[] = {
+    NULL
+  };
+
+  // ALL Register Class super-classes...
+  static const TargetRegisterClass* const ALLSuperclasses[] = {
+    NULL
+  };
+
+  // Accu Register Class super-classes...
+  static const TargetRegisterClass* const AccuSuperclasses[] = {
+    NULL
+  };
+
+  // AnyCC Register Class super-classes...
+  static const TargetRegisterClass* const AnyCCSuperclasses[] = {
+    NULL
+  };
+
+  // B Register Class super-classes...
+  static const TargetRegisterClass* const BSuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, &BF::cConsRegClass, NULL
+  };
+
+  // D Register Class super-classes...
+  static const TargetRegisterClass* const DSuperclasses[] = {
+    &BF::ALLRegClass, &BF::DPRegClass, &BF::GRRegClass, NULL
+  };
+
+  // D16 Register Class super-classes...
+  static const TargetRegisterClass* const D16Superclasses[] = {
+    &BF::DP16RegClass, &BF::GR16RegClass, NULL
+  };
+
+  // D16H Register Class super-classes...
+  static const TargetRegisterClass* const D16HSuperclasses[] = {
+    &BF::D16RegClass, &BF::DP16RegClass, &BF::DP16HRegClass, &BF::GR16RegClass, NULL
+  };
+
+  // D16L Register Class super-classes...
+  static const TargetRegisterClass* const D16LSuperclasses[] = {
+    &BF::D16RegClass, &BF::DP16RegClass, &BF::DP16LRegClass, &BF::GR16RegClass, NULL
+  };
+
+  // DCons Register Class super-classes...
+  static const TargetRegisterClass* const DConsSuperclasses[] = {
+    &BF::ALLRegClass, &BF::DRegClass, &BF::DPRegClass, &BF::GRRegClass, NULL
+  };
+
+  // DP Register Class super-classes...
+  static const TargetRegisterClass* const DPSuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, NULL
+  };
+
+  // DP16 Register Class super-classes...
+  static const TargetRegisterClass* const DP16Superclasses[] = {
+    &BF::GR16RegClass, NULL
+  };
+
+  // DP16H Register Class super-classes...
+  static const TargetRegisterClass* const DP16HSuperclasses[] = {
+    &BF::DP16RegClass, &BF::GR16RegClass, NULL
+  };
+
+  // DP16L Register Class super-classes...
+  static const TargetRegisterClass* const DP16LSuperclasses[] = {
+    &BF::DP16RegClass, &BF::GR16RegClass, NULL
+  };
+
+  // GR Register Class super-classes...
+  static const TargetRegisterClass* const GRSuperclasses[] = {
+    &BF::ALLRegClass, NULL
+  };
+
+  // GR16 Register Class super-classes...
+  static const TargetRegisterClass* const GR16Superclasses[] = {
+    NULL
+  };
+
+  // I Register Class super-classes...
+  static const TargetRegisterClass* const ISuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, &BF::PIRegClass, &BF::cConsRegClass, NULL
+  };
+
+  // JustCC Register Class super-classes...
+  static const TargetRegisterClass* const JustCCSuperclasses[] = {
+    &BF::AnyCCRegClass, &BF::StatBitRegClass, NULL
+  };
+
+  // L Register Class super-classes...
+  static const TargetRegisterClass* const LSuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, &BF::cConsRegClass, NULL
+  };
+
+  // M Register Class super-classes...
+  static const TargetRegisterClass* const MSuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, NULL
+  };
+
+  // NotCC Register Class super-classes...
+  static const TargetRegisterClass* const NotCCSuperclasses[] = {
+    &BF::AnyCCRegClass, NULL
+  };
+
+  // P Register Class super-classes...
+  static const TargetRegisterClass* const PSuperclasses[] = {
+    &BF::ALLRegClass, &BF::DPRegClass, &BF::GRRegClass, &BF::PIRegClass, NULL
+  };
+
+  // P16 Register Class super-classes...
+  static const TargetRegisterClass* const P16Superclasses[] = {
+    &BF::DP16RegClass, &BF::GR16RegClass, NULL
+  };
+
+  // P16H Register Class super-classes...
+  static const TargetRegisterClass* const P16HSuperclasses[] = {
+    &BF::DP16RegClass, &BF::DP16HRegClass, &BF::GR16RegClass, &BF::P16RegClass, NULL
+  };
+
+  // P16L Register Class super-classes...
+  static const TargetRegisterClass* const P16LSuperclasses[] = {
+    &BF::DP16RegClass, &BF::DP16LRegClass, &BF::GR16RegClass, &BF::P16RegClass, NULL
+  };
+
+  // PI Register Class super-classes...
+  static const TargetRegisterClass* const PISuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, NULL
+  };
+
+  // StatBit Register Class super-classes...
+  static const TargetRegisterClass* const StatBitSuperclasses[] = {
+    NULL
+  };
+
+  // WCons Register Class super-classes...
+  static const TargetRegisterClass* const WConsSuperclasses[] = {
+    &BF::ALLRegClass, &BF::DRegClass, &BF::DPRegClass, &BF::GRRegClass, NULL
+  };
+
+  // cCons Register Class super-classes...
+  static const TargetRegisterClass* const cConsSuperclasses[] = {
+    &BF::ALLRegClass, &BF::GRRegClass, NULL
+  };
+
+  // kCons Register Class super-classes...
+  static const TargetRegisterClass* const kConsSuperclasses[] = {
+    &BF::ALLRegClass, NULL
+  };
+
+  // tCons Register Class super-classes...
+  static const TargetRegisterClass* const tConsSuperclasses[] = {
+    &BF::ALLRegClass, NULL
+  };
+
+  // uCons Register Class super-classes...
+  static const TargetRegisterClass* const uConsSuperclasses[] = {
+    &BF::ALLRegClass, NULL
+  };
+
+  // yCons Register Class super-classes...
+  static const TargetRegisterClass* const yConsSuperclasses[] = {
+    &BF::ALLRegClass, NULL
+  };
+
+  // zCons Register Class super-classes...
+  static const TargetRegisterClass* const zConsSuperclasses[] = {
+    &BF::ALLRegClass, &BF::DPRegClass, &BF::GRRegClass, &BF::PRegClass, &BF::PIRegClass, NULL
+  };
+
+ALLClass::ALLClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[ALLRegClassID], ALLVTs, ALLSubclasses, ALLSuperclasses, ALLSubRegClasses, ALLSuperRegClasses) {}
+AccuClass::AccuClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[AccuRegClassID], AccuVTs, AccuSubclasses, AccuSuperclasses, AccuSubRegClasses, AccuSuperRegClasses) {}
+AnyCCClass::AnyCCClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[AnyCCRegClassID], AnyCCVTs, AnyCCSubclasses, AnyCCSuperclasses, AnyCCSubRegClasses, AnyCCSuperRegClasses) {}
+BClass::BClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[BRegClassID], BVTs, BSubclasses, BSuperclasses, BSubRegClasses, BSuperRegClasses) {}
+DClass::DClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[DRegClassID], DVTs, DSubclasses, DSuperclasses, DSubRegClasses, DSuperRegClasses) {}
+D16Class::D16Class()  : TargetRegisterClass(&BlackfinMCRegisterClasses[D16RegClassID], D16VTs, D16Subclasses, D16Superclasses, D16SubRegClasses, D16SuperRegClasses) {}
+D16HClass::D16HClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[D16HRegClassID], D16HVTs, D16HSubclasses, D16HSuperclasses, D16HSubRegClasses, D16HSuperRegClasses) {}
+D16LClass::D16LClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[D16LRegClassID], D16LVTs, D16LSubclasses, D16LSuperclasses, D16LSubRegClasses, D16LSuperRegClasses) {}
+DConsClass::DConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[DConsRegClassID], DConsVTs, DConsSubclasses, DConsSuperclasses, DConsSubRegClasses, DConsSuperRegClasses) {}
+DPClass::DPClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[DPRegClassID], DPVTs, DPSubclasses, DPSuperclasses, DPSubRegClasses, DPSuperRegClasses) {}
+DP16Class::DP16Class()  : TargetRegisterClass(&BlackfinMCRegisterClasses[DP16RegClassID], DP16VTs, DP16Subclasses, DP16Superclasses, DP16SubRegClasses, DP16SuperRegClasses) {}
+DP16HClass::DP16HClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[DP16HRegClassID], DP16HVTs, DP16HSubclasses, DP16HSuperclasses, DP16HSubRegClasses, DP16HSuperRegClasses) {}
+DP16LClass::DP16LClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[DP16LRegClassID], DP16LVTs, DP16LSubclasses, DP16LSuperclasses, DP16LSubRegClasses, DP16LSuperRegClasses) {}
+GRClass::GRClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[GRRegClassID], GRVTs, GRSubclasses, GRSuperclasses, GRSubRegClasses, GRSuperRegClasses) {}
+GR16Class::GR16Class()  : TargetRegisterClass(&BlackfinMCRegisterClasses[GR16RegClassID], GR16VTs, GR16Subclasses, GR16Superclasses, GR16SubRegClasses, GR16SuperRegClasses) {}
+IClass::IClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[IRegClassID], IVTs, ISubclasses, ISuperclasses, ISubRegClasses, ISuperRegClasses) {}
+JustCCClass::JustCCClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[JustCCRegClassID], JustCCVTs, JustCCSubclasses, JustCCSuperclasses, JustCCSubRegClasses, JustCCSuperRegClasses) {}
+LClass::LClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[LRegClassID], LVTs, LSubclasses, LSuperclasses, LSubRegClasses, LSuperRegClasses) {}
+MClass::MClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[MRegClassID], MVTs, MSubclasses, MSuperclasses, MSubRegClasses, MSuperRegClasses) {}
+NotCCClass::NotCCClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[NotCCRegClassID], NotCCVTs, NotCCSubclasses, NotCCSuperclasses, NotCCSubRegClasses, NotCCSuperRegClasses) {}
+PClass::PClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[PRegClassID], PVTs, PSubclasses, PSuperclasses, PSubRegClasses, PSuperRegClasses) {}
+P16Class::P16Class()  : TargetRegisterClass(&BlackfinMCRegisterClasses[P16RegClassID], P16VTs, P16Subclasses, P16Superclasses, P16SubRegClasses, P16SuperRegClasses) {}
+P16HClass::P16HClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[P16HRegClassID], P16HVTs, P16HSubclasses, P16HSuperclasses, P16HSubRegClasses, P16HSuperRegClasses) {}
+P16LClass::P16LClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[P16LRegClassID], P16LVTs, P16LSubclasses, P16LSuperclasses, P16LSubRegClasses, P16LSuperRegClasses) {}
+PIClass::PIClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[PIRegClassID], PIVTs, PISubclasses, PISuperclasses, PISubRegClasses, PISuperRegClasses) {}
+StatBitClass::StatBitClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[StatBitRegClassID], StatBitVTs, StatBitSubclasses, StatBitSuperclasses, StatBitSubRegClasses, StatBitSuperRegClasses) {}
+WConsClass::WConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[WConsRegClassID], WConsVTs, WConsSubclasses, WConsSuperclasses, WConsSubRegClasses, WConsSuperRegClasses) {}
+cConsClass::cConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[cConsRegClassID], cConsVTs, cConsSubclasses, cConsSuperclasses, cConsSubRegClasses, cConsSuperRegClasses) {}
+kConsClass::kConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[kConsRegClassID], kConsVTs, kConsSubclasses, kConsSuperclasses, kConsSubRegClasses, kConsSuperRegClasses) {}
+tConsClass::tConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[tConsRegClassID], tConsVTs, tConsSubclasses, tConsSuperclasses, tConsSubRegClasses, tConsSuperRegClasses) {}
+uConsClass::uConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[uConsRegClassID], uConsVTs, uConsSubclasses, uConsSuperclasses, uConsSubRegClasses, uConsSuperRegClasses) {}
+yConsClass::yConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[yConsRegClassID], yConsVTs, yConsSubclasses, yConsSuperclasses, yConsSubRegClasses, yConsSuperRegClasses) {}
+zConsClass::zConsClass()  : TargetRegisterClass(&BlackfinMCRegisterClasses[zConsRegClassID], zConsVTs, zConsSubclasses, zConsSuperclasses, zConsSubRegClasses, zConsSuperRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &BF::ALLRegClass,
+    &BF::AccuRegClass,
+    &BF::AnyCCRegClass,
+    &BF::BRegClass,
+    &BF::DRegClass,
+    &BF::D16RegClass,
+    &BF::D16HRegClass,
+    &BF::D16LRegClass,
+    &BF::DConsRegClass,
+    &BF::DPRegClass,
+    &BF::DP16RegClass,
+    &BF::DP16HRegClass,
+    &BF::DP16LRegClass,
+    &BF::GRRegClass,
+    &BF::GR16RegClass,
+    &BF::IRegClass,
+    &BF::JustCCRegClass,
+    &BF::LRegClass,
+    &BF::MRegClass,
+    &BF::NotCCRegClass,
+    &BF::PRegClass,
+    &BF::P16RegClass,
+    &BF::P16HRegClass,
+    &BF::P16LRegClass,
+    &BF::PIRegClass,
+    &BF::StatBitRegClass,
+    &BF::WConsRegClass,
+    &BF::cConsRegClass,
+    &BF::kConsRegClass,
+    &BF::tConsRegClass,
+    &BF::uConsRegClass,
+    &BF::yConsRegClass,
+    &BF::zConsRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc BlackfinRegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 0 },
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+  };
+
+  static const char *const BlackfinSubRegIndexTable[] = { "hi16", "hi32", "lo16", "lo32" };
+
+
+unsigned BlackfinGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  case BF::A0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::A0H;
+    case BF::hi32: return BF::A0X;
+    case BF::lo16: return BF::A0L;
+    case BF::lo32: return BF::A0W;
+    };
+    break;
+  case BF::A0W:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::A0H;
+    case BF::lo16: return BF::A0L;
+    };
+    break;
+  case BF::A1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::A1H;
+    case BF::hi32: return BF::A1X;
+    case BF::lo16: return BF::A1L;
+    case BF::lo32: return BF::A1W;
+    };
+    break;
+  case BF::A1W:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::A1H;
+    case BF::lo16: return BF::A1L;
+    };
+    break;
+  case BF::B0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::B0H;
+    case BF::lo16: return BF::B0L;
+    };
+    break;
+  case BF::B1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::B1H;
+    case BF::lo16: return BF::B1L;
+    };
+    break;
+  case BF::B2:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::B2H;
+    case BF::lo16: return BF::B2L;
+    };
+    break;
+  case BF::B3:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::B3H;
+    case BF::lo16: return BF::B3L;
+    };
+    break;
+  case BF::FP:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::FPH;
+    case BF::lo16: return BF::FPL;
+    };
+    break;
+  case BF::I0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::I0H;
+    case BF::lo16: return BF::I0L;
+    };
+    break;
+  case BF::I1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::I1H;
+    case BF::lo16: return BF::I1L;
+    };
+    break;
+  case BF::I2:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::I2H;
+    case BF::lo16: return BF::I2L;
+    };
+    break;
+  case BF::I3:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::I3H;
+    case BF::lo16: return BF::I3L;
+    };
+    break;
+  case BF::L0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::L0H;
+    case BF::lo16: return BF::L0L;
+    };
+    break;
+  case BF::L1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::L1H;
+    case BF::lo16: return BF::L1L;
+    };
+    break;
+  case BF::L2:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::L2H;
+    case BF::lo16: return BF::L2L;
+    };
+    break;
+  case BF::L3:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::L3H;
+    case BF::lo16: return BF::L3L;
+    };
+    break;
+  case BF::M0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::M0H;
+    case BF::lo16: return BF::M0L;
+    };
+    break;
+  case BF::M1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::M1H;
+    case BF::lo16: return BF::M1L;
+    };
+    break;
+  case BF::M2:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::M2H;
+    case BF::lo16: return BF::M2L;
+    };
+    break;
+  case BF::M3:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::M3H;
+    case BF::lo16: return BF::M3L;
+    };
+    break;
+  case BF::P0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::P0H;
+    case BF::lo16: return BF::P0L;
+    };
+    break;
+  case BF::P1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::P1H;
+    case BF::lo16: return BF::P1L;
+    };
+    break;
+  case BF::P2:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::P2H;
+    case BF::lo16: return BF::P2L;
+    };
+    break;
+  case BF::P3:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::P3H;
+    case BF::lo16: return BF::P3L;
+    };
+    break;
+  case BF::P4:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::P4H;
+    case BF::lo16: return BF::P4L;
+    };
+    break;
+  case BF::P5:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::P5H;
+    case BF::lo16: return BF::P5L;
+    };
+    break;
+  case BF::R0:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R0H;
+    case BF::lo16: return BF::R0L;
+    };
+    break;
+  case BF::R1:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R1H;
+    case BF::lo16: return BF::R1L;
+    };
+    break;
+  case BF::R2:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R2H;
+    case BF::lo16: return BF::R2L;
+    };
+    break;
+  case BF::R3:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R3H;
+    case BF::lo16: return BF::R3L;
+    };
+    break;
+  case BF::R4:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R4H;
+    case BF::lo16: return BF::R4L;
+    };
+    break;
+  case BF::R5:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R5H;
+    case BF::lo16: return BF::R5L;
+    };
+    break;
+  case BF::R6:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R6H;
+    case BF::lo16: return BF::R6L;
+    };
+    break;
+  case BF::R7:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::R7H;
+    case BF::lo16: return BF::R7L;
+    };
+    break;
+  case BF::SP:
+    switch (Index) {
+    default: return 0;
+    case BF::hi16: return BF::SPH;
+    case BF::lo16: return BF::SPL;
+    };
+    break;
+  };
+  return 0;
+}
+
+unsigned BlackfinGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  case BF::A0:
+    if (SubRegNo == BF::A0H)  return BF::hi16;
+    if (SubRegNo == BF::A0X)  return BF::hi32;
+    if (SubRegNo == BF::A0L)  return BF::lo16;
+    if (SubRegNo == BF::A0W)  return BF::lo32;
+    return 0;
+  case BF::A0W:
+    if (SubRegNo == BF::A0H)  return BF::hi16;
+    if (SubRegNo == BF::A0L)  return BF::lo16;
+    return 0;
+  case BF::A1:
+    if (SubRegNo == BF::A1H)  return BF::hi16;
+    if (SubRegNo == BF::A1X)  return BF::hi32;
+    if (SubRegNo == BF::A1L)  return BF::lo16;
+    if (SubRegNo == BF::A1W)  return BF::lo32;
+    return 0;
+  case BF::A1W:
+    if (SubRegNo == BF::A1H)  return BF::hi16;
+    if (SubRegNo == BF::A1L)  return BF::lo16;
+    return 0;
+  case BF::B0:
+    if (SubRegNo == BF::B0H)  return BF::hi16;
+    if (SubRegNo == BF::B0L)  return BF::lo16;
+    return 0;
+  case BF::B1:
+    if (SubRegNo == BF::B1H)  return BF::hi16;
+    if (SubRegNo == BF::B1L)  return BF::lo16;
+    return 0;
+  case BF::B2:
+    if (SubRegNo == BF::B2H)  return BF::hi16;
+    if (SubRegNo == BF::B2L)  return BF::lo16;
+    return 0;
+  case BF::B3:
+    if (SubRegNo == BF::B3H)  return BF::hi16;
+    if (SubRegNo == BF::B3L)  return BF::lo16;
+    return 0;
+  case BF::FP:
+    if (SubRegNo == BF::FPH)  return BF::hi16;
+    if (SubRegNo == BF::FPL)  return BF::lo16;
+    return 0;
+  case BF::I0:
+    if (SubRegNo == BF::I0H)  return BF::hi16;
+    if (SubRegNo == BF::I0L)  return BF::lo16;
+    return 0;
+  case BF::I1:
+    if (SubRegNo == BF::I1H)  return BF::hi16;
+    if (SubRegNo == BF::I1L)  return BF::lo16;
+    return 0;
+  case BF::I2:
+    if (SubRegNo == BF::I2H)  return BF::hi16;
+    if (SubRegNo == BF::I2L)  return BF::lo16;
+    return 0;
+  case BF::I3:
+    if (SubRegNo == BF::I3H)  return BF::hi16;
+    if (SubRegNo == BF::I3L)  return BF::lo16;
+    return 0;
+  case BF::L0:
+    if (SubRegNo == BF::L0H)  return BF::hi16;
+    if (SubRegNo == BF::L0L)  return BF::lo16;
+    return 0;
+  case BF::L1:
+    if (SubRegNo == BF::L1H)  return BF::hi16;
+    if (SubRegNo == BF::L1L)  return BF::lo16;
+    return 0;
+  case BF::L2:
+    if (SubRegNo == BF::L2H)  return BF::hi16;
+    if (SubRegNo == BF::L2L)  return BF::lo16;
+    return 0;
+  case BF::L3:
+    if (SubRegNo == BF::L3H)  return BF::hi16;
+    if (SubRegNo == BF::L3L)  return BF::lo16;
+    return 0;
+  case BF::M0:
+    if (SubRegNo == BF::M0H)  return BF::hi16;
+    if (SubRegNo == BF::M0L)  return BF::lo16;
+    return 0;
+  case BF::M1:
+    if (SubRegNo == BF::M1H)  return BF::hi16;
+    if (SubRegNo == BF::M1L)  return BF::lo16;
+    return 0;
+  case BF::M2:
+    if (SubRegNo == BF::M2H)  return BF::hi16;
+    if (SubRegNo == BF::M2L)  return BF::lo16;
+    return 0;
+  case BF::M3:
+    if (SubRegNo == BF::M3H)  return BF::hi16;
+    if (SubRegNo == BF::M3L)  return BF::lo16;
+    return 0;
+  case BF::P0:
+    if (SubRegNo == BF::P0H)  return BF::hi16;
+    if (SubRegNo == BF::P0L)  return BF::lo16;
+    return 0;
+  case BF::P1:
+    if (SubRegNo == BF::P1H)  return BF::hi16;
+    if (SubRegNo == BF::P1L)  return BF::lo16;
+    return 0;
+  case BF::P2:
+    if (SubRegNo == BF::P2H)  return BF::hi16;
+    if (SubRegNo == BF::P2L)  return BF::lo16;
+    return 0;
+  case BF::P3:
+    if (SubRegNo == BF::P3H)  return BF::hi16;
+    if (SubRegNo == BF::P3L)  return BF::lo16;
+    return 0;
+  case BF::P4:
+    if (SubRegNo == BF::P4H)  return BF::hi16;
+    if (SubRegNo == BF::P4L)  return BF::lo16;
+    return 0;
+  case BF::P5:
+    if (SubRegNo == BF::P5H)  return BF::hi16;
+    if (SubRegNo == BF::P5L)  return BF::lo16;
+    return 0;
+  case BF::R0:
+    if (SubRegNo == BF::R0H)  return BF::hi16;
+    if (SubRegNo == BF::R0L)  return BF::lo16;
+    return 0;
+  case BF::R1:
+    if (SubRegNo == BF::R1H)  return BF::hi16;
+    if (SubRegNo == BF::R1L)  return BF::lo16;
+    return 0;
+  case BF::R2:
+    if (SubRegNo == BF::R2H)  return BF::hi16;
+    if (SubRegNo == BF::R2L)  return BF::lo16;
+    return 0;
+  case BF::R3:
+    if (SubRegNo == BF::R3H)  return BF::hi16;
+    if (SubRegNo == BF::R3L)  return BF::lo16;
+    return 0;
+  case BF::R4:
+    if (SubRegNo == BF::R4H)  return BF::hi16;
+    if (SubRegNo == BF::R4L)  return BF::lo16;
+    return 0;
+  case BF::R5:
+    if (SubRegNo == BF::R5H)  return BF::hi16;
+    if (SubRegNo == BF::R5L)  return BF::lo16;
+    return 0;
+  case BF::R6:
+    if (SubRegNo == BF::R6H)  return BF::hi16;
+    if (SubRegNo == BF::R6L)  return BF::lo16;
+    return 0;
+  case BF::R7:
+    if (SubRegNo == BF::R7H)  return BF::hi16;
+    if (SubRegNo == BF::R7L)  return BF::lo16;
+    return 0;
+  case BF::SP:
+    if (SubRegNo == BF::SPH)  return BF::hi16;
+    if (SubRegNo == BF::SPL)  return BF::lo16;
+    return 0;
+  };
+  return 0;
+}
+
+unsigned BlackfinGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc BlackfinRegDesc[];
+BlackfinGenRegisterInfo::BlackfinGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(BlackfinRegInfoDesc, RegisterClasses, RegisterClasses+33,
+                 BlackfinSubRegIndexTable) {
+  InitMCRegisterInfo(BlackfinRegDesc, 138, RA, BlackfinMCRegisterClasses, 33);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(32, BF::A0W, false );
+    mapDwarfRegToLLVMReg(33, BF::A1W, false );
+    mapDwarfRegToLLVMReg(40, BF::ASTAT, false );
+    mapDwarfRegToLLVMReg(24, BF::B0, false );
+    mapDwarfRegToLLVMReg(25, BF::B1, false );
+    mapDwarfRegToLLVMReg(26, BF::B2, false );
+    mapDwarfRegToLLVMReg(27, BF::B3, false );
+    mapDwarfRegToLLVMReg(34, BF::CC, false );
+    mapDwarfRegToLLVMReg(43, BF::EMUDAT, false );
+    mapDwarfRegToLLVMReg(15, BF::FP, false );
+    mapDwarfRegToLLVMReg(16, BF::I0, false );
+    mapDwarfRegToLLVMReg(17, BF::I1, false );
+    mapDwarfRegToLLVMReg(18, BF::I2, false );
+    mapDwarfRegToLLVMReg(19, BF::I3, false );
+    mapDwarfRegToLLVMReg(28, BF::L0, false );
+    mapDwarfRegToLLVMReg(29, BF::L1, false );
+    mapDwarfRegToLLVMReg(30, BF::L2, false );
+    mapDwarfRegToLLVMReg(31, BF::L3, false );
+    mapDwarfRegToLLVMReg(48, BF::LB0, false );
+    mapDwarfRegToLLVMReg(49, BF::LB1, false );
+    mapDwarfRegToLLVMReg(46, BF::LC0, false );
+    mapDwarfRegToLLVMReg(47, BF::LC1, false );
+    mapDwarfRegToLLVMReg(44, BF::LT0, false );
+    mapDwarfRegToLLVMReg(45, BF::LT1, false );
+    mapDwarfRegToLLVMReg(20, BF::M0, false );
+    mapDwarfRegToLLVMReg(21, BF::M1, false );
+    mapDwarfRegToLLVMReg(22, BF::M2, false );
+    mapDwarfRegToLLVMReg(23, BF::M3, false );
+    mapDwarfRegToLLVMReg(8, BF::P0, false );
+    mapDwarfRegToLLVMReg(9, BF::P1, false );
+    mapDwarfRegToLLVMReg(10, BF::P2, false );
+    mapDwarfRegToLLVMReg(11, BF::P3, false );
+    mapDwarfRegToLLVMReg(12, BF::P4, false );
+    mapDwarfRegToLLVMReg(13, BF::P5, false );
+    mapDwarfRegToLLVMReg(0, BF::R0, false );
+    mapDwarfRegToLLVMReg(1, BF::R1, false );
+    mapDwarfRegToLLVMReg(2, BF::R2, false );
+    mapDwarfRegToLLVMReg(3, BF::R3, false );
+    mapDwarfRegToLLVMReg(4, BF::R4, false );
+    mapDwarfRegToLLVMReg(5, BF::R5, false );
+    mapDwarfRegToLLVMReg(6, BF::R6, false );
+    mapDwarfRegToLLVMReg(7, BF::R7, false );
+    mapDwarfRegToLLVMReg(39, BF::RETE, false );
+    mapDwarfRegToLLVMReg(36, BF::RETI, false );
+    mapDwarfRegToLLVMReg(38, BF::RETN, false );
+    mapDwarfRegToLLVMReg(35, BF::RETS, false );
+    mapDwarfRegToLLVMReg(37, BF::RETX, false );
+    mapDwarfRegToLLVMReg(41, BF::SEQSTAT, false );
+    mapDwarfRegToLLVMReg(14, BF::SP, false );
+    mapDwarfRegToLLVMReg(42, BF::USP, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(32, BF::A0W, true );
+    mapDwarfRegToLLVMReg(33, BF::A1W, true );
+    mapDwarfRegToLLVMReg(40, BF::ASTAT, true );
+    mapDwarfRegToLLVMReg(24, BF::B0, true );
+    mapDwarfRegToLLVMReg(25, BF::B1, true );
+    mapDwarfRegToLLVMReg(26, BF::B2, true );
+    mapDwarfRegToLLVMReg(27, BF::B3, true );
+    mapDwarfRegToLLVMReg(34, BF::CC, true );
+    mapDwarfRegToLLVMReg(43, BF::EMUDAT, true );
+    mapDwarfRegToLLVMReg(15, BF::FP, true );
+    mapDwarfRegToLLVMReg(16, BF::I0, true );
+    mapDwarfRegToLLVMReg(17, BF::I1, true );
+    mapDwarfRegToLLVMReg(18, BF::I2, true );
+    mapDwarfRegToLLVMReg(19, BF::I3, true );
+    mapDwarfRegToLLVMReg(28, BF::L0, true );
+    mapDwarfRegToLLVMReg(29, BF::L1, true );
+    mapDwarfRegToLLVMReg(30, BF::L2, true );
+    mapDwarfRegToLLVMReg(31, BF::L3, true );
+    mapDwarfRegToLLVMReg(48, BF::LB0, true );
+    mapDwarfRegToLLVMReg(49, BF::LB1, true );
+    mapDwarfRegToLLVMReg(46, BF::LC0, true );
+    mapDwarfRegToLLVMReg(47, BF::LC1, true );
+    mapDwarfRegToLLVMReg(44, BF::LT0, true );
+    mapDwarfRegToLLVMReg(45, BF::LT1, true );
+    mapDwarfRegToLLVMReg(20, BF::M0, true );
+    mapDwarfRegToLLVMReg(21, BF::M1, true );
+    mapDwarfRegToLLVMReg(22, BF::M2, true );
+    mapDwarfRegToLLVMReg(23, BF::M3, true );
+    mapDwarfRegToLLVMReg(8, BF::P0, true );
+    mapDwarfRegToLLVMReg(9, BF::P1, true );
+    mapDwarfRegToLLVMReg(10, BF::P2, true );
+    mapDwarfRegToLLVMReg(11, BF::P3, true );
+    mapDwarfRegToLLVMReg(12, BF::P4, true );
+    mapDwarfRegToLLVMReg(13, BF::P5, true );
+    mapDwarfRegToLLVMReg(0, BF::R0, true );
+    mapDwarfRegToLLVMReg(1, BF::R1, true );
+    mapDwarfRegToLLVMReg(2, BF::R2, true );
+    mapDwarfRegToLLVMReg(3, BF::R3, true );
+    mapDwarfRegToLLVMReg(4, BF::R4, true );
+    mapDwarfRegToLLVMReg(5, BF::R5, true );
+    mapDwarfRegToLLVMReg(6, BF::R6, true );
+    mapDwarfRegToLLVMReg(7, BF::R7, true );
+    mapDwarfRegToLLVMReg(39, BF::RETE, true );
+    mapDwarfRegToLLVMReg(36, BF::RETI, true );
+    mapDwarfRegToLLVMReg(38, BF::RETN, true );
+    mapDwarfRegToLLVMReg(35, BF::RETS, true );
+    mapDwarfRegToLLVMReg(37, BF::RETX, true );
+    mapDwarfRegToLLVMReg(41, BF::SEQSTAT, true );
+    mapDwarfRegToLLVMReg(14, BF::SP, true );
+    mapDwarfRegToLLVMReg(42, BF::USP, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(BF::A0, -1, false );
+    mapLLVMRegToDwarfReg(BF::A0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::A0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::A0W, 32, false );
+    mapLLVMRegToDwarfReg(BF::A0X, -1, false );
+    mapLLVMRegToDwarfReg(BF::A1, -1, false );
+    mapLLVMRegToDwarfReg(BF::A1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::A1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::A1W, 33, false );
+    mapLLVMRegToDwarfReg(BF::A1X, -1, false );
+    mapLLVMRegToDwarfReg(BF::AC0, -1, false );
+    mapLLVMRegToDwarfReg(BF::AC1, -1, false );
+    mapLLVMRegToDwarfReg(BF::AN, -1, false );
+    mapLLVMRegToDwarfReg(BF::AQ, -1, false );
+    mapLLVMRegToDwarfReg(BF::ASTAT, 40, false );
+    mapLLVMRegToDwarfReg(BF::AV0, -1, false );
+    mapLLVMRegToDwarfReg(BF::AV0S, -1, false );
+    mapLLVMRegToDwarfReg(BF::AV1, -1, false );
+    mapLLVMRegToDwarfReg(BF::AV1S, -1, false );
+    mapLLVMRegToDwarfReg(BF::AZ, -1, false );
+    mapLLVMRegToDwarfReg(BF::B0, 24, false );
+    mapLLVMRegToDwarfReg(BF::B0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::B0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::B1, 25, false );
+    mapLLVMRegToDwarfReg(BF::B1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::B1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::B2, 26, false );
+    mapLLVMRegToDwarfReg(BF::B2H, -1, false );
+    mapLLVMRegToDwarfReg(BF::B2L, -1, false );
+    mapLLVMRegToDwarfReg(BF::B3, 27, false );
+    mapLLVMRegToDwarfReg(BF::B3H, -1, false );
+    mapLLVMRegToDwarfReg(BF::B3L, -1, false );
+    mapLLVMRegToDwarfReg(BF::CC, 34, false );
+    mapLLVMRegToDwarfReg(BF::CYCLES, -1, false );
+    mapLLVMRegToDwarfReg(BF::CYCLES2, -1, false );
+    mapLLVMRegToDwarfReg(BF::EMUDAT, 43, false );
+    mapLLVMRegToDwarfReg(BF::FP, 15, false );
+    mapLLVMRegToDwarfReg(BF::FPH, -1, false );
+    mapLLVMRegToDwarfReg(BF::FPL, -1, false );
+    mapLLVMRegToDwarfReg(BF::I0, 16, false );
+    mapLLVMRegToDwarfReg(BF::I0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::I0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::I1, 17, false );
+    mapLLVMRegToDwarfReg(BF::I1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::I1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::I2, 18, false );
+    mapLLVMRegToDwarfReg(BF::I2H, -1, false );
+    mapLLVMRegToDwarfReg(BF::I2L, -1, false );
+    mapLLVMRegToDwarfReg(BF::I3, 19, false );
+    mapLLVMRegToDwarfReg(BF::I3H, -1, false );
+    mapLLVMRegToDwarfReg(BF::I3L, -1, false );
+    mapLLVMRegToDwarfReg(BF::L0, 28, false );
+    mapLLVMRegToDwarfReg(BF::L0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::L0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::L1, 29, false );
+    mapLLVMRegToDwarfReg(BF::L1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::L1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::L2, 30, false );
+    mapLLVMRegToDwarfReg(BF::L2H, -1, false );
+    mapLLVMRegToDwarfReg(BF::L2L, -1, false );
+    mapLLVMRegToDwarfReg(BF::L3, 31, false );
+    mapLLVMRegToDwarfReg(BF::L3H, -1, false );
+    mapLLVMRegToDwarfReg(BF::L3L, -1, false );
+    mapLLVMRegToDwarfReg(BF::LB0, 48, false );
+    mapLLVMRegToDwarfReg(BF::LB1, 49, false );
+    mapLLVMRegToDwarfReg(BF::LC0, 46, false );
+    mapLLVMRegToDwarfReg(BF::LC1, 47, false );
+    mapLLVMRegToDwarfReg(BF::LT0, 44, false );
+    mapLLVMRegToDwarfReg(BF::LT1, 45, false );
+    mapLLVMRegToDwarfReg(BF::M0, 20, false );
+    mapLLVMRegToDwarfReg(BF::M0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::M0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::M1, 21, false );
+    mapLLVMRegToDwarfReg(BF::M1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::M1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::M2, 22, false );
+    mapLLVMRegToDwarfReg(BF::M2H, -1, false );
+    mapLLVMRegToDwarfReg(BF::M2L, -1, false );
+    mapLLVMRegToDwarfReg(BF::M3, 23, false );
+    mapLLVMRegToDwarfReg(BF::M3H, -1, false );
+    mapLLVMRegToDwarfReg(BF::M3L, -1, false );
+    mapLLVMRegToDwarfReg(BF::NCC, -1, false );
+    mapLLVMRegToDwarfReg(BF::P0, 8, false );
+    mapLLVMRegToDwarfReg(BF::P0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::P0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::P1, 9, false );
+    mapLLVMRegToDwarfReg(BF::P1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::P1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::P2, 10, false );
+    mapLLVMRegToDwarfReg(BF::P2H, -1, false );
+    mapLLVMRegToDwarfReg(BF::P2L, -1, false );
+    mapLLVMRegToDwarfReg(BF::P3, 11, false );
+    mapLLVMRegToDwarfReg(BF::P3H, -1, false );
+    mapLLVMRegToDwarfReg(BF::P3L, -1, false );
+    mapLLVMRegToDwarfReg(BF::P4, 12, false );
+    mapLLVMRegToDwarfReg(BF::P4H, -1, false );
+    mapLLVMRegToDwarfReg(BF::P4L, -1, false );
+    mapLLVMRegToDwarfReg(BF::P5, 13, false );
+    mapLLVMRegToDwarfReg(BF::P5H, -1, false );
+    mapLLVMRegToDwarfReg(BF::P5L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R0, 0, false );
+    mapLLVMRegToDwarfReg(BF::R0H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R0L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R1, 1, false );
+    mapLLVMRegToDwarfReg(BF::R1H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R1L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R2, 2, false );
+    mapLLVMRegToDwarfReg(BF::R2H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R2L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R3, 3, false );
+    mapLLVMRegToDwarfReg(BF::R3H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R3L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R4, 4, false );
+    mapLLVMRegToDwarfReg(BF::R4H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R4L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R5, 5, false );
+    mapLLVMRegToDwarfReg(BF::R5H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R5L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R6, 6, false );
+    mapLLVMRegToDwarfReg(BF::R6H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R6L, -1, false );
+    mapLLVMRegToDwarfReg(BF::R7, 7, false );
+    mapLLVMRegToDwarfReg(BF::R7H, -1, false );
+    mapLLVMRegToDwarfReg(BF::R7L, -1, false );
+    mapLLVMRegToDwarfReg(BF::RETE, 39, false );
+    mapLLVMRegToDwarfReg(BF::RETI, 36, false );
+    mapLLVMRegToDwarfReg(BF::RETN, 38, false );
+    mapLLVMRegToDwarfReg(BF::RETS, 35, false );
+    mapLLVMRegToDwarfReg(BF::RETX, 37, false );
+    mapLLVMRegToDwarfReg(BF::SEQSTAT, 41, false );
+    mapLLVMRegToDwarfReg(BF::SP, 14, false );
+    mapLLVMRegToDwarfReg(BF::SPH, -1, false );
+    mapLLVMRegToDwarfReg(BF::SPL, -1, false );
+    mapLLVMRegToDwarfReg(BF::SYSCFG, -1, false );
+    mapLLVMRegToDwarfReg(BF::USP, 42, false );
+    mapLLVMRegToDwarfReg(BF::V, -1, false );
+    mapLLVMRegToDwarfReg(BF::VS, -1, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(BF::A0, -1, true );
+    mapLLVMRegToDwarfReg(BF::A0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::A0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::A0W, 32, true );
+    mapLLVMRegToDwarfReg(BF::A0X, -1, true );
+    mapLLVMRegToDwarfReg(BF::A1, -1, true );
+    mapLLVMRegToDwarfReg(BF::A1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::A1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::A1W, 33, true );
+    mapLLVMRegToDwarfReg(BF::A1X, -1, true );
+    mapLLVMRegToDwarfReg(BF::AC0, -1, true );
+    mapLLVMRegToDwarfReg(BF::AC1, -1, true );
+    mapLLVMRegToDwarfReg(BF::AN, -1, true );
+    mapLLVMRegToDwarfReg(BF::AQ, -1, true );
+    mapLLVMRegToDwarfReg(BF::ASTAT, 40, true );
+    mapLLVMRegToDwarfReg(BF::AV0, -1, true );
+    mapLLVMRegToDwarfReg(BF::AV0S, -1, true );
+    mapLLVMRegToDwarfReg(BF::AV1, -1, true );
+    mapLLVMRegToDwarfReg(BF::AV1S, -1, true );
+    mapLLVMRegToDwarfReg(BF::AZ, -1, true );
+    mapLLVMRegToDwarfReg(BF::B0, 24, true );
+    mapLLVMRegToDwarfReg(BF::B0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::B0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::B1, 25, true );
+    mapLLVMRegToDwarfReg(BF::B1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::B1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::B2, 26, true );
+    mapLLVMRegToDwarfReg(BF::B2H, -1, true );
+    mapLLVMRegToDwarfReg(BF::B2L, -1, true );
+    mapLLVMRegToDwarfReg(BF::B3, 27, true );
+    mapLLVMRegToDwarfReg(BF::B3H, -1, true );
+    mapLLVMRegToDwarfReg(BF::B3L, -1, true );
+    mapLLVMRegToDwarfReg(BF::CC, 34, true );
+    mapLLVMRegToDwarfReg(BF::CYCLES, -1, true );
+    mapLLVMRegToDwarfReg(BF::CYCLES2, -1, true );
+    mapLLVMRegToDwarfReg(BF::EMUDAT, 43, true );
+    mapLLVMRegToDwarfReg(BF::FP, 15, true );
+    mapLLVMRegToDwarfReg(BF::FPH, -1, true );
+    mapLLVMRegToDwarfReg(BF::FPL, -1, true );
+    mapLLVMRegToDwarfReg(BF::I0, 16, true );
+    mapLLVMRegToDwarfReg(BF::I0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::I0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::I1, 17, true );
+    mapLLVMRegToDwarfReg(BF::I1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::I1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::I2, 18, true );
+    mapLLVMRegToDwarfReg(BF::I2H, -1, true );
+    mapLLVMRegToDwarfReg(BF::I2L, -1, true );
+    mapLLVMRegToDwarfReg(BF::I3, 19, true );
+    mapLLVMRegToDwarfReg(BF::I3H, -1, true );
+    mapLLVMRegToDwarfReg(BF::I3L, -1, true );
+    mapLLVMRegToDwarfReg(BF::L0, 28, true );
+    mapLLVMRegToDwarfReg(BF::L0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::L0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::L1, 29, true );
+    mapLLVMRegToDwarfReg(BF::L1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::L1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::L2, 30, true );
+    mapLLVMRegToDwarfReg(BF::L2H, -1, true );
+    mapLLVMRegToDwarfReg(BF::L2L, -1, true );
+    mapLLVMRegToDwarfReg(BF::L3, 31, true );
+    mapLLVMRegToDwarfReg(BF::L3H, -1, true );
+    mapLLVMRegToDwarfReg(BF::L3L, -1, true );
+    mapLLVMRegToDwarfReg(BF::LB0, 48, true );
+    mapLLVMRegToDwarfReg(BF::LB1, 49, true );
+    mapLLVMRegToDwarfReg(BF::LC0, 46, true );
+    mapLLVMRegToDwarfReg(BF::LC1, 47, true );
+    mapLLVMRegToDwarfReg(BF::LT0, 44, true );
+    mapLLVMRegToDwarfReg(BF::LT1, 45, true );
+    mapLLVMRegToDwarfReg(BF::M0, 20, true );
+    mapLLVMRegToDwarfReg(BF::M0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::M0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::M1, 21, true );
+    mapLLVMRegToDwarfReg(BF::M1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::M1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::M2, 22, true );
+    mapLLVMRegToDwarfReg(BF::M2H, -1, true );
+    mapLLVMRegToDwarfReg(BF::M2L, -1, true );
+    mapLLVMRegToDwarfReg(BF::M3, 23, true );
+    mapLLVMRegToDwarfReg(BF::M3H, -1, true );
+    mapLLVMRegToDwarfReg(BF::M3L, -1, true );
+    mapLLVMRegToDwarfReg(BF::NCC, -1, true );
+    mapLLVMRegToDwarfReg(BF::P0, 8, true );
+    mapLLVMRegToDwarfReg(BF::P0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::P0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::P1, 9, true );
+    mapLLVMRegToDwarfReg(BF::P1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::P1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::P2, 10, true );
+    mapLLVMRegToDwarfReg(BF::P2H, -1, true );
+    mapLLVMRegToDwarfReg(BF::P2L, -1, true );
+    mapLLVMRegToDwarfReg(BF::P3, 11, true );
+    mapLLVMRegToDwarfReg(BF::P3H, -1, true );
+    mapLLVMRegToDwarfReg(BF::P3L, -1, true );
+    mapLLVMRegToDwarfReg(BF::P4, 12, true );
+    mapLLVMRegToDwarfReg(BF::P4H, -1, true );
+    mapLLVMRegToDwarfReg(BF::P4L, -1, true );
+    mapLLVMRegToDwarfReg(BF::P5, 13, true );
+    mapLLVMRegToDwarfReg(BF::P5H, -1, true );
+    mapLLVMRegToDwarfReg(BF::P5L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R0, 0, true );
+    mapLLVMRegToDwarfReg(BF::R0H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R0L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R1, 1, true );
+    mapLLVMRegToDwarfReg(BF::R1H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R1L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R2, 2, true );
+    mapLLVMRegToDwarfReg(BF::R2H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R2L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R3, 3, true );
+    mapLLVMRegToDwarfReg(BF::R3H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R3L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R4, 4, true );
+    mapLLVMRegToDwarfReg(BF::R4H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R4L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R5, 5, true );
+    mapLLVMRegToDwarfReg(BF::R5H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R5L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R6, 6, true );
+    mapLLVMRegToDwarfReg(BF::R6H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R6L, -1, true );
+    mapLLVMRegToDwarfReg(BF::R7, 7, true );
+    mapLLVMRegToDwarfReg(BF::R7H, -1, true );
+    mapLLVMRegToDwarfReg(BF::R7L, -1, true );
+    mapLLVMRegToDwarfReg(BF::RETE, 39, true );
+    mapLLVMRegToDwarfReg(BF::RETI, 36, true );
+    mapLLVMRegToDwarfReg(BF::RETN, 38, true );
+    mapLLVMRegToDwarfReg(BF::RETS, 35, true );
+    mapLLVMRegToDwarfReg(BF::RETX, 37, true );
+    mapLLVMRegToDwarfReg(BF::SEQSTAT, 41, true );
+    mapLLVMRegToDwarfReg(BF::SP, 14, true );
+    mapLLVMRegToDwarfReg(BF::SPH, -1, true );
+    mapLLVMRegToDwarfReg(BF::SPL, -1, true );
+    mapLLVMRegToDwarfReg(BF::SYSCFG, -1, true );
+    mapLLVMRegToDwarfReg(BF::USP, 42, true );
+    mapLLVMRegToDwarfReg(BF::V, -1, true );
+    mapLLVMRegToDwarfReg(BF::VS, -1, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

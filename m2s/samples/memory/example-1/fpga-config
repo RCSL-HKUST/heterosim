@@ -1,0 +1,8 @@
+[General]
+Frequency = 1000
+ClbArrayWidth = 20
+ClbArrayLength = 20
+
+[Queues]
+KernelQueueSize = 10
+ResultQueueSize = 10

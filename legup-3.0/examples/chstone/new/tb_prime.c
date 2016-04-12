@@ -1,0 +1,44 @@
+#include "prime.c"
+
+
+int main () {
+  uint x;
+  int y;
+   
+  int i;
+
+    int size0 = 4; int size1 = 4;
+  int r;
+  
+  
+  for (i=0;i<99;i++)
+   { x = 1000+i;
+    *((volatile unsigned int *)0xf000f008) = (unsigned int)(&x);
+    *((volatile unsigned int *)0xf000f00C) = 4;  
+     r =  prime(&x,size0, &y,size1);
+     if(y)
+        printf("%d ",x);
+   }  
+  x = 21649;
+         *((volatile unsigned int *)0xf000f008) = (unsigned int)(&x);
+     *((volatile unsigned int *)0xf000f00C) = 4;  
+       r =  prime(&x,size0, &y,size1);
+        if(y)
+         printf("%d ",x);
+
+      // *((volatile unsigned int *)0xf000f008) = (unsigned int)(x);
+      // *((volatile unsigned int *)0xf000f00C) = 400;   
+  
+  //  for (i=0;i<100;i++)
+  //   r =  prime(&x[i],size0, &y[i],size1);
+
+   
+ // for (i=0;i<100;i++)
+  //  { if(y[i])
+   //    printf("%d ",x[i]);
+   // }
+ // printf("\n");
+  return 0;
+}
+
+

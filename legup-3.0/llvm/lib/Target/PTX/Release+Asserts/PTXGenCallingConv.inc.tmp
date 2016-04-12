@@ -1,0 +1,114 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Calling Convention Implementation Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+static bool CC_PTX(unsigned ValNo, MVT ValVT,
+                   MVT LocVT, CCValAssign::LocInfo LocInfo,
+                   ISD::ArgFlagsTy ArgFlags, CCState &State);
+static bool RetCC_PTX(unsigned ValNo, MVT ValVT,
+                      MVT LocVT, CCValAssign::LocInfo LocInfo,
+                      ISD::ArgFlagsTy ArgFlags, CCState &State);
+
+
+static bool CC_PTX(unsigned ValNo, MVT ValVT,
+                   MVT LocVT, CCValAssign::LocInfo LocInfo,
+                   ISD::ArgFlagsTy ArgFlags, CCState &State) {
+
+  if (LocVT == MVT::i1) {
+    static const unsigned RegList1[] = {
+      PTX::P12, PTX::P13, PTX::P14, PTX::P15, PTX::P16, PTX::P17, PTX::P18, PTX::P19, PTX::P20, PTX::P21, PTX::P22, PTX::P23, PTX::P24, PTX::P25, PTX::P26, PTX::P27, PTX::P28, PTX::P29, PTX::P30, PTX::P31, PTX::P32, PTX::P33, PTX::P34, PTX::P35, PTX::P36, PTX::P37, PTX::P38, PTX::P39, PTX::P40, PTX::P41, PTX::P42, PTX::P43, PTX::P44, PTX::P45, PTX::P46, PTX::P47, PTX::P48, PTX::P49, PTX::P50, PTX::P51, PTX::P52, PTX::P53, PTX::P54, PTX::P55, PTX::P56, PTX::P57, PTX::P58, PTX::P59, PTX::P60, PTX::P61, PTX::P62, PTX::P63, PTX::P64, PTX::P65, PTX::P66, PTX::P67, PTX::P68, PTX::P69, PTX::P70, PTX::P71, PTX::P72, PTX::P73, PTX::P74, PTX::P75, PTX::P76, PTX::P77, PTX::P78, PTX::P79, PTX::P80, PTX::P81, PTX::P82, PTX::P83, PTX::P84, PTX::P85, PTX::P86, PTX::P87, PTX::P88, PTX::P89, PTX::P90, PTX::P91, PTX::P92, PTX::P93, PTX::P94, PTX::P95, PTX::P96, PTX::P97, PTX::P98, PTX::P99, PTX::P100, PTX::P101, PTX::P102, PTX::P103, PTX::P104, PTX::P105, PTX::P106, PTX::P107, PTX::P108, PTX::P109, PTX::P110, PTX::P111, PTX::P112, PTX::P113, PTX::P114, PTX::P115, PTX::P116, PTX::P117, PTX::P118, PTX::P119, PTX::P120, PTX::P121, PTX::P122, PTX::P123, PTX::P124, PTX::P125, PTX::P126, PTX::P127
+    };
+    if (unsigned Reg = State.AllocateReg(RegList1, 116)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  if (LocVT == MVT::i16) {
+    static const unsigned RegList2[] = {
+      PTX::RH12, PTX::RH13, PTX::RH14, PTX::RH15, PTX::RH16, PTX::RH17, PTX::RH18, PTX::RH19, PTX::RH20, PTX::RH21, PTX::RH22, PTX::RH23, PTX::RH24, PTX::RH25, PTX::RH26, PTX::RH27, PTX::RH28, PTX::RH29, PTX::RH30, PTX::RH31, PTX::RH32, PTX::RH33, PTX::RH34, PTX::RH35, PTX::RH36, PTX::RH37, PTX::RH38, PTX::RH39, PTX::RH40, PTX::RH41, PTX::RH42, PTX::RH43, PTX::RH44, PTX::RH45, PTX::RH46, PTX::RH47, PTX::RH48, PTX::RH49, PTX::RH50, PTX::RH51, PTX::RH52, PTX::RH53, PTX::RH54, PTX::RH55, PTX::RH56, PTX::RH57, PTX::RH58, PTX::RH59, PTX::RH60, PTX::RH61, PTX::RH62, PTX::RH63, PTX::RH64, PTX::RH65, PTX::RH66, PTX::RH67, PTX::RH68, PTX::RH69, PTX::RH70, PTX::RH71, PTX::RH72, PTX::RH73, PTX::RH74, PTX::RH75, PTX::RH76, PTX::RH77, PTX::RH78, PTX::RH79, PTX::RH80, PTX::RH81, PTX::RH82, PTX::RH83, PTX::RH84, PTX::RH85, PTX::RH86, PTX::RH87, PTX::RH88, PTX::RH89, PTX::RH90, PTX::RH91, PTX::RH92, PTX::RH93, PTX::RH94, PTX::RH95, PTX::RH96, PTX::RH97, PTX::RH98, PTX::RH99, PTX::RH100, PTX::RH101, PTX::RH102, PTX::RH103, PTX::RH104, PTX::RH105, PTX::RH106, PTX::RH107, PTX::RH108, PTX::RH109, PTX::RH110, PTX::RH111, PTX::RH112, PTX::RH113, PTX::RH114, PTX::RH115, PTX::RH116, PTX::RH117, PTX::RH118, PTX::RH119, PTX::RH120, PTX::RH121, PTX::RH122, PTX::RH123, PTX::RH124, PTX::RH125, PTX::RH126, PTX::RH127
+    };
+    if (unsigned Reg = State.AllocateReg(RegList2, 116)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  if (LocVT == MVT::i32 ||
+      LocVT == MVT::f32) {
+    static const unsigned RegList3[] = {
+      PTX::R12, PTX::R13, PTX::R14, PTX::R15, PTX::R16, PTX::R17, PTX::R18, PTX::R19, PTX::R20, PTX::R21, PTX::R22, PTX::R23, PTX::R24, PTX::R25, PTX::R26, PTX::R27, PTX::R28, PTX::R29, PTX::R30, PTX::R31, PTX::R32, PTX::R33, PTX::R34, PTX::R35, PTX::R36, PTX::R37, PTX::R38, PTX::R39, PTX::R40, PTX::R41, PTX::R42, PTX::R43, PTX::R44, PTX::R45, PTX::R46, PTX::R47, PTX::R48, PTX::R49, PTX::R50, PTX::R51, PTX::R52, PTX::R53, PTX::R54, PTX::R55, PTX::R56, PTX::R57, PTX::R58, PTX::R59, PTX::R60, PTX::R61, PTX::R62, PTX::R63, PTX::R64, PTX::R65, PTX::R66, PTX::R67, PTX::R68, PTX::R69, PTX::R70, PTX::R71, PTX::R72, PTX::R73, PTX::R74, PTX::R75, PTX::R76, PTX::R77, PTX::R78, PTX::R79, PTX::R80, PTX::R81, PTX::R82, PTX::R83, PTX::R84, PTX::R85, PTX::R86, PTX::R87, PTX::R88, PTX::R89, PTX::R90, PTX::R91, PTX::R92, PTX::R93, PTX::R94, PTX::R95, PTX::R96, PTX::R97, PTX::R98, PTX::R99, PTX::R100, PTX::R101, PTX::R102, PTX::R103, PTX::R104, PTX::R105, PTX::R106, PTX::R107, PTX::R108, PTX::R109, PTX::R110, PTX::R111, PTX::R112, PTX::R113, PTX::R114, PTX::R115, PTX::R116, PTX::R117, PTX::R118, PTX::R119, PTX::R120, PTX::R121, PTX::R122, PTX::R123, PTX::R124, PTX::R125, PTX::R126, PTX::R127
+    };
+    if (unsigned Reg = State.AllocateReg(RegList3, 116)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  if (LocVT == MVT::i64 ||
+      LocVT == MVT::f64) {
+    static const unsigned RegList4[] = {
+      PTX::RD12, PTX::RD13, PTX::RD14, PTX::RD15, PTX::RD16, PTX::RD17, PTX::RD18, PTX::RD19, PTX::RD20, PTX::RD21, PTX::RD22, PTX::RD23, PTX::RD24, PTX::RD25, PTX::RD26, PTX::RD27, PTX::RD28, PTX::RD29, PTX::RD30, PTX::RD31, PTX::RD32, PTX::RD33, PTX::RD34, PTX::RD35, PTX::RD36, PTX::RD37, PTX::RD38, PTX::RD39, PTX::RD40, PTX::RD41, PTX::RD42, PTX::RD43, PTX::RD44, PTX::RD45, PTX::RD46, PTX::RD47, PTX::RD48, PTX::RD49, PTX::RD50, PTX::RD51, PTX::RD52, PTX::RD53, PTX::RD54, PTX::RD55, PTX::RD56, PTX::RD57, PTX::RD58, PTX::RD59, PTX::RD60, PTX::RD61, PTX::RD62, PTX::RD63, PTX::RD64, PTX::RD65, PTX::RD66, PTX::RD67, PTX::RD68, PTX::RD69, PTX::RD70, PTX::RD71, PTX::RD72, PTX::RD73, PTX::RD74, PTX::RD75, PTX::RD76, PTX::RD77, PTX::RD78, PTX::RD79, PTX::RD80, PTX::RD81, PTX::RD82, PTX::RD83, PTX::RD84, PTX::RD85, PTX::RD86, PTX::RD87, PTX::RD88, PTX::RD89, PTX::RD90, PTX::RD91, PTX::RD92, PTX::RD93, PTX::RD94, PTX::RD95, PTX::RD96, PTX::RD97, PTX::RD98, PTX::RD99, PTX::RD100, PTX::RD101, PTX::RD102, PTX::RD103, PTX::RD104, PTX::RD105, PTX::RD106, PTX::RD107, PTX::RD108, PTX::RD109, PTX::RD110, PTX::RD111, PTX::RD112, PTX::RD113, PTX::RD114, PTX::RD115, PTX::RD116, PTX::RD117, PTX::RD118, PTX::RD119, PTX::RD120, PTX::RD121, PTX::RD122, PTX::RD123, PTX::RD124, PTX::RD125, PTX::RD126, PTX::RD127
+    };
+    if (unsigned Reg = State.AllocateReg(RegList4, 116)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  return true;  // CC didn't match.
+}
+
+
+static bool RetCC_PTX(unsigned ValNo, MVT ValVT,
+                      MVT LocVT, CCValAssign::LocInfo LocInfo,
+                      ISD::ArgFlagsTy ArgFlags, CCState &State) {
+
+  if (LocVT == MVT::i1) {
+    static const unsigned RegList1[] = {
+      PTX::P0, PTX::P1, PTX::P2, PTX::P3, PTX::P4, PTX::P5, PTX::P6, PTX::P7, PTX::P8, PTX::P9, PTX::P10, PTX::P11
+    };
+    if (unsigned Reg = State.AllocateReg(RegList1, 12)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  if (LocVT == MVT::i16) {
+    static const unsigned RegList2[] = {
+      PTX::RH0, PTX::RH1, PTX::RH2, PTX::RH3, PTX::RH4, PTX::RH5, PTX::RH6, PTX::RH7, PTX::RH8, PTX::RH9, PTX::RH10, PTX::RH11
+    };
+    if (unsigned Reg = State.AllocateReg(RegList2, 12)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  if (LocVT == MVT::i32 ||
+      LocVT == MVT::f32) {
+    static const unsigned RegList3[] = {
+      PTX::R0, PTX::R1, PTX::R2, PTX::R3, PTX::R4, PTX::R5, PTX::R6, PTX::R7, PTX::R8, PTX::R9, PTX::R10, PTX::R11
+    };
+    if (unsigned Reg = State.AllocateReg(RegList3, 12)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  if (LocVT == MVT::i64 ||
+      LocVT == MVT::f64) {
+    static const unsigned RegList4[] = {
+      PTX::RD0, PTX::RD1, PTX::RD2, PTX::RD3, PTX::RD4, PTX::RD5, PTX::RD6, PTX::RD7, PTX::RD8, PTX::RD9, PTX::RD10, PTX::RD11
+    };
+    if (unsigned Reg = State.AllocateReg(RegList4, 12)) {
+      State.addLoc(CCValAssign::getReg(ValNo, ValVT, Reg, LocVT, LocInfo));
+      return false;
+    }
+  }
+
+  return true;  // CC didn't match.
+}

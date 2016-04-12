@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc bit_count.v -exe sim_main.cpp"
+S   4201395  1059238  1453396387 "/usr/local/bin/verilator_bin"
+S      7968  4054551  1455705480 "bit_count.v"
+T     17002  4054706  1455706342 "obj_dir/Vbit_count.cpp"
+T      3788  4054705  1455706342 "obj_dir/Vbit_count.h"
+T      1992  4054708  1455706342 "obj_dir/Vbit_count.mk"
+T       594  4054704  1455706342 "obj_dir/Vbit_count__Syms.cpp"
+T       984  4054702  1455706342 "obj_dir/Vbit_count__Syms.h"
+T       254  4054709  1455706342 "obj_dir/Vbit_count__ver.d"
+T         0        0  1455706342 "obj_dir/Vbit_count__verFiles.dat"
+T      1097  4054707  1455706342 "obj_dir/Vbit_count_classes.mk"

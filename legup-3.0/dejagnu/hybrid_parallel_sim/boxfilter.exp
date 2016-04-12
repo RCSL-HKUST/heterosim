@@ -1,0 +1,13 @@
+load_lib legup.exp
+
+cd ../examples/parallel/openmp/boxfilter
+set test "boxfilter OpenMP"
+
+set hybridexpected {# RESULT: PASS}
+run-test-hybridomp-once $test $hybridexpected
+
+cd ../../pthreads/boxfilter
+set test "boxfilter Pthreads"
+run-test-hybrid-once $test $hybridexpected
+
+cd ../../../

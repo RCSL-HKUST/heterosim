@@ -1,0 +1,2043 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass SPUMCRegisterClasses[];
+
+namespace SPU {
+enum {
+  NoRegister,
+  R0 = 1,
+  R1 = 2,
+  R2 = 3,
+  R3 = 4,
+  R4 = 5,
+  R5 = 6,
+  R6 = 7,
+  R7 = 8,
+  R8 = 9,
+  R9 = 10,
+  R10 = 11,
+  R11 = 12,
+  R12 = 13,
+  R13 = 14,
+  R14 = 15,
+  R15 = 16,
+  R16 = 17,
+  R17 = 18,
+  R18 = 19,
+  R19 = 20,
+  R20 = 21,
+  R21 = 22,
+  R22 = 23,
+  R23 = 24,
+  R24 = 25,
+  R25 = 26,
+  R26 = 27,
+  R27 = 28,
+  R28 = 29,
+  R29 = 30,
+  R30 = 31,
+  R31 = 32,
+  R32 = 33,
+  R33 = 34,
+  R34 = 35,
+  R35 = 36,
+  R36 = 37,
+  R37 = 38,
+  R38 = 39,
+  R39 = 40,
+  R40 = 41,
+  R41 = 42,
+  R42 = 43,
+  R43 = 44,
+  R44 = 45,
+  R45 = 46,
+  R46 = 47,
+  R47 = 48,
+  R48 = 49,
+  R49 = 50,
+  R50 = 51,
+  R51 = 52,
+  R52 = 53,
+  R53 = 54,
+  R54 = 55,
+  R55 = 56,
+  R56 = 57,
+  R57 = 58,
+  R58 = 59,
+  R59 = 60,
+  R60 = 61,
+  R61 = 62,
+  R62 = 63,
+  R63 = 64,
+  R64 = 65,
+  R65 = 66,
+  R66 = 67,
+  R67 = 68,
+  R68 = 69,
+  R69 = 70,
+  R70 = 71,
+  R71 = 72,
+  R72 = 73,
+  R73 = 74,
+  R74 = 75,
+  R75 = 76,
+  R76 = 77,
+  R77 = 78,
+  R78 = 79,
+  R79 = 80,
+  R80 = 81,
+  R81 = 82,
+  R82 = 83,
+  R83 = 84,
+  R84 = 85,
+  R85 = 86,
+  R86 = 87,
+  R87 = 88,
+  R88 = 89,
+  R89 = 90,
+  R90 = 91,
+  R91 = 92,
+  R92 = 93,
+  R93 = 94,
+  R94 = 95,
+  R95 = 96,
+  R96 = 97,
+  R97 = 98,
+  R98 = 99,
+  R99 = 100,
+  R100 = 101,
+  R101 = 102,
+  R102 = 103,
+  R103 = 104,
+  R104 = 105,
+  R105 = 106,
+  R106 = 107,
+  R107 = 108,
+  R108 = 109,
+  R109 = 110,
+  R110 = 111,
+  R111 = 112,
+  R112 = 113,
+  R113 = 114,
+  R114 = 115,
+  R115 = 116,
+  R116 = 117,
+  R117 = 118,
+  R118 = 119,
+  R119 = 120,
+  R120 = 121,
+  R121 = 122,
+  R122 = 123,
+  R123 = 124,
+  R124 = 125,
+  R125 = 126,
+  R126 = 127,
+  R127 = 128,
+  NUM_TARGET_REGS 	// 129
+};
+}
+
+// Register classes
+namespace SPU {
+enum {
+  GPRCRegClassID = 0,
+  R16CRegClassID = 1,
+  R32CRegClassID = 2,
+  R32FPRegClassID = 3,
+  R64CRegClassID = 4,
+  R64FPRegClassID = 5,
+  R8CRegClassID = 6,
+  VECREGRegClassID = 7
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct SPUGenMCRegisterInfo : public MCRegisterInfo {
+  explicit SPUGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned R0_Overlaps[] = { SPU::R0, 0 };
+  const unsigned R1_Overlaps[] = { SPU::R1, 0 };
+  const unsigned R2_Overlaps[] = { SPU::R2, 0 };
+  const unsigned R3_Overlaps[] = { SPU::R3, 0 };
+  const unsigned R4_Overlaps[] = { SPU::R4, 0 };
+  const unsigned R5_Overlaps[] = { SPU::R5, 0 };
+  const unsigned R6_Overlaps[] = { SPU::R6, 0 };
+  const unsigned R7_Overlaps[] = { SPU::R7, 0 };
+  const unsigned R8_Overlaps[] = { SPU::R8, 0 };
+  const unsigned R9_Overlaps[] = { SPU::R9, 0 };
+  const unsigned R10_Overlaps[] = { SPU::R10, 0 };
+  const unsigned R11_Overlaps[] = { SPU::R11, 0 };
+  const unsigned R12_Overlaps[] = { SPU::R12, 0 };
+  const unsigned R13_Overlaps[] = { SPU::R13, 0 };
+  const unsigned R14_Overlaps[] = { SPU::R14, 0 };
+  const unsigned R15_Overlaps[] = { SPU::R15, 0 };
+  const unsigned R16_Overlaps[] = { SPU::R16, 0 };
+  const unsigned R17_Overlaps[] = { SPU::R17, 0 };
+  const unsigned R18_Overlaps[] = { SPU::R18, 0 };
+  const unsigned R19_Overlaps[] = { SPU::R19, 0 };
+  const unsigned R20_Overlaps[] = { SPU::R20, 0 };
+  const unsigned R21_Overlaps[] = { SPU::R21, 0 };
+  const unsigned R22_Overlaps[] = { SPU::R22, 0 };
+  const unsigned R23_Overlaps[] = { SPU::R23, 0 };
+  const unsigned R24_Overlaps[] = { SPU::R24, 0 };
+  const unsigned R25_Overlaps[] = { SPU::R25, 0 };
+  const unsigned R26_Overlaps[] = { SPU::R26, 0 };
+  const unsigned R27_Overlaps[] = { SPU::R27, 0 };
+  const unsigned R28_Overlaps[] = { SPU::R28, 0 };
+  const unsigned R29_Overlaps[] = { SPU::R29, 0 };
+  const unsigned R30_Overlaps[] = { SPU::R30, 0 };
+  const unsigned R31_Overlaps[] = { SPU::R31, 0 };
+  const unsigned R32_Overlaps[] = { SPU::R32, 0 };
+  const unsigned R33_Overlaps[] = { SPU::R33, 0 };
+  const unsigned R34_Overlaps[] = { SPU::R34, 0 };
+  const unsigned R35_Overlaps[] = { SPU::R35, 0 };
+  const unsigned R36_Overlaps[] = { SPU::R36, 0 };
+  const unsigned R37_Overlaps[] = { SPU::R37, 0 };
+  const unsigned R38_Overlaps[] = { SPU::R38, 0 };
+  const unsigned R39_Overlaps[] = { SPU::R39, 0 };
+  const unsigned R40_Overlaps[] = { SPU::R40, 0 };
+  const unsigned R41_Overlaps[] = { SPU::R41, 0 };
+  const unsigned R42_Overlaps[] = { SPU::R42, 0 };
+  const unsigned R43_Overlaps[] = { SPU::R43, 0 };
+  const unsigned R44_Overlaps[] = { SPU::R44, 0 };
+  const unsigned R45_Overlaps[] = { SPU::R45, 0 };
+  const unsigned R46_Overlaps[] = { SPU::R46, 0 };
+  const unsigned R47_Overlaps[] = { SPU::R47, 0 };
+  const unsigned R48_Overlaps[] = { SPU::R48, 0 };
+  const unsigned R49_Overlaps[] = { SPU::R49, 0 };
+  const unsigned R50_Overlaps[] = { SPU::R50, 0 };
+  const unsigned R51_Overlaps[] = { SPU::R51, 0 };
+  const unsigned R52_Overlaps[] = { SPU::R52, 0 };
+  const unsigned R53_Overlaps[] = { SPU::R53, 0 };
+  const unsigned R54_Overlaps[] = { SPU::R54, 0 };
+  const unsigned R55_Overlaps[] = { SPU::R55, 0 };
+  const unsigned R56_Overlaps[] = { SPU::R56, 0 };
+  const unsigned R57_Overlaps[] = { SPU::R57, 0 };
+  const unsigned R58_Overlaps[] = { SPU::R58, 0 };
+  const unsigned R59_Overlaps[] = { SPU::R59, 0 };
+  const unsigned R60_Overlaps[] = { SPU::R60, 0 };
+  const unsigned R61_Overlaps[] = { SPU::R61, 0 };
+  const unsigned R62_Overlaps[] = { SPU::R62, 0 };
+  const unsigned R63_Overlaps[] = { SPU::R63, 0 };
+  const unsigned R64_Overlaps[] = { SPU::R64, 0 };
+  const unsigned R65_Overlaps[] = { SPU::R65, 0 };
+  const unsigned R66_Overlaps[] = { SPU::R66, 0 };
+  const unsigned R67_Overlaps[] = { SPU::R67, 0 };
+  const unsigned R68_Overlaps[] = { SPU::R68, 0 };
+  const unsigned R69_Overlaps[] = { SPU::R69, 0 };
+  const unsigned R70_Overlaps[] = { SPU::R70, 0 };
+  const unsigned R71_Overlaps[] = { SPU::R71, 0 };
+  const unsigned R72_Overlaps[] = { SPU::R72, 0 };
+  const unsigned R73_Overlaps[] = { SPU::R73, 0 };
+  const unsigned R74_Overlaps[] = { SPU::R74, 0 };
+  const unsigned R75_Overlaps[] = { SPU::R75, 0 };
+  const unsigned R76_Overlaps[] = { SPU::R76, 0 };
+  const unsigned R77_Overlaps[] = { SPU::R77, 0 };
+  const unsigned R78_Overlaps[] = { SPU::R78, 0 };
+  const unsigned R79_Overlaps[] = { SPU::R79, 0 };
+  const unsigned R80_Overlaps[] = { SPU::R80, 0 };
+  const unsigned R81_Overlaps[] = { SPU::R81, 0 };
+  const unsigned R82_Overlaps[] = { SPU::R82, 0 };
+  const unsigned R83_Overlaps[] = { SPU::R83, 0 };
+  const unsigned R84_Overlaps[] = { SPU::R84, 0 };
+  const unsigned R85_Overlaps[] = { SPU::R85, 0 };
+  const unsigned R86_Overlaps[] = { SPU::R86, 0 };
+  const unsigned R87_Overlaps[] = { SPU::R87, 0 };
+  const unsigned R88_Overlaps[] = { SPU::R88, 0 };
+  const unsigned R89_Overlaps[] = { SPU::R89, 0 };
+  const unsigned R90_Overlaps[] = { SPU::R90, 0 };
+  const unsigned R91_Overlaps[] = { SPU::R91, 0 };
+  const unsigned R92_Overlaps[] = { SPU::R92, 0 };
+  const unsigned R93_Overlaps[] = { SPU::R93, 0 };
+  const unsigned R94_Overlaps[] = { SPU::R94, 0 };
+  const unsigned R95_Overlaps[] = { SPU::R95, 0 };
+  const unsigned R96_Overlaps[] = { SPU::R96, 0 };
+  const unsigned R97_Overlaps[] = { SPU::R97, 0 };
+  const unsigned R98_Overlaps[] = { SPU::R98, 0 };
+  const unsigned R99_Overlaps[] = { SPU::R99, 0 };
+  const unsigned R100_Overlaps[] = { SPU::R100, 0 };
+  const unsigned R101_Overlaps[] = { SPU::R101, 0 };
+  const unsigned R102_Overlaps[] = { SPU::R102, 0 };
+  const unsigned R103_Overlaps[] = { SPU::R103, 0 };
+  const unsigned R104_Overlaps[] = { SPU::R104, 0 };
+  const unsigned R105_Overlaps[] = { SPU::R105, 0 };
+  const unsigned R106_Overlaps[] = { SPU::R106, 0 };
+  const unsigned R107_Overlaps[] = { SPU::R107, 0 };
+  const unsigned R108_Overlaps[] = { SPU::R108, 0 };
+  const unsigned R109_Overlaps[] = { SPU::R109, 0 };
+  const unsigned R110_Overlaps[] = { SPU::R110, 0 };
+  const unsigned R111_Overlaps[] = { SPU::R111, 0 };
+  const unsigned R112_Overlaps[] = { SPU::R112, 0 };
+  const unsigned R113_Overlaps[] = { SPU::R113, 0 };
+  const unsigned R114_Overlaps[] = { SPU::R114, 0 };
+  const unsigned R115_Overlaps[] = { SPU::R115, 0 };
+  const unsigned R116_Overlaps[] = { SPU::R116, 0 };
+  const unsigned R117_Overlaps[] = { SPU::R117, 0 };
+  const unsigned R118_Overlaps[] = { SPU::R118, 0 };
+  const unsigned R119_Overlaps[] = { SPU::R119, 0 };
+  const unsigned R120_Overlaps[] = { SPU::R120, 0 };
+  const unsigned R121_Overlaps[] = { SPU::R121, 0 };
+  const unsigned R122_Overlaps[] = { SPU::R122, 0 };
+  const unsigned R123_Overlaps[] = { SPU::R123, 0 };
+  const unsigned R124_Overlaps[] = { SPU::R124, 0 };
+  const unsigned R125_Overlaps[] = { SPU::R125, 0 };
+  const unsigned R126_Overlaps[] = { SPU::R126, 0 };
+  const unsigned R127_Overlaps[] = { SPU::R127, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+}
+
+MCRegisterDesc SPURegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "R0",	R0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R1",	R1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2",	R2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R3",	R3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4",	R4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5",	R5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6",	R6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7",	R7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8",	R8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R9",	R9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10",	R10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R11",	R11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12",	R12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R13",	R13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14",	R14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R15",	R15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R16",	R16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R17",	R17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R18",	R18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R19",	R19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R20",	R20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R21",	R21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R22",	R22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R23",	R23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R24",	R24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R25",	R25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R26",	R26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R27",	R27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R28",	R28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R29",	R29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R30",	R30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R31",	R31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R32",	R32_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R33",	R33_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R34",	R34_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R35",	R35_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R36",	R36_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R37",	R37_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R38",	R38_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R39",	R39_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R40",	R40_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R41",	R41_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R42",	R42_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R43",	R43_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R44",	R44_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R45",	R45_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R46",	R46_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R47",	R47_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R48",	R48_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R49",	R49_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R50",	R50_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R51",	R51_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R52",	R52_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R53",	R53_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R54",	R54_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R55",	R55_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R56",	R56_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R57",	R57_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R58",	R58_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R59",	R59_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R60",	R60_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R61",	R61_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R62",	R62_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R63",	R63_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R64",	R64_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R65",	R65_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R66",	R66_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R67",	R67_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R68",	R68_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R69",	R69_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R70",	R70_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R71",	R71_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R72",	R72_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R73",	R73_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R74",	R74_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R75",	R75_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R76",	R76_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R77",	R77_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R78",	R78_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R79",	R79_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R80",	R80_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R81",	R81_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R82",	R82_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R83",	R83_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R84",	R84_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R85",	R85_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R86",	R86_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R87",	R87_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R88",	R88_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R89",	R89_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R90",	R90_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R91",	R91_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R92",	R92_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R93",	R93_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R94",	R94_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R95",	R95_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R96",	R96_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R97",	R97_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R98",	R98_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R99",	R99_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R100",	R100_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R101",	R101_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R102",	R102_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R103",	R103_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R104",	R104_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R105",	R105_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R106",	R106_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R107",	R107_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R108",	R108_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R109",	R109_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R110",	R110_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R111",	R111_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R112",	R112_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R113",	R113_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R114",	R114_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R115",	R115_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R116",	R116_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R117",	R117_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R118",	R118_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R119",	R119_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R120",	R120_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R121",	R121_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R122",	R122_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R123",	R123_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R124",	R124_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R125",	R125_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R126",	R126_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R127",	R127_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // GPRC Register Class...
+  static const unsigned GPRC[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // GPRC Bit set.
+  static const unsigned char GPRCBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // R16C Register Class...
+  static const unsigned R16C[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // R16C Bit set.
+  static const unsigned char R16CBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // R32C Register Class...
+  static const unsigned R32C[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // R32C Bit set.
+  static const unsigned char R32CBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // R32FP Register Class...
+  static const unsigned R32FP[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // R32FP Bit set.
+  static const unsigned char R32FPBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // R64C Register Class...
+  static const unsigned R64C[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // R64C Bit set.
+  static const unsigned char R64CBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // R64FP Register Class...
+  static const unsigned R64FP[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // R64FP Bit set.
+  static const unsigned char R64FPBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // R8C Register Class...
+  static const unsigned R8C[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // R8C Bit set.
+  static const unsigned char R8CBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // VECREG Register Class...
+  static const unsigned VECREG[] = {
+    SPU::R0, SPU::R1, SPU::R2, SPU::R3, SPU::R4, SPU::R5, SPU::R6, SPU::R7, SPU::R8, SPU::R9, SPU::R10, SPU::R11, SPU::R12, SPU::R13, SPU::R14, SPU::R15, SPU::R16, SPU::R17, SPU::R18, SPU::R19, SPU::R20, SPU::R21, SPU::R22, SPU::R23, SPU::R24, SPU::R25, SPU::R26, SPU::R27, SPU::R28, SPU::R29, SPU::R30, SPU::R31, SPU::R32, SPU::R33, SPU::R34, SPU::R35, SPU::R36, SPU::R37, SPU::R38, SPU::R39, SPU::R40, SPU::R41, SPU::R42, SPU::R43, SPU::R44, SPU::R45, SPU::R46, SPU::R47, SPU::R48, SPU::R49, SPU::R50, SPU::R51, SPU::R52, SPU::R53, SPU::R54, SPU::R55, SPU::R56, SPU::R57, SPU::R58, SPU::R59, SPU::R60, SPU::R61, SPU::R62, SPU::R63, SPU::R64, SPU::R65, SPU::R66, SPU::R67, SPU::R68, SPU::R69, SPU::R70, SPU::R71, SPU::R72, SPU::R73, SPU::R74, SPU::R75, SPU::R76, SPU::R77, SPU::R78, SPU::R79, SPU::R127, SPU::R126, SPU::R125, SPU::R124, SPU::R123, SPU::R122, SPU::R121, SPU::R120, SPU::R119, SPU::R118, SPU::R117, SPU::R116, SPU::R115, SPU::R114, SPU::R113, SPU::R112, SPU::R111, SPU::R110, SPU::R109, SPU::R108, SPU::R107, SPU::R106, SPU::R105, SPU::R104, SPU::R103, SPU::R102, SPU::R101, SPU::R100, SPU::R99, SPU::R98, SPU::R97, SPU::R96, SPU::R95, SPU::R94, SPU::R93, SPU::R92, SPU::R91, SPU::R90, SPU::R89, SPU::R88, SPU::R87, SPU::R86, SPU::R85, SPU::R84, SPU::R83, SPU::R82, SPU::R81, SPU::R80, 
+  };
+
+  // VECREG Bit set.
+  static const unsigned char VECREGBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+}
+
+MCRegisterClass SPUMCRegisterClasses[] = {
+  MCRegisterClass(SPU::GPRCRegClassID, "GPRC", 16, 16, 1, 1, GPRC, GPRC + 128, GPRCBits, sizeof(GPRCBits)),
+  MCRegisterClass(SPU::R16CRegClassID, "R16C", 2, 16, 1, 1, R16C, R16C + 128, R16CBits, sizeof(R16CBits)),
+  MCRegisterClass(SPU::R32CRegClassID, "R32C", 4, 16, 1, 1, R32C, R32C + 128, R32CBits, sizeof(R32CBits)),
+  MCRegisterClass(SPU::R32FPRegClassID, "R32FP", 4, 16, 1, 1, R32FP, R32FP + 128, R32FPBits, sizeof(R32FPBits)),
+  MCRegisterClass(SPU::R64CRegClassID, "R64C", 8, 16, 1, 1, R64C, R64C + 128, R64CBits, sizeof(R64CBits)),
+  MCRegisterClass(SPU::R64FPRegClassID, "R64FP", 8, 16, 1, 1, R64FP, R64FP + 128, R64FPBits, sizeof(R64FPBits)),
+  MCRegisterClass(SPU::R8CRegClassID, "R8C", 1, 16, 1, 1, R8C, R8C + 128, R8CBits, sizeof(R8CBits)),
+  MCRegisterClass(SPU::VECREGRegClassID, "VECREG", 16, 16, 1, 1, VECREG, VECREG + 128, VECREGBits, sizeof(VECREGBits)),
+};
+
+static inline void InitSPUMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(SPURegDesc, 129, RA, SPUMCRegisterClasses, 8);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(0, SPU::R0, false );
+    RI->mapDwarfRegToLLVMReg(1, SPU::R1, false );
+    RI->mapDwarfRegToLLVMReg(2, SPU::R2, false );
+    RI->mapDwarfRegToLLVMReg(3, SPU::R3, false );
+    RI->mapDwarfRegToLLVMReg(4, SPU::R4, false );
+    RI->mapDwarfRegToLLVMReg(5, SPU::R5, false );
+    RI->mapDwarfRegToLLVMReg(6, SPU::R6, false );
+    RI->mapDwarfRegToLLVMReg(7, SPU::R7, false );
+    RI->mapDwarfRegToLLVMReg(8, SPU::R8, false );
+    RI->mapDwarfRegToLLVMReg(9, SPU::R9, false );
+    RI->mapDwarfRegToLLVMReg(10, SPU::R10, false );
+    RI->mapDwarfRegToLLVMReg(11, SPU::R11, false );
+    RI->mapDwarfRegToLLVMReg(12, SPU::R12, false );
+    RI->mapDwarfRegToLLVMReg(13, SPU::R13, false );
+    RI->mapDwarfRegToLLVMReg(14, SPU::R14, false );
+    RI->mapDwarfRegToLLVMReg(15, SPU::R15, false );
+    RI->mapDwarfRegToLLVMReg(16, SPU::R16, false );
+    RI->mapDwarfRegToLLVMReg(17, SPU::R17, false );
+    RI->mapDwarfRegToLLVMReg(18, SPU::R18, false );
+    RI->mapDwarfRegToLLVMReg(19, SPU::R19, false );
+    RI->mapDwarfRegToLLVMReg(20, SPU::R20, false );
+    RI->mapDwarfRegToLLVMReg(21, SPU::R21, false );
+    RI->mapDwarfRegToLLVMReg(22, SPU::R22, false );
+    RI->mapDwarfRegToLLVMReg(23, SPU::R23, false );
+    RI->mapDwarfRegToLLVMReg(24, SPU::R24, false );
+    RI->mapDwarfRegToLLVMReg(25, SPU::R25, false );
+    RI->mapDwarfRegToLLVMReg(26, SPU::R26, false );
+    RI->mapDwarfRegToLLVMReg(27, SPU::R27, false );
+    RI->mapDwarfRegToLLVMReg(28, SPU::R28, false );
+    RI->mapDwarfRegToLLVMReg(29, SPU::R29, false );
+    RI->mapDwarfRegToLLVMReg(30, SPU::R30, false );
+    RI->mapDwarfRegToLLVMReg(31, SPU::R31, false );
+    RI->mapDwarfRegToLLVMReg(32, SPU::R32, false );
+    RI->mapDwarfRegToLLVMReg(33, SPU::R33, false );
+    RI->mapDwarfRegToLLVMReg(34, SPU::R34, false );
+    RI->mapDwarfRegToLLVMReg(35, SPU::R35, false );
+    RI->mapDwarfRegToLLVMReg(36, SPU::R36, false );
+    RI->mapDwarfRegToLLVMReg(37, SPU::R37, false );
+    RI->mapDwarfRegToLLVMReg(38, SPU::R38, false );
+    RI->mapDwarfRegToLLVMReg(39, SPU::R39, false );
+    RI->mapDwarfRegToLLVMReg(40, SPU::R40, false );
+    RI->mapDwarfRegToLLVMReg(41, SPU::R41, false );
+    RI->mapDwarfRegToLLVMReg(42, SPU::R42, false );
+    RI->mapDwarfRegToLLVMReg(43, SPU::R43, false );
+    RI->mapDwarfRegToLLVMReg(44, SPU::R44, false );
+    RI->mapDwarfRegToLLVMReg(45, SPU::R45, false );
+    RI->mapDwarfRegToLLVMReg(46, SPU::R46, false );
+    RI->mapDwarfRegToLLVMReg(47, SPU::R47, false );
+    RI->mapDwarfRegToLLVMReg(48, SPU::R48, false );
+    RI->mapDwarfRegToLLVMReg(49, SPU::R49, false );
+    RI->mapDwarfRegToLLVMReg(50, SPU::R50, false );
+    RI->mapDwarfRegToLLVMReg(51, SPU::R51, false );
+    RI->mapDwarfRegToLLVMReg(52, SPU::R52, false );
+    RI->mapDwarfRegToLLVMReg(53, SPU::R53, false );
+    RI->mapDwarfRegToLLVMReg(54, SPU::R54, false );
+    RI->mapDwarfRegToLLVMReg(55, SPU::R55, false );
+    RI->mapDwarfRegToLLVMReg(56, SPU::R56, false );
+    RI->mapDwarfRegToLLVMReg(57, SPU::R57, false );
+    RI->mapDwarfRegToLLVMReg(58, SPU::R58, false );
+    RI->mapDwarfRegToLLVMReg(59, SPU::R59, false );
+    RI->mapDwarfRegToLLVMReg(60, SPU::R60, false );
+    RI->mapDwarfRegToLLVMReg(61, SPU::R61, false );
+    RI->mapDwarfRegToLLVMReg(62, SPU::R62, false );
+    RI->mapDwarfRegToLLVMReg(63, SPU::R63, false );
+    RI->mapDwarfRegToLLVMReg(64, SPU::R64, false );
+    RI->mapDwarfRegToLLVMReg(65, SPU::R65, false );
+    RI->mapDwarfRegToLLVMReg(66, SPU::R66, false );
+    RI->mapDwarfRegToLLVMReg(67, SPU::R67, false );
+    RI->mapDwarfRegToLLVMReg(68, SPU::R68, false );
+    RI->mapDwarfRegToLLVMReg(69, SPU::R69, false );
+    RI->mapDwarfRegToLLVMReg(70, SPU::R70, false );
+    RI->mapDwarfRegToLLVMReg(71, SPU::R71, false );
+    RI->mapDwarfRegToLLVMReg(72, SPU::R72, false );
+    RI->mapDwarfRegToLLVMReg(73, SPU::R73, false );
+    RI->mapDwarfRegToLLVMReg(74, SPU::R74, false );
+    RI->mapDwarfRegToLLVMReg(75, SPU::R75, false );
+    RI->mapDwarfRegToLLVMReg(76, SPU::R76, false );
+    RI->mapDwarfRegToLLVMReg(77, SPU::R77, false );
+    RI->mapDwarfRegToLLVMReg(78, SPU::R78, false );
+    RI->mapDwarfRegToLLVMReg(79, SPU::R79, false );
+    RI->mapDwarfRegToLLVMReg(80, SPU::R80, false );
+    RI->mapDwarfRegToLLVMReg(81, SPU::R81, false );
+    RI->mapDwarfRegToLLVMReg(82, SPU::R82, false );
+    RI->mapDwarfRegToLLVMReg(83, SPU::R83, false );
+    RI->mapDwarfRegToLLVMReg(84, SPU::R84, false );
+    RI->mapDwarfRegToLLVMReg(85, SPU::R85, false );
+    RI->mapDwarfRegToLLVMReg(86, SPU::R86, false );
+    RI->mapDwarfRegToLLVMReg(87, SPU::R87, false );
+    RI->mapDwarfRegToLLVMReg(88, SPU::R88, false );
+    RI->mapDwarfRegToLLVMReg(89, SPU::R89, false );
+    RI->mapDwarfRegToLLVMReg(90, SPU::R90, false );
+    RI->mapDwarfRegToLLVMReg(91, SPU::R91, false );
+    RI->mapDwarfRegToLLVMReg(92, SPU::R92, false );
+    RI->mapDwarfRegToLLVMReg(93, SPU::R93, false );
+    RI->mapDwarfRegToLLVMReg(94, SPU::R94, false );
+    RI->mapDwarfRegToLLVMReg(95, SPU::R95, false );
+    RI->mapDwarfRegToLLVMReg(96, SPU::R96, false );
+    RI->mapDwarfRegToLLVMReg(97, SPU::R97, false );
+    RI->mapDwarfRegToLLVMReg(98, SPU::R98, false );
+    RI->mapDwarfRegToLLVMReg(99, SPU::R99, false );
+    RI->mapDwarfRegToLLVMReg(100, SPU::R100, false );
+    RI->mapDwarfRegToLLVMReg(101, SPU::R101, false );
+    RI->mapDwarfRegToLLVMReg(102, SPU::R102, false );
+    RI->mapDwarfRegToLLVMReg(103, SPU::R103, false );
+    RI->mapDwarfRegToLLVMReg(104, SPU::R104, false );
+    RI->mapDwarfRegToLLVMReg(105, SPU::R105, false );
+    RI->mapDwarfRegToLLVMReg(106, SPU::R106, false );
+    RI->mapDwarfRegToLLVMReg(107, SPU::R107, false );
+    RI->mapDwarfRegToLLVMReg(108, SPU::R108, false );
+    RI->mapDwarfRegToLLVMReg(109, SPU::R109, false );
+    RI->mapDwarfRegToLLVMReg(110, SPU::R110, false );
+    RI->mapDwarfRegToLLVMReg(111, SPU::R111, false );
+    RI->mapDwarfRegToLLVMReg(112, SPU::R112, false );
+    RI->mapDwarfRegToLLVMReg(113, SPU::R113, false );
+    RI->mapDwarfRegToLLVMReg(114, SPU::R114, false );
+    RI->mapDwarfRegToLLVMReg(115, SPU::R115, false );
+    RI->mapDwarfRegToLLVMReg(116, SPU::R116, false );
+    RI->mapDwarfRegToLLVMReg(117, SPU::R117, false );
+    RI->mapDwarfRegToLLVMReg(118, SPU::R118, false );
+    RI->mapDwarfRegToLLVMReg(119, SPU::R119, false );
+    RI->mapDwarfRegToLLVMReg(120, SPU::R120, false );
+    RI->mapDwarfRegToLLVMReg(121, SPU::R121, false );
+    RI->mapDwarfRegToLLVMReg(122, SPU::R122, false );
+    RI->mapDwarfRegToLLVMReg(123, SPU::R123, false );
+    RI->mapDwarfRegToLLVMReg(124, SPU::R124, false );
+    RI->mapDwarfRegToLLVMReg(125, SPU::R125, false );
+    RI->mapDwarfRegToLLVMReg(126, SPU::R126, false );
+    RI->mapDwarfRegToLLVMReg(127, SPU::R127, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(0, SPU::R0, true );
+    RI->mapDwarfRegToLLVMReg(1, SPU::R1, true );
+    RI->mapDwarfRegToLLVMReg(2, SPU::R2, true );
+    RI->mapDwarfRegToLLVMReg(3, SPU::R3, true );
+    RI->mapDwarfRegToLLVMReg(4, SPU::R4, true );
+    RI->mapDwarfRegToLLVMReg(5, SPU::R5, true );
+    RI->mapDwarfRegToLLVMReg(6, SPU::R6, true );
+    RI->mapDwarfRegToLLVMReg(7, SPU::R7, true );
+    RI->mapDwarfRegToLLVMReg(8, SPU::R8, true );
+    RI->mapDwarfRegToLLVMReg(9, SPU::R9, true );
+    RI->mapDwarfRegToLLVMReg(10, SPU::R10, true );
+    RI->mapDwarfRegToLLVMReg(11, SPU::R11, true );
+    RI->mapDwarfRegToLLVMReg(12, SPU::R12, true );
+    RI->mapDwarfRegToLLVMReg(13, SPU::R13, true );
+    RI->mapDwarfRegToLLVMReg(14, SPU::R14, true );
+    RI->mapDwarfRegToLLVMReg(15, SPU::R15, true );
+    RI->mapDwarfRegToLLVMReg(16, SPU::R16, true );
+    RI->mapDwarfRegToLLVMReg(17, SPU::R17, true );
+    RI->mapDwarfRegToLLVMReg(18, SPU::R18, true );
+    RI->mapDwarfRegToLLVMReg(19, SPU::R19, true );
+    RI->mapDwarfRegToLLVMReg(20, SPU::R20, true );
+    RI->mapDwarfRegToLLVMReg(21, SPU::R21, true );
+    RI->mapDwarfRegToLLVMReg(22, SPU::R22, true );
+    RI->mapDwarfRegToLLVMReg(23, SPU::R23, true );
+    RI->mapDwarfRegToLLVMReg(24, SPU::R24, true );
+    RI->mapDwarfRegToLLVMReg(25, SPU::R25, true );
+    RI->mapDwarfRegToLLVMReg(26, SPU::R26, true );
+    RI->mapDwarfRegToLLVMReg(27, SPU::R27, true );
+    RI->mapDwarfRegToLLVMReg(28, SPU::R28, true );
+    RI->mapDwarfRegToLLVMReg(29, SPU::R29, true );
+    RI->mapDwarfRegToLLVMReg(30, SPU::R30, true );
+    RI->mapDwarfRegToLLVMReg(31, SPU::R31, true );
+    RI->mapDwarfRegToLLVMReg(32, SPU::R32, true );
+    RI->mapDwarfRegToLLVMReg(33, SPU::R33, true );
+    RI->mapDwarfRegToLLVMReg(34, SPU::R34, true );
+    RI->mapDwarfRegToLLVMReg(35, SPU::R35, true );
+    RI->mapDwarfRegToLLVMReg(36, SPU::R36, true );
+    RI->mapDwarfRegToLLVMReg(37, SPU::R37, true );
+    RI->mapDwarfRegToLLVMReg(38, SPU::R38, true );
+    RI->mapDwarfRegToLLVMReg(39, SPU::R39, true );
+    RI->mapDwarfRegToLLVMReg(40, SPU::R40, true );
+    RI->mapDwarfRegToLLVMReg(41, SPU::R41, true );
+    RI->mapDwarfRegToLLVMReg(42, SPU::R42, true );
+    RI->mapDwarfRegToLLVMReg(43, SPU::R43, true );
+    RI->mapDwarfRegToLLVMReg(44, SPU::R44, true );
+    RI->mapDwarfRegToLLVMReg(45, SPU::R45, true );
+    RI->mapDwarfRegToLLVMReg(46, SPU::R46, true );
+    RI->mapDwarfRegToLLVMReg(47, SPU::R47, true );
+    RI->mapDwarfRegToLLVMReg(48, SPU::R48, true );
+    RI->mapDwarfRegToLLVMReg(49, SPU::R49, true );
+    RI->mapDwarfRegToLLVMReg(50, SPU::R50, true );
+    RI->mapDwarfRegToLLVMReg(51, SPU::R51, true );
+    RI->mapDwarfRegToLLVMReg(52, SPU::R52, true );
+    RI->mapDwarfRegToLLVMReg(53, SPU::R53, true );
+    RI->mapDwarfRegToLLVMReg(54, SPU::R54, true );
+    RI->mapDwarfRegToLLVMReg(55, SPU::R55, true );
+    RI->mapDwarfRegToLLVMReg(56, SPU::R56, true );
+    RI->mapDwarfRegToLLVMReg(57, SPU::R57, true );
+    RI->mapDwarfRegToLLVMReg(58, SPU::R58, true );
+    RI->mapDwarfRegToLLVMReg(59, SPU::R59, true );
+    RI->mapDwarfRegToLLVMReg(60, SPU::R60, true );
+    RI->mapDwarfRegToLLVMReg(61, SPU::R61, true );
+    RI->mapDwarfRegToLLVMReg(62, SPU::R62, true );
+    RI->mapDwarfRegToLLVMReg(63, SPU::R63, true );
+    RI->mapDwarfRegToLLVMReg(64, SPU::R64, true );
+    RI->mapDwarfRegToLLVMReg(65, SPU::R65, true );
+    RI->mapDwarfRegToLLVMReg(66, SPU::R66, true );
+    RI->mapDwarfRegToLLVMReg(67, SPU::R67, true );
+    RI->mapDwarfRegToLLVMReg(68, SPU::R68, true );
+    RI->mapDwarfRegToLLVMReg(69, SPU::R69, true );
+    RI->mapDwarfRegToLLVMReg(70, SPU::R70, true );
+    RI->mapDwarfRegToLLVMReg(71, SPU::R71, true );
+    RI->mapDwarfRegToLLVMReg(72, SPU::R72, true );
+    RI->mapDwarfRegToLLVMReg(73, SPU::R73, true );
+    RI->mapDwarfRegToLLVMReg(74, SPU::R74, true );
+    RI->mapDwarfRegToLLVMReg(75, SPU::R75, true );
+    RI->mapDwarfRegToLLVMReg(76, SPU::R76, true );
+    RI->mapDwarfRegToLLVMReg(77, SPU::R77, true );
+    RI->mapDwarfRegToLLVMReg(78, SPU::R78, true );
+    RI->mapDwarfRegToLLVMReg(79, SPU::R79, true );
+    RI->mapDwarfRegToLLVMReg(80, SPU::R80, true );
+    RI->mapDwarfRegToLLVMReg(81, SPU::R81, true );
+    RI->mapDwarfRegToLLVMReg(82, SPU::R82, true );
+    RI->mapDwarfRegToLLVMReg(83, SPU::R83, true );
+    RI->mapDwarfRegToLLVMReg(84, SPU::R84, true );
+    RI->mapDwarfRegToLLVMReg(85, SPU::R85, true );
+    RI->mapDwarfRegToLLVMReg(86, SPU::R86, true );
+    RI->mapDwarfRegToLLVMReg(87, SPU::R87, true );
+    RI->mapDwarfRegToLLVMReg(88, SPU::R88, true );
+    RI->mapDwarfRegToLLVMReg(89, SPU::R89, true );
+    RI->mapDwarfRegToLLVMReg(90, SPU::R90, true );
+    RI->mapDwarfRegToLLVMReg(91, SPU::R91, true );
+    RI->mapDwarfRegToLLVMReg(92, SPU::R92, true );
+    RI->mapDwarfRegToLLVMReg(93, SPU::R93, true );
+    RI->mapDwarfRegToLLVMReg(94, SPU::R94, true );
+    RI->mapDwarfRegToLLVMReg(95, SPU::R95, true );
+    RI->mapDwarfRegToLLVMReg(96, SPU::R96, true );
+    RI->mapDwarfRegToLLVMReg(97, SPU::R97, true );
+    RI->mapDwarfRegToLLVMReg(98, SPU::R98, true );
+    RI->mapDwarfRegToLLVMReg(99, SPU::R99, true );
+    RI->mapDwarfRegToLLVMReg(100, SPU::R100, true );
+    RI->mapDwarfRegToLLVMReg(101, SPU::R101, true );
+    RI->mapDwarfRegToLLVMReg(102, SPU::R102, true );
+    RI->mapDwarfRegToLLVMReg(103, SPU::R103, true );
+    RI->mapDwarfRegToLLVMReg(104, SPU::R104, true );
+    RI->mapDwarfRegToLLVMReg(105, SPU::R105, true );
+    RI->mapDwarfRegToLLVMReg(106, SPU::R106, true );
+    RI->mapDwarfRegToLLVMReg(107, SPU::R107, true );
+    RI->mapDwarfRegToLLVMReg(108, SPU::R108, true );
+    RI->mapDwarfRegToLLVMReg(109, SPU::R109, true );
+    RI->mapDwarfRegToLLVMReg(110, SPU::R110, true );
+    RI->mapDwarfRegToLLVMReg(111, SPU::R111, true );
+    RI->mapDwarfRegToLLVMReg(112, SPU::R112, true );
+    RI->mapDwarfRegToLLVMReg(113, SPU::R113, true );
+    RI->mapDwarfRegToLLVMReg(114, SPU::R114, true );
+    RI->mapDwarfRegToLLVMReg(115, SPU::R115, true );
+    RI->mapDwarfRegToLLVMReg(116, SPU::R116, true );
+    RI->mapDwarfRegToLLVMReg(117, SPU::R117, true );
+    RI->mapDwarfRegToLLVMReg(118, SPU::R118, true );
+    RI->mapDwarfRegToLLVMReg(119, SPU::R119, true );
+    RI->mapDwarfRegToLLVMReg(120, SPU::R120, true );
+    RI->mapDwarfRegToLLVMReg(121, SPU::R121, true );
+    RI->mapDwarfRegToLLVMReg(122, SPU::R122, true );
+    RI->mapDwarfRegToLLVMReg(123, SPU::R123, true );
+    RI->mapDwarfRegToLLVMReg(124, SPU::R124, true );
+    RI->mapDwarfRegToLLVMReg(125, SPU::R125, true );
+    RI->mapDwarfRegToLLVMReg(126, SPU::R126, true );
+    RI->mapDwarfRegToLLVMReg(127, SPU::R127, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(SPU::R0, 0, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R1, 1, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R2, 2, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R3, 3, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R4, 4, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R5, 5, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R6, 6, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R7, 7, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R8, 8, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R9, 9, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R10, 10, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R11, 11, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R12, 12, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R13, 13, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R14, 14, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R15, 15, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R16, 16, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R17, 17, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R18, 18, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R19, 19, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R20, 20, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R21, 21, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R22, 22, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R23, 23, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R24, 24, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R25, 25, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R26, 26, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R27, 27, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R28, 28, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R29, 29, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R30, 30, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R31, 31, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R32, 32, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R33, 33, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R34, 34, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R35, 35, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R36, 36, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R37, 37, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R38, 38, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R39, 39, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R40, 40, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R41, 41, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R42, 42, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R43, 43, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R44, 44, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R45, 45, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R46, 46, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R47, 47, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R48, 48, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R49, 49, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R50, 50, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R51, 51, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R52, 52, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R53, 53, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R54, 54, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R55, 55, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R56, 56, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R57, 57, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R58, 58, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R59, 59, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R60, 60, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R61, 61, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R62, 62, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R63, 63, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R64, 64, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R65, 65, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R66, 66, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R67, 67, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R68, 68, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R69, 69, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R70, 70, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R71, 71, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R72, 72, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R73, 73, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R74, 74, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R75, 75, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R76, 76, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R77, 77, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R78, 78, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R79, 79, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R80, 80, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R81, 81, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R82, 82, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R83, 83, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R84, 84, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R85, 85, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R86, 86, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R87, 87, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R88, 88, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R89, 89, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R90, 90, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R91, 91, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R92, 92, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R93, 93, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R94, 94, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R95, 95, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R96, 96, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R97, 97, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R98, 98, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R99, 99, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R100, 100, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R101, 101, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R102, 102, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R103, 103, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R104, 104, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R105, 105, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R106, 106, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R107, 107, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R108, 108, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R109, 109, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R110, 110, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R111, 111, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R112, 112, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R113, 113, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R114, 114, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R115, 115, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R116, 116, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R117, 117, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R118, 118, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R119, 119, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R120, 120, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R121, 121, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R122, 122, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R123, 123, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R124, 124, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R125, 125, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R126, 126, false );
+    RI->mapLLVMRegToDwarfReg(SPU::R127, 127, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(SPU::R0, 0, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R1, 1, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R2, 2, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R3, 3, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R4, 4, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R5, 5, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R6, 6, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R7, 7, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R8, 8, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R9, 9, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R10, 10, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R11, 11, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R12, 12, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R13, 13, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R14, 14, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R15, 15, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R16, 16, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R17, 17, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R18, 18, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R19, 19, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R20, 20, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R21, 21, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R22, 22, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R23, 23, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R24, 24, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R25, 25, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R26, 26, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R27, 27, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R28, 28, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R29, 29, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R30, 30, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R31, 31, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R32, 32, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R33, 33, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R34, 34, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R35, 35, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R36, 36, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R37, 37, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R38, 38, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R39, 39, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R40, 40, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R41, 41, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R42, 42, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R43, 43, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R44, 44, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R45, 45, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R46, 46, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R47, 47, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R48, 48, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R49, 49, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R50, 50, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R51, 51, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R52, 52, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R53, 53, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R54, 54, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R55, 55, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R56, 56, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R57, 57, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R58, 58, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R59, 59, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R60, 60, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R61, 61, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R62, 62, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R63, 63, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R64, 64, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R65, 65, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R66, 66, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R67, 67, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R68, 68, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R69, 69, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R70, 70, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R71, 71, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R72, 72, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R73, 73, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R74, 74, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R75, 75, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R76, 76, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R77, 77, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R78, 78, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R79, 79, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R80, 80, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R81, 81, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R82, 82, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R83, 83, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R84, 84, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R85, 85, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R86, 86, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R87, 87, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R88, 88, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R89, 89, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R90, 90, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R91, 91, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R92, 92, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R93, 93, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R94, 94, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R95, 95, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R96, 96, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R97, 97, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R98, 98, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R99, 99, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R100, 100, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R101, 101, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R102, 102, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R103, 103, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R104, 104, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R105, 105, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R106, 106, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R107, 107, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R108, 108, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R109, 109, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R110, 110, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R111, 111, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R112, 112, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R113, 113, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R114, 114, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R115, 115, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R116, 116, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R117, 117, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R118, 118, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R119, 119, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R120, 120, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R121, 121, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R122, 122, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R123, 123, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R124, 124, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R125, 125, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R126, 126, true );
+    RI->mapLLVMRegToDwarfReg(SPU::R127, 127, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct SPUGenRegisterInfo : public TargetRegisterInfo {
+  explicit SPUGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+namespace SPU { // Register classes
+  struct GPRCClass : public TargetRegisterClass {
+    GPRCClass();
+  };
+  extern GPRCClass	GPRCRegClass;
+  static TargetRegisterClass * const GPRCRegisterClass = &GPRCRegClass;
+  struct R16CClass : public TargetRegisterClass {
+    R16CClass();
+  };
+  extern R16CClass	R16CRegClass;
+  static TargetRegisterClass * const R16CRegisterClass = &R16CRegClass;
+  struct R32CClass : public TargetRegisterClass {
+    R32CClass();
+  };
+  extern R32CClass	R32CRegClass;
+  static TargetRegisterClass * const R32CRegisterClass = &R32CRegClass;
+  struct R32FPClass : public TargetRegisterClass {
+    R32FPClass();
+  };
+  extern R32FPClass	R32FPRegClass;
+  static TargetRegisterClass * const R32FPRegisterClass = &R32FPRegClass;
+  struct R64CClass : public TargetRegisterClass {
+    R64CClass();
+  };
+  extern R64CClass	R64CRegClass;
+  static TargetRegisterClass * const R64CRegisterClass = &R64CRegClass;
+  struct R64FPClass : public TargetRegisterClass {
+    R64FPClass();
+  };
+  extern R64FPClass	R64FPRegClass;
+  static TargetRegisterClass * const R64FPRegisterClass = &R64FPRegClass;
+  struct R8CClass : public TargetRegisterClass {
+    R8CClass();
+  };
+  extern R8CClass	R8CRegClass;
+  static TargetRegisterClass * const R8CRegisterClass = &R8CRegClass;
+  struct VECREGClass : public TargetRegisterClass {
+    VECREGClass();
+  };
+  extern VECREGClass	VECREGRegClass;
+  static TargetRegisterClass * const VECREGRegisterClass = &VECREGRegClass;
+} // end of namespace SPU
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass SPUMCRegisterClasses[];
+namespace {     // Register classes...
+  // GPRCVTs Register Class Value Types...
+  static const EVT GPRCVTs[] = {
+    MVT::i128, MVT::Other
+  };
+
+  // R16CVTs Register Class Value Types...
+  static const EVT R16CVTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // R32CVTs Register Class Value Types...
+  static const EVT R32CVTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // R32FPVTs Register Class Value Types...
+  static const EVT R32FPVTs[] = {
+    MVT::f32, MVT::Other
+  };
+
+  // R64CVTs Register Class Value Types...
+  static const EVT R64CVTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+  // R64FPVTs Register Class Value Types...
+  static const EVT R64FPVTs[] = {
+    MVT::f64, MVT::Other
+  };
+
+  // R8CVTs Register Class Value Types...
+  static const EVT R8CVTs[] = {
+    MVT::i8, MVT::Other
+  };
+
+  // VECREGVTs Register Class Value Types...
+  static const EVT VECREGVTs[] = {
+    MVT::v16i8, MVT::v8i16, MVT::v4i32, MVT::v4f32, MVT::v2i64, MVT::v2f64, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace SPU {   // Register class instances
+  GPRCClass	GPRCRegClass;
+  R16CClass	R16CRegClass;
+  R32CClass	R32CRegClass;
+  R32FPClass	R32FPRegClass;
+  R64CClass	R64CRegClass;
+  R64FPClass	R64FPRegClass;
+  R8CClass	R8CRegClass;
+  VECREGClass	VECREGRegClass;
+
+  static const TargetRegisterClass* const NullRegClasses[] = { NULL };
+
+  // GPRC Register Class sub-classes...
+  static const TargetRegisterClass* const GPRCSubclasses[] = {
+    &SPU::VECREGRegClass, NULL
+  };
+
+  // R16C Register Class sub-classes...
+  static const TargetRegisterClass* const R16CSubclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R32CRegClass, &SPU::R32FPRegClass, &SPU::R64CRegClass, &SPU::R64FPRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // R32C Register Class sub-classes...
+  static const TargetRegisterClass* const R32CSubclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R32FPRegClass, &SPU::R64CRegClass, &SPU::R64FPRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // R32FP Register Class sub-classes...
+  static const TargetRegisterClass* const R32FPSubclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R32CRegClass, &SPU::R64CRegClass, &SPU::R64FPRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // R64C Register Class sub-classes...
+  static const TargetRegisterClass* const R64CSubclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R64FPRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // R64FP Register Class sub-classes...
+  static const TargetRegisterClass* const R64FPSubclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R64CRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // R8C Register Class sub-classes...
+  static const TargetRegisterClass* const R8CSubclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R16CRegClass, &SPU::R32CRegClass, &SPU::R32FPRegClass, &SPU::R64CRegClass, &SPU::R64FPRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // VECREG Register Class sub-classes...
+  static const TargetRegisterClass* const VECREGSubclasses[] = {
+    &SPU::GPRCRegClass, NULL
+  };
+
+  // GPRC Register Class super-classes...
+  static const TargetRegisterClass* const GPRCSuperclasses[] = {
+    &SPU::R16CRegClass, &SPU::R32CRegClass, &SPU::R32FPRegClass, &SPU::R64CRegClass, &SPU::R64FPRegClass, &SPU::R8CRegClass, &SPU::VECREGRegClass, NULL
+  };
+
+  // R16C Register Class super-classes...
+  static const TargetRegisterClass* const R16CSuperclasses[] = {
+    &SPU::R8CRegClass, NULL
+  };
+
+  // R32C Register Class super-classes...
+  static const TargetRegisterClass* const R32CSuperclasses[] = {
+    &SPU::R16CRegClass, &SPU::R32FPRegClass, &SPU::R8CRegClass, NULL
+  };
+
+  // R32FP Register Class super-classes...
+  static const TargetRegisterClass* const R32FPSuperclasses[] = {
+    &SPU::R16CRegClass, &SPU::R32CRegClass, &SPU::R8CRegClass, NULL
+  };
+
+  // R64C Register Class super-classes...
+  static const TargetRegisterClass* const R64CSuperclasses[] = {
+    &SPU::R16CRegClass, &SPU::R32CRegClass, &SPU::R32FPRegClass, &SPU::R64FPRegClass, &SPU::R8CRegClass, NULL
+  };
+
+  // R64FP Register Class super-classes...
+  static const TargetRegisterClass* const R64FPSuperclasses[] = {
+    &SPU::R16CRegClass, &SPU::R32CRegClass, &SPU::R32FPRegClass, &SPU::R64CRegClass, &SPU::R8CRegClass, NULL
+  };
+
+  // R8C Register Class super-classes...
+  static const TargetRegisterClass* const R8CSuperclasses[] = {
+    NULL
+  };
+
+  // VECREG Register Class super-classes...
+  static const TargetRegisterClass* const VECREGSuperclasses[] = {
+    &SPU::GPRCRegClass, &SPU::R16CRegClass, &SPU::R32CRegClass, &SPU::R32FPRegClass, &SPU::R64CRegClass, &SPU::R64FPRegClass, &SPU::R8CRegClass, NULL
+  };
+
+GPRCClass::GPRCClass()  : TargetRegisterClass(&SPUMCRegisterClasses[GPRCRegClassID], GPRCVTs, GPRCSubclasses, GPRCSuperclasses, NullRegClasses, NullRegClasses) {}
+R16CClass::R16CClass()  : TargetRegisterClass(&SPUMCRegisterClasses[R16CRegClassID], R16CVTs, R16CSubclasses, R16CSuperclasses, NullRegClasses, NullRegClasses) {}
+R32CClass::R32CClass()  : TargetRegisterClass(&SPUMCRegisterClasses[R32CRegClassID], R32CVTs, R32CSubclasses, R32CSuperclasses, NullRegClasses, NullRegClasses) {}
+R32FPClass::R32FPClass()  : TargetRegisterClass(&SPUMCRegisterClasses[R32FPRegClassID], R32FPVTs, R32FPSubclasses, R32FPSuperclasses, NullRegClasses, NullRegClasses) {}
+R64CClass::R64CClass()  : TargetRegisterClass(&SPUMCRegisterClasses[R64CRegClassID], R64CVTs, R64CSubclasses, R64CSuperclasses, NullRegClasses, NullRegClasses) {}
+R64FPClass::R64FPClass()  : TargetRegisterClass(&SPUMCRegisterClasses[R64FPRegClassID], R64FPVTs, R64FPSubclasses, R64FPSuperclasses, NullRegClasses, NullRegClasses) {}
+R8CClass::R8CClass()  : TargetRegisterClass(&SPUMCRegisterClasses[R8CRegClassID], R8CVTs, R8CSubclasses, R8CSuperclasses, NullRegClasses, NullRegClasses) {}
+VECREGClass::VECREGClass()  : TargetRegisterClass(&SPUMCRegisterClasses[VECREGRegClassID], VECREGVTs, VECREGSubclasses, VECREGSuperclasses, NullRegClasses, NullRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &SPU::GPRCRegClass,
+    &SPU::R16CRegClass,
+    &SPU::R32CRegClass,
+    &SPU::R32FPRegClass,
+    &SPU::R64CRegClass,
+    &SPU::R64FPRegClass,
+    &SPU::R8CRegClass,
+    &SPU::VECREGRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc SPURegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+  };
+
+  static const char *const SPUSubRegIndexTable[] = { "" };
+
+
+unsigned SPUGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned SPUGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned SPUGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc SPURegDesc[];
+SPUGenRegisterInfo::SPUGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(SPURegInfoDesc, RegisterClasses, RegisterClasses+8,
+                 SPUSubRegIndexTable) {
+  InitMCRegisterInfo(SPURegDesc, 129, RA, SPUMCRegisterClasses, 8);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(0, SPU::R0, false );
+    mapDwarfRegToLLVMReg(1, SPU::R1, false );
+    mapDwarfRegToLLVMReg(2, SPU::R2, false );
+    mapDwarfRegToLLVMReg(3, SPU::R3, false );
+    mapDwarfRegToLLVMReg(4, SPU::R4, false );
+    mapDwarfRegToLLVMReg(5, SPU::R5, false );
+    mapDwarfRegToLLVMReg(6, SPU::R6, false );
+    mapDwarfRegToLLVMReg(7, SPU::R7, false );
+    mapDwarfRegToLLVMReg(8, SPU::R8, false );
+    mapDwarfRegToLLVMReg(9, SPU::R9, false );
+    mapDwarfRegToLLVMReg(10, SPU::R10, false );
+    mapDwarfRegToLLVMReg(11, SPU::R11, false );
+    mapDwarfRegToLLVMReg(12, SPU::R12, false );
+    mapDwarfRegToLLVMReg(13, SPU::R13, false );
+    mapDwarfRegToLLVMReg(14, SPU::R14, false );
+    mapDwarfRegToLLVMReg(15, SPU::R15, false );
+    mapDwarfRegToLLVMReg(16, SPU::R16, false );
+    mapDwarfRegToLLVMReg(17, SPU::R17, false );
+    mapDwarfRegToLLVMReg(18, SPU::R18, false );
+    mapDwarfRegToLLVMReg(19, SPU::R19, false );
+    mapDwarfRegToLLVMReg(20, SPU::R20, false );
+    mapDwarfRegToLLVMReg(21, SPU::R21, false );
+    mapDwarfRegToLLVMReg(22, SPU::R22, false );
+    mapDwarfRegToLLVMReg(23, SPU::R23, false );
+    mapDwarfRegToLLVMReg(24, SPU::R24, false );
+    mapDwarfRegToLLVMReg(25, SPU::R25, false );
+    mapDwarfRegToLLVMReg(26, SPU::R26, false );
+    mapDwarfRegToLLVMReg(27, SPU::R27, false );
+    mapDwarfRegToLLVMReg(28, SPU::R28, false );
+    mapDwarfRegToLLVMReg(29, SPU::R29, false );
+    mapDwarfRegToLLVMReg(30, SPU::R30, false );
+    mapDwarfRegToLLVMReg(31, SPU::R31, false );
+    mapDwarfRegToLLVMReg(32, SPU::R32, false );
+    mapDwarfRegToLLVMReg(33, SPU::R33, false );
+    mapDwarfRegToLLVMReg(34, SPU::R34, false );
+    mapDwarfRegToLLVMReg(35, SPU::R35, false );
+    mapDwarfRegToLLVMReg(36, SPU::R36, false );
+    mapDwarfRegToLLVMReg(37, SPU::R37, false );
+    mapDwarfRegToLLVMReg(38, SPU::R38, false );
+    mapDwarfRegToLLVMReg(39, SPU::R39, false );
+    mapDwarfRegToLLVMReg(40, SPU::R40, false );
+    mapDwarfRegToLLVMReg(41, SPU::R41, false );
+    mapDwarfRegToLLVMReg(42, SPU::R42, false );
+    mapDwarfRegToLLVMReg(43, SPU::R43, false );
+    mapDwarfRegToLLVMReg(44, SPU::R44, false );
+    mapDwarfRegToLLVMReg(45, SPU::R45, false );
+    mapDwarfRegToLLVMReg(46, SPU::R46, false );
+    mapDwarfRegToLLVMReg(47, SPU::R47, false );
+    mapDwarfRegToLLVMReg(48, SPU::R48, false );
+    mapDwarfRegToLLVMReg(49, SPU::R49, false );
+    mapDwarfRegToLLVMReg(50, SPU::R50, false );
+    mapDwarfRegToLLVMReg(51, SPU::R51, false );
+    mapDwarfRegToLLVMReg(52, SPU::R52, false );
+    mapDwarfRegToLLVMReg(53, SPU::R53, false );
+    mapDwarfRegToLLVMReg(54, SPU::R54, false );
+    mapDwarfRegToLLVMReg(55, SPU::R55, false );
+    mapDwarfRegToLLVMReg(56, SPU::R56, false );
+    mapDwarfRegToLLVMReg(57, SPU::R57, false );
+    mapDwarfRegToLLVMReg(58, SPU::R58, false );
+    mapDwarfRegToLLVMReg(59, SPU::R59, false );
+    mapDwarfRegToLLVMReg(60, SPU::R60, false );
+    mapDwarfRegToLLVMReg(61, SPU::R61, false );
+    mapDwarfRegToLLVMReg(62, SPU::R62, false );
+    mapDwarfRegToLLVMReg(63, SPU::R63, false );
+    mapDwarfRegToLLVMReg(64, SPU::R64, false );
+    mapDwarfRegToLLVMReg(65, SPU::R65, false );
+    mapDwarfRegToLLVMReg(66, SPU::R66, false );
+    mapDwarfRegToLLVMReg(67, SPU::R67, false );
+    mapDwarfRegToLLVMReg(68, SPU::R68, false );
+    mapDwarfRegToLLVMReg(69, SPU::R69, false );
+    mapDwarfRegToLLVMReg(70, SPU::R70, false );
+    mapDwarfRegToLLVMReg(71, SPU::R71, false );
+    mapDwarfRegToLLVMReg(72, SPU::R72, false );
+    mapDwarfRegToLLVMReg(73, SPU::R73, false );
+    mapDwarfRegToLLVMReg(74, SPU::R74, false );
+    mapDwarfRegToLLVMReg(75, SPU::R75, false );
+    mapDwarfRegToLLVMReg(76, SPU::R76, false );
+    mapDwarfRegToLLVMReg(77, SPU::R77, false );
+    mapDwarfRegToLLVMReg(78, SPU::R78, false );
+    mapDwarfRegToLLVMReg(79, SPU::R79, false );
+    mapDwarfRegToLLVMReg(80, SPU::R80, false );
+    mapDwarfRegToLLVMReg(81, SPU::R81, false );
+    mapDwarfRegToLLVMReg(82, SPU::R82, false );
+    mapDwarfRegToLLVMReg(83, SPU::R83, false );
+    mapDwarfRegToLLVMReg(84, SPU::R84, false );
+    mapDwarfRegToLLVMReg(85, SPU::R85, false );
+    mapDwarfRegToLLVMReg(86, SPU::R86, false );
+    mapDwarfRegToLLVMReg(87, SPU::R87, false );
+    mapDwarfRegToLLVMReg(88, SPU::R88, false );
+    mapDwarfRegToLLVMReg(89, SPU::R89, false );
+    mapDwarfRegToLLVMReg(90, SPU::R90, false );
+    mapDwarfRegToLLVMReg(91, SPU::R91, false );
+    mapDwarfRegToLLVMReg(92, SPU::R92, false );
+    mapDwarfRegToLLVMReg(93, SPU::R93, false );
+    mapDwarfRegToLLVMReg(94, SPU::R94, false );
+    mapDwarfRegToLLVMReg(95, SPU::R95, false );
+    mapDwarfRegToLLVMReg(96, SPU::R96, false );
+    mapDwarfRegToLLVMReg(97, SPU::R97, false );
+    mapDwarfRegToLLVMReg(98, SPU::R98, false );
+    mapDwarfRegToLLVMReg(99, SPU::R99, false );
+    mapDwarfRegToLLVMReg(100, SPU::R100, false );
+    mapDwarfRegToLLVMReg(101, SPU::R101, false );
+    mapDwarfRegToLLVMReg(102, SPU::R102, false );
+    mapDwarfRegToLLVMReg(103, SPU::R103, false );
+    mapDwarfRegToLLVMReg(104, SPU::R104, false );
+    mapDwarfRegToLLVMReg(105, SPU::R105, false );
+    mapDwarfRegToLLVMReg(106, SPU::R106, false );
+    mapDwarfRegToLLVMReg(107, SPU::R107, false );
+    mapDwarfRegToLLVMReg(108, SPU::R108, false );
+    mapDwarfRegToLLVMReg(109, SPU::R109, false );
+    mapDwarfRegToLLVMReg(110, SPU::R110, false );
+    mapDwarfRegToLLVMReg(111, SPU::R111, false );
+    mapDwarfRegToLLVMReg(112, SPU::R112, false );
+    mapDwarfRegToLLVMReg(113, SPU::R113, false );
+    mapDwarfRegToLLVMReg(114, SPU::R114, false );
+    mapDwarfRegToLLVMReg(115, SPU::R115, false );
+    mapDwarfRegToLLVMReg(116, SPU::R116, false );
+    mapDwarfRegToLLVMReg(117, SPU::R117, false );
+    mapDwarfRegToLLVMReg(118, SPU::R118, false );
+    mapDwarfRegToLLVMReg(119, SPU::R119, false );
+    mapDwarfRegToLLVMReg(120, SPU::R120, false );
+    mapDwarfRegToLLVMReg(121, SPU::R121, false );
+    mapDwarfRegToLLVMReg(122, SPU::R122, false );
+    mapDwarfRegToLLVMReg(123, SPU::R123, false );
+    mapDwarfRegToLLVMReg(124, SPU::R124, false );
+    mapDwarfRegToLLVMReg(125, SPU::R125, false );
+    mapDwarfRegToLLVMReg(126, SPU::R126, false );
+    mapDwarfRegToLLVMReg(127, SPU::R127, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(0, SPU::R0, true );
+    mapDwarfRegToLLVMReg(1, SPU::R1, true );
+    mapDwarfRegToLLVMReg(2, SPU::R2, true );
+    mapDwarfRegToLLVMReg(3, SPU::R3, true );
+    mapDwarfRegToLLVMReg(4, SPU::R4, true );
+    mapDwarfRegToLLVMReg(5, SPU::R5, true );
+    mapDwarfRegToLLVMReg(6, SPU::R6, true );
+    mapDwarfRegToLLVMReg(7, SPU::R7, true );
+    mapDwarfRegToLLVMReg(8, SPU::R8, true );
+    mapDwarfRegToLLVMReg(9, SPU::R9, true );
+    mapDwarfRegToLLVMReg(10, SPU::R10, true );
+    mapDwarfRegToLLVMReg(11, SPU::R11, true );
+    mapDwarfRegToLLVMReg(12, SPU::R12, true );
+    mapDwarfRegToLLVMReg(13, SPU::R13, true );
+    mapDwarfRegToLLVMReg(14, SPU::R14, true );
+    mapDwarfRegToLLVMReg(15, SPU::R15, true );
+    mapDwarfRegToLLVMReg(16, SPU::R16, true );
+    mapDwarfRegToLLVMReg(17, SPU::R17, true );
+    mapDwarfRegToLLVMReg(18, SPU::R18, true );
+    mapDwarfRegToLLVMReg(19, SPU::R19, true );
+    mapDwarfRegToLLVMReg(20, SPU::R20, true );
+    mapDwarfRegToLLVMReg(21, SPU::R21, true );
+    mapDwarfRegToLLVMReg(22, SPU::R22, true );
+    mapDwarfRegToLLVMReg(23, SPU::R23, true );
+    mapDwarfRegToLLVMReg(24, SPU::R24, true );
+    mapDwarfRegToLLVMReg(25, SPU::R25, true );
+    mapDwarfRegToLLVMReg(26, SPU::R26, true );
+    mapDwarfRegToLLVMReg(27, SPU::R27, true );
+    mapDwarfRegToLLVMReg(28, SPU::R28, true );
+    mapDwarfRegToLLVMReg(29, SPU::R29, true );
+    mapDwarfRegToLLVMReg(30, SPU::R30, true );
+    mapDwarfRegToLLVMReg(31, SPU::R31, true );
+    mapDwarfRegToLLVMReg(32, SPU::R32, true );
+    mapDwarfRegToLLVMReg(33, SPU::R33, true );
+    mapDwarfRegToLLVMReg(34, SPU::R34, true );
+    mapDwarfRegToLLVMReg(35, SPU::R35, true );
+    mapDwarfRegToLLVMReg(36, SPU::R36, true );
+    mapDwarfRegToLLVMReg(37, SPU::R37, true );
+    mapDwarfRegToLLVMReg(38, SPU::R38, true );
+    mapDwarfRegToLLVMReg(39, SPU::R39, true );
+    mapDwarfRegToLLVMReg(40, SPU::R40, true );
+    mapDwarfRegToLLVMReg(41, SPU::R41, true );
+    mapDwarfRegToLLVMReg(42, SPU::R42, true );
+    mapDwarfRegToLLVMReg(43, SPU::R43, true );
+    mapDwarfRegToLLVMReg(44, SPU::R44, true );
+    mapDwarfRegToLLVMReg(45, SPU::R45, true );
+    mapDwarfRegToLLVMReg(46, SPU::R46, true );
+    mapDwarfRegToLLVMReg(47, SPU::R47, true );
+    mapDwarfRegToLLVMReg(48, SPU::R48, true );
+    mapDwarfRegToLLVMReg(49, SPU::R49, true );
+    mapDwarfRegToLLVMReg(50, SPU::R50, true );
+    mapDwarfRegToLLVMReg(51, SPU::R51, true );
+    mapDwarfRegToLLVMReg(52, SPU::R52, true );
+    mapDwarfRegToLLVMReg(53, SPU::R53, true );
+    mapDwarfRegToLLVMReg(54, SPU::R54, true );
+    mapDwarfRegToLLVMReg(55, SPU::R55, true );
+    mapDwarfRegToLLVMReg(56, SPU::R56, true );
+    mapDwarfRegToLLVMReg(57, SPU::R57, true );
+    mapDwarfRegToLLVMReg(58, SPU::R58, true );
+    mapDwarfRegToLLVMReg(59, SPU::R59, true );
+    mapDwarfRegToLLVMReg(60, SPU::R60, true );
+    mapDwarfRegToLLVMReg(61, SPU::R61, true );
+    mapDwarfRegToLLVMReg(62, SPU::R62, true );
+    mapDwarfRegToLLVMReg(63, SPU::R63, true );
+    mapDwarfRegToLLVMReg(64, SPU::R64, true );
+    mapDwarfRegToLLVMReg(65, SPU::R65, true );
+    mapDwarfRegToLLVMReg(66, SPU::R66, true );
+    mapDwarfRegToLLVMReg(67, SPU::R67, true );
+    mapDwarfRegToLLVMReg(68, SPU::R68, true );
+    mapDwarfRegToLLVMReg(69, SPU::R69, true );
+    mapDwarfRegToLLVMReg(70, SPU::R70, true );
+    mapDwarfRegToLLVMReg(71, SPU::R71, true );
+    mapDwarfRegToLLVMReg(72, SPU::R72, true );
+    mapDwarfRegToLLVMReg(73, SPU::R73, true );
+    mapDwarfRegToLLVMReg(74, SPU::R74, true );
+    mapDwarfRegToLLVMReg(75, SPU::R75, true );
+    mapDwarfRegToLLVMReg(76, SPU::R76, true );
+    mapDwarfRegToLLVMReg(77, SPU::R77, true );
+    mapDwarfRegToLLVMReg(78, SPU::R78, true );
+    mapDwarfRegToLLVMReg(79, SPU::R79, true );
+    mapDwarfRegToLLVMReg(80, SPU::R80, true );
+    mapDwarfRegToLLVMReg(81, SPU::R81, true );
+    mapDwarfRegToLLVMReg(82, SPU::R82, true );
+    mapDwarfRegToLLVMReg(83, SPU::R83, true );
+    mapDwarfRegToLLVMReg(84, SPU::R84, true );
+    mapDwarfRegToLLVMReg(85, SPU::R85, true );
+    mapDwarfRegToLLVMReg(86, SPU::R86, true );
+    mapDwarfRegToLLVMReg(87, SPU::R87, true );
+    mapDwarfRegToLLVMReg(88, SPU::R88, true );
+    mapDwarfRegToLLVMReg(89, SPU::R89, true );
+    mapDwarfRegToLLVMReg(90, SPU::R90, true );
+    mapDwarfRegToLLVMReg(91, SPU::R91, true );
+    mapDwarfRegToLLVMReg(92, SPU::R92, true );
+    mapDwarfRegToLLVMReg(93, SPU::R93, true );
+    mapDwarfRegToLLVMReg(94, SPU::R94, true );
+    mapDwarfRegToLLVMReg(95, SPU::R95, true );
+    mapDwarfRegToLLVMReg(96, SPU::R96, true );
+    mapDwarfRegToLLVMReg(97, SPU::R97, true );
+    mapDwarfRegToLLVMReg(98, SPU::R98, true );
+    mapDwarfRegToLLVMReg(99, SPU::R99, true );
+    mapDwarfRegToLLVMReg(100, SPU::R100, true );
+    mapDwarfRegToLLVMReg(101, SPU::R101, true );
+    mapDwarfRegToLLVMReg(102, SPU::R102, true );
+    mapDwarfRegToLLVMReg(103, SPU::R103, true );
+    mapDwarfRegToLLVMReg(104, SPU::R104, true );
+    mapDwarfRegToLLVMReg(105, SPU::R105, true );
+    mapDwarfRegToLLVMReg(106, SPU::R106, true );
+    mapDwarfRegToLLVMReg(107, SPU::R107, true );
+    mapDwarfRegToLLVMReg(108, SPU::R108, true );
+    mapDwarfRegToLLVMReg(109, SPU::R109, true );
+    mapDwarfRegToLLVMReg(110, SPU::R110, true );
+    mapDwarfRegToLLVMReg(111, SPU::R111, true );
+    mapDwarfRegToLLVMReg(112, SPU::R112, true );
+    mapDwarfRegToLLVMReg(113, SPU::R113, true );
+    mapDwarfRegToLLVMReg(114, SPU::R114, true );
+    mapDwarfRegToLLVMReg(115, SPU::R115, true );
+    mapDwarfRegToLLVMReg(116, SPU::R116, true );
+    mapDwarfRegToLLVMReg(117, SPU::R117, true );
+    mapDwarfRegToLLVMReg(118, SPU::R118, true );
+    mapDwarfRegToLLVMReg(119, SPU::R119, true );
+    mapDwarfRegToLLVMReg(120, SPU::R120, true );
+    mapDwarfRegToLLVMReg(121, SPU::R121, true );
+    mapDwarfRegToLLVMReg(122, SPU::R122, true );
+    mapDwarfRegToLLVMReg(123, SPU::R123, true );
+    mapDwarfRegToLLVMReg(124, SPU::R124, true );
+    mapDwarfRegToLLVMReg(125, SPU::R125, true );
+    mapDwarfRegToLLVMReg(126, SPU::R126, true );
+    mapDwarfRegToLLVMReg(127, SPU::R127, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(SPU::R0, 0, false );
+    mapLLVMRegToDwarfReg(SPU::R1, 1, false );
+    mapLLVMRegToDwarfReg(SPU::R2, 2, false );
+    mapLLVMRegToDwarfReg(SPU::R3, 3, false );
+    mapLLVMRegToDwarfReg(SPU::R4, 4, false );
+    mapLLVMRegToDwarfReg(SPU::R5, 5, false );
+    mapLLVMRegToDwarfReg(SPU::R6, 6, false );
+    mapLLVMRegToDwarfReg(SPU::R7, 7, false );
+    mapLLVMRegToDwarfReg(SPU::R8, 8, false );
+    mapLLVMRegToDwarfReg(SPU::R9, 9, false );
+    mapLLVMRegToDwarfReg(SPU::R10, 10, false );
+    mapLLVMRegToDwarfReg(SPU::R11, 11, false );
+    mapLLVMRegToDwarfReg(SPU::R12, 12, false );
+    mapLLVMRegToDwarfReg(SPU::R13, 13, false );
+    mapLLVMRegToDwarfReg(SPU::R14, 14, false );
+    mapLLVMRegToDwarfReg(SPU::R15, 15, false );
+    mapLLVMRegToDwarfReg(SPU::R16, 16, false );
+    mapLLVMRegToDwarfReg(SPU::R17, 17, false );
+    mapLLVMRegToDwarfReg(SPU::R18, 18, false );
+    mapLLVMRegToDwarfReg(SPU::R19, 19, false );
+    mapLLVMRegToDwarfReg(SPU::R20, 20, false );
+    mapLLVMRegToDwarfReg(SPU::R21, 21, false );
+    mapLLVMRegToDwarfReg(SPU::R22, 22, false );
+    mapLLVMRegToDwarfReg(SPU::R23, 23, false );
+    mapLLVMRegToDwarfReg(SPU::R24, 24, false );
+    mapLLVMRegToDwarfReg(SPU::R25, 25, false );
+    mapLLVMRegToDwarfReg(SPU::R26, 26, false );
+    mapLLVMRegToDwarfReg(SPU::R27, 27, false );
+    mapLLVMRegToDwarfReg(SPU::R28, 28, false );
+    mapLLVMRegToDwarfReg(SPU::R29, 29, false );
+    mapLLVMRegToDwarfReg(SPU::R30, 30, false );
+    mapLLVMRegToDwarfReg(SPU::R31, 31, false );
+    mapLLVMRegToDwarfReg(SPU::R32, 32, false );
+    mapLLVMRegToDwarfReg(SPU::R33, 33, false );
+    mapLLVMRegToDwarfReg(SPU::R34, 34, false );
+    mapLLVMRegToDwarfReg(SPU::R35, 35, false );
+    mapLLVMRegToDwarfReg(SPU::R36, 36, false );
+    mapLLVMRegToDwarfReg(SPU::R37, 37, false );
+    mapLLVMRegToDwarfReg(SPU::R38, 38, false );
+    mapLLVMRegToDwarfReg(SPU::R39, 39, false );
+    mapLLVMRegToDwarfReg(SPU::R40, 40, false );
+    mapLLVMRegToDwarfReg(SPU::R41, 41, false );
+    mapLLVMRegToDwarfReg(SPU::R42, 42, false );
+    mapLLVMRegToDwarfReg(SPU::R43, 43, false );
+    mapLLVMRegToDwarfReg(SPU::R44, 44, false );
+    mapLLVMRegToDwarfReg(SPU::R45, 45, false );
+    mapLLVMRegToDwarfReg(SPU::R46, 46, false );
+    mapLLVMRegToDwarfReg(SPU::R47, 47, false );
+    mapLLVMRegToDwarfReg(SPU::R48, 48, false );
+    mapLLVMRegToDwarfReg(SPU::R49, 49, false );
+    mapLLVMRegToDwarfReg(SPU::R50, 50, false );
+    mapLLVMRegToDwarfReg(SPU::R51, 51, false );
+    mapLLVMRegToDwarfReg(SPU::R52, 52, false );
+    mapLLVMRegToDwarfReg(SPU::R53, 53, false );
+    mapLLVMRegToDwarfReg(SPU::R54, 54, false );
+    mapLLVMRegToDwarfReg(SPU::R55, 55, false );
+    mapLLVMRegToDwarfReg(SPU::R56, 56, false );
+    mapLLVMRegToDwarfReg(SPU::R57, 57, false );
+    mapLLVMRegToDwarfReg(SPU::R58, 58, false );
+    mapLLVMRegToDwarfReg(SPU::R59, 59, false );
+    mapLLVMRegToDwarfReg(SPU::R60, 60, false );
+    mapLLVMRegToDwarfReg(SPU::R61, 61, false );
+    mapLLVMRegToDwarfReg(SPU::R62, 62, false );
+    mapLLVMRegToDwarfReg(SPU::R63, 63, false );
+    mapLLVMRegToDwarfReg(SPU::R64, 64, false );
+    mapLLVMRegToDwarfReg(SPU::R65, 65, false );
+    mapLLVMRegToDwarfReg(SPU::R66, 66, false );
+    mapLLVMRegToDwarfReg(SPU::R67, 67, false );
+    mapLLVMRegToDwarfReg(SPU::R68, 68, false );
+    mapLLVMRegToDwarfReg(SPU::R69, 69, false );
+    mapLLVMRegToDwarfReg(SPU::R70, 70, false );
+    mapLLVMRegToDwarfReg(SPU::R71, 71, false );
+    mapLLVMRegToDwarfReg(SPU::R72, 72, false );
+    mapLLVMRegToDwarfReg(SPU::R73, 73, false );
+    mapLLVMRegToDwarfReg(SPU::R74, 74, false );
+    mapLLVMRegToDwarfReg(SPU::R75, 75, false );
+    mapLLVMRegToDwarfReg(SPU::R76, 76, false );
+    mapLLVMRegToDwarfReg(SPU::R77, 77, false );
+    mapLLVMRegToDwarfReg(SPU::R78, 78, false );
+    mapLLVMRegToDwarfReg(SPU::R79, 79, false );
+    mapLLVMRegToDwarfReg(SPU::R80, 80, false );
+    mapLLVMRegToDwarfReg(SPU::R81, 81, false );
+    mapLLVMRegToDwarfReg(SPU::R82, 82, false );
+    mapLLVMRegToDwarfReg(SPU::R83, 83, false );
+    mapLLVMRegToDwarfReg(SPU::R84, 84, false );
+    mapLLVMRegToDwarfReg(SPU::R85, 85, false );
+    mapLLVMRegToDwarfReg(SPU::R86, 86, false );
+    mapLLVMRegToDwarfReg(SPU::R87, 87, false );
+    mapLLVMRegToDwarfReg(SPU::R88, 88, false );
+    mapLLVMRegToDwarfReg(SPU::R89, 89, false );
+    mapLLVMRegToDwarfReg(SPU::R90, 90, false );
+    mapLLVMRegToDwarfReg(SPU::R91, 91, false );
+    mapLLVMRegToDwarfReg(SPU::R92, 92, false );
+    mapLLVMRegToDwarfReg(SPU::R93, 93, false );
+    mapLLVMRegToDwarfReg(SPU::R94, 94, false );
+    mapLLVMRegToDwarfReg(SPU::R95, 95, false );
+    mapLLVMRegToDwarfReg(SPU::R96, 96, false );
+    mapLLVMRegToDwarfReg(SPU::R97, 97, false );
+    mapLLVMRegToDwarfReg(SPU::R98, 98, false );
+    mapLLVMRegToDwarfReg(SPU::R99, 99, false );
+    mapLLVMRegToDwarfReg(SPU::R100, 100, false );
+    mapLLVMRegToDwarfReg(SPU::R101, 101, false );
+    mapLLVMRegToDwarfReg(SPU::R102, 102, false );
+    mapLLVMRegToDwarfReg(SPU::R103, 103, false );
+    mapLLVMRegToDwarfReg(SPU::R104, 104, false );
+    mapLLVMRegToDwarfReg(SPU::R105, 105, false );
+    mapLLVMRegToDwarfReg(SPU::R106, 106, false );
+    mapLLVMRegToDwarfReg(SPU::R107, 107, false );
+    mapLLVMRegToDwarfReg(SPU::R108, 108, false );
+    mapLLVMRegToDwarfReg(SPU::R109, 109, false );
+    mapLLVMRegToDwarfReg(SPU::R110, 110, false );
+    mapLLVMRegToDwarfReg(SPU::R111, 111, false );
+    mapLLVMRegToDwarfReg(SPU::R112, 112, false );
+    mapLLVMRegToDwarfReg(SPU::R113, 113, false );
+    mapLLVMRegToDwarfReg(SPU::R114, 114, false );
+    mapLLVMRegToDwarfReg(SPU::R115, 115, false );
+    mapLLVMRegToDwarfReg(SPU::R116, 116, false );
+    mapLLVMRegToDwarfReg(SPU::R117, 117, false );
+    mapLLVMRegToDwarfReg(SPU::R118, 118, false );
+    mapLLVMRegToDwarfReg(SPU::R119, 119, false );
+    mapLLVMRegToDwarfReg(SPU::R120, 120, false );
+    mapLLVMRegToDwarfReg(SPU::R121, 121, false );
+    mapLLVMRegToDwarfReg(SPU::R122, 122, false );
+    mapLLVMRegToDwarfReg(SPU::R123, 123, false );
+    mapLLVMRegToDwarfReg(SPU::R124, 124, false );
+    mapLLVMRegToDwarfReg(SPU::R125, 125, false );
+    mapLLVMRegToDwarfReg(SPU::R126, 126, false );
+    mapLLVMRegToDwarfReg(SPU::R127, 127, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(SPU::R0, 0, true );
+    mapLLVMRegToDwarfReg(SPU::R1, 1, true );
+    mapLLVMRegToDwarfReg(SPU::R2, 2, true );
+    mapLLVMRegToDwarfReg(SPU::R3, 3, true );
+    mapLLVMRegToDwarfReg(SPU::R4, 4, true );
+    mapLLVMRegToDwarfReg(SPU::R5, 5, true );
+    mapLLVMRegToDwarfReg(SPU::R6, 6, true );
+    mapLLVMRegToDwarfReg(SPU::R7, 7, true );
+    mapLLVMRegToDwarfReg(SPU::R8, 8, true );
+    mapLLVMRegToDwarfReg(SPU::R9, 9, true );
+    mapLLVMRegToDwarfReg(SPU::R10, 10, true );
+    mapLLVMRegToDwarfReg(SPU::R11, 11, true );
+    mapLLVMRegToDwarfReg(SPU::R12, 12, true );
+    mapLLVMRegToDwarfReg(SPU::R13, 13, true );
+    mapLLVMRegToDwarfReg(SPU::R14, 14, true );
+    mapLLVMRegToDwarfReg(SPU::R15, 15, true );
+    mapLLVMRegToDwarfReg(SPU::R16, 16, true );
+    mapLLVMRegToDwarfReg(SPU::R17, 17, true );
+    mapLLVMRegToDwarfReg(SPU::R18, 18, true );
+    mapLLVMRegToDwarfReg(SPU::R19, 19, true );
+    mapLLVMRegToDwarfReg(SPU::R20, 20, true );
+    mapLLVMRegToDwarfReg(SPU::R21, 21, true );
+    mapLLVMRegToDwarfReg(SPU::R22, 22, true );
+    mapLLVMRegToDwarfReg(SPU::R23, 23, true );
+    mapLLVMRegToDwarfReg(SPU::R24, 24, true );
+    mapLLVMRegToDwarfReg(SPU::R25, 25, true );
+    mapLLVMRegToDwarfReg(SPU::R26, 26, true );
+    mapLLVMRegToDwarfReg(SPU::R27, 27, true );
+    mapLLVMRegToDwarfReg(SPU::R28, 28, true );
+    mapLLVMRegToDwarfReg(SPU::R29, 29, true );
+    mapLLVMRegToDwarfReg(SPU::R30, 30, true );
+    mapLLVMRegToDwarfReg(SPU::R31, 31, true );
+    mapLLVMRegToDwarfReg(SPU::R32, 32, true );
+    mapLLVMRegToDwarfReg(SPU::R33, 33, true );
+    mapLLVMRegToDwarfReg(SPU::R34, 34, true );
+    mapLLVMRegToDwarfReg(SPU::R35, 35, true );
+    mapLLVMRegToDwarfReg(SPU::R36, 36, true );
+    mapLLVMRegToDwarfReg(SPU::R37, 37, true );
+    mapLLVMRegToDwarfReg(SPU::R38, 38, true );
+    mapLLVMRegToDwarfReg(SPU::R39, 39, true );
+    mapLLVMRegToDwarfReg(SPU::R40, 40, true );
+    mapLLVMRegToDwarfReg(SPU::R41, 41, true );
+    mapLLVMRegToDwarfReg(SPU::R42, 42, true );
+    mapLLVMRegToDwarfReg(SPU::R43, 43, true );
+    mapLLVMRegToDwarfReg(SPU::R44, 44, true );
+    mapLLVMRegToDwarfReg(SPU::R45, 45, true );
+    mapLLVMRegToDwarfReg(SPU::R46, 46, true );
+    mapLLVMRegToDwarfReg(SPU::R47, 47, true );
+    mapLLVMRegToDwarfReg(SPU::R48, 48, true );
+    mapLLVMRegToDwarfReg(SPU::R49, 49, true );
+    mapLLVMRegToDwarfReg(SPU::R50, 50, true );
+    mapLLVMRegToDwarfReg(SPU::R51, 51, true );
+    mapLLVMRegToDwarfReg(SPU::R52, 52, true );
+    mapLLVMRegToDwarfReg(SPU::R53, 53, true );
+    mapLLVMRegToDwarfReg(SPU::R54, 54, true );
+    mapLLVMRegToDwarfReg(SPU::R55, 55, true );
+    mapLLVMRegToDwarfReg(SPU::R56, 56, true );
+    mapLLVMRegToDwarfReg(SPU::R57, 57, true );
+    mapLLVMRegToDwarfReg(SPU::R58, 58, true );
+    mapLLVMRegToDwarfReg(SPU::R59, 59, true );
+    mapLLVMRegToDwarfReg(SPU::R60, 60, true );
+    mapLLVMRegToDwarfReg(SPU::R61, 61, true );
+    mapLLVMRegToDwarfReg(SPU::R62, 62, true );
+    mapLLVMRegToDwarfReg(SPU::R63, 63, true );
+    mapLLVMRegToDwarfReg(SPU::R64, 64, true );
+    mapLLVMRegToDwarfReg(SPU::R65, 65, true );
+    mapLLVMRegToDwarfReg(SPU::R66, 66, true );
+    mapLLVMRegToDwarfReg(SPU::R67, 67, true );
+    mapLLVMRegToDwarfReg(SPU::R68, 68, true );
+    mapLLVMRegToDwarfReg(SPU::R69, 69, true );
+    mapLLVMRegToDwarfReg(SPU::R70, 70, true );
+    mapLLVMRegToDwarfReg(SPU::R71, 71, true );
+    mapLLVMRegToDwarfReg(SPU::R72, 72, true );
+    mapLLVMRegToDwarfReg(SPU::R73, 73, true );
+    mapLLVMRegToDwarfReg(SPU::R74, 74, true );
+    mapLLVMRegToDwarfReg(SPU::R75, 75, true );
+    mapLLVMRegToDwarfReg(SPU::R76, 76, true );
+    mapLLVMRegToDwarfReg(SPU::R77, 77, true );
+    mapLLVMRegToDwarfReg(SPU::R78, 78, true );
+    mapLLVMRegToDwarfReg(SPU::R79, 79, true );
+    mapLLVMRegToDwarfReg(SPU::R80, 80, true );
+    mapLLVMRegToDwarfReg(SPU::R81, 81, true );
+    mapLLVMRegToDwarfReg(SPU::R82, 82, true );
+    mapLLVMRegToDwarfReg(SPU::R83, 83, true );
+    mapLLVMRegToDwarfReg(SPU::R84, 84, true );
+    mapLLVMRegToDwarfReg(SPU::R85, 85, true );
+    mapLLVMRegToDwarfReg(SPU::R86, 86, true );
+    mapLLVMRegToDwarfReg(SPU::R87, 87, true );
+    mapLLVMRegToDwarfReg(SPU::R88, 88, true );
+    mapLLVMRegToDwarfReg(SPU::R89, 89, true );
+    mapLLVMRegToDwarfReg(SPU::R90, 90, true );
+    mapLLVMRegToDwarfReg(SPU::R91, 91, true );
+    mapLLVMRegToDwarfReg(SPU::R92, 92, true );
+    mapLLVMRegToDwarfReg(SPU::R93, 93, true );
+    mapLLVMRegToDwarfReg(SPU::R94, 94, true );
+    mapLLVMRegToDwarfReg(SPU::R95, 95, true );
+    mapLLVMRegToDwarfReg(SPU::R96, 96, true );
+    mapLLVMRegToDwarfReg(SPU::R97, 97, true );
+    mapLLVMRegToDwarfReg(SPU::R98, 98, true );
+    mapLLVMRegToDwarfReg(SPU::R99, 99, true );
+    mapLLVMRegToDwarfReg(SPU::R100, 100, true );
+    mapLLVMRegToDwarfReg(SPU::R101, 101, true );
+    mapLLVMRegToDwarfReg(SPU::R102, 102, true );
+    mapLLVMRegToDwarfReg(SPU::R103, 103, true );
+    mapLLVMRegToDwarfReg(SPU::R104, 104, true );
+    mapLLVMRegToDwarfReg(SPU::R105, 105, true );
+    mapLLVMRegToDwarfReg(SPU::R106, 106, true );
+    mapLLVMRegToDwarfReg(SPU::R107, 107, true );
+    mapLLVMRegToDwarfReg(SPU::R108, 108, true );
+    mapLLVMRegToDwarfReg(SPU::R109, 109, true );
+    mapLLVMRegToDwarfReg(SPU::R110, 110, true );
+    mapLLVMRegToDwarfReg(SPU::R111, 111, true );
+    mapLLVMRegToDwarfReg(SPU::R112, 112, true );
+    mapLLVMRegToDwarfReg(SPU::R113, 113, true );
+    mapLLVMRegToDwarfReg(SPU::R114, 114, true );
+    mapLLVMRegToDwarfReg(SPU::R115, 115, true );
+    mapLLVMRegToDwarfReg(SPU::R116, 116, true );
+    mapLLVMRegToDwarfReg(SPU::R117, 117, true );
+    mapLLVMRegToDwarfReg(SPU::R118, 118, true );
+    mapLLVMRegToDwarfReg(SPU::R119, 119, true );
+    mapLLVMRegToDwarfReg(SPU::R120, 120, true );
+    mapLLVMRegToDwarfReg(SPU::R121, 121, true );
+    mapLLVMRegToDwarfReg(SPU::R122, 122, true );
+    mapLLVMRegToDwarfReg(SPU::R123, 123, true );
+    mapLLVMRegToDwarfReg(SPU::R124, 124, true );
+    mapLLVMRegToDwarfReg(SPU::R125, 125, true );
+    mapLLVMRegToDwarfReg(SPU::R126, 126, true );
+    mapLLVMRegToDwarfReg(SPU::R127, 127, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

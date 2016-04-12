@@ -1,0 +1,2429 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass PTXMCRegisterClasses[];
+
+namespace PTX {
+enum {
+  NoRegister,
+  P0 = 1,
+  P1 = 2,
+  P2 = 3,
+  P3 = 4,
+  P4 = 5,
+  P5 = 6,
+  P6 = 7,
+  P7 = 8,
+  P8 = 9,
+  P9 = 10,
+  P10 = 11,
+  P11 = 12,
+  P12 = 13,
+  P13 = 14,
+  P14 = 15,
+  P15 = 16,
+  P16 = 17,
+  P17 = 18,
+  P18 = 19,
+  P19 = 20,
+  P20 = 21,
+  P21 = 22,
+  P22 = 23,
+  P23 = 24,
+  P24 = 25,
+  P25 = 26,
+  P26 = 27,
+  P27 = 28,
+  P28 = 29,
+  P29 = 30,
+  P30 = 31,
+  P31 = 32,
+  P32 = 33,
+  P33 = 34,
+  P34 = 35,
+  P35 = 36,
+  P36 = 37,
+  P37 = 38,
+  P38 = 39,
+  P39 = 40,
+  P40 = 41,
+  P41 = 42,
+  P42 = 43,
+  P43 = 44,
+  P44 = 45,
+  P45 = 46,
+  P46 = 47,
+  P47 = 48,
+  P48 = 49,
+  P49 = 50,
+  P50 = 51,
+  P51 = 52,
+  P52 = 53,
+  P53 = 54,
+  P54 = 55,
+  P55 = 56,
+  P56 = 57,
+  P57 = 58,
+  P58 = 59,
+  P59 = 60,
+  P60 = 61,
+  P61 = 62,
+  P62 = 63,
+  P63 = 64,
+  P64 = 65,
+  P65 = 66,
+  P66 = 67,
+  P67 = 68,
+  P68 = 69,
+  P69 = 70,
+  P70 = 71,
+  P71 = 72,
+  P72 = 73,
+  P73 = 74,
+  P74 = 75,
+  P75 = 76,
+  P76 = 77,
+  P77 = 78,
+  P78 = 79,
+  P79 = 80,
+  P80 = 81,
+  P81 = 82,
+  P82 = 83,
+  P83 = 84,
+  P84 = 85,
+  P85 = 86,
+  P86 = 87,
+  P87 = 88,
+  P88 = 89,
+  P89 = 90,
+  P90 = 91,
+  P91 = 92,
+  P92 = 93,
+  P93 = 94,
+  P94 = 95,
+  P95 = 96,
+  P96 = 97,
+  P97 = 98,
+  P98 = 99,
+  P99 = 100,
+  P100 = 101,
+  P101 = 102,
+  P102 = 103,
+  P103 = 104,
+  P104 = 105,
+  P105 = 106,
+  P106 = 107,
+  P107 = 108,
+  P108 = 109,
+  P109 = 110,
+  P110 = 111,
+  P111 = 112,
+  P112 = 113,
+  P113 = 114,
+  P114 = 115,
+  P115 = 116,
+  P116 = 117,
+  P117 = 118,
+  P118 = 119,
+  P119 = 120,
+  P120 = 121,
+  P121 = 122,
+  P122 = 123,
+  P123 = 124,
+  P124 = 125,
+  P125 = 126,
+  P126 = 127,
+  P127 = 128,
+  R0 = 129,
+  R1 = 130,
+  R2 = 131,
+  R3 = 132,
+  R4 = 133,
+  R5 = 134,
+  R6 = 135,
+  R7 = 136,
+  R8 = 137,
+  R9 = 138,
+  R10 = 139,
+  R11 = 140,
+  R12 = 141,
+  R13 = 142,
+  R14 = 143,
+  R15 = 144,
+  R16 = 145,
+  R17 = 146,
+  R18 = 147,
+  R19 = 148,
+  R20 = 149,
+  R21 = 150,
+  R22 = 151,
+  R23 = 152,
+  R24 = 153,
+  R25 = 154,
+  R26 = 155,
+  R27 = 156,
+  R28 = 157,
+  R29 = 158,
+  R30 = 159,
+  R31 = 160,
+  R32 = 161,
+  R33 = 162,
+  R34 = 163,
+  R35 = 164,
+  R36 = 165,
+  R37 = 166,
+  R38 = 167,
+  R39 = 168,
+  R40 = 169,
+  R41 = 170,
+  R42 = 171,
+  R43 = 172,
+  R44 = 173,
+  R45 = 174,
+  R46 = 175,
+  R47 = 176,
+  R48 = 177,
+  R49 = 178,
+  R50 = 179,
+  R51 = 180,
+  R52 = 181,
+  R53 = 182,
+  R54 = 183,
+  R55 = 184,
+  R56 = 185,
+  R57 = 186,
+  R58 = 187,
+  R59 = 188,
+  R60 = 189,
+  R61 = 190,
+  R62 = 191,
+  R63 = 192,
+  R64 = 193,
+  R65 = 194,
+  R66 = 195,
+  R67 = 196,
+  R68 = 197,
+  R69 = 198,
+  R70 = 199,
+  R71 = 200,
+  R72 = 201,
+  R73 = 202,
+  R74 = 203,
+  R75 = 204,
+  R76 = 205,
+  R77 = 206,
+  R78 = 207,
+  R79 = 208,
+  R80 = 209,
+  R81 = 210,
+  R82 = 211,
+  R83 = 212,
+  R84 = 213,
+  R85 = 214,
+  R86 = 215,
+  R87 = 216,
+  R88 = 217,
+  R89 = 218,
+  R90 = 219,
+  R91 = 220,
+  R92 = 221,
+  R93 = 222,
+  R94 = 223,
+  R95 = 224,
+  R96 = 225,
+  R97 = 226,
+  R98 = 227,
+  R99 = 228,
+  R100 = 229,
+  R101 = 230,
+  R102 = 231,
+  R103 = 232,
+  R104 = 233,
+  R105 = 234,
+  R106 = 235,
+  R107 = 236,
+  R108 = 237,
+  R109 = 238,
+  R110 = 239,
+  R111 = 240,
+  R112 = 241,
+  R113 = 242,
+  R114 = 243,
+  R115 = 244,
+  R116 = 245,
+  R117 = 246,
+  R118 = 247,
+  R119 = 248,
+  R120 = 249,
+  R121 = 250,
+  R122 = 251,
+  R123 = 252,
+  R124 = 253,
+  R125 = 254,
+  R126 = 255,
+  R127 = 256,
+  RD0 = 257,
+  RD1 = 258,
+  RD2 = 259,
+  RD3 = 260,
+  RD4 = 261,
+  RD5 = 262,
+  RD6 = 263,
+  RD7 = 264,
+  RD8 = 265,
+  RD9 = 266,
+  RD10 = 267,
+  RD11 = 268,
+  RD12 = 269,
+  RD13 = 270,
+  RD14 = 271,
+  RD15 = 272,
+  RD16 = 273,
+  RD17 = 274,
+  RD18 = 275,
+  RD19 = 276,
+  RD20 = 277,
+  RD21 = 278,
+  RD22 = 279,
+  RD23 = 280,
+  RD24 = 281,
+  RD25 = 282,
+  RD26 = 283,
+  RD27 = 284,
+  RD28 = 285,
+  RD29 = 286,
+  RD30 = 287,
+  RD31 = 288,
+  RD32 = 289,
+  RD33 = 290,
+  RD34 = 291,
+  RD35 = 292,
+  RD36 = 293,
+  RD37 = 294,
+  RD38 = 295,
+  RD39 = 296,
+  RD40 = 297,
+  RD41 = 298,
+  RD42 = 299,
+  RD43 = 300,
+  RD44 = 301,
+  RD45 = 302,
+  RD46 = 303,
+  RD47 = 304,
+  RD48 = 305,
+  RD49 = 306,
+  RD50 = 307,
+  RD51 = 308,
+  RD52 = 309,
+  RD53 = 310,
+  RD54 = 311,
+  RD55 = 312,
+  RD56 = 313,
+  RD57 = 314,
+  RD58 = 315,
+  RD59 = 316,
+  RD60 = 317,
+  RD61 = 318,
+  RD62 = 319,
+  RD63 = 320,
+  RD64 = 321,
+  RD65 = 322,
+  RD66 = 323,
+  RD67 = 324,
+  RD68 = 325,
+  RD69 = 326,
+  RD70 = 327,
+  RD71 = 328,
+  RD72 = 329,
+  RD73 = 330,
+  RD74 = 331,
+  RD75 = 332,
+  RD76 = 333,
+  RD77 = 334,
+  RD78 = 335,
+  RD79 = 336,
+  RD80 = 337,
+  RD81 = 338,
+  RD82 = 339,
+  RD83 = 340,
+  RD84 = 341,
+  RD85 = 342,
+  RD86 = 343,
+  RD87 = 344,
+  RD88 = 345,
+  RD89 = 346,
+  RD90 = 347,
+  RD91 = 348,
+  RD92 = 349,
+  RD93 = 350,
+  RD94 = 351,
+  RD95 = 352,
+  RD96 = 353,
+  RD97 = 354,
+  RD98 = 355,
+  RD99 = 356,
+  RD100 = 357,
+  RD101 = 358,
+  RD102 = 359,
+  RD103 = 360,
+  RD104 = 361,
+  RD105 = 362,
+  RD106 = 363,
+  RD107 = 364,
+  RD108 = 365,
+  RD109 = 366,
+  RD110 = 367,
+  RD111 = 368,
+  RD112 = 369,
+  RD113 = 370,
+  RD114 = 371,
+  RD115 = 372,
+  RD116 = 373,
+  RD117 = 374,
+  RD118 = 375,
+  RD119 = 376,
+  RD120 = 377,
+  RD121 = 378,
+  RD122 = 379,
+  RD123 = 380,
+  RD124 = 381,
+  RD125 = 382,
+  RD126 = 383,
+  RD127 = 384,
+  RH0 = 385,
+  RH1 = 386,
+  RH2 = 387,
+  RH3 = 388,
+  RH4 = 389,
+  RH5 = 390,
+  RH6 = 391,
+  RH7 = 392,
+  RH8 = 393,
+  RH9 = 394,
+  RH10 = 395,
+  RH11 = 396,
+  RH12 = 397,
+  RH13 = 398,
+  RH14 = 399,
+  RH15 = 400,
+  RH16 = 401,
+  RH17 = 402,
+  RH18 = 403,
+  RH19 = 404,
+  RH20 = 405,
+  RH21 = 406,
+  RH22 = 407,
+  RH23 = 408,
+  RH24 = 409,
+  RH25 = 410,
+  RH26 = 411,
+  RH27 = 412,
+  RH28 = 413,
+  RH29 = 414,
+  RH30 = 415,
+  RH31 = 416,
+  RH32 = 417,
+  RH33 = 418,
+  RH34 = 419,
+  RH35 = 420,
+  RH36 = 421,
+  RH37 = 422,
+  RH38 = 423,
+  RH39 = 424,
+  RH40 = 425,
+  RH41 = 426,
+  RH42 = 427,
+  RH43 = 428,
+  RH44 = 429,
+  RH45 = 430,
+  RH46 = 431,
+  RH47 = 432,
+  RH48 = 433,
+  RH49 = 434,
+  RH50 = 435,
+  RH51 = 436,
+  RH52 = 437,
+  RH53 = 438,
+  RH54 = 439,
+  RH55 = 440,
+  RH56 = 441,
+  RH57 = 442,
+  RH58 = 443,
+  RH59 = 444,
+  RH60 = 445,
+  RH61 = 446,
+  RH62 = 447,
+  RH63 = 448,
+  RH64 = 449,
+  RH65 = 450,
+  RH66 = 451,
+  RH67 = 452,
+  RH68 = 453,
+  RH69 = 454,
+  RH70 = 455,
+  RH71 = 456,
+  RH72 = 457,
+  RH73 = 458,
+  RH74 = 459,
+  RH75 = 460,
+  RH76 = 461,
+  RH77 = 462,
+  RH78 = 463,
+  RH79 = 464,
+  RH80 = 465,
+  RH81 = 466,
+  RH82 = 467,
+  RH83 = 468,
+  RH84 = 469,
+  RH85 = 470,
+  RH86 = 471,
+  RH87 = 472,
+  RH88 = 473,
+  RH89 = 474,
+  RH90 = 475,
+  RH91 = 476,
+  RH92 = 477,
+  RH93 = 478,
+  RH94 = 479,
+  RH95 = 480,
+  RH96 = 481,
+  RH97 = 482,
+  RH98 = 483,
+  RH99 = 484,
+  RH100 = 485,
+  RH101 = 486,
+  RH102 = 487,
+  RH103 = 488,
+  RH104 = 489,
+  RH105 = 490,
+  RH106 = 491,
+  RH107 = 492,
+  RH108 = 493,
+  RH109 = 494,
+  RH110 = 495,
+  RH111 = 496,
+  RH112 = 497,
+  RH113 = 498,
+  RH114 = 499,
+  RH115 = 500,
+  RH116 = 501,
+  RH117 = 502,
+  RH118 = 503,
+  RH119 = 504,
+  RH120 = 505,
+  RH121 = 506,
+  RH122 = 507,
+  RH123 = 508,
+  RH124 = 509,
+  RH125 = 510,
+  RH126 = 511,
+  RH127 = 512,
+  NUM_TARGET_REGS 	// 513
+};
+}
+
+// Register classes
+namespace PTX {
+enum {
+  RegF32RegClassID = 0,
+  RegF64RegClassID = 1,
+  RegI16RegClassID = 2,
+  RegI32RegClassID = 3,
+  RegI64RegClassID = 4,
+  RegPredRegClassID = 5
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct PTXGenMCRegisterInfo : public MCRegisterInfo {
+  explicit PTXGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned P0_Overlaps[] = { PTX::P0, 0 };
+  const unsigned P1_Overlaps[] = { PTX::P1, 0 };
+  const unsigned P2_Overlaps[] = { PTX::P2, 0 };
+  const unsigned P3_Overlaps[] = { PTX::P3, 0 };
+  const unsigned P4_Overlaps[] = { PTX::P4, 0 };
+  const unsigned P5_Overlaps[] = { PTX::P5, 0 };
+  const unsigned P6_Overlaps[] = { PTX::P6, 0 };
+  const unsigned P7_Overlaps[] = { PTX::P7, 0 };
+  const unsigned P8_Overlaps[] = { PTX::P8, 0 };
+  const unsigned P9_Overlaps[] = { PTX::P9, 0 };
+  const unsigned P10_Overlaps[] = { PTX::P10, 0 };
+  const unsigned P11_Overlaps[] = { PTX::P11, 0 };
+  const unsigned P12_Overlaps[] = { PTX::P12, 0 };
+  const unsigned P13_Overlaps[] = { PTX::P13, 0 };
+  const unsigned P14_Overlaps[] = { PTX::P14, 0 };
+  const unsigned P15_Overlaps[] = { PTX::P15, 0 };
+  const unsigned P16_Overlaps[] = { PTX::P16, 0 };
+  const unsigned P17_Overlaps[] = { PTX::P17, 0 };
+  const unsigned P18_Overlaps[] = { PTX::P18, 0 };
+  const unsigned P19_Overlaps[] = { PTX::P19, 0 };
+  const unsigned P20_Overlaps[] = { PTX::P20, 0 };
+  const unsigned P21_Overlaps[] = { PTX::P21, 0 };
+  const unsigned P22_Overlaps[] = { PTX::P22, 0 };
+  const unsigned P23_Overlaps[] = { PTX::P23, 0 };
+  const unsigned P24_Overlaps[] = { PTX::P24, 0 };
+  const unsigned P25_Overlaps[] = { PTX::P25, 0 };
+  const unsigned P26_Overlaps[] = { PTX::P26, 0 };
+  const unsigned P27_Overlaps[] = { PTX::P27, 0 };
+  const unsigned P28_Overlaps[] = { PTX::P28, 0 };
+  const unsigned P29_Overlaps[] = { PTX::P29, 0 };
+  const unsigned P30_Overlaps[] = { PTX::P30, 0 };
+  const unsigned P31_Overlaps[] = { PTX::P31, 0 };
+  const unsigned P32_Overlaps[] = { PTX::P32, 0 };
+  const unsigned P33_Overlaps[] = { PTX::P33, 0 };
+  const unsigned P34_Overlaps[] = { PTX::P34, 0 };
+  const unsigned P35_Overlaps[] = { PTX::P35, 0 };
+  const unsigned P36_Overlaps[] = { PTX::P36, 0 };
+  const unsigned P37_Overlaps[] = { PTX::P37, 0 };
+  const unsigned P38_Overlaps[] = { PTX::P38, 0 };
+  const unsigned P39_Overlaps[] = { PTX::P39, 0 };
+  const unsigned P40_Overlaps[] = { PTX::P40, 0 };
+  const unsigned P41_Overlaps[] = { PTX::P41, 0 };
+  const unsigned P42_Overlaps[] = { PTX::P42, 0 };
+  const unsigned P43_Overlaps[] = { PTX::P43, 0 };
+  const unsigned P44_Overlaps[] = { PTX::P44, 0 };
+  const unsigned P45_Overlaps[] = { PTX::P45, 0 };
+  const unsigned P46_Overlaps[] = { PTX::P46, 0 };
+  const unsigned P47_Overlaps[] = { PTX::P47, 0 };
+  const unsigned P48_Overlaps[] = { PTX::P48, 0 };
+  const unsigned P49_Overlaps[] = { PTX::P49, 0 };
+  const unsigned P50_Overlaps[] = { PTX::P50, 0 };
+  const unsigned P51_Overlaps[] = { PTX::P51, 0 };
+  const unsigned P52_Overlaps[] = { PTX::P52, 0 };
+  const unsigned P53_Overlaps[] = { PTX::P53, 0 };
+  const unsigned P54_Overlaps[] = { PTX::P54, 0 };
+  const unsigned P55_Overlaps[] = { PTX::P55, 0 };
+  const unsigned P56_Overlaps[] = { PTX::P56, 0 };
+  const unsigned P57_Overlaps[] = { PTX::P57, 0 };
+  const unsigned P58_Overlaps[] = { PTX::P58, 0 };
+  const unsigned P59_Overlaps[] = { PTX::P59, 0 };
+  const unsigned P60_Overlaps[] = { PTX::P60, 0 };
+  const unsigned P61_Overlaps[] = { PTX::P61, 0 };
+  const unsigned P62_Overlaps[] = { PTX::P62, 0 };
+  const unsigned P63_Overlaps[] = { PTX::P63, 0 };
+  const unsigned P64_Overlaps[] = { PTX::P64, 0 };
+  const unsigned P65_Overlaps[] = { PTX::P65, 0 };
+  const unsigned P66_Overlaps[] = { PTX::P66, 0 };
+  const unsigned P67_Overlaps[] = { PTX::P67, 0 };
+  const unsigned P68_Overlaps[] = { PTX::P68, 0 };
+  const unsigned P69_Overlaps[] = { PTX::P69, 0 };
+  const unsigned P70_Overlaps[] = { PTX::P70, 0 };
+  const unsigned P71_Overlaps[] = { PTX::P71, 0 };
+  const unsigned P72_Overlaps[] = { PTX::P72, 0 };
+  const unsigned P73_Overlaps[] = { PTX::P73, 0 };
+  const unsigned P74_Overlaps[] = { PTX::P74, 0 };
+  const unsigned P75_Overlaps[] = { PTX::P75, 0 };
+  const unsigned P76_Overlaps[] = { PTX::P76, 0 };
+  const unsigned P77_Overlaps[] = { PTX::P77, 0 };
+  const unsigned P78_Overlaps[] = { PTX::P78, 0 };
+  const unsigned P79_Overlaps[] = { PTX::P79, 0 };
+  const unsigned P80_Overlaps[] = { PTX::P80, 0 };
+  const unsigned P81_Overlaps[] = { PTX::P81, 0 };
+  const unsigned P82_Overlaps[] = { PTX::P82, 0 };
+  const unsigned P83_Overlaps[] = { PTX::P83, 0 };
+  const unsigned P84_Overlaps[] = { PTX::P84, 0 };
+  const unsigned P85_Overlaps[] = { PTX::P85, 0 };
+  const unsigned P86_Overlaps[] = { PTX::P86, 0 };
+  const unsigned P87_Overlaps[] = { PTX::P87, 0 };
+  const unsigned P88_Overlaps[] = { PTX::P88, 0 };
+  const unsigned P89_Overlaps[] = { PTX::P89, 0 };
+  const unsigned P90_Overlaps[] = { PTX::P90, 0 };
+  const unsigned P91_Overlaps[] = { PTX::P91, 0 };
+  const unsigned P92_Overlaps[] = { PTX::P92, 0 };
+  const unsigned P93_Overlaps[] = { PTX::P93, 0 };
+  const unsigned P94_Overlaps[] = { PTX::P94, 0 };
+  const unsigned P95_Overlaps[] = { PTX::P95, 0 };
+  const unsigned P96_Overlaps[] = { PTX::P96, 0 };
+  const unsigned P97_Overlaps[] = { PTX::P97, 0 };
+  const unsigned P98_Overlaps[] = { PTX::P98, 0 };
+  const unsigned P99_Overlaps[] = { PTX::P99, 0 };
+  const unsigned P100_Overlaps[] = { PTX::P100, 0 };
+  const unsigned P101_Overlaps[] = { PTX::P101, 0 };
+  const unsigned P102_Overlaps[] = { PTX::P102, 0 };
+  const unsigned P103_Overlaps[] = { PTX::P103, 0 };
+  const unsigned P104_Overlaps[] = { PTX::P104, 0 };
+  const unsigned P105_Overlaps[] = { PTX::P105, 0 };
+  const unsigned P106_Overlaps[] = { PTX::P106, 0 };
+  const unsigned P107_Overlaps[] = { PTX::P107, 0 };
+  const unsigned P108_Overlaps[] = { PTX::P108, 0 };
+  const unsigned P109_Overlaps[] = { PTX::P109, 0 };
+  const unsigned P110_Overlaps[] = { PTX::P110, 0 };
+  const unsigned P111_Overlaps[] = { PTX::P111, 0 };
+  const unsigned P112_Overlaps[] = { PTX::P112, 0 };
+  const unsigned P113_Overlaps[] = { PTX::P113, 0 };
+  const unsigned P114_Overlaps[] = { PTX::P114, 0 };
+  const unsigned P115_Overlaps[] = { PTX::P115, 0 };
+  const unsigned P116_Overlaps[] = { PTX::P116, 0 };
+  const unsigned P117_Overlaps[] = { PTX::P117, 0 };
+  const unsigned P118_Overlaps[] = { PTX::P118, 0 };
+  const unsigned P119_Overlaps[] = { PTX::P119, 0 };
+  const unsigned P120_Overlaps[] = { PTX::P120, 0 };
+  const unsigned P121_Overlaps[] = { PTX::P121, 0 };
+  const unsigned P122_Overlaps[] = { PTX::P122, 0 };
+  const unsigned P123_Overlaps[] = { PTX::P123, 0 };
+  const unsigned P124_Overlaps[] = { PTX::P124, 0 };
+  const unsigned P125_Overlaps[] = { PTX::P125, 0 };
+  const unsigned P126_Overlaps[] = { PTX::P126, 0 };
+  const unsigned P127_Overlaps[] = { PTX::P127, 0 };
+  const unsigned R0_Overlaps[] = { PTX::R0, 0 };
+  const unsigned R1_Overlaps[] = { PTX::R1, 0 };
+  const unsigned R2_Overlaps[] = { PTX::R2, 0 };
+  const unsigned R3_Overlaps[] = { PTX::R3, 0 };
+  const unsigned R4_Overlaps[] = { PTX::R4, 0 };
+  const unsigned R5_Overlaps[] = { PTX::R5, 0 };
+  const unsigned R6_Overlaps[] = { PTX::R6, 0 };
+  const unsigned R7_Overlaps[] = { PTX::R7, 0 };
+  const unsigned R8_Overlaps[] = { PTX::R8, 0 };
+  const unsigned R9_Overlaps[] = { PTX::R9, 0 };
+  const unsigned R10_Overlaps[] = { PTX::R10, 0 };
+  const unsigned R11_Overlaps[] = { PTX::R11, 0 };
+  const unsigned R12_Overlaps[] = { PTX::R12, 0 };
+  const unsigned R13_Overlaps[] = { PTX::R13, 0 };
+  const unsigned R14_Overlaps[] = { PTX::R14, 0 };
+  const unsigned R15_Overlaps[] = { PTX::R15, 0 };
+  const unsigned R16_Overlaps[] = { PTX::R16, 0 };
+  const unsigned R17_Overlaps[] = { PTX::R17, 0 };
+  const unsigned R18_Overlaps[] = { PTX::R18, 0 };
+  const unsigned R19_Overlaps[] = { PTX::R19, 0 };
+  const unsigned R20_Overlaps[] = { PTX::R20, 0 };
+  const unsigned R21_Overlaps[] = { PTX::R21, 0 };
+  const unsigned R22_Overlaps[] = { PTX::R22, 0 };
+  const unsigned R23_Overlaps[] = { PTX::R23, 0 };
+  const unsigned R24_Overlaps[] = { PTX::R24, 0 };
+  const unsigned R25_Overlaps[] = { PTX::R25, 0 };
+  const unsigned R26_Overlaps[] = { PTX::R26, 0 };
+  const unsigned R27_Overlaps[] = { PTX::R27, 0 };
+  const unsigned R28_Overlaps[] = { PTX::R28, 0 };
+  const unsigned R29_Overlaps[] = { PTX::R29, 0 };
+  const unsigned R30_Overlaps[] = { PTX::R30, 0 };
+  const unsigned R31_Overlaps[] = { PTX::R31, 0 };
+  const unsigned R32_Overlaps[] = { PTX::R32, 0 };
+  const unsigned R33_Overlaps[] = { PTX::R33, 0 };
+  const unsigned R34_Overlaps[] = { PTX::R34, 0 };
+  const unsigned R35_Overlaps[] = { PTX::R35, 0 };
+  const unsigned R36_Overlaps[] = { PTX::R36, 0 };
+  const unsigned R37_Overlaps[] = { PTX::R37, 0 };
+  const unsigned R38_Overlaps[] = { PTX::R38, 0 };
+  const unsigned R39_Overlaps[] = { PTX::R39, 0 };
+  const unsigned R40_Overlaps[] = { PTX::R40, 0 };
+  const unsigned R41_Overlaps[] = { PTX::R41, 0 };
+  const unsigned R42_Overlaps[] = { PTX::R42, 0 };
+  const unsigned R43_Overlaps[] = { PTX::R43, 0 };
+  const unsigned R44_Overlaps[] = { PTX::R44, 0 };
+  const unsigned R45_Overlaps[] = { PTX::R45, 0 };
+  const unsigned R46_Overlaps[] = { PTX::R46, 0 };
+  const unsigned R47_Overlaps[] = { PTX::R47, 0 };
+  const unsigned R48_Overlaps[] = { PTX::R48, 0 };
+  const unsigned R49_Overlaps[] = { PTX::R49, 0 };
+  const unsigned R50_Overlaps[] = { PTX::R50, 0 };
+  const unsigned R51_Overlaps[] = { PTX::R51, 0 };
+  const unsigned R52_Overlaps[] = { PTX::R52, 0 };
+  const unsigned R53_Overlaps[] = { PTX::R53, 0 };
+  const unsigned R54_Overlaps[] = { PTX::R54, 0 };
+  const unsigned R55_Overlaps[] = { PTX::R55, 0 };
+  const unsigned R56_Overlaps[] = { PTX::R56, 0 };
+  const unsigned R57_Overlaps[] = { PTX::R57, 0 };
+  const unsigned R58_Overlaps[] = { PTX::R58, 0 };
+  const unsigned R59_Overlaps[] = { PTX::R59, 0 };
+  const unsigned R60_Overlaps[] = { PTX::R60, 0 };
+  const unsigned R61_Overlaps[] = { PTX::R61, 0 };
+  const unsigned R62_Overlaps[] = { PTX::R62, 0 };
+  const unsigned R63_Overlaps[] = { PTX::R63, 0 };
+  const unsigned R64_Overlaps[] = { PTX::R64, 0 };
+  const unsigned R65_Overlaps[] = { PTX::R65, 0 };
+  const unsigned R66_Overlaps[] = { PTX::R66, 0 };
+  const unsigned R67_Overlaps[] = { PTX::R67, 0 };
+  const unsigned R68_Overlaps[] = { PTX::R68, 0 };
+  const unsigned R69_Overlaps[] = { PTX::R69, 0 };
+  const unsigned R70_Overlaps[] = { PTX::R70, 0 };
+  const unsigned R71_Overlaps[] = { PTX::R71, 0 };
+  const unsigned R72_Overlaps[] = { PTX::R72, 0 };
+  const unsigned R73_Overlaps[] = { PTX::R73, 0 };
+  const unsigned R74_Overlaps[] = { PTX::R74, 0 };
+  const unsigned R75_Overlaps[] = { PTX::R75, 0 };
+  const unsigned R76_Overlaps[] = { PTX::R76, 0 };
+  const unsigned R77_Overlaps[] = { PTX::R77, 0 };
+  const unsigned R78_Overlaps[] = { PTX::R78, 0 };
+  const unsigned R79_Overlaps[] = { PTX::R79, 0 };
+  const unsigned R80_Overlaps[] = { PTX::R80, 0 };
+  const unsigned R81_Overlaps[] = { PTX::R81, 0 };
+  const unsigned R82_Overlaps[] = { PTX::R82, 0 };
+  const unsigned R83_Overlaps[] = { PTX::R83, 0 };
+  const unsigned R84_Overlaps[] = { PTX::R84, 0 };
+  const unsigned R85_Overlaps[] = { PTX::R85, 0 };
+  const unsigned R86_Overlaps[] = { PTX::R86, 0 };
+  const unsigned R87_Overlaps[] = { PTX::R87, 0 };
+  const unsigned R88_Overlaps[] = { PTX::R88, 0 };
+  const unsigned R89_Overlaps[] = { PTX::R89, 0 };
+  const unsigned R90_Overlaps[] = { PTX::R90, 0 };
+  const unsigned R91_Overlaps[] = { PTX::R91, 0 };
+  const unsigned R92_Overlaps[] = { PTX::R92, 0 };
+  const unsigned R93_Overlaps[] = { PTX::R93, 0 };
+  const unsigned R94_Overlaps[] = { PTX::R94, 0 };
+  const unsigned R95_Overlaps[] = { PTX::R95, 0 };
+  const unsigned R96_Overlaps[] = { PTX::R96, 0 };
+  const unsigned R97_Overlaps[] = { PTX::R97, 0 };
+  const unsigned R98_Overlaps[] = { PTX::R98, 0 };
+  const unsigned R99_Overlaps[] = { PTX::R99, 0 };
+  const unsigned R100_Overlaps[] = { PTX::R100, 0 };
+  const unsigned R101_Overlaps[] = { PTX::R101, 0 };
+  const unsigned R102_Overlaps[] = { PTX::R102, 0 };
+  const unsigned R103_Overlaps[] = { PTX::R103, 0 };
+  const unsigned R104_Overlaps[] = { PTX::R104, 0 };
+  const unsigned R105_Overlaps[] = { PTX::R105, 0 };
+  const unsigned R106_Overlaps[] = { PTX::R106, 0 };
+  const unsigned R107_Overlaps[] = { PTX::R107, 0 };
+  const unsigned R108_Overlaps[] = { PTX::R108, 0 };
+  const unsigned R109_Overlaps[] = { PTX::R109, 0 };
+  const unsigned R110_Overlaps[] = { PTX::R110, 0 };
+  const unsigned R111_Overlaps[] = { PTX::R111, 0 };
+  const unsigned R112_Overlaps[] = { PTX::R112, 0 };
+  const unsigned R113_Overlaps[] = { PTX::R113, 0 };
+  const unsigned R114_Overlaps[] = { PTX::R114, 0 };
+  const unsigned R115_Overlaps[] = { PTX::R115, 0 };
+  const unsigned R116_Overlaps[] = { PTX::R116, 0 };
+  const unsigned R117_Overlaps[] = { PTX::R117, 0 };
+  const unsigned R118_Overlaps[] = { PTX::R118, 0 };
+  const unsigned R119_Overlaps[] = { PTX::R119, 0 };
+  const unsigned R120_Overlaps[] = { PTX::R120, 0 };
+  const unsigned R121_Overlaps[] = { PTX::R121, 0 };
+  const unsigned R122_Overlaps[] = { PTX::R122, 0 };
+  const unsigned R123_Overlaps[] = { PTX::R123, 0 };
+  const unsigned R124_Overlaps[] = { PTX::R124, 0 };
+  const unsigned R125_Overlaps[] = { PTX::R125, 0 };
+  const unsigned R126_Overlaps[] = { PTX::R126, 0 };
+  const unsigned R127_Overlaps[] = { PTX::R127, 0 };
+  const unsigned RD0_Overlaps[] = { PTX::RD0, 0 };
+  const unsigned RD1_Overlaps[] = { PTX::RD1, 0 };
+  const unsigned RD2_Overlaps[] = { PTX::RD2, 0 };
+  const unsigned RD3_Overlaps[] = { PTX::RD3, 0 };
+  const unsigned RD4_Overlaps[] = { PTX::RD4, 0 };
+  const unsigned RD5_Overlaps[] = { PTX::RD5, 0 };
+  const unsigned RD6_Overlaps[] = { PTX::RD6, 0 };
+  const unsigned RD7_Overlaps[] = { PTX::RD7, 0 };
+  const unsigned RD8_Overlaps[] = { PTX::RD8, 0 };
+  const unsigned RD9_Overlaps[] = { PTX::RD9, 0 };
+  const unsigned RD10_Overlaps[] = { PTX::RD10, 0 };
+  const unsigned RD11_Overlaps[] = { PTX::RD11, 0 };
+  const unsigned RD12_Overlaps[] = { PTX::RD12, 0 };
+  const unsigned RD13_Overlaps[] = { PTX::RD13, 0 };
+  const unsigned RD14_Overlaps[] = { PTX::RD14, 0 };
+  const unsigned RD15_Overlaps[] = { PTX::RD15, 0 };
+  const unsigned RD16_Overlaps[] = { PTX::RD16, 0 };
+  const unsigned RD17_Overlaps[] = { PTX::RD17, 0 };
+  const unsigned RD18_Overlaps[] = { PTX::RD18, 0 };
+  const unsigned RD19_Overlaps[] = { PTX::RD19, 0 };
+  const unsigned RD20_Overlaps[] = { PTX::RD20, 0 };
+  const unsigned RD21_Overlaps[] = { PTX::RD21, 0 };
+  const unsigned RD22_Overlaps[] = { PTX::RD22, 0 };
+  const unsigned RD23_Overlaps[] = { PTX::RD23, 0 };
+  const unsigned RD24_Overlaps[] = { PTX::RD24, 0 };
+  const unsigned RD25_Overlaps[] = { PTX::RD25, 0 };
+  const unsigned RD26_Overlaps[] = { PTX::RD26, 0 };
+  const unsigned RD27_Overlaps[] = { PTX::RD27, 0 };
+  const unsigned RD28_Overlaps[] = { PTX::RD28, 0 };
+  const unsigned RD29_Overlaps[] = { PTX::RD29, 0 };
+  const unsigned RD30_Overlaps[] = { PTX::RD30, 0 };
+  const unsigned RD31_Overlaps[] = { PTX::RD31, 0 };
+  const unsigned RD32_Overlaps[] = { PTX::RD32, 0 };
+  const unsigned RD33_Overlaps[] = { PTX::RD33, 0 };
+  const unsigned RD34_Overlaps[] = { PTX::RD34, 0 };
+  const unsigned RD35_Overlaps[] = { PTX::RD35, 0 };
+  const unsigned RD36_Overlaps[] = { PTX::RD36, 0 };
+  const unsigned RD37_Overlaps[] = { PTX::RD37, 0 };
+  const unsigned RD38_Overlaps[] = { PTX::RD38, 0 };
+  const unsigned RD39_Overlaps[] = { PTX::RD39, 0 };
+  const unsigned RD40_Overlaps[] = { PTX::RD40, 0 };
+  const unsigned RD41_Overlaps[] = { PTX::RD41, 0 };
+  const unsigned RD42_Overlaps[] = { PTX::RD42, 0 };
+  const unsigned RD43_Overlaps[] = { PTX::RD43, 0 };
+  const unsigned RD44_Overlaps[] = { PTX::RD44, 0 };
+  const unsigned RD45_Overlaps[] = { PTX::RD45, 0 };
+  const unsigned RD46_Overlaps[] = { PTX::RD46, 0 };
+  const unsigned RD47_Overlaps[] = { PTX::RD47, 0 };
+  const unsigned RD48_Overlaps[] = { PTX::RD48, 0 };
+  const unsigned RD49_Overlaps[] = { PTX::RD49, 0 };
+  const unsigned RD50_Overlaps[] = { PTX::RD50, 0 };
+  const unsigned RD51_Overlaps[] = { PTX::RD51, 0 };
+  const unsigned RD52_Overlaps[] = { PTX::RD52, 0 };
+  const unsigned RD53_Overlaps[] = { PTX::RD53, 0 };
+  const unsigned RD54_Overlaps[] = { PTX::RD54, 0 };
+  const unsigned RD55_Overlaps[] = { PTX::RD55, 0 };
+  const unsigned RD56_Overlaps[] = { PTX::RD56, 0 };
+  const unsigned RD57_Overlaps[] = { PTX::RD57, 0 };
+  const unsigned RD58_Overlaps[] = { PTX::RD58, 0 };
+  const unsigned RD59_Overlaps[] = { PTX::RD59, 0 };
+  const unsigned RD60_Overlaps[] = { PTX::RD60, 0 };
+  const unsigned RD61_Overlaps[] = { PTX::RD61, 0 };
+  const unsigned RD62_Overlaps[] = { PTX::RD62, 0 };
+  const unsigned RD63_Overlaps[] = { PTX::RD63, 0 };
+  const unsigned RD64_Overlaps[] = { PTX::RD64, 0 };
+  const unsigned RD65_Overlaps[] = { PTX::RD65, 0 };
+  const unsigned RD66_Overlaps[] = { PTX::RD66, 0 };
+  const unsigned RD67_Overlaps[] = { PTX::RD67, 0 };
+  const unsigned RD68_Overlaps[] = { PTX::RD68, 0 };
+  const unsigned RD69_Overlaps[] = { PTX::RD69, 0 };
+  const unsigned RD70_Overlaps[] = { PTX::RD70, 0 };
+  const unsigned RD71_Overlaps[] = { PTX::RD71, 0 };
+  const unsigned RD72_Overlaps[] = { PTX::RD72, 0 };
+  const unsigned RD73_Overlaps[] = { PTX::RD73, 0 };
+  const unsigned RD74_Overlaps[] = { PTX::RD74, 0 };
+  const unsigned RD75_Overlaps[] = { PTX::RD75, 0 };
+  const unsigned RD76_Overlaps[] = { PTX::RD76, 0 };
+  const unsigned RD77_Overlaps[] = { PTX::RD77, 0 };
+  const unsigned RD78_Overlaps[] = { PTX::RD78, 0 };
+  const unsigned RD79_Overlaps[] = { PTX::RD79, 0 };
+  const unsigned RD80_Overlaps[] = { PTX::RD80, 0 };
+  const unsigned RD81_Overlaps[] = { PTX::RD81, 0 };
+  const unsigned RD82_Overlaps[] = { PTX::RD82, 0 };
+  const unsigned RD83_Overlaps[] = { PTX::RD83, 0 };
+  const unsigned RD84_Overlaps[] = { PTX::RD84, 0 };
+  const unsigned RD85_Overlaps[] = { PTX::RD85, 0 };
+  const unsigned RD86_Overlaps[] = { PTX::RD86, 0 };
+  const unsigned RD87_Overlaps[] = { PTX::RD87, 0 };
+  const unsigned RD88_Overlaps[] = { PTX::RD88, 0 };
+  const unsigned RD89_Overlaps[] = { PTX::RD89, 0 };
+  const unsigned RD90_Overlaps[] = { PTX::RD90, 0 };
+  const unsigned RD91_Overlaps[] = { PTX::RD91, 0 };
+  const unsigned RD92_Overlaps[] = { PTX::RD92, 0 };
+  const unsigned RD93_Overlaps[] = { PTX::RD93, 0 };
+  const unsigned RD94_Overlaps[] = { PTX::RD94, 0 };
+  const unsigned RD95_Overlaps[] = { PTX::RD95, 0 };
+  const unsigned RD96_Overlaps[] = { PTX::RD96, 0 };
+  const unsigned RD97_Overlaps[] = { PTX::RD97, 0 };
+  const unsigned RD98_Overlaps[] = { PTX::RD98, 0 };
+  const unsigned RD99_Overlaps[] = { PTX::RD99, 0 };
+  const unsigned RD100_Overlaps[] = { PTX::RD100, 0 };
+  const unsigned RD101_Overlaps[] = { PTX::RD101, 0 };
+  const unsigned RD102_Overlaps[] = { PTX::RD102, 0 };
+  const unsigned RD103_Overlaps[] = { PTX::RD103, 0 };
+  const unsigned RD104_Overlaps[] = { PTX::RD104, 0 };
+  const unsigned RD105_Overlaps[] = { PTX::RD105, 0 };
+  const unsigned RD106_Overlaps[] = { PTX::RD106, 0 };
+  const unsigned RD107_Overlaps[] = { PTX::RD107, 0 };
+  const unsigned RD108_Overlaps[] = { PTX::RD108, 0 };
+  const unsigned RD109_Overlaps[] = { PTX::RD109, 0 };
+  const unsigned RD110_Overlaps[] = { PTX::RD110, 0 };
+  const unsigned RD111_Overlaps[] = { PTX::RD111, 0 };
+  const unsigned RD112_Overlaps[] = { PTX::RD112, 0 };
+  const unsigned RD113_Overlaps[] = { PTX::RD113, 0 };
+  const unsigned RD114_Overlaps[] = { PTX::RD114, 0 };
+  const unsigned RD115_Overlaps[] = { PTX::RD115, 0 };
+  const unsigned RD116_Overlaps[] = { PTX::RD116, 0 };
+  const unsigned RD117_Overlaps[] = { PTX::RD117, 0 };
+  const unsigned RD118_Overlaps[] = { PTX::RD118, 0 };
+  const unsigned RD119_Overlaps[] = { PTX::RD119, 0 };
+  const unsigned RD120_Overlaps[] = { PTX::RD120, 0 };
+  const unsigned RD121_Overlaps[] = { PTX::RD121, 0 };
+  const unsigned RD122_Overlaps[] = { PTX::RD122, 0 };
+  const unsigned RD123_Overlaps[] = { PTX::RD123, 0 };
+  const unsigned RD124_Overlaps[] = { PTX::RD124, 0 };
+  const unsigned RD125_Overlaps[] = { PTX::RD125, 0 };
+  const unsigned RD126_Overlaps[] = { PTX::RD126, 0 };
+  const unsigned RD127_Overlaps[] = { PTX::RD127, 0 };
+  const unsigned RH0_Overlaps[] = { PTX::RH0, 0 };
+  const unsigned RH1_Overlaps[] = { PTX::RH1, 0 };
+  const unsigned RH2_Overlaps[] = { PTX::RH2, 0 };
+  const unsigned RH3_Overlaps[] = { PTX::RH3, 0 };
+  const unsigned RH4_Overlaps[] = { PTX::RH4, 0 };
+  const unsigned RH5_Overlaps[] = { PTX::RH5, 0 };
+  const unsigned RH6_Overlaps[] = { PTX::RH6, 0 };
+  const unsigned RH7_Overlaps[] = { PTX::RH7, 0 };
+  const unsigned RH8_Overlaps[] = { PTX::RH8, 0 };
+  const unsigned RH9_Overlaps[] = { PTX::RH9, 0 };
+  const unsigned RH10_Overlaps[] = { PTX::RH10, 0 };
+  const unsigned RH11_Overlaps[] = { PTX::RH11, 0 };
+  const unsigned RH12_Overlaps[] = { PTX::RH12, 0 };
+  const unsigned RH13_Overlaps[] = { PTX::RH13, 0 };
+  const unsigned RH14_Overlaps[] = { PTX::RH14, 0 };
+  const unsigned RH15_Overlaps[] = { PTX::RH15, 0 };
+  const unsigned RH16_Overlaps[] = { PTX::RH16, 0 };
+  const unsigned RH17_Overlaps[] = { PTX::RH17, 0 };
+  const unsigned RH18_Overlaps[] = { PTX::RH18, 0 };
+  const unsigned RH19_Overlaps[] = { PTX::RH19, 0 };
+  const unsigned RH20_Overlaps[] = { PTX::RH20, 0 };
+  const unsigned RH21_Overlaps[] = { PTX::RH21, 0 };
+  const unsigned RH22_Overlaps[] = { PTX::RH22, 0 };
+  const unsigned RH23_Overlaps[] = { PTX::RH23, 0 };
+  const unsigned RH24_Overlaps[] = { PTX::RH24, 0 };
+  const unsigned RH25_Overlaps[] = { PTX::RH25, 0 };
+  const unsigned RH26_Overlaps[] = { PTX::RH26, 0 };
+  const unsigned RH27_Overlaps[] = { PTX::RH27, 0 };
+  const unsigned RH28_Overlaps[] = { PTX::RH28, 0 };
+  const unsigned RH29_Overlaps[] = { PTX::RH29, 0 };
+  const unsigned RH30_Overlaps[] = { PTX::RH30, 0 };
+  const unsigned RH31_Overlaps[] = { PTX::RH31, 0 };
+  const unsigned RH32_Overlaps[] = { PTX::RH32, 0 };
+  const unsigned RH33_Overlaps[] = { PTX::RH33, 0 };
+  const unsigned RH34_Overlaps[] = { PTX::RH34, 0 };
+  const unsigned RH35_Overlaps[] = { PTX::RH35, 0 };
+  const unsigned RH36_Overlaps[] = { PTX::RH36, 0 };
+  const unsigned RH37_Overlaps[] = { PTX::RH37, 0 };
+  const unsigned RH38_Overlaps[] = { PTX::RH38, 0 };
+  const unsigned RH39_Overlaps[] = { PTX::RH39, 0 };
+  const unsigned RH40_Overlaps[] = { PTX::RH40, 0 };
+  const unsigned RH41_Overlaps[] = { PTX::RH41, 0 };
+  const unsigned RH42_Overlaps[] = { PTX::RH42, 0 };
+  const unsigned RH43_Overlaps[] = { PTX::RH43, 0 };
+  const unsigned RH44_Overlaps[] = { PTX::RH44, 0 };
+  const unsigned RH45_Overlaps[] = { PTX::RH45, 0 };
+  const unsigned RH46_Overlaps[] = { PTX::RH46, 0 };
+  const unsigned RH47_Overlaps[] = { PTX::RH47, 0 };
+  const unsigned RH48_Overlaps[] = { PTX::RH48, 0 };
+  const unsigned RH49_Overlaps[] = { PTX::RH49, 0 };
+  const unsigned RH50_Overlaps[] = { PTX::RH50, 0 };
+  const unsigned RH51_Overlaps[] = { PTX::RH51, 0 };
+  const unsigned RH52_Overlaps[] = { PTX::RH52, 0 };
+  const unsigned RH53_Overlaps[] = { PTX::RH53, 0 };
+  const unsigned RH54_Overlaps[] = { PTX::RH54, 0 };
+  const unsigned RH55_Overlaps[] = { PTX::RH55, 0 };
+  const unsigned RH56_Overlaps[] = { PTX::RH56, 0 };
+  const unsigned RH57_Overlaps[] = { PTX::RH57, 0 };
+  const unsigned RH58_Overlaps[] = { PTX::RH58, 0 };
+  const unsigned RH59_Overlaps[] = { PTX::RH59, 0 };
+  const unsigned RH60_Overlaps[] = { PTX::RH60, 0 };
+  const unsigned RH61_Overlaps[] = { PTX::RH61, 0 };
+  const unsigned RH62_Overlaps[] = { PTX::RH62, 0 };
+  const unsigned RH63_Overlaps[] = { PTX::RH63, 0 };
+  const unsigned RH64_Overlaps[] = { PTX::RH64, 0 };
+  const unsigned RH65_Overlaps[] = { PTX::RH65, 0 };
+  const unsigned RH66_Overlaps[] = { PTX::RH66, 0 };
+  const unsigned RH67_Overlaps[] = { PTX::RH67, 0 };
+  const unsigned RH68_Overlaps[] = { PTX::RH68, 0 };
+  const unsigned RH69_Overlaps[] = { PTX::RH69, 0 };
+  const unsigned RH70_Overlaps[] = { PTX::RH70, 0 };
+  const unsigned RH71_Overlaps[] = { PTX::RH71, 0 };
+  const unsigned RH72_Overlaps[] = { PTX::RH72, 0 };
+  const unsigned RH73_Overlaps[] = { PTX::RH73, 0 };
+  const unsigned RH74_Overlaps[] = { PTX::RH74, 0 };
+  const unsigned RH75_Overlaps[] = { PTX::RH75, 0 };
+  const unsigned RH76_Overlaps[] = { PTX::RH76, 0 };
+  const unsigned RH77_Overlaps[] = { PTX::RH77, 0 };
+  const unsigned RH78_Overlaps[] = { PTX::RH78, 0 };
+  const unsigned RH79_Overlaps[] = { PTX::RH79, 0 };
+  const unsigned RH80_Overlaps[] = { PTX::RH80, 0 };
+  const unsigned RH81_Overlaps[] = { PTX::RH81, 0 };
+  const unsigned RH82_Overlaps[] = { PTX::RH82, 0 };
+  const unsigned RH83_Overlaps[] = { PTX::RH83, 0 };
+  const unsigned RH84_Overlaps[] = { PTX::RH84, 0 };
+  const unsigned RH85_Overlaps[] = { PTX::RH85, 0 };
+  const unsigned RH86_Overlaps[] = { PTX::RH86, 0 };
+  const unsigned RH87_Overlaps[] = { PTX::RH87, 0 };
+  const unsigned RH88_Overlaps[] = { PTX::RH88, 0 };
+  const unsigned RH89_Overlaps[] = { PTX::RH89, 0 };
+  const unsigned RH90_Overlaps[] = { PTX::RH90, 0 };
+  const unsigned RH91_Overlaps[] = { PTX::RH91, 0 };
+  const unsigned RH92_Overlaps[] = { PTX::RH92, 0 };
+  const unsigned RH93_Overlaps[] = { PTX::RH93, 0 };
+  const unsigned RH94_Overlaps[] = { PTX::RH94, 0 };
+  const unsigned RH95_Overlaps[] = { PTX::RH95, 0 };
+  const unsigned RH96_Overlaps[] = { PTX::RH96, 0 };
+  const unsigned RH97_Overlaps[] = { PTX::RH97, 0 };
+  const unsigned RH98_Overlaps[] = { PTX::RH98, 0 };
+  const unsigned RH99_Overlaps[] = { PTX::RH99, 0 };
+  const unsigned RH100_Overlaps[] = { PTX::RH100, 0 };
+  const unsigned RH101_Overlaps[] = { PTX::RH101, 0 };
+  const unsigned RH102_Overlaps[] = { PTX::RH102, 0 };
+  const unsigned RH103_Overlaps[] = { PTX::RH103, 0 };
+  const unsigned RH104_Overlaps[] = { PTX::RH104, 0 };
+  const unsigned RH105_Overlaps[] = { PTX::RH105, 0 };
+  const unsigned RH106_Overlaps[] = { PTX::RH106, 0 };
+  const unsigned RH107_Overlaps[] = { PTX::RH107, 0 };
+  const unsigned RH108_Overlaps[] = { PTX::RH108, 0 };
+  const unsigned RH109_Overlaps[] = { PTX::RH109, 0 };
+  const unsigned RH110_Overlaps[] = { PTX::RH110, 0 };
+  const unsigned RH111_Overlaps[] = { PTX::RH111, 0 };
+  const unsigned RH112_Overlaps[] = { PTX::RH112, 0 };
+  const unsigned RH113_Overlaps[] = { PTX::RH113, 0 };
+  const unsigned RH114_Overlaps[] = { PTX::RH114, 0 };
+  const unsigned RH115_Overlaps[] = { PTX::RH115, 0 };
+  const unsigned RH116_Overlaps[] = { PTX::RH116, 0 };
+  const unsigned RH117_Overlaps[] = { PTX::RH117, 0 };
+  const unsigned RH118_Overlaps[] = { PTX::RH118, 0 };
+  const unsigned RH119_Overlaps[] = { PTX::RH119, 0 };
+  const unsigned RH120_Overlaps[] = { PTX::RH120, 0 };
+  const unsigned RH121_Overlaps[] = { PTX::RH121, 0 };
+  const unsigned RH122_Overlaps[] = { PTX::RH122, 0 };
+  const unsigned RH123_Overlaps[] = { PTX::RH123, 0 };
+  const unsigned RH124_Overlaps[] = { PTX::RH124, 0 };
+  const unsigned RH125_Overlaps[] = { PTX::RH125, 0 };
+  const unsigned RH126_Overlaps[] = { PTX::RH126, 0 };
+  const unsigned RH127_Overlaps[] = { PTX::RH127, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+}
+
+MCRegisterDesc PTXRegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "P0",	P0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P1",	P1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P2",	P2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P3",	P3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P4",	P4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P5",	P5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P6",	P6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P7",	P7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P8",	P8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P9",	P9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P10",	P10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P11",	P11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P12",	P12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P13",	P13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P14",	P14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P15",	P15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P16",	P16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P17",	P17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P18",	P18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P19",	P19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P20",	P20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P21",	P21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P22",	P22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P23",	P23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P24",	P24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P25",	P25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P26",	P26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P27",	P27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P28",	P28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P29",	P29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P30",	P30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P31",	P31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P32",	P32_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P33",	P33_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P34",	P34_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P35",	P35_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P36",	P36_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P37",	P37_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P38",	P38_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P39",	P39_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P40",	P40_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P41",	P41_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P42",	P42_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P43",	P43_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P44",	P44_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P45",	P45_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P46",	P46_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P47",	P47_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P48",	P48_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P49",	P49_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P50",	P50_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P51",	P51_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P52",	P52_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P53",	P53_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P54",	P54_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P55",	P55_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P56",	P56_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P57",	P57_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P58",	P58_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P59",	P59_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P60",	P60_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P61",	P61_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P62",	P62_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P63",	P63_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P64",	P64_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P65",	P65_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P66",	P66_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P67",	P67_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P68",	P68_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P69",	P69_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P70",	P70_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P71",	P71_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P72",	P72_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P73",	P73_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P74",	P74_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P75",	P75_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P76",	P76_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P77",	P77_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P78",	P78_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P79",	P79_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P80",	P80_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P81",	P81_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P82",	P82_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P83",	P83_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P84",	P84_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P85",	P85_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P86",	P86_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P87",	P87_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P88",	P88_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P89",	P89_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P90",	P90_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P91",	P91_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P92",	P92_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P93",	P93_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P94",	P94_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P95",	P95_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P96",	P96_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P97",	P97_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P98",	P98_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P99",	P99_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P100",	P100_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P101",	P101_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P102",	P102_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P103",	P103_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P104",	P104_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P105",	P105_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P106",	P106_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P107",	P107_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P108",	P108_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P109",	P109_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P110",	P110_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P111",	P111_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P112",	P112_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P113",	P113_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P114",	P114_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P115",	P115_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P116",	P116_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P117",	P117_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P118",	P118_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P119",	P119_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P120",	P120_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P121",	P121_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P122",	P122_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P123",	P123_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P124",	P124_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P125",	P125_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P126",	P126_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "P127",	P127_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0",	R0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R1",	R1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2",	R2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R3",	R3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4",	R4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5",	R5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6",	R6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7",	R7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8",	R8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R9",	R9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10",	R10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R11",	R11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12",	R12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R13",	R13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14",	R14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R15",	R15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R16",	R16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R17",	R17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R18",	R18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R19",	R19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R20",	R20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R21",	R21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R22",	R22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R23",	R23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R24",	R24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R25",	R25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R26",	R26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R27",	R27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R28",	R28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R29",	R29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R30",	R30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R31",	R31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R32",	R32_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R33",	R33_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R34",	R34_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R35",	R35_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R36",	R36_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R37",	R37_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R38",	R38_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R39",	R39_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R40",	R40_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R41",	R41_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R42",	R42_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R43",	R43_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R44",	R44_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R45",	R45_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R46",	R46_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R47",	R47_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R48",	R48_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R49",	R49_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R50",	R50_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R51",	R51_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R52",	R52_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R53",	R53_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R54",	R54_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R55",	R55_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R56",	R56_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R57",	R57_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R58",	R58_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R59",	R59_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R60",	R60_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R61",	R61_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R62",	R62_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R63",	R63_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R64",	R64_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R65",	R65_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R66",	R66_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R67",	R67_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R68",	R68_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R69",	R69_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R70",	R70_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R71",	R71_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R72",	R72_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R73",	R73_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R74",	R74_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R75",	R75_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R76",	R76_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R77",	R77_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R78",	R78_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R79",	R79_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R80",	R80_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R81",	R81_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R82",	R82_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R83",	R83_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R84",	R84_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R85",	R85_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R86",	R86_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R87",	R87_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R88",	R88_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R89",	R89_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R90",	R90_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R91",	R91_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R92",	R92_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R93",	R93_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R94",	R94_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R95",	R95_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R96",	R96_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R97",	R97_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R98",	R98_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R99",	R99_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R100",	R100_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R101",	R101_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R102",	R102_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R103",	R103_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R104",	R104_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R105",	R105_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R106",	R106_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R107",	R107_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R108",	R108_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R109",	R109_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R110",	R110_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R111",	R111_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R112",	R112_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R113",	R113_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R114",	R114_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R115",	R115_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R116",	R116_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R117",	R117_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R118",	R118_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R119",	R119_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R120",	R120_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R121",	R121_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R122",	R122_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R123",	R123_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R124",	R124_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R125",	R125_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R126",	R126_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R127",	R127_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD0",	RD0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD1",	RD1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD2",	RD2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD3",	RD3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD4",	RD4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD5",	RD5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD6",	RD6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD7",	RD7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD8",	RD8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD9",	RD9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD10",	RD10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD11",	RD11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD12",	RD12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD13",	RD13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD14",	RD14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD15",	RD15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD16",	RD16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD17",	RD17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD18",	RD18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD19",	RD19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD20",	RD20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD21",	RD21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD22",	RD22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD23",	RD23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD24",	RD24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD25",	RD25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD26",	RD26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD27",	RD27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD28",	RD28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD29",	RD29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD30",	RD30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD31",	RD31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD32",	RD32_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD33",	RD33_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD34",	RD34_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD35",	RD35_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD36",	RD36_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD37",	RD37_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD38",	RD38_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD39",	RD39_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD40",	RD40_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD41",	RD41_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD42",	RD42_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD43",	RD43_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD44",	RD44_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD45",	RD45_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD46",	RD46_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD47",	RD47_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD48",	RD48_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD49",	RD49_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD50",	RD50_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD51",	RD51_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD52",	RD52_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD53",	RD53_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD54",	RD54_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD55",	RD55_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD56",	RD56_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD57",	RD57_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD58",	RD58_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD59",	RD59_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD60",	RD60_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD61",	RD61_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD62",	RD62_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD63",	RD63_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD64",	RD64_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD65",	RD65_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD66",	RD66_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD67",	RD67_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD68",	RD68_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD69",	RD69_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD70",	RD70_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD71",	RD71_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD72",	RD72_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD73",	RD73_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD74",	RD74_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD75",	RD75_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD76",	RD76_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD77",	RD77_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD78",	RD78_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD79",	RD79_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD80",	RD80_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD81",	RD81_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD82",	RD82_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD83",	RD83_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD84",	RD84_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD85",	RD85_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD86",	RD86_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD87",	RD87_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD88",	RD88_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD89",	RD89_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD90",	RD90_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD91",	RD91_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD92",	RD92_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD93",	RD93_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD94",	RD94_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD95",	RD95_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD96",	RD96_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD97",	RD97_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD98",	RD98_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD99",	RD99_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD100",	RD100_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD101",	RD101_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD102",	RD102_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD103",	RD103_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD104",	RD104_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD105",	RD105_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD106",	RD106_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD107",	RD107_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD108",	RD108_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD109",	RD109_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD110",	RD110_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD111",	RD111_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD112",	RD112_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD113",	RD113_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD114",	RD114_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD115",	RD115_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD116",	RD116_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD117",	RD117_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD118",	RD118_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD119",	RD119_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD120",	RD120_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD121",	RD121_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD122",	RD122_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD123",	RD123_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD124",	RD124_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD125",	RD125_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD126",	RD126_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RD127",	RD127_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH0",	RH0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH1",	RH1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH2",	RH2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH3",	RH3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH4",	RH4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH5",	RH5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH6",	RH6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH7",	RH7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH8",	RH8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH9",	RH9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH10",	RH10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH11",	RH11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH12",	RH12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH13",	RH13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH14",	RH14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH15",	RH15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH16",	RH16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH17",	RH17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH18",	RH18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH19",	RH19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH20",	RH20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH21",	RH21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH22",	RH22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH23",	RH23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH24",	RH24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH25",	RH25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH26",	RH26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH27",	RH27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH28",	RH28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH29",	RH29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH30",	RH30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH31",	RH31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH32",	RH32_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH33",	RH33_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH34",	RH34_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH35",	RH35_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH36",	RH36_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH37",	RH37_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH38",	RH38_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH39",	RH39_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH40",	RH40_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH41",	RH41_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH42",	RH42_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH43",	RH43_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH44",	RH44_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH45",	RH45_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH46",	RH46_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH47",	RH47_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH48",	RH48_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH49",	RH49_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH50",	RH50_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH51",	RH51_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH52",	RH52_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH53",	RH53_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH54",	RH54_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH55",	RH55_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH56",	RH56_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH57",	RH57_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH58",	RH58_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH59",	RH59_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH60",	RH60_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH61",	RH61_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH62",	RH62_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH63",	RH63_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH64",	RH64_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH65",	RH65_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH66",	RH66_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH67",	RH67_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH68",	RH68_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH69",	RH69_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH70",	RH70_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH71",	RH71_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH72",	RH72_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH73",	RH73_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH74",	RH74_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH75",	RH75_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH76",	RH76_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH77",	RH77_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH78",	RH78_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH79",	RH79_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH80",	RH80_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH81",	RH81_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH82",	RH82_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH83",	RH83_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH84",	RH84_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH85",	RH85_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH86",	RH86_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH87",	RH87_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH88",	RH88_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH89",	RH89_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH90",	RH90_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH91",	RH91_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH92",	RH92_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH93",	RH93_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH94",	RH94_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH95",	RH95_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH96",	RH96_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH97",	RH97_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH98",	RH98_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH99",	RH99_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH100",	RH100_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH101",	RH101_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH102",	RH102_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH103",	RH103_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH104",	RH104_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH105",	RH105_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH106",	RH106_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH107",	RH107_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH108",	RH108_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH109",	RH109_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH110",	RH110_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH111",	RH111_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH112",	RH112_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH113",	RH113_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH114",	RH114_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH115",	RH115_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH116",	RH116_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH117",	RH117_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH118",	RH118_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH119",	RH119_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH120",	RH120_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH121",	RH121_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH122",	RH122_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH123",	RH123_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH124",	RH124_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH125",	RH125_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH126",	RH126_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "RH127",	RH127_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // RegF32 Register Class...
+  static const unsigned RegF32[] = {
+    PTX::R0, PTX::R1, PTX::R2, PTX::R3, PTX::R4, PTX::R5, PTX::R6, PTX::R7, PTX::R8, PTX::R9, PTX::R10, PTX::R11, PTX::R12, PTX::R13, PTX::R14, PTX::R15, PTX::R16, PTX::R17, PTX::R18, PTX::R19, PTX::R20, PTX::R21, PTX::R22, PTX::R23, PTX::R24, PTX::R25, PTX::R26, PTX::R27, PTX::R28, PTX::R29, PTX::R30, PTX::R31, PTX::R32, PTX::R33, PTX::R34, PTX::R35, PTX::R36, PTX::R37, PTX::R38, PTX::R39, PTX::R40, PTX::R41, PTX::R42, PTX::R43, PTX::R44, PTX::R45, PTX::R46, PTX::R47, PTX::R48, PTX::R49, PTX::R50, PTX::R51, PTX::R52, PTX::R53, PTX::R54, PTX::R55, PTX::R56, PTX::R57, PTX::R58, PTX::R59, PTX::R60, PTX::R61, PTX::R62, PTX::R63, PTX::R64, PTX::R65, PTX::R66, PTX::R67, PTX::R68, PTX::R69, PTX::R70, PTX::R71, PTX::R72, PTX::R73, PTX::R74, PTX::R75, PTX::R76, PTX::R77, PTX::R78, PTX::R79, PTX::R80, PTX::R81, PTX::R82, PTX::R83, PTX::R84, PTX::R85, PTX::R86, PTX::R87, PTX::R88, PTX::R89, PTX::R90, PTX::R91, PTX::R92, PTX::R93, PTX::R94, PTX::R95, PTX::R96, PTX::R97, PTX::R98, PTX::R99, PTX::R100, PTX::R101, PTX::R102, PTX::R103, PTX::R104, PTX::R105, PTX::R106, PTX::R107, PTX::R108, PTX::R109, PTX::R110, PTX::R111, PTX::R112, PTX::R113, PTX::R114, PTX::R115, PTX::R116, PTX::R117, PTX::R118, PTX::R119, PTX::R120, PTX::R121, PTX::R122, PTX::R123, PTX::R124, PTX::R125, PTX::R126, PTX::R127, 
+  };
+
+  // RegF32 Bit set.
+  static const unsigned char RegF32Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // RegF64 Register Class...
+  static const unsigned RegF64[] = {
+    PTX::RD0, PTX::RD1, PTX::RD2, PTX::RD3, PTX::RD4, PTX::RD5, PTX::RD6, PTX::RD7, PTX::RD8, PTX::RD9, PTX::RD10, PTX::RD11, PTX::RD12, PTX::RD13, PTX::RD14, PTX::RD15, PTX::RD16, PTX::RD17, PTX::RD18, PTX::RD19, PTX::RD20, PTX::RD21, PTX::RD22, PTX::RD23, PTX::RD24, PTX::RD25, PTX::RD26, PTX::RD27, PTX::RD28, PTX::RD29, PTX::RD30, PTX::RD31, PTX::RD32, PTX::RD33, PTX::RD34, PTX::RD35, PTX::RD36, PTX::RD37, PTX::RD38, PTX::RD39, PTX::RD40, PTX::RD41, PTX::RD42, PTX::RD43, PTX::RD44, PTX::RD45, PTX::RD46, PTX::RD47, PTX::RD48, PTX::RD49, PTX::RD50, PTX::RD51, PTX::RD52, PTX::RD53, PTX::RD54, PTX::RD55, PTX::RD56, PTX::RD57, PTX::RD58, PTX::RD59, PTX::RD60, PTX::RD61, PTX::RD62, PTX::RD63, PTX::RD64, PTX::RD65, PTX::RD66, PTX::RD67, PTX::RD68, PTX::RD69, PTX::RD70, PTX::RD71, PTX::RD72, PTX::RD73, PTX::RD74, PTX::RD75, PTX::RD76, PTX::RD77, PTX::RD78, PTX::RD79, PTX::RD80, PTX::RD81, PTX::RD82, PTX::RD83, PTX::RD84, PTX::RD85, PTX::RD86, PTX::RD87, PTX::RD88, PTX::RD89, PTX::RD90, PTX::RD91, PTX::RD92, PTX::RD93, PTX::RD94, PTX::RD95, PTX::RD96, PTX::RD97, PTX::RD98, PTX::RD99, PTX::RD100, PTX::RD101, PTX::RD102, PTX::RD103, PTX::RD104, PTX::RD105, PTX::RD106, PTX::RD107, PTX::RD108, PTX::RD109, PTX::RD110, PTX::RD111, PTX::RD112, PTX::RD113, PTX::RD114, PTX::RD115, PTX::RD116, PTX::RD117, PTX::RD118, PTX::RD119, PTX::RD120, PTX::RD121, PTX::RD122, PTX::RD123, PTX::RD124, PTX::RD125, PTX::RD126, PTX::RD127, 
+  };
+
+  // RegF64 Bit set.
+  static const unsigned char RegF64Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // RegI16 Register Class...
+  static const unsigned RegI16[] = {
+    PTX::RH0, PTX::RH1, PTX::RH2, PTX::RH3, PTX::RH4, PTX::RH5, PTX::RH6, PTX::RH7, PTX::RH8, PTX::RH9, PTX::RH10, PTX::RH11, PTX::RH12, PTX::RH13, PTX::RH14, PTX::RH15, PTX::RH16, PTX::RH17, PTX::RH18, PTX::RH19, PTX::RH20, PTX::RH21, PTX::RH22, PTX::RH23, PTX::RH24, PTX::RH25, PTX::RH26, PTX::RH27, PTX::RH28, PTX::RH29, PTX::RH30, PTX::RH31, PTX::RH32, PTX::RH33, PTX::RH34, PTX::RH35, PTX::RH36, PTX::RH37, PTX::RH38, PTX::RH39, PTX::RH40, PTX::RH41, PTX::RH42, PTX::RH43, PTX::RH44, PTX::RH45, PTX::RH46, PTX::RH47, PTX::RH48, PTX::RH49, PTX::RH50, PTX::RH51, PTX::RH52, PTX::RH53, PTX::RH54, PTX::RH55, PTX::RH56, PTX::RH57, PTX::RH58, PTX::RH59, PTX::RH60, PTX::RH61, PTX::RH62, PTX::RH63, PTX::RH64, PTX::RH65, PTX::RH66, PTX::RH67, PTX::RH68, PTX::RH69, PTX::RH70, PTX::RH71, PTX::RH72, PTX::RH73, PTX::RH74, PTX::RH75, PTX::RH76, PTX::RH77, PTX::RH78, PTX::RH79, PTX::RH80, PTX::RH81, PTX::RH82, PTX::RH83, PTX::RH84, PTX::RH85, PTX::RH86, PTX::RH87, PTX::RH88, PTX::RH89, PTX::RH90, PTX::RH91, PTX::RH92, PTX::RH93, PTX::RH94, PTX::RH95, PTX::RH96, PTX::RH97, PTX::RH98, PTX::RH99, PTX::RH100, PTX::RH101, PTX::RH102, PTX::RH103, PTX::RH104, PTX::RH105, PTX::RH106, PTX::RH107, PTX::RH108, PTX::RH109, PTX::RH110, PTX::RH111, PTX::RH112, PTX::RH113, PTX::RH114, PTX::RH115, PTX::RH116, PTX::RH117, PTX::RH118, PTX::RH119, PTX::RH120, PTX::RH121, PTX::RH122, PTX::RH123, PTX::RH124, PTX::RH125, PTX::RH126, PTX::RH127, 
+  };
+
+  // RegI16 Bit set.
+  static const unsigned char RegI16Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // RegI32 Register Class...
+  static const unsigned RegI32[] = {
+    PTX::R0, PTX::R1, PTX::R2, PTX::R3, PTX::R4, PTX::R5, PTX::R6, PTX::R7, PTX::R8, PTX::R9, PTX::R10, PTX::R11, PTX::R12, PTX::R13, PTX::R14, PTX::R15, PTX::R16, PTX::R17, PTX::R18, PTX::R19, PTX::R20, PTX::R21, PTX::R22, PTX::R23, PTX::R24, PTX::R25, PTX::R26, PTX::R27, PTX::R28, PTX::R29, PTX::R30, PTX::R31, PTX::R32, PTX::R33, PTX::R34, PTX::R35, PTX::R36, PTX::R37, PTX::R38, PTX::R39, PTX::R40, PTX::R41, PTX::R42, PTX::R43, PTX::R44, PTX::R45, PTX::R46, PTX::R47, PTX::R48, PTX::R49, PTX::R50, PTX::R51, PTX::R52, PTX::R53, PTX::R54, PTX::R55, PTX::R56, PTX::R57, PTX::R58, PTX::R59, PTX::R60, PTX::R61, PTX::R62, PTX::R63, PTX::R64, PTX::R65, PTX::R66, PTX::R67, PTX::R68, PTX::R69, PTX::R70, PTX::R71, PTX::R72, PTX::R73, PTX::R74, PTX::R75, PTX::R76, PTX::R77, PTX::R78, PTX::R79, PTX::R80, PTX::R81, PTX::R82, PTX::R83, PTX::R84, PTX::R85, PTX::R86, PTX::R87, PTX::R88, PTX::R89, PTX::R90, PTX::R91, PTX::R92, PTX::R93, PTX::R94, PTX::R95, PTX::R96, PTX::R97, PTX::R98, PTX::R99, PTX::R100, PTX::R101, PTX::R102, PTX::R103, PTX::R104, PTX::R105, PTX::R106, PTX::R107, PTX::R108, PTX::R109, PTX::R110, PTX::R111, PTX::R112, PTX::R113, PTX::R114, PTX::R115, PTX::R116, PTX::R117, PTX::R118, PTX::R119, PTX::R120, PTX::R121, PTX::R122, PTX::R123, PTX::R124, PTX::R125, PTX::R126, PTX::R127, 
+  };
+
+  // RegI32 Bit set.
+  static const unsigned char RegI32Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // RegI64 Register Class...
+  static const unsigned RegI64[] = {
+    PTX::RD0, PTX::RD1, PTX::RD2, PTX::RD3, PTX::RD4, PTX::RD5, PTX::RD6, PTX::RD7, PTX::RD8, PTX::RD9, PTX::RD10, PTX::RD11, PTX::RD12, PTX::RD13, PTX::RD14, PTX::RD15, PTX::RD16, PTX::RD17, PTX::RD18, PTX::RD19, PTX::RD20, PTX::RD21, PTX::RD22, PTX::RD23, PTX::RD24, PTX::RD25, PTX::RD26, PTX::RD27, PTX::RD28, PTX::RD29, PTX::RD30, PTX::RD31, PTX::RD32, PTX::RD33, PTX::RD34, PTX::RD35, PTX::RD36, PTX::RD37, PTX::RD38, PTX::RD39, PTX::RD40, PTX::RD41, PTX::RD42, PTX::RD43, PTX::RD44, PTX::RD45, PTX::RD46, PTX::RD47, PTX::RD48, PTX::RD49, PTX::RD50, PTX::RD51, PTX::RD52, PTX::RD53, PTX::RD54, PTX::RD55, PTX::RD56, PTX::RD57, PTX::RD58, PTX::RD59, PTX::RD60, PTX::RD61, PTX::RD62, PTX::RD63, PTX::RD64, PTX::RD65, PTX::RD66, PTX::RD67, PTX::RD68, PTX::RD69, PTX::RD70, PTX::RD71, PTX::RD72, PTX::RD73, PTX::RD74, PTX::RD75, PTX::RD76, PTX::RD77, PTX::RD78, PTX::RD79, PTX::RD80, PTX::RD81, PTX::RD82, PTX::RD83, PTX::RD84, PTX::RD85, PTX::RD86, PTX::RD87, PTX::RD88, PTX::RD89, PTX::RD90, PTX::RD91, PTX::RD92, PTX::RD93, PTX::RD94, PTX::RD95, PTX::RD96, PTX::RD97, PTX::RD98, PTX::RD99, PTX::RD100, PTX::RD101, PTX::RD102, PTX::RD103, PTX::RD104, PTX::RD105, PTX::RD106, PTX::RD107, PTX::RD108, PTX::RD109, PTX::RD110, PTX::RD111, PTX::RD112, PTX::RD113, PTX::RD114, PTX::RD115, PTX::RD116, PTX::RD117, PTX::RD118, PTX::RD119, PTX::RD120, PTX::RD121, PTX::RD122, PTX::RD123, PTX::RD124, PTX::RD125, PTX::RD126, PTX::RD127, 
+  };
+
+  // RegI64 Bit set.
+  static const unsigned char RegI64Bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // RegPred Register Class...
+  static const unsigned RegPred[] = {
+    PTX::P0, PTX::P1, PTX::P2, PTX::P3, PTX::P4, PTX::P5, PTX::P6, PTX::P7, PTX::P8, PTX::P9, PTX::P10, PTX::P11, PTX::P12, PTX::P13, PTX::P14, PTX::P15, PTX::P16, PTX::P17, PTX::P18, PTX::P19, PTX::P20, PTX::P21, PTX::P22, PTX::P23, PTX::P24, PTX::P25, PTX::P26, PTX::P27, PTX::P28, PTX::P29, PTX::P30, PTX::P31, PTX::P32, PTX::P33, PTX::P34, PTX::P35, PTX::P36, PTX::P37, PTX::P38, PTX::P39, PTX::P40, PTX::P41, PTX::P42, PTX::P43, PTX::P44, PTX::P45, PTX::P46, PTX::P47, PTX::P48, PTX::P49, PTX::P50, PTX::P51, PTX::P52, PTX::P53, PTX::P54, PTX::P55, PTX::P56, PTX::P57, PTX::P58, PTX::P59, PTX::P60, PTX::P61, PTX::P62, PTX::P63, PTX::P64, PTX::P65, PTX::P66, PTX::P67, PTX::P68, PTX::P69, PTX::P70, PTX::P71, PTX::P72, PTX::P73, PTX::P74, PTX::P75, PTX::P76, PTX::P77, PTX::P78, PTX::P79, PTX::P80, PTX::P81, PTX::P82, PTX::P83, PTX::P84, PTX::P85, PTX::P86, PTX::P87, PTX::P88, PTX::P89, PTX::P90, PTX::P91, PTX::P92, PTX::P93, PTX::P94, PTX::P95, PTX::P96, PTX::P97, PTX::P98, PTX::P99, PTX::P100, PTX::P101, PTX::P102, PTX::P103, PTX::P104, PTX::P105, PTX::P106, PTX::P107, PTX::P108, PTX::P109, PTX::P110, PTX::P111, PTX::P112, PTX::P113, PTX::P114, PTX::P115, PTX::P116, PTX::P117, PTX::P118, PTX::P119, PTX::P120, PTX::P121, PTX::P122, PTX::P123, PTX::P124, PTX::P125, PTX::P126, PTX::P127, 
+  };
+
+  // RegPred Bit set.
+  static const unsigned char RegPredBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+}
+
+MCRegisterClass PTXMCRegisterClasses[] = {
+  MCRegisterClass(PTX::RegF32RegClassID, "RegF32", 4, 4, 1, 1, RegF32, RegF32 + 128, RegF32Bits, sizeof(RegF32Bits)),
+  MCRegisterClass(PTX::RegF64RegClassID, "RegF64", 8, 8, 1, 1, RegF64, RegF64 + 128, RegF64Bits, sizeof(RegF64Bits)),
+  MCRegisterClass(PTX::RegI16RegClassID, "RegI16", 2, 2, 1, 1, RegI16, RegI16 + 128, RegI16Bits, sizeof(RegI16Bits)),
+  MCRegisterClass(PTX::RegI32RegClassID, "RegI32", 4, 4, 1, 1, RegI32, RegI32 + 128, RegI32Bits, sizeof(RegI32Bits)),
+  MCRegisterClass(PTX::RegI64RegClassID, "RegI64", 8, 8, 1, 1, RegI64, RegI64 + 128, RegI64Bits, sizeof(RegI64Bits)),
+  MCRegisterClass(PTX::RegPredRegClassID, "RegPred", 0, 1, 1, 1, RegPred, RegPred + 128, RegPredBits, sizeof(RegPredBits)),
+};
+
+static inline void InitPTXMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(PTXRegDesc, 513, RA, PTXMCRegisterClasses, 6);
+
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct PTXGenRegisterInfo : public TargetRegisterInfo {
+  explicit PTXGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+namespace PTX { // Register classes
+  struct RegF32Class : public TargetRegisterClass {
+    RegF32Class();
+  };
+  extern RegF32Class	RegF32RegClass;
+  static TargetRegisterClass * const RegF32RegisterClass = &RegF32RegClass;
+  struct RegF64Class : public TargetRegisterClass {
+    RegF64Class();
+  };
+  extern RegF64Class	RegF64RegClass;
+  static TargetRegisterClass * const RegF64RegisterClass = &RegF64RegClass;
+  struct RegI16Class : public TargetRegisterClass {
+    RegI16Class();
+  };
+  extern RegI16Class	RegI16RegClass;
+  static TargetRegisterClass * const RegI16RegisterClass = &RegI16RegClass;
+  struct RegI32Class : public TargetRegisterClass {
+    RegI32Class();
+  };
+  extern RegI32Class	RegI32RegClass;
+  static TargetRegisterClass * const RegI32RegisterClass = &RegI32RegClass;
+  struct RegI64Class : public TargetRegisterClass {
+    RegI64Class();
+  };
+  extern RegI64Class	RegI64RegClass;
+  static TargetRegisterClass * const RegI64RegisterClass = &RegI64RegClass;
+  struct RegPredClass : public TargetRegisterClass {
+    RegPredClass();
+  };
+  extern RegPredClass	RegPredRegClass;
+  static TargetRegisterClass * const RegPredRegisterClass = &RegPredRegClass;
+} // end of namespace PTX
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass PTXMCRegisterClasses[];
+namespace {     // Register classes...
+  // RegF32VTs Register Class Value Types...
+  static const EVT RegF32VTs[] = {
+    MVT::f32, MVT::Other
+  };
+
+  // RegF64VTs Register Class Value Types...
+  static const EVT RegF64VTs[] = {
+    MVT::f64, MVT::Other
+  };
+
+  // RegI16VTs Register Class Value Types...
+  static const EVT RegI16VTs[] = {
+    MVT::i16, MVT::Other
+  };
+
+  // RegI32VTs Register Class Value Types...
+  static const EVT RegI32VTs[] = {
+    MVT::i32, MVT::Other
+  };
+
+  // RegI64VTs Register Class Value Types...
+  static const EVT RegI64VTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+  // RegPredVTs Register Class Value Types...
+  static const EVT RegPredVTs[] = {
+    MVT::i1, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace PTX {   // Register class instances
+  RegF32Class	RegF32RegClass;
+  RegF64Class	RegF64RegClass;
+  RegI16Class	RegI16RegClass;
+  RegI32Class	RegI32RegClass;
+  RegI64Class	RegI64RegClass;
+  RegPredClass	RegPredRegClass;
+
+  static const TargetRegisterClass* const NullRegClasses[] = { NULL };
+
+  // RegF32 Register Class sub-classes...
+  static const TargetRegisterClass* const RegF32Subclasses[] = {
+    &PTX::RegI32RegClass, NULL
+  };
+
+  // RegF64 Register Class sub-classes...
+  static const TargetRegisterClass* const RegF64Subclasses[] = {
+    &PTX::RegI64RegClass, NULL
+  };
+
+  // RegI16 Register Class sub-classes...
+  static const TargetRegisterClass* const RegI16Subclasses[] = {
+    NULL
+  };
+
+  // RegI32 Register Class sub-classes...
+  static const TargetRegisterClass* const RegI32Subclasses[] = {
+    &PTX::RegF32RegClass, NULL
+  };
+
+  // RegI64 Register Class sub-classes...
+  static const TargetRegisterClass* const RegI64Subclasses[] = {
+    &PTX::RegF64RegClass, NULL
+  };
+
+  // RegPred Register Class sub-classes...
+  static const TargetRegisterClass* const RegPredSubclasses[] = {
+    NULL
+  };
+
+  // RegF32 Register Class super-classes...
+  static const TargetRegisterClass* const RegF32Superclasses[] = {
+    &PTX::RegI32RegClass, NULL
+  };
+
+  // RegF64 Register Class super-classes...
+  static const TargetRegisterClass* const RegF64Superclasses[] = {
+    &PTX::RegI64RegClass, NULL
+  };
+
+  // RegI16 Register Class super-classes...
+  static const TargetRegisterClass* const RegI16Superclasses[] = {
+    NULL
+  };
+
+  // RegI32 Register Class super-classes...
+  static const TargetRegisterClass* const RegI32Superclasses[] = {
+    &PTX::RegF32RegClass, NULL
+  };
+
+  // RegI64 Register Class super-classes...
+  static const TargetRegisterClass* const RegI64Superclasses[] = {
+    &PTX::RegF64RegClass, NULL
+  };
+
+  // RegPred Register Class super-classes...
+  static const TargetRegisterClass* const RegPredSuperclasses[] = {
+    NULL
+  };
+
+RegF32Class::RegF32Class()  : TargetRegisterClass(&PTXMCRegisterClasses[RegF32RegClassID], RegF32VTs, RegF32Subclasses, RegF32Superclasses, NullRegClasses, NullRegClasses) {}
+RegF64Class::RegF64Class()  : TargetRegisterClass(&PTXMCRegisterClasses[RegF64RegClassID], RegF64VTs, RegF64Subclasses, RegF64Superclasses, NullRegClasses, NullRegClasses) {}
+RegI16Class::RegI16Class()  : TargetRegisterClass(&PTXMCRegisterClasses[RegI16RegClassID], RegI16VTs, RegI16Subclasses, RegI16Superclasses, NullRegClasses, NullRegClasses) {}
+RegI32Class::RegI32Class()  : TargetRegisterClass(&PTXMCRegisterClasses[RegI32RegClassID], RegI32VTs, RegI32Subclasses, RegI32Superclasses, NullRegClasses, NullRegClasses) {}
+RegI64Class::RegI64Class()  : TargetRegisterClass(&PTXMCRegisterClasses[RegI64RegClassID], RegI64VTs, RegI64Subclasses, RegI64Superclasses, NullRegClasses, NullRegClasses) {}
+RegPredClass::RegPredClass()  : TargetRegisterClass(&PTXMCRegisterClasses[RegPredRegClassID], RegPredVTs, RegPredSubclasses, RegPredSuperclasses, NullRegClasses, NullRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &PTX::RegF32RegClass,
+    &PTX::RegF64RegClass,
+    &PTX::RegI16RegClass,
+    &PTX::RegI32RegClass,
+    &PTX::RegI64RegClass,
+    &PTX::RegPredRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc PTXRegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+  };
+
+  static const char *const PTXSubRegIndexTable[] = { "" };
+
+
+unsigned PTXGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned PTXGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned PTXGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc PTXRegDesc[];
+PTXGenRegisterInfo::PTXGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(PTXRegInfoDesc, RegisterClasses, RegisterClasses+6,
+                 PTXSubRegIndexTable) {
+  InitMCRegisterInfo(PTXRegDesc, 513, RA, PTXMCRegisterClasses, 6);
+
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

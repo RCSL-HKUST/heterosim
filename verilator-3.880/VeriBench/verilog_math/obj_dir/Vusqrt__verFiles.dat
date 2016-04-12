@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wno-WIDTH --cc usqrt.v -exe sim_main.cpp"
+S   4201395  1059238  1453396387 "/usr/local/bin/verilator_bin"
+T    141373  4037363  1453982747 "obj_dir/Vusqrt.cpp"
+T     10186  4037362  1453982747 "obj_dir/Vusqrt.h"
+T      1968  4037365  1453982747 "obj_dir/Vusqrt.mk"
+T       574  4037361  1453982747 "obj_dir/Vusqrt__Syms.cpp"
+T       956  4037360  1453982747 "obj_dir/Vusqrt__Syms.h"
+T       222  4037366  1453982747 "obj_dir/Vusqrt__ver.d"
+T         0        0  1453982747 "obj_dir/Vusqrt__verFiles.dat"
+T      1085  4037364  1453982747 "obj_dir/Vusqrt_classes.mk"
+S     72467  4037355  1453982667 "usqrt.v"

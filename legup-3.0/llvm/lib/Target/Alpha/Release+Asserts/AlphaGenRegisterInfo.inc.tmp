@@ -1,0 +1,1100 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_ENUM
+#undef GET_REGINFO_ENUM
+namespace llvm {
+
+class MCRegisterClass;
+extern MCRegisterClass AlphaMCRegisterClasses[];
+
+namespace Alpha {
+enum {
+  NoRegister,
+  F0 = 1,
+  F1 = 2,
+  F2 = 3,
+  F3 = 4,
+  F4 = 5,
+  F5 = 6,
+  F6 = 7,
+  F7 = 8,
+  F8 = 9,
+  F9 = 10,
+  F10 = 11,
+  F11 = 12,
+  F12 = 13,
+  F13 = 14,
+  F14 = 15,
+  F15 = 16,
+  F16 = 17,
+  F17 = 18,
+  F18 = 19,
+  F19 = 20,
+  F20 = 21,
+  F21 = 22,
+  F22 = 23,
+  F23 = 24,
+  F24 = 25,
+  F25 = 26,
+  F26 = 27,
+  F27 = 28,
+  F28 = 29,
+  F29 = 30,
+  F30 = 31,
+  F31 = 32,
+  R0 = 33,
+  R1 = 34,
+  R2 = 35,
+  R3 = 36,
+  R4 = 37,
+  R5 = 38,
+  R6 = 39,
+  R7 = 40,
+  R8 = 41,
+  R9 = 42,
+  R10 = 43,
+  R11 = 44,
+  R12 = 45,
+  R13 = 46,
+  R14 = 47,
+  R15 = 48,
+  R16 = 49,
+  R17 = 50,
+  R18 = 51,
+  R19 = 52,
+  R20 = 53,
+  R21 = 54,
+  R22 = 55,
+  R23 = 56,
+  R24 = 57,
+  R25 = 58,
+  R26 = 59,
+  R27 = 60,
+  R28 = 61,
+  R29 = 62,
+  R30 = 63,
+  R31 = 64,
+  NUM_TARGET_REGS 	// 65
+};
+}
+
+// Register classes
+namespace Alpha {
+enum {
+  F4RCRegClassID = 0,
+  F8RCRegClassID = 1,
+  GPRCRegClassID = 2
+  };
+}
+} // End llvm namespace 
+#endif // GET_REGINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// MC Register Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_MC_DESC
+#undef GET_REGINFO_MC_DESC
+namespace llvm {
+
+struct AlphaGenMCRegisterInfo : public MCRegisterInfo {
+  explicit AlphaGenMCRegisterInfo(const MCRegisterDesc *D);
+};
+
+namespace {
+  const unsigned F0_Overlaps[] = { Alpha::F0, 0 };
+  const unsigned F1_Overlaps[] = { Alpha::F1, 0 };
+  const unsigned F2_Overlaps[] = { Alpha::F2, 0 };
+  const unsigned F3_Overlaps[] = { Alpha::F3, 0 };
+  const unsigned F4_Overlaps[] = { Alpha::F4, 0 };
+  const unsigned F5_Overlaps[] = { Alpha::F5, 0 };
+  const unsigned F6_Overlaps[] = { Alpha::F6, 0 };
+  const unsigned F7_Overlaps[] = { Alpha::F7, 0 };
+  const unsigned F8_Overlaps[] = { Alpha::F8, 0 };
+  const unsigned F9_Overlaps[] = { Alpha::F9, 0 };
+  const unsigned F10_Overlaps[] = { Alpha::F10, 0 };
+  const unsigned F11_Overlaps[] = { Alpha::F11, 0 };
+  const unsigned F12_Overlaps[] = { Alpha::F12, 0 };
+  const unsigned F13_Overlaps[] = { Alpha::F13, 0 };
+  const unsigned F14_Overlaps[] = { Alpha::F14, 0 };
+  const unsigned F15_Overlaps[] = { Alpha::F15, 0 };
+  const unsigned F16_Overlaps[] = { Alpha::F16, 0 };
+  const unsigned F17_Overlaps[] = { Alpha::F17, 0 };
+  const unsigned F18_Overlaps[] = { Alpha::F18, 0 };
+  const unsigned F19_Overlaps[] = { Alpha::F19, 0 };
+  const unsigned F20_Overlaps[] = { Alpha::F20, 0 };
+  const unsigned F21_Overlaps[] = { Alpha::F21, 0 };
+  const unsigned F22_Overlaps[] = { Alpha::F22, 0 };
+  const unsigned F23_Overlaps[] = { Alpha::F23, 0 };
+  const unsigned F24_Overlaps[] = { Alpha::F24, 0 };
+  const unsigned F25_Overlaps[] = { Alpha::F25, 0 };
+  const unsigned F26_Overlaps[] = { Alpha::F26, 0 };
+  const unsigned F27_Overlaps[] = { Alpha::F27, 0 };
+  const unsigned F28_Overlaps[] = { Alpha::F28, 0 };
+  const unsigned F29_Overlaps[] = { Alpha::F29, 0 };
+  const unsigned F30_Overlaps[] = { Alpha::F30, 0 };
+  const unsigned F31_Overlaps[] = { Alpha::F31, 0 };
+  const unsigned R0_Overlaps[] = { Alpha::R0, 0 };
+  const unsigned R1_Overlaps[] = { Alpha::R1, 0 };
+  const unsigned R2_Overlaps[] = { Alpha::R2, 0 };
+  const unsigned R3_Overlaps[] = { Alpha::R3, 0 };
+  const unsigned R4_Overlaps[] = { Alpha::R4, 0 };
+  const unsigned R5_Overlaps[] = { Alpha::R5, 0 };
+  const unsigned R6_Overlaps[] = { Alpha::R6, 0 };
+  const unsigned R7_Overlaps[] = { Alpha::R7, 0 };
+  const unsigned R8_Overlaps[] = { Alpha::R8, 0 };
+  const unsigned R9_Overlaps[] = { Alpha::R9, 0 };
+  const unsigned R10_Overlaps[] = { Alpha::R10, 0 };
+  const unsigned R11_Overlaps[] = { Alpha::R11, 0 };
+  const unsigned R12_Overlaps[] = { Alpha::R12, 0 };
+  const unsigned R13_Overlaps[] = { Alpha::R13, 0 };
+  const unsigned R14_Overlaps[] = { Alpha::R14, 0 };
+  const unsigned R15_Overlaps[] = { Alpha::R15, 0 };
+  const unsigned R16_Overlaps[] = { Alpha::R16, 0 };
+  const unsigned R17_Overlaps[] = { Alpha::R17, 0 };
+  const unsigned R18_Overlaps[] = { Alpha::R18, 0 };
+  const unsigned R19_Overlaps[] = { Alpha::R19, 0 };
+  const unsigned R20_Overlaps[] = { Alpha::R20, 0 };
+  const unsigned R21_Overlaps[] = { Alpha::R21, 0 };
+  const unsigned R22_Overlaps[] = { Alpha::R22, 0 };
+  const unsigned R23_Overlaps[] = { Alpha::R23, 0 };
+  const unsigned R24_Overlaps[] = { Alpha::R24, 0 };
+  const unsigned R25_Overlaps[] = { Alpha::R25, 0 };
+  const unsigned R26_Overlaps[] = { Alpha::R26, 0 };
+  const unsigned R27_Overlaps[] = { Alpha::R27, 0 };
+  const unsigned R28_Overlaps[] = { Alpha::R28, 0 };
+  const unsigned R29_Overlaps[] = { Alpha::R29, 0 };
+  const unsigned R30_Overlaps[] = { Alpha::R30, 0 };
+  const unsigned R31_Overlaps[] = { Alpha::R31, 0 };
+  const unsigned Empty_SubRegsSet[] = { 0 };
+  const unsigned Empty_SuperRegsSet[] = { 0 };
+}
+
+MCRegisterDesc AlphaRegDesc[] = { // Descriptors
+  { "NOREG",	0,	0,	0 },
+  { "F0",	F0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F1",	F1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F2",	F2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F3",	F3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F4",	F4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F5",	F5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F6",	F6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F7",	F7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F8",	F8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F9",	F9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F10",	F10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F11",	F11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F12",	F12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F13",	F13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F14",	F14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F15",	F15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F16",	F16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F17",	F17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F18",	F18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F19",	F19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F20",	F20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F21",	F21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F22",	F22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F23",	F23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F24",	F24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F25",	F25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F26",	F26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F27",	F27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F28",	F28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F29",	F29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F30",	F30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "F31",	F31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R0",	R0_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R1",	R1_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R2",	R2_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R3",	R3_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R4",	R4_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R5",	R5_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R6",	R6_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R7",	R7_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R8",	R8_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R9",	R9_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R10",	R10_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R11",	R11_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R12",	R12_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R13",	R13_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R14",	R14_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R15",	R15_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R16",	R16_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R17",	R17_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R18",	R18_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R19",	R19_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R20",	R20_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R21",	R21_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R22",	R22_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R23",	R23_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R24",	R24_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R25",	R25_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R26",	R26_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R27",	R27_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R28",	R28_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R29",	R29_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R30",	R30_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+  { "R31",	R31_Overlaps,	Empty_SubRegsSet,	Empty_SuperRegsSet },
+};
+
+namespace {     // Register classes...
+  // F4RC Register Class...
+  static const unsigned F4RC[] = {
+    Alpha::F0, Alpha::F1, Alpha::F10, Alpha::F11, Alpha::F12, Alpha::F13, Alpha::F14, Alpha::F15, Alpha::F16, Alpha::F17, Alpha::F18, Alpha::F19, Alpha::F20, Alpha::F21, Alpha::F22, Alpha::F23, Alpha::F24, Alpha::F25, Alpha::F26, Alpha::F27, Alpha::F28, Alpha::F29, Alpha::F30, Alpha::F2, Alpha::F3, Alpha::F4, Alpha::F5, Alpha::F6, Alpha::F7, Alpha::F8, Alpha::F9, Alpha::F31, 
+  };
+
+  // F4RC Bit set.
+  static const unsigned char F4RCBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // F8RC Register Class...
+  static const unsigned F8RC[] = {
+    Alpha::F0, Alpha::F1, Alpha::F10, Alpha::F11, Alpha::F12, Alpha::F13, Alpha::F14, Alpha::F15, Alpha::F16, Alpha::F17, Alpha::F18, Alpha::F19, Alpha::F20, Alpha::F21, Alpha::F22, Alpha::F23, Alpha::F24, Alpha::F25, Alpha::F26, Alpha::F27, Alpha::F28, Alpha::F29, Alpha::F30, Alpha::F2, Alpha::F3, Alpha::F4, Alpha::F5, Alpha::F6, Alpha::F7, Alpha::F8, Alpha::F9, Alpha::F31, 
+  };
+
+  // F8RC Bit set.
+  static const unsigned char F8RCBits[] = {
+    0xfe, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+  // GPRC Register Class...
+  static const unsigned GPRC[] = {
+    Alpha::R0, Alpha::R1, Alpha::R2, Alpha::R3, Alpha::R4, Alpha::R5, Alpha::R6, Alpha::R7, Alpha::R8, Alpha::R16, Alpha::R17, Alpha::R18, Alpha::R19, Alpha::R20, Alpha::R21, Alpha::R22, Alpha::R23, Alpha::R24, Alpha::R25, Alpha::R28, Alpha::R27, Alpha::R26, Alpha::R29, Alpha::R9, Alpha::R10, Alpha::R11, Alpha::R12, Alpha::R13, Alpha::R14, Alpha::R15, Alpha::R30, Alpha::R31, 
+  };
+
+  // GPRC Bit set.
+  static const unsigned char GPRCBits[] = {
+    0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0x01, 
+  };
+
+}
+
+MCRegisterClass AlphaMCRegisterClasses[] = {
+  MCRegisterClass(Alpha::F4RCRegClassID, "F4RC", 4, 8, 1, 1, F4RC, F4RC + 32, F4RCBits, sizeof(F4RCBits)),
+  MCRegisterClass(Alpha::F8RCRegClassID, "F8RC", 8, 8, 1, 1, F8RC, F8RC + 32, F8RCBits, sizeof(F8RCBits)),
+  MCRegisterClass(Alpha::GPRCRegClassID, "GPRC", 8, 8, 1, 1, GPRC, GPRC + 32, GPRCBits, sizeof(GPRCBits)),
+};
+
+static inline void InitAlphaMCRegisterInfo(MCRegisterInfo *RI, unsigned RA, unsigned DwarfFlavour = 0, unsigned EHFlavour = 0) {
+  RI->InitMCRegisterInfo(AlphaRegDesc, 65, RA, AlphaMCRegisterClasses, 3);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(33, Alpha::F0, false );
+    RI->mapDwarfRegToLLVMReg(34, Alpha::F1, false );
+    RI->mapDwarfRegToLLVMReg(35, Alpha::F2, false );
+    RI->mapDwarfRegToLLVMReg(36, Alpha::F3, false );
+    RI->mapDwarfRegToLLVMReg(37, Alpha::F4, false );
+    RI->mapDwarfRegToLLVMReg(38, Alpha::F5, false );
+    RI->mapDwarfRegToLLVMReg(39, Alpha::F6, false );
+    RI->mapDwarfRegToLLVMReg(40, Alpha::F7, false );
+    RI->mapDwarfRegToLLVMReg(41, Alpha::F8, false );
+    RI->mapDwarfRegToLLVMReg(42, Alpha::F9, false );
+    RI->mapDwarfRegToLLVMReg(43, Alpha::F10, false );
+    RI->mapDwarfRegToLLVMReg(44, Alpha::F11, false );
+    RI->mapDwarfRegToLLVMReg(45, Alpha::F12, false );
+    RI->mapDwarfRegToLLVMReg(46, Alpha::F13, false );
+    RI->mapDwarfRegToLLVMReg(47, Alpha::F14, false );
+    RI->mapDwarfRegToLLVMReg(48, Alpha::F15, false );
+    RI->mapDwarfRegToLLVMReg(49, Alpha::F16, false );
+    RI->mapDwarfRegToLLVMReg(50, Alpha::F17, false );
+    RI->mapDwarfRegToLLVMReg(51, Alpha::F18, false );
+    RI->mapDwarfRegToLLVMReg(52, Alpha::F19, false );
+    RI->mapDwarfRegToLLVMReg(53, Alpha::F20, false );
+    RI->mapDwarfRegToLLVMReg(54, Alpha::F21, false );
+    RI->mapDwarfRegToLLVMReg(55, Alpha::F22, false );
+    RI->mapDwarfRegToLLVMReg(56, Alpha::F23, false );
+    RI->mapDwarfRegToLLVMReg(57, Alpha::F24, false );
+    RI->mapDwarfRegToLLVMReg(58, Alpha::F25, false );
+    RI->mapDwarfRegToLLVMReg(59, Alpha::F26, false );
+    RI->mapDwarfRegToLLVMReg(60, Alpha::F27, false );
+    RI->mapDwarfRegToLLVMReg(61, Alpha::F28, false );
+    RI->mapDwarfRegToLLVMReg(62, Alpha::F29, false );
+    RI->mapDwarfRegToLLVMReg(63, Alpha::F30, false );
+    RI->mapDwarfRegToLLVMReg(64, Alpha::F31, false );
+    RI->mapDwarfRegToLLVMReg(0, Alpha::R0, false );
+    RI->mapDwarfRegToLLVMReg(1, Alpha::R1, false );
+    RI->mapDwarfRegToLLVMReg(2, Alpha::R2, false );
+    RI->mapDwarfRegToLLVMReg(3, Alpha::R3, false );
+    RI->mapDwarfRegToLLVMReg(4, Alpha::R4, false );
+    RI->mapDwarfRegToLLVMReg(5, Alpha::R5, false );
+    RI->mapDwarfRegToLLVMReg(6, Alpha::R6, false );
+    RI->mapDwarfRegToLLVMReg(7, Alpha::R7, false );
+    RI->mapDwarfRegToLLVMReg(8, Alpha::R8, false );
+    RI->mapDwarfRegToLLVMReg(9, Alpha::R9, false );
+    RI->mapDwarfRegToLLVMReg(10, Alpha::R10, false );
+    RI->mapDwarfRegToLLVMReg(11, Alpha::R11, false );
+    RI->mapDwarfRegToLLVMReg(12, Alpha::R12, false );
+    RI->mapDwarfRegToLLVMReg(13, Alpha::R13, false );
+    RI->mapDwarfRegToLLVMReg(14, Alpha::R14, false );
+    RI->mapDwarfRegToLLVMReg(15, Alpha::R15, false );
+    RI->mapDwarfRegToLLVMReg(16, Alpha::R16, false );
+    RI->mapDwarfRegToLLVMReg(17, Alpha::R17, false );
+    RI->mapDwarfRegToLLVMReg(18, Alpha::R18, false );
+    RI->mapDwarfRegToLLVMReg(19, Alpha::R19, false );
+    RI->mapDwarfRegToLLVMReg(20, Alpha::R20, false );
+    RI->mapDwarfRegToLLVMReg(21, Alpha::R21, false );
+    RI->mapDwarfRegToLLVMReg(22, Alpha::R22, false );
+    RI->mapDwarfRegToLLVMReg(23, Alpha::R23, false );
+    RI->mapDwarfRegToLLVMReg(24, Alpha::R24, false );
+    RI->mapDwarfRegToLLVMReg(25, Alpha::R25, false );
+    RI->mapDwarfRegToLLVMReg(26, Alpha::R26, false );
+    RI->mapDwarfRegToLLVMReg(27, Alpha::R27, false );
+    RI->mapDwarfRegToLLVMReg(28, Alpha::R28, false );
+    RI->mapDwarfRegToLLVMReg(29, Alpha::R29, false );
+    RI->mapDwarfRegToLLVMReg(30, Alpha::R30, false );
+    RI->mapDwarfRegToLLVMReg(31, Alpha::R31, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapDwarfRegToLLVMReg(33, Alpha::F0, true );
+    RI->mapDwarfRegToLLVMReg(34, Alpha::F1, true );
+    RI->mapDwarfRegToLLVMReg(35, Alpha::F2, true );
+    RI->mapDwarfRegToLLVMReg(36, Alpha::F3, true );
+    RI->mapDwarfRegToLLVMReg(37, Alpha::F4, true );
+    RI->mapDwarfRegToLLVMReg(38, Alpha::F5, true );
+    RI->mapDwarfRegToLLVMReg(39, Alpha::F6, true );
+    RI->mapDwarfRegToLLVMReg(40, Alpha::F7, true );
+    RI->mapDwarfRegToLLVMReg(41, Alpha::F8, true );
+    RI->mapDwarfRegToLLVMReg(42, Alpha::F9, true );
+    RI->mapDwarfRegToLLVMReg(43, Alpha::F10, true );
+    RI->mapDwarfRegToLLVMReg(44, Alpha::F11, true );
+    RI->mapDwarfRegToLLVMReg(45, Alpha::F12, true );
+    RI->mapDwarfRegToLLVMReg(46, Alpha::F13, true );
+    RI->mapDwarfRegToLLVMReg(47, Alpha::F14, true );
+    RI->mapDwarfRegToLLVMReg(48, Alpha::F15, true );
+    RI->mapDwarfRegToLLVMReg(49, Alpha::F16, true );
+    RI->mapDwarfRegToLLVMReg(50, Alpha::F17, true );
+    RI->mapDwarfRegToLLVMReg(51, Alpha::F18, true );
+    RI->mapDwarfRegToLLVMReg(52, Alpha::F19, true );
+    RI->mapDwarfRegToLLVMReg(53, Alpha::F20, true );
+    RI->mapDwarfRegToLLVMReg(54, Alpha::F21, true );
+    RI->mapDwarfRegToLLVMReg(55, Alpha::F22, true );
+    RI->mapDwarfRegToLLVMReg(56, Alpha::F23, true );
+    RI->mapDwarfRegToLLVMReg(57, Alpha::F24, true );
+    RI->mapDwarfRegToLLVMReg(58, Alpha::F25, true );
+    RI->mapDwarfRegToLLVMReg(59, Alpha::F26, true );
+    RI->mapDwarfRegToLLVMReg(60, Alpha::F27, true );
+    RI->mapDwarfRegToLLVMReg(61, Alpha::F28, true );
+    RI->mapDwarfRegToLLVMReg(62, Alpha::F29, true );
+    RI->mapDwarfRegToLLVMReg(63, Alpha::F30, true );
+    RI->mapDwarfRegToLLVMReg(64, Alpha::F31, true );
+    RI->mapDwarfRegToLLVMReg(0, Alpha::R0, true );
+    RI->mapDwarfRegToLLVMReg(1, Alpha::R1, true );
+    RI->mapDwarfRegToLLVMReg(2, Alpha::R2, true );
+    RI->mapDwarfRegToLLVMReg(3, Alpha::R3, true );
+    RI->mapDwarfRegToLLVMReg(4, Alpha::R4, true );
+    RI->mapDwarfRegToLLVMReg(5, Alpha::R5, true );
+    RI->mapDwarfRegToLLVMReg(6, Alpha::R6, true );
+    RI->mapDwarfRegToLLVMReg(7, Alpha::R7, true );
+    RI->mapDwarfRegToLLVMReg(8, Alpha::R8, true );
+    RI->mapDwarfRegToLLVMReg(9, Alpha::R9, true );
+    RI->mapDwarfRegToLLVMReg(10, Alpha::R10, true );
+    RI->mapDwarfRegToLLVMReg(11, Alpha::R11, true );
+    RI->mapDwarfRegToLLVMReg(12, Alpha::R12, true );
+    RI->mapDwarfRegToLLVMReg(13, Alpha::R13, true );
+    RI->mapDwarfRegToLLVMReg(14, Alpha::R14, true );
+    RI->mapDwarfRegToLLVMReg(15, Alpha::R15, true );
+    RI->mapDwarfRegToLLVMReg(16, Alpha::R16, true );
+    RI->mapDwarfRegToLLVMReg(17, Alpha::R17, true );
+    RI->mapDwarfRegToLLVMReg(18, Alpha::R18, true );
+    RI->mapDwarfRegToLLVMReg(19, Alpha::R19, true );
+    RI->mapDwarfRegToLLVMReg(20, Alpha::R20, true );
+    RI->mapDwarfRegToLLVMReg(21, Alpha::R21, true );
+    RI->mapDwarfRegToLLVMReg(22, Alpha::R22, true );
+    RI->mapDwarfRegToLLVMReg(23, Alpha::R23, true );
+    RI->mapDwarfRegToLLVMReg(24, Alpha::R24, true );
+    RI->mapDwarfRegToLLVMReg(25, Alpha::R25, true );
+    RI->mapDwarfRegToLLVMReg(26, Alpha::R26, true );
+    RI->mapDwarfRegToLLVMReg(27, Alpha::R27, true );
+    RI->mapDwarfRegToLLVMReg(28, Alpha::R28, true );
+    RI->mapDwarfRegToLLVMReg(29, Alpha::R29, true );
+    RI->mapDwarfRegToLLVMReg(30, Alpha::R30, true );
+    RI->mapDwarfRegToLLVMReg(31, Alpha::R31, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(Alpha::F0, 33, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F1, 34, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F2, 35, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F3, 36, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F4, 37, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F5, 38, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F6, 39, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F7, 40, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F8, 41, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F9, 42, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F10, 43, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F11, 44, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F12, 45, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F13, 46, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F14, 47, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F15, 48, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F16, 49, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F17, 50, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F18, 51, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F19, 52, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F20, 53, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F21, 54, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F22, 55, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F23, 56, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F24, 57, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F25, 58, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F26, 59, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F27, 60, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F28, 61, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F29, 62, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F30, 63, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::F31, 64, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R0, 0, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R1, 1, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R2, 2, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R3, 3, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R4, 4, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R5, 5, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R6, 6, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R7, 7, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R8, 8, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R9, 9, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R10, 10, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R11, 11, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R12, 12, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R13, 13, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R14, 14, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R15, 15, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R16, 16, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R17, 17, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R18, 18, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R19, 19, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R20, 20, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R21, 21, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R22, 22, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R23, 23, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R24, 24, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R25, 25, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R26, 26, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R27, 27, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R28, 28, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R29, 29, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R30, 30, false );
+    RI->mapLLVMRegToDwarfReg(Alpha::R31, 31, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    RI->mapLLVMRegToDwarfReg(Alpha::F0, 33, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F1, 34, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F2, 35, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F3, 36, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F4, 37, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F5, 38, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F6, 39, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F7, 40, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F8, 41, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F9, 42, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F10, 43, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F11, 44, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F12, 45, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F13, 46, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F14, 47, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F15, 48, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F16, 49, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F17, 50, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F18, 51, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F19, 52, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F20, 53, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F21, 54, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F22, 55, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F23, 56, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F24, 57, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F25, 58, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F26, 59, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F27, 60, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F28, 61, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F29, 62, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F30, 63, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::F31, 64, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R0, 0, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R1, 1, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R2, 2, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R3, 3, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R4, 4, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R5, 5, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R6, 6, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R7, 7, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R8, 8, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R9, 9, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R10, 10, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R11, 11, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R12, 12, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R13, 13, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R14, 14, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R15, 15, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R16, 16, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R17, 17, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R18, 18, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R19, 19, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R20, 20, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R21, 21, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R22, 22, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R23, 23, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R24, 24, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R25, 25, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R26, 26, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R27, 27, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R28, 28, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R29, 29, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R30, 30, true );
+    RI->mapLLVMRegToDwarfReg(Alpha::R31, 31, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_MC_DESC
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Register Information Header Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_HEADER
+#undef GET_REGINFO_HEADER
+#include "llvm/Target/TargetRegisterInfo.h"
+#include <string>
+
+namespace llvm {
+
+struct AlphaGenRegisterInfo : public TargetRegisterInfo {
+  explicit AlphaGenRegisterInfo(unsigned RA, unsigned D = 0, unsigned E = 0);
+  virtual bool needsStackRealignment(const MachineFunction &) const
+     { return false; }
+  unsigned getSubReg(unsigned RegNo, unsigned Index) const;
+  unsigned getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const;
+  unsigned composeSubRegIndices(unsigned, unsigned) const;
+};
+
+namespace Alpha { // Register classes
+  struct F4RCClass : public TargetRegisterClass {
+    F4RCClass();
+  };
+  extern F4RCClass	F4RCRegClass;
+  static TargetRegisterClass * const F4RCRegisterClass = &F4RCRegClass;
+  struct F8RCClass : public TargetRegisterClass {
+    F8RCClass();
+  };
+  extern F8RCClass	F8RCRegClass;
+  static TargetRegisterClass * const F8RCRegisterClass = &F8RCRegClass;
+  struct GPRCClass : public TargetRegisterClass {
+    GPRCClass();
+  };
+  extern GPRCClass	GPRCRegClass;
+  static TargetRegisterClass * const GPRCRegisterClass = &GPRCRegClass;
+} // end of namespace Alpha
+
+} // End llvm namespace 
+#endif // GET_REGINFO_HEADER
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Register and Register Classes Information
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_REGINFO_TARGET_DESC
+#undef GET_REGINFO_TARGET_DESC
+namespace llvm {
+
+extern MCRegisterClass AlphaMCRegisterClasses[];
+namespace {     // Register classes...
+  // F4RCVTs Register Class Value Types...
+  static const EVT F4RCVTs[] = {
+    MVT::f32, MVT::Other
+  };
+
+  // F8RCVTs Register Class Value Types...
+  static const EVT F8RCVTs[] = {
+    MVT::f64, MVT::Other
+  };
+
+  // GPRCVTs Register Class Value Types...
+  static const EVT GPRCVTs[] = {
+    MVT::i64, MVT::Other
+  };
+
+}  // end anonymous namespace
+
+namespace Alpha {   // Register class instances
+  F4RCClass	F4RCRegClass;
+  F8RCClass	F8RCRegClass;
+  GPRCClass	GPRCRegClass;
+
+  static const TargetRegisterClass* const NullRegClasses[] = { NULL };
+
+  // F4RC Register Class sub-classes...
+  static const TargetRegisterClass* const F4RCSubclasses[] = {
+    &Alpha::F8RCRegClass, NULL
+  };
+
+  // F8RC Register Class sub-classes...
+  static const TargetRegisterClass* const F8RCSubclasses[] = {
+    NULL
+  };
+
+  // GPRC Register Class sub-classes...
+  static const TargetRegisterClass* const GPRCSubclasses[] = {
+    NULL
+  };
+
+  // F4RC Register Class super-classes...
+  static const TargetRegisterClass* const F4RCSuperclasses[] = {
+    NULL
+  };
+
+  // F8RC Register Class super-classes...
+  static const TargetRegisterClass* const F8RCSuperclasses[] = {
+    &Alpha::F4RCRegClass, NULL
+  };
+
+  // GPRC Register Class super-classes...
+  static const TargetRegisterClass* const GPRCSuperclasses[] = {
+    NULL
+  };
+
+F4RCClass::F4RCClass()  : TargetRegisterClass(&AlphaMCRegisterClasses[F4RCRegClassID], F4RCVTs, F4RCSubclasses, F4RCSuperclasses, NullRegClasses, NullRegClasses) {}
+F8RCClass::F8RCClass()  : TargetRegisterClass(&AlphaMCRegisterClasses[F8RCRegClassID], F8RCVTs, F8RCSubclasses, F8RCSuperclasses, NullRegClasses, NullRegClasses) {}
+GPRCClass::GPRCClass()  : TargetRegisterClass(&AlphaMCRegisterClasses[GPRCRegClassID], GPRCVTs, GPRCSubclasses, GPRCSuperclasses, NullRegClasses, NullRegClasses) {}
+}
+
+namespace {
+  const TargetRegisterClass* const RegisterClasses[] = {
+    &Alpha::F4RCRegClass,
+    &Alpha::F8RCRegClass,
+    &Alpha::GPRCRegClass,
+  };
+}
+
+  static const TargetRegisterInfoDesc AlphaRegInfoDesc[] = { // Extra Descriptors
+    { 0, 0 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+    { 0, 1 },
+  };
+
+  static const char *const AlphaSubRegIndexTable[] = { "" };
+
+
+unsigned AlphaGenRegisterInfo::getSubReg(unsigned RegNo, unsigned Index) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned AlphaGenRegisterInfo::getSubRegIndex(unsigned RegNo, unsigned SubRegNo) const {
+  switch (RegNo) {
+  default:
+    return 0;
+  };
+  return 0;
+}
+
+unsigned AlphaGenRegisterInfo::composeSubRegIndices(unsigned IdxA, unsigned IdxB) const {
+  switch (IdxA) {
+  default:
+    return IdxB;
+  }
+}
+
+extern MCRegisterDesc AlphaRegDesc[];
+AlphaGenRegisterInfo::AlphaGenRegisterInfo(unsigned RA, unsigned DwarfFlavour, unsigned EHFlavour)
+  : TargetRegisterInfo(AlphaRegInfoDesc, RegisterClasses, RegisterClasses+3,
+                 AlphaSubRegIndexTable) {
+  InitMCRegisterInfo(AlphaRegDesc, 65, RA, AlphaMCRegisterClasses, 3);
+
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(33, Alpha::F0, false );
+    mapDwarfRegToLLVMReg(34, Alpha::F1, false );
+    mapDwarfRegToLLVMReg(35, Alpha::F2, false );
+    mapDwarfRegToLLVMReg(36, Alpha::F3, false );
+    mapDwarfRegToLLVMReg(37, Alpha::F4, false );
+    mapDwarfRegToLLVMReg(38, Alpha::F5, false );
+    mapDwarfRegToLLVMReg(39, Alpha::F6, false );
+    mapDwarfRegToLLVMReg(40, Alpha::F7, false );
+    mapDwarfRegToLLVMReg(41, Alpha::F8, false );
+    mapDwarfRegToLLVMReg(42, Alpha::F9, false );
+    mapDwarfRegToLLVMReg(43, Alpha::F10, false );
+    mapDwarfRegToLLVMReg(44, Alpha::F11, false );
+    mapDwarfRegToLLVMReg(45, Alpha::F12, false );
+    mapDwarfRegToLLVMReg(46, Alpha::F13, false );
+    mapDwarfRegToLLVMReg(47, Alpha::F14, false );
+    mapDwarfRegToLLVMReg(48, Alpha::F15, false );
+    mapDwarfRegToLLVMReg(49, Alpha::F16, false );
+    mapDwarfRegToLLVMReg(50, Alpha::F17, false );
+    mapDwarfRegToLLVMReg(51, Alpha::F18, false );
+    mapDwarfRegToLLVMReg(52, Alpha::F19, false );
+    mapDwarfRegToLLVMReg(53, Alpha::F20, false );
+    mapDwarfRegToLLVMReg(54, Alpha::F21, false );
+    mapDwarfRegToLLVMReg(55, Alpha::F22, false );
+    mapDwarfRegToLLVMReg(56, Alpha::F23, false );
+    mapDwarfRegToLLVMReg(57, Alpha::F24, false );
+    mapDwarfRegToLLVMReg(58, Alpha::F25, false );
+    mapDwarfRegToLLVMReg(59, Alpha::F26, false );
+    mapDwarfRegToLLVMReg(60, Alpha::F27, false );
+    mapDwarfRegToLLVMReg(61, Alpha::F28, false );
+    mapDwarfRegToLLVMReg(62, Alpha::F29, false );
+    mapDwarfRegToLLVMReg(63, Alpha::F30, false );
+    mapDwarfRegToLLVMReg(64, Alpha::F31, false );
+    mapDwarfRegToLLVMReg(0, Alpha::R0, false );
+    mapDwarfRegToLLVMReg(1, Alpha::R1, false );
+    mapDwarfRegToLLVMReg(2, Alpha::R2, false );
+    mapDwarfRegToLLVMReg(3, Alpha::R3, false );
+    mapDwarfRegToLLVMReg(4, Alpha::R4, false );
+    mapDwarfRegToLLVMReg(5, Alpha::R5, false );
+    mapDwarfRegToLLVMReg(6, Alpha::R6, false );
+    mapDwarfRegToLLVMReg(7, Alpha::R7, false );
+    mapDwarfRegToLLVMReg(8, Alpha::R8, false );
+    mapDwarfRegToLLVMReg(9, Alpha::R9, false );
+    mapDwarfRegToLLVMReg(10, Alpha::R10, false );
+    mapDwarfRegToLLVMReg(11, Alpha::R11, false );
+    mapDwarfRegToLLVMReg(12, Alpha::R12, false );
+    mapDwarfRegToLLVMReg(13, Alpha::R13, false );
+    mapDwarfRegToLLVMReg(14, Alpha::R14, false );
+    mapDwarfRegToLLVMReg(15, Alpha::R15, false );
+    mapDwarfRegToLLVMReg(16, Alpha::R16, false );
+    mapDwarfRegToLLVMReg(17, Alpha::R17, false );
+    mapDwarfRegToLLVMReg(18, Alpha::R18, false );
+    mapDwarfRegToLLVMReg(19, Alpha::R19, false );
+    mapDwarfRegToLLVMReg(20, Alpha::R20, false );
+    mapDwarfRegToLLVMReg(21, Alpha::R21, false );
+    mapDwarfRegToLLVMReg(22, Alpha::R22, false );
+    mapDwarfRegToLLVMReg(23, Alpha::R23, false );
+    mapDwarfRegToLLVMReg(24, Alpha::R24, false );
+    mapDwarfRegToLLVMReg(25, Alpha::R25, false );
+    mapDwarfRegToLLVMReg(26, Alpha::R26, false );
+    mapDwarfRegToLLVMReg(27, Alpha::R27, false );
+    mapDwarfRegToLLVMReg(28, Alpha::R28, false );
+    mapDwarfRegToLLVMReg(29, Alpha::R29, false );
+    mapDwarfRegToLLVMReg(30, Alpha::R30, false );
+    mapDwarfRegToLLVMReg(31, Alpha::R31, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapDwarfRegToLLVMReg(33, Alpha::F0, true );
+    mapDwarfRegToLLVMReg(34, Alpha::F1, true );
+    mapDwarfRegToLLVMReg(35, Alpha::F2, true );
+    mapDwarfRegToLLVMReg(36, Alpha::F3, true );
+    mapDwarfRegToLLVMReg(37, Alpha::F4, true );
+    mapDwarfRegToLLVMReg(38, Alpha::F5, true );
+    mapDwarfRegToLLVMReg(39, Alpha::F6, true );
+    mapDwarfRegToLLVMReg(40, Alpha::F7, true );
+    mapDwarfRegToLLVMReg(41, Alpha::F8, true );
+    mapDwarfRegToLLVMReg(42, Alpha::F9, true );
+    mapDwarfRegToLLVMReg(43, Alpha::F10, true );
+    mapDwarfRegToLLVMReg(44, Alpha::F11, true );
+    mapDwarfRegToLLVMReg(45, Alpha::F12, true );
+    mapDwarfRegToLLVMReg(46, Alpha::F13, true );
+    mapDwarfRegToLLVMReg(47, Alpha::F14, true );
+    mapDwarfRegToLLVMReg(48, Alpha::F15, true );
+    mapDwarfRegToLLVMReg(49, Alpha::F16, true );
+    mapDwarfRegToLLVMReg(50, Alpha::F17, true );
+    mapDwarfRegToLLVMReg(51, Alpha::F18, true );
+    mapDwarfRegToLLVMReg(52, Alpha::F19, true );
+    mapDwarfRegToLLVMReg(53, Alpha::F20, true );
+    mapDwarfRegToLLVMReg(54, Alpha::F21, true );
+    mapDwarfRegToLLVMReg(55, Alpha::F22, true );
+    mapDwarfRegToLLVMReg(56, Alpha::F23, true );
+    mapDwarfRegToLLVMReg(57, Alpha::F24, true );
+    mapDwarfRegToLLVMReg(58, Alpha::F25, true );
+    mapDwarfRegToLLVMReg(59, Alpha::F26, true );
+    mapDwarfRegToLLVMReg(60, Alpha::F27, true );
+    mapDwarfRegToLLVMReg(61, Alpha::F28, true );
+    mapDwarfRegToLLVMReg(62, Alpha::F29, true );
+    mapDwarfRegToLLVMReg(63, Alpha::F30, true );
+    mapDwarfRegToLLVMReg(64, Alpha::F31, true );
+    mapDwarfRegToLLVMReg(0, Alpha::R0, true );
+    mapDwarfRegToLLVMReg(1, Alpha::R1, true );
+    mapDwarfRegToLLVMReg(2, Alpha::R2, true );
+    mapDwarfRegToLLVMReg(3, Alpha::R3, true );
+    mapDwarfRegToLLVMReg(4, Alpha::R4, true );
+    mapDwarfRegToLLVMReg(5, Alpha::R5, true );
+    mapDwarfRegToLLVMReg(6, Alpha::R6, true );
+    mapDwarfRegToLLVMReg(7, Alpha::R7, true );
+    mapDwarfRegToLLVMReg(8, Alpha::R8, true );
+    mapDwarfRegToLLVMReg(9, Alpha::R9, true );
+    mapDwarfRegToLLVMReg(10, Alpha::R10, true );
+    mapDwarfRegToLLVMReg(11, Alpha::R11, true );
+    mapDwarfRegToLLVMReg(12, Alpha::R12, true );
+    mapDwarfRegToLLVMReg(13, Alpha::R13, true );
+    mapDwarfRegToLLVMReg(14, Alpha::R14, true );
+    mapDwarfRegToLLVMReg(15, Alpha::R15, true );
+    mapDwarfRegToLLVMReg(16, Alpha::R16, true );
+    mapDwarfRegToLLVMReg(17, Alpha::R17, true );
+    mapDwarfRegToLLVMReg(18, Alpha::R18, true );
+    mapDwarfRegToLLVMReg(19, Alpha::R19, true );
+    mapDwarfRegToLLVMReg(20, Alpha::R20, true );
+    mapDwarfRegToLLVMReg(21, Alpha::R21, true );
+    mapDwarfRegToLLVMReg(22, Alpha::R22, true );
+    mapDwarfRegToLLVMReg(23, Alpha::R23, true );
+    mapDwarfRegToLLVMReg(24, Alpha::R24, true );
+    mapDwarfRegToLLVMReg(25, Alpha::R25, true );
+    mapDwarfRegToLLVMReg(26, Alpha::R26, true );
+    mapDwarfRegToLLVMReg(27, Alpha::R27, true );
+    mapDwarfRegToLLVMReg(28, Alpha::R28, true );
+    mapDwarfRegToLLVMReg(29, Alpha::R29, true );
+    mapDwarfRegToLLVMReg(30, Alpha::R30, true );
+    mapDwarfRegToLLVMReg(31, Alpha::R31, true );
+    break;
+  }
+  switch (DwarfFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(Alpha::F0, 33, false );
+    mapLLVMRegToDwarfReg(Alpha::F1, 34, false );
+    mapLLVMRegToDwarfReg(Alpha::F2, 35, false );
+    mapLLVMRegToDwarfReg(Alpha::F3, 36, false );
+    mapLLVMRegToDwarfReg(Alpha::F4, 37, false );
+    mapLLVMRegToDwarfReg(Alpha::F5, 38, false );
+    mapLLVMRegToDwarfReg(Alpha::F6, 39, false );
+    mapLLVMRegToDwarfReg(Alpha::F7, 40, false );
+    mapLLVMRegToDwarfReg(Alpha::F8, 41, false );
+    mapLLVMRegToDwarfReg(Alpha::F9, 42, false );
+    mapLLVMRegToDwarfReg(Alpha::F10, 43, false );
+    mapLLVMRegToDwarfReg(Alpha::F11, 44, false );
+    mapLLVMRegToDwarfReg(Alpha::F12, 45, false );
+    mapLLVMRegToDwarfReg(Alpha::F13, 46, false );
+    mapLLVMRegToDwarfReg(Alpha::F14, 47, false );
+    mapLLVMRegToDwarfReg(Alpha::F15, 48, false );
+    mapLLVMRegToDwarfReg(Alpha::F16, 49, false );
+    mapLLVMRegToDwarfReg(Alpha::F17, 50, false );
+    mapLLVMRegToDwarfReg(Alpha::F18, 51, false );
+    mapLLVMRegToDwarfReg(Alpha::F19, 52, false );
+    mapLLVMRegToDwarfReg(Alpha::F20, 53, false );
+    mapLLVMRegToDwarfReg(Alpha::F21, 54, false );
+    mapLLVMRegToDwarfReg(Alpha::F22, 55, false );
+    mapLLVMRegToDwarfReg(Alpha::F23, 56, false );
+    mapLLVMRegToDwarfReg(Alpha::F24, 57, false );
+    mapLLVMRegToDwarfReg(Alpha::F25, 58, false );
+    mapLLVMRegToDwarfReg(Alpha::F26, 59, false );
+    mapLLVMRegToDwarfReg(Alpha::F27, 60, false );
+    mapLLVMRegToDwarfReg(Alpha::F28, 61, false );
+    mapLLVMRegToDwarfReg(Alpha::F29, 62, false );
+    mapLLVMRegToDwarfReg(Alpha::F30, 63, false );
+    mapLLVMRegToDwarfReg(Alpha::F31, 64, false );
+    mapLLVMRegToDwarfReg(Alpha::R0, 0, false );
+    mapLLVMRegToDwarfReg(Alpha::R1, 1, false );
+    mapLLVMRegToDwarfReg(Alpha::R2, 2, false );
+    mapLLVMRegToDwarfReg(Alpha::R3, 3, false );
+    mapLLVMRegToDwarfReg(Alpha::R4, 4, false );
+    mapLLVMRegToDwarfReg(Alpha::R5, 5, false );
+    mapLLVMRegToDwarfReg(Alpha::R6, 6, false );
+    mapLLVMRegToDwarfReg(Alpha::R7, 7, false );
+    mapLLVMRegToDwarfReg(Alpha::R8, 8, false );
+    mapLLVMRegToDwarfReg(Alpha::R9, 9, false );
+    mapLLVMRegToDwarfReg(Alpha::R10, 10, false );
+    mapLLVMRegToDwarfReg(Alpha::R11, 11, false );
+    mapLLVMRegToDwarfReg(Alpha::R12, 12, false );
+    mapLLVMRegToDwarfReg(Alpha::R13, 13, false );
+    mapLLVMRegToDwarfReg(Alpha::R14, 14, false );
+    mapLLVMRegToDwarfReg(Alpha::R15, 15, false );
+    mapLLVMRegToDwarfReg(Alpha::R16, 16, false );
+    mapLLVMRegToDwarfReg(Alpha::R17, 17, false );
+    mapLLVMRegToDwarfReg(Alpha::R18, 18, false );
+    mapLLVMRegToDwarfReg(Alpha::R19, 19, false );
+    mapLLVMRegToDwarfReg(Alpha::R20, 20, false );
+    mapLLVMRegToDwarfReg(Alpha::R21, 21, false );
+    mapLLVMRegToDwarfReg(Alpha::R22, 22, false );
+    mapLLVMRegToDwarfReg(Alpha::R23, 23, false );
+    mapLLVMRegToDwarfReg(Alpha::R24, 24, false );
+    mapLLVMRegToDwarfReg(Alpha::R25, 25, false );
+    mapLLVMRegToDwarfReg(Alpha::R26, 26, false );
+    mapLLVMRegToDwarfReg(Alpha::R27, 27, false );
+    mapLLVMRegToDwarfReg(Alpha::R28, 28, false );
+    mapLLVMRegToDwarfReg(Alpha::R29, 29, false );
+    mapLLVMRegToDwarfReg(Alpha::R30, 30, false );
+    mapLLVMRegToDwarfReg(Alpha::R31, 31, false );
+    break;
+  }
+  switch (EHFlavour) {
+  default:
+    assert(0 && "Unknown DWARF flavour");
+    break;
+  case 0:
+    mapLLVMRegToDwarfReg(Alpha::F0, 33, true );
+    mapLLVMRegToDwarfReg(Alpha::F1, 34, true );
+    mapLLVMRegToDwarfReg(Alpha::F2, 35, true );
+    mapLLVMRegToDwarfReg(Alpha::F3, 36, true );
+    mapLLVMRegToDwarfReg(Alpha::F4, 37, true );
+    mapLLVMRegToDwarfReg(Alpha::F5, 38, true );
+    mapLLVMRegToDwarfReg(Alpha::F6, 39, true );
+    mapLLVMRegToDwarfReg(Alpha::F7, 40, true );
+    mapLLVMRegToDwarfReg(Alpha::F8, 41, true );
+    mapLLVMRegToDwarfReg(Alpha::F9, 42, true );
+    mapLLVMRegToDwarfReg(Alpha::F10, 43, true );
+    mapLLVMRegToDwarfReg(Alpha::F11, 44, true );
+    mapLLVMRegToDwarfReg(Alpha::F12, 45, true );
+    mapLLVMRegToDwarfReg(Alpha::F13, 46, true );
+    mapLLVMRegToDwarfReg(Alpha::F14, 47, true );
+    mapLLVMRegToDwarfReg(Alpha::F15, 48, true );
+    mapLLVMRegToDwarfReg(Alpha::F16, 49, true );
+    mapLLVMRegToDwarfReg(Alpha::F17, 50, true );
+    mapLLVMRegToDwarfReg(Alpha::F18, 51, true );
+    mapLLVMRegToDwarfReg(Alpha::F19, 52, true );
+    mapLLVMRegToDwarfReg(Alpha::F20, 53, true );
+    mapLLVMRegToDwarfReg(Alpha::F21, 54, true );
+    mapLLVMRegToDwarfReg(Alpha::F22, 55, true );
+    mapLLVMRegToDwarfReg(Alpha::F23, 56, true );
+    mapLLVMRegToDwarfReg(Alpha::F24, 57, true );
+    mapLLVMRegToDwarfReg(Alpha::F25, 58, true );
+    mapLLVMRegToDwarfReg(Alpha::F26, 59, true );
+    mapLLVMRegToDwarfReg(Alpha::F27, 60, true );
+    mapLLVMRegToDwarfReg(Alpha::F28, 61, true );
+    mapLLVMRegToDwarfReg(Alpha::F29, 62, true );
+    mapLLVMRegToDwarfReg(Alpha::F30, 63, true );
+    mapLLVMRegToDwarfReg(Alpha::F31, 64, true );
+    mapLLVMRegToDwarfReg(Alpha::R0, 0, true );
+    mapLLVMRegToDwarfReg(Alpha::R1, 1, true );
+    mapLLVMRegToDwarfReg(Alpha::R2, 2, true );
+    mapLLVMRegToDwarfReg(Alpha::R3, 3, true );
+    mapLLVMRegToDwarfReg(Alpha::R4, 4, true );
+    mapLLVMRegToDwarfReg(Alpha::R5, 5, true );
+    mapLLVMRegToDwarfReg(Alpha::R6, 6, true );
+    mapLLVMRegToDwarfReg(Alpha::R7, 7, true );
+    mapLLVMRegToDwarfReg(Alpha::R8, 8, true );
+    mapLLVMRegToDwarfReg(Alpha::R9, 9, true );
+    mapLLVMRegToDwarfReg(Alpha::R10, 10, true );
+    mapLLVMRegToDwarfReg(Alpha::R11, 11, true );
+    mapLLVMRegToDwarfReg(Alpha::R12, 12, true );
+    mapLLVMRegToDwarfReg(Alpha::R13, 13, true );
+    mapLLVMRegToDwarfReg(Alpha::R14, 14, true );
+    mapLLVMRegToDwarfReg(Alpha::R15, 15, true );
+    mapLLVMRegToDwarfReg(Alpha::R16, 16, true );
+    mapLLVMRegToDwarfReg(Alpha::R17, 17, true );
+    mapLLVMRegToDwarfReg(Alpha::R18, 18, true );
+    mapLLVMRegToDwarfReg(Alpha::R19, 19, true );
+    mapLLVMRegToDwarfReg(Alpha::R20, 20, true );
+    mapLLVMRegToDwarfReg(Alpha::R21, 21, true );
+    mapLLVMRegToDwarfReg(Alpha::R22, 22, true );
+    mapLLVMRegToDwarfReg(Alpha::R23, 23, true );
+    mapLLVMRegToDwarfReg(Alpha::R24, 24, true );
+    mapLLVMRegToDwarfReg(Alpha::R25, 25, true );
+    mapLLVMRegToDwarfReg(Alpha::R26, 26, true );
+    mapLLVMRegToDwarfReg(Alpha::R27, 27, true );
+    mapLLVMRegToDwarfReg(Alpha::R28, 28, true );
+    mapLLVMRegToDwarfReg(Alpha::R29, 29, true );
+    mapLLVMRegToDwarfReg(Alpha::R30, 30, true );
+    mapLLVMRegToDwarfReg(Alpha::R31, 31, true );
+    break;
+  }
+}
+
+} // End llvm namespace 
+#endif // GET_REGINFO_TARGET_DESC
+

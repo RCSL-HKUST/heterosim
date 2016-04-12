@@ -1,0 +1,82 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Subtarget Enumeration Source Fragment
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_SUBTARGETINFO_ENUM
+#undef GET_SUBTARGETINFO_ENUM
+namespace llvm {
+namespace SystemZ {
+enum {
+  FeatureZ10 =  1ULL << 0
+};
+}
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_ENUM
+
+
+#ifdef GET_SUBTARGETINFO_MC_DESC
+#undef GET_SUBTARGETINFO_MC_DESC
+namespace llvm {
+// Sorted (by key) array of values for CPU features.
+llvm::SubtargetFeatureKV SystemZFeatureKV[] = {
+  { "z10", "Support Z10 instructions", SystemZ::FeatureZ10, 0ULL }
+};
+
+// Sorted (by key) array of values for CPU subtype.
+llvm::SubtargetFeatureKV SystemZSubTypeKV[] = {
+  { "z10", "Select the z10 processor", SystemZ::FeatureZ10, 0ULL },
+  { "z9", "Select the z9 processor", 0ULL, 0ULL }
+};
+
+
+static inline void InitSystemZMCSubtargetInfo(MCSubtargetInfo *II, StringRef TT, StringRef CPU, StringRef FS) {
+  II->InitMCSubtargetInfo(TT, CPU, FS, SystemZFeatureKV, SystemZSubTypeKV, 0, 0, 0, 0, 1, 2);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_MC_DESC
+
+
+#ifdef GET_SUBTARGETINFO_TARGET_DESC
+#undef GET_SUBTARGETINFO_TARGET_DESC
+#include "llvm/Support/Debug.h"
+#include "llvm/Support/raw_ostream.h"
+// ParseSubtargetFeatures - Parses features string setting specified
+// subtarget options.
+void llvm::SystemZSubtarget::ParseSubtargetFeatures(StringRef CPU, StringRef FS) {
+  DEBUG(dbgs() << "\nFeatures:" << FS);
+  DEBUG(dbgs() << "\nCPU:" << CPU);
+  uint64_t Bits = ReInitMCSubtargetInfo(CPU, FS);
+  if ((Bits & SystemZ::FeatureZ10) != 0) HasZ10Insts = true;
+}
+#endif // GET_SUBTARGETINFO_TARGET_DESC
+
+
+#ifdef GET_SUBTARGETINFO_HEADER
+#undef GET_SUBTARGETINFO_HEADER
+namespace llvm {
+struct SystemZGenSubtargetInfo : public TargetSubtargetInfo {
+  explicit SystemZGenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS);
+};
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_HEADER
+
+
+#ifdef GET_SUBTARGETINFO_CTOR
+#undef GET_SUBTARGETINFO_CTOR
+namespace llvm {
+extern llvm::SubtargetFeatureKV SystemZFeatureKV[];
+extern llvm::SubtargetFeatureKV SystemZSubTypeKV[];
+SystemZGenSubtargetInfo::SystemZGenSubtargetInfo(StringRef TT, StringRef CPU, StringRef FS)
+  : TargetSubtargetInfo() {
+  InitMCSubtargetInfo(TT, CPU, FS, SystemZFeatureKV, SystemZSubTypeKV, 0, 0, 0, 0, 1, 2);
+}
+
+} // End llvm namespace 
+#endif // GET_SUBTARGETINFO_CTOR
+

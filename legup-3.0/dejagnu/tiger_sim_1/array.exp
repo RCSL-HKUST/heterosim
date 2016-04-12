@@ -1,0 +1,9 @@
+load_lib legup.exp
+
+cd array
+set test "array"
+set tigerexpected {Result: 156}
+
+run-test-tiger $test $tigerexpected
+
+cd ..

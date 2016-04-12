@@ -1,0 +1,502 @@
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Instruction Enum Values
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_INSTRINFO_ENUM
+#undef GET_INSTRINFO_ENUM
+namespace llvm {
+
+namespace BF {
+  enum {
+    PHI	= 0,
+    INLINEASM	= 1,
+    PROLOG_LABEL	= 2,
+    EH_LABEL	= 3,
+    GC_LABEL	= 4,
+    KILL	= 5,
+    EXTRACT_SUBREG	= 6,
+    INSERT_SUBREG	= 7,
+    IMPLICIT_DEF	= 8,
+    SUBREG_TO_REG	= 9,
+    COPY_TO_REGCLASS	= 10,
+    DBG_VALUE	= 11,
+    REG_SEQUENCE	= 12,
+    COPY	= 13,
+    ABORT	= 14,
+    ADD	= 15,
+    ADD16	= 16,
+    ADD_RND20	= 17,
+    ADDimm7	= 18,
+    ADDpp	= 19,
+    ADDpp_imm7	= 20,
+    ADJCALLSTACKDOWN	= 21,
+    ADJCALLSTACKUP	= 22,
+    ALIGN16	= 23,
+    ALIGN24	= 24,
+    ALIGN8	= 25,
+    AND	= 26,
+    BITCLR	= 27,
+    BITSET	= 28,
+    BITTGL	= 29,
+    BITTST	= 30,
+    CALLa	= 31,
+    CALLp	= 32,
+    CLI	= 33,
+    CSYNC	= 34,
+    DISALGNEXCPT	= 35,
+    EMUEXCPT	= 36,
+    EXCPT	= 37,
+    IDLE	= 38,
+    JUMPa	= 39,
+    JUMPcc	= 40,
+    JUMPp	= 41,
+    LINK	= 42,
+    LOAD16fi	= 43,
+    LOAD16i	= 44,
+    LOAD16i_d16	= 45,
+    LOAD16pi	= 46,
+    LOAD16s32p_dec	= 47,
+    LOAD16s32p_inc	= 48,
+    LOAD16s32p_post	= 49,
+    LOAD16z32p_dec	= 50,
+    LOAD16z32p_inc	= 51,
+    LOAD16z32p_post	= 52,
+    LOAD32fi	= 53,
+    LOAD32fp_nimm7m4	= 54,
+    LOAD32i	= 55,
+    LOAD32i_dec	= 56,
+    LOAD32i_inc	= 57,
+    LOAD32i_post	= 58,
+    LOAD32imm	= 59,
+    LOAD32p	= 60,
+    LOAD32p_16s	= 61,
+    LOAD32p_16z	= 62,
+    LOAD32p_8s	= 63,
+    LOAD32p_8z	= 64,
+    LOAD32p_dec	= 65,
+    LOAD32p_imm16_8s	= 66,
+    LOAD32p_imm16_8z	= 67,
+    LOAD32p_imm17m2_16s	= 68,
+    LOAD32p_imm17m2_16z	= 69,
+    LOAD32p_imm18m4	= 70,
+    LOAD32p_inc	= 71,
+    LOAD32p_post	= 72,
+    LOAD32p_uimm5m2_16s	= 73,
+    LOAD32p_uimm5m2_16z	= 74,
+    LOAD32p_uimm6m4	= 75,
+    LOAD32sym	= 76,
+    LOAD8fi	= 77,
+    LOAD8s32p_dec	= 78,
+    LOAD8s32p_inc	= 79,
+    LOAD8z32p_dec	= 80,
+    LOAD8z32p_inc	= 81,
+    LOADhi_dec	= 82,
+    LOADhi_inc	= 83,
+    LOADhp_post	= 84,
+    LOADimm16	= 85,
+    LOADimm7	= 86,
+    LOADuimm16	= 87,
+    MNOP	= 88,
+    MOVE	= 89,
+    MOVECC_nz	= 90,
+    MOVECC_zext	= 91,
+    MOVENCC_z	= 92,
+    MOVE_cc_ac0	= 93,
+    MOVE_ccncc	= 94,
+    MOVE_ncccc	= 95,
+    MOVEcc	= 96,
+    MOVEsext	= 97,
+    MOVEsext8	= 98,
+    MOVEzext	= 99,
+    MOVEzext8	= 100,
+    MUL16	= 101,
+    MUL32	= 102,
+    MULHS16	= 103,
+    MULhh32s	= 104,
+    MULhh32u	= 105,
+    NBITTST	= 106,
+    NEG	= 107,
+    NOP	= 108,
+    NOT	= 109,
+    ONES	= 110,
+    OR	= 111,
+    OR_ac0_cc	= 112,
+    POP	= 113,
+    PUSH	= 114,
+    RAISE	= 115,
+    RTS	= 116,
+    SETEQdd	= 117,
+    SETEQpp	= 118,
+    SETEQri	= 119,
+    SETEQri_not	= 120,
+    SETLEdd	= 121,
+    SETLEpp	= 122,
+    SETLEri	= 123,
+    SETLEri_not	= 124,
+    SETLTdd	= 125,
+    SETLTpp	= 126,
+    SETLTri	= 127,
+    SETLTri_not	= 128,
+    SETNEdd	= 129,
+    SETULEdd	= 130,
+    SETULEpp	= 131,
+    SETULEri	= 132,
+    SETULEri_not	= 133,
+    SETULTdd	= 134,
+    SETULTpp	= 135,
+    SETULTri	= 136,
+    SETULTri_not	= 137,
+    SLA16r	= 138,
+    SLAr16	= 139,
+    SLL16i	= 140,
+    SLL16r	= 141,
+    SLLi	= 142,
+    SLLr	= 143,
+    SLLr16	= 144,
+    SRA16i	= 145,
+    SRAi	= 146,
+    SRAr	= 147,
+    SRL16i	= 148,
+    SRLi	= 149,
+    SRLr	= 150,
+    SSYNC	= 151,
+    STI	= 152,
+    STORE16fi	= 153,
+    STORE16i_dec	= 154,
+    STORE16i_inc	= 155,
+    STORE16p_post	= 156,
+    STORE16pi	= 157,
+    STORE32fi	= 158,
+    STORE32fp_nimm7m4	= 159,
+    STORE32i	= 160,
+    STORE32i_dec	= 161,
+    STORE32i_inc	= 162,
+    STORE32i_post	= 163,
+    STORE32p	= 164,
+    STORE32p_dec	= 165,
+    STORE32p_imm18m4	= 166,
+    STORE32p_inc	= 167,
+    STORE32p_post	= 168,
+    STORE32p_uimm6m4	= 169,
+    STORE8fi	= 170,
+    STORE8p	= 171,
+    STORE8p_dec	= 172,
+    STORE8p_imm16	= 173,
+    STORE8p_inc	= 174,
+    SUB	= 175,
+    SUB16	= 176,
+    UNLINK	= 177,
+    XOR	= 178,
+    INSTRUCTION_LIST_END = 179
+  };
+}
+} // End llvm namespace 
+#endif // GET_INSTRINFO_ENUM
+
+//===- TableGen'erated file -------------------------------------*- C++ -*-===//
+//
+// Target Instruction Descriptors
+//
+// Automatically generated file, do not edit!
+//
+//===----------------------------------------------------------------------===//
+
+
+#ifdef GET_INSTRINFO_MC_DESC
+#undef GET_INSTRINFO_MC_DESC
+namespace llvm {
+
+static const unsigned ImplicitList1[] = { BF::AZ, BF::AN, BF::AC0, BF::V, BF::VS, 0 };
+static const unsigned ImplicitList2[] = { BF::AZ, BF::AN, BF::V, 0 };
+static const unsigned ImplicitList3[] = { BF::SP, 0 };
+static const unsigned ImplicitList4[] = { BF::R0, BF::R1, BF::R2, BF::R3, BF::P0, BF::P1, BF::P2, BF::LB0, BF::LB1, BF::LC0, BF::LC1, BF::RETS, BF::ASTAT, 0 };
+static const unsigned ImplicitList5[] = { BF::AC0, 0 };
+static const unsigned ImplicitList6[] = { BF::AZ, BF::AN, BF::AC0, BF::V, 0 };
+static const unsigned ImplicitList7[] = { BF::V, BF::VS, 0 };
+static const unsigned ImplicitList8[] = { BF::AZ, BF::AN, BF::V, BF::VS, 0 };
+static const unsigned ImplicitList9[] = { BF::RETS, 0 };
+
+static const MCOperandInfo OperandInfo2[] = { { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo3[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo4[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo5[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo6[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo7[] = { { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo8[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo9[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo10[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo11[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo12[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo13[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo14[] = { { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo15[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo16[] = { { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo17[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo18[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo19[] = { { BF::AnyCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo20[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo21[] = { { BF::GR16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo22[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo23[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PIRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo24[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo25[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo26[] = { { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo27[] = { { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo28[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo29[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo30[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::MRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo31[] = { { BF::GRRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo32[] = { { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo33[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo34[] = { { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo35[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo36[] = { { BF::AnyCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, { -1, 0, 0, MCOI::OPERAND_UNKNOWN }, };
+static const MCOperandInfo OperandInfo37[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo38[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo39[] = { { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo40[] = { { BF::ALLRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::ALLRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo41[] = { { BF::AnyCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo42[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo43[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::NotCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo44[] = { { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo45[] = { { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::NotCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo46[] = { { BF::NotCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo47[] = { { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DPRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::AnyCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo48[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16LRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo49[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo50[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo51[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo52[] = { { BF::D16LRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo53[] = { { BF::ALLRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo54[] = { { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo55[] = { { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo56[] = { { BF::JustCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo57[] = { { BF::NotCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo58[] = { { BF::NotCCRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo59[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16LRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo60[] = { { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16LRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo61[] = { { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { -1, 0, 0, MCOI::OPERAND_IMMEDIATE }, };
+static const MCOperandInfo OperandInfo62[] = { { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo63[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::D16RegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo64[] = { { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo65[] = { { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::IRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::MRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo66[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DPRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo67[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, };
+static const MCOperandInfo OperandInfo68[] = { { BF::PRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::DRegClassID, 0, 0, MCOI::OPERAND_REGISTER }, { BF::PRegClassID, 0, ((0 << 16) | (1 << MCOI::TIED_TO)), MCOI::OPERAND_REGISTER }, };
+
+MCInstrDesc BlackfinInsts[] = {
+  { 0,	0,	0,	0,	0,	"PHI", 0|(1<<MCID::Variadic)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #0 = PHI
+  { 1,	0,	0,	0,	0,	"INLINEASM", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #1 = INLINEASM
+  { 2,	1,	0,	0,	0,	"PROLOG_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #2 = PROLOG_LABEL
+  { 3,	1,	0,	0,	0,	"EH_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #3 = EH_LABEL
+  { 4,	1,	0,	0,	0,	"GC_LABEL", 0|(1<<MCID::NotDuplicable)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #4 = GC_LABEL
+  { 5,	0,	0,	0,	0,	"KILL", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #5 = KILL
+  { 6,	3,	1,	0,	0,	"EXTRACT_SUBREG", 0, 0x0ULL, NULL, NULL, OperandInfo3 },  // Inst #6 = EXTRACT_SUBREG
+  { 7,	4,	1,	0,	0,	"INSERT_SUBREG", 0, 0x0ULL, NULL, NULL, OperandInfo4 },  // Inst #7 = INSERT_SUBREG
+  { 8,	1,	1,	0,	0,	"IMPLICIT_DEF", 0|(1<<MCID::Rematerializable)|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #8 = IMPLICIT_DEF
+  { 9,	4,	1,	0,	0,	"SUBREG_TO_REG", 0, 0x0ULL, NULL, NULL, OperandInfo6 },  // Inst #9 = SUBREG_TO_REG
+  { 10,	3,	1,	0,	0,	"COPY_TO_REGCLASS", 0|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo3 },  // Inst #10 = COPY_TO_REGCLASS
+  { 11,	0,	0,	0,	0,	"DBG_VALUE", 0|(1<<MCID::Variadic), 0x0ULL, NULL, NULL, 0 },  // Inst #11 = DBG_VALUE
+  { 12,	1,	1,	0,	0,	"REG_SEQUENCE", 0|(1<<MCID::Variadic)|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #12 = REG_SEQUENCE
+  { 13,	2,	1,	0,	0,	"COPY", 0|(1<<MCID::CheapAsAMove), 0x0ULL, NULL, NULL, OperandInfo7 },  // Inst #13 = COPY
+  { 14,	0,	0,	0,	0,	"ABORT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #14 = ABORT
+  { 15,	3,	1,	0,	0,	"ADD", 0, 0x0ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #15 = ADD
+  { 16,	3,	1,	0,	0,	"ADD16", 0, 0x0ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #16 = ADD16
+  { 17,	3,	1,	0,	0,	"ADD_RND20", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList2, OperandInfo10 },  // Inst #17 = ADD_RND20
+  { 18,	3,	1,	0,	0,	"ADDimm7", 0, 0x0ULL, NULL, ImplicitList1, OperandInfo11 },  // Inst #18 = ADDimm7
+  { 19,	3,	1,	0,	0,	"ADDpp", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo12 },  // Inst #19 = ADDpp
+  { 20,	3,	1,	0,	0,	"ADDpp_imm7", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo13 },  // Inst #20 = ADDpp_imm7
+  { 21,	1,	0,	0,	0,	"ADJCALLSTACKDOWN", 0, 0x0ULL, ImplicitList3, ImplicitList3, OperandInfo2 },  // Inst #21 = ADJCALLSTACKDOWN
+  { 22,	2,	0,	0,	0,	"ADJCALLSTACKUP", 0, 0x0ULL, ImplicitList3, ImplicitList3, OperandInfo14 },  // Inst #22 = ADJCALLSTACKUP
+  { 23,	3,	1,	0,	0,	"ALIGN16", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #23 = ALIGN16
+  { 24,	3,	1,	0,	0,	"ALIGN24", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #24 = ALIGN24
+  { 25,	3,	1,	0,	0,	"ALIGN8", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #25 = ALIGN8
+  { 26,	3,	1,	0,	0,	"AND", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #26 = AND
+  { 27,	3,	1,	0,	0,	"BITCLR", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #27 = BITCLR
+  { 28,	3,	1,	0,	0,	"BITSET", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #28 = BITSET
+  { 29,	3,	1,	0,	0,	"BITTGL", 0, 0x0ULL, NULL, NULL, OperandInfo15 },  // Inst #29 = BITTGL
+  { 30,	3,	1,	0,	0,	"BITTST", 0, 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #30 = BITTST
+  { 31,	1,	0,	0,	0,	"CALLa", 0|(1<<MCID::Call)|(1<<MCID::Variadic)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList4, OperandInfo5 },  // Inst #31 = CALLa
+  { 32,	1,	0,	0,	0,	"CALLp", 0|(1<<MCID::Call)|(1<<MCID::Variadic), 0x0ULL, NULL, ImplicitList4, OperandInfo17 },  // Inst #32 = CALLp
+  { 33,	1,	1,	0,	0,	"CLI", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo18 },  // Inst #33 = CLI
+  { 34,	0,	0,	0,	0,	"CSYNC", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #34 = CSYNC
+  { 35,	0,	0,	0,	0,	"DISALGNEXCPT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #35 = DISALGNEXCPT
+  { 36,	0,	0,	0,	0,	"EMUEXCPT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #36 = EMUEXCPT
+  { 37,	1,	0,	0,	0,	"EXCPT", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #37 = EXCPT
+  { 38,	0,	0,	0,	0,	"IDLE", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #38 = IDLE
+  { 39,	1,	0,	0,	0,	"JUMPa", 0|(1<<MCID::Branch)|(1<<MCID::Terminator), 0x0ULL, NULL, NULL, OperandInfo5 },  // Inst #39 = JUMPa
+  { 40,	2,	0,	0,	0,	"JUMPcc", 0|(1<<MCID::Branch)|(1<<MCID::Terminator), 0x0ULL, NULL, NULL, OperandInfo19 },  // Inst #40 = JUMPcc
+  { 41,	1,	0,	0,	0,	"JUMPp", 0|(1<<MCID::Branch)|(1<<MCID::IndirectBranch)|(1<<MCID::Terminator), 0x0ULL, NULL, NULL, OperandInfo17 },  // Inst #41 = JUMPp
+  { 42,	1,	0,	0,	0,	"LINK", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #42 = LINK
+  { 43,	3,	1,	0,	0,	"LOAD16fi", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo20 },  // Inst #43 = LOAD16fi
+  { 44,	2,	1,	0,	0,	"LOAD16i", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo21 },  // Inst #44 = LOAD16i
+  { 45,	2,	1,	0,	0,	"LOAD16i_d16", 0, 0x0ULL, NULL, NULL, OperandInfo22 },  // Inst #45 = LOAD16i_d16
+  { 46,	2,	1,	0,	0,	"LOAD16pi", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #46 = LOAD16pi
+  { 47,	3,	2,	0,	0,	"LOAD16s32p_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #47 = LOAD16s32p_dec
+  { 48,	3,	2,	0,	0,	"LOAD16s32p_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #48 = LOAD16s32p_inc
+  { 49,	4,	2,	0,	0,	"LOAD16s32p_post", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo25 },  // Inst #49 = LOAD16s32p_post
+  { 50,	3,	2,	0,	0,	"LOAD16z32p_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #50 = LOAD16z32p_dec
+  { 51,	3,	2,	0,	0,	"LOAD16z32p_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #51 = LOAD16z32p_inc
+  { 52,	4,	2,	0,	0,	"LOAD16z32p_post", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo25 },  // Inst #52 = LOAD16z32p_post
+  { 53,	3,	1,	0,	0,	"LOAD32fi", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo26 },  // Inst #53 = LOAD32fi
+  { 54,	3,	1,	0,	0,	"LOAD32fp_nimm7m4", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #54 = LOAD32fp_nimm7m4
+  { 55,	2,	1,	0,	0,	"LOAD32i", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo28 },  // Inst #55 = LOAD32i
+  { 56,	3,	2,	0,	0,	"LOAD32i_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo29 },  // Inst #56 = LOAD32i_dec
+  { 57,	3,	2,	0,	0,	"LOAD32i_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo29 },  // Inst #57 = LOAD32i_inc
+  { 58,	4,	2,	0,	0,	"LOAD32i_post", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo30 },  // Inst #58 = LOAD32i_post
+  { 59,	2,	1,	0,	0,	"LOAD32imm", 0, 0x0ULL, NULL, NULL, OperandInfo31 },  // Inst #59 = LOAD32imm
+  { 60,	2,	1,	0,	0,	"LOAD32p", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo32 },  // Inst #60 = LOAD32p
+  { 61,	2,	1,	0,	0,	"LOAD32p_16s", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo33 },  // Inst #61 = LOAD32p_16s
+  { 62,	2,	1,	0,	0,	"LOAD32p_16z", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo33 },  // Inst #62 = LOAD32p_16z
+  { 63,	2,	1,	0,	0,	"LOAD32p_8s", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo33 },  // Inst #63 = LOAD32p_8s
+  { 64,	2,	1,	0,	0,	"LOAD32p_8z", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo33 },  // Inst #64 = LOAD32p_8z
+  { 65,	3,	2,	0,	0,	"LOAD32p_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo34 },  // Inst #65 = LOAD32p_dec
+  { 66,	3,	1,	0,	0,	"LOAD32p_imm16_8s", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #66 = LOAD32p_imm16_8s
+  { 67,	3,	1,	0,	0,	"LOAD32p_imm16_8z", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #67 = LOAD32p_imm16_8z
+  { 68,	3,	1,	0,	0,	"LOAD32p_imm17m2_16s", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #68 = LOAD32p_imm17m2_16s
+  { 69,	3,	1,	0,	0,	"LOAD32p_imm17m2_16z", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #69 = LOAD32p_imm17m2_16z
+  { 70,	3,	1,	0,	0,	"LOAD32p_imm18m4", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #70 = LOAD32p_imm18m4
+  { 71,	3,	2,	0,	0,	"LOAD32p_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo34 },  // Inst #71 = LOAD32p_inc
+  { 72,	4,	2,	0,	0,	"LOAD32p_post", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo25 },  // Inst #72 = LOAD32p_post
+  { 73,	3,	1,	0,	0,	"LOAD32p_uimm5m2_16s", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #73 = LOAD32p_uimm5m2_16s
+  { 74,	3,	1,	0,	0,	"LOAD32p_uimm5m2_16z", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #74 = LOAD32p_uimm5m2_16z
+  { 75,	3,	1,	0,	0,	"LOAD32p_uimm6m4", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #75 = LOAD32p_uimm6m4
+  { 76,	2,	1,	0,	0,	"LOAD32sym", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo31 },  // Inst #76 = LOAD32sym
+  { 77,	3,	1,	0,	0,	"LOAD8fi", 0|(1<<MCID::MayLoad), 0x0ULL, NULL, NULL, OperandInfo36 },  // Inst #77 = LOAD8fi
+  { 78,	3,	2,	0,	0,	"LOAD8s32p_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #78 = LOAD8s32p_dec
+  { 79,	3,	2,	0,	0,	"LOAD8s32p_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #79 = LOAD8s32p_inc
+  { 80,	3,	2,	0,	0,	"LOAD8z32p_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #80 = LOAD8z32p_dec
+  { 81,	3,	2,	0,	0,	"LOAD8z32p_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo24 },  // Inst #81 = LOAD8z32p_inc
+  { 82,	3,	2,	0,	0,	"LOADhi_dec", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo37 },  // Inst #82 = LOADhi_dec
+  { 83,	3,	2,	0,	0,	"LOADhi_inc", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo37 },  // Inst #83 = LOADhi_inc
+  { 84,	4,	2,	0,	0,	"LOADhp_post", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo38 },  // Inst #84 = LOADhp_post
+  { 85,	2,	1,	0,	0,	"LOADimm16", 0, 0x0ULL, NULL, NULL, OperandInfo31 },  // Inst #85 = LOADimm16
+  { 86,	2,	1,	0,	0,	"LOADimm7", 0, 0x0ULL, NULL, NULL, OperandInfo39 },  // Inst #86 = LOADimm7
+  { 87,	2,	1,	0,	0,	"LOADuimm16", 0, 0x0ULL, NULL, NULL, OperandInfo31 },  // Inst #87 = LOADuimm16
+  { 88,	0,	0,	0,	0,	"MNOP", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #88 = MNOP
+  { 89,	2,	1,	0,	0,	"MOVE", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo40 },  // Inst #89 = MOVE
+  { 90,	2,	1,	0,	0,	"MOVECC_nz", 0, 0x0ULL, NULL, NULL, OperandInfo41 },  // Inst #90 = MOVECC_nz
+  { 91,	2,	1,	0,	0,	"MOVECC_zext", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo42 },  // Inst #91 = MOVECC_zext
+  { 92,	2,	1,	0,	0,	"MOVENCC_z", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo43 },  // Inst #92 = MOVENCC_z
+  { 93,	1,	1,	0,	0,	"MOVE_cc_ac0", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList5, NULL, OperandInfo44 },  // Inst #93 = MOVE_cc_ac0
+  { 94,	2,	1,	0,	0,	"MOVE_ccncc", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo45 },  // Inst #94 = MOVE_ccncc
+  { 95,	2,	1,	0,	0,	"MOVE_ncccc", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo46 },  // Inst #95 = MOVE_ncccc
+  { 96,	4,	1,	0,	0,	"MOVEcc", 0, 0x0ULL, NULL, NULL, OperandInfo47 },  // Inst #96 = MOVEcc
+  { 97,	2,	1,	0,	0,	"MOVEsext", 0, 0x0ULL, NULL, ImplicitList6, OperandInfo48 },  // Inst #97 = MOVEsext
+  { 98,	2,	1,	0,	0,	"MOVEsext8", 0, 0x0ULL, NULL, ImplicitList6, OperandInfo49 },  // Inst #98 = MOVEsext8
+  { 99,	2,	1,	0,	0,	"MOVEzext", 0, 0x0ULL, NULL, ImplicitList6, OperandInfo48 },  // Inst #99 = MOVEzext
+  { 100,	2,	1,	0,	0,	"MOVEzext8", 0, 0x0ULL, NULL, ImplicitList6, OperandInfo49 },  // Inst #100 = MOVEzext8
+  { 101,	3,	1,	0,	0,	"MUL16", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo9 },  // Inst #101 = MUL16
+  { 102,	3,	1,	0,	0,	"MUL32", 0, 0x0ULL, NULL, NULL, OperandInfo50 },  // Inst #102 = MUL32
+  { 103,	3,	1,	0,	0,	"MULHS16", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo9 },  // Inst #103 = MULHS16
+  { 104,	3,	1,	0,	0,	"MULhh32s", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo51 },  // Inst #104 = MULhh32s
+  { 105,	3,	1,	0,	0,	"MULhh32u", 0, 0x0ULL, NULL, ImplicitList7, OperandInfo51 },  // Inst #105 = MULhh32u
+  { 106,	3,	1,	0,	0,	"NBITTST", 0, 0x0ULL, NULL, NULL, OperandInfo16 },  // Inst #106 = NBITTST
+  { 107,	2,	1,	0,	0,	"NEG", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo49 },  // Inst #107 = NEG
+  { 108,	0,	0,	0,	0,	"NOP", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #108 = NOP
+  { 109,	2,	1,	0,	0,	"NOT", 0, 0x0ULL, NULL, NULL, OperandInfo49 },  // Inst #109 = NOT
+  { 110,	2,	1,	0,	0,	"ONES", 0, 0x0ULL, NULL, NULL, OperandInfo52 },  // Inst #110 = ONES
+  { 111,	3,	1,	0,	0,	"OR", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #111 = OR
+  { 112,	1,	0,	0,	0,	"OR_ac0_cc", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, ImplicitList5, OperandInfo44 },  // Inst #112 = OR_ac0_cc
+  { 113,	1,	1,	0,	0,	"POP", 0|(1<<MCID::MayLoad)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList3, ImplicitList3, OperandInfo53 },  // Inst #113 = POP
+  { 114,	1,	0,	0,	0,	"PUSH", 0|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, ImplicitList3, ImplicitList3, OperandInfo53 },  // Inst #114 = PUSH
+  { 115,	1,	0,	0,	0,	"RAISE", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo2 },  // Inst #115 = RAISE
+  { 116,	0,	0,	0,	0,	"RTS", 0|(1<<MCID::Return)|(1<<MCID::Barrier)|(1<<MCID::Terminator), 0x0ULL, ImplicitList9, NULL, 0 },  // Inst #116 = RTS
+  { 117,	3,	1,	0,	0,	"SETEQdd", 0, 0x0ULL, NULL, NULL, OperandInfo54 },  // Inst #117 = SETEQdd
+  { 118,	3,	1,	0,	0,	"SETEQpp", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo55 },  // Inst #118 = SETEQpp
+  { 119,	3,	1,	0,	0,	"SETEQri", 0, 0x0ULL, NULL, NULL, OperandInfo56 },  // Inst #119 = SETEQri
+  { 120,	3,	1,	0,	0,	"SETEQri_not", 0, 0x0ULL, NULL, NULL, OperandInfo57 },  // Inst #120 = SETEQri_not
+  { 121,	3,	1,	0,	0,	"SETLEdd", 0, 0x0ULL, NULL, NULL, OperandInfo54 },  // Inst #121 = SETLEdd
+  { 122,	3,	1,	0,	0,	"SETLEpp", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo55 },  // Inst #122 = SETLEpp
+  { 123,	3,	1,	0,	0,	"SETLEri", 0, 0x0ULL, NULL, NULL, OperandInfo56 },  // Inst #123 = SETLEri
+  { 124,	3,	1,	0,	0,	"SETLEri_not", 0, 0x0ULL, NULL, NULL, OperandInfo57 },  // Inst #124 = SETLEri_not
+  { 125,	3,	1,	0,	0,	"SETLTdd", 0, 0x0ULL, NULL, NULL, OperandInfo54 },  // Inst #125 = SETLTdd
+  { 126,	3,	1,	0,	0,	"SETLTpp", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo55 },  // Inst #126 = SETLTpp
+  { 127,	3,	1,	0,	0,	"SETLTri", 0, 0x0ULL, NULL, NULL, OperandInfo56 },  // Inst #127 = SETLTri
+  { 128,	3,	1,	0,	0,	"SETLTri_not", 0, 0x0ULL, NULL, NULL, OperandInfo57 },  // Inst #128 = SETLTri_not
+  { 129,	3,	1,	0,	0,	"SETNEdd", 0, 0x0ULL, NULL, NULL, OperandInfo58 },  // Inst #129 = SETNEdd
+  { 130,	3,	1,	0,	0,	"SETULEdd", 0, 0x0ULL, NULL, NULL, OperandInfo54 },  // Inst #130 = SETULEdd
+  { 131,	3,	1,	0,	0,	"SETULEpp", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo55 },  // Inst #131 = SETULEpp
+  { 132,	3,	1,	0,	0,	"SETULEri", 0, 0x0ULL, NULL, NULL, OperandInfo56 },  // Inst #132 = SETULEri
+  { 133,	3,	1,	0,	0,	"SETULEri_not", 0, 0x0ULL, NULL, NULL, OperandInfo57 },  // Inst #133 = SETULEri_not
+  { 134,	3,	1,	0,	0,	"SETULTdd", 0, 0x0ULL, NULL, NULL, OperandInfo54 },  // Inst #134 = SETULTdd
+  { 135,	3,	1,	0,	0,	"SETULTpp", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo55 },  // Inst #135 = SETULTpp
+  { 136,	3,	1,	0,	0,	"SETULTri", 0, 0x0ULL, NULL, NULL, OperandInfo56 },  // Inst #136 = SETULTri
+  { 137,	3,	1,	0,	0,	"SETULTri_not", 0, 0x0ULL, NULL, NULL, OperandInfo57 },  // Inst #137 = SETULTri_not
+  { 138,	3,	1,	0,	0,	"SLA16r", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo59 },  // Inst #138 = SLA16r
+  { 139,	3,	1,	0,	0,	"SLAr16", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo60 },  // Inst #139 = SLAr16
+  { 140,	3,	1,	0,	0,	"SLL16i", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo61 },  // Inst #140 = SLL16i
+  { 141,	3,	1,	0,	0,	"SLL16r", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo59 },  // Inst #141 = SLL16r
+  { 142,	3,	1,	0,	0,	"SLLi", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo11 },  // Inst #142 = SLLi
+  { 143,	3,	1,	0,	0,	"SLLr", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo50 },  // Inst #143 = SLLr
+  { 144,	3,	1,	0,	0,	"SLLr16", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo60 },  // Inst #144 = SLLr16
+  { 145,	3,	1,	0,	0,	"SRA16i", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo61 },  // Inst #145 = SRA16i
+  { 146,	3,	1,	0,	0,	"SRAi", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo11 },  // Inst #146 = SRAi
+  { 147,	3,	1,	0,	0,	"SRAr", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo50 },  // Inst #147 = SRAr
+  { 148,	3,	1,	0,	0,	"SRL16i", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo61 },  // Inst #148 = SRL16i
+  { 149,	3,	1,	0,	0,	"SRLi", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo11 },  // Inst #149 = SRLi
+  { 150,	3,	1,	0,	0,	"SRLr", 0, 0x0ULL, NULL, ImplicitList8, OperandInfo50 },  // Inst #150 = SRLr
+  { 151,	0,	0,	0,	0,	"SSYNC", 0|(1<<MCID::MayLoad)|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #151 = SSYNC
+  { 152,	1,	0,	0,	0,	"STI", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo18 },  // Inst #152 = STI
+  { 153,	3,	0,	0,	0,	"STORE16fi", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo20 },  // Inst #153 = STORE16fi
+  { 154,	3,	1,	0,	0,	"STORE16i_dec", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo62 },  // Inst #154 = STORE16i_dec
+  { 155,	3,	1,	0,	0,	"STORE16i_inc", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo62 },  // Inst #155 = STORE16i_inc
+  { 156,	4,	1,	0,	0,	"STORE16p_post", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo63 },  // Inst #156 = STORE16p_post
+  { 157,	2,	0,	0,	0,	"STORE16pi", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo23 },  // Inst #157 = STORE16pi
+  { 158,	3,	0,	0,	0,	"STORE32fi", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo26 },  // Inst #158 = STORE32fi
+  { 159,	3,	0,	0,	0,	"STORE32fp_nimm7m4", 0|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #159 = STORE32fp_nimm7m4
+  { 160,	2,	0,	0,	0,	"STORE32i", 0|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo28 },  // Inst #160 = STORE32i
+  { 161,	3,	1,	0,	0,	"STORE32i_dec", 0|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo64 },  // Inst #161 = STORE32i_dec
+  { 162,	3,	1,	0,	0,	"STORE32i_inc", 0|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo64 },  // Inst #162 = STORE32i_inc
+  { 163,	4,	1,	0,	0,	"STORE32i_post", 0|(1<<MCID::MayStore)|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, OperandInfo65 },  // Inst #163 = STORE32i_post
+  { 164,	2,	0,	0,	0,	"STORE32p", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo32 },  // Inst #164 = STORE32p
+  { 165,	3,	1,	0,	0,	"STORE32p_dec", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo66 },  // Inst #165 = STORE32p_dec
+  { 166,	3,	0,	0,	0,	"STORE32p_imm18m4", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #166 = STORE32p_imm18m4
+  { 167,	3,	1,	0,	0,	"STORE32p_inc", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo66 },  // Inst #167 = STORE32p_inc
+  { 168,	4,	1,	0,	0,	"STORE32p_post", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo67 },  // Inst #168 = STORE32p_post
+  { 169,	3,	0,	0,	0,	"STORE32p_uimm6m4", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo27 },  // Inst #169 = STORE32p_uimm6m4
+  { 170,	3,	0,	0,	0,	"STORE8fi", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo36 },  // Inst #170 = STORE8fi
+  { 171,	2,	0,	0,	0,	"STORE8p", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo33 },  // Inst #171 = STORE8p
+  { 172,	3,	1,	0,	0,	"STORE8p_dec", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo68 },  // Inst #172 = STORE8p_dec
+  { 173,	3,	0,	0,	0,	"STORE8p_imm16", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo35 },  // Inst #173 = STORE8p_imm16
+  { 174,	3,	1,	0,	0,	"STORE8p_inc", 0|(1<<MCID::MayStore), 0x0ULL, NULL, NULL, OperandInfo68 },  // Inst #174 = STORE8p_inc
+  { 175,	3,	1,	0,	0,	"SUB", 0, 0x0ULL, NULL, ImplicitList1, OperandInfo8 },  // Inst #175 = SUB
+  { 176,	3,	1,	0,	0,	"SUB16", 0, 0x0ULL, NULL, ImplicitList1, OperandInfo9 },  // Inst #176 = SUB16
+  { 177,	0,	0,	0,	0,	"UNLINK", 0|(1<<MCID::UnmodeledSideEffects), 0x0ULL, NULL, NULL, 0 },  // Inst #177 = UNLINK
+  { 178,	3,	1,	0,	0,	"XOR", 0, 0x0ULL, NULL, NULL, OperandInfo8 },  // Inst #178 = XOR
+};
+
+static inline void InitBlackfinMCInstrInfo(MCInstrInfo *II) {
+  II->InitMCInstrInfo(BlackfinInsts, 179);
+}
+
+} // End llvm namespace 
+#endif // GET_INSTRINFO_MC_DESC
+
+
+#ifdef GET_INSTRINFO_HEADER
+#undef GET_INSTRINFO_HEADER
+namespace llvm {
+struct BlackfinGenInstrInfo : public TargetInstrInfoImpl {
+  explicit BlackfinGenInstrInfo(int SO = -1, int DO = -1);
+};
+} // End llvm namespace 
+#endif // GET_INSTRINFO_HEADER
+
+
+#ifdef GET_INSTRINFO_CTOR
+#undef GET_INSTRINFO_CTOR
+namespace llvm {
+extern MCInstrDesc BlackfinInsts[];
+BlackfinGenInstrInfo::BlackfinGenInstrInfo(int SO, int DO)
+  : TargetInstrInfoImpl(SO, DO) {
+  InitMCInstrInfo(BlackfinInsts, 179);
+}
+} // End llvm namespace 
+#endif // GET_INSTRINFO_CTOR
+
