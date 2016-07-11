@@ -1,0 +1,90 @@
+api.lo: api.c /usr/include/stdc-predef.h /usr/include/stdio.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+ /usr/include/bits/environments.h /usr/include/bits/confname.h \
+ /usr/include/getopt.h /usr/include/bits/unistd.h ../include/GL/gl.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/bits/wchar.h ../opengl/opengl.h \
+ ../opengl/../include/GL/gl.h \
+ ../opengl/../../src/driver/opengl/opengl.dat ../opengl/context.h \
+ ../opengl/opengl.h api.h debug.h window.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/stdio.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/bits/stdio2.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/bits/unistd.h:
+
+../include/GL/gl.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+../opengl/opengl.h:
+
+../opengl/../include/GL/gl.h:
+
+../opengl/../../src/driver/opengl/opengl.dat:
+
+../opengl/context.h:
+
+../opengl/opengl.h:
+
+api.h:
+
+debug.h:
+
+window.h:

@@ -1,0 +1,8 @@
+[ Context 0 ]
+Exe = ./primesw.elf
+Stdout = context-1.out
+Kernel = 0  
+MemModLow = 0xF0000F00
+MemModHigh = 0xF0000F04
+FlushBase = 0xF0000F08
+FlushSize = 0xF0000F0C

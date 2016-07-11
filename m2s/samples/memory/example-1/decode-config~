@@ -1,0 +1,14 @@
+[ Kernel 0 ]
+KernelName = jpegdecode
+Sim = Vdecode_block
+InputFormat = int,1721,char,63
+OutputFormat = int,8,char,15930
+HWLowBound = 0xF0000000
+HWHighBound = 0xF000001F
+SrcBase = 0xF0000010
+SrcSize = 0xF0000014
+DstBase = 0xF0000018
+DstSize = 0xF000001c 
+SharedMem = 1
+StartReg = 0xF0000008
+FinishReg = 0xF000000C
