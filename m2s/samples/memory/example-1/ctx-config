@@ -1,5 +1,0 @@
-[ Context 0 ]
-Exe = ./tb_prime.elf
-Stdout = context-0.out
-Kernel = 0
-
